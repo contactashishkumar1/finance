@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional SIP Calculator</title>
+    <title>SIP Calculator India (2026) – Mutual Fund Return Calculator</title>
+    <meta name="description" content="Calculate your mutual fund returns with our SIP Calculator India (2026). Estimate wealth gain, total maturity value, and see yearly growth with the annual step-up option.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -65,6 +66,13 @@
         details[open] summary svg {
             transform: rotate(180deg);
         }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
     </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
@@ -73,13 +81,13 @@
     <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex items-center justify-between h-14">
-                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar py-2">
+                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar py-2 pr-4">
                     <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Home</a>
                     <a href="#" class="nav-link active text-sm whitespace-nowrap">SIP</a>
-                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">EMI</a>
-                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">GST</a>
-                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Salary</a>
-                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Business</a>
+                    <a href="emi.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">EMI</a>
+                    <a href="gst.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">GST</a>
+                    <a href="salary.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Salary</a>
+                    <a href="business.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Business</a>
                 </div>
                 <div class="hidden sm:flex items-center ml-4">
                     <button class="text-slate-400 hover:text-slate-600 p-2">
@@ -91,21 +99,24 @@
     </nav>
 
     <!-- Header -->
-    <header class="bg-white border-b border-slate-200 py-4 sm:py-6 mb-6 sm:mb-8">
-        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-            <div>
-                <h1 class="text-xl sm:text-2xl font-bold gradient-text">SIP Calculator</h1>
-                <p class="text-slate-500 text-xs sm:text-sm mt-1">Strategic wealth planning with step-up.</p>
-            </div>
-            <div class="hidden md:block">
-                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Financial Suite</span>
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">SIP Calculator India (2026) – Mutual Fund Return Calculator</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Planning your wealth creation in India for 2026? Use our advanced SIP Return Calculator to estimate the future value of your Mutual Fund investments. Whether you're targeting 1 Crore or retirement, our tool includes <strong>annual step-up</strong> options to reflect your growing income.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4">
-        <!-- Calculator Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
             
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
@@ -115,16 +126,14 @@
                         Investment Plan
                     </h2>
 
-                    <!-- Monthly Investment -->
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
-                            <label class="text-sm font-medium text-slate-600">Initial Monthly Investment</label>
+                            <label class="text-sm font-medium text-slate-600">Initial Monthly Investment (₹)</label>
                             <input type="number" id="monthlyInput" value="5000" min="1000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
                         <input type="range" id="monthlyRange" min="1000" max="100000" step="1000" value="5000" class="w-full py-2 cursor-pointer">
                     </div>
 
-                    <!-- Step Up Percentage -->
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Annual Step-up (%)</label>
@@ -136,7 +145,6 @@
                         <input type="range" id="stepUpRange" min="0" max="50" step="1" value="10" class="w-full py-2 cursor-pointer">
                     </div>
 
-                    <!-- Interest Rate -->
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Expected Returns (p.a %)</label>
@@ -148,8 +156,7 @@
                         <input type="range" id="rateRange" min="1" max="30" step="0.5" value="12" class="w-full py-2 cursor-pointer">
                     </div>
 
-                    <!-- Years -->
-                    <div class="mb-4">
+                    <div class="mb-6">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Time Period (Years)</label>
                             <div class="relative w-full sm:w-28">
@@ -159,43 +166,44 @@
                         </div>
                         <input type="range" id="yearsRange" min="1" max="40" step="1" value="10" class="w-full py-2 cursor-pointer">
                     </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Calculate SIP
+                    </button>
                 </div>
 
-                <!-- Summary Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-blue-600 p-4 rounded-2xl text-white shadow-lg shadow-blue-200">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
                         <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Invested</p>
-                        <h3 id="totalInvestedMobile" class="text-base sm:text-lg font-bold leading-tight">0</h3>
+                        <h3 id="totalInvestedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
-                    <div class="bg-emerald-600 p-4 rounded-2xl text-white shadow-lg shadow-emerald-200">
+                    <div class="bg-emerald-600 p-5 rounded-2xl text-white shadow-lg shadow-emerald-200">
                         <p class="text-emerald-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Wealth Gained</p>
-                        <h3 id="wealthGainedMobile" class="text-base sm:text-lg font-bold leading-tight">0</h3>
+                        <h3 id="wealthGainedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Results & Visualization -->
+            <!-- Right Side -->
             <div class="lg:col-span-7 space-y-6">
-                
-                <!-- Main Results Card -->
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
                     <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
-                        <div>
-                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Estimated Maturity</h2>
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Estimated Maturity Value</h2>
                             <div class="mt-1">
-                                <span class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight block sm:inline" id="maturityValue">0</span>
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="maturityValue">₹0</span>
                             </div>
                         </div>
-                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100">
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
                              <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
                              <div>
-                                <p class="text-[10px] text-slate-500 uppercase font-bold">Final Monthly</p>
-                                <p class="font-bold text-slate-800 text-sm" id="finalMonthlyDisp">5,000</p>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Final Monthly SIP</p>
+                                <p class="font-bold text-slate-800 text-sm" id="finalMonthlyDisp">₹5,000</p>
                              </div>
                         </div>
                     </div>
 
-                    <!-- Progress Bar -->
                     <div class="mb-10">
                         <div class="flex justify-between text-[11px] mb-3">
                             <span class="text-blue-600 font-bold uppercase">Invested</span>
@@ -208,33 +216,27 @@
                         <div class="flex flex-wrap justify-between mt-4 gap-4">
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
-                                <span class="text-xs sm:text-sm text-slate-500" id="investedLabel">0</span>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="investedLabel">₹0</span>
                             </div>
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-emerald-400 rounded-sm mr-2"></div>
-                                <span class="text-xs sm:text-sm text-slate-500" id="returnsLabel">0</span>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="returnsLabel">₹0</span>
                             </div>
                         </div>
                     </div>
 
                     <hr class="border-slate-100 mb-6">
 
-                    <!-- Growth Projection -->
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold text-slate-800 text-sm sm:text-base">Yearly Growth</h3>
-                        <button onclick="toggleTable()" id="toggleBtn" class="bg-slate-100 text-slate-600 px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-slate-200 transition-all">Show Table</button>
-                    </div>
-
-                    <!-- Expandable Table -->
-                    <div id="tableSection" class="hidden overflow-hidden">
-                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl">
-                            <table class="w-full text-left text-xs sm:text-sm">
-                                <thead class="bg-slate-50">
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Yearly Growth Projection</h3>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
                                     <tr>
-                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Year</th>
-                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Monthly</th>
-                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Invested</th>
-                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Total Value</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Monthly SIP</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Total Invested</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Total Value</th>
                                     </tr>
                                 </thead>
                                 <tbody id="projectionTable"></tbody>
@@ -243,18 +245,38 @@
                     </div>
                 </div>
 
-                <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
-                    <p class="text-[10px] sm:text-xs text-blue-600 leading-relaxed text-center font-medium">
-                        * Estimates calculated using iterative monthly compounding. Actual results may vary based on market conditions.
-                    </p>
+                <!-- Formula and Example Section -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">How is SIP Maturity Calculated?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        M = P × [((1 + i)<sup>n</sup> - 1) / i] × (1 + i)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6">
+                        <p><strong>M:</strong> Maturity Amount</p>
+                        <p><strong>P:</strong> SIP Amount (Monthly)</p>
+                        <p><strong>i:</strong> Periodic Rate of Interest (Annual Rate / 12 / 100)</p>
+                        <p><strong>n:</strong> Total Number of Installments</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4">Example SIP Calculation (India)</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If you start an SIP of <strong>₹10,000</strong> per month for <strong>15 years</strong> with an expected return of <strong>12% p.a.</strong>:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm">
+                            <li>Total Investment: <strong>₹18,00,000</strong></li>
+                            <li>Wealth Gained: <strong>₹32,45,760</strong></li>
+                            <li>Maturity Value: <strong>₹50,45,760</strong></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Educational Content Section -->
+        <!-- Extra Content Section -->
         <div class="space-y-12 mb-12">
+            
+            <!-- Understanding SIP Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Understanding Systematic Investment Plan (SIP)</h2>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 leading-tight">Understanding Systematic Investment Plan (SIP)</h2>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
@@ -271,237 +293,267 @@
                         <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
                             As your income grows every year, your savings should too. A Step-up SIP automatically increases your contribution by a fixed percentage or amount annually.
                         </p>
-                        <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-blue-500">
+                        <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-blue-500 shadow-sm">
                             <p class="text-sm italic text-slate-700">"Even a 10% annual increase in SIP can lead to a significantly larger corpus over 20 years compared to a flat SIP."</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-10 pt-10 border-t border-slate-100">
-                    <h3 class="text-xl font-bold text-slate-800 mb-6 text-center">Benefits of Investing via SIP</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                        <div class="p-4">
-                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h3 class="text-xl font-bold text-slate-800 mb-8 text-center">Benefits of Investing via SIP</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                        <div class="p-4 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
                             <h4 class="font-bold text-slate-800 mb-2">Discipline</h4>
-                            <p class="text-xs text-slate-500">Instills a habit of regular saving and investing.</p>
+                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">Instills a habit of regular saving and investing.</p>
                         </div>
-                        <div class="p-4">
-                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        <div class="p-4 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                             </div>
                             <h4 class="font-bold text-slate-800 mb-2">Compounding</h4>
-                            <p class="text-xs text-slate-500">Earn interest on your interest over the long term.</p>
+                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">Earn interest on your interest over the long term.</p>
                         </div>
-                        <div class="p-4">
-                            <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        <div class="p-4 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                             </div>
                             <h4 class="font-bold text-slate-800 mb-2">Rupee Cost Averaging</h4>
-                            <p class="text-xs text-slate-500">Buy more units when markets are low.</p>
+                            <p class="text-xs sm:text-sm text-slate-500 leading-relaxed">Buy more units when markets are low.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- FAQ Section -->
+            <!-- FAQ Section (14 Items) -->
             <section class="max-w-4xl mx-auto">
-                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
-                <div class="space-y-4">
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">SIP Frequently Asked Questions (India 2026)</h2>
+                <div class="space-y-4" id="faqContainer">
+                    <!-- Q1 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">Is SIP better than FD in India?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is the 15-15-15 rule in Mutual Fund SIP?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            While FD offers guaranteed safety, Equity SIPs in India typically provide much higher inflation-beating returns (12-15%) over 5+ years. SIPs are ideal for wealth creation, whereas FDs are better for short-term capital safety.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The 15-15-15 rule states that an SIP of ₹15,000 per month for 15 years at an expected return of 15% can help you accumulate ₹1 Crore. It highlights the power of compounding over long durations.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q2 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">What happens if I stop SIP midway?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">How are SIP returns taxed in India (2026)?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            If you stop midway, your existing units remain invested and continue to earn market returns. There is no penalty from the fund house for stopping, though your bank might charge for a missed auto-debit if not cancelled properly.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            For Equity Mutual Funds, Long-Term Capital Gains (LTCG) for holding periods over 1 year are taxed at 12.5% for gains exceeding ₹1.25 Lakh. Short-Term Capital Gains (STCG) are taxed at 20%. Every installment is treated as a fresh investment for tax calculations.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q3 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">Can I withdraw SIP anytime?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is SIP better than FD in India?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Yes, most SIPs (Open-ended funds) allow withdrawal anytime. However, ELSS (Tax Saving) funds have a 3-year lock-in. Note that withdrawing within 1 year may attract an Exit Load (usually 1%) and higher taxes.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            While FDs offer safety, Equity SIPs typically provide higher inflation-beating returns (12-15%) over 5+ years. SIPs are ideal for wealth creation, whereas FDs are better for short-term capital safety.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q4 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">How much SIP needed for 1 crore?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What happens if I miss my SIP payment?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            At a 12% annual return, a monthly SIP of 10,000 takes about 20 years to reach 1 Crore. You can reach this goal much faster (around 15 years) by increasing your SIP amount by 10% every year using the Step-up feature.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            If you miss a payment, the fund house does not charge a penalty, but your bank might charge for a "cheque bounce" or "ECS return." Missing three consecutive payments may result in the SIP being automatically cancelled by the AMC.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q5 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">Are SIP returns taxable in India?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can I withdraw SIP money anytime?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Yes. For Equity SIPs, Long Term Capital Gains (LTCG) over 1.25 Lakh are taxed at 12.5%. Short-term gains (held < 1 year) are taxed at 20%. Every installment is treated as a fresh investment for tax purposes.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, most open-ended SIPs allow withdrawal anytime. However, ELSS (Tax Saving) funds have a mandatory 3-year lock-in. For others, an exit load of 1% might apply if withdrawn within 1 year.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q6 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">Can I change my SIP date after starting?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Which is the best date for SIP?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Most Indian fund houses and apps (like Groww, Zerodha, or CAMS) allow you to modify the SIP date. If the "Modify" option isn't available, you can simply stop the current SIP and start a new one with your preferred date.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Historically, market timing via SIP dates doesn't significantly impact long-term returns. It is best to choose a date between the 1st and 7th of the month to ensure your investment is automated right after salary credit.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q7 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">What is the best date for SIP in India?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can I stop SIP midway?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Historically, there is no "perfect" date due to market volatility. However, choosing a date right after your salary credit (like 1st to 7th) is best to ensure investment discipline before you spend the money.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, you can stop your SIP at any time without penalty. Your existing invested units will remain in the fund and continue to grow based on market performance until you choose to redeem them.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q8 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">Does SIP guarantee returns?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">How much SIP is needed for ₹1 Crore?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            No, SIPs in mutual funds do not guarantee returns as they are linked to the stock market. However, Indian market history shows that staying invested for 7-10 years significantly reduces risk and offers high inflation-adjusted growth.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            To reach ₹1 Crore in 20 years at a 12% return, you need an SIP of approx. ₹10,000. By increasing your SIP by 10% annually (Step-up), you can reach this goal in just 15 years with the same initial amount.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q9 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">Can I start SIP with only 500?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is SIP better than Lumpsum?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Yes, the majority of Mutual Fund schemes in India allow you to start an SIP with just 500 per month. Some AMC schemes even offer "Micro-SIPs" starting as low as 100 per month.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            SIP is generally better for most investors as it averages the cost of purchase through market cycles. Lumpsum is better only if you have a large surplus and the market is significantly undervalued.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q10 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">Is it better to invest in SIP or Lumpsum?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is Rupee Cost Averaging?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            SIP is better for most investors as it averages the cost of investment and reduces risk in volatile markets. Lumpsum is only recommended when you have a large sum and the market is at a significant low or valuation.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            It’s an investment strategy where you invest a fixed amount regularly. This results in buying more units when the NAV is low and fewer when it's high, bringing down the average cost per unit over time.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q11 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">What is the lock-in period for SIP?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is Step-up SIP?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Standard SIPs have no lock-in period. However, ELSS (Equity Linked Savings Schemes) have a 3-year lock-in period. Note that in ELSS, every SIP installment is locked for 3 years from its specific investment date.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Step-up SIP is a feature where you increase your monthly investment by a fixed percentage (e.g., 10%) every year. This helps you reach goals faster as your annual income increases.
                         </div>
                     </details>
-
-                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                    <!-- Q12 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4">Can I have multiple SIPs in the same fund?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is SIP risk-free?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
-                            Yes, you can start multiple SIPs of different amounts or on different dates within the same mutual fund scheme. This is often used by investors to track different financial goals (like Child Education and Retirement) separately.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, SIPs in mutual funds are subject to market risks. However, the risk of loss reduces significantly over long tenures (7-10+ years) in equity funds due to the compounding effect and market cycles.
+                        </div>
+                    </details>
+                    <!-- Q13 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can I change my SIP amount later?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, you can modify your SIP amount at any time through your investment app. Alternatively, you can stop the existing SIP and start a new one with your desired higher or lower amount.
+                        </div>
+                    </details>
+                    <!-- Q14 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Does SIP provide Section 80C benefits?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Only SIPs in ELSS (Equity Linked Savings Schemes) qualify for tax deductions up to ₹1.5 Lakh under Section 80C. Other equity or debt SIPs do not offer this specific tax-saving benefit.
                         </div>
                     </details>
                 </div>
             </section>
+
+            <!-- Related Calculators -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="emi.html" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate home & car loan EMIs.</p>
+                    </a>
+                    <a href="fd.html" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">FD Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate Fixed Deposit returns.</p>
+                    </a>
+                    <a href="cagr.html" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check compound annual growth rates.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                This calculator provides estimates based on historical market trends and the figures provided by you. Mutual Fund investments are subject to market risks; please read all scheme-related documents carefully. This tool does not constitute financial advice or guaranteed returns. 
+                <p class="mt-4 font-semibold">Last Updated: March 2026</p>
+            </div>
         </div>
     </main>
 
     <footer class="max-w-6xl mx-auto px-4 mt-8">
         <div class="text-center py-8 border-t border-slate-200">
-            <p class="text-slate-400 text-xs">© 2024 Financial Suite. All Rights Reserved.</p>
+            <p class="text-slate-400 text-[10px]">© 2026 Financial Suite India. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        const monthlyInput = document.getElementById('monthlyInput');
-        const monthlyRange = document.getElementById('monthlyRange');
-        const stepUpInput = document.getElementById('stepUpInput');
-        const stepUpRange = document.getElementById('stepUpRange');
-        const rateInput = document.getElementById('rateInput');
-        const rateRange = document.getElementById('rateRange');
-        const yearsInput = document.getElementById('yearsInput');
-        const yearsRange = document.getElementById('yearsRange');
+        const elements = {
+            monthlyInput: document.getElementById('monthlyInput'),
+            monthlyRange: document.getElementById('monthlyRange'),
+            stepUpInput: document.getElementById('stepUpInput'),
+            stepUpRange: document.getElementById('stepUpRange'),
+            rateInput: document.getElementById('rateInput'),
+            rateRange: document.getElementById('rateRange'),
+            yearsInput: document.getElementById('yearsInput'),
+            yearsRange: document.getElementById('yearsRange'),
+            maturityValue: document.getElementById('maturityValue'),
+            investedLabel: document.getElementById('investedLabel'),
+            returnsLabel: document.getElementById('returnsLabel'),
+            investedBar: document.getElementById('investedBar'),
+            returnsBar: document.getElementById('returnsBar'),
+            finalMonthlyDisp: document.getElementById('finalMonthlyDisp'),
+            totalInvestedMobile: document.getElementById('totalInvestedMobile'),
+            wealthGainedMobile: document.getElementById('wealthGainedMobile'),
+            projectionTable: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
 
-        const maturityValueDisp = document.getElementById('maturityValue');
-        const investedLabel = document.getElementById('investedLabel');
-        const returnsLabel = document.getElementById('returnsLabel');
-        const investedBar = document.getElementById('investedBar');
-        const returnsBar = document.getElementById('returnsBar');
-        const finalMonthlyDisp = document.getElementById('finalMonthlyDisp');
-        const totalInvestedMobile = document.getElementById('totalInvestedMobile');
-        const wealthGainedMobile = document.getElementById('wealthGainedMobile');
-        const projectionTable = document.getElementById('projectionTable');
-        const tableSection = document.getElementById('tableSection');
-        const toggleBtn = document.getElementById('toggleBtn');
-
-        updateCalculations();
-
-        function setupSync(input, range) {
-            input.addEventListener('input', () => {
-                range.value = input.value;
-                updateCalculations();
-            });
-            range.addEventListener('input', () => {
-                input.value = range.value;
-                updateCalculations();
-            });
-        }
-
-        setupSync(monthlyInput, monthlyRange);
-        setupSync(stepUpInput, stepUpRange);
-        setupSync(rateInput, rateRange);
-        setupSync(yearsInput, yearsRange);
-
-        /**
-         * Formats a value into Indian Lakhs/Crores notation with absolute fallback.
-         * Example: 1,25,00,000 (1.25 Cr)
-         */
-        function formatIndian(val) {
+        function formatIndian(val, withDenom = true) {
             const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
             const absoluteValue = absFormatter.format(val);
-            
             let indianDenom = "";
-            if (val >= 10000000) {
-                indianDenom = ` (${(val / 10000000).toFixed(2)} Cr)`;
-            } else if (val >= 100000) {
-                indianDenom = ` (${(val / 100000).toFixed(2)} L)`;
+            if (withDenom) {
+                if (val >= 10000000) indianDenom = ` (${(val / 10000000).toFixed(2)} Cr)`;
+                else if (val >= 100000) indianDenom = ` (${(val / 100000).toFixed(2)} L)`;
             }
-            
-            return absoluteValue + indianDenom;
+            return "₹" + absoluteValue + indianDenom;
+        }
+
+        function formatCompact(val) {
+            try {
+                return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+            } catch (e) {
+                return val.toLocaleString('en-IN');
+            }
         }
 
         function updateCalculations() {
-            const P = parseFloat(monthlyInput.value) || 0;
-            const stepUpPercent = parseFloat(stepUpInput.value) || 0;
-            const annualRate = parseFloat(rateInput.value) / 100;
-            const years = parseFloat(yearsInput.value) || 0;
+            const P = parseFloat(elements.monthlyInput.value) || 0;
+            const stepUpPercent = parseFloat(elements.stepUpInput.value) || 0;
+            const annualRate = parseFloat(elements.rateInput.value) / 100;
+            const years = parseFloat(elements.yearsInput.value) || 0;
             const monthlyRate = annualRate / 12;
 
             let totalValue = 0;
@@ -523,49 +575,49 @@
             const finalReturns = finalMaturity - finalInvested;
             const lastYearMonthly = yearlyData.length > 0 ? yearlyData[yearlyData.length - 1].monthly : P;
 
-            // Updated Formatting to include Lakhs/Crores
-            maturityValueDisp.textContent = formatIndian(finalMaturity);
-            investedLabel.textContent = `Invested: ${formatIndian(finalInvested)}`;
-            returnsLabel.textContent = `Growth: ${formatIndian(finalReturns)}`;
-            
-            const simpleFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
-            finalMonthlyDisp.textContent = simpleFormatter.format(lastYearMonthly);
-            
-            totalInvestedMobile.textContent = formatIndian(finalInvested);
-            wealthGainedMobile.textContent = formatIndian(finalReturns);
+            elements.maturityValue.textContent = formatIndian(finalMaturity);
+            elements.investedLabel.textContent = `Inv: ₹${formatCompact(finalInvested)}`;
+            elements.returnsLabel.textContent = `Growth: ₹${formatCompact(finalReturns)}`;
+            elements.finalMonthlyDisp.textContent = "₹" + (new Intl.NumberFormat('en-IN').format(Math.round(lastYearMonthly)));
+            elements.totalInvestedMobile.textContent = formatIndian(finalInvested);
+            elements.wealthGainedMobile.textContent = formatIndian(finalReturns);
 
             const investedPercent = (finalInvested / finalMaturity) * 100 || 0;
             const returnsPercent = (finalReturns / finalMaturity) * 100 || 0;
-            investedBar.style.width = `${investedPercent}%`;
-            returnsBar.style.width = `${returnsPercent}%`;
+            elements.investedBar.style.width = `${investedPercent}%`;
+            elements.returnsBar.style.width = `${returnsPercent}%`;
 
             renderTable(yearlyData);
         }
 
         function renderTable(data) {
-            projectionTable.innerHTML = '';
+            elements.projectionTable.innerHTML = '';
             data.forEach(item => {
                 const row = document.createElement('tr');
                 row.className = 'hover:bg-slate-50 transition-colors';
                 row.innerHTML = `
-                    <td class="px-4 py-3 border-b border-slate-100 font-medium text-slate-700">Year ${item.year}</td>
-                    <td class="px-4 py-3 border-b border-slate-100 text-right text-slate-500">${formatCompact(item.monthly)}</td>
-                    <td class="px-4 py-3 border-b border-slate-100 text-right text-slate-600">${formatCompact(item.invested)}</td>
-                    <td class="px-4 py-3 border-b border-slate-100 text-right font-bold text-slate-800">${formatCompact(item.total)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 font-medium text-slate-700">Yr ${item.year}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-500">₹${formatCompact(item.monthly)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-600">₹${formatCompact(item.invested)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right font-bold text-slate-800">₹${formatCompact(item.total)}</td>
                 `;
-                projectionTable.appendChild(row);
+                elements.projectionTable.appendChild(row);
             });
         }
 
-        function formatCompact(val) {
-            return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
         }
 
-        function toggleTable() {
-            const isHidden = tableSection.classList.contains('hidden');
-            tableSection.classList.toggle('hidden');
-            toggleBtn.textContent = isHidden ? 'Hide Table' : 'Show Table';
-        }
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.monthlyInput, elements.monthlyRange);
+            setupSync(elements.stepUpInput, elements.stepUpRange);
+            setupSync(elements.rateInput, elements.rateRange);
+            setupSync(elements.yearsInput, elements.yearsRange);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
     </script>
 </body>
 </html>
