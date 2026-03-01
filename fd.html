@@ -240,41 +240,35 @@
                     </button>
                 </div>
 
+                <!-- Simplified Mobile Results Section -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
-                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Investment</p>
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Deposit</p>
                         <h3 id="totalInvestedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
                     <div class="bg-emerald-600 p-5 rounded-2xl text-white shadow-lg shadow-emerald-200">
-                        <p class="text-emerald-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Interest Earned</p>
+                        <p class="text-emerald-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Interest Earned</p>
                         <h3 id="wealthGainedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Results -->
+            <!-- Right Side: Results Visualization -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <h2 class="text-slate-800 font-bold text-lg mb-6">FD Maturity Summary</h2>
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">FD Maturity Amount & Interest Breakdown</h2>
                     <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
                         <div class="w-full">
-                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Estimated Maturity Value</h2>
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Maturity Amount</h2>
                             <div class="mt-1">
                                 <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="maturityValue">₹0</span>
                             </div>
-                        </div>
-                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
-                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
-                             <div>
-                                <p class="text-[10px] text-slate-500 uppercase font-bold">Principal Deposit</p>
-                                <p class="font-bold text-slate-800 text-sm" id="finalMonthlyDisp">₹0</p>
-                             </div>
                         </div>
                     </div>
 
                     <div class="mb-10">
                         <div class="flex justify-between text-[11px] mb-3">
-                            <span class="text-blue-600 font-bold uppercase">Principal</span>
+                            <span class="text-blue-600 font-bold uppercase">Total Deposit</span>
                             <span class="text-emerald-600 font-bold uppercase">Interest Earned</span>
                         </div>
                         <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
@@ -291,6 +285,7 @@
                                 <span class="text-[10px] sm:text-xs text-slate-500" id="returnsLabel">₹0</span>
                             </div>
                         </div>
+                        <p class="text-[10px] sm:text-xs text-slate-400 mt-6 italic">For long-term wealth creation SIP may outperform FD, while FD is suitable for capital protection.</p>
                     </div>
 
                     <hr class="border-slate-100 mb-6">
@@ -355,76 +350,63 @@
         <!-- Informational Content -->
         <div class="space-y-12 mb-12">
             
-            <!-- Comparison Section -->
+            <!-- Compounding Impact Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Fixed Deposit (FD) vs Savings Account</h2>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Impact of Compounding Frequency</h2>
                 <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                    While Savings Accounts offer high liquidity, <a href="#" class="text-blue-600 hover:underline font-semibold">Fixed Deposits (FD)</a> provide significantly higher interest rates. Savings accounts usually offer 3-4%, whereas FDs can range from 6.5% to 8% depending on the bank and tenure. Use our <a href="cagr.html" class="text-blue-600 hover:underline font-semibold">CAGR Calculator</a> to check how these compare over long durations.
+                    Compounding frequency determines how often the interest is added back to your principal. The more frequent the compounding, the higher your final maturity value.
                 </p>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse border border-slate-100">
                         <thead>
                             <tr class="bg-slate-50">
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Feature</th>
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Fixed Deposit (FD)</th>
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Savings Account</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Frequency</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Times Compounded / Year</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Relative Yield</th>
                             </tr>
                         </thead>
                         <tbody class="text-sm">
                             <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Expected Returns</td>
-                                <td class="p-4 border-b text-emerald-600 font-bold">6.5% - 8.0% p.a.</td>
-                                <td class="p-4 border-b">3.0% - 4.0% p.a.</td>
+                                <td class="p-4 border-b font-medium">Yearly</td>
+                                <td class="p-4 border-b">1</td>
+                                <td class="p-4 border-b">Standard</td>
                             </tr>
                             <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Liquidity</td>
-                                <td class="p-4 border-b text-red-500">Locked (Penalty on exit)</td>
-                                <td class="p-4 border-b text-blue-600 font-semibold">High (Instant Access)</td>
+                                <td class="p-4 border-b font-medium">Quarterly</td>
+                                <td class="p-4 border-b">4</td>
+                                <td class="p-4 border-b text-blue-600 font-semibold">Moderate Increase</td>
                             </tr>
                             <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Interest Calculation</td>
-                                <td class="p-4 border-b">Cumulative (Compounded)</td>
-                                <td class="p-4 border-b">Daily average balance</td>
+                                <td class="p-4 border-b font-medium">Monthly</td>
+                                <td class="p-4 border-b">12</td>
+                                <td class="p-4 border-b text-emerald-600 font-bold">Higher Increase</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium">Daily</td>
+                                <td class="p-4 border-b">365</td>
+                                <td class="p-4 border-b text-indigo-600 font-bold">Maximum Increase</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- Educational Section -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-8" id="about-fd">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <h2 class="text-xl font-bold text-slate-900 mb-6">What is a Fixed Deposit?</h2>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        A Fixed Deposit (FD) is a financial instrument provided by banks and NBFCs where you invest a lump sum amount for a fixed tenure at a predetermined interest rate. It is one of the safest investment avenues in India.
-                    </p>
-                    <ul class="space-y-4 text-slate-600 text-sm">
-                        <li class="flex items-start gap-3">
-                            <span class="bg-blue-100 text-blue-600 p-1 rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
-                            <span><strong>Safety:</strong> Your principal amount is safe and returns are guaranteed.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="bg-blue-100 text-blue-600 p-1 rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
-                            <span><strong>Flexible Tenure:</strong> Choose from 7 days up to 10 years.</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <h2 class="text-xl font-bold text-slate-900 mb-6">Effect of Compounding</h2>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                        The frequency of compounding significantly impacts your final maturity amount. 
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 text-center">
-                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                            <div class="font-bold text-blue-600 text-sm">Monthly</div>
-                            <div class="text-[10px] text-slate-500 uppercase mt-1">12 times/yr</div>
-                        </div>
-                        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
-                            <div class="font-bold text-emerald-600 text-sm">Quarterly</div>
-                            <div class="text-[10px] text-slate-500 uppercase mt-1">4 times/yr</div>
-                        </div>
+            <!-- FD vs SIP Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">FD vs SIP – Which is Better?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                        <h3 class="text-lg font-bold text-blue-900 mb-3">Fixed Deposit (FD)</h3>
+                        <p class="text-blue-800 text-sm leading-relaxed">
+                            <strong>Safety & Fixed Returns:</strong> FD is ideal for conservative investors who prioritize capital protection. You get a guaranteed return at a fixed interest rate, making it safe from market fluctuations.
+                        </p>
                     </div>
-                    <p class="text-xs text-slate-500 mt-4 italic">Higher compounding frequency results in slightly higher total interest earned.</p>
+                    <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
+                        <h3 class="text-lg font-bold text-emerald-900 mb-3">Systematic Investment Plan (SIP)</h3>
+                        <p class="text-emerald-800 text-sm leading-relaxed">
+                            <strong>Market Linked & Growth:</strong> SIPs in mutual funds are subject to market risks but offer potentially higher long-term returns. They are better for long-term goals (5-10+ years) where inflation-beating growth is required.
+                        </p>
+                    </div>
                 </div>
             </section>
 
@@ -602,7 +584,6 @@
             returnsLabel: document.getElementById('returnsLabel'), 
             investedBar: document.getElementById('investedBar'), 
             returnsBar: document.getElementById('returnsBar'),
-            finalMonthlyDisp: document.getElementById('finalMonthlyDisp'), 
             totalInvestedMobile: document.getElementById('totalInvestedMobile'), 
             wealthGainedMobile: document.getElementById('wealthGainedMobile'), 
             projectionTable: document.getElementById('projectionTable'),
@@ -640,10 +621,9 @@
 
             // Results Display
             elements.maturityValue.textContent = "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(maturityValue)));
-            elements.investedLabel.textContent = `Principal: ₹${formatCompact(P)}`;
-            elements.returnsLabel.textContent = `Interest: ₹${formatCompact(totalInterest)}`;
+            elements.investedLabel.textContent = `Total Deposit: ₹${formatCompact(P)}`;
+            elements.returnsLabel.textContent = `Total Interest: ₹${formatCompact(totalInterest)}`;
             
-            elements.finalMonthlyDisp.textContent = formatIndian(P);
             elements.totalInvestedMobile.textContent = formatIndian(P);
             elements.wealthGainedMobile.textContent = formatIndian(totalInterest);
 
@@ -662,7 +642,6 @@
             
             for (let y = 1; y <= totalYears; y++) {
                 const openingBalance = currentBalance;
-                // Calculate balance after 1 year of compounding
                 const closingBalance = openingBalance * Math.pow(1 + (annualRate / compoundingFreq), compoundingFreq);
                 const interestEarned = closingBalance - openingBalance;
                 
