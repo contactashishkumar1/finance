@@ -10,6 +10,7 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
         }
         .gradient-text {
             background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
@@ -21,107 +22,158 @@
         }
         input[type="range"] {
             accent-color: #2563eb;
-        }
-        .table-container::-webkit-scrollbar {
             height: 6px;
         }
-        .table-container::-webkit-scrollbar-track {
-            background: #f1f1f1;
+        /* Custom scrollbar for the nav and tables */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
         }
         .table-container::-webkit-scrollbar-thumb {
             background: #cbd5e1;
             border-radius: 10px;
         }
-        @media (max-width: 640px) {
-            .input-group {
-                flex-direction: column;
-            }
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.5rem 0.25rem;
+        }
+        .nav-link.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2563eb;
+        }
+        /* FAQ custom styles */
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
         }
     </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
 
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-14">
+                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar py-2">
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Home</a>
+                    <a href="#" class="nav-link active text-sm whitespace-nowrap">SIP</a>
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">EMI</a>
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">GST</a>
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Salary</a>
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Business</a>
+                </div>
+                <div class="hidden sm:flex items-center ml-4">
+                    <button class="text-slate-400 hover:text-slate-600 p-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!-- Header -->
-    <header class="bg-white border-b border-slate-200 py-6 mb-8">
+    <header class="bg-white border-b border-slate-200 py-4 sm:py-6 mb-6 sm:mb-8">
         <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
             <div>
-                <h1 class="text-2xl font-bold gradient-text">SIP Calculator</h1>
-                <p class="text-slate-500 text-sm mt-1">Plan your growth with annual step-up options.</p>
+                <h1 class="text-xl sm:text-2xl font-bold gradient-text">SIP Calculator</h1>
+                <p class="text-slate-500 text-xs sm:text-sm mt-1">Strategic wealth planning with step-up.</p>
             </div>
             <div class="hidden md:block">
-                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Wealth Planner</span>
+                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Financial Suite</span>
             </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-12">
             
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 card-shadow">
-                    <h2 class="text-lg font-semibold mb-6 flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        Investment Details
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Investment Plan
                     </h2>
 
                     <!-- Monthly Investment -->
                     <div class="mb-8">
-                        <div class="flex justify-between items-center mb-4">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Initial Monthly Investment</label>
-                            <div class="relative">
-                                <input type="number" id="monthlyInput" value="5000" class="w-32 px-3 py-1.5 border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
-                            </div>
+                            <!-- Added step="1000" and min="1000" -->
+                            <input type="number" id="monthlyInput" value="5000" min="1000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
-                        <input type="range" id="monthlyRange" min="500" max="100000" step="500" value="5000" class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer">
+                        <!-- Updated step="1000" and min="1000" -->
+                        <input type="range" id="monthlyRange" min="1000" max="100000" step="1000" value="5000" class="w-full py-2 cursor-pointer">
                     </div>
 
                     <!-- Step Up Percentage -->
                     <div class="mb-8">
-                        <div class="flex justify-between items-center mb-4">
-                            <label class="text-sm font-medium text-slate-600">Annual Step-up</label>
-                            <div class="relative">
-                                <input type="number" id="stepUpInput" value="10" step="1" class="w-24 px-3 py-1.5 border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
-                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">%</span>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Annual Step-up (%)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="stepUpInput" value="10" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
                             </div>
                         </div>
-                        <input type="range" id="stepUpRange" min="0" max="50" step="1" value="10" class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer">
+                        <input type="range" id="stepUpRange" min="0" max="50" step="1" value="10" class="w-full py-2 cursor-pointer">
                     </div>
 
                     <!-- Interest Rate -->
                     <div class="mb-8">
-                        <div class="flex justify-between items-center mb-4">
-                            <label class="text-sm font-medium text-slate-600">Expected Return (p.a)</label>
-                            <div class="relative">
-                                <input type="number" id="rateInput" value="12" step="0.5" class="w-24 px-3 py-1.5 border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
-                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">%</span>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Expected Returns (p.a %)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="rateInput" value="12" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
                             </div>
                         </div>
-                        <input type="range" id="rateRange" min="1" max="30" step="0.5" value="12" class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer">
+                        <input type="range" id="rateRange" min="1" max="30" step="0.5" value="12" class="w-full py-2 cursor-pointer">
                     </div>
 
                     <!-- Years -->
                     <div class="mb-4">
-                        <div class="flex justify-between items-center mb-4">
-                            <label class="text-sm font-medium text-slate-600">Time Period</label>
-                            <div class="relative">
-                                <input type="number" id="yearsInput" value="10" class="w-24 px-3 py-1.5 border border-slate-200 rounded-lg text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
-                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">Yr</span>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Time Period (Years)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="yearsInput" value="10" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
                             </div>
                         </div>
-                        <input type="range" id="yearsRange" min="1" max="40" step="1" value="10" class="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer">
+                        <input type="range" id="yearsRange" min="1" max="40" step="1" value="10" class="w-full py-2 cursor-pointer">
                     </div>
                 </div>
 
-                <!-- Quick Summary Mini Cards -->
+                <!-- Summary Cards -->
                 <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-blue-600 p-4 rounded-2xl text-white">
-                        <p class="text-blue-100 text-xs font-medium uppercase mb-1">Total Invested</p>
-                        <h3 id="totalInvestedMobile" class="text-xl font-bold">0</h3>
+                    <div class="bg-blue-600 p-4 rounded-2xl text-white shadow-lg shadow-blue-200">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Invested</p>
+                        <h3 id="totalInvestedMobile" class="text-lg sm:text-xl font-bold">0</h3>
                     </div>
-                    <div class="bg-emerald-600 p-4 rounded-2xl text-white">
-                        <p class="text-emerald-100 text-xs font-medium uppercase mb-1">Wealth Gained</p>
-                        <h3 id="wealthGainedMobile" class="text-xl font-bold">0</h3>
+                    <div class="bg-emerald-600 p-4 rounded-2xl text-white shadow-lg shadow-emerald-200">
+                        <p class="text-emerald-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Wealth Gained</p>
+                        <h3 id="wealthGainedMobile" class="text-lg sm:text-xl font-bold">0</h3>
                     </div>
                 </div>
             </div>
@@ -130,85 +182,280 @@
             <div class="lg:col-span-7 space-y-6">
                 
                 <!-- Main Results Card -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
                         <div>
-                            <h2 class="text-slate-500 text-sm font-medium uppercase tracking-wider">Estimated Maturity Value</h2>
-                            <div class="flex items-baseline mt-1">
-                                <span class="text-3xl font-bold text-slate-900" id="maturityValue">0</span>
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Estimated Maturity</h2>
+                            <div class="mt-1">
+                                <span class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" id="maturityValue">0</span>
                             </div>
                         </div>
-                        <div class="flex gap-2">
-                             <div class="h-10 w-1 bg-blue-500 rounded-full"></div>
-                             <div class="text-xs">
-                                <p class="text-slate-400">Final Monthly SIP</p>
-                                <p class="font-bold text-slate-700" id="finalMonthlyDisp">5,000</p>
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100">
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Final Monthly</p>
+                                <p class="font-bold text-slate-800 text-sm" id="finalMonthlyDisp">5,000</p>
                              </div>
                         </div>
                     </div>
 
-                    <!-- Progress Bar Visualization -->
-                    <div class="mb-8">
-                        <div class="flex justify-between text-xs mb-2">
-                            <span class="text-blue-600 font-semibold">Invested Amount</span>
-                            <span class="text-emerald-600 font-semibold">Estimated Returns</span>
+                    <!-- Progress Bar -->
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Invested</span>
+                            <span class="text-emerald-600 font-bold uppercase">Growth</span>
                         </div>
-                        <div class="w-full h-4 bg-slate-100 rounded-full overflow-hidden flex">
-                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-500 ease-out" style="width: 50%"></div>
-                            <div id="returnsBar" class="h-full bg-emerald-400 transition-all duration-500 ease-out" style="width: 50%"></div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                            <div id="returnsBar" class="h-full bg-emerald-400 transition-all duration-700 ease-out" style="width: 50%"></div>
                         </div>
-                        <div class="flex justify-between mt-4">
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
                             <div class="flex items-center">
-                                <div class="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-                                <span class="text-sm text-slate-600" id="investedLabel">0</span>
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-xs sm:text-sm text-slate-500" id="investedLabel">0</span>
                             </div>
                             <div class="flex items-center">
-                                <div class="w-3 h-3 bg-emerald-400 rounded-full mr-2"></div>
-                                <span class="text-sm text-slate-600" id="returnsLabel">0</span>
+                                <div class="w-3 h-3 bg-emerald-400 rounded-sm mr-2"></div>
+                                <span class="text-xs sm:text-sm text-slate-500" id="returnsLabel">0</span>
                             </div>
                         </div>
                     </div>
 
                     <hr class="border-slate-100 mb-6">
 
-                    <!-- Growth Projection Table Header -->
+                    <!-- Growth Projection -->
                     <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold text-slate-800">Growth Projection</h3>
-                        <button onclick="toggleTable()" class="text-blue-600 text-sm font-medium hover:underline focus:outline-none">View Yearly Table</button>
+                        <h3 class="font-bold text-slate-800 text-sm sm:text-base">Yearly Growth</h3>
+                        <button onclick="toggleTable()" id="toggleBtn" class="bg-slate-100 text-slate-600 px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-slate-200 transition-all">Show Table</button>
                     </div>
 
-                    <!-- Hidden/Expandable Table -->
-                    <div id="tableSection" class="hidden overflow-hidden transition-all duration-300">
-                        <div class="table-container overflow-x-auto max-h-80 border border-slate-100 rounded-xl">
-                            <table class="w-full text-left text-sm">
-                                <thead class="bg-slate-50 sticky top-0">
+                    <!-- Expandable Table -->
+                    <div id="tableSection" class="hidden overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl">
+                            <table class="w-full text-left text-xs sm:text-sm">
+                                <thead class="bg-slate-50">
                                     <tr>
-                                        <th class="px-4 py-3 font-semibold text-slate-600 border-b border-slate-100">Year</th>
-                                        <th class="px-4 py-3 font-semibold text-slate-600 border-b border-slate-100">Monthly SIP</th>
-                                        <th class="px-4 py-3 font-semibold text-slate-600 border-b border-slate-100">Total Invested</th>
-                                        <th class="px-4 py-3 font-semibold text-slate-600 border-b border-slate-100">Total Value</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Monthly</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Invested</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Total Value</th>
                                     </tr>
                                 </thead>
-                                <tbody id="projectionTable">
-                                    <!-- Rows injected by JS -->
-                                </tbody>
+                                <tbody id="projectionTable"></tbody>
                             </table>
                         </div>
                     </div>
                 </div>
 
-                <!-- Footer Note -->
-                <div class="bg-slate-100 p-4 rounded-xl border border-slate-200">
-                    <p class="text-xs text-slate-500 leading-relaxed text-center">
-                        Calculations use iterative monthly compounding. Step-up occurs at the beginning of every new year.
+                <div class="bg-blue-50 p-4 rounded-xl border border-blue-100">
+                    <p class="text-[10px] sm:text-xs text-blue-600 leading-relaxed text-center font-medium">
+                        * Estimates calculated using iterative monthly compounding. Actual results may vary based on market conditions.
                     </p>
                 </div>
             </div>
         </div>
+
+        <!-- Educational Content Section -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Understanding Systematic Investment Plan (SIP)</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-3">What is an SIP?</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                            A Systematic Investment Plan (SIP) is a disciplined way of investing in mutual funds. Instead of a large one-time lumpsum investment, SIP allows you to invest a fixed amount at regular intervals (monthly, quarterly, or weekly).
+                        </p>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            It follows the concept of <strong>"Time in the market is more important than timing the market."</strong>
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-3">Why choose Step-up SIP?</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                            As your income grows every year, your savings should too. A Step-up SIP automatically increases your contribution by a fixed percentage or amount annually.
+                        </p>
+                        <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-blue-500">
+                            <p class="text-sm italic text-slate-700">"Even a 10% annual increase in SIP can lead to a significantly larger corpus over 20 years compared to a flat SIP."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-10 border-t border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 text-center">Benefits of Investing via SIP</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                        <div class="p-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-slate-800 mb-2">Discipline</h4>
+                            <p class="text-xs text-slate-500">Instills a habit of regular saving and investing.</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-slate-800 mb-2">Compounding</h4>
+                            <p class="text-xs text-slate-500">Earn interest on your interest over the long term.</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-slate-800 mb-2">Rupee Cost Averaging</h4>
+                            <p class="text-xs text-slate-500">Buy more units when markets are low.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Is SIP better than FD in India?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            While FD offers guaranteed safety, Equity SIPs in India typically provide much higher inflation-beating returns (12-15%) over 5+ years. SIPs are ideal for wealth creation, whereas FDs are better for short-term capital safety.
+                        </div>
+                    </details>
+
+                    <!-- Q2 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">What happens if I stop SIP midway?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            If you stop midway, your existing units remain invested and continue to earn market returns. There is no penalty from the fund house for stopping, though your bank might charge for a missed auto-debit if not cancelled properly.
+                        </div>
+                    </details>
+
+                    <!-- Q3 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Can I withdraw SIP anytime?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Yes, most SIPs (Open-ended funds) allow withdrawal anytime. However, ELSS (Tax Saving) funds have a 3-year lock-in. Note that withdrawing within 1 year may attract an Exit Load (usually 1%) and higher taxes.
+                        </div>
+                    </details>
+
+                    <!-- Q4 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">How much SIP needed for 1 crore?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            At a 12% annual return, a monthly SIP of 10,000 takes about 20 years to reach 1 Crore. You can reach this goal much faster (around 15 years) by increasing your SIP amount by 10% every year using the Step-up feature.
+                        </div>
+                    </details>
+
+                    <!-- Q5 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Are SIP returns taxable in India?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Yes. For Equity SIPs, Long Term Capital Gains (LTCG) over 1.25 Lakh are taxed at 12.5%. Short-term gains (held < 1 year) are taxed at 20%. Every installment is treated as a fresh investment for tax purposes.
+                        </div>
+                    </details>
+
+                    <!-- Q6 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Can I change my SIP date after starting?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Most Indian fund houses and apps (like Groww, Zerodha, or CAMS) allow you to modify the SIP date. If the "Modify" option isn't available, you can simply stop the current SIP and start a new one with your preferred date.
+                        </div>
+                    </details>
+
+                    <!-- Q7 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">What is the best date for SIP in India?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Historically, there is no "perfect" date due to market volatility. However, choosing a date right after your salary credit (like 1st to 7th) is best to ensure investment discipline before you spend the money.
+                        </div>
+                    </details>
+
+                    <!-- Q8 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Does SIP guarantee returns?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            No, SIPs in mutual funds do not guarantee returns as they are linked to the stock market. However, Indian market history shows that staying invested for 7-10 years significantly reduces risk and offers high inflation-adjusted growth.
+                        </div>
+                    </details>
+
+                    <!-- Q9 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Can I start SIP with only 500?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Yes, the majority of Mutual Fund schemes in India allow you to start an SIP with just 500 per month. Some AMC schemes even offer "Micro-SIPs" starting as low as 100 per month.
+                        </div>
+                    </details>
+
+                    <!-- Q10 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Is it better to invest in SIP or Lumpsum?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            SIP is better for most investors as it averages the cost of investment and reduces risk in volatile markets. Lumpsum is only recommended when you have a large sum and the market is at a significant low or valuation.
+                        </div>
+                    </details>
+
+                    <!-- Q11 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">What is the lock-in period for SIP?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Standard SIPs have no lock-in period. However, ELSS (Equity Linked Savings Schemes) have a 3-year lock-in period. Note that in ELSS, every SIP installment is locked for 3 years from its specific investment date.
+                        </div>
+                    </details>
+
+                    <!-- Q12 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Can I have multiple SIPs in the same fund?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Yes, you can start multiple SIPs of different amounts or on different dates within the same mutual fund scheme. This is often used by investors to track different financial goals (like Child Education and Retirement) separately.
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
     </main>
 
+    <footer class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="text-center py-8 border-t border-slate-200">
+            <p class="text-slate-400 text-xs">© 2024 Financial Suite. All Rights Reserved.</p>
+        </div>
+    </footer>
+
     <script>
-        // DOM Elements
         const monthlyInput = document.getElementById('monthlyInput');
         const monthlyRange = document.getElementById('monthlyRange');
         const stepUpInput = document.getElementById('stepUpInput');
@@ -228,11 +475,10 @@
         const wealthGainedMobile = document.getElementById('wealthGainedMobile');
         const projectionTable = document.getElementById('projectionTable');
         const tableSection = document.getElementById('tableSection');
+        const toggleBtn = document.getElementById('toggleBtn');
 
-        // Initial Calculation
         updateCalculations();
 
-        // Event Listeners for Syncing Range & Inputs
         function setupSync(input, range) {
             input.addEventListener('input', () => {
                 range.value = input.value;
@@ -259,51 +505,33 @@
             let totalValue = 0;
             let totalInvested = 0;
             let currentMonthly = P;
-            
             const yearlyData = [];
 
             for (let y = 1; y <= years; y++) {
-                // Monthly calculation for the year
                 for (let m = 1; m <= 12; m++) {
                     totalInvested += currentMonthly;
-                    // Compound existing value + add new investment with immediate month's interest
                     totalValue = (totalValue + currentMonthly) * (1 + monthlyRate);
                 }
-                
-                // Store year end snapshot
-                yearlyData.push({
-                    year: y,
-                    monthly: currentMonthly,
-                    invested: totalInvested,
-                    total: totalValue
-                });
-
-                // Apply Step-up for next year
+                yearlyData.push({ year: y, monthly: currentMonthly, invested: totalInvested, total: totalValue });
                 currentMonthly = currentMonthly * (1 + (stepUpPercent / 100));
             }
 
-            // Results from final month
             const finalMaturity = totalValue;
             const finalInvested = totalInvested;
             const finalReturns = finalMaturity - finalInvested;
             const lastYearMonthly = yearlyData.length > 0 ? yearlyData[yearlyData.length - 1].monthly : P;
 
-            // Update UI Labels (Removed currency symbols, used plain format)
-            const formatter = new Intl.NumberFormat('en-US', {
-                maximumFractionDigits: 0
-            });
+            const formatter = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
 
             maturityValueDisp.textContent = formatter.format(finalMaturity);
             investedLabel.textContent = `Invested: ${formatter.format(finalInvested)}`;
-            returnsLabel.textContent = `Returns: ${formatter.format(finalReturns)}`;
+            returnsLabel.textContent = `Growth: ${formatter.format(finalReturns)}`;
             finalMonthlyDisp.textContent = formatter.format(lastYearMonthly);
             totalInvestedMobile.textContent = formatter.format(finalInvested);
             wealthGainedMobile.textContent = formatter.format(finalReturns);
 
-            // Update Visualization Bars
             const investedPercent = (finalInvested / finalMaturity) * 100 || 0;
             const returnsPercent = (finalReturns / finalMaturity) * 100 || 0;
-            
             investedBar.style.width = `${investedPercent}%`;
             returnsBar.style.width = `${returnsPercent}%`;
 
@@ -317,27 +545,22 @@
                 row.className = 'hover:bg-slate-50 transition-colors';
                 row.innerHTML = `
                     <td class="px-4 py-3 border-b border-slate-100 font-medium text-slate-700">Year ${item.year}</td>
-                    <td class="px-4 py-3 border-b border-slate-100 text-slate-500">${formatCompact(item.monthly)}</td>
-                    <td class="px-4 py-3 border-b border-slate-100 text-slate-600">${formatCompact(item.invested)}</td>
-                    <td class="px-4 py-3 border-b border-slate-100 font-bold text-slate-800">${formatCompact(item.total)}</td>
+                    <td class="px-4 py-3 border-b border-slate-100 text-right text-slate-500">${formatCompact(item.monthly)}</td>
+                    <td class="px-4 py-3 border-b border-slate-100 text-right text-slate-600">${formatCompact(item.invested)}</td>
+                    <td class="px-4 py-3 border-b border-slate-100 text-right font-bold text-slate-800">${formatCompact(item.total)}</td>
                 `;
                 projectionTable.appendChild(row);
             });
         }
 
         function formatCompact(val) {
-            return new Intl.NumberFormat('en-US', {
-                notation: 'compact',
-                maximumFractionDigits: 1
-            }).format(val);
+            return new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
         }
 
         function toggleTable() {
-            if (tableSection.classList.contains('hidden')) {
-                tableSection.classList.remove('hidden');
-            } else {
-                tableSection.classList.add('hidden');
-            }
+            const isHidden = tableSection.classList.contains('hidden');
+            tableSection.classList.toggle('hidden');
+            toggleBtn.textContent = isHidden ? 'Hide Table' : 'Show Table';
         }
     </script>
 </body>
