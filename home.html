@@ -60,11 +60,11 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="bg-white border-b border-slate-200 pt-16 pb-20 sm:pt-24 sm:pb-32">
+    <header class="bg-white border-b border-slate-200 pt-16 pb-20 sm:pt-24 sm:pb-28">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h1 class="text-4xl sm:text-6xl font-bold gradient-text leading-tight mb-6">Understand Your Money Before You Invest</h1>
-            <p class="text-slate-500 text-base sm:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
-                A platform that explains financial calculations like SIP, EMI, interest, and compounding in a simple and practical way for everyday financial decisions.
+            <p class="text-slate-500 text-base sm:xl leading-relaxed mb-10 max-w-2xl mx-auto">
+                A platform that helps you decide investments, loans and savings using real numbers instead of guesswork.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="sip.html" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100">
@@ -78,6 +78,31 @@
     </header>
 
     <main class="max-w-6xl mx-auto px-4 py-16 space-y-24">
+
+        <!-- NEW: Affordability Check Section -->
+        <section class="space-y-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-slate-900">Find Out What You Can Afford</h2>
+                <p class="text-slate-500 mt-2">Objective analysis for your primary financial goals.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Monthly Investment Planning</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">Estimate how much you should invest every month to reach your financial goals using the power of compounding.</p>
+                    <a href="sip.html" class="block text-center py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Use SIP Calculator</a>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Loan Affordability</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">Understand the EMI you can comfortably pay before taking a loan by calculating total interest and repayment impact.</p>
+                    <a href="emi.html" class="block text-center py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Calculate EMI</a>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow flex flex-col">
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Safe Savings Return</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">Check exact returns on fixed deposits based on compounding frequency before locking your money in long-term savings.</p>
+                    <a href="fd.html" class="block text-center py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Compare FD Returns</a>
+                </div>
+            </div>
+        </section>
         
         <!-- Introduction Section -->
         <section class="max-w-4xl mx-auto">
@@ -87,7 +112,7 @@
                     A significant majority of investment decisions are made based on historical returns or emotional bias without a fundamental understanding of the underlying mathematics. Financial planning is essentially an exercise in precision where small variables can lead to vastly different outcomes over long durations.
                 </p>
                 <p>
-                    Small differences in interest rates, compounding frequencies, or loan tenures often result inwealth differences amounting to lakhs of rupees. Without calculating these impacts beforehand, individuals risk over-leveraging their income or underestimating the corpus required for future goals.
+                    Small differences in interest rates, compounding frequencies, or loan tenures often result in wealth differences amounting to lakhs of rupees. Without calculating these impacts beforehand, individuals risk over-leveraging their income or underestimating the corpus required for future goals.
                 </p>
                 <p>
                     The purpose of this platform is to provide clarity. By offering transparent tools that follow standard Indian financial protocols, Financial Suite India assists users in observing how data shapes their financial health. These tools are designed for objective understanding, not as a replacement for professional advisory.
@@ -123,6 +148,25 @@
             </div>
         </section>
 
+        <!-- NEW: Common Financial Situations Guide -->
+        <section class="space-y-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-l-4 border-emerald-500 pl-4">Common Financial Situations</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <h4 class="font-bold text-slate-800 mb-2">First Salary</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Building a wealth habit early is easier when you see the long-term impact. Before picking a fund, use the <a href="sip.html" class="text-blue-600 font-semibold underline">SIP Calculator</a> to see how small monthly contributions grow over 30 years.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <h4 class="font-bold text-slate-800 mb-2">Buying a Home</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">A home loan is a 20-year commitment. It is vital to use the <a href="emi.html" class="text-blue-600 font-semibold underline">EMI Calculator</a> to check total interest costs and verify if the monthly payout fits your take-home pay.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                    <h4 class="font-bold text-slate-800 mb-2">Short-term Savings</h4>
+                    <p class="text-sm text-slate-500 leading-relaxed">Idle money in a bank account loses value to inflation. Checking the <a href="fd.html" class="text-blue-600 font-semibold underline">FD Calculator</a> helps you compare guaranteed returns against current inflation rates to protect your purchasing power.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Calculator Tools Section -->
         <section id="tools">
             <div class="text-center mb-12">
@@ -130,7 +174,6 @@
                 <p class="text-slate-500">Select a tool below to begin your calculations.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- SIP Card -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
                     <div>
                         <h3 class="text-lg font-bold text-slate-800 mb-2">SIP Calculator</h3>
@@ -140,7 +183,6 @@
                         Open Tool
                     </a>
                 </div>
-                <!-- EMI Card -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
                     <div>
                         <h3 class="text-lg font-bold text-slate-800 mb-2">EMI Calculator</h3>
@@ -150,7 +192,6 @@
                         Open Tool
                     </a>
                 </div>
-                <!-- FD Card -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
                     <div>
                         <h3 class="text-lg font-bold text-slate-800 mb-2">FD Calculator</h3>
@@ -160,7 +201,6 @@
                         Open Tool
                     </a>
                 </div>
-                <!-- CAGR Card -->
                 <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
                     <div>
                         <h3 class="text-lg font-bold text-slate-800 mb-2">CAGR Calculator</h3>
@@ -204,6 +244,25 @@
                             The difference between a 12% return and a 14% return on a ₹10,000 monthly SIP over 20 years is approximately <strong>₹18 Lakhs</strong>. Data clarity is the only way to capture this gap.
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Only 3 Calculations Section -->
+        <section class="max-w-4xl mx-auto space-y-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 text-center">If You Do Only 3 Financial Calculations in Life</h2>
+            <div class="space-y-8">
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow">
+                    <h4 class="font-bold text-slate-800 mb-2">1. Calculate EMI before committing to a loan</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Before signing a loan agreement, calculate the total interest payable over the entire tenure. Often, a loan that looks affordable monthly is prohibitively expensive in total interest cost. Understanding this helps in choosing shorter tenures or higher down payments.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow">
+                    <h4 class="font-bold text-slate-800 mb-2">2. Calculate SIP before starting investments</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Investment goals should be reverse-calculated. Instead of investing a random surplus, calculate the exact monthly amount needed to reach your target corpus based on a realistic expected return. This ensures your financial goals are mathematically reachable.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-slate-100 card-shadow">
+                    <h4 class="font-bold text-slate-800 mb-2">3. Compare FD return with inflation</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">Always subtract the prevailing inflation rate and tax from your Fixed Deposit interest rate. If the inflation rate is 6% and your FD earns 7% before tax, your real growth is near zero. This calculation is essential for choosing between safety and growth.</p>
                 </div>
             </div>
         </section>
