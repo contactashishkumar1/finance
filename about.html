@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – Financial Suite India</title>
+    <meta name="description" content="Learn about Financial Suite India and our mission to provide free, transparent financial tools to help people make better investment and loan decisions.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.5rem 0.25rem;
+        }
+        .nav-link.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-14">
+                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar py-2 pr-4">
+                    <a href="index.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Home</a>
+                    <a href="sip_calculator.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">SIP</a>
+                    <a href="emi_calculator.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">EMI</a>
+                    <a href="fd.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">FD</a>
+                    <a href="#" class="nav-link active text-sm whitespace-nowrap">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 py-10 sm:py-16 mb-8 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="text-3xl sm:text-5xl font-bold gradient-text leading-tight mb-4">About Financial Suite India</h1>
+            <p class="text-slate-500 text-sm sm:text-lg leading-relaxed">
+                Simplifying complex financial decisions through free, transparent, and precise tools.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 space-y-8">
+        
+        <!-- Mission Section -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Our Mission</h2>
+            </div>
+            <p class="text-slate-600 leading-relaxed mb-4">
+                Financial decisions in India are often driven by emotions or incomplete information. Our mission is to provide **simple, easy-to-use financial tools** that empower everyday people to understand their money better.
+            </p>
+            <p class="text-slate-600 leading-relaxed">
+                We believe in complete transparency. Financial Suite India does not provide financial advisory, we do not sell insurance or mutual fund products, and we do not have a hidden agenda. We only provide the data—you make the decision.
+            </p>
+        </section>
+
+        <!-- About the Creator -->
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+            <div class="md:col-span-1 text-center md:text-left">
+                <div class="w-32 h-32 bg-slate-100 rounded-full mx-auto md:mx-0 flex items-center justify-center text-slate-400 border-4 border-slate-50">
+                    <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
+                </div>
+            </div>
+            <div class="md:col-span-2">
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4">About the Creator</h2>
+                <p class="text-slate-600 leading-relaxed">
+                    Hi, I'm **CA Ashish**. I am a Chartered Accountant currently working in the **Finance Industry** with a professional background in **Corporate Finance** and **Financial Planning & Analysis (FP&A)**. 
+                </p>
+                <p class="text-slate-600 leading-relaxed mt-4">
+                    Throughout my journey in the finance world, I've seen how powerful simple numbers can be when used correctly. I created Financial Suite India as a personal project to bridge the gap between complex financial jargon and practical, everyday math that helps you save, invest, and borrow wisely.
+                </p>
+            </div>
+        </section>
+
+        <!-- Why These Calculators Exist -->
+        <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+            <h2 class="text-2xl font-bold mb-6">Why These Calculators Exist</h2>
+            <div class="space-y-6">
+                <p class="text-slate-300 leading-relaxed">
+                    Most people make life-altering investment decisions without fully grasping three critical pillars: **Compounding, Loan Cost, and Inflation.**
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">The Cost of Debt</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">We help you see that a small increase in loan tenure can double your total interest payable.</p>
+                    </div>
+                    <div class="bg-emerald-400 p-5 rounded-xl border border-emerald-500 text-slate-900">
+                        <h4 class="font-bold mb-2">The Power of Time</h4>
+                        <p class="text-xs font-medium leading-relaxed">We show how staying invested for just 5 extra years can drastically change your retirement corpus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Summary -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
+            <h2 class="text-xl font-bold text-slate-900 mb-4">Quick Summary</h2>
+            <div class="max-w-2xl mx-auto text-slate-600 space-y-2">
+                <p>• Built by a Finance Professional for non-finance users.</p>
+                <p>• Completely free to use with no hidden registration.</p>
+                <p>• Focus on Indian banking and investment standards.</p>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+            <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+            The calculators on Financial Suite India are designed for educational purposes only. They provide estimations based on mathematical formulas and user inputs. Results should not be considered as guaranteed returns or professional financial advice. Always consult with a qualified professional before making significant investment or loan commitments.
+            <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+        </div>
+
+    </main>
+
+    <footer class="max-w-6xl mx-auto px-4 mt-12">
+        <div class="text-center py-8 border-t border-slate-200">
+            <p class="text-slate-400 text-[10px]">© 2026 Financial Suite India. Created by CA Ashish.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
