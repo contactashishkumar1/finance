@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Suite India – Educational Financial Calculators & Planning</title>
+    <meta name="description" content="An independent educational platform providing precise financial calculators for SIP, EMI, FD, and CAGR. Understand the math behind your money before you invest.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.5rem 0.25rem;
+        }
+        .nav-link.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-14">
+                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar py-2 pr-4">
+                    <a href="#" class="nav-link active text-sm whitespace-nowrap">Home</a>
+                    <a href="sip.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">SIP</a>
+                    <a href="emi.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">EMI</a>
+                    <a href="fd.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">FD</a>
+                    <a href="about.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white border-b border-slate-200 pt-16 pb-20 sm:pt-24 sm:pb-32">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-4xl sm:text-6xl font-bold gradient-text leading-tight mb-6">Understand Your Money Before You Invest</h1>
+            <p class="text-slate-500 text-base sm:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+                A platform that explains financial calculations like SIP, EMI, interest, and compounding in a simple and practical way for everyday financial decisions.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="sip.html" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100">
+                    Start with SIP Calculator
+                </a>
+                <a href="#tools" class="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 hover:border-blue-300 text-slate-700 font-bold rounded-xl transition-all">
+                    Explore All Tools
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-16 space-y-24">
+        
+        <!-- Introduction Section -->
+        <section class="max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-4">Why Financial Calculations Matter</h2>
+            <div class="space-y-6 text-slate-600 leading-relaxed text-sm sm:text-base">
+                <p>
+                    A significant majority of investment decisions are made based on historical returns or emotional bias without a fundamental understanding of the underlying mathematics. Financial planning is essentially an exercise in precision where small variables can lead to vastly different outcomes over long durations.
+                </p>
+                <p>
+                    Small differences in interest rates, compounding frequencies, or loan tenures often result inwealth differences amounting to lakhs of rupees. Without calculating these impacts beforehand, individuals risk over-leveraging their income or underestimating the corpus required for future goals.
+                </p>
+                <p>
+                    The purpose of this platform is to provide clarity. By offering transparent tools that follow standard Indian financial protocols, Financial Suite India assists users in observing how data shapes their financial health. These tools are designed for objective understanding, not as a replacement for professional advisory.
+                </p>
+            </div>
+        </section>
+
+        <!-- Learning Section: How Money Grows -->
+        <section class="bg-white p-6 sm:p-12 rounded-3xl border border-slate-200 card-shadow">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-10 text-center">How Money Grows</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold">01</div>
+                    <h3 class="text-lg font-bold text-slate-800">Compounding</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Compounding is the process where interest earned on an investment is reinvested to earn further interest. Over 10-20 years, the "interest on interest" component often exceeds the original principal deposited.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center font-bold">02</div>
+                    <h3 class="text-lg font-bold text-slate-800">Time Value of Money</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        A rupee today is worth more than a rupee tomorrow due to inflation. Understanding the future value of current savings is critical to ensuring that a financial goal remains achievable in the future economy.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center font-bold">03</div>
+                    <h3 class="text-lg font-bold text-slate-800">Interest Rate Impact</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        A mere 1% difference in annual returns can change the final maturity value by several lakhs over a 20-year SIP. Precision in choosing the right asset class is therefore paramount.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Tools Section -->
+        <section id="tools">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Precision Planning Tools</h2>
+                <p class="text-slate-500">Select a tool below to begin your calculations.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- SIP Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">SIP Calculator</h3>
+                        <p class="text-xs text-slate-500 mb-6">Estimate wealth gain through mutual fund systematic plans with annual step-up options.</p>
+                    </div>
+                    <a href="sip.html" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">
+                        Open Tool
+                    </a>
+                </div>
+                <!-- EMI Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">EMI Calculator</h3>
+                        <p class="text-xs text-slate-500 mb-6">Calculate monthly installments and total interest burden for home or car loans.</p>
+                    </div>
+                    <a href="emi.html" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">
+                        Open Tool
+                    </a>
+                </div>
+                <!-- FD Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">FD Calculator</h3>
+                        <p class="text-xs text-slate-500 mb-6">Determine maturity value of fixed deposits based on compounding frequencies.</p>
+                    </div>
+                    <a href="fd.html" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">
+                        Open Tool
+                    </a>
+                </div>
+                <!-- CAGR Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">CAGR Calculator</h3>
+                        <p class="text-xs text-slate-500 mb-6">Calculate the compound annual growth rate of any asset over a specific period.</p>
+                    </div>
+                    <a href="cagr.html" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">
+                        Open Tool
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Education Section -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 leading-tight">Investing vs Borrowing Decisions</h2>
+                <div class="space-y-6 text-slate-600 text-sm sm:text-base leading-relaxed">
+                    <p>
+                        <strong>SIP vs FD:</strong> While Fixed Deposits offer guaranteed returns and capital protection, they often fail to beat inflation effectively. SIPs offer market-linked growth which is essential for wealth creation over 10+ years.
+                    </p>
+                    <p>
+                        <strong>EMI Affordability:</strong> A lower EMI often tempts borrowers into longer tenures. However, a 20-year loan typically results in the borrower paying nearly double the principal in interest alone. Shortening the tenure is the most effective way to reduce debt cost.
+                    </p>
+                    <p>
+                        <strong>Planning Strategy:</strong> Financial success is achieved by balancing high-growth assets (SIP) with secure assets (FD), while keeping borrowing costs (EMI) at a minimum level relative to monthly income.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-slate-900 p-8 sm:p-12 rounded-3xl text-white">
+                <div class="space-y-8">
+                    <div>
+                        <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs tracking-widest">The Numbers Rule</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed italic">
+                            "Compounding is the eighth wonder of the world. He who understands it, earns it... he who doesn't, pays it."
+                        </p>
+                    </div>
+                    <div class="h-px bg-slate-800"></div>
+                    <div>
+                        <h4 class="text-emerald-400 font-bold mb-2 uppercase text-xs tracking-widest">Efficiency Goal</h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            The difference between a 12% return and a 14% return on a ₹10,000 monthly SIP over 20 years is approximately <strong>₹18 Lakhs</strong>. Data clarity is the only way to capture this gap.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Our Approach</h2>
+            <p class="text-slate-500 leading-relaxed max-w-2xl mx-auto mb-8">
+                Financial Suite India is an independent platform focused solely on the mathematical logic of personal finance. We operate with a clear set of educational principles.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div class="p-4">
+                    <h4 class="font-bold text-slate-800 mb-2">Education First</h4>
+                    <p class="text-xs text-slate-500">Focus on teaching the math behind money, not just showing final numbers.</p>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-bold text-slate-800 mb-2">Zero Product Sales</h4>
+                    <p class="text-xs text-slate-500">No mutual fund recommendations or insurance selling. Pure tool access.</p>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-bold text-slate-800 mb-2">Objective Data</h4>
+                    <p class="text-xs text-slate-500">Calculations follow standard financial formulas to ensure unbiased results.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-20 pb-12">
+        <div class="max-w-6xl mx-auto px-4 pt-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-xl font-bold gradient-text mb-4">Financial Suite India</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed max-w-sm">
+                        An independent platform providing practical financial tools to help individuals understand the impact of their financial decisions through data and mathematics.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">Calculators</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="sip.html" class="hover:text-blue-600 transition-colors">SIP Calculator</a></li>
+                        <li><a href="emi.html" class="hover:text-blue-600 transition-colors">EMI Calculator</a></li>
+                        <li><a href="fd.html" class="hover:text-blue-600 transition-colors">FD Calculator</a></li>
+                        <li><a href="cagr.html" class="hover:text-blue-600 transition-colors">CAGR Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">Company</h4>
+                    <ul class="space-y-2 text-sm text-slate-500">
+                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-600 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-slate-100 text-center">
+                <p class="text-slate-400 text-[10px] sm:text-xs leading-relaxed max-w-3xl mx-auto px-4">
+                    Disclaimer: This website provides financial calculation tools for educational purposes only and does not provide financial advice, recommendations, or sell any financial products. Always consult with a qualified financial professional before making significant investment or loan commitments.
+                </p>
+                <p class="text-slate-400 text-[10px] mt-6">© 2026 Financial Suite India. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
