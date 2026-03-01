@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIP Calculator India (2026) – Mutual Fund Return Calculator</title>
-    <meta name="description" content="Calculate your mutual fund returns with our SIP Calculator India (2026). Estimate wealth gain, total maturity value, and see yearly growth with the annual step-up option.">
+    <title>SIP Calculator India (2026) – Mutual Fund Return Calculator with Step-Up</title>
+    <meta name="description" content="Calculate your mutual fund returns with our SIP Calculator India (2026). Estimate wealth gain, total maturity value, and see yearly growth with the annual step-up option. Plan your financial goals today.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://yourdomain.com/sip-calculator">
+    <link rel="canonical" href="https://example.com/sip-calculator">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="SIP Calculator India (2026) – Mutual Fund Return Calculator">
     <meta property="og:description" content="Plan your wealth with our professional SIP calculator. Features annual step-up, yearly growth tables, and precise Indian currency formatting.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com/sip-calculator">
+    <meta property="og:url" content="https://example.com/sip-calculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "SIP Calculator India (2026)",
+      "description": "A professional tool to calculate mutual fund SIP returns with annual step-up features.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Financial Suite India"
+      }
+    }
+    </script>
 
     <!-- Schema Markup: Breadcrumb -->
     <script type="application/ld+json">
@@ -23,17 +37,17 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://yourdomain.com/"
+        "item": "https://example.com/"
       },{
         "@type": "ListItem",
         "position": 2,
-        "name": "Calculators",
-        "item": "https://yourdomain.com/calculators"
+        "name": "Financial Calculators",
+        "item": "https://example.com/calculators"
       },{
         "@type": "ListItem",
         "position": 3,
         "name": "SIP Calculator",
-        "item": "https://yourdomain.com/sip-calculator"
+        "item": "https://example.com/sip-calculator"
       }]
     }
     </script>
@@ -43,21 +57,24 @@
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What is the 15-15-15 rule in Mutual Fund SIP?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The 15-15-15 rule suggests that a monthly SIP of ₹15,000 for 15 years at an expected return of 15% can help you accumulate ₹1 Crore."
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the 15-15-15 rule in Mutual Fund SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 15-15-15 rule states that an SIP of ₹15,000 per month for 15 years at an expected return of 15% can help you accumulate ₹1 Crore."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are SIP returns taxed in India (2026)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Long-Term Capital Gains (LTCG) on equity mutual funds held over 1 year are taxed at 12.5% for gains exceeding ₹1.25 Lakh. Short-Term Capital Gains (STCG) are taxed at 20%."
+          }
         }
-      }, {
-        "@type": "Question",
-        "name": "How are SIP returns taxed in India (2026)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Long-Term Capital Gains (LTCG) on equity mutual funds held over 1 year are taxed at 12.5% for gains exceeding ₹1.25 Lakh. Short-Term Capital Gains (STCG) are taxed at 20%."
-        }
-      }]
+      ]
     }
     </script>
 
@@ -68,6 +85,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
             -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
         }
         .gradient-text {
             background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
@@ -141,26 +159,26 @@
                     <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Home</a>
                     <a href="#" class="nav-link active text-sm whitespace-nowrap">SIP</a>
                     <a href="emi.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">EMI</a>
+                    <a href="fd.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">FD</a>
+                    <a href="cagr.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">CAGR</a>
                     <a href="gst.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">GST</a>
-                    <a href="salary.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Salary</a>
-                    <a href="business.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Business</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Header & Intro -->
+    <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8">
         <div class="max-w-6xl mx-auto px-4">
             <!-- Breadcrumb Navigation -->
-            <nav class="flex mb-4 text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
-                        <a href="#" class="hover:text-blue-600 transition-colors">Home</a>
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="#" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="text-blue-600">SIP Calculator</li>
@@ -171,19 +189,26 @@
                 <div class="max-w-3xl">
                     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">SIP Calculator India (2026) – Mutual Fund Return Calculator</h1>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
-                        Calculate your future wealth with precision using our advanced SIP Calculator. Designed for Indian investors, it helps you estimate Mutual Fund returns with <strong>Step-up SIP</strong> options, annual growth projections, and inflation-aware planning. Plan your retirement or long-term financial goals effectively starting today.
+                        Planning your wealth creation in India for 2026? Use our advanced SIP Return Calculator to estimate the future value of your Mutual Fund investments. Whether you're targeting 1 Crore or retirement, our tool includes <strong>annual step-up</strong> options to reflect your growing income.
                     </p>
-                </div>
-                <div class="hidden md:block mt-4 md:mt-0">
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                    
+                    <!-- Anchor Jump Links -->
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-sip" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About SIP</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4">
-        <!-- Calculator Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
             
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
@@ -252,9 +277,10 @@
                 </div>
             </div>
 
-            <!-- Right Side -->
+            <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Your Estimated Investment Value</h2>
                     <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
                         <div class="w-full">
                             <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Estimated Maturity Value</h2>
@@ -300,11 +326,11 @@
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             Key Highlights
                         </h4>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800">
-                            <li class="flex items-center gap-2">✅ Instant SIP Return Estimation</li>
-                            <li class="flex items-center gap-2">📈 Power of Compounding Visuals</li>
-                            <li class="flex items-center gap-2">🔄 Dynamic Step-up Option</li>
-                            <li class="flex items-center gap-2">📋 Detailed Amortization Table</li>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Compound growth based calculation</li>
+                            <li class="flex items-center gap-2">📉 Monthly SIP projections</li>
+                            <li class="flex items-center gap-2">🔄 Optional step-up investment</li>
+                            <li class="flex items-center gap-2">⚡ Instant and free tool</li>
                         </ul>
                     </div>
 
@@ -325,144 +351,140 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Formula and Example Section -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is SIP Maturity Calculated?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        M = P × [((1 + i)<sup>n</sup> - 1) / i] × (1 + i)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6">
+                        <p><strong>M:</strong> Maturity Amount</p>
+                        <p><strong>P:</strong> SIP Amount (Monthly)</p>
+                        <p><strong>i:</strong> Periodic Rate of Interest (Annual Rate / 12 / 100)</p>
+                        <p><strong>n:</strong> Total Number of Installments</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example SIP Calculation (India)</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If you start an SIP of <strong>₹10,000</strong> per month for <strong>15 years</strong> with an expected return of <strong>12% p.a.</strong>:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm">
+                            <li>Total Investment: <strong>₹18,00,000</strong></li>
+                            <li>Wealth Gained: <strong>₹32,45,760</strong></li>
+                            <li>Maturity Value: <strong>₹50,45,760</strong></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- SEO Content Sections -->
+        <!-- Extra Content Section -->
         <div class="space-y-12 mb-12">
             
-            <!-- Comparison Section: SIP vs FD -->
+            <!-- Comparison Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">SIP vs FD: Which is better in India?</h2>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">SIP vs Fixed Deposit (FD) – What’s Better?</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    While <a href="fd.html" class="text-blue-600 hover:underline">Fixed Deposits (FD)</a> offer guaranteed capital protection, SIPs in Equity Mutual Funds are known for generating superior long-term returns. FDs currently offer 6-7%, whereas historically, a well-managed SIP can offer 12% or more. Use our <a href="cagr.html" class="text-blue-600 hover:underline">CAGR Calculator</a> to check annual growth rates.
+                </p>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead>
                             <tr class="bg-slate-50">
-                                <th class="p-4 border-b font-bold text-slate-700">Feature</th>
-                                <th class="p-4 border-b font-bold text-slate-700">SIP (Mutual Funds)</th>
-                                <th class="p-4 border-b font-bold text-slate-700">Fixed Deposit (FD)</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Feature</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">SIP (Mutual Funds)</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Fixed Deposit (FD)</th>
                             </tr>
                         </thead>
                         <tbody class="text-sm">
                             <tr>
-                                <td class="p-4 border-b font-medium">Expected Returns</td>
-                                <td class="p-4 border-b text-emerald-600">High (12% - 15% p.a.)</td>
-                                <td class="p-4 border-b">Moderate (6% - 7% p.a.)</td>
+                                <td class="p-4 border-b font-medium">Potential Returns</td>
+                                <td class="p-4 border-b text-emerald-600 font-bold">12% - 15% p.a.</td>
+                                <td class="p-4 border-b">6% - 7.5% p.a.</td>
                             </tr>
                             <tr>
-                                <td class="p-4 border-b font-medium">Inflation Hedge</td>
-                                <td class="p-4 border-b">Beat inflation over long term</td>
-                                <td class="p-4 border-b">Often struggles to beat inflation</td>
+                                <td class="p-4 border-b font-medium">Investment Discipline</td>
+                                <td class="p-4 border-b">High (Monthly Auto-debit)</td>
+                                <td class="p-4 border-b">Moderate (Lumpsum)</td>
                             </tr>
                             <tr>
-                                <td class="p-4 border-b font-medium">Risk Level</td>
-                                <td class="p-4 border-b">Market Linked (Subject to Risk)</td>
-                                <td class="p-4 border-b text-blue-600">Guaranteed/Low Risk</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 border-b font-medium">Taxation</td>
-                                <td class="p-4 border-b">12.5% LTCG (After ₹1.25L)</td>
-                                <td class="p-4 border-b">Taxed at Slab Rate</td>
+                                <td class="p-4 border-b font-medium">Risk Factor</td>
+                                <td class="p-4 border-b">Market-Linked</td>
+                                <td class="p-4 border-b text-blue-600">Guaranteed Principal</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- Who should use section -->
-            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Goal Section -->
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">How Much SIP Is Needed for ₹1 Crore?</h2>
+                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
+                    Reaching the ₹1 Crore milestone is a common goal for Indian investors. Based on an average return of <strong>12% p.a.</strong>, here are two paths:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">Scenario A: The 15-Year Sprint</h4>
+                        <p class="text-xs text-slate-400 mb-3">Goal: Reach ₹1 Crore in 15 years</p>
+                        <p class="text-lg font-bold">₹20,000 / Month</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Scenario B: The 20-Year Marathon</h4>
+                        <p class="text-xs text-slate-400 mb-3">Goal: Reach ₹1 Crore in 20 years</p>
+                        <p class="text-lg font-bold">₹10,500 / Month</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Who Should Use -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8" id="about-sip">
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <h2 class="text-xl font-bold text-slate-900 mb-4">Who Should Use This Calculator?</h2>
-                    <ul class="space-y-3 text-slate-600 text-sm">
-                        <li class="flex items-start gap-2">🔹 <strong>Beginner Investors:</strong> Learning about the power of compounding.</li>
-                        <li class="flex items-start gap-2">🔹 <strong>Retirement Planners:</strong> Estimating long-term corpus growth.</li>
-                        <li class="flex items-start gap-2">🔹 <strong>Salaried Professionals:</strong> Calculating impact of annual income hikes (Step-up).</li>
-                        <li class="flex items-start gap-2">🔹 <strong>Goal Seekers:</strong> Planning for house purchase or child's education.</li>
+                    <h2 class="text-xl font-bold text-slate-900 mb-6">Who Should Use This Calculator?</h2>
+                    <ul class="space-y-4 text-slate-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-blue-100 text-blue-600 p-1 rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span><strong>Salaried Professionals:</strong> Estimate growth based on annual increments.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-blue-100 text-blue-600 p-1 rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span><strong>Retirement Planners:</strong> Calculate the power of compounding over 20+ years.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-blue-100 text-blue-600 p-1 rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span><strong>New Investors:</strong> Understand how disciplined saving leads to wealth creation.</span>
+                        </li>
                     </ul>
                 </div>
-                <!-- Formula Section -->
+                <!-- Benefits section integrated -->
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <h3 class="text-lg font-bold text-slate-900 mb-4">How is SIP Maturity Calculated?</h3>
-                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
-                        M = P × [((1 + i)<sup>n</sup> - 1) / i] × (1 + i)
-                    </div>
-                    <div class="text-xs text-slate-500 space-y-2">
-                        <p><strong>M:</strong> Maturity Amount | <strong>P:</strong> Monthly Investment</p>
-                        <p><strong>i:</strong> Periodic Rate of Interest | <strong>n:</strong> Total Months</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Example Calculation -->
-            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
-                <h2 class="text-2xl font-bold mb-6">Real-World SIP Example (India)</h2>
-                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
-                    Suppose you start an SIP of <strong>₹10,000</strong> per month in a Nifty 50 Index fund for <strong>20 years</strong>. 
-                    With an average return of <strong>12% p.a.</strong>, here is how your wealth multiplies:
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                        <span class="text-xs text-slate-400 block uppercase">Total Invested</span>
-                        <span class="text-xl font-bold text-blue-400">₹24,00,000</span>
-                    </div>
-                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                        <span class="text-xs text-slate-400 block uppercase">Wealth Gained</span>
-                        <span class="text-xl font-bold text-emerald-400">₹75,91,479</span>
-                    </div>
-                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                        <span class="text-xs text-slate-400 block uppercase">Maturity Value</span>
-                        <span class="text-xl font-bold text-white">₹99,91,479</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Original Content & FAQ Section -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 leading-tight">Understanding Systematic Investment Plan (SIP)</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-3">What is an SIP?</h3>
-                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
-                            A Systematic Investment Plan (SIP) is a disciplined way of investing in mutual funds. Instead of a large one-time lumpsum investment, SIP allows you to invest a fixed amount at regular intervals.
-                        </p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-blue-500 shadow-sm self-center">
-                        <p class="text-sm italic text-slate-700">"Time in the market is more important than timing the market."</p>
-                    </div>
-                </div>
-
-                <div class="pt-10 border-t border-slate-100">
-                    <h3 class="text-xl font-bold text-slate-800 mb-8 text-center">Benefits of Investing via SIP</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-                        <div class="p-4 flex flex-col items-center">
-                            <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-800 mb-2 text-sm md:text-base">Financial Discipline</h4>
-                            <p class="text-xs sm:text-sm text-slate-500">Regular habit of saving.</p>
+                    <h2 class="text-xl font-bold text-slate-900 mb-6">Benefits of SIP Investing</h2>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <div class="font-bold text-blue-600">Discipline</div>
+                            <div class="text-[10px] text-slate-500">Regular habit</div>
                         </div>
-                        <div class="p-4 flex flex-col items-center">
-                            <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-800 mb-2 text-sm md:text-base">Power of Compounding</h4>
-                            <p class="text-xs sm:text-sm text-slate-500">Wealth multiplies over time.</p>
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <div class="font-bold text-emerald-600">Compounding</div>
+                            <div class="text-[10px] text-slate-500">Wealth multiplier</div>
                         </div>
-                        <div class="p-4 flex flex-col items-center">
-                            <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
-                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                            </div>
-                            <h4 class="font-bold text-slate-800 mb-2 text-sm md:text-base">Cost Averaging</h4>
-                            <p class="text-xs sm:text-sm text-slate-500">Lower average unit cost.</p>
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <div class="font-bold text-indigo-600">Averaging</div>
+                            <div class="text-[10px] text-slate-500">Lower unit cost</div>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <div class="font-bold text-purple-600">Flexibility</div>
+                            <div class="text-[10px] text-slate-500">Start/Stop anytime</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto">
-                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions (2026)</h2>
+            <!-- FAQ Section (14 FAQs restored) -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">SIP Frequently Asked Questions (India 2026)</h2>
                 <div class="space-y-4" id="faqContainer">
+                    <!-- FAQ 1 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is the 15-15-15 rule in Mutual Fund SIP?</span>
@@ -472,87 +494,147 @@
                             The 15-15-15 rule states that an SIP of ₹15,000 per month for 15 years at an expected return of 15% can help you accumulate ₹1 Crore. It highlights the power of compounding over long durations.
                         </div>
                     </details>
+                    <!-- FAQ 2 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">How are SIP returns taxed in India (2026)?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            LTCG for Holding over 1 year is taxed at 12.5% for gains above ₹1.25 Lakh. STCG is taxed at 20%.
+                            For Equity Mutual Funds, LTCG on holding periods over 1 year are taxed at 12.5% for gains above ₹1.25 Lakh. STCG is taxed at 20%. Our <a href="emi.html" class="text-blue-600">EMI Calculator</a> users also consider these rules for holistic planning.
                         </div>
                     </details>
+                    <!-- FAQ 3 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can I start with just ₹500?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is SIP better than FD in India?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, most Indian mutual funds allow you to start an SIP with as little as ₹500 per month.
+                            While FD offers safety, Equity SIPs typically provide higher inflation-beating returns (12-15%) over 5+ years. SIPs are ideal for wealth creation, while FDs are better for short-term capital safety.
                         </div>
                     </details>
+                    <!-- FAQ 4 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is a Step-up SIP?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What happens if I miss my SIP payment?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            It is a feature where you increase your monthly investment by a fixed percentage every year, usually aligned with salary increments.
+                            The fund house doesn't charge a penalty, but your bank might charge for an ECS return. Missing three consecutive payments usually results in SIP cancellation by the fund house.
                         </div>
                     </details>
+                    <!-- FAQ 5 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is SIP risk-free?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can I withdraw SIP money anytime?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            No, it is subject to market risks. However, long-term SIPs significantly mitigate volatility.
+                            Yes, most open-ended funds allow withdrawal anytime. ELSS funds have a 3-year lock-in. Note that withdrawing within a year may attract a 1% exit load.
                         </div>
                     </details>
+                    <!-- FAQ 6 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Which is the best date for SIP?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            There is no "perfect" date due to market volatility. However, choosing a date between the 1st and 7th (post-salary) ensures you invest before spending your income.
+                        </div>
+                    </details>
+                    <!-- FAQ 7 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can I stop SIP midway?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, SIPs are flexible. You can pause or stop them without any penalty from the AMC.
+                            Yes, you can stop SIP at any time. Your existing units will remain invested and continue to grow until you redeem them.
                         </div>
                     </details>
+                    <!-- FAQ 8 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Does SIP offer 80C benefits?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">How much SIP is needed for ₹1 Crore?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Only ELSS funds qualify for tax deductions up to ₹1.5 Lakh under Section 80C.
+                            At 12% returns, you need approx. ₹10,500 monthly for 20 years. If you use the 10% annual Step-up feature, you can reach this in 15 years with a lower initial amount.
                         </div>
                     </details>
+                    <!-- FAQ 9 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is SIP risk-free?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, it is subject to market risks. However, risk reduces over long durations (7-10 years) due to compounding and cost averaging.
+                        </div>
+                    </details>
+                    <!-- FAQ 10 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is Rupee Cost Averaging?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            It means you buy more units when market is low and fewer when market is high, averaging out the cost.
+                            It means you buy more mutual fund units when the NAV is low and fewer when it is high, which averages out the cost per unit over time.
                         </div>
                     </details>
+                    <!-- FAQ 11 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is Lumpsum better than SIP?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can I change my SIP amount later?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            SIP is better for disciplined investing; Lumpsum works best when markets are significantly undervalued.
+                            Yes, most modern platforms allow you to modify SIP amounts. Alternatively, you can stop the current SIP and start a new one with the desired amount.
                         </div>
                     </details>
+                    <!-- FAQ 12 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can I change SIP date?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Does SIP offer 80C benefits?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, you can modify the SIP date through your AMC portal or investment platform.
+                            Only ELSS (Equity Linked Savings Schemes) qualify for tax deductions up to ₹1.5 Lakh under Section 80C. Standard equity funds do not.
                         </div>
                     </details>
+                    <!-- FAQ 13 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is SIP better than Lumpsum?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            SIP is better for most as it reduces the risk of market timing. Lumpsum is better only if you have a surplus and markets are significantly undervalued.
+                        </div>
+                    </details>
+                    <!-- FAQ 14 -->
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Which mutual fund is best for SIP?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            It depends on your goal and risk appetite. Index Funds are good for long-term passive growth, while Flexi-cap or Mid-cap funds may offer higher alpha for high-risk investors.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Quick Summary Section -->
+            <section class="bg-blue-600 p-8 rounded-2xl text-white">
+                <h2 class="text-xl font-bold mb-4">Quick Summary</h2>
+                <div class="text-sm space-y-2 opacity-90">
+                    <p>• SIP allows disciplined investment in mutual funds.</p>
+                    <p>• Power of compounding works best over long durations (10+ years).</p>
+                    <p>• Use the <strong>Step-up SIP</strong> feature to reach goals faster as your income grows.</p>
+                    <p>• SIPs are more tax-efficient than FDs for high-income earners.</p>
                 </div>
             </section>
 
