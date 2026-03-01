@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FD Calculator India 2026 – Fixed Deposit Interest & Maturity Calculator</title>
-    <meta name="description" content="Calculate your Fixed Deposit maturity amount and interest earned with our FD Calculator India (2026). Plan your savings with flexible compounding frequencies.">
-    <meta name="keywords" content="FD Calculator India, Fixed Deposit Calculator, FD Interest Calculator, FD Maturity Calculator, FD compounding frequency, safe investments 2026">
+    <title>FD Calculator India 2026 – Fixed Deposit Interest & Maturity</title>
+    <meta name="description" content="Calculate FD maturity amount and interest earned with our FD Calculator India (2026). Compare compounding frequencies, senior citizen rates, and TDS rules.">
+    <meta name="keywords" content="FD Calculator India, Fixed Deposit Calculator, FD Interest Calculator, FD Maturity Calculator, FD vs SIP, TDS on FD, tax saving fd">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://example.com/fd-calculator">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="FD Calculator India (2026) – Fixed Deposit Interest & Maturity Calculator">
-    <meta property="og:description" content="Calculate your Fixed Deposit maturity amount and total interest earned with our professional FD calculator. Support for monthly, quarterly, and yearly compounding.">
+    <meta property="og:description" content="Plan your safe investments with our professional FD calculator. Compare monthly, quarterly, and yearly compounding with detailed growth tables.">
     <meta property="og:type" content="website">
 
     <!-- Schema Markup: WebPage -->
@@ -20,7 +19,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "FD Calculator India (2026)",
-      "description": "A high-precision financial tool to calculate Fixed Deposit maturity and interest returns.",
+      "description": "A high-precision financial tool to calculate Fixed Deposit maturity and interest returns with various compounding frequencies.",
       "publisher": {
         "@type": "Organization",
         "name": "Financial Suite India"
@@ -46,6 +45,32 @@
         "position": 3,
         "name": "FD Calculator"
       }]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between cumulative and non-cumulative FD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In a cumulative FD, interest is reinvested and paid at maturity, benefiting from compounding. In a non-cumulative FD, interest is paid out at regular intervals (monthly/quarterly) for regular income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is TDS calculated on FD interest?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Banks deduct TDS at 10% if interest exceeds ₹40,000 (₹50,000 for senior citizens) in a financial year. If PAN is not provided, TDS is 20%."
+          }
+        }
+      ]
     }
     </script>
 
@@ -141,7 +166,6 @@
     <!-- Header & Breadcrumbs -->
     <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
         <div class="max-w-6xl mx-auto px-4">
-            <!-- Visible Breadcrumb -->
             <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
                     <li class="flex items-center">
@@ -160,16 +184,15 @@
                 <div class="max-w-3xl">
                     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">FD Calculator India 2026 – Fixed Deposit Interest & Maturity Calculator</h1>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
-                        Calculate the maturity amount of your Fixed Deposit investment instantly. Our FD calculator helps you estimate interest earned based on different compounding frequencies like monthly, quarterly, or yearly.
+                        Calculate the maturity amount of your Fixed Deposit investment instantly. Our FD calculator helps you estimate interest earned based on different compounding frequencies like monthly, quarterly, or yearly. Plan your secure savings with precision.
                     </p>
                     
-                    <!-- Anchor Jump Links -->
                     <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
-                        <a href="#about-fd" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <a href="#about-fd" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About FD</a>
                         <span class="text-slate-300">|</span>
-                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <a href="#compounding" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Compounding</a>
                         <span class="text-slate-300">|</span>
-                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <a href="#fd-vs-sip" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FD vs SIP</a>
                         <span class="text-slate-300">|</span>
                         <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
                     </div>
@@ -223,7 +246,6 @@
                         <input type="range" id="yearsRange" min="1" max="20" step="1" value="5" class="w-full py-2 cursor-pointer">
                     </div>
 
-                    <!-- Compounding Frequency -->
                     <div class="mb-8">
                         <label class="text-sm font-medium text-slate-600 block mb-3">Compounding Frequency</label>
                         <select id="compoundingSelect" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all appearance-none bg-white">
@@ -240,20 +262,19 @@
                     </button>
                 </div>
 
-                <!-- Simplified Mobile Results Section -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
                         <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Deposit</p>
                         <h3 id="totalInvestedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
                     <div class="bg-emerald-600 p-5 rounded-2xl text-white shadow-lg shadow-emerald-200">
-                        <p class="text-emerald-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Interest Earned</p>
+                        <p class="text-emerald-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Interest Earned</p>
                         <h3 id="wealthGainedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Side: Results Visualization -->
+            <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
                     <h2 class="text-slate-800 font-bold text-lg mb-6">FD Maturity Amount & Interest Breakdown</h2>
@@ -271,7 +292,7 @@
                             <span class="text-blue-600 font-bold uppercase">Total Deposit</span>
                             <span class="text-emerald-600 font-bold uppercase">Interest Earned</span>
                         </div>
-                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-200">
                             <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
                             <div id="returnsBar" class="h-full bg-emerald-400 transition-all duration-700 ease-out" style="width: 50%"></div>
                         </div>
@@ -285,12 +306,11 @@
                                 <span class="text-[10px] sm:text-xs text-slate-500" id="returnsLabel">₹0</span>
                             </div>
                         </div>
-                        <p class="text-[10px] sm:text-xs text-slate-400 mt-6 italic">For long-term wealth creation SIP may outperform FD, while FD is suitable for capital protection.</p>
+                        <p class="text-[10px] sm:text-xs text-slate-400 mt-6 italic">Advisory: For long-term wealth creation, an <a href="sip_calculator.html" class="text-blue-600">SIP</a> may outperform FD, while FD is suitable for capital protection.</p>
                     </div>
 
                     <hr class="border-slate-100 mb-6">
 
-                    <!-- Key Highlights Box -->
                     <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
                         <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -321,92 +341,118 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Formula and Example -->
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is FD Maturity Calculated?</h3>
-                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
-                        A = P × (1 + r/n)<sup>n×t</sup>
-                    </div>
-                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
-                        <p><strong>A:</strong> Maturity Amount | <strong>P:</strong> Principal Deposit Amount</p>
-                        <p><strong>r:</strong> Annual Interest Rate (Decimal)</p>
-                        <p><strong>n:</strong> Compounding frequency per year | <strong>t:</strong> Total Tenure (Years)</p>
-                    </div>
-
-                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example FD Calculation (India)</h3>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
-                        If you deposit <strong>₹1,00,000</strong> for <strong>5 years</strong> at an interest rate of <strong>7% p.a.</strong> compounded quarterly:
-                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
-                            <li>Principal Amount: <strong>₹1,00,000</strong></li>
-                            <li>Total Interest Earned: <strong>₹41,478</strong></li>
-                            <li>Maturity Value: <strong>₹1,41,478</strong></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
 
-        <!-- Informational Content -->
+        <!-- Comprehensive FD Guide Content -->
         <div class="space-y-12 mb-12">
             
-            <!-- Compounding Impact Section -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Impact of Compounding Frequency</h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                    Compounding frequency determines how often the interest is added back to your principal. The more frequent the compounding, the higher your final maturity value.
+            <!-- Section 1: What is FD -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about-fd">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is a Fixed Deposit (FD) in India?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                        <p class="mb-4">
+                            A Fixed Deposit (FD) is a financial instrument provided by Indian banks and Non-Banking Financial Companies (NBFCs) where you invest a lump sum for a fixed period at a predetermined interest rate.
+                        </p>
+                        <p>
+                            Unlike savings accounts where interest rates vary, FD rates are locked at the time of deposit. It remains one of the most trusted ways for Indian households to preserve capital while earning guaranteed returns.
+                        </p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-3 text-sm">Why Indians prefer FDs?</h4>
+                        <ul class="space-y-2 text-xs sm:text-sm text-slate-500">
+                            <li>• Zero market risk exposure.</li>
+                            <li>• DICGC insurance up to ₹5 Lakh per bank.</li>
+                            <li>• Periodic interest payout options (Non-Cumulative).</li>
+                            <li>• Loan/Overdraft facility against the deposit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Compounding Impact -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="compounding">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Effect of Compounding Frequency</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
+                    Compounding frequency determines how often the interest is calculated and added back to your principal. In India, most banks compound interest <strong>quarterly</strong>.
                 </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="p-4 border border-slate-100 rounded-xl bg-slate-50">
+                        <h4 class="font-bold text-blue-600 mb-2">Monthly</h4>
+                        <p class="text-xs text-slate-500">12 times a year. Offers the highest maturity amount but is less common for standard FDs.</p>
+                    </div>
+                    <div class="p-4 border border-blue-200 rounded-xl bg-blue-50">
+                        <h4 class="font-bold text-blue-700 mb-2">Quarterly</h4>
+                        <p class="text-xs text-slate-500 font-medium text-blue-800">4 times a year. The standard method used by almost all major Indian banks (SBI, HDFC, ICICI).</p>
+                    </div>
+                    <div class="p-4 border border-slate-100 rounded-xl bg-slate-50">
+                        <h4 class="font-bold text-blue-600 mb-2">Yearly</h4>
+                        <p class="text-xs text-slate-500">1 time a year. Results in the lowest maturity value compared to other frequencies.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: FD vs SIP -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="fd-vs-sip">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">FD vs SIP – Which is Better for 2026?</h2>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse border border-slate-100">
                         <thead>
                             <tr class="bg-slate-50">
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Frequency</th>
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Times Compounded / Year</th>
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Relative Yield</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Parameter</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Fixed Deposit (FD)</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">SIP (Mutual Funds)</th>
                             </tr>
                         </thead>
                         <tbody class="text-sm">
                             <tr>
-                                <td class="p-4 border-b font-medium">Yearly</td>
-                                <td class="p-4 border-b">1</td>
-                                <td class="p-4 border-b">Standard</td>
+                                <td class="p-4 border-b font-medium text-slate-600">Risk Profile</td>
+                                <td class="p-4 border-b text-blue-600 font-semibold">Virtually Zero Risk</td>
+                                <td class="p-4 border-b text-amber-600 font-semibold">Market-Linked Risk</td>
                             </tr>
                             <tr>
-                                <td class="p-4 border-b font-medium">Quarterly</td>
-                                <td class="p-4 border-b">4</td>
-                                <td class="p-4 border-b text-blue-600 font-semibold">Moderate Increase</td>
+                                <td class="p-4 border-b font-medium text-slate-600">Returns</td>
+                                <td class="p-4 border-b font-bold">Fixed (6.5% - 7.5%)</td>
+                                <td class="p-4 border-b font-bold text-emerald-600">Variable (12% - 15% long term)</td>
                             </tr>
                             <tr>
-                                <td class="p-4 border-b font-medium">Monthly</td>
-                                <td class="p-4 border-b">12</td>
-                                <td class="p-4 border-b text-emerald-600 font-bold">Higher Increase</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 border-b font-medium">Daily</td>
-                                <td class="p-4 border-b">365</td>
-                                <td class="p-4 border-b text-indigo-600 font-bold">Maximum Increase</td>
+                                <td class="p-4 border-b font-medium text-slate-600">Tax Benefit</td>
+                                <td class="p-4 border-b">Yes (Tax Saver FD only)</td>
+                                <td class="p-4 border-b">Yes (ELSS Funds)</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <p class="text-xs text-slate-400 mt-4 italic text-center">Use our <a href="sip_calculator.html" class="underline">SIP Calculator</a> to see how mutual funds compare over long horizons.</p>
             </section>
 
-            <!-- FD vs SIP Section -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">FD vs SIP – Which is Better?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100">
-                        <h3 class="text-lg font-bold text-blue-900 mb-3">Fixed Deposit (FD)</h3>
-                        <p class="text-blue-800 text-sm leading-relaxed">
-                            <strong>Safety & Fixed Returns:</strong> FD is ideal for conservative investors who prioritize capital protection. You get a guaranteed return at a fixed interest rate, making it safe from market fluctuations.
-                        </p>
-                    </div>
-                    <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100">
-                        <h3 class="text-lg font-bold text-emerald-900 mb-3">Systematic Investment Plan (SIP)</h3>
-                        <p class="text-emerald-800 text-sm leading-relaxed">
-                            <strong>Market Linked & Growth:</strong> SIPs in mutual funds are subject to market risks but offer potentially higher long-term returns. They are better for long-term goals (5-10+ years) where inflation-beating growth is required.
-                        </p>
-                    </div>
+            <!-- Section 4: Taxation & Penalties -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Taxation & TDS
+                    </h2>
+                    <ul class="space-y-4 text-slate-600 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-indigo-100 text-indigo-600 p-1 rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span><strong>TDS Limit:</strong> TDS is deducted at 10% if interest exceeds ₹40,000 (₹50,000 for Seniors) per year.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-indigo-100 text-indigo-600 p-1 rounded-full"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg></span>
+                            <span><strong>Income Tax:</strong> FD interest is added to your total income and taxed at your slab rate.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        Premature Withdrawal
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        If you withdraw your FD before the selected tenure, banks usually charge a penalty. This penalty is typically 0.5% to 1.0% reduction in the applicable interest rate for the actual duration the FD was held.
+                    </p>
                 </div>
             </section>
 
@@ -416,148 +462,112 @@
                 <div class="space-y-4" id="faqContainer">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What is the difference between Cumulative and Non-cumulative FD?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Cumulative vs Non-Cumulative FD: What's the difference?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            In a Cumulative FD, interest is reinvested and paid at maturity (compounded). In a Non-cumulative FD, interest is paid out at regular intervals (monthly or quarterly), providing a regular income stream.
+                            Cumulative FDs reinvest your interest, paying a lump sum at maturity (wealth creation). Non-cumulative FDs pay out interest monthly or quarterly (regular income).
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Is interest earned on FD taxable?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Do Senior Citizens get higher interest rates?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, FD interest is taxable as per your income tax slab. Banks also deduct TDS (Tax Deducted at Source) if the interest earned across all your FDs in a bank exceeds ₹40,000 (₹50,000 for senior citizens) in a financial year.
+                            Yes, in India, most banks offer an additional 0.50% interest rate to individuals aged 60 and above on all FD tenures.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. What is a Tax Saving FD?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. How is TDS calculated on FD interest?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            A Tax Saving FD has a mandatory lock-in period of 5 years. Investments up to ₹1.5 Lakh are eligible for deduction under Section 80C. Note that the interest earned on this FD is still taxable.
+                            TDS is 10% if interest exceeds ₹40,000 (₹50,000 for Seniors). If PAN is not provided, 20% is deducted. Submit Form 15G/15H to avoid TDS if your total income is below the taxable limit.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Can I withdraw my FD before maturity?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. What is a Tax Saving FD?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, most banks allow premature withdrawal, but they usually charge a penalty (typically 0.5% to 1% reduction in the interest rate applicable for the period the FD was held).
+                            It has a 5-year lock-in period and allows deductions up to ₹1.5 Lakh under Section 80C. However, the interest earned remains taxable as per your slab.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Do senior citizens get higher FD rates?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Can I get a loan against my FD?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, most Indian banks offer an additional 0.50% interest rate to senior citizens (individuals aged 60 and above) on their Fixed Deposits.
+                            Yes, most banks offer up to 90-95% of the FD value as a loan or overdraft. The interest rate is usually 1-2% higher than the FD rate. Use our <a href="emi_calculator.html" class="underline">EMI Calculator</a> to plan repayments.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What is the DICGC insurance on FDs?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What is the minimum amount for an FD?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            As per RBI guidelines, the Deposit Insurance and Credit Guarantee Corporation (DICGC) insures your deposits (including principal and interest) up to a maximum of ₹5 Lakh per bank.
+                            Usually ₹1,000 to ₹5,000 for standard banks. However, some digital banks allow starting an FD with as low as ₹100.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Can a minor open an FD account in India?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Does compounding frequency affect my final returns?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, Fixed Deposits can be opened in the name of a minor. The account must be operated by a natural or legal guardian until the minor attains the age of 18 years.
+                            Yes. Monthly compounding gives a higher yield than quarterly or yearly compounding because interest earns interest more frequently.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. What is the minimum and maximum amount for an FD?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Which is the best tenure for FD in India?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            The minimum amount varies by bank but is often as low as ₹1,000 or ₹5,000. There is generally no theoretical maximum limit, though deposits above ₹2 Crore are often categorized as 'Bulk Deposits' with different rates.
+                            The "best" tenure depends on when you need the money. Historically, 1-year to 3-year tenures often offer the highest relative interest rates.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">9. What is a Flexi Fixed Deposit?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">9. FD vs Savings Account: Which is better?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            A Flexi FD is linked to your savings or current account. It automatically transfers surplus funds into an FD to earn higher interest, while allowing you to withdraw money as needed.
+                            Savings accounts offer liquidity (access anytime) but low returns. FDs offer higher returns but lock your funds for a fixed duration.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">10. Can I get a loan against my Fixed Deposit?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">10. Can interest rate change after opening an FD?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, most banks offer a loan or overdraft facility against FDs. You can typically borrow up to 90-95% of the FD value at a rate usually 1-2% higher than the FD interest rate.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">11. What happens if I don't provide my PAN details?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            If you do not provide your PAN, TDS will be deducted at a higher rate of 20% instead of the standard 10%. Additionally, you will not be able to claim credit for the tax deducted.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">12. What is an NRE Fixed Deposit?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Non-Resident External (NRE) FDs are for NRIs to invest foreign earnings in INR. A key benefit is that the interest earned on NRE FDs is completely tax-free in India.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">13. Does compounding frequency affect my final returns?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes. The more frequently interest is compounded, the higher the effective yield. Monthly compounding results in a slightly higher maturity amount than quarterly or yearly compounding.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">14. Can I add a nominee to my FD account?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, adding a nominee is highly recommended. In the event of the depositor's death, the nominee can claim the maturity amount easily without extensive legal documentation.
+                            No. The interest rate on a Fixed Deposit remains constant throughout the tenure, even if the bank's market rates change later.
                         </div>
                     </details>
                 </div>
             </section>
 
-            <!-- Quick Summary -->
+            <!-- Quick Summary Section -->
             <section class="bg-blue-600 p-8 rounded-2xl text-white">
                 <h2 class="text-xl font-bold mb-4">Quick Summary</h2>
                 <div class="text-sm space-y-2 opacity-95 leading-relaxed">
                     <p>• Fixed Deposits (FD) offer safe and guaranteed returns for a fixed tenure.</p>
-                    <p>• Compounding frequency (Monthly/Quarterly) impacts your total interest earned.</p>
-                    <p>• Senior citizens usually enjoy 0.5% higher interest rates than general citizens.</p>
-                    <p>• Diversify your portfolio by using tools like the <a href="sip_calculator.html" class="underline font-bold">SIP Calculator</a> for growth and FDs for safety.</p>
+                    <p>• Compounding frequency (Quarterly is standard) directly impacts total interest.</p>
+                    <p>• Senior citizens enjoy 0.5% higher rates in most Indian banks.</p>
+                    <p>• Use our <a href="cagr.html" class="underline font-bold">CAGR Calculator</a> to compare FD growth with other asset classes.</p>
                 </div>
             </section>
 
             <!-- Disclaimer -->
             <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
                 <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                This calculator provides estimates based on current bank interest rate patterns. Actual maturity values may vary based on bank-specific compounding logic and TDS deductions. This tool does not constitute financial advice.
+                This calculator provides estimates based on current bank interest rate patterns. Actual maturity values may vary based on bank-specific compounding logic, TDS deductions, and premature withdrawal rules. This tool does not constitute financial advice.
                 <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
             </div>
         </div>
@@ -621,8 +631,8 @@
 
             // Results Display
             elements.maturityValue.textContent = "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(maturityValue)));
-            elements.investedLabel.textContent = `Total Deposit: ₹${formatCompact(P)}`;
-            elements.returnsLabel.textContent = `Total Interest: ₹${formatCompact(totalInterest)}`;
+            elements.investedLabel.textContent = `Deposit: ₹${formatCompact(P)}`;
+            elements.returnsLabel.textContent = `Interest: ₹${formatCompact(totalInterest)}`;
             
             elements.totalInvestedMobile.textContent = formatIndian(P);
             elements.wealthGainedMobile.textContent = formatIndian(totalInterest);
