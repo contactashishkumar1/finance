@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional EMI Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.5rem 0.25rem;
+        }
+        .nav-link.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2563eb;
+        }
+        /* FAQ custom styles */
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+        /* Toggle Switch Styling */
+        .toggle-bg {
+            background-color: #e2e8f0;
+            transition: background-color 0.2s ease;
+        }
+        input:checked + .toggle-bg {
+            background-color: #2563eb;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-14">
+                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar py-2">
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Home</a>
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">SIP</a>
+                    <a href="#" class="nav-link active text-sm whitespace-nowrap">EMI</a>
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">GST</a>
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Salary</a>
+                    <a href="#" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Business</a>
+                </div>
+                <div class="hidden sm:flex items-center ml-4">
+                    <button class="text-slate-400 hover:text-slate-600 p-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 py-4 sm:py-6 mb-6 sm:mb-8">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-bold gradient-text">EMI Calculator</h1>
+                <p class="text-slate-500 text-xs sm:text-sm mt-1">Calculate monthly installments for any loan.</p>
+            </div>
+            <div class="hidden md:block">
+                <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Loan Suite</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Loan Parameters
+                    </h2>
+
+                    <!-- Loan Amount -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Loan Amount</label>
+                            <div class="relative w-full sm:w-40">
+                                <input type="number" id="amountInput" value="1000000" min="10000" step="10000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none hidden sm:block">₹</span>
+                            </div>
+                        </div>
+                        <input type="range" id="amountRange" min="10000" max="50000000" step="50000" value="1000000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <!-- Interest Rate -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Interest Rate (p.a %)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="rateInput" value="8.5" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="rateRange" min="1" max="25" step="0.1" value="8.5" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <!-- Tenure -->
+                    <div class="mb-4">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <div class="flex items-center gap-3">
+                                <label class="text-sm font-medium text-slate-600">Loan Tenure</label>
+                                <div class="flex items-center bg-slate-100 p-1 rounded-lg">
+                                    <button id="toggleYears" class="px-2 py-0.5 text-[10px] font-bold rounded-md bg-white shadow-sm text-blue-600 transition-all">YEARS</button>
+                                    <button id="toggleMonths" class="px-2 py-0.5 text-[10px] font-bold rounded-md text-slate-500 transition-all">MONTHS</button>
+                                </div>
+                            </div>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="tenureInput" value="5" min="1" max="30" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span id="tenureUnit" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="tenureRange" min="1" max="30" step="1" value="5" class="w-full py-2 cursor-pointer">
+                    </div>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-indigo-600 p-4 rounded-2xl text-white shadow-lg shadow-indigo-200">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Interest</p>
+                        <h3 id="totalInterestDisp" class="text-base sm:text-lg font-bold leading-tight">0</h3>
+                    </div>
+                    <div class="bg-slate-800 p-4 rounded-2xl text-white shadow-lg shadow-slate-300">
+                        <p class="text-slate-400 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Payment</p>
+                        <h3 id="totalPaymentDisp" class="text-base sm:text-lg font-bold leading-tight">0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div>
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Monthly EMI</h2>
+                            <div class="mt-1">
+                                <span class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight" id="emiValueDisplay">0</span>
+                                <span class="text-slate-400 text-sm font-medium ml-1">/ month</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-blue-50 px-4 py-2 rounded-xl border border-blue-100">
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Principal Amount</p>
+                                <p class="font-bold text-slate-800 text-sm" id="principalLabel">0</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Principal</span>
+                            <span class="text-indigo-500 font-bold uppercase">Total Interest</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="principalBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 70%"></div>
+                            <div id="interestBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 30%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-xs sm:text-sm text-slate-500" id="principalPct">0%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
+                                <span class="text-xs sm:text-sm text-slate-500" id="interestPct">0%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-slate-800 text-sm sm:text-base">Amortization Schedule</h3>
+                        <button onclick="toggleTable()" id="toggleBtn" class="bg-slate-100 text-slate-600 px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-slate-200 transition-all">Show Year-wise Breakup</button>
+                    </div>
+
+                    <div id="tableSection" class="hidden overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-xs sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Principal</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Interest</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Total Payment</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="amortizationTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content Section -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is Equated Monthly Installment (EMI)?</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-3">Understanding EMI</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                            An EMI is a fixed amount of money that a borrower pays to a lender at a specific date each calendar month. EMIs are used to pay off both the <strong>interest</strong> and <strong>principal</strong> of a loan over a period of years until the loan is paid off in full.
+                        </p>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                            In the initial years, a larger portion of your EMI goes toward paying interest. As the loan matures, more of the payment is applied toward the principal.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-3">The Reducing Balance Method</h3>
+                        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+                            Most Indian banks use the "Reducing Balance" method. Here, interest is calculated on the outstanding loan amount at the end of every month. 
+                        </p>
+                        <div class="bg-slate-50 p-4 rounded-xl border-l-4 border-indigo-500">
+                            <p class="text-sm italic text-slate-700">"Making prepayments early in your loan tenure can drastically reduce your total interest burden and shorten your tenure."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 pt-10 border-t border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-800 mb-6 text-center">Factors Affecting Your Loan EMI</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                        <div class="p-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-slate-800 mb-2">Principal Amount</h4>
+                            <p class="text-xs text-slate-500">The base amount you borrow. Higher principal leads to higher EMIs.</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-slate-800 mb-2">Interest Rate</h4>
+                            <p class="text-xs text-slate-500">Directly impacts the 'cost' of the loan. Lower rates mean lower EMIs.</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <h4 class="font-bold text-slate-800 mb-2">Tenure</h4>
+                            <p class="text-xs text-slate-500">Longer tenures reduce EMI but increase total interest paid.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Loan EMI Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <!-- Q1 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Can I reduce my EMI mid-tenure in India?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Yes. You can reduce your EMI by making a partial prepayment or by asking your bank to extend the loan tenure. However, extending tenure increases your total interest cost.
+                        </div>
+                    </details>
+
+                    <!-- Q2 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">What are the tax benefits on Home Loan EMI?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Under the Old Tax Regime, you can claim up to ₹2 Lakh on interest (Section 24) and up to ₹1.5 Lakh on principal (Section 80C) annually. These benefits vary depending on the tax regime chosen.
+                        </div>
+                    </details>
+
+                    <!-- Q3 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Fixed vs Floating interest rate: which is better?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Floating rates are usually lower and change with market conditions (Repo Rate). Fixed rates stay constant but are typically higher. Most home loans in India are floating-rate loans.
+                        </div>
+                    </details>
+
+                    <!-- Q4 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Is it better to pay off a loan early?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Generally, yes. Prepaying reduces the principal, which significantly lowers the interest burden. Most floating-rate home loans in India have zero prepayment penalties, but personal loans might have them.
+                        </div>
+                    </details>
+
+                    <!-- Q5 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">How much of my salary should go into EMI?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Financial experts suggest that all your EMIs combined should ideally not exceed 40-50% of your net monthly take-home pay to maintain a healthy financial lifestyle.
+                        </div>
+                    </details>
+
+                    <!-- Q6 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Does my credit score affect my EMI?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Absolutely. A high CIBIL score (usually 750+) can help you negotiate a lower interest rate with the bank, which directly reduces your monthly EMI amount.
+                        </div>
+                    </details>
+
+                    <!-- Q7 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">What is a loan moratorium period?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            A moratorium is a period during which you are not required to pay EMIs (e.g., during a crisis or for student loans). Note that interest usually still accrues during this period, increasing your total debt.
+                        </div>
+                    </details>
+
+                    <!-- Q8 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Can I get a loan without a credit card?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Yes. While credit cards help build history, you can get a loan based on your income, employment stability, and other banking history. "No Cost EMI" on debit cards is also popular in India now.
+                        </div>
+                    </details>
+
+                    <!-- Q9 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">What are typical loan processing fees?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            In India, processing fees usually range from 0.5% to 2% of the loan amount. Many banks waive these fees during festive seasons or for premium account holders.
+                        </div>
+                    </details>
+
+                    <!-- Q10 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">What is an amortization schedule?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            It is a table showing each EMI payment over the entire tenure, detailing how much of each payment goes toward principal versus interest, and the remaining balance after each payment.
+                        </div>
+                    </details>
+
+                    <!-- Q11 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">Does GST apply on EMI payments?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            GST is not applicable on the EMI (Principal + Interest) itself. However, it is charged (currently 18%) on service-related fees like processing fees, documentation charges, or late payment penalties.
+                        </div>
+                    </details>
+
+                    <!-- Q12 -->
+                    <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden card-shadow">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4">What happens if I miss an EMI payment?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-sm leading-relaxed border-t border-slate-50">
+                            Missing an EMI can lead to late payment fees, a significant drop in your credit score, and potentially legal action or asset repossession if the default continues. It is always best to inform the bank if you're facing a crisis.
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="text-center py-8 border-t border-slate-200">
+            <p class="text-slate-400 text-xs">© 2024 Financial Suite. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const amountInput = document.getElementById('amountInput');
+        const amountRange = document.getElementById('amountRange');
+        const rateInput = document.getElementById('rateInput');
+        const rateRange = document.getElementById('rateRange');
+        const tenureInput = document.getElementById('tenureInput');
+        const tenureRange = document.getElementById('tenureRange');
+        const emiValueDisplay = document.getElementById('emiValueDisplay');
+        const principalLabel = document.getElementById('principalLabel');
+        const totalInterestDisp = document.getElementById('totalInterestDisp');
+        const totalPaymentDisp = document.getElementById('totalPaymentDisp');
+        const principalBar = document.getElementById('principalBar');
+        const interestBar = document.getElementById('interestBar');
+        const principalPct = document.getElementById('principalPct');
+        const interestPct = document.getElementById('interestPct');
+        const amortizationTableBody = document.getElementById('amortizationTableBody');
+        const tableSection = document.getElementById('tableSection');
+        const toggleBtn = document.getElementById('toggleBtn');
+        const toggleYears = document.getElementById('toggleYears');
+        const toggleMonths = document.getElementById('toggleMonths');
+        const tenureUnit = document.getElementById('tenureUnit');
+
+        let isYearly = true;
+
+        // Sync helper
+        function setupSync(input, range) {
+            input.addEventListener('input', () => {
+                range.value = input.value;
+                calculateEMI();
+            });
+            range.addEventListener('input', () => {
+                input.value = range.value;
+                calculateEMI();
+            });
+        }
+
+        setupSync(amountInput, amountRange);
+        setupSync(rateInput, rateRange);
+        setupSync(tenureInput, tenureRange);
+
+        // Tenure Toggle Logic
+        toggleYears.addEventListener('click', () => {
+            if (isYearly) return;
+            isYearly = true;
+            updateTenureMode();
+        });
+
+        toggleMonths.addEventListener('click', () => {
+            if (!isYearly) return;
+            isYearly = false;
+            updateTenureMode();
+        });
+
+        function updateTenureMode() {
+            if (isYearly) {
+                toggleYears.className = "px-2 py-0.5 text-[10px] font-bold rounded-md bg-white shadow-sm text-blue-600 transition-all";
+                toggleMonths.className = "px-2 py-0.5 text-[10px] font-bold rounded-md text-slate-500 transition-all";
+                tenureUnit.textContent = "Yr";
+                tenureRange.max = 30;
+                tenureInput.max = 30;
+                tenureInput.value = Math.max(1, Math.round(tenureInput.value / 12));
+                tenureRange.value = tenureInput.value;
+            } else {
+                toggleMonths.className = "px-2 py-0.5 text-[10px] font-bold rounded-md bg-white shadow-sm text-blue-600 transition-all";
+                toggleYears.className = "px-2 py-0.5 text-[10px] font-bold rounded-md text-slate-500 transition-all";
+                tenureUnit.textContent = "Mo";
+                tenureRange.max = 360;
+                tenureInput.max = 360;
+                tenureInput.value = Math.round(tenureInput.value * 12);
+                tenureRange.value = tenureInput.value;
+            }
+            calculateEMI();
+        }
+
+        function formatINR(val) {
+            const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            const absoluteValue = absFormatter.format(val);
+            
+            let indianDenom = "";
+            if (val >= 10000000) {
+                indianDenom = ` (${(val / 10000000).toFixed(2)} Cr)`;
+            } else if (val >= 100000) {
+                indianDenom = ` (${(val / 100000).toFixed(2)} L)`;
+            }
+            
+            return "₹" + absoluteValue + indianDenom;
+        }
+
+        function calculateEMI() {
+            const P = parseFloat(amountInput.value) || 0;
+            const annualRate = parseFloat(rateInput.value) || 0;
+            const tenureValue = parseFloat(tenureInput.value) || 0;
+            
+            const N = isYearly ? tenureValue * 12 : tenureValue;
+            const R = (annualRate / 12) / 100;
+
+            let EMI = 0;
+            if (P > 0 && N > 0) {
+                if (R > 0) {
+                    EMI = P * R * Math.pow(1 + R, N) / (Math.pow(1 + R, N) - 1);
+                } else {
+                    EMI = P / N;
+                }
+            }
+
+            const totalPayment = EMI * N;
+            const totalInterest = totalPayment - P;
+
+            const simpleFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            
+            emiValueDisplay.textContent = "₹" + simpleFormatter.format(EMI);
+            principalLabel.textContent = "₹" + simpleFormatter.format(P);
+            totalInterestDisp.textContent = formatINR(totalInterest);
+            totalPaymentDisp.textContent = formatINR(totalPayment);
+
+            const principalPctVal = (P / totalPayment) * 100 || 0;
+            const interestPctVal = (totalInterest / totalPayment) * 100 || 0;
+            
+            principalBar.style.width = principalPctVal + "%";
+            interestBar.style.width = interestPctVal + "%";
+            principalPct.textContent = `Principal: ${principalPctVal.toFixed(1)}%`;
+            interestPct.textContent = `Interest: ${interestPctVal.toFixed(1)}%`;
+
+            generateAmortization(P, R, N, EMI);
+        }
+
+        function generateAmortization(principal, monthlyRate, totalMonths, emi) {
+            amortizationTableBody.innerHTML = '';
+            let remainingBalance = principal;
+            let yearlyPrincipal = 0;
+            let yearlyInterest = 0;
+
+            for (let m = 1; m <= totalMonths; m++) {
+                let interestPayment = remainingBalance * monthlyRate;
+                let principalPayment = emi - interestPayment;
+                
+                remainingBalance -= principalPayment;
+                if (remainingBalance < 0) remainingBalance = 0;
+
+                yearlyPrincipal += principalPayment;
+                yearlyInterest += interestPayment;
+
+                if (m % 12 === 0 || m === totalMonths) {
+                    const yearNumber = Math.ceil(m / 12);
+                    const row = document.createElement('tr');
+                    row.className = 'hover:bg-slate-50 transition-colors';
+                    row.innerHTML = `
+                        <td class="px-4 py-3 border-b border-slate-100 font-medium text-slate-700">Year ${yearNumber}</td>
+                        <td class="px-4 py-3 border-b border-slate-100 text-right text-slate-600">${formatCompact(yearlyPrincipal)}</td>
+                        <td class="px-4 py-3 border-b border-slate-100 text-right text-indigo-600">${formatCompact(yearlyInterest)}</td>
+                        <td class="px-4 py-3 border-b border-slate-100 text-right text-slate-600">${formatCompact(yearlyPrincipal + yearlyInterest)}</td>
+                        <td class="px-4 py-3 border-b border-slate-100 text-right font-bold text-slate-800">${formatCompact(remainingBalance)}</td>
+                    `;
+                    amortizationTableBody.appendChild(row);
+                    yearlyPrincipal = 0;
+                    yearlyInterest = 0;
+                }
+            }
+        }
+
+        function formatCompact(val) {
+            return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+        }
+
+        function toggleTable() {
+            const isHidden = tableSection.classList.contains('hidden');
+            tableSection.classList.toggle('hidden');
+            toggleBtn.textContent = isHidden ? 'Hide Schedule' : 'Show Year-wise Breakup';
+        }
+
+        calculateEMI();
+    </script>
+</body>
+</html>
