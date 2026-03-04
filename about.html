@@ -43,23 +43,7 @@
     </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
-
-    <!-- Top Navigation Bar -->
-    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex items-center justify-between h-14">
-                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar py-2 pr-4">
-                    <a href="index.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Home</a>
-        <a href="sip.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">SIP</a>
-        <a href="emi.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">EMI</a>
-        <a href="fd.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">FD</a>
-        <a href="cagr.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">CAGR</a>
-        <a href="gst.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">GST</a>
-        <a href="about.html" class="nav-link active text-sm whitespace-nowrap">About</a>
-                        </div>
-            </div>
-        </div>
-    </nav>
+<div id="navbar"></div>
 
     <!-- Header -->
     <header class="bg-white border-b border-slate-200 py-10 sm:py-16 mb-8 text-center">
@@ -187,13 +171,24 @@
             <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
         </div>
 
-    </main>
+</main>
 
-    <footer class="max-w-6xl mx-auto px-4 mt-12">
-        <div class="text-center py-8 border-t border-slate-200">
-            <p class="text-slate-400 text-[10px]">© 2026 Financial Suite India. Created by Ashish Kumar.</p>
-        </div>
-    </footer>
+<div id="footer"></div>
+
+<script>
+fetch("/navbar.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("navbar").innerHTML = data;
+});
+
+fetch("/footer.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
 
 </body>
+
 </html>
