@@ -135,11 +135,10 @@
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="max-w-3xl">
                     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">Income Tax Calculator India FY 2025-26</h1>
-                    <!-- SEO Subtitle Added -->
                     <p class="text-slate-500 text-sm font-medium mb-3">Free online income tax calculator for FY 2025-26 (AY 2026-27) with new vs old regime comparison.</p>
                     
-                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed">
-                        Calculate and compare your tax liability under the <strong>New vs Old Tax Regime</strong> for FY 2025-26 (AY 2026-27). This tool includes the latest Budget 2025 revisions.
+                    <p class="text-slate-500 text-xs sm:text-base leading-relaxed text-pretty">
+                        Calculate and compare your tax liability under the <strong>New vs Old Tax Regime</strong> for FY 2025-26 (AY 2026-27). This tool includes the latest Budget 2025 revisions and Section 87A marginal relief logic.
                     </p>
                 </div>
                 <div class="hidden md:block mt-4 md:mt-0">
@@ -220,7 +219,7 @@
             <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
                 <div id="resultCard" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-4">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
                         <div class="w-full">
                             <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Estimated Tax Payable</h2>
                             <div class="mt-1 flex items-baseline gap-2">
@@ -234,6 +233,29 @@
                                 <p class="text-[10px] text-slate-500 uppercase font-bold">Effective Rate</p>
                                 <p class="font-bold text-slate-800 text-sm" id="effectiveRate">0%</p>
                              </div>
+                        </div>
+                    </div>
+
+                    <!-- NEW: Income Breakdown Section -->
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 mb-8">
+                        <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-4">Income Breakdown</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between items-center text-slate-600">
+                                <span>Gross Annual Income</span>
+                                <span id="breakdownGross" class="font-medium">₹0</span>
+                            </div>
+                            <div class="flex justify-between items-center text-slate-600">
+                                <span>Standard Deduction</span>
+                                <span id="breakdownSD" class="text-red-500">₹0</span>
+                            </div>
+                            <div id="breakdownOtherRow" class="flex justify-between items-center text-slate-600 hidden">
+                                <span>Other Deductions (80C, etc.)</span>
+                                <span id="breakdownOther" class="text-red-500">₹0</span>
+                            </div>
+                            <div class="pt-2 border-t border-slate-200 flex justify-between items-center text-slate-900">
+                                <span class="font-bold">Total Taxable Income</span>
+                                <span id="breakdownTaxable" class="font-extrabold">₹0</span>
+                            </div>
                         </div>
                     </div>
 
@@ -292,7 +314,7 @@
         <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12">
             <h2 class="text-2xl font-bold mb-6">Example Income Tax Calculation (New Regime)</h2>
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base">
-                <p class="mb-4">Let's look at how tax is calculated for a salaried individual earning <strong>₹15,00,000</strong> per year in the New Tax Regime (FY 2025-26):</p>
+                <p class="mb-4 text-pretty">Let's look at how tax is calculated for a salaried individual earning <strong>₹15,00,000</strong> per year in the New Tax Regime (FY 2025-26):</p>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-3">
                     <p class="flex justify-between border-b pb-2"><span>Gross Income:</span> <strong>₹15,00,000</strong></p>
                     <p class="flex justify-between border-b pb-2"><span>Standard Deduction:</span> <strong>- ₹75,000</strong></p>
@@ -329,8 +351,8 @@
                         <p>Under the Old Regime, you can reduce your taxable income through Section 80C (investing in ELSS, PPF), Section 80D (Health Insurance), and HRA. You may also check safe savings growth using the <a href="/fd.html" class="text-blue-600 font-semibold underline">FD Calculator</a> or analyze investment returns through a <a href="/cagr.html" class="text-blue-600 font-semibold underline">CAGR Calculator</a> to decide if the tax-saving investment is worth it.</p>
                     </div>
                     <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">How the Rebate works</h3>
-                        <p>A rebate under Section 87A provides complete relief to individuals earning below a certain threshold. In the New Regime, if your net income is below ₹12 Lakh, the rebate makes your tax liability zero. Business owners and consultants should also keep an eye on indirect taxes using a <a href="/gst.html" class="text-blue-600 font-semibold underline">GST Calculator</a> for complete fiscal planning.</p>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">How the Rebate and Marginal Relief works</h3>
+                        <p>A rebate under Section 87A provides complete relief to individuals earning below a certain threshold. In the New Regime, if your net income is below ₹12 Lakh, the rebate makes your tax liability zero. <strong>Marginal Relief</strong> ensures that if your income slightly exceeds ₹12 Lakh, the tax you pay does not exceed the extra income earned over that limit. Business owners should also check the <a href="/gst.html" class="text-blue-600 font-semibold underline">GST Calculator</a> for complete fiscal planning.</p>
                     </div>
                 </div>
             </section>
@@ -340,19 +362,19 @@
                 <h2 class="text-2xl font-bold mb-6">Tips to Reduce Income Tax Legally</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                     <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                        <h4 class="font-bold text-emerald-400 mb-2">Maximize Section 80C</h4>
+                        <h4 class="font-bold text-emerald-400 mb-2 text-pretty">Maximize Section 80C</h4>
                         <p class="text-slate-300">Invest up to ₹1.5 Lakh in ELSS, PPF, or EPF to reduce taxable income under the Old Regime.</p>
                     </div>
                     <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                        <h4 class="font-bold text-blue-400 mb-2">Health Insurance (80D)</h4>
+                        <h4 class="font-bold text-blue-400 mb-2 text-pretty">Health Insurance (80D)</h4>
                         <p class="text-slate-300">Premiums paid for yourself and parents can provide additional deductions up to ₹75,000.</p>
                     </div>
                     <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                        <h4 class="font-bold text-purple-400 mb-2">Home Loan Benefits</h4>
+                        <h4 class="font-bold text-purple-400 mb-2 text-pretty">Home Loan Benefits</h4>
                         <p class="text-slate-300">Claim up to ₹2 Lakh interest deduction under Section 24 and principal under 80C.</p>
                     </div>
                     <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
-                        <h4 class="font-bold text-orange-400 mb-2">NPS Contribution</h4>
+                        <h4 class="font-bold text-orange-400 mb-2 text-pretty">NPS Contribution</h4>
                         <p class="text-slate-300">An additional ₹50,000 deduction is available for National Pension System contributions.</p>
                     </div>
                 </div>
@@ -367,35 +389,35 @@
                             <span class="font-semibold text-slate-800 text-sm sm:text-base">What is the income tax slab for FY 2025-26?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under the New Tax Regime (Budget 2025), slabs are: 0-4L (0%), 4-8L (5%), 8-12L (10%), 12-16L (15%), 16-20L (20%), 20-24L (25%), and above 24L (30%).</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Under the New Tax Regime (Budget 2025), slabs are: 0-4L (0%), 4-8L (5%), 8-12L (10%), 12-16L (15%), 16-20L (20%), 20-24L (25%), and above 24L (30%).</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Is income up to ₹12 lakh tax free?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is income up to ₹12 lakh tax free?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes. If your taxable income (after deduction) is ₹12,00,000 or less, you qualify for a full rebate under Section 87A in the New Regime.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes. If your taxable income (after deduction) is ₹12,00,000 or less, you qualify for a full rebate under Section 87A in the New Regime.</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">What is standard deduction in the new tax regime?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is standard deduction in the new tax regime?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Salaried employees and pensioners receive a flat standard deduction of ₹75,000 under the New Regime and ₹50,000 under the Old Regime for FY 2025-26.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Salaried employees and pensioners receive a flat standard deduction of ₹75,000 under the New Regime and ₹50,000 under the Old Regime for FY 2025-26.</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Which tax regime is better?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Which tax regime is better?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">For most individuals with limited investments, the New Tax Regime is simpler and offers lower tax rates. Heavy savers often prefer the Old Regime. Use our 'Compare Both' mode to find your best option.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">For most individuals with limited investments, the New Tax Regime is simpler and offers lower tax rates. Heavy savers often prefer the Old Regime. Use our 'Compare Both' mode to find your best option.</div>
                     </details>
                 </div>
             </section>
         </div>
     </main>
 
-    <footer class="text-center py-8 text-slate-400 text-xs border-t border-slate-200 bg-white mt-12">
+    <footer class="text-center py-8 text-slate-400 text-xs border-t border-slate-200 bg-white mt-12 px-4">
         <p>© 2026 ArthCalculator. All Rights Reserved.</p>
     </footer>
 
@@ -422,7 +444,13 @@
             newRegimeTax: document.getElementById('newRegimeTax'),
             oldRegimeTax: document.getElementById('oldRegimeTax'),
             recommendationTag: document.getElementById('recommendationTag'),
-            calcBtn: document.getElementById('calcBtn')
+            calcBtn: document.getElementById('calcBtn'),
+            // New Breakdown elements
+            breakdownGross: document.getElementById('breakdownGross'),
+            breakdownSD: document.getElementById('breakdownSD'),
+            breakdownTaxable: document.getElementById('breakdownTaxable'),
+            breakdownOther: document.getElementById('breakdownOther'),
+            breakdownOtherRow: document.getElementById('breakdownOtherRow')
         };
 
         function toggleDeductions() {
@@ -435,10 +463,10 @@
         }
 
         function calculateRegimeTax(gross, isSalaried, regime, deductions = {}) {
-            // FIX 1: Revised Std Deduction logic for FY 25-26
+            // Logic Fix: Revised SD for FY 25-26
             const stdDed = isSalaried ? (regime === 'new' ? 75000 : 50000) : 0;
-            const totalDeductions = regime === 'old' ? (deductions.c + deductions.d + deductions.hra + deductions.s24 + deductions.other) : 0;
-            const taxableIncome = Math.max(0, gross - stdDed - totalDeductions);
+            const totalOtherDeductions = regime === 'old' ? (deductions.c + deductions.d + deductions.hra + deductions.s24 + deductions.other) : 0;
+            const taxableIncome = Math.max(0, gross - stdDed - totalOtherDeductions);
             
             let basicTax = 0;
             const breakdown = [];
@@ -455,15 +483,23 @@
                         const taxableInSlab = Math.min(taxableIncome, s.l) - prev;
                         const slabTax = taxableInSlab * s.r;
                         basicTax += slabTax;
-                        // FIX 3: Slab Label Formatting
                         const label = s.l === Infinity ? `Above ₹${formatCrL(prev)}` : `₹${formatCrL(prev)} – ₹${formatCrL(s.l)}`;
                         breakdown.push({ range: label, rate: (s.r * 100) + "%", tax: slabTax });
                         prev = s.l;
                     }
                 });
+
+                // REBATE & MARGINAL RELIEF (Section 87A) for New Regime FY 25-26
                 if (taxableIncome <= 1200000) {
                     basicTax = 0;
                     breakdown.forEach(b => b.tax = 0);
+                } else {
+                    const excessOver12L = taxableIncome - 1200000;
+                    if (basicTax > excessOver12L) {
+                        basicTax = excessOver12L;
+                        breakdown.forEach(b => b.tax = 0);
+                        breakdown[breakdown.length - 1].tax = basicTax;
+                    }
                 }
             } else {
                 const slabs = [ { l: 250000, r: 0.00 }, { l: 500000, r: 0.05 }, { l: 1000000, r: 0.20 }, { l: Infinity, r: 0.30 } ];
@@ -484,8 +520,9 @@
                 }
             }
 
-            const finalTax = basicTax > 0 ? basicTax * 1.04 : 0;
-            return { finalTax, taxableIncome, breakdown, basicTax };
+            const cess = basicTax * 0.04;
+            const finalTax = basicTax + cess;
+            return { finalTax, taxableIncome, breakdown, basicTax, cess, stdDed, totalOtherDeductions };
         }
 
         function formatCrL(val) {
@@ -531,6 +568,18 @@
                 elements.recommendationTag.classList.add('hidden');
             }
 
+            // Update Breakdown display
+            elements.breakdownGross.textContent = formatInr(totalGross);
+            elements.breakdownSD.textContent = "- " + formatInr(activeRes.stdDed);
+            elements.breakdownTaxable.textContent = formatInr(activeRes.taxableIncome);
+            
+            if (activeRes.totalOtherDeductions > 0) {
+                elements.breakdownOtherRow.classList.remove('hidden');
+                elements.breakdownOther.textContent = "- " + formatInr(activeRes.totalOtherDeductions);
+            } else {
+                elements.breakdownOtherRow.classList.add('hidden');
+            }
+
             elements.mainTaxDisplay.textContent = formatInr(activeRes.finalTax);
             elements.effectiveRate.textContent = totalGross > 0 ? ((activeRes.finalTax / totalGross) * 100).toFixed(1) + "%" : "0%";
             
@@ -543,15 +592,15 @@
             elements.taxBar.style.width = taxPerc + "%";
 
             elements.breakdownBody.innerHTML = activeRes.breakdown.map(s => `
-                <tr>
+                <tr class="hover:bg-slate-50 transition-colors">
                     <td class="px-3 py-3 text-slate-600 font-medium">${s.range}</td>
                     <td class="px-3 py-3 text-center text-slate-500">${s.rate}</td>
                     <td class="px-3 py-3 text-right font-bold ${s.tax > 0 ? 'text-red-500' : 'text-slate-400'}">${formatInr(s.tax)}</td>
                 </tr>
             `).join('') + `
                 <tr class="bg-slate-50 font-bold">
-                    <td class="px-3 py-3" colspan="2">Cess (4%)</td>
-                    <td class="px-3 py-3 text-right text-red-600">${formatInr(activeRes.finalTax - activeRes.basicTax)}</td>
+                    <td class="px-3 py-3" colspan="2">Health & Education Cess (4%)</td>
+                    <td class="px-3 py-3 text-right text-red-600">${formatInr(activeRes.cess)}</td>
                 </tr>
             `;
         }
