@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPF Calculator India – Public Provident Fund Returns Calculator</title>
+    <title>PPF Calculator India – Public Provident Fund Returns Calculator (2026)</title>
     <meta name="description" content="Free PPF Calculator India. Calculate Public Provident Fund maturity amount, yearly investment, interest earned and total corpus based on current 7.1% interest rate.">
     <meta name="author" content="Ashish Kumar">
     <meta name="robots" content="index, follow">
@@ -118,8 +118,8 @@
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center">
-                        <a href="/#calculators" class="hover:text-blue-600 transition-colors text-pretty">Financial Calculators</a>
+                    <li class="flex items-center text-pretty">
+                        <a href="/#calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="text-blue-600">PPF Calculator</li>
@@ -128,11 +128,11 @@
 
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="max-w-3xl">
-                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">PPF Calculator – Public Provident Fund Exemption</h1>
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">PPF Calculator India – Public Provident Fund Calculator</h1>
                     <p class="text-slate-500 text-sm font-medium mb-3">Calculate your PPF maturity amount and interest earned using the latest 7.1% interest rate rules.</p>
                 </div>
                 <div class="hidden md:block mt-4 md:mt-0">
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Tax Planning Tool</span>
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
                 </div>
             </div>
         </div>
@@ -152,9 +152,12 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Annual Investment (₹)</label>
-                            <input type="number" id="annualInput" value="150000" min="500" max="150000" step="500" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" id="annualInput" value="150000" min="500" step="500" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="annualRange" min="500" max="150000" step="500" value="150000" class="w-full py-2 cursor-pointer">
+                        <div id="limitWarning" class="hidden mt-3 p-2 bg-red-50 border border-red-100 rounded-lg text-[10px] text-red-600 font-medium">
+                            Maximum PPF investment allowed is ₹1,50,000 per year under current PPF rules.
+                        </div>
                     </div>
 
                     <div class="mb-8">
@@ -176,7 +179,6 @@
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
                             </div>
                         </div>
-                        <p class="text-[10px] text-slate-400 mt-2 italic">Current government regulated rate is 7.1%.</p>
                     </div>
 
                     <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 transition-all">Calculate Returns</button>
@@ -217,7 +219,7 @@
                         </div>
                     </div>
 
-                    <div class="mb-10">
+                    <div class="mb-6">
                         <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
                             <span class="text-blue-600">Invested Amount</span>
                             <span class="text-emerald-600">Wealth Gain</span>
@@ -238,16 +240,21 @@
                         </div>
                     </div>
 
-                    <hr class="border-slate-100 mb-6">
+                    <p class="text-[10px] text-slate-400 mt-2 italic bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        "This calculator assumes the current PPF interest rate of 7.1%. Actual returns may change if the government revises PPF interest rates."
+                    </p>
 
-                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Growth Projection</h3>
+                    <hr class="border-slate-100 my-6">
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">PPF Year-wise Growth</h3>
                     <div id="breakdownContainer" class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[300px]">
                         <table class="w-full text-left text-[11px] sm:text-sm">
-                            <thead class="bg-slate-50 sticky top-0">
+                            <thead class="bg-slate-50 sticky top-0 z-10">
                                 <tr>
                                     <th class="px-3 py-3 font-semibold text-slate-500 border-b">Year</th>
-                                    <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right">Investment</th>
-                                    <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right">Closing Balance</th>
+                                    <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right">Investment Added</th>
+                                    <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right">Interest Earned</th>
+                                    <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right">Total Balance</th>
                                 </tr>
                             </thead>
                             <tbody id="projectionBody" class="divide-y divide-slate-50">
@@ -261,60 +268,94 @@
 
         <!-- Example Calculation Section -->
         <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12">
-            <h2 class="text-2xl font-bold mb-6">Example PPF Calculation</h2>
+            <h2 class="text-2xl font-bold mb-6 text-slate-800">Example PPF Calculation</h2>
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed">
                 <p class="mb-4">If you invest the maximum allowed limit of <strong>₹1,50,000</strong> annually in your PPF account for <strong>15 years</strong> at <strong>7.1%</strong>:</p>
-                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-3">
-                    <p class="flex justify-between border-b pb-2"><span>Annual Investment:</span> <strong>₹1,50,000</strong></p>
-                    <p class="flex justify-between border-b pb-2"><span>Investment Duration:</span> <strong>15 Years</strong></p>
-                    <p class="flex justify-between border-b pb-2 text-blue-600"><span>Total Principal Invested:</span> <strong>₹22,50,000</strong></p>
-                    <p class="flex justify-between border-b pb-2 text-emerald-600"><span>Total Interest Earned:</span> <strong>₹18,18,209</strong></p>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-3 max-w-lg">
+                    <p class="flex justify-between border-b border-slate-200 pb-2"><span>Annual Investment:</span> <strong class="text-slate-900">₹1,50,000</strong></p>
+                    <p class="flex justify-between border-b border-slate-200 pb-2"><span>Investment Period:</span> <strong class="text-slate-900">15 Years</strong></p>
+                    <p class="flex justify-between border-b border-slate-200 pb-2 text-blue-600"><span>Total Principal Invested:</span> <strong>₹22,50,000</strong></p>
+                    <p class="flex justify-between border-b border-slate-200 pb-2 text-emerald-600"><span>Total Interest:</span> <strong>₹18,18,209</strong></p>
                     <p class="flex justify-between pt-2 font-extrabold text-slate-900 text-lg"><span>Maturity Amount:</span> <span>₹40,68,209</span></p>
                 </div>
-                <p class="mt-6">The calculation uses <strong>yearly compounding</strong>. Each year, your interest is added to the balance, and next year's interest is calculated on the new total, creating a powerful snowball effect over the 15-year tenure.</p>
+                <p class="mt-6">The calculation follows a simple step-by-step approach: Your previous year's balance and the current year's investment are summed up, and then 7.1% interest is applied to the total, which then compounds annually.</p>
             </div>
         </section>
 
         <!-- Educational Content -->
         <div class="space-y-12">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl font-bold mb-6">What is PPF (Public Provident Fund)?</h2>
+                <h2 class="text-2xl font-bold mb-6 text-slate-800">What is PPF (Public Provident Fund)?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed space-y-6">
-                    <p>The Public Provident Fund (PPF) is a popular government-backed savings-cum-tax-saving scheme in India. Established to provide long-term financial security to the masses, it offers a guaranteed fixed return and unmatched tax benefits.</p>
+                    <p>The Public Provident Fund (PPF) is a popular government-backed savings-cum-tax-saving scheme in India. Established to provide long-term financial security, it offers a guaranteed fixed return and unmatched tax benefits.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-800 mb-2">Core Features</h3>
-                            <ul class="list-disc ml-5 space-y-1">
-                                <li><strong>15 Year Lock-in:</strong> Long-term discipline.</li>
-                                <li><strong>Safe Returns:</strong> Backed by the Government of India.</li>
-                                <li><strong>EEE Status:</strong> Exempt-Exempt-Exempt tax benefit.</li>
-                                <li><strong>Low Minimum:</strong> Start with as little as ₹500/year.</li>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
+                            <h3 class="text-lg font-bold text-slate-800 mb-3">Core Features</h3>
+                            <ul class="space-y-2 list-none">
+                                <li class="flex items-start gap-2">✅ <strong>15 Year Lock-in:</strong> Ensures long-term wealth discipline.</li>
+                                <li class="flex items-start gap-2">✅ <strong>Safe Returns:</strong> Backed by the Government of India.</li>
+                                <li class="flex items-start gap-2">✅ <strong>EEE Status:</strong> Exempt-Exempt-Exempt tax benefit.</li>
                             </ul>
                         </div>
                         <div>
                             <h3 class="text-lg font-bold text-slate-800 mb-2">Strategic Planning</h3>
-                            <p>PPF is an essential pillar for retirement planning. It works effectively alongside market-linked tools. Use our <a href="/sip.html" class="text-blue-600 underline font-medium">SIP Calculator</a> to plan for aggressive growth and the <a href="/income-tax.html" class="text-blue-600 underline font-medium">Income Tax Calculator</a> to see how much 80C tax you save using PPF.</p>
+                            <p>PPF also provides tax deduction benefits under Section 80C. You can estimate your tax savings using our <a href="/income-tax.html" class="text-blue-600 underline font-medium">Income Tax Calculator</a>. While PPF provides safety, for aggressive growth you can complement it with a <a href="/sip.html" class="text-blue-600 underline font-medium">SIP Calculator</a>. For comparing safe returns, use our <a href="/fd.html" class="text-blue-600 underline font-medium">FD Calculator</a> or <a href="/cagr.html" class="text-blue-600 underline font-medium">CAGR Calculator</a>.</p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rules Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold mb-6 text-slate-800">PPF Rules in India</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-slate-600 flex items-center gap-3">
+                        <div class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></div>
+                        <span>Minimum yearly investment ₹500</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-slate-600 flex items-center gap-3">
+                        <div class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></div>
+                        <span>Maximum yearly investment ₹1,50,000</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-slate-600 flex items-center gap-3">
+                        <div class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></div>
+                        <span>Lock-in period is 15 years</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-slate-600 flex items-center gap-3">
+                        <div class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></div>
+                        <span>Can be extended in blocks of 5 years</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-slate-600 flex items-center gap-3">
+                        <div class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></div>
+                        <span>Interest rate currently around 7.1%</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-slate-600 flex items-center gap-3">
+                        <div class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></div>
+                        <span>Interest and Maturity are tax free</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-slate-600 flex items-center gap-3 lg:col-span-3">
+                        <div class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></div>
+                        <span>Eligible for Section 80C deduction</span>
                     </div>
                 </div>
             </section>
 
             <!-- Tax Benefits Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl font-bold mb-6">PPF Tax Benefits in India</h2>
+                <h2 class="text-2xl font-bold mb-6 text-slate-800">PPF Tax Benefits in India</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 text-center">
-                        <div class="text-blue-600 font-bold mb-2">Section 80C</div>
-                        <p class="text-xs text-slate-500 leading-relaxed">Investments up to ₹1.5 Lakh per year are deductible from your taxable income under the Old Regime.</p>
+                        <div class="text-blue-600 font-bold mb-2 uppercase text-xs tracking-wider">Section 80C</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">Investments up to ₹1.5 Lakh per year are deductible from your taxable income under the Old Tax Regime.</p>
                     </div>
                     <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 text-center">
-                        <div class="text-emerald-600 font-bold mb-2">Tax-Free Interest</div>
-                        <p class="text-xs text-slate-500 leading-relaxed">Unlike FDs, the interest earned on your PPF balance is completely tax-free throughout the tenure.</p>
+                        <div class="text-emerald-600 font-bold mb-2 uppercase text-xs tracking-wider">Tax-Free Interest</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">Unlike bank FDs, the interest earned on your PPF balance is completely tax-free throughout the entire tenure.</p>
                     </div>
                     <div class="p-6 bg-slate-50 rounded-xl border border-slate-100 text-center">
-                        <div class="text-purple-600 font-bold mb-2">Tax-Free Maturity</div>
-                        <p class="text-xs text-slate-500 leading-relaxed">When you withdraw the corpus after 15 years, the entire amount including principal and interest is tax-free.</p>
+                        <div class="text-purple-600 font-bold mb-2 uppercase text-xs tracking-wider">Tax-Free Maturity</div>
+                        <p class="text-xs text-slate-500 leading-relaxed">When you withdraw your corpus after 15 years, the entire amount is tax-free in your hands.</p>
                     </div>
                 </div>
             </section>
@@ -349,7 +390,7 @@
                             <span class="font-semibold text-slate-800 text-sm sm:text-base">Is PPF better than FD?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">For long-term goals like retirement, PPF is generally superior to Fixed Deposits (FD) due to its tax-free interest and maturity status. Check out our <a href="/fd.html" class="text-blue-600 underline">FD Calculator</a> to compare exact returns.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">For long-term goals like retirement, PPF is generally superior to Fixed Deposits (FD) due to its tax-free interest and maturity status. Check out our FD Calculator to compare exact returns.</div>
                     </details>
                 </div>
             </section>
@@ -358,11 +399,11 @@
 
     <footer class="text-center py-10 text-slate-400 text-xs border-t border-slate-200 bg-white mt-12 px-4">
         <div class="flex flex-wrap justify-center gap-6 mb-6 font-medium">
-             <a href="/sip.html" class="hover:text-blue-600">SIP Calculator</a>
-             <a href="/emi.html" class="hover:text-blue-600">EMI Calculator</a>
-             <a href="/income-tax.html" class="hover:text-blue-600">Income Tax</a>
-             <a href="/gst.html" class="hover:text-blue-600">GST Calculator</a>
-             <a href="/hra.html" class="hover:text-blue-600">HRA Calculator</a>
+             <a href="/sip.html" class="hover:text-blue-600 transition-colors">SIP Calculator</a>
+             <a href="/emi.html" class="hover:text-blue-600 transition-colors">EMI Calculator</a>
+             <a href="/income-tax.html" class="hover:text-blue-600 transition-colors">Income Tax</a>
+             <a href="/gst.html" class="hover:text-blue-600 transition-colors">GST Calculator</a>
+             <a href="/hra.html" class="hover:text-blue-600 transition-colors">HRA Calculator</a>
         </div>
         <p>© 2026 ArthCalculator.in — Built for Indian Financial Education</p>
     </footer>
@@ -373,7 +414,6 @@
             annualRange: document.getElementById('annualRange'),
             yearsInput: document.getElementById('yearsInput'),
             yearsRange: document.getElementById('yearsRange'),
-            rateInput: document.getElementById('rateInput'),
             maturityValue: document.getElementById('maturityValue'),
             totalInvested: document.getElementById('totalInvested'),
             totalInterest: document.getElementById('totalInterest'),
@@ -384,6 +424,7 @@
             investedLabel: document.getElementById('investedLabel'),
             interestLabel: document.getElementById('interestLabel'),
             projectionBody: document.getElementById('projectionBody'),
+            limitWarning: document.getElementById('limitWarning'),
             calcBtn: document.getElementById('calcBtn')
         };
 
@@ -392,12 +433,23 @@
         }
 
         function runCalculations() {
-            const annualP = parseFloat(elements.annualInput.value) || 0;
+            let annualP = parseFloat(elements.annualInput.value) || 0;
+            
+            // Limit Validation Logic
+            if (annualP > 150000) {
+                annualP = 150000;
+                elements.annualInput.value = 150000;
+                elements.limitWarning.classList.remove('hidden');
+            } else {
+                elements.limitWarning.classList.add('hidden');
+            }
+
             const years = parseInt(elements.yearsInput.value) || 15;
             const rate = 0.071; // 7.1%
 
             let balance = 0;
             let totalInvested = 0;
+            let totalInterestAccumulated = 0;
             let projectionHtml = "";
 
             for (let i = 1; i <= years; i++) {
@@ -405,40 +457,37 @@
                 const deposit = annualP;
                 totalInvested += deposit;
                 
-                // PPF Formula Logic: (Balance + Deposit) * (1 + rate)
-                // This assumes deposit at start of the year
-                balance = (opening + deposit) * (1 + rate);
+                // PPF Formula Logic: Interest is calculated on (Balance + Deposit)
+                const interestThisYear = (opening + deposit) * rate;
+                balance = opening + deposit + interestThisYear;
+                totalInterestAccumulated += interestThisYear;
                 
-                if (i <= 50) { // Limit table rows for sanity
-                    projectionHtml += `
-                        <tr class="hover:bg-slate-50 transition-colors">
-                            <td class="px-3 py-3 text-slate-600 font-medium">Year ${i}</td>
-                            <td class="px-3 py-3 text-right text-slate-400">${formatInr(totalInvested)}</td>
-                            <td class="px-3 py-3 text-right font-bold text-slate-800">${formatInr(balance)}</td>
-                        </tr>
-                    `;
-                }
+                projectionHtml += `
+                    <tr class="hover:bg-slate-50 transition-colors">
+                        <td class="px-3 py-3 text-slate-600 font-medium">Year ${i}</td>
+                        <td class="px-3 py-3 text-right text-slate-500">${formatInr(annualP)}</td>
+                        <td class="px-3 py-3 text-right text-emerald-600 font-medium">${formatInr(interestThisYear)}</td>
+                        <td class="px-3 py-3 text-right font-bold text-slate-800">${formatInr(balance)}</td>
+                    </tr>
+                `;
             }
 
-            const maturity = balance;
-            const totalInt = maturity - totalInvested;
-
             // Update Main UI
-            elements.maturityValue.textContent = formatInr(maturity);
+            elements.maturityValue.textContent = formatInr(balance);
             elements.totalInvested.textContent = formatInr(totalInvested);
-            elements.totalInterest.textContent = formatInr(totalInt);
+            elements.totalInterest.textContent = formatInr(totalInterestAccumulated);
 
             // Additional Result Cards
-            elements.avgInterestDisp.textContent = formatInr(totalInt / years);
+            elements.avgInterestDisp.textContent = formatInr(totalInterestAccumulated / years);
             elements.monthlyEquivalentDisp.textContent = formatInr(annualP / 12);
 
             // Update Progress Bar
-            const investedPerc = (totalInvested / maturity) * 100;
+            const investedPerc = (totalInvested / balance) * 100;
             elements.investedBar.style.width = investedPerc + "%";
             elements.interestBar.style.width = (100 - investedPerc) + "%";
             
             elements.investedLabel.textContent = "Inv: " + formatInr(totalInvested);
-            elements.interestLabel.textContent = "Gain: " + formatInr(totalInt);
+            elements.interestLabel.textContent = "Gain: " + formatInr(totalInterestAccumulated);
 
             // Update Table
             elements.projectionBody.innerHTML = projectionHtml;
