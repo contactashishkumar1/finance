@@ -94,50 +94,8 @@
     </style>
 </head>
 <body class="text-slate-800 antialiased">
-
-    <!-- Top Navigation Bar -->
-    <!-- Top Navigation Bar -->
-<nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
-
-<div class="max-w-6xl mx-auto px-4">
-
-<div class="flex items-center justify-between h-14">
-
-<!-- Logo -->
-<a href="/" class="font-bold text-blue-600 text-base whitespace-nowrap">
-ArthCalculator
-</a>
-
-<!-- Navigation Links -->
-<div class="flex items-center space-x-6 overflow-x-auto py-2 pr-4 text-sm">
-
-<a href="/calculators.html" class="nav-link text-slate-500 hover:text-slate-900 whitespace-nowrap">
-Calculators
-</a>
-
-<a href="/sip.html" class="nav-link text-slate-500 hover:text-slate-900 whitespace-nowrap">
-SIP
-</a>
-
-<a href="/income-tax.html" class="nav-link text-slate-500 hover:text-slate-900 whitespace-nowrap">
-Income Tax
-</a>
-
-<a href="/emi.html" class="nav-link text-slate-500 hover:text-slate-900 whitespace-nowrap">
-EMI
-</a>
-
-<a href="/about.html" class="nav-link text-slate-500 hover:text-slate-900 whitespace-nowrap">
-About
-</a>
-
-</div>
-
-</div>
-</div>
-
-</nav></nav>
-
+<div id="navbar"></div>
+    
     <!-- Hero Section -->
     <header class="bg-white border-b border-slate-200 pt-16 pb-20 sm:pt-24 sm:pb-28">
         <div class="max-w-4xl mx-auto px-4 text-center">
@@ -411,51 +369,20 @@ About
         </section>
 
     </main>
+<div id="footer"></div>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 mt-20 pb-12">
-        <div class="max-w-6xl mx-auto px-4 pt-16">
-            <!-- Footer Trust Addition -->
-            <div class="mb-12 p-6 bg-slate-50 rounded-2xl border border-slate-100 text-center">
-                <p class="text-slate-500 text-sm font-medium">
-                    Educational Disclaimer: This platform provides financial calculation tools for planning and awareness purposes only. It does not offer financial or investment advice.
-                </p>
-            </div>
+<script>
+fetch("/navbar.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("navbar").innerHTML = data;
+});
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mb-12">
-                <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-xl font-bold gradient-text mb-4">Financial Suite India</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed max-sm:max-w-full max-w-sm">
-                        An independent platform providing practical financial tools to help individuals understand the impact of their financial decisions through data and mathematics.
-                    </p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">Calculators</h4>
-                    <ul class="space-y-2 text-sm text-slate-500">
-                        <li><a href="sip.html" class="hover:text-blue-600 transition-colors">SIP Calculator</a></li>
-                        <li><a href="emi.html" class="hover:text-blue-600 transition-colors">EMI Calculator</a></li>
-                        <li><a href="fd.html" class="hover:text-blue-600 transition-colors">FD Calculator</a></li>
-                        <li><a href="cagr.html" class="hover:text-blue-600 transition-colors">CAGR Calculator</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">Company</h4>
-                    <ul class="space-y-2 text-sm text-slate-500">
-                        <li><a href="about.html" class="hover:text-blue-600 transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-blue-600 transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="pt-8 border-t border-slate-100 text-center">
-                <p class="text-slate-400 text-[10px] sm:text-xs leading-relaxed max-w-3xl mx-auto px-4">
-                    Disclaimer: This website provides financial calculation tools for educational purposes only and does not provide financial advice, recommendations, or sell any financial products. Always consult with a qualified financial professional before making significant investment or loan commitments.
-                </p>
-                <p class="text-slate-400 text-[10px] mt-6">© 2026 Financial Suite India. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+fetch("/footer.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+</script>
 </body>
 </html>
