@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gratuity Calculator India – Calculate Gratuity Amount for Private Employees</title>
+    <title>Gratuity Calculator India – Calculate Gratuity Online (2026)</title>
     <meta name="description" content="Free Gratuity Calculator India. Calculate the gratuity amount payable to employees based on salary and years of service under the Payment of Gratuity Act.">
     <meta name="author" content="Ashish Kumar">
     <meta name="robots" content="index, follow">
@@ -30,7 +30,7 @@
     }
     </script>
 
-    <!-- FAQ Schema -->
+    <!-- Expanded FAQ Schema for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -41,7 +41,7 @@
           "name": "What is the minimum service required for gratuity?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "As per the Payment of Gratuity Act 1972, an employee is eligible for gratuity after completing at least 5 years of continuous service with the same employer."
+            "text": "As per the Payment of Gratuity Act 1972, an employee is eligible for gratuity after completing at least 5 years of continuous service. However, this is waived in case of death or disablement."
           }
         },
         {
@@ -49,7 +49,7 @@
           "name": "How is gratuity calculated in India?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Gratuity is calculated using the formula: (Last Drawn Salary × 15 × Years of Service) / 26. Here, Salary includes Basic Salary + Dearness Allowance (DA)."
+            "text": "Gratuity is calculated as (Last Drawn Salary × 15 × Years of Service) / 26 for companies covered under the Act. Salary includes Basic + DA."
           }
         },
         {
@@ -57,15 +57,47 @@
           "name": "Is gratuity taxable?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "For government employees, gratuity is fully tax-free. For private sector employees, gratuity is tax-exempt up to a limit of ₹20 Lakhs."
+            "text": "For private sector employees, gratuity is tax-exempt up to ₹20 Lakhs. Any amount above this is taxable."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the maximum gratuity limit in India?",
+          "name": "Can I receive gratuity before completing 5 years?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The maximum tax-exempt gratuity limit for private employees in India is currently ₹20 Lakhs."
+            "text": "Generally, no. But if an employee passes away or becomes disabled due to an accident or disease during service, the 5-year condition is waived."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Gratuity part of my CTC?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most Indian companies include the employer's contribution toward gratuity as part of the Cost to Company (CTC), though it is paid only upon exit after 5 years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long after leaving a job is gratuity paid?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The employer is required to pay the gratuity amount within 30 days from the date it becomes payable (usually the last working day)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is DA (Dearness Allowance) included in gratuity calculation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, 'Salary' for the purpose of gratuity specifically means the last drawn Basic Salary plus Dearness Allowance (DA)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does rounding work for 6 months exactly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If service in the final year is more than 6 months (e.g., 5.7 years), it is rounded to 6 years. If it is 6 months or less (e.g., 5.5 years), it is rounded down to 5 years."
           }
         }
       ]
@@ -84,7 +116,6 @@
         details summary { list-style: none; }
         details summary::-webkit-details-marker { display: none; }
         details[open] summary svg { transform: rotate(180deg); }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
         input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
@@ -130,8 +161,8 @@
 
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="max-w-3xl">
-                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">Gratuity Calculator – Calculate Employee Benefit</h1>
-                    <p class="text-slate-500 text-sm font-medium mb-3">Calculate how much gratuity you are entitled to receive after your service under the Payment of Gratuity Act.</p>
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-1">Gratuity Calculator India – Calculate Gratuity Online</h1>
+                    <p class="text-slate-500 text-sm font-medium mb-3">Calculate your estimated gratuity and its tax-free vs taxable portions based on current statutory limits.</p>
                 </div>
                 <div class="hidden md:block mt-4 md:mt-0">
                     <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Employee Benefits Tool</span>
@@ -157,7 +188,7 @@
                         <p class="text-[10px] text-slate-400 mt-2">Exclude HRA, Bonus, and other allowances.</p>
                     </div>
 
-                    <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="grid grid-cols-2 gap-4 mb-6">
                         <div>
                             <label class="text-sm font-medium text-slate-600 block mb-2">Years of Service</label>
                             <input type="number" id="yearsInput" value="10" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
@@ -168,17 +199,25 @@
                         </div>
                     </div>
 
+                    <div class="mb-8">
+                        <label class="text-sm font-medium text-slate-600 block mb-2 text-pretty">Is your employer covered under the Payment of Gratuity Act?</label>
+                        <select id="gratuityType" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none bg-white text-sm">
+                            <option value="act">Yes (Company has 10+ employees)</option>
+                            <option value="nonact">No (Not covered under Act)</option>
+                        </select>
+                    </div>
+
                     <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 transition-all">Calculate Gratuity</button>
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pretty">
                     <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
                         <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">Total Years Considered</p>
-                        <h3 id="yearsConsideredDisp" class="text-lg font-bold leading-tight">10 Years</h3>
+                        <h3 id="yearsConsideredDisp" class="text-lg font-bold">10 Years</h3>
                     </div>
                     <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200">
                         <p class="text-indigo-100 text-[10px] font-medium uppercase mb-1">Salary Base Used</p>
-                        <h3 id="salaryBaseDisp" class="text-lg font-bold leading-tight">₹50,000</h3>
+                        <h3 id="salaryBaseDisp" class="text-lg font-bold">₹50,000</h3>
                     </div>
                 </div>
             </div>
@@ -186,46 +225,69 @@
             <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6 text-pretty">
                 <div id="resultCard" class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                    <div class="flex flex-col md:flex-row justify-between items-start mb-8 gap-4">
+                    <div class="flex flex-col md:flex-row justify-between items-start mb-6 gap-4">
                         <div class="w-full">
-                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Total Gratuity Payable</h2>
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Total Gratuity Amount</h2>
                             <div class="mt-1">
                                 <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight" id="gratuityValue">₹0</span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
-                            <span class="text-blue-600">Monthly Salary Basis</span>
-                            <span class="text-emerald-600">Total Gratuity Reward</span>
-                        </div>
-                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
-                            <div id="salaryBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 20%"></div>
-                            <div id="gratuityBar" class="h-full bg-emerald-400 transition-all duration-700" style="width: 80%"></div>
-                        </div>
-                        <div class="flex flex-wrap justify-between mt-4 gap-4">
-                            <div class="flex items-center">
-                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
-                                <span class="text-[10px] sm:text-xs text-slate-500 font-bold uppercase" id="salaryLabel">Salary: ₹0</span>
+                    <!-- Taxable vs Exempt Breakdown Card -->
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 mb-8">
+                        <h3 class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-4">Tax Treatment Breakdown</h3>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between items-center text-slate-600">
+                                <span>Tax-Free (Exempt) Portion</span>
+                                <span id="exemptAmountDisp" class="font-bold text-emerald-600">₹0</span>
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-3 h-3 bg-emerald-400 rounded-sm mr-2"></div>
-                                <span class="text-[10px] sm:text-xs text-slate-500 font-bold uppercase" id="gratuityLabel">Gratuity: ₹0</span>
+                            <div class="flex justify-between items-center text-slate-600">
+                                <span>Taxable Portion (Above Limit)</span>
+                                <span id="taxableAmountDisp" class="font-bold text-red-500">₹0</span>
+                            </div>
+                            <div class="pt-2 border-t border-slate-200 flex justify-between items-center text-slate-900">
+                                <span class="text-xs font-medium text-slate-400">Statutory Exemption Limit</span>
+                                <span class="text-xs font-bold text-slate-400">₹20,00,000</span>
                             </div>
                         </div>
                     </div>
 
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-emerald-600">Tax Exempt</span>
+                            <span class="text-red-400">Taxable Portion</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="exemptBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 100%"></div>
+                            <div id="taxableBar" class="h-full bg-red-400 transition-all duration-700" style="width: 0%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-emerald-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-bold uppercase" id="exemptLabel">Exempt: ₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-red-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-bold uppercase" id="taxableLabel">Taxable: ₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="limitAlert" class="hidden mb-6 p-4 bg-orange-50 border border-orange-100 rounded-xl text-xs text-orange-700 font-medium">
+                        Note: Calculated gratuity exceeds the statutory tax-free limit of ₹20,00,000.
+                    </div>
+
                     <hr class="border-slate-100 mb-6">
 
-                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Statutory Limits (Private Sector)</h3>
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Statutory Status</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="p-4 rounded-xl bg-slate-50 border border-slate-100">
-                            <p class="text-[10px] text-slate-500 font-bold uppercase">Max Tax-Exempt Limit</p>
-                            <p class="font-bold text-slate-900">₹20,00,000</p>
+                            <p class="text-[10px] text-slate-500 font-bold uppercase">Act Coverage</p>
+                            <p id="coverageStatusText" class="font-bold text-slate-900 text-sm">Covered (26 Days)</p>
                         </div>
                         <div id="taxAdviceCard" class="p-4 rounded-xl bg-emerald-50 border border-emerald-100">
-                            <p class="text-[10px] text-emerald-600 font-bold uppercase">Tax Status</p>
+                            <p class="text-[10px] text-emerald-600 font-bold uppercase">Taxability</p>
                             <p id="taxStatusText" class="font-bold text-emerald-700 text-sm">Fully Exempted</p>
                         </div>
                     </div>
@@ -237,19 +299,18 @@
         <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12">
             <h2 class="text-2xl font-bold mb-6 text-slate-800">Example Gratuity Calculation</h2>
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed">
-                <p class="mb-4">Consider an employee with a monthly <strong>Basic Salary + DA</strong> of <strong>₹50,000</strong> and <strong>10 years</strong> of service:</p>
+                <p class="mb-4">Consider an employee with a monthly <strong>Basic Salary + DA</strong> of <strong>₹50,000</strong> and <strong>10 years</strong> of service in a company covered by the Act:</p>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-3 max-w-lg">
                     <p class="flex justify-between border-b border-slate-200 pb-2"><span>Monthly Salary (A):</span> <strong class="text-slate-900">₹50,000</strong></p>
                     <p class="flex justify-between border-b border-slate-200 pb-2"><span>Years of Service (B):</span> <strong class="text-slate-900">10 Years</strong></p>
                     <div class="pt-4 space-y-2">
                         <p class="text-xs font-bold uppercase text-slate-400">Step-by-Step Formula:</p>
-                        <p class="text-xs">Gratuity = (Salary × 15 × Years) / 26</p>
-                        <p class="text-xs">Gratuity = (50,000 × 15 × 10) / 26</p>
-                        <p class="text-xs">Gratuity = 75,00,000 / 26</p>
+                        <p class="text-xs">Gratuity = (Salary × Years × 15) / 26</p>
+                        <p class="text-xs">Gratuity = (50,000 × 10 × 15) / 26</p>
+                        <p class="text-xs text-emerald-600 font-medium">Total Gratuity Payable = ₹2,88,462</p>
                     </div>
-                    <p class="flex justify-between border-t border-slate-200 pt-2 mt-4 font-extrabold text-slate-900 text-lg"><span>Total Gratuity:</span> <span>₹2,88,462</span></p>
                 </div>
-                <p class="mt-6 text-pretty">The division by <strong>26</strong> represents the number of working days in a month, and the multiplication by <strong>15</strong> signifies half a month's salary for every year worked.</p>
+                <p class="mt-6 text-pretty">Gratuity is a benefit provided for loyalty. Companies not covered by the Act typically use a 30-day month divisor for calculation, resulting in slightly lower payouts.</p>
             </div>
         </section>
 
@@ -257,72 +318,85 @@
         <div class="space-y-12">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
                 <h2 class="text-2xl font-bold mb-6 text-slate-800">What is Gratuity?</h2>
-                <div class="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed space-y-6">
-                    <p>Gratuity is a monetary benefit provided by an employer to an employee in recognition of their long-term service to the organization. It is a defined benefit plan governed by the <strong>Payment of Gratuity Act, 1972</strong>.</p>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed space-y-6 text-pretty">
+                    <p>Gratuity is a monetary benefit provided by an employer to an employee in recognition of their long-term service. It is a key component of the retirement corpus in India, governed by the <strong>Payment of Gratuity Act, 1972</strong>.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100">
-                            <h3 class="text-lg font-bold text-slate-800 mb-3">Key Eligibility Criteria</h3>
+                            <h3 class="text-lg font-bold text-slate-800 mb-3 text-pretty">Key Eligibility Criteria</h3>
                             <ul class="space-y-2 list-none">
-                                <li class="flex items-start gap-2">✅ <strong>Min Service:</strong> Must complete 5 years of continuous service.</li>
-                                <li class="flex items-start gap-2">✅ <strong>Rounding Rule:</strong> Service over 6 months in a year is rounded to the next year.</li>
-                                <li class="flex items-start gap-2">✅ <strong>Limit:</strong> The statutory maximum tax-free limit is ₹20 Lakh.</li>
+                                <li class="flex items-start gap-2">✅ <strong>Min Service:</strong> 5 continuous years (waived on death/disability).</li>
+                                <li class="flex items-start gap-2">✅ <strong>Rounding Rule:</strong> Service > 6 months rounds up the year.</li>
+                                <li class="flex items-start gap-2">✅ <strong>Tax Limit:</strong> Statutory exemption up to ₹20 Lakh.</li>
                             </ul>
                         </div>
                         <div>
-                            <h3 class="text-lg font-bold text-slate-800 mb-2">Planning Your Retirement</h3>
-                            <p>Gratuity is a vital component of your retirement corpus. While it provides a lump sum, it should be complemented with disciplined savings. You can estimate your post-retirement tax impact using our <a href="/income-tax.html" class="text-blue-600 underline font-medium">Income Tax Calculator</a> or build a larger wealth pool using a <a href="/sip.html" class="text-blue-600 underline font-medium">SIP Calculator</a>. For safe investments, consider the <a href="/fd.html" class="text-blue-600 underline font-medium">FD Calculator</a> or <a href="/ppf.html" class="text-blue-600 underline font-medium">PPF Calculator</a>.</p>
+                            <h3 class="text-lg font-bold text-slate-800 mb-2 text-pretty">Tax Planning Tips</h3>
+                            <p>Gratuity provides a lump sum that can be reinvested for retirement. Use our <a href="/sip.html" class="text-blue-600 underline font-medium">SIP Calculator</a> to see how reinvesting gratuity can grow your wealth. You should also verify your tax liability using our <a href="/income-tax.html" class="text-blue-600 underline font-medium">Income Tax Calculator</a> if your gratuity exceeds the ₹20 Lakh limit.</p>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Tax Status Section -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl font-bold mb-6 text-slate-800">Is Gratuity Taxable?</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
-                    <div class="p-6 rounded-xl border border-slate-100 bg-emerald-50">
-                        <h4 class="font-bold text-emerald-800 mb-2">Government Employees</h4>
-                        <p class="text-emerald-700 leading-relaxed">Gratuity received by any government employee (Central, State, or Local Authority) is <strong>completely tax-free</strong> without any upper limit.</p>
-                    </div>
-                    <div class="p-6 rounded-xl border border-slate-100 bg-blue-50">
-                        <h4 class="font-bold text-blue-800 mb-2">Private Sector Employees</h4>
-                        <p class="text-blue-700 leading-relaxed">For employees covered under the Gratuity Act, the least of the following is exempt from tax: 1) ₹20 Lakh, 2) Actual Gratuity received, or 3) Eligible Gratuity amount. You can estimate the taxable portion using our <a href="/income-tax.html" class="underline">Tax tool</a>.</p>
                     </div>
                 </div>
             </section>
 
             <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto" id="faqs">
-                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 text-sm sm:text-base">What is the minimum service required for gratuity?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">An employee must complete at least 5 years of continuous service with the same employer to become eligible for gratuity. However, this is waived in case of death or disablement of the employee.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">An employee must complete at least 5 years of continuous service with the same employer to become eligible for gratuity. This condition is waived only in the event of death or disablement.</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 text-sm sm:text-base">How is gratuity calculated in India?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It is calculated as (Last Drawn Salary × 15 × Years of Service) / 26. Salary here specifically means Basic Salary plus Dearness Allowance (DA). This tool automates this calculation instantly.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It is calculated as (Last Drawn Salary × 15 × Years of Service) / 26 for covered companies. Salary means Basic Salary plus Dearness Allowance (DA).</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 text-sm sm:text-base">Is gratuity taxable?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">For private sector employees, gratuity is tax-exempt up to ₹20 Lakh. Any amount received over this limit is taxable as per your income tax slab. You can estimate tax on gratuity using our Income Tax Calculator.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">For private sector employees, gratuity is tax-exempt up to ₹20 Lakh. Any amount received above this threshold is taxable as per your income tax slab.</div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 text-sm sm:text-base">What is the maximum gratuity limit in India?</span>
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Can I receive gratuity before completing 5 years?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The current maximum tax-free limit for gratuity is ₹20 Lakh for private sector employees. Employers can choose to pay more than this, but the excess will be taxable.</div>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Generally, no. But if an employee passes away or becomes disabled due to an accident or disease during service, the 5-year condition is waived.</div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Is Gratuity part of my CTC?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes, most Indian companies include the employer's contribution toward gratuity as part of your CTC, though it is only paid when you leave after completing 5 years.</div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">How long after leaving a job is gratuity paid?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Employers are legally required to pay the gratuity amount within 30 days from the date it becomes payable.</div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Is DA (Dearness Allowance) included in the calculation?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes. Salary for gratuity purposes specifically includes the last drawn Basic Salary and the Dearness Allowance (DA).</div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Does rounding work for 6 months exactly?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under the Act, if the service period in the final year is more than 6 months (e.g., 5.7 years), it is rounded up to 6 years. 6 months or less is rounded down.</div>
                     </details>
                 </div>
             </section>
@@ -330,13 +404,6 @@
     </main>
 
     <footer class="text-center py-10 text-slate-400 text-xs border-t border-slate-200 bg-white mt-12 px-4">
-        <div class="flex flex-wrap justify-center gap-6 mb-6 font-medium">
-             <a href="/sip.html" class="hover:text-blue-600 transition-colors">SIP Calculator</a>
-             <a href="/emi.html" class="hover:text-blue-600 transition-colors">EMI Calculator</a>
-             <a href="/income-tax.html" class="hover:text-blue-600 transition-colors">Income Tax</a>
-             <a href="/gst.html" class="hover:text-blue-600 transition-colors">GST Calculator</a>
-             <a href="/hra.html" class="hover:text-blue-600 transition-colors">HRA Calculator</a>
-        </div>
         <p>© 2026 ArthCalculator.in — Built for Indian Financial Education</p>
     </footer>
 
@@ -345,15 +412,20 @@
             salaryInput: document.getElementById('salaryInput'),
             yearsInput: document.getElementById('yearsInput'),
             monthsInput: document.getElementById('monthsInput'),
+            gratuityType: document.getElementById('gratuityType'),
             gratuityValue: document.getElementById('gratuityValue'),
             yearsConsideredDisp: document.getElementById('yearsConsideredDisp'),
             salaryBaseDisp: document.getElementById('salaryBaseDisp'),
-            salaryBar: document.getElementById('salaryBar'),
-            gratuityBar: document.getElementById('gratuityBar'),
-            salaryLabel: document.getElementById('salaryLabel'),
-            gratuityLabel: document.getElementById('gratuityLabel'),
+            exemptAmountDisp: document.getElementById('exemptAmountDisp'),
+            taxableAmountDisp: document.getElementById('taxableAmountDisp'),
+            exemptBar: document.getElementById('exemptBar'),
+            taxableBar: document.getElementById('taxableBar'),
+            exemptLabel: document.getElementById('exemptLabel'),
+            taxableLabel: document.getElementById('taxableLabel'),
             taxStatusText: document.getElementById('taxStatusText'),
             taxAdviceCard: document.getElementById('taxAdviceCard'),
+            coverageStatusText: document.getElementById('coverageStatusText'),
+            limitAlert: document.getElementById('limitAlert'),
             calcBtn: document.getElementById('calcBtn')
         };
 
@@ -365,46 +437,56 @@
             const salary = parseFloat(elements.salaryInput.value) || 0;
             const yearsRaw = parseInt(elements.yearsInput.value) || 0;
             const monthsRaw = parseInt(elements.monthsInput.value) || 0;
+            const type = elements.gratuityType.value;
 
-            // Logic: More than 6 months rounds up the year
+            // Service Rounding Logic
             let effectiveYears = yearsRaw;
-            if (monthsRaw > 6) {
-                effectiveYears += 1;
-            }
+            if (monthsRaw > 6) { effectiveYears += 1; }
 
-            // Gratuity formula: (Salary * 15 * Years) / 26
-            const gratuityAmount = (salary * 15 * effectiveYears) / 26;
+            // Formula selection
+            const divisor = (type === 'act') ? 26 : 30;
+            elements.coverageStatusText.textContent = (type === 'act') ? "Covered (26 Days)" : "Not Covered (30 Days)";
+
+            const totalGratuity = (salary * 15 * effectiveYears) / divisor;
             const statutoryLimit = 2000000;
 
-            // Update Main Displays
-            elements.gratuityValue.textContent = formatInr(gratuityAmount);
+            // Exempt and Taxable calculations
+            const exemptPortion = Math.min(totalGratuity, statutoryLimit);
+            const taxablePortion = Math.max(0, totalGratuity - statutoryLimit);
+
+            // Update UI Numbers
+            elements.gratuityValue.textContent = formatInr(totalGratuity);
+            elements.exemptAmountDisp.textContent = formatInr(exemptPortion);
+            elements.taxableAmountDisp.textContent = formatInr(taxablePortion);
+            
             elements.yearsConsideredDisp.textContent = effectiveYears + " Years";
             elements.salaryBaseDisp.textContent = formatInr(salary);
 
-            // Visual Progress Bar (Salary Basis vs Gratuity Result)
-            const totalWidth = salary + gratuityAmount;
-            const salaryPerc = (salary / totalWidth) * 100 || 0;
-            elements.salaryBar.style.width = salaryPerc + "%";
-            elements.gratuityBar.style.width = (100 - salaryPerc) + "%";
+            // Progress Bar Logic (Exempt vs Taxable)
+            const exemptPerc = (exemptPortion / totalGratuity) * 100 || 100;
+            elements.exemptBar.style.width = exemptPerc + "%";
+            elements.taxableBar.style.width = (100 - exemptPerc) + "%";
 
-            elements.salaryLabel.textContent = "Base: " + formatInr(salary);
-            elements.gratuityLabel.textContent = "Gratuity: " + formatInr(gratuityAmount);
+            elements.exemptLabel.textContent = "Exempt: " + formatInr(exemptPortion);
+            elements.taxableLabel.textContent = "Taxable: " + formatInr(taxablePortion);
 
-            // Tax Status Check
-            if (gratuityAmount > statutoryLimit) {
+            // Status Styling
+            if (taxablePortion > 0) {
                 elements.taxStatusText.textContent = "Partially Taxable";
                 elements.taxAdviceCard.className = "p-4 rounded-xl bg-red-50 border border-red-100";
                 elements.taxStatusText.className = "font-bold text-red-700 text-sm";
+                elements.limitAlert.classList.remove('hidden');
             } else {
                 elements.taxStatusText.textContent = "Fully Exempted";
                 elements.taxAdviceCard.className = "p-4 rounded-xl bg-emerald-50 border border-emerald-100";
                 elements.taxStatusText.className = "font-bold text-emerald-700 text-sm";
+                elements.limitAlert.classList.add('hidden');
             }
         }
 
         window.addEventListener('DOMContentLoaded', () => {
             elements.calcBtn.addEventListener('click', runCalculations);
-            [elements.salaryInput, elements.yearsInput, elements.monthsInput].forEach(input => {
+            [elements.salaryInput, elements.yearsInput, elements.monthsInput, elements.gratuityType].forEach(input => {
                 input.addEventListener('input', runCalculations);
             });
             runCalculations();
