@@ -1,57 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CAGR Calculator India (2026) – Coming Soon</title>
-  <meta name="description" content="CAGR Calculator India – Calculate compound annual growth rate for investments. Coming soon on Financial Suite India.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAGR Calculator India – Calculate Compound Annual Growth Rate</title>
+    <meta name="description" content="Use this CAGR Calculator to calculate the compound annual growth rate of your investment. Easily estimate yearly returns for stocks, mutual funds, or business growth.">
+    <meta name="keywords" content="CAGR Calculator India, Compound Annual Growth Rate, Investment Return Calculator, Stock CAGR, Mutual Fund CAGR, Business Growth Calculator">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/cagr.html">
+    <meta name="author" content="Ashish Kumar">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="CAGR Calculator India – Calculate Compound Annual Growth Rate">
+    <meta property="og:description" content="Calculate your investment's average annual growth rate with our professional CAGR calculator. Simple, fast, and accurate.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/cagr.html">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "CAGR Calculator India",
+      "description": "A high-precision financial tool to calculate the Compound Annual Growth Rate (CAGR) of investments.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Financial Suite India"
+      }
+    }
+    </script>
+
+    <!-- Expanded Schema Markup: FAQ for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is CAGR in investments?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CAGR (Compound Annual Growth Rate) represents the mean annual growth rate of an investment over a specified period of time longer than one year, assuming the profits are reinvested at the end of each year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is CAGR better than average returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, CAGR is more accurate than simple average returns because it accounts for compounding and the geometric progression of money, whereas simple averages often ignore the impact of volatility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between CAGR and XIRR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CAGR is used for point-to-point investments (one-time buy and sell). XIRR (Extended Internal Rate of Return) is used for multiple cash flows at different intervals, such as SIPs or irregular dividends."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can CAGR be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if the final value of an investment is lower than the initial investment, the CAGR will be negative, representing an average annual loss over the period."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does CAGR account for inflation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, CAGR calculates nominal growth. To find the real rate of return, you must subtract the average annual inflation rate from your CAGR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good CAGR for mutual funds in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Historically, a CAGR of 12% to 15% is considered strong for equity mutual funds in India over a long tenure (7-10+ years)."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.5rem 0.25rem;
+        }
+        .nav-link.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2563eb;
+        }
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
 </head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
 
-<body class="bg-gray-50 text-slate-800 min-h-screen">
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-14">
+                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar py-2 pr-4">
+                    <a href="/" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">Home</a>
+                    <a href="/sip.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">SIP</a>
+                    <a href="/emi.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">EMI</a>
+                    <a href="/fd.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">FD</a>
+                    <a href="/cagr.html" class="nav-link active text-sm whitespace-nowrap">CAGR</a>
+                    <a href="/gst.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">GST</a>
+                    <a href="/about.html" class="nav-link text-slate-500 hover:text-slate-900 text-sm whitespace-nowrap">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- Navigation -->
-<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="flex items-center justify-between h-14">
-      <div class="flex space-x-6 text-sm">
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/#calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">CAGR Calculator</li>
+                </ol>
+            </nav>
 
-        <a href="index.html" class="text-slate-600 hover:text-slate-900">Home</a>
-        <a href="sip.html" class="text-slate-600 hover:text-slate-900">SIP</a>
-        <a href="emi.html" class="text-slate-600 hover:text-slate-900">EMI</a>
-        <a href="fd.html" class="text-slate-600 hover:text-slate-900">FD</a>
-        <a href="cagr.html" class="font-semibold text-blue-600">CAGR</a>
-        <a href="gst.html" class="text-slate-600 hover:text-slate-900">GST</a>
-        <a href="about.html" class="text-slate-600 hover:text-slate-900">About</a>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-[1.2] pb-2">CAGR Calculator India – Calculate Compound Annual Growth Rate</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate the compounded annual growth rate of your investments over time. Ideal for measuring the performance of stocks, mutual funds, or business revenue growth with precision.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Growth Analysis Tool</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      </div>
-    </div>
-  </div>
-</nav>
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Growth Parameters
+                    </h2>
 
-<!-- Main Content -->
-<div class="flex items-center justify-center py-24 px-4">
-  <div class="bg-white shadow-lg rounded-xl p-10 text-center max-w-xl">
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Initial Investment (₹)</label>
+                            <input type="number" id="initialInput" value="100000" min="1" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="initialRange" min="1000" max="100000000" step="10000" value="100000" class="w-full py-2 cursor-pointer">
+                    </div>
 
-    <h1 class="text-3xl font-bold mb-4">CAGR Calculator</h1>
-    <p class="text-slate-600 mb-6">
-      Our Compound Annual Growth Rate (CAGR) calculator is under development.
-      This tool will help you measure annualized investment returns accurately.
-    </p>
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Final Value (₹)</label>
+                            <input type="number" id="finalValueInput" value="200000" min="1" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="finalValueRange" min="1000" max="1000000000" step="50000" value="200000" class="w-full py-2 cursor-pointer">
+                    </div>
 
-    <div class="text-6xl mb-6">📊</div>
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Investment Period (Years)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="yearsInput" value="5" min="1" max="50" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="50" step="1" value="5" class="w-full py-2 cursor-pointer">
+                    </div>
 
-    <p class="text-blue-600 font-medium mb-6">
-      Coming Soon 🚀
-    </p>
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Calculate CAGR
+                    </button>
+                </div>
 
-    <a href="index.html"
-       class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-       Back to Home
-    </a>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Absolute Profit</p>
+                        <h3 id="absProfitMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
+                    </div>
+                    <div class="bg-emerald-600 p-5 rounded-2xl text-white shadow-lg shadow-emerald-200">
+                        <p class="text-emerald-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Growth %</p>
+                        <h3 id="totalGrowthMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">0%</h3>
+                    </div>
+                </div>
+            </div>
 
-  </div>
-</div>
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Investment Performance Result</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Compound Annual Growth Rate (CAGR)</h2>
+                            <div class="mt-1">
+                                <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight block break-words" id="cagrValue">0%</span>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Initial Principal</span>
+                            <span class="text-emerald-600 font-bold uppercase">Growth Earned</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                            <div id="returnsBar" class="h-full bg-emerald-400 transition-all duration-700 ease-out" style="width: 50%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="initialLabel">₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="growthLabel">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Key Highlights Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path></svg>
+                            Key Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Smoothes out annual volatility</li>
+                            <li class="flex items-center gap-2">📈 Precise geometric progression</li>
+                            <li class="flex items-center gap-2">🔄 Comparative tool for assets</li>
+                            <li class="flex items-center gap-2">⚡ Simple periodic analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Formula Section -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is CAGR Calculated?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        CAGR = [(Final Value / Initial Investment)<sup>1/n</sup> - 1] × 100
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>Final Value:</strong> Current value of the investment</p>
+                        <p><strong>Initial Investment:</strong> Beginning value of the investment</p>
+                        <p><strong>n:</strong> Number of years (Investment Period)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="space-y-12 mb-12">
+            
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about-cagr">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is CAGR?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed text-sm sm:text-base">
+                    <p class="mb-4">
+                        Compound Annual Growth Rate (CAGR) is the rate of return that would be required for an investment to grow from its beginning balance to its ending balance, assuming the profits were reinvested at the end of each year of the investment's lifespan.
+                    </p>
+                    <p class="mb-4">
+                        Unlike absolute returns, CAGR accounts for the <strong>time value of money</strong> and provides a smoothed annual rate. This is particularly useful in India for comparing the performance of a volatile asset like a <a href="/sip_calculator.html" class="text-blue-600 font-semibold hover:underline">mutual fund investment</a> against a steady asset like a <a href="/fd.html" class="text-blue-600 font-semibold hover:underline">Fixed Deposit (FD)</a>. Furthermore, CAGR can help you compare these potential investment returns against the cost of borrowing as calculated by an <a href="/emi_calculator.html" class="text-blue-600 font-semibold hover:underline">EMI calculator</a>.
+                    </p>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mt-6">
+                        <h4 class="font-bold text-slate-800 mb-2">Practical Example:</h4>
+                        <p>If you invest <strong>₹1,00,000</strong> in a stock and it grows to <strong>₹2,00,000</strong> over <strong>5 years</strong>:</p>
+                        <ul class="list-disc ml-5 mt-2 font-medium text-slate-700">
+                            <li>Absolute Return: 100%</li>
+                            <li>Average Annual Return: 20% (Simple division)</li>
+                            <li><strong>CAGR: ~14.87%</strong> (Actual annual growth with compounding)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEO Optimized FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Compound Annual Growth Rate (CAGR) FAQ</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is CAGR in investments?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            CAGR is the most accurate way to measure the annual growth of an investment over time. It assumes the investment grows at a steady rate and profits are reinvested, allowing for an "apples-to-apples" comparison between different investment options.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is the difference between CAGR and XIRR?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            CAGR is used for point-to-point investments (one-time buy and one-time sell). XIRR (Extended Internal Rate of Return) is used for multiple cash flows at different intervals, such as <a href="/sip_calculator.html" class="text-blue-600 underline">SIPs</a> or irregular investment top-ups and withdrawals.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Can CAGR be negative?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, if the final value of your investment is lower than the initial amount, the CAGR will be negative. This represents the average annual percentage loss you sustained during that period.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is CAGR reliable for short-term investments?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            CAGR is most reliable for periods longer than one year. For periods less than a year, absolute returns or annualized returns are typically used, as CAGR's assumption of annual compounding may misrepresent short-term volatility.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Does CAGR account for inflation?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, CAGR provides the "Nominal" rate of return. To understand the "Real" growth of your wealth, you must subtract the average annual inflation rate from your CAGR results.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is a good CAGR for mutual funds in India?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            For long-term equity mutual fund investments in India, a CAGR of 12-15% is generally considered very good, as it outperforms traditional savings like <a href="/fd.html" class="text-blue-600 underline">Fixed Deposits</a> and stays well above the long-term inflation rate (usually 5-6%).
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto px-4 mt-8">
+        <div class="text-center py-8 border-t border-slate-200">
+            <p class="text-slate-400 text-[10px]">© 2026 Financial Suite India. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Financial Suite India",
+      "url": "https://arthcalculator.in/",
+      "description": "Free financial calculators for SIP, EMI, FD and investment planning in India."
+    }
+    </script>
+
+    <script>
+        const elements = {
+            initialInput: document.getElementById('initialInput'),
+            initialRange: document.getElementById('initialRange'),
+            finalValueInput: document.getElementById('finalValueInput'),
+            finalValueRange: document.getElementById('finalValueRange'),
+            yearsInput: document.getElementById('yearsInput'),
+            yearsRange: document.getElementById('yearsRange'),
+            cagrValue: document.getElementById('cagrValue'),
+            absProfitMobile: document.getElementById('absProfitMobile'),
+            totalGrowthMobile: document.getElementById('totalGrowthMobile'),
+            initialLabel: document.getElementById('initialLabel'),
+            growthLabel: document.getElementById('growthLabel'),
+            investedBar: document.getElementById('investedBar'),
+            returnsBar: document.getElementById('returnsBar'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatIndian(val) {
+            const absVal = Math.round(val);
+            if (absVal >= 10000000) {
+                return "₹" + (new Intl.NumberFormat('en-IN').format(absVal)) + " (" + (absVal / 10000000).toFixed(2) + " Cr)";
+            } else if (absVal >= 100000) {
+                return "₹" + (new Intl.NumberFormat('en-IN').format(absVal)) + " (" + (absVal / 100000).toFixed(2) + " L)";
+            }
+            return "₹" + (new Intl.NumberFormat('en-IN').format(absVal));
+        }
+
+        function formatCompact(val) {
+            return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+        }
+
+        function updateCalculations() {
+            const initial = parseFloat(elements.initialInput.value) || 0;
+            const final = parseFloat(elements.finalValueInput.value) || 0;
+            const years = parseFloat(elements.yearsInput.value) || 0;
+
+            if (initial > 0 && final > 0 && years > 0) {
+                const cagr = (Math.pow((final / initial), (1 / years)) - 1) * 100;
+                const absProfit = final - initial;
+                const totalGrowth = ((final - initial) / initial) * 100;
+
+                elements.cagrValue.textContent = cagr.toFixed(2) + "%";
+                elements.absProfitMobile.textContent = formatIndian(absProfit);
+                elements.totalGrowthMobile.textContent = totalGrowth.toFixed(2) + "%";
+                
+                elements.initialLabel.textContent = "Start: ₹" + formatCompact(initial);
+                elements.growthLabel.textContent = (absProfit >= 0 ? "Profit: ₹" : "Loss: ₹") + formatCompact(Math.abs(absProfit));
+
+                const totalVal = Math.max(initial, final);
+                const initialPercent = (initial / totalVal) * 100;
+                const growthPercent = (Math.max(0, absProfit) / totalVal) * 100;
+                
+                if (final > initial) {
+                    elements.investedBar.style.width = initialPercent + "%";
+                    elements.returnsBar.style.width = growthPercent + "%";
+                } else {
+                    elements.investedBar.style.width = "100%";
+                    elements.returnsBar.style.width = "0%";
+                }
+            } else {
+                elements.cagrValue.textContent = "0%";
+            }
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { 
+                range.value = input.value; 
+                updateCalculations(); 
+            });
+            range.addEventListener('input', () => { 
+                input.value = range.value; 
+                updateCalculations(); 
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.initialInput, elements.initialRange);
+            setupSync(elements.finalValueInput, elements.finalValueRange);
+            setupSync(elements.yearsInput, elements.yearsRange);
+            
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+    </script>
 </body>
 </html>
