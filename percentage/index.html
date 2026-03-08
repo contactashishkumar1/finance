@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator (2026) – Calculate Percentage, Increase & Decrease Instantly</title>
+    <meta name="description" content="Use our Percentage Calculator to calculate percentage increase, percentage decrease, and percentage of any number instantly. Ideal for finance, discounts, and quick math calculations.">
+    <meta name="keywords" content="percentage calculator, percentage increase calculator, percentage decrease calculator, calculate percentage online, percent of number calculator, discount calculator india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/percentage/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Percentage Calculator (2026) – Fast & Accurate Math Tools">
+    <meta property="og:description" content="Quickly find percentages, increases, and decreases. Simple interface for salary hikes, discounts, and investment growth.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/percentage/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Percentage Calculator (2026)",
+      "description": "Interactive math tool to calculate percentages, percentage growth, and percentage reduction.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Percentage Calculator", "item": "https://arthcalculator.in/percentage" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you calculate percentage increase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Percentage Increase is calculated using the formula: ((New Value - Original Value) / Original Value) x 100."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to calculate 20% of a number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To find 20% of a number, multiply the number by 20 and divide the result by 100. For example, 20% of 500 is (20 * 500) / 100 = 100."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .tab-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .tab-btn.active { background-color: #2563eb; color: white; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Percentage Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Percentage Calculator (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        The simplest tool to calculate percentage of numbers, percentage increase for <a href="/salary-hike" class="text-blue-600 underline">salary hikes</a>, and percentage decrease for discounts or market drops.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm tracking-wide">Multi-Purpose Math</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    
+                    <!-- Internal Mode Tabs -->
+                    <div class="flex p-1 bg-slate-100 rounded-xl mb-8">
+                        <button onclick="setMode('of')" id="tabOf" class="tab-btn flex-1 py-2 text-[10px] sm:text-xs font-bold rounded-lg active">Percentage Of</button>
+                        <button onclick="setMode('inc')" id="tabInc" class="tab-btn flex-1 py-2 text-[10px] sm:text-xs font-bold rounded-lg text-slate-500">Increase</button>
+                        <button onclick="setMode('dec')" id="tabDec" class="tab-btn flex-1 py-2 text-[10px] sm:text-xs font-bold rounded-lg text-slate-500">Decrease</button>
+                    </div>
+
+                    <!-- Dynamic Input Group 1: Percentage Of -->
+                    <div id="groupOf" class="space-y-6">
+                        <div class="mb-4">
+                            <label class="text-sm font-medium text-slate-600 block mb-2">Percentage (%)</label>
+                            <input type="number" id="percOf" value="25" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+                        <div class="mb-4">
+                            <label class="text-sm font-medium text-slate-600 block mb-2">Of Number</label>
+                            <input type="number" id="numOf" value="500" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Input Group 2: Increase -->
+                    <div id="groupInc" class="space-y-6 hidden">
+                        <div class="mb-4">
+                            <label class="text-sm font-medium text-slate-600 block mb-2">Original Value</label>
+                            <input type="number" id="oldInc" value="500" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+                        <div class="mb-4">
+                            <label class="text-sm font-medium text-slate-600 block mb-2">New Value</label>
+                            <input type="number" id="newInc" value="650" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Input Group 3: Decrease -->
+                    <div id="groupDec" class="space-y-6 hidden">
+                        <div class="mb-4">
+                            <label class="text-sm font-medium text-slate-600 block mb-2">Original Value</label>
+                            <input type="number" id="oldDec" value="800" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+                        <div class="mb-4">
+                            <label class="text-sm font-medium text-slate-600 block mb-2">New Value</label>
+                            <input type="number" id="newDec" value="600" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="calculate()" class="w-full mt-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Result</button>
+                </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 id="resultTitle" class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Calculated Result</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 block mb-6 text-center md:text-left" id="mainResult">0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1" id="subLabel1">Primary Value</p>
+                            <p class="font-bold text-slate-800 text-lg" id="subVal1">0</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1" id="subLabel2">Difference</p>
+                            <p class="font-bold text-blue-600 text-lg" id="subVal2">0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between text-[11px] mb-2 font-bold uppercase">
+                            <span class="text-slate-400" id="barLabel1">Value A</span>
+                            <span class="text-blue-600" id="barLabel2">Value B</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="bar1" class="h-full bg-slate-300 transition-all duration-700" style="width: 50%"></div>
+                            <div id="bar2" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Content Sections -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Percentage?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>In mathematics, a percentage is a number or ratio expressed as a fraction of 100. It is often denoted using the percent sign, "%". Percentages are used to express how large or small one quantity is relative to another quantity.</p>
+                    <p>In your daily financial life, percentages are everywhere. From calculating the <a href="/gst" class="text-blue-600 underline">GST</a> on a bill to understanding the annual <a href="/inflation" class="text-blue-600 underline">Inflation Rate</a>, mastering percentages helps you make faster and better decisions.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How to Calculate Percentage</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 mb-2">1. Percentage Of</h3>
+                        <p class="text-slate-500 text-xs mb-4">Finding a part of a whole.</p>
+                        <div class="formula-box text-blue-800 text-xs">(% × Number) / 100</div>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 mb-2">2. Percentage Increase</h3>
+                        <p class="text-slate-500 text-xs mb-4">Measuring growth over time.</p>
+                        <div class="formula-box text-blue-800 text-xs">((New - Old) / Old) × 100</div>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 mb-2">3. Percentage Decrease</h3>
+                        <p class="text-slate-500 text-xs mb-4">Measuring a drop or discount.</p>
+                        <div class="formula-box text-blue-800 text-xs">((Old - New) / Old) × 100</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Percentage Increase vs Percentage Decrease</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>While both calculate the relative change between two values, the baseline is always the <strong>original value</strong>. A common mistake in finance is assuming that a 10% decrease followed by a 10% increase brings you back to zero. In reality, a 10% drop on ₹100 brings it to ₹90. A 10% increase on ₹90 only brings it to ₹99. This is why understanding the <a href="/cagr" class="text-blue-600 underline">CAGR</a> of your investments is more accurate for long-term tracking.</p>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Real Life Uses of Percentages</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-blue-400 mb-2">Shopping Discounts</h4>
+                        <p class="text-slate-300">Calculating "Buy 1 Get 1" or "Flat 30% Off" to find the effective price per unit.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-emerald-400 mb-2">Salary Increments</h4>
+                        <p class="text-slate-300">Comparing annual raises against the <a href="/inflation" class="text-blue-400 underline">Inflation</a> rate to see real income growth.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-purple-400 mb-2">Investment Returns</h4>
+                        <p class="text-slate-300">Checking if your <a href="/sip" class="text-blue-400 underline">SIP returns</a> are consistent with your financial goals.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-orange-400 mb-2">Tax Calculations</h4>
+                        <p class="text-slate-300">Determining the tax slab percentage for <a href="/income-tax" class="text-blue-400 underline">Income Tax</a> or business GST filings.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is percentage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">A percentage is a way of expressing a number as a fraction of 100. It helps in comparing different scales of numbers easily.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do you calculate percentage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Multiply the partial value by 100 and divide by the total value. Formula: (Part / Total) * 100.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do you find percentage increase?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Subtract the old value from the new value, divide by the old value, and multiply by 100.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do you calculate percentage decrease?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Subtract the new value from the old value, divide by the old value, and multiply by 100.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How to calculate 20% of a number?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Multiply the number by 0.20 or divide the number by 5. For example, 20% of 1000 is 200.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Where are percentages used in finance?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Interest rates, stock market gains/losses, tax rates, expense ratios, and inflation tracking.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Can a percentage be over 100?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes. If a value doubles, it is a 100% increase. if it triples, it is a 200% increase.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How are percentages used in daily life?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Calculating battery levels, loading progress, food nutrition labels, sales discounts, and exam grades.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <a href="/salary-hike" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Salary Hike</h4>
+                    </a>
+                    <a href="/simple-interest" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Simple Interest</h4>
+                    </a>
+                    <a href="/inflation" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Inflation Tool</h4>
+                    </a>
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">SIP Calculator</h4>
+                    </a>
+                    <a href="/cagr" class="p-5 border border-slate-100 rounded-2xl hover:border-purple-500 hover:bg-purple-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">CAGR Tool</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                This tool provides mathematical results for general calculations. Financial outcomes should be verified manually before making investment or purchase decisions.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        let currentMode = 'of';
+
+        function setMode(mode) {
+            currentMode = mode;
+            // Update Tabs
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'text-white', 'bg-blue-600');
+                btn.classList.add('text-slate-500');
+            });
+            const activeTab = document.getElementById('tab' + mode.charAt(0).toUpperCase() + mode.slice(1));
+            activeTab.classList.add('active', 'text-white', 'bg-blue-600');
+            activeTab.classList.remove('text-slate-500');
+
+            // Update Input Groups
+            document.getElementById('groupOf').classList.add('hidden');
+            document.getElementById('groupInc').classList.add('hidden');
+            document.getElementById('groupDec').classList.add('hidden');
+            document.getElementById('group' + mode.charAt(0).toUpperCase() + mode.slice(1)).classList.remove('hidden');
+            
+            calculate();
+        }
+
+        function calculate() {
+            const resTitle = document.getElementById('resultTitle');
+            const mainRes = document.getElementById('mainResult');
+            const subL1 = document.getElementById('subLabel1');
+            const subV1 = document.getElementById('subVal1');
+            const subL2 = document.getElementById('subLabel2');
+            const subV2 = document.getElementById('subVal2');
+            const barL1 = document.getElementById('barLabel1');
+            const barL2 = document.getElementById('barLabel2');
+            const bar1 = document.getElementById('bar1');
+            const bar2 = document.getElementById('bar2');
+            const insights = document.getElementById('insightsBox');
+
+            if (currentMode === 'of') {
+                const perc = parseFloat(document.getElementById('percOf').value) || 0;
+                const num = parseFloat(document.getElementById('numOf').value) || 0;
+                const result = (perc * num) / 100;
+                
+                resTitle.textContent = "Calculated Result";
+                mainRes.textContent = result.toLocaleString('en-IN');
+                subL1.textContent = "Input Number";
+                subV1.textContent = num.toLocaleString('en-IN');
+                subL2.textContent = "Percentage";
+                subV2.textContent = perc + "%";
+                barL1.textContent = "Original Number";
+                barL2.textContent = perc + "% Part";
+                
+                const ratio = Math.min(100, perc);
+                bar1.style.width = (100 - ratio) + "%";
+                bar2.style.width = ratio + "%";
+                insights.innerHTML = `💡 <strong>Insight:</strong> ${perc}% of ${num} is exactly <strong>${result}</strong>.`;
+            } 
+            else if (currentMode === 'inc') {
+                const oldVal = parseFloat(document.getElementById('oldInc').value) || 1;
+                const newVal = parseFloat(document.getElementById('newInc').value) || 0;
+                const diff = newVal - oldVal;
+                const perc = (diff / oldVal) * 100;
+
+                resTitle.textContent = "Percentage Increase";
+                mainRes.textContent = perc.toFixed(2) + "%";
+                subL1.textContent = "Original Value";
+                subV1.textContent = oldVal.toLocaleString('en-IN');
+                subL2.textContent = "Value Increase";
+                subV2.textContent = "+" + diff.toLocaleString('en-IN');
+                barL1.textContent = "Original";
+                barL2.textContent = "Increase";
+
+                const total = oldVal + Math.max(0, diff);
+                const oldPerc = (oldVal / total) * 100;
+                bar1.style.width = oldPerc + "%";
+                bar2.style.width = (100 - oldPerc) + "%";
+                insights.innerHTML = `📈 <strong>Growth:</strong> The value grew by <strong>${perc.toFixed(2)}%</strong> from its original base.`;
+            }
+            else if (currentMode === 'dec') {
+                const oldVal = parseFloat(document.getElementById('oldDec').value) || 1;
+                const newVal = parseFloat(document.getElementById('newDec').value) || 0;
+                const diff = oldVal - newVal;
+                const perc = (diff / oldVal) * 100;
+
+                resTitle.textContent = "Percentage Decrease";
+                mainRes.textContent = perc.toFixed(2) + "%";
+                subL1.textContent = "Original Value";
+                subV1.textContent = oldVal.toLocaleString('en-IN');
+                subL2.textContent = "Value Reduction";
+                subV2.textContent = "-" + diff.toLocaleString('en-IN');
+                barL1.textContent = "New Value";
+                barL2.textContent = "Discount/Drop";
+
+                const newPerc = (newVal / oldVal) * 100;
+                bar1.style.width = newPerc + "%";
+                bar2.style.width = (100 - newPerc) + "%";
+                insights.innerHTML = `📉 <strong>Reduction:</strong> The value dropped by <strong>${perc.toFixed(2)}%</strong> compared to the original amount.`;
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('input').forEach(input => {
+                input.addEventListener('input', calculate);
+            });
+            calculate();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
