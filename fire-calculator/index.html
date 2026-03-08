@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRE Calculator India (2026) – Financial Independence Retire Early Calculator</title>
+    <meta name="description" content="Use our FIRE Calculator to estimate how much wealth you need to achieve financial independence and retire early based on your annual expenses and investment returns.">
+    <meta name="keywords" content="fire calculator, financial independence calculator, early retirement calculator, how much money to retire early, financial independence number, fire movement india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/fire-calculator/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "FIRE Calculator India (2026)",
+      "description": "Estimate your FIRE number and plan for early retirement by calculating future wealth based on expenses and investments.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "FIRE Calculator", "item": "https://arthcalculator.in/fire-calculator" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the FIRE number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The FIRE number is the total amount of invested assets you need to cover your living expenses indefinitely. It is typically calculated as 25 times your annual expenses (based on the 4% withdrawal rule)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is FIRE possible in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, FIRE is possible in India through aggressive saving and investing in high-yield growth assets like equity mutual funds to beat inflation."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">FIRE Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">FIRE Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate your Financial Independence number. Determine how much wealth you need to stop working and retire early based on your current spending, savings, and investment returns.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm tracking-wide">Early Retirement 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Financial Roadmap
+                    </h2>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-1 uppercase tracking-tighter">Current Age</label>
+                            <input type="number" id="currentAge" value="30" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-1 uppercase tracking-tighter">Desired FIRE Age</label>
+                            <input type="number" id="fireAge" value="45" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Annual Expenses (Today ₹)</label>
+                            <input type="number" id="expenseInput" value="600000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="expenseRange" min="50000" max="10000000" step="50000" value="600000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Current Savings (₹)</label>
+                            <input type="number" id="savingsInput" value="1000000" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="savingsRange" min="0" max="500000000" step="100000" value="1000000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Monthly SIP / Investment (₹)</label>
+                            <input type="number" id="sipInput" value="50000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="sipRange" min="0" max="5000000" step="5000" value="50000" class="w-full">
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label class="text-sm font-medium text-slate-600">Expected Investment Return (%)</label>
+                            <input type="number" id="returnInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="returnRange" min="1" max="25" step="0.1" value="12" class="w-full">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Independence</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Your FIRE Number (Corpus Needed)</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-6 text-center md:text-left" id="fireNumberDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Projected wealth by FI age</p>
+                            <p class="font-bold text-slate-800 text-lg" id="projectedWealthDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1">Passive Monthly Income</p>
+                            <p class="font-bold text-emerald-700 text-lg" id="monthlyPassiveDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-blue-600">Wealth at FIRE Age</span>
+                            <span class="text-slate-400">Target Goal</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="wealthBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
+                            <div id="targetBar" class="h-full bg-slate-300 transition-all duration-700" style="width: 50%"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
+                            <span id="wealthLabel">Projected: ₹0</span>
+                            <span id="targetLabel">Target: ₹0</span>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4"></div>
+                    
+                    <p class="text-[10px] text-slate-400 italic">Analysis: Your target FIRE number is calculated using the <strong>25x annual expense rule</strong> (4% safe withdrawal rate).</p>
+                </div>
+                
+                <div class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-slate-400 text-xs uppercase font-bold tracking-wider">Years to Financial Independence</p>
+                            <h4 class="text-4xl font-black text-white" id="yearsRemainingDisp">0</h4>
+                        </div>
+                        <div class="text-right">
+                             <p class="text-slate-400 text-xs uppercase font-bold tracking-wider">Early Retirement Status</p>
+                             <div id="statusBadge" class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/30 inline-block mt-1">Planning Mode</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is FIRE (Financial Independence Retire Early)?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>FIRE is a lifestyle movement whose goal is financial independence and retiring much earlier than the traditional age of 60. The movement emphasizes aggressive saving—often up to 50-70% of income—and investing those savings in low-cost index funds or growth assets.</p>
+                    <p>Financial Independence doesn't necessarily mean you stop working; it means you no longer <em>need</em> to work for money. You have enough wealth where the passive returns from your portfolio cover your annual living expenses. Many people in India use <a href="/sip" class="text-blue-600 underline font-medium">SIPs</a> as their primary engine for reaching FIRE.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">How the FIRE Strategy Works</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm leading-relaxed">
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3">1. Save Aggressively</h3>
+                        <p class="text-slate-600 text-xs">Standard retirement planning suggests saving 15-20%. FIRE enthusiasts often target a 50%+ savings rate by minimizing non-essential expenses.</p>
+                    </div>
+                    <div class="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-pretty">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3">2. Invest Early</h3>
+                        <p class="text-slate-600 text-xs">The <a href="/cagr" class="text-blue-600 underline font-medium">Power of Compounding</a> works best over long periods. Starting in your 20s can reduce the required monthly investment by half compared to starting in your 30s.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3">3. Low-Cost Living</h3>
+                        <p class="text-slate-600 text-xs">By maintaining a modest lifestyle (living below your means), you lower your "FIRE Number" and reach independence faster. Check your <a href="/real-return" class="text-blue-600 underline">Real Returns</a> after inflation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is the 4% Rule?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>The 4% rule is a widely used benchmark for a "Safe Withdrawal Rate." It suggests that if you withdraw only 4% of your initial retirement portfolio each year (and adjust for inflation annually), your money has a high probability of lasting at least 30 years.</p>
+                    <p>Mathematically, if you need 4% for annual expenses, your portfolio must be <strong>25 times your annual expenses</strong> (100 / 4 = 25). For example, if you spend ₹10 Lakh per year, you need ₹2.5 Crore to be financially independent. In India, many planners suggest a more conservative 3% withdrawal rate (33x expenses) due to higher <a href="/inflation" class="text-blue-600 underline">Inflation</a>.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Example FIRE Calculation</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Consider an individual in India with the following goal:</p>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 space-y-2 max-w-lg">
+                        <p class="flex justify-between border-b pb-2"><span>Current Annual Expenses:</span> <strong class="text-slate-900">₹10,00,000</strong></p>
+                        <p class="flex justify-between border-b pb-2 text-blue-600"><span>Required FIRE Corpus (25x):</span> <strong>₹2,50,00,000</strong></p>
+                        <p class="flex justify-between pt-2 font-bold text-slate-800 text-lg"><span>Retirement Plan:</span> <span>Quit Active Job</span></p>
+                    </div>
+                    <p class="mt-4">Reaching this goal requires a combination of high income and disciplined <a href="/savings-goal" class="text-blue-600 underline font-medium">Savings Goal</a> adherence. Tracking your <a href="/net-worth" class="text-blue-600 underline font-medium">Net Worth</a> regularly is the best way to see how close you are to your FIRE target.</p>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the FIRE movement?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It is a financial strategy focused on extreme saving and investing to gain financial freedom and retire decades before the traditional age of 60.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How much money do I need to retire early?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">A safe estimate is 25 to 30 times your annual expenses. If you spend ₹6 Lakhs a year, you need at least ₹1.5 Crore to ₹1.8 Crore invested.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is FIRE possible with a normal salary in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes, but it requires a very high savings rate (usually >40%) and avoiding lifestyle inflation. Starting early and using <a href="/sip" class="text-blue-600 underline">SIPs</a> is the most practical path.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How long does it take to reach financial independence?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">It primarily depends on your "Savings Rate." If you save 50% of your income, you can technically retire in approximately 17 years. If you save 70%, it can take less than 10 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What are the best investments for FIRE?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Most FIRE seekers use a mix of broad market Index Funds, Equity Mutual Funds for growth, and Debt funds/PPF for stability as they get closer to their early retirement date.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does FIRE account for medical emergencies?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">A robust FIRE plan must include a separate emergency fund and comprehensive health insurance coverage outside of your "FIRE Number" to handle medical inflation.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <a href="/retirement" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Retirement Tool</h4>
+                    </a>
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                    <a href="/savings-goal" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Savings Goal</h4>
+                    </a>
+                    <a href="/inflation" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Inflation</h4>
+                    </a>
+                    <a href="/real-return" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Real Return</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty">Disclaimer</p>
+                FIRE calculations are based on standard mathematical models and the 4% safe withdrawal rule. Market volatility, changes in life circumstances, and unexpected health costs are not accounted for. This tool does not constitute personal financial advice.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            curAge: document.getElementById('currentAge'),
+            fireAge: document.getElementById('fireAge'),
+            expInp: document.getElementById('expenseInput'),
+            expRng: document.getElementById('expenseRange'),
+            savInp: document.getElementById('savingsInput'),
+            savRng: document.getElementById('savingsRange'),
+            sipInp: document.getElementById('sipInput'),
+            sipRng: document.getElementById('sipRange'),
+            retInp: document.getElementById('returnInput'),
+            retRng: document.getElementById('returnRange'),
+            fireNumberDisp: document.getElementById('fireNumberDisp'),
+            projectedWealthDisp: document.getElementById('projectedWealthDisp'),
+            monthlyPassiveDisp: document.getElementById('monthlyPassiveDisp'),
+            yearsRemainingDisp: document.getElementById('yearsRemainingDisp'),
+            wealthBar: document.getElementById('wealthBar'),
+            targetBar: document.getElementById('targetBar'),
+            wealthLabel: document.getElementById('wealthLabel'),
+            targetLabel: document.getElementById('targetLabel'),
+            insightsBox: document.getElementById('insightsBox'),
+            statusBadge: document.getElementById('statusBadge'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function updateCalculations() {
+            const currentAge = parseFloat(elements.curAge.value) || 0;
+            const fireAge = parseFloat(elements.fireAge.value) || 0;
+            const annualExp = parseFloat(elements.expInp.value) || 0;
+            const currentSavings = parseFloat(elements.savInp.value) || 0;
+            const monthlySIP = parseFloat(elements.sipInp.value) || 0;
+            const returns = (parseFloat(elements.retInp.value) || 0) / 100;
+
+            const nYears = Math.max(0, fireAge - currentAge);
+            elements.yearsRemainingDisp.textContent = nYears;
+
+            // 1. Calculate FIRE Number (Annual Exp * 25)
+            // We assume annual expense stays constant in today's terms for the FIRE base number
+            const fireNumber = annualExp * 25;
+
+            // 2. Projected Wealth at FIRE Age
+            // Part A: Lumpsum Growth
+            const futureSavings = currentSavings * Math.pow(1 + returns, nYears);
+            
+            // Part B: SIP Growth
+            const rMonthly = returns / 12;
+            const totalMonths = nYears * 12;
+            let futureSIP = 0;
+            if (rMonthly > 0) {
+                futureSIP = monthlySIP * ((Math.pow(1 + rMonthly, totalMonths) - 1) / rMonthly) * (1 + rMonthly);
+            } else {
+                futureSIP = monthlySIP * totalMonths;
+            }
+
+            const projectedWealth = futureSavings + futureSIP;
+            const passiveMonthly = (projectedWealth * 0.04) / 12;
+
+            // UI Display
+            elements.fireNumberDisp.textContent = formatInr(fireNumber);
+            elements.projectedWealthDisp.textContent = formatInr(projectedWealth);
+            elements.monthlyPassiveDisp.textContent = formatInr(passiveMonthly);
+
+            elements.wealthLabel.textContent = "Wealth: " + formatCompact(projectedWealth);
+            elements.targetLabel.textContent = "Target: " + formatCompact(fireNumber);
+
+            // Bar visualization
+            const totalMax = Math.max(projectedWealth, fireNumber);
+            const wealthPerc = (projectedWealth / totalMax) * 100 || 0;
+            const targetPerc = (fireNumber / totalMax) * 100 || 0;
+
+            elements.wealthBar.style.width = (projectedWealth >= fireNumber) ? "100%" : wealthPerc + "%";
+            elements.targetBar.style.width = (projectedWealth >= fireNumber) ? "0%" : (100 - wealthPerc) + "%";
+
+            // Insights & Status
+            if (projectedWealth >= fireNumber) {
+                elements.insightsBox.innerHTML = `✅ <strong>Congratulations!</strong> Your projected wealth of ${formatInr(projectedWealth)} exceeds your FIRE target. You are on track for early retirement.`;
+                elements.insightsBox.className = "bg-emerald-50 p-4 rounded-xl border border-emerald-100 text-sm text-emerald-800 leading-relaxed mb-4";
+                elements.statusBadge.textContent = "FIRE Achievable";
+                elements.statusBadge.className = "bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/30 inline-block mt-1";
+            } else {
+                const gap = fireNumber - projectedWealth;
+                elements.insightsBox.innerHTML = `💡 <strong>Strategy:</strong> You have a shortfall of <strong>${formatInr(gap)}</strong>. Consider increasing your SIP or extending your target age.`;
+                elements.insightsBox.className = "bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4 text-pretty";
+                elements.statusBadge.textContent = "Accumulation Mode";
+                elements.statusBadge.className = "bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-bold border border-blue-500/30 inline-block mt-1";
+            }
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.expInp, elements.expRng);
+            setupSync(elements.savInp, elements.savRng);
+            setupSync(elements.sipInp, elements.sipRng);
+            setupSync(elements.retInp, elements.retRng);
+            elements.curAge.addEventListener('input', updateCalculations);
+            elements.fireAge.addEventListener('input', updateCalculations);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
