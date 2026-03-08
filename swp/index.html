@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWP Calculator India – Systematic Withdrawal Plan Calculator (2026)</title>
+    <meta name="description" content="Use the best SWP Calculator India (2026) to calculate monthly income from mutual funds. Estimate remaining balance, total withdrawals, and wealth growth with interactive charts.">
+    <meta name="keywords" content="SWP Calculator India, Systematic Withdrawal Plan Calculator, Mutual Fund SWP Calculator, Monthly income from mutual funds, SWP vs SIP, retirement income calculator, SWP taxation India">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/swp/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="SWP Calculator India – Systematic Withdrawal Plan Calculator (2026)">
+    <meta property="og:description" content="Plan your retirement income with precision. Calculate monthly withdrawals and visualize your future balance with interactive charts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/swp/">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "SWP Calculator India (2026)",
+      "description": "Professional tool to calculate monthly withdrawals and remaining balance for Systematic Withdrawal Plans in India.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .table-container::-webkit-scrollbar { height: 4px; }
+        .table-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+        /* Fix for chart and table visibility */
+        .chart-wrapper { height: 320px; width: 100%; position: relative; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">SWP Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">SWP Calculator – Systematic Withdrawal Plan</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate monthly income from your mutual fund corpus. Visualize how your balance changes over time and estimate total withdrawals for retirement planning.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm">Retirement Planning</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Quick Examples -->
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest w-full mb-1 text-center md:text-left">Quick Examples:</span>
+            <button onclick="applyExample(5000000, 30000, 8, 20)" class="btn-outline text-[10px] px-3 py-1.5 rounded-full font-semibold text-slate-600">₹50L Corpus (₹30k/mo, 20Y)</button>
+            <button onclick="applyExample(2000000, 15000, 10, 15)" class="btn-outline text-[10px] px-3 py-1.5 rounded-full font-semibold text-slate-600">₹20L Corpus (₹15k/mo, 15Y)</button>
+            <button onclick="applyExample(10000000, 60000, 9, 25)" class="btn-outline text-[10px] px-3 py-1.5 rounded-full font-semibold text-slate-600">₹1 Cr Corpus (₹60k/mo, 25Y)</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Withdrawal Details
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Total Investment (₹)</label>
+                            <input type="number" id="principalInput" value="5000000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="principalRange" min="100000" max="100000000" step="50000" value="5000000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Monthly Withdrawal (₹)</label>
+                            <input type="number" id="withdrawalInput" value="30000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="withdrawalRange" min="1000" max="500000" step="1000" value="30000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Expected Returns (% p.a)</label>
+                            <input type="number" id="rateInput" value="8" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="rateRange" min="1" max="25" step="0.1" value="8" class="w-full">
+                        <div class="mt-3 flex gap-2">
+                            <button onclick="setRate(7)" class="flex-1 py-1.5 text-[10px] font-bold rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors text-slate-600">Debt (7%)</button>
+                            <button onclick="setRate(9)" class="flex-1 py-1.5 text-[10px] font-bold rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors text-slate-600">Hybrid (9%)</button>
+                            <button onclick="setRate(12)" class="flex-1 py-1.5 text-[10px] font-bold rounded-lg border border-slate-200 hover:bg-slate-50 transition-colors text-slate-600">Equity (12%)</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Duration (Years)</label>
+                            <input type="number" id="yearsInput" value="20" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="50" value="20" class="w-full">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Plan</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2">Final Balance Remaining</h2>
+                    <span class="text-3xl sm:text-4xl font-extrabold text-slate-900 block mb-6" id="finalBalanceDisp">₹0</span>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between text-[11px] mb-2 font-bold uppercase">
+                            <span class="text-blue-600">Total Withdrawn</span>
+                            <span class="text-emerald-600">Remaining Corpus</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
+                            <div id="returnsBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 50%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="investedLabel">₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-emerald-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="returnsLabel">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-sm text-slate-600 leading-relaxed mb-8"></div>
+
+                    <hr class="border-slate-100 mb-8">
+
+                    <!-- Chart Visualization -->
+                    <h3 class="font-bold text-slate-800 text-sm mb-6 uppercase tracking-wider">SWP Balance & Withdrawal Projection</h3>
+                    <div class="chart-wrapper mb-12">
+                        <canvas id="swpChart"></canvas>
+                    </div>
+
+                    <!-- Year-on-Year Impact Table -->
+                    <h3 class="font-bold text-slate-800 text-sm mb-4 uppercase tracking-wider">Yearly Breakdown Table</h3>
+                    <div class="table-container border border-slate-100 rounded-xl overflow-hidden bg-white">
+                        <div class="overflow-x-auto max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm border-collapse">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Withdrawn Yearly</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Interest Earned</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Closing Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable" class="divide-y divide-slate-50"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Easy Breakdown Section -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12 text-pretty">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-wide">Steady Income vs Capital Growth (Simple Breakdown)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="p-6 bg-blue-50 border border-blue-100 rounded-2xl">
+                    <h3 class="font-bold text-blue-900 text-lg mb-3">1. Monthly Cashflow (The "Paycheck")</h3>
+                    <p class="text-blue-800 text-sm leading-relaxed">SWP acts like a regular paycheck you pay yourself. You decide how much to take out every month.</p>
+                    <p class="mt-4 text-xs font-bold text-blue-600 uppercase tracking-wide">Example:</p>
+                    <p class="text-blue-700 text-xs mt-1">If you take ₹25,000 every month, you get the peace of mind that your expenses are covered without manually selling fund units every time.</p>
+                </div>
+                <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
+                    <h3 class="font-bold text-emerald-900 text-lg mb-3">2. Remaining Corpus (The "Growth Engine")</h3>
+                    <p class="text-emerald-800 text-sm leading-relaxed">Unlike a standard withdrawal, the money left in the fund continues to earn returns. If you withdraw less than what you earn, your fund can grow even while you spend.</p>
+                    <p class="mt-4 text-xs font-bold text-emerald-600 uppercase tracking-wide">Example:</p>
+                    <p class="text-emerald-700 text-xs mt-1">On a ₹50 Lakh corpus at 10% return, you earn ₹5 Lakh/year. If you only withdraw ₹3 Lakh/year, your corpus actually increases to ₹52 Lakh!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Content Sections -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is a Systematic Withdrawal Plan (SWP)?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>A Systematic Withdrawal Plan (SWP) is a facility offered by mutual funds that allows an investor to withdraw a fixed amount of money at regular intervals (usually monthly). It is the mathematical opposite of a <a href="/sip" class="text-blue-600 underline font-medium">SIP (Systematic Investment Plan)</a>.</p>
+                    <p>While SIP is used to accumulate wealth, SWP is the primary tool for <strong>wealth distribution</strong>. It is widely used by retirees in India to generate a steady monthly income from their accumulated corpus while keeping the remaining principal invested in market-linked instruments for better returns than traditional <a href="/fd" class="text-blue-600 underline font-medium">Fixed Deposits</a>.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-slate-600 text-sm sm:text-base leading-relaxed">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Why SWP Matters for Retirement Planning</h2>
+                <p class="mb-4">Standard savings plans often fail to beat inflation. SWP provides a unique advantage known as <strong>Capital Appreciation</strong> alongside liquidity.</p>
+                <ul class="list-disc ml-5 space-y-3 mb-4">
+                    <li><strong>Tax Efficiency:</strong> Only the capital gains portion of the withdrawal is taxed, making it more efficient than interest from savings accounts.</li>
+                    <li><strong>Flexibility:</strong> You can increase, decrease, or stop the withdrawal amount anytime based on your needs.</li>
+                    <li><strong>Inflation Protection:</strong> Because the remaining balance stays in equity or hybrid funds, it has the potential to grow and hedge against <a href="/inflation" class="text-blue-600 underline font-medium">rising costs</a>.</li>
+                </ul>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">SWP Formula</h2>
+                <div class="formula-box text-blue-800 text-center mb-6 text-sm">Balance<sub>new</sub> = [Balance<sub>prev</sub> × (1 + r)] − W</div>
+                <p class="text-xs text-slate-500 font-medium"><strong>Balance<sub>new</sub>:</strong> New Balance | <strong>r:</strong> Monthly Return Rate | <strong>W:</strong> Withdrawal Amount</p>
+            </section>
+
+            <!-- FAQ Section (10 items) -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">1. What is SWP in mutual funds?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">SWP allows you to withdraw a fixed amount regularly from your mutual fund scheme. It provides regular cash flow and is ideal for retirees.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">2. Is SWP better than SIP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">SIP is for building a corpus (investing), while SWP is for generating income (withdrawing). They serve different life stages.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">3. How is SWP taxed in India (2026)?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Only the 'growth' part of your withdrawal is taxed. For equity funds held over 1 year, gains above ₹1.25L are taxed at 12.5%.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">4. How much withdrawal is safe?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">A 4-6% annual withdrawal rate is generally considered safe to ensure the principal lasts for 25-30 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">5. Can I start SWP in any mutual fund?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes, most open-ended schemes allow SWP. However, it is most commonly used in Debt, Hybrid, or Conservative Equity funds.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">6. Is there an exit load on SWP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes, if you withdraw before the exit load period (usually 1 year), you may have to pay a 1% load on the withdrawn amount.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">7. What happens if the market crashes?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">If returns are lower than withdrawals during a crash, you may eat into your principal faster. This is called 'sequence of returns risk'.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">8. Can I change the withdrawal date?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes, you can choose a specific date of the month for your SWP payout while setting up the plan.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">9. Does SWP reduce my number of units?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes. To pay you the fixed amount, the AMC sells (redeems) the required number of units based on the current day's NAV.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">10. Can I have multiple SWPs?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes, you can set up separate SWPs from different mutual fund schemes to diversify your income sources.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6 uppercase tracking-wider">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-pretty">
+                    <a href="/sip" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Accumulate your corpus.</p>
+                    </a>
+                    <a href="/cagr" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check growth rates.</p>
+                    </a>
+                    <a href="/inflation" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Inflation Tool</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan for future costs.</p>
+                    </a>
+                    <a href="/emi" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Manage loan outflows.</p>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Estimated results for educational purposes only. Mutual fund investments are subject to market risks.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        // DOM Elements
+        const elements = {
+            pInput: document.getElementById('principalInput'),
+            pRange: document.getElementById('principalRange'), 
+            wInput: document.getElementById('withdrawalInput'),
+            wRange: document.getElementById('withdrawalRange'),
+            rateInput: document.getElementById('rateInput'),
+            rateRange: document.getElementById('rateRange'),
+            yearsInput: document.getElementById('yearsInput'),
+            yearsRange: document.getElementById('yearsRange'),
+            finalBalanceDisp: document.getElementById('finalBalanceDisp'),
+            investedBar: document.getElementById('investedBar'),
+            returnsBar: document.getElementById('returnsBar'),
+            investedLabel: document.getElementById('investedLabel'),
+            returnsLabel: document.getElementById('returnsLabel'),
+            insightsBox: document.getElementById('insightsBox'),
+            projectionTable: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        let swpChart = null;
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function applyExample(p, w, r, y) {
+            elements.pInput.value = p; elements.pRange.value = p;
+            elements.wInput.value = w; elements.wRange.value = w;
+            elements.rateInput.value = r; elements.rateRange.value = r;
+            elements.yearsInput.value = y; elements.yearsRange.value = y;
+            updateCalculations();
+        }
+
+        function setRate(rate) { elements.rateInput.value = rate; elements.rateRange.value = rate; updateCalculations(); }
+
+        function updateCalculations() {
+            const principal = parseFloat(elements.pInput.value) || 0;
+            const withdrawal = parseFloat(elements.wInput.value) || 0;
+            const rAnnual = parseFloat(elements.rateInput.value) || 0;
+            const years = parseFloat(elements.yearsInput.value) || 0;
+
+            const rMonthly = rAnnual / 12 / 100;
+            const totalMonths = years * 12;
+
+            let balance = principal;
+            let totalWithdrawn = 0;
+            let totalInterest = 0;
+            const labels = ['0'];
+            const balanceData = [principal];
+            const withdrawData = [0];
+            const tableRows = [];
+
+            let yearlyWithdraw = 0;
+            let yearlyInterest = 0;
+
+            for (let m = 1; m <= totalMonths; m++) {
+                const interestEarned = balance * rMonthly;
+                totalInterest += interestEarned;
+                yearlyInterest += interestEarned;
+
+                balance = (balance + interestEarned) - withdrawal;
+                const actualWithdrawal = balance < 0 ? (withdrawal + balance) : withdrawal;
+                if (balance < 0) balance = 0;
+
+                totalWithdrawn += actualWithdrawal;
+                yearlyWithdraw += actualWithdrawal;
+
+                if (m % 12 === 0 || m === totalMonths) {
+                    const year = Math.ceil(m / 12);
+                    labels.push('Y' + year);
+                    balanceData.push(balance);
+                    withdrawData.push(totalWithdrawn);
+                    
+                    tableRows.push(`<tr><td class="px-4 py-3 border-b text-slate-600 font-medium">Year ${year}</td><td class="px-4 py-3 border-b text-right">${formatInr(yearlyWithdraw)}</td><td class="px-4 py-3 border-b text-right text-emerald-600">+ ${formatInr(yearlyInterest)}</td><td class="px-4 py-3 border-b text-right font-bold text-slate-800">${formatInr(balance)}</td></tr>`);
+                    
+                    yearlyWithdraw = 0;
+                    yearlyInterest = 0;
+                }
+            }
+
+            elements.finalBalanceDisp.textContent = formatInr(balance);
+            elements.investedLabel.textContent = "Total Withdrawn: " + formatCompact(totalWithdrawn);
+            elements.returnsLabel.textContent = "Balance: " + formatCompact(balance);
+
+            const totalPie = totalWithdrawn + balance;
+            const wPerc = (totalWithdrawn / totalPie) * 100 || 0;
+            elements.investedBar.style.width = wPerc + "%";
+            elements.returnsBar.style.width = (100 - wPerc) + "%";
+
+            elements.insightsBox.innerHTML = `
+                <p>💡 <strong>Analysis:</strong> You started with ${formatInr(principal)} and withdrew <strong>${formatInr(totalWithdrawn)}</strong> over ${years} years.</p>
+                <p class="mt-2 text-slate-600">💰 Interest Generated: Your corpus earned <strong>${formatInr(totalInterest)}</strong> in returns during this period.</p>
+            `;
+
+            elements.projectionTable.innerHTML = tableRows.join('');
+            renderChart(labels, balanceData, withdrawData);
+        }
+
+        function renderChart(labels, balanceData, withdrawData) {
+            const ctx = document.getElementById('swpChart').getContext('2d');
+            if (swpChart) swpChart.destroy();
+            swpChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        { label: 'Remaining Balance', data: balanceData, borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', fill: true, tension: 0.4 },
+                        { label: 'Total Withdrawn', data: withdrawData, borderColor: '#3b82f6', backgroundColor: 'rgba(59, 130, 246, 0.1)', fill: true, tension: 0.4 }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { ticks: { callback: v => formatCompact(v) } } } }
+            });
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.pInput, elements.pRange);
+            setupSync(elements.wInput, elements.wRange);
+            setupSync(elements.rateInput, elements.rateRange);
+            setupSync(elements.yearsInput, elements.yearsRange);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
