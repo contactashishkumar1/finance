@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Home Salary Calculator India (2026) – Calculate In Hand Salary from CTC</title>
+    <meta name="description" content="Use our Take Home Salary Calculator to estimate your in-hand salary after tax, PF deductions, and other contributions based on your annual CTC.">
+    <meta name="keywords" content="take home salary calculator, in hand salary calculator india, ctc to in hand salary calculator, salary after tax calculator india, monthly take home salary calculator, net salary calculator 2026, TDS calculator on salary">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/take-home-salary/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Take Home Salary Calculator India (2026)",
+      "description": "Calculate your net in-hand monthly salary from annual CTC by accounting for income tax (TDS), EPF, Gratuity, and professional tax.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is take home salary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Take-home salary is the net amount an employee receives in their bank account after all statutory deductions like Income Tax (TDS), EPF, and Professional Tax are subtracted from the Gross Salary."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is TDS calculated on salary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TDS is calculated by estimating your total taxable income for the year, applying the relevant tax slabs (Old or New Regime), and dividing the annual tax by 12."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .tab-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .tab-btn.active { background-color: #2563eb; color: white; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Take Home Salary</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty text-center md:text-left">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Take Home Salary Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate your net in-hand salary from your annual CTC. Automatically calculate the <strong>TDS impact</strong>, PF, and Gratuity under the latest budget rules to see exactly what you take home.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 uppercase tracking-wide shadow-sm">Budget 2025 Ready</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-6 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Salary Configuration
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Annual CTC (₹)</label>
+                            <input type="number" id="ctcInput" value="1200000" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="ctcRange" min="100000" max="10000000" step="50000" value="1200000" class="w-full">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-xs font-bold text-slate-500 uppercase tracking-tighter">Basic % of CTC</label>
+                                <input type="number" id="basicInp" value="50" class="w-16 px-2 py-1 border rounded text-right font-bold text-xs">
+                            </div>
+                            <input type="range" id="basicRange" min="30" max="70" step="1" value="50" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-xs font-bold text-slate-500 uppercase tracking-tighter">Employee PF %</label>
+                                <input type="number" id="pfInp" value="12" class="w-16 px-2 py-1 border rounded text-right font-bold text-xs">
+                            </div>
+                            <input type="range" id="pfRange" min="0" max="12" step="1" value="12" class="w-full">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label class="text-xs font-bold text-slate-500 uppercase tracking-tighter">Gratuity Contribution % (of Basic)</label>
+                            <input type="number" id="gratuityInp" value="4.81" step="0.01" class="w-20 px-2 py-1 border rounded text-right font-bold text-xs">
+                        </div>
+                        <input type="range" id="gratuityRange" min="0" max="10" step="0.01" value="4.81" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="text-sm font-medium text-slate-600 block mb-3">Tax Regime (FY 2025-26)</label>
+                        <div class="flex p-1 bg-slate-100 rounded-xl">
+                            <button onclick="setRegime('new')" id="tabNew" class="tab-btn flex-1 py-2 text-xs font-bold rounded-lg active">New Regime</button>
+                            <button onclick="setRegime('old')" id="tabOld" class="tab-btn flex-1 py-2 text-xs font-bold rounded-lg text-slate-500">Old Regime</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-4">
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tighter">Prof. Tax (Monthly)</label>
+                            <input type="number" id="ptInput" value="200" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tighter">Other Monthly Deductions</label>
+                            <input type="number" id="otherDeducInput" value="0" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="calculateSalary()" class="w-full mt-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Take Home</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="lg:col-span-6 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Monthly In-Hand Salary</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-8 text-center md:text-left" id="monthlyInHandDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Annual In-Hand</p>
+                            <p class="font-bold text-slate-800 text-lg" id="annualInHandDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100 text-pretty">
+                            <p class="text-[10px] text-red-600 uppercase font-bold mb-1">Monthly Deductions (incl. Tax)</p>
+                            <p class="font-bold text-red-700 text-lg" id="totalDeductionsDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-emerald-600">Take-Home Amount</span>
+                            <span class="text-red-500">Total Deductions</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="takeHomeBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 80%"></div>
+                            <div id="deducBar" class="h-full bg-red-400 transition-all duration-700" style="width: 20%"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
+                            <span id="takeHomeLabel">In-Hand: ₹0</span>
+                            <span id="deducLabel">Deductions: ₹0</span>
+                        </div>
+                    </div>
+
+                    <!-- Prominent TDS Impact Section -->
+                    <div class="bg-blue-50 p-5 rounded-2xl border border-blue-100 space-y-3 mb-6">
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-blue-900 font-bold text-xs uppercase tracking-widest">TDS (Income Tax) Impact</h4>
+                            <span id="effectiveTaxRate" class="bg-blue-200 text-blue-800 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Rate: 0%</span>
+                        </div>
+                        <div class="space-y-2 text-xs font-medium text-slate-600">
+                            <div class="flex justify-between"><span>Annual Gross CTC:</span> <span id="annualCTCVal" class="text-slate-900">₹0</span></div>
+                            <div class="flex justify-between text-red-600"><span>Annual Tax (TDS) Amount:</span> <span id="annualTaxVal">₹0</span></div>
+                            <div class="flex justify-between border-t border-blue-100 pt-2 font-bold text-blue-700">
+                                <span>Monthly TDS Deduction:</span> 
+                                <span id="taxVal">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3">
+                        <h4 class="text-slate-400 font-bold text-[10px] uppercase tracking-widest text-pretty">Other Mandatory Contributions</h4>
+                        <div class="space-y-2 text-xs font-medium text-slate-600">
+                            <div class="flex justify-between"><span>Employee Provident Fund (EPF):</span> <span id="pfVal" class="text-red-500">- ₹0</span></div>
+                            <div class="flex justify-between"><span>Gratuity Component (in CTC):</span> <span id="gratuityVal" class="text-red-500">- ₹0</span></div>
+                            <div class="flex justify-between"><span>Professional Tax:</span> <span id="ptVal" class="text-red-500">- ₹0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO SECTIONS -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Take Home Salary?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Take-home salary (or net salary) is the actual amount of money an employee receives in their bank account every month after all mandatory and voluntary deductions are removed from the Gross Salary. While the CTC represents the total expense of the company, the take-home is what defines your actual monthly budget.</p>
+                    <p>Understanding the difference between your gross pay and net pay is essential for <a href="/savings-goal" class="text-blue-600 underline font-medium">savings goal planning</a> and managing monthly commitments like <a href="/emi" class="text-blue-600 underline font-medium">EMIs</a>.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Difference Between CTC and In-Hand Salary</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p><strong>CTC (Cost to Company)</strong> includes everything the employer pays for you, including components you don't see in cash, such as the employer's PF contribution, <strong>Gratuity</strong>, and insurance premiums. <strong>In-hand salary</strong>, on the other hand, is your Gross Pay minus statutory deductions like Income Tax (TDS), Employee PF, and Professional Tax.</p>
+                    <p>If you receive a 15% <a href="/salary-hike" class="text-blue-600 underline">Salary Hike</a>, your take-home might only increase by 10-12% because a higher salary often pushes you into a higher income tax bracket and increases your PF contribution proportionately.</p>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <a href="/income-tax" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Income Tax</h4>
+                    </a>
+                    <a href="/salary-hike" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Salary Hike</h4>
+                    </a>
+                    <a href="/hra" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">HRA Tool</h4>
+                    </a>
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                    <a href="/retirement" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Retirement</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Calculations are based on general income tax rules for FY 2025-26. It does not account for specific corporate benefits like LTA, Food Coupons, or specific Section 80D/80E deductions unless specified. Always refer to your company HR's Annexure-A for final take-home figures.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        let currentRegime = 'new';
+
+        function setRegime(regime) {
+            currentRegime = regime;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'text-white', 'bg-blue-600');
+                btn.classList.add('text-slate-500');
+            });
+            const activeTab = document.getElementById(regime === 'new' ? 'tabNew' : 'tabOld');
+            activeTab.classList.add('active', 'text-white', 'bg-blue-600');
+            activeTab.classList.remove('text-slate-500');
+            calculateSalary();
+        }
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function calculateTax(taxableIncome, regime) {
+            let tax = 0;
+            if (regime === 'new') {
+                // New Regime Slabs 2025-26 (Budget 2025 Updates)
+                const slabs = [
+                    { limit: 400000, rate: 0 },
+                    { limit: 800000, rate: 0.05 },
+                    { limit: 1200000, rate: 0.10 },
+                    { limit: 1600000, rate: 0.15 },
+                    { limit: 2000000, rate: 0.20 },
+                    { limit: 2400000, rate: 0.25 },
+                    { limit: Infinity, rate: 0.30 }
+                ];
+                let prevLimit = 0;
+                for (let slab of slabs) {
+                    if (taxableIncome > prevLimit) {
+                        tax += (Math.min(taxableIncome, slab.limit) - prevLimit) * slab.rate;
+                        prevLimit = slab.limit;
+                    } else break;
+                }
+                // Rebate: Nil tax if total taxable income is <= 12L in New Regime
+                if (taxableIncome <= 1200000) tax = 0;
+            } else {
+                // Old Regime Slabs
+                const slabs = [
+                    { limit: 250000, rate: 0 },
+                    { limit: 500000, rate: 0.05 },
+                    { limit: 1000000, rate: 0.20 },
+                    { limit: Infinity, rate: 0.30 }
+                ];
+                let prevLimit = 0;
+                for (let slab of slabs) {
+                    if (taxableIncome > prevLimit) {
+                        tax += (Math.min(taxableIncome, slab.limit) - prevLimit) * slab.rate;
+                        prevLimit = slab.limit;
+                    } else break;
+                }
+                // Rebate: Nil tax if total taxable income is <= 5L in Old Regime
+                if (taxableIncome <= 500000) tax = 0;
+            }
+            return tax * 1.04; // Adding 4% Health & Education Cess
+        }
+
+        function calculateSalary() {
+            const ctc = parseFloat(document.getElementById('ctcInput').value) || 0;
+            const basicPerc = (parseFloat(document.getElementById('basicInp').value) || 0) / 100;
+            const pfPerc = (parseFloat(document.getElementById('pfInp').value) || 0) / 100;
+            const gratuityPerc = (parseFloat(document.getElementById('gratuityInp').value) || 0) / 100;
+            const pt = parseFloat(document.getElementById('ptInput').value) || 0;
+            const other = parseFloat(document.getElementById('otherDeducInput').value) || 0;
+
+            const monthlyGross = ctc / 12;
+            const monthlyBasic = (ctc * basicPerc) / 12;
+            
+            // Employee PF
+            const monthlyPF = monthlyBasic * pfPerc;
+
+            // Gratuity Component
+            const monthlyGratuity = monthlyBasic * gratuityPerc;
+            
+            // Tax Calculation Engine
+            const standardDeduction = currentRegime === 'new' ? 75000 : 50000;
+            
+            // Note: Deductions from Gross CTC to reach Taxable Income
+            // Under Old Regime, we assume user claims PF deduction in 80C
+            const pf80C = currentRegime === 'old' ? Math.min(150000, monthlyPF * 12) : 0;
+            const taxableIncome = Math.max(0, ctc - standardDeduction - pf80C - (monthlyGratuity * 12));
+            
+            const annualTax = calculateTax(taxableIncome, currentRegime);
+            const monthlyTax = annualTax / 12;
+
+            const totalMonthlyDeduc = monthlyPF + monthlyTax + monthlyGratuity + pt + other;
+            const monthlyInHand = Math.max(0, monthlyGross - totalMonthlyDeduc);
+            const effTaxRate = (annualTax / ctc) * 100;
+
+            // Update UI
+            document.getElementById('monthlyInHandDisp').textContent = formatInr(monthlyInHand);
+            document.getElementById('annualInHandDisp').textContent = formatInr(monthlyInHand * 12);
+            document.getElementById('totalDeductionsDisp').textContent = formatInr(totalMonthlyDeduc);
+            
+            // TDS Specific Results
+            document.getElementById('annualCTCVal').textContent = formatInr(ctc);
+            document.getElementById('annualTaxVal').textContent = "- " + formatInr(annualTax);
+            document.getElementById('taxVal').textContent = formatInr(monthlyTax);
+            document.getElementById('effectiveTaxRate').textContent = "Impact: " + effTaxRate.toFixed(1) + "%";
+
+            // Breakdown Table
+            document.getElementById('pfVal').textContent = "- " + formatInr(monthlyPF);
+            document.getElementById('gratuityVal').textContent = "- " + formatInr(monthlyGratuity);
+            document.getElementById('ptVal').textContent = "- " + formatInr(pt);
+
+            // Progress Bar Labels
+            document.getElementById('takeHomeLabel').textContent = "In-Hand: " + formatCompact(monthlyInHand);
+            document.getElementById('deducLabel').textContent = "Total Deductions: " + formatCompact(totalMonthlyDeduc);
+
+            const takeHomePerc = (monthlyInHand / monthlyGross) * 100 || 0;
+            document.getElementById('takeHomeBar').style.width = takeHomePerc + "%";
+            document.getElementById('deducBar').style.width = (100 - takeHomePerc) + "%";
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; calculateSalary(); });
+            r.addEventListener('input', () => { i.value = r.value; calculateSalary(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(document.getElementById('ctcInput'), document.getElementById('ctcRange'));
+            setupSync(document.getElementById('basicInp'), document.getElementById('basicRange'));
+            setupSync(document.getElementById('pfInp'), document.getElementById('pfRange'));
+            setupSync(document.getElementById('gratuityInp'), document.getElementById('gratuityRange'));
+            
+            ['ptInput', 'otherDeducInput'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calculateSalary);
+            });
+
+            calculateSalary();
+        });
+
+        // Provided Fetch Script for Components
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
