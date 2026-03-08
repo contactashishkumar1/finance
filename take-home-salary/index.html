@@ -38,7 +38,20 @@
     }
     </script>
 
-    <!-- Schema Markup: FAQ -->
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Take Home Salary", "item": "https://arthcalculator.in/take-home-salary" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ (Expanded for SEO) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -54,10 +67,10 @@
         },
         {
           "@type": "Question",
-          "name": "How is TDS calculated on salary?",
+          "name": "Is CTC the same as in-hand salary?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "TDS is calculated by estimating your total taxable income for the year, applying the relevant tax slabs (Old or New Regime), and dividing the annual tax by 12."
+            "text": "No. CTC (Cost to Company) includes employer-side expenses like EPF contribution and Gratuity. In-hand salary is only the cash component paid to you after taxes."
           }
         }
       ]
@@ -152,10 +165,11 @@
 
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3 text-pretty">
-                            <label class="text-xs font-bold text-slate-500 uppercase tracking-tighter">Gratuity Contribution % (of Basic)</label>
+                            <label class="text-xs font-bold text-slate-500 uppercase tracking-tighter">Gratuity % (Statutory Standard)</label>
                             <input type="number" id="gratuityInp" value="4.81" step="0.01" class="w-20 px-2 py-1 border rounded text-right font-bold text-xs">
                         </div>
                         <input type="range" id="gratuityRange" min="0" max="10" step="0.01" value="4.81" class="w-full">
+                        <p class="text-[9px] text-slate-400 mt-2 italic">Standard Gratuity in India is calculated as (Basic × 15/26), which is approx <strong>4.81%</strong>.</p>
                     </div>
 
                     <div class="mb-8">
@@ -183,17 +197,17 @@
 
             <!-- Results -->
             <div class="lg:col-span-6 space-y-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
                     <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Monthly In-Hand Salary</h2>
                     <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-8 text-center md:text-left" id="monthlyInHandDisp">₹0</span>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                         <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Annual In-Hand</p>
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1 text-pretty">Annual In-Hand Pay</p>
                             <p class="font-bold text-slate-800 text-lg" id="annualInHandDisp">₹0</p>
                         </div>
-                        <div class="p-4 bg-red-50 rounded-xl border border-red-100 text-pretty">
-                            <p class="text-[10px] text-red-600 uppercase font-bold mb-1">Monthly Deductions (incl. Tax)</p>
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100">
+                            <p class="text-[10px] text-red-600 uppercase font-bold mb-1 text-pretty">Monthly Deductions (incl. Tax)</p>
                             <p class="font-bold text-red-700 text-lg" id="totalDeductionsDisp">₹0</p>
                         </div>
                     </div>
@@ -203,7 +217,7 @@
                             <span class="text-emerald-600">Take-Home Amount</span>
                             <span class="text-red-500">Total Deductions</span>
                         </div>
-                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
                             <div id="takeHomeBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 80%"></div>
                             <div id="deducBar" class="h-full bg-red-400 transition-all duration-700" style="width: 20%"></div>
                         </div>
@@ -229,12 +243,12 @@
                         </div>
                     </div>
 
-                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3">
+                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 space-y-3 text-pretty">
                         <h4 class="text-slate-400 font-bold text-[10px] uppercase tracking-widest text-pretty">Other Mandatory Contributions</h4>
                         <div class="space-y-2 text-xs font-medium text-slate-600">
                             <div class="flex justify-between"><span>Employee Provident Fund (EPF):</span> <span id="pfVal" class="text-red-500">- ₹0</span></div>
                             <div class="flex justify-between"><span>Gratuity Component (in CTC):</span> <span id="gratuityVal" class="text-red-500">- ₹0</span></div>
-                            <div class="flex justify-between"><span>Professional Tax:</span> <span id="ptVal" class="text-red-500">- ₹0</span></div>
+                            <div class="flex justify-between text-pretty"><span>Professional Tax:</span> <span id="ptVal" class="text-red-500">- ₹0</span></div>
                         </div>
                     </div>
                 </div>
@@ -247,20 +261,50 @@
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Take Home Salary?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p>Take-home salary (or net salary) is the actual amount of money an employee receives in their bank account every month after all mandatory and voluntary deductions are removed from the Gross Salary. While the CTC represents the total expense of the company, the take-home is what defines your actual monthly budget.</p>
-                    <p>Understanding the difference between your gross pay and net pay is essential for <a href="/savings-goal" class="text-blue-600 underline font-medium">savings goal planning</a> and managing monthly commitments like <a href="/emi" class="text-blue-600 underline font-medium">EMIs</a>.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-pretty">Difference Between CTC and In-Hand Salary</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p><strong>CTC (Cost to Company)</strong> includes everything the employer pays for you, including components you don't see in cash, such as the employer's PF contribution, <strong>Gratuity</strong>, and insurance premiums. <strong>In-hand salary</strong>, on the other hand, is your Gross Pay minus statutory deductions like Income Tax (TDS), Employee PF, and Professional Tax.</p>
                 </div>
             </section>
 
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
-                <h2 class="text-2xl font-bold text-slate-900 mb-6">Difference Between CTC and In-Hand Salary</h2>
-                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
-                    <p><strong>CTC (Cost to Company)</strong> includes everything the employer pays for you, including components you don't see in cash, such as the employer's PF contribution, <strong>Gratuity</strong>, and insurance premiums. <strong>In-hand salary</strong>, on the other hand, is your Gross Pay minus statutory deductions like Income Tax (TDS), Employee PF, and Professional Tax.</p>
-                    <p>If you receive a 15% <a href="/salary-hike" class="text-blue-600 underline">Salary Hike</a>, your take-home might only increase by 10-12% because a higher salary often pushes you into a higher income tax bracket and increases your PF contribution proportionately.</p>
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Common Salary Deductions in India</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
+                        <h4 class="font-bold text-blue-600 mb-2 uppercase text-xs">Provident Fund (PF)</h4>
+                        <p class="text-slate-600 leading-relaxed">Typically 12% of your Basic Salary + DA is deducted as your contribution to the EPF. This is a vital part of your <a href="/retirement" class="text-blue-600 underline">Retirement Planning</a>.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
+                        <h4 class="font-bold text-emerald-600 mb-2 uppercase text-xs">Gratuity Portion</h4>
+                        <p class="text-slate-600 leading-relaxed text-pretty">A standard <strong>4.81% of Basic Salary</strong> is often listed in the CTC. This is calculated using the 15/26 day rule under the Gratuity Act.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
+                        <h4 class="font-bold text-orange-600 mb-2 uppercase text-xs">Income Tax (TDS)</h4>
+                        <p class="text-slate-600 leading-relaxed text-pretty">Calculated based on the slab rates of your chosen regime (Old/New). Use our <a href="/income-tax" class="text-blue-600 underline">Income Tax Calculator</a> for a deep dive.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-100 rounded-2xl">
+                        <h4 class="font-bold text-purple-600 mb-2 uppercase text-xs">Professional Tax</h4>
+                        <p class="text-slate-600 leading-relaxed">A state-level tax, usually capped at ₹2,500 per year (approx ₹200/month), deducted from the income of all earning professionals.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How is in-hand salary calculated?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It is calculated as: Monthly Gross Salary minus (Income Tax + Employee PF + Gratuity + Professional Tax + any other voluntary deductions).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is 4.81% the standard gratuity rate?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes. Under the Payment of Gratuity Act, the formula used is (15/26 × Basic Salary × Years of service). Employers use the (15/26) fraction (approx 4.81%) to calculate the annual accrual in your CTC.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Does Gratuity reduce my monthly salary?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes, in many private companies, the gratuity component is part of the total CTC package. This amount is retained by the company to pay you at the time of exit (after 5 years).</div></details>
                 </div>
             </section>
 
             <!-- Related Tools Section -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
                 <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
                     <a href="/income-tax" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center">
@@ -281,17 +325,17 @@
                         </div>
                         <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">HRA Tool</h4>
                     </a>
-                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty">
                         <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         </div>
                         <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
                     </a>
-                    <a href="/retirement" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                    <a href="/retirement" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty">
                         <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Retirement</h4>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Retirement</h4>
                     </a>
                 </div>
             </section>
@@ -299,7 +343,7 @@
             <!-- Disclaimer -->
             <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty">
                 <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
-                Calculations are based on general income tax rules for FY 2025-26. It does not account for specific corporate benefits like LTA, Food Coupons, or specific Section 80D/80E deductions unless specified. Always refer to your company HR's Annexure-A for final take-home figures.
+                Calculations are based on general income tax rules for FY 2025-26. Standard Gratuity accrual (4.81%) is assumed based on common Indian corporate practices. Always refer to your company HR's Annexure-A for final take-home figures.
                 <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
             </div>
         </div>
@@ -328,7 +372,6 @@
         function calculateTax(taxableIncome, regime) {
             let tax = 0;
             if (regime === 'new') {
-                // New Regime Slabs 2025-26 (Budget 2025 Updates)
                 const slabs = [
                     { limit: 400000, rate: 0 },
                     { limit: 800000, rate: 0.05 },
@@ -345,10 +388,8 @@
                         prevLimit = slab.limit;
                     } else break;
                 }
-                // Rebate: Nil tax if total taxable income is <= 12L in New Regime
                 if (taxableIncome <= 1200000) tax = 0;
             } else {
-                // Old Regime Slabs
                 const slabs = [
                     { limit: 250000, rate: 0 },
                     { limit: 500000, rate: 0.05 },
@@ -362,10 +403,9 @@
                         prevLimit = slab.limit;
                     } else break;
                 }
-                // Rebate: Nil tax if total taxable income is <= 5L in Old Regime
                 if (taxableIncome <= 500000) tax = 0;
             }
-            return tax * 1.04; // Adding 4% Health & Education Cess
+            return tax * 1.04; // 4% Cess
         }
 
         function calculateSalary() {
@@ -379,17 +419,10 @@
             const monthlyGross = ctc / 12;
             const monthlyBasic = (ctc * basicPerc) / 12;
             
-            // Employee PF
             const monthlyPF = monthlyBasic * pfPerc;
-
-            // Gratuity Component
             const monthlyGratuity = monthlyBasic * gratuityPerc;
             
-            // Tax Calculation Engine
             const standardDeduction = currentRegime === 'new' ? 75000 : 50000;
-            
-            // Note: Deductions from Gross CTC to reach Taxable Income
-            // Under Old Regime, we assume user claims PF deduction in 80C
             const pf80C = currentRegime === 'old' ? Math.min(150000, monthlyPF * 12) : 0;
             const taxableIncome = Math.max(0, ctc - standardDeduction - pf80C - (monthlyGratuity * 12));
             
@@ -405,20 +438,17 @@
             document.getElementById('annualInHandDisp').textContent = formatInr(monthlyInHand * 12);
             document.getElementById('totalDeductionsDisp').textContent = formatInr(totalMonthlyDeduc);
             
-            // TDS Specific Results
             document.getElementById('annualCTCVal').textContent = formatInr(ctc);
             document.getElementById('annualTaxVal').textContent = "- " + formatInr(annualTax);
             document.getElementById('taxVal').textContent = formatInr(monthlyTax);
             document.getElementById('effectiveTaxRate').textContent = "Impact: " + effTaxRate.toFixed(1) + "%";
 
-            // Breakdown Table
             document.getElementById('pfVal').textContent = "- " + formatInr(monthlyPF);
             document.getElementById('gratuityVal').textContent = "- " + formatInr(monthlyGratuity);
             document.getElementById('ptVal').textContent = "- " + formatInr(pt);
 
-            // Progress Bar Labels
             document.getElementById('takeHomeLabel').textContent = "In-Hand: " + formatCompact(monthlyInHand);
-            document.getElementById('deducLabel').textContent = "Total Deductions: " + formatCompact(totalMonthlyDeduc);
+            document.getElementById('deducLabel').textContent = "Deductions: " + formatCompact(totalMonthlyDeduc);
 
             const takeHomePerc = (monthlyInHand / monthlyGross) * 100 || 0;
             document.getElementById('takeHomeBar').style.width = takeHomePerc + "%";
@@ -435,15 +465,11 @@
             setupSync(document.getElementById('basicInp'), document.getElementById('basicRange'));
             setupSync(document.getElementById('pfInp'), document.getElementById('pfRange'));
             setupSync(document.getElementById('gratuityInp'), document.getElementById('gratuityRange'));
-            
-            ['ptInput', 'otherDeducInput'].forEach(id => {
-                document.getElementById(id).addEventListener('input', calculateSalary);
-            });
-
+            ['ptInput', 'otherDeducInput'].forEach(id => document.getElementById(id).addEventListener('input', calculateSalary));
             calculateSalary();
         });
 
-        // Provided Fetch Script for Components
+        // Components Fetch
         fetch("/navbar.html").then(res => res.text()).then(data => {
             document.getElementById("navbar").innerHTML = data;
             const btn = document.getElementById("menuBtn");
