@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Calculator India (2026) – Calculate Retirement Corpus & Monthly Pension</title>
+    <meta name="description" content="Use our Retirement Calculator India to estimate the retirement corpus you need and the monthly pension required after retirement. Plan your financial freedom with accurate projections.">
+    <meta name="keywords" content="retirement calculator india, retirement planning calculator, retirement corpus calculator, monthly pension calculator, how much money needed for retirement, financial freedom india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/retirement/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Retirement Calculator India – Plan Your Financial Freedom">
+    <meta property="og:description" content="Calculate your required retirement corpus and estimate your monthly pension. Visualize your wealth growth with the power of compounding and inflation adjustment.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/retirement/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Retirement Calculator India (2026)",
+      "description": "Professional tool to calculate retirement corpus and monthly pension needs based on Indian inflation and market returns.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Retirement Calculator", "item": "https://arthcalculator.in/retirement" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ (User Requested) -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [
+      {
+       "@type": "Question",
+       "name": "How much retirement corpus is needed in India?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "A retirement corpus of ₹4 crore to ₹6 crore is often recommended for a 30 year retirement if current monthly expenses are ₹50,000."
+       }
+      },
+      {
+       "@type": "Question",
+       "name": "What is the 4% retirement rule?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "The 4% rule suggests withdrawing only 4% of retirement corpus annually to ensure the money lasts 30 years."
+       }
+      }
+     ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Retirement Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Retirement Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Estimate the retirement corpus you need and the monthly pension required for a comfortable post-retirement life. Plan your financial freedom with inflation-adjusted projections.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm">Retirement Planning 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Planning Details
+                    </h2>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-1">Current Age</label>
+                            <input type="number" id="currentAge" value="30" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-1">Retirement Age</label>
+                            <input type="number" id="retirementAge" value="60" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Monthly Expenses Today (₹)</label>
+                            <input type="number" id="expenseInput" value="50000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="expenseRange" min="5000" max="500000" step="1000" value="50000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Expected Inflation (%)</label>
+                            <input type="number" id="inflationInput" value="6" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="inflationRange" min="1" max="15" step="0.1" value="6" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Investment Returns (%)</label>
+                            <input type="number" id="returnInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="returnRange" min="1" max="25" step="0.1" value="12" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Existing Savings (₹)</label>
+                            <input type="number" id="savingsInput" value="500000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="savingsRange" min="0" max="10000000" step="50000" value="500000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Monthly SIP / Investment (₹)</label>
+                            <input type="number" id="sipInput" value="15000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="sipRange" min="0" max="200000" step="500" value="15000" class="w-full">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Retirement Plan</button>
+                </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Target Retirement Corpus Needed</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 block mb-6 text-center md:text-left" id="corpusNeededDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Savings by retirement</p>
+                            <p class="font-bold text-slate-800 text-lg" id="totalSavingsDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1">Monthly Pension Available</p>
+                            <p class="font-bold text-emerald-700 text-lg" id="monthlyPensionDisp">₹0</p>
+                            <p class="text-[9px] text-emerald-500 mt-1 italic leading-tight">Meaning: Monthly income generated by withdrawing 6% of your corpus annually.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between text-[11px] mb-2 font-bold uppercase">
+                            <span class="text-blue-600">Total Invested</span>
+                            <span class="text-emerald-600">Wealth Growth</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 30%"></div>
+                            <div id="growthBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 70%"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
+                            <span id="investedLabel">Invested: ₹0</span>
+                            <span id="growthLabel">Growth: ₹0</span>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4"></div>
+                    
+                    <p class="text-[10px] text-slate-400 italic">Analysis: Your future monthly expense (at retirement) is estimated at <span id="futureExpenseText">₹0</span> due to inflation.</p>
+                </div>
+                
+                <div class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white">
+                    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Retirement Countdown
+                    </h3>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-slate-400 text-xs uppercase font-bold tracking-wider">Years to Financial Freedom</p>
+                            <h4 class="text-4xl font-black text-white" id="yearsRemainingDisp">30</h4>
+                        </div>
+                        <div class="text-right">
+                             <p class="text-slate-400 text-xs uppercase font-bold tracking-wider">Plan Status</p>
+                             <div class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/30 inline-block mt-1">Active Plan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Retirement Planning?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Retirement planning is the process of setting financial goals for your life after you stop working and determining the steps needed to achieve them. It involves estimating your future expenses, accounting for <a href="/inflation" class="text-blue-600 underline">Inflation</a>, and building a corpus through various investment vehicles.</p>
+                    <p>In India, with the absence of a universal social security net for the private sector, personal retirement planning is non-negotiable. Effective planning ensures that your lifestyle does not take a hit even when the monthly paycheck stops.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How Much Money Do You Need for Retirement in India?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>The amount needed depends on your current lifestyle and the age at which you plan to retire. A common rule of thumb is the <strong>"Replacement Ratio,"</strong> which suggests you need about 70-80% of your pre-retirement income to maintain the same standard of living.</p>
+                    <p>However, the biggest factor is <strong>Inflation</strong>. An expense of ₹50,000 today will feel like ₹2.8 Lakhs in 30 years at 6% inflation. Therefore, your retirement corpus must be large enough to generate this inflation-adjusted income for at least 25-30 years post-retirement.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Formula Used in Retirement Calculator</h2>
+                <p class="text-slate-600 mb-6">Our calculator uses two main stages of math:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-2">1. Future Expense Estimation</h4>
+                        <div class="formula-box text-blue-800 text-xs mb-4">Future Exp = Current Exp × (1 + Inflation)<sup>n</sup></div>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-slate-800 mb-2">2. Retirement Corpus Required</h4>
+                        <div class="formula-box text-blue-800 text-xs mb-4">Corpus = Monthly Exp × 12 × Years of Retirement</div>
+                        <p class="text-[10px] text-slate-500 italic text-center">Note: This is a conservative "bucket" estimation for 25 years post-retirement.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Why Inflation Matters in Retirement Planning</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Inflation is the silent killer of wealth. If your retirement plan doesn't account for it, you might find your savings exhausted halfway through your retirement years. For example, medical costs in India often grow at a rate higher than the standard <a href="/inflation" class="text-blue-600 underline">Inflation Rate</a>.</p>
+                    <p>Using our <a href="/sip" class="text-blue-600 underline">SIP Calculator</a> alongside this retirement tool can help you identify exactly how much more you need to save every month to bridge the gap created by rising prices.</p>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much retirement corpus is needed in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It varies, but for an urban lifestyle spending ₹50,000 today, a corpus of ₹4 Cr to ₹6 Cr is often targeted for a 30-year retirement starting in 20-25 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the 4% retirement rule?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It suggests that if you withdraw only 4% of your total corpus in the first year and adjust for inflation thereafter, your money will likely last 30 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much should I save monthly for retirement?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Ideally, 15-25% of your take-home pay should go into retirement-specific long-term investments like Equity Mutual Funds or NPS.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What age should I start retirement planning?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Immediately. Starting in your 20s instead of 30s can double your final corpus for the same investment amount due to the <a href="/cagr" class="text-blue-600">Power of Compounding</a>.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is SIP good for retirement planning?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes. SIPs in diversified equity funds provide the growth needed to beat inflation over 15-20 years. Use our <a href="/sip" class="text-blue-600 underline">SIP Tool</a> to check.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Can pension funds cover retirement expenses?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Usually not alone. EPFO and Gratuity provide a base, but personal investments are required to bridge the lifestyle gap created by inflation.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What happens if I retire early?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Early retirement requires a much larger corpus because your savings need to last for 40-50 years instead of 25. You also lose out on the peak compounding years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is Loan Eligibility affected by retirement?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes. Most banks limit your loan tenure so that the loan is fully repaid by your retirement age. Check your current <a href="/loan-eligibility" class="text-blue-600">Loan Eligibility</a> here.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section: IMPROVED UI/UX -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider text-center md:text-left">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                    <a href="/swp" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">SWP Calculator</h4>
+                    </a>
+                    <a href="/cagr" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">CAGR Tool</h4>
+                    </a>
+                    <a href="/inflation" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Inflation</h4>
+                    </a>
+                    <a href="/salary-hike" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Salary Hike</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Calculations are based on estimated historical returns and inflation data. Market conditions and individual financial circumstances vary. Always consult with a certified financial planner.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            curAge: document.getElementById('currentAge'),
+            retAge: document.getElementById('retirementAge'),
+            expInp: document.getElementById('expenseInput'),
+            expRng: document.getElementById('expenseRange'),
+            infInp: document.getElementById('inflationInput'),
+            infRng: document.getElementById('inflationRange'),
+            retInp: document.getElementById('returnInput'),
+            retRng: document.getElementById('returnRange'),
+            savInp: document.getElementById('savingsInput'),
+            savRng: document.getElementById('savingsRange'),
+            sipInp: document.getElementById('sipInput'),
+            sipRng: document.getElementById('sipRange'),
+            corpusNeededDisp: document.getElementById('corpusNeededDisp'),
+            totalSavingsDisp: document.getElementById('totalSavingsDisp'),
+            monthlyPensionDisp: document.getElementById('monthlyPensionDisp'),
+            yearsRemainingDisp: document.getElementById('yearsRemainingDisp'),
+            investedBar: document.getElementById('investedBar'),
+            growthBar: document.getElementById('growthBar'),
+            investedLabel: document.getElementById('investedLabel'),
+            growthLabel: document.getElementById('growthLabel'),
+            futureExpenseText: document.getElementById('futureExpenseText'),
+            insightsBox: document.getElementById('insightsBox'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function updateCalculations() {
+            const currentAge = parseFloat(elements.curAge.value) || 0;
+            const retirementAge = parseFloat(elements.retAge.value) || 60;
+            const monthlyExpense = parseFloat(elements.expInp.value) || 0;
+            const inflation = (parseFloat(elements.infInp.value) || 0) / 100;
+            const returns = (parseFloat(elements.retInp.value) || 0) / 100;
+            const existingSavings = parseFloat(elements.savInp.value) || 0;
+            const monthlySIP = parseFloat(elements.sipInp.value) || 0;
+
+            const yearsToRetire = Math.max(0, retirementAge - currentAge);
+            elements.yearsRemainingDisp.textContent = yearsToRetire;
+
+            // 1. Calculate future monthly expense at retirement age
+            const futureMonthlyExpense = monthlyExpense * Math.pow(1 + inflation, yearsToRetire);
+            elements.futureExpenseText.textContent = formatInr(futureMonthlyExpense);
+
+            // 2. Calculate required retirement corpus (Assuming 25 years post-retirement lifestyle)
+            const corpusNeeded = futureMonthlyExpense * 12 * 25; 
+            elements.corpusNeededDisp.textContent = formatInr(corpusNeeded);
+
+            // 3. Projected Savings at Retirement
+            // Part A: Growth of existing savings
+            const futureExistingSavings = existingSavings * Math.pow(1 + returns, yearsToRetire);
+            
+            // Part B: Growth of Monthly SIP
+            const monthlyRate = returns / 12;
+            const totalMonths = yearsToRetire * 12;
+            let futureSIPSavings = 0;
+            if (monthlyRate > 0) {
+                futureSIPSavings = monthlySIP * ((Math.pow(1 + monthlyRate, totalMonths) - 1) / monthlyRate) * (1 + monthlyRate);
+            } else {
+                futureSIPSavings = monthlySIP * totalMonths;
+            }
+
+            const totalSavingsAtRetirement = futureExistingSavings + futureSIPSavings;
+            const totalInvested = existingSavings + (monthlySIP * totalMonths);
+            const totalGrowth = Math.max(0, totalSavingsAtRetirement - totalInvested);
+
+            elements.totalSavingsDisp.textContent = formatInr(totalSavingsAtRetirement);
+            
+            // 4. Monthly Pension Available (Assuming 6% p.a withdrawal from corpus)
+            const monthlyPension = (totalSavingsAtRetirement * 0.06) / 12;
+            elements.monthlyPensionDisp.textContent = formatInr(monthlyPension);
+
+            // Update Progress Bar
+            elements.investedLabel.textContent = "Invested: " + formatCompact(totalInvested);
+            elements.growthLabel.textContent = "Growth: " + formatCompact(totalGrowth);
+            const investedPerc = (totalInvested / totalSavingsAtRetirement) * 100 || 0;
+            elements.investedBar.style.width = investedPerc + "%";
+            elements.growthBar.style.width = (100 - investedPerc) + "%";
+
+            // Insights
+            const shortfall = corpusNeeded - totalSavingsAtRetirement;
+            if (shortfall > 0) {
+                elements.insightsBox.innerHTML = `⚠️ <strong>Gap Found:</strong> You are likely to fall short by <strong>${formatInr(shortfall)}</strong>. Consider increasing your monthly investment.`;
+                elements.insightsBox.className = "bg-orange-50 p-4 rounded-xl border border-orange-100 text-sm text-orange-800 leading-relaxed mb-4";
+            } else {
+                elements.insightsBox.innerHTML = `✅ <strong>On Track:</strong> Your current plan is sufficient to reach your goal. You will have a surplus of <strong>${formatInr(Math.abs(shortfall))}</strong>.`;
+                elements.insightsBox.className = "bg-emerald-50 p-4 rounded-xl border border-emerald-100 text-sm text-emerald-800 leading-relaxed mb-4";
+            }
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.expInp, elements.expRng);
+            setupSync(elements.infInp, elements.infRng);
+            setupSync(elements.retInp, elements.retRng);
+            setupSync(elements.savInp, elements.savRng);
+            setupSync(elements.sipInp, elements.sipRng);
+            elements.curAge.addEventListener('input', updateCalculations);
+            elements.retAge.addEventListener('input', updateCalculations);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
