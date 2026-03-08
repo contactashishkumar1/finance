@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Affordability Calculator India (2026) – How Much Loan Can You Afford?</title>
+    <meta name="description" content="Use our Loan Affordability Calculator to estimate how much loan you can safely afford based on your income, expenses, interest rate, and loan tenure.">
+    <meta name="keywords" content="loan affordability calculator, how much loan can i afford india, safe emi calculator, home loan affordability calculator, mortgage affordability india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/loan-affordability/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Loan Affordability Calculator India (2026)",
+      "description": "Calculate your home or personal loan affordability based on net monthly income and existing expenses.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Loan Affordability", "item": "https://arthcalculator.in/loan-affordability" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much loan can I afford?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a rule of thumb, your total monthly EMIs (including existing ones) should not exceed 40% of your net monthly income."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a safe EMI percentage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A safe EMI percentage is typically 30% to 40% of your monthly take-home pay. Going beyond 50% can lead to financial stress."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Loan Affordability</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Loan Affordability Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Don't just calculate what you <em>can</em> borrow—find out what you can <strong>afford</strong>. Estimate a safe loan amount based on your actual monthly expenses and savings goals.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm tracking-wide">Financial Wellness 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Financial Profile
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Net Monthly Income (₹)</label>
+                            <input type="number" id="incomeInput" value="100000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="incomeRange" min="10000" max="1000000" step="1000" value="100000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Monthly Expenses (₹)</label>
+                            <input type="number" id="expenseInput" value="30000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="expenseRange" min="0" max="500000" step="1000" value="30000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Existing EMIs (₹)</label>
+                            <input type="number" id="existingInput" value="10000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="existingRange" min="0" max="200000" step="1000" value="10000" class="w-full">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2">Interest Rate (%)</label>
+                            <input type="number" id="rateInput" value="8.5" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2">Tenure (Years)</label>
+                            <input type="number" id="yearsInput" value="20" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label class="text-sm font-medium text-slate-600">Safe EMI Ratio (%)</label>
+                            <input type="number" id="ratioInput" value="40" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="ratioRange" min="10" max="70" step="1" value="40" class="w-full">
+                        <p class="text-[10px] text-slate-400 mt-2 italic">Recommendation: Keep this below 40% for financial peace.</p>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate Affordability</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Maximum Affordable Loan Amount</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-8 text-center md:text-left" id="maxLoanDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Max Affordable EMI</p>
+                            <p class="font-bold text-slate-800 text-lg" id="maxEmiDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100 text-pretty">
+                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1">Recommended Safe Loan</p>
+                            <p class="font-bold text-emerald-700 text-lg" id="safeLoanDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-slate-400">Fixed Expenses</span>
+                            <span class="text-blue-600">EMI Capacity</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="expenseBar" class="h-full bg-slate-300 transition-all duration-700" style="width: 40%"></div>
+                            <div id="emiBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 40%"></div>
+                            <div id="surplusBar" class="h-full bg-emerald-400 transition-all duration-700" style="width: 20%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-slate-300 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="expenseLabel">Expenses: ₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="emiLabel">EMI Cap: ₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="surplusLabel">Surplus: ₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-6"></div>
+                    
+                    <div class="pt-6 border-t border-slate-100 flex justify-between items-center text-pretty">
+                        <div>
+                            <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Debt-to-Income (DTI) Ratio</p>
+                            <p class="font-bold text-slate-800 text-xl" id="dtiRatioDisp">0%</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Affordability Status</p>
+                            <span id="statusBadge" class="bg-emerald-100 text-emerald-700 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Healthy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Loan Affordability?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
+                    <p>Loan Affordability is the evaluation of how much debt a person can take on without compromising their daily lifestyle or future financial security. While a bank might approve you for a large sum, your actual affordability depends on your personal expenses, existing debts, and savings requirements.</p>
+                    <p>Using a <a href="/emi" class="text-blue-600 underline font-medium">Standard EMI Calculator</a> tells you the payment for a specific amount, but an Affordability Calculator works backward—starting with your paycheck to find the perfect loan amount for you.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">How Banks Calculate Loan Affordability</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>Financial institutions in India primarily use the <strong>Debt-to-Income (DTI) Ratio</strong> or FOIR (Fixed Obligation to Income Ratio) to assess borrowers. Most banks prefer that your total debt obligations (new EMI + existing EMIs) remain between <strong>30% and 45%</strong> of your net monthly income.</p>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 mb-6">
+                        <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+                            <span class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">Ex</span>
+                            The ₹1,00,000 Income Rule
+                        </h3>
+                        <ul class="space-y-3 text-slate-600 text-sm list-none">
+                            <li><strong class="text-slate-900">Net Income:</strong> ₹1,00,000</li>
+                            <li><strong class="text-slate-900">Max EMI Cap (40%):</strong> ₹40,000</li>
+                            <li><strong class="text-slate-900">Existing Debts:</strong> ₹10,000</li>
+                            <li><strong class="text-slate-900">Affordable New EMI:</strong> ₹30,000</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Tips to Increase Your Loan Affordability</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-blue-600 mb-2 uppercase text-xs">Reduce Existing Debt</h4>
+                        <p class="leading-relaxed">Clear small personal loans or credit card dues. Lowering existing EMIs instantly increases the monthly surplus a bank can consider for your new loan.</p>
+                    </div>
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200 text-pretty">
+                        <h4 class="font-bold text-emerald-600 mb-2 uppercase text-xs text-pretty">Increase Loan Tenure</h4>
+                        <p class="leading-relaxed text-pretty">While a longer tenure increases the total interest paid, it lowers the monthly EMI, making a larger loan amount "affordable" in the eyes of the bank.</p>
+                    </div>
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-purple-600 mb-2 uppercase text-xs">Joint Application</h4>
+                        <p class="leading-relaxed">Add a co-applicant (spouse or parent) to combine incomes. This significantly boosts the total affordability and often helps in getting lower interest rates.</p>
+                    </div>
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-orange-600 mb-2 uppercase text-xs">Improve Credit Score</h4>
+                        <p class="leading-relaxed">A high CIBIL score allows you to negotiate a lower interest rate. Lower rates mean a higher principal can be borrowed for the same EMI amount.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-2xl font-bold mb-6">The Safe Debt-to-Income Ratio</h2>
+                <div class="prose prose-slate max-w-none text-slate-300 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>While banks might offer more, financial experts recommend keeping your total DTI <strong>below 40%</strong>. This ensures you have enough buffer for:</p>
+                    <ul class="list-disc ml-5 space-y-2 opacity-90">
+                        <li>Emergency medical funds or unforeseen repairs.</li>
+                        <li>Ongoing <a href="/sip" class="text-blue-400 underline">SIP investments</a> for retirement.</li>
+                        <li>Maintaining your current quality of life despite inflation.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10 text-pretty" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much loan can I afford?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It depends on your surplus income. Take your monthly salary, subtract all expenses and existing debts, and the remainder is your absolute max EMI capacity.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the ideal debt-to-income ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">An ideal DTI is 30% or less. Between 30% and 45% is manageable. Crossing 50% is considered high-risk and could lead to financial stress.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much salary is needed for ₹50 lakh loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">For a ₹50 Lakh home loan (8.5%, 20Y), the EMI is ~₹43,400. Assuming a 40% DTI, you would need a net monthly salary of approx ₹1,10,000.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is 50% EMI safe?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">Generally, no. Paying half your salary towards debt leaves you vulnerable to emergencies and limits your ability to save for retirement or children's education.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <a href="/emi" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">EMI Calculator</h4>
+                    </a>
+                    <a href="/home-loan" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Home Loan</h4>
+                    </a>
+                    <a href="/loan-eligibility" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Loan Eligibility</h4>
+                    </a>
+                    <a href="/loan-prepayment" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty">Prepayment</h4>
+                    </a>
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors text-pretty text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">SIP Calculator</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty">Disclaimer</p>
+                Calculations are based on the standard monthly reducing balance method. Affordability status is for guidance only. Individual banks may have higher or lower FOIR thresholds depending on your income slab and credit history.
+                <p class="mt-4 font-semibold italic text-slate-600 text-pretty">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            incomeInp: document.getElementById('incomeInput'),
+            incomeRng: document.getElementById('incomeRange'), 
+            expenseInp: document.getElementById('expenseInput'),
+            expenseRng: document.getElementById('expenseRange'),
+            existingInp: document.getElementById('existingInput'),
+            existingRng: document.getElementById('existingRange'),
+            rateInp: document.getElementById('rateInput'),
+            yearsInp: document.getElementById('yearsInput'),
+            ratioInp: document.getElementById('ratioInput'),
+            ratioRng: document.getElementById('ratioRange'),
+            maxLoanDisp: document.getElementById('maxLoanDisp'),
+            maxEmiDisp: document.getElementById('maxEmiDisp'),
+            safeLoanDisp: document.getElementById('safeLoanDisp'),
+            dtiRatioDisp: document.getElementById('dtiRatioDisp'),
+            statusBadge: document.getElementById('statusBadge'),
+            expenseBar: document.getElementById('expenseBar'),
+            emiBar: document.getElementById('emiBar'),
+            surplusBar: document.getElementById('surplusBar'),
+            expenseLabel: document.getElementById('expenseLabel'),
+            emiLabel: document.getElementById('emiLabel'),
+            surplusLabel: document.getElementById('surplusLabel'),
+            insightsBox: document.getElementById('insightsBox'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function updateCalculations() {
+            const income = parseFloat(elements.incomeInp.value) || 0;
+            const expenses = parseFloat(elements.expenseInp.value) || 0;
+            const existingEmi = parseFloat(elements.existingInp.value) || 0;
+            const annualRate = parseFloat(elements.rateInp.value) || 0;
+            const years = parseFloat(elements.yearsInp.value) || 0;
+            const safeRatio = (parseFloat(elements.ratioInp.value) || 0) / 100;
+
+            // 1. Calculate Capacities
+            const totalEmiAllowed = income * safeRatio;
+            const affordableNewEmi = Math.max(0, totalEmiAllowed - existingEmi);
+            
+            // 2. Financial Logic
+            const r = annualRate / 12 / 100;
+            const n = years * 12;
+
+            let maxLoan = 0;
+            if (affordableNewEmi > 0 && r > 0) {
+                // Principal = EMI * [ (1+r)^n - 1 ] / [ r * (1+r)^n ]
+                maxLoan = affordableNewEmi * (Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n));
+            } else if (affordableNewEmi > 0) {
+                maxLoan = affordableNewEmi * n;
+            }
+
+            // Safe recommendation: Principal based on a stricter 30% DTI if user selected >40
+            const safeEmiCap = income * (safeRatio > 0.4 ? 0.35 : safeRatio * 0.9);
+            const safeEmiAvailable = Math.max(0, safeEmiCap - existingEmi);
+            let safeLoan = 0;
+            if (safeEmiAvailable > 0 && r > 0) {
+                safeLoan = safeEmiAvailable * (Math.pow(1 + r, n) - 1) / (r * Math.pow(1 + r, n));
+            }
+
+            const currentDTI = ((existingEmi + affordableNewEmi) / income) * 100;
+
+            // UI Display
+            elements.maxLoanDisp.textContent = formatInr(maxLoan);
+            elements.maxEmiDisp.textContent = formatInr(affordableNewEmi);
+            elements.safeLoanDisp.textContent = formatInr(safeLoan);
+            elements.dtiRatioDisp.textContent = currentDTI.toFixed(1) + "%";
+
+            // Bar Breakdown
+            const totalMonthlyCosts = expenses + existingEmi + affordableNewEmi;
+            const surplus = Math.max(0, income - totalMonthlyCosts);
+            
+            elements.expenseLabel.textContent = "Fixed: " + formatCompact(expenses + existingEmi);
+            elements.emiLabel.textContent = "New EMI: " + formatCompact(affordableNewEmi);
+            elements.surplusLabel.textContent = "Surplus: " + formatCompact(surplus);
+
+            const expPerc = ((expenses + existingEmi) / income) * 100 || 0;
+            const emiPerc = (affordableNewEmi / income) * 100 || 0;
+            const surPerc = (surplus / income) * 100 || 0;
+
+            elements.expenseBar.style.width = expPerc + "%";
+            elements.emiBar.style.width = emiPerc + "%";
+            elements.surplusBar.style.width = surPerc + "%";
+
+            // Status & Insights
+            if (currentDTI <= 40) {
+                elements.statusBadge.textContent = "Healthy";
+                elements.statusBadge.className = "bg-emerald-100 text-emerald-700 text-[10px] px-3 py-1 rounded-full font-bold uppercase";
+                elements.insightsBox.innerHTML = `✅ <strong>Status: Affordable.</strong> Your current debt levels and potential new EMI keep you well within a safe limit. You have a monthly surplus of <strong>${formatInr(surplus)}</strong> for savings.`;
+            } else if (currentDTI <= 50) {
+                elements.statusBadge.textContent = "Borderline";
+                elements.statusBadge.className = "bg-orange-100 text-orange-700 text-[10px] px-3 py-1 rounded-full font-bold uppercase";
+                elements.insightsBox.innerHTML = `💡 <strong>Status: Caution.</strong> Your total EMI would take up ${currentDTI.toFixed(1)}% of your income. Consider a smaller loan or longer tenure to increase your safety margin.`;
+            } else {
+                elements.statusBadge.textContent = "Over-Leveraged";
+                elements.statusBadge.className = "bg-red-100 text-red-700 text-[10px] px-3 py-1 rounded-full font-bold uppercase";
+                elements.insightsBox.innerHTML = `⚠️ <strong>Status: High Risk.</strong> Banks may reject your application. High EMIs combined with existing expenses of ${formatInr(expenses)} leave very little room for financial emergencies.`;
+            }
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.incomeInp, elements.incomeRng);
+            setupSync(elements.expenseInp, elements.expenseRng);
+            setupSync(elements.existingInp, elements.existingRng);
+            setupSync(elements.ratioInp, elements.ratioRng);
+            elements.rateInp.addEventListener('input', updateCalculations);
+            elements.yearsInp.addEventListener('input', updateCalculations);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
