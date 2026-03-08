@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPS Calculator India (2026) – Calculate National Pension System Returns & Retirement Corpus</title>
+    <meta name="description" content="Use our NPS Calculator India to estimate your retirement corpus and pension using National Pension System investments. Calculate expected returns, monthly pension, and tax benefits under NPS.">
+    <meta name="keywords" content="NPS calculator india, national pension system calculator, nps retirement calculator, nps corpus calculator, nps monthly pension calculator, section 80ccd calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/nps/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="NPS Calculator India – National Pension System Returns & Corpus">
+    <meta property="og:description" content="Calculate your NPS retirement corpus, lump sum withdrawal, and monthly pension. Plan your retirement with precise tax-saving projections.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/nps/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "NPS Calculator India (2026)",
+      "description": "Calculate your NPS retirement corpus, lump sum withdrawal, and monthly pension based on current Indian market trends.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "NPS Calculator", "item": "https://arthcalculator.in/nps" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is NPS and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NPS (National Pension System) is a voluntary long-term retirement savings scheme designed to provide social security after retirement. It allows market-linked returns and offers tax benefits under Section 80CCD."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What return can I expect from NPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Historically, NPS has provided returns in the range of 9% to 12% for equity-heavy portfolios and 7% to 9% for conservative portfolios."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">NPS Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">NPS Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate your National Pension System (NPS) maturity corpus, tax-free lump sum withdrawal, and estimated monthly pension. Plan your retirement with market-linked growth.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm tracking-wide">PFRDA Compliant</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        NPS Inputs
+                    </h2>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-1">Current Age</label>
+                            <input type="number" id="currentAge" value="30" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-1">Retirement Age</label>
+                            <input type="number" id="retirementAge" value="60" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Monthly Contribution (₹)</label>
+                            <input type="number" id="monthlyInput" value="10000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="monthlyRange" min="500" max="500000" step="1000" value="10000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Expected Returns (%)</label>
+                            <input type="number" id="returnInput" value="10" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="returnRange" min="1" max="25" step="0.1" value="10" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label class="text-sm font-medium text-slate-600">Annuity Return Rate (%)</label>
+                            <input type="number" id="annuityRateInput" value="6" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="annuityRateRange" min="1" max="20" step="0.1" value="6" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Existing NPS Balance (₹)</label>
+                            <input type="number" id="existingInput" value="0" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="existingRange" min="0" max="10000000" step="50000" value="0" class="w-full">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate NPS Corpus</button>
+                </div>
+            </div>
+
+            <!-- Results Panel -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Total NPS Corpus at retirement</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 block mb-6 text-center md:text-left" id="totalCorpusDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Lump Sum Withdrawal (60%)</p>
+                            <p class="font-bold text-slate-800 text-lg" id="lumpSumDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1">Monthly Pension Available</p>
+                            <p class="font-bold text-emerald-700 text-lg" id="monthlyPensionDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between text-[11px] mb-2 font-bold uppercase">
+                            <span class="text-blue-600">Total Invested</span>
+                            <span class="text-emerald-600">Wealth Growth</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 30%"></div>
+                            <div id="growthBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 70%"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
+                            <span id="investedLabel">Invested: ₹0</span>
+                            <span id="growthLabel">Growth: ₹0</span>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4"></div>
+                    
+                    <p class="text-[10px] text-slate-400 italic text-pretty">Analysis: Your remaining 40% corpus (Annuity) used for pension calculation: <span id="annuityAmtDisp" class="font-bold">₹0</span>.</p>
+                </div>
+                
+                <div class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-slate-400 text-xs uppercase font-bold tracking-wider">Years to Retirement</p>
+                            <h4 class="text-4xl font-black text-white" id="yearsRemainingDisp">30</h4>
+                        </div>
+                        <div class="text-right">
+                             <p class="text-slate-400 text-xs uppercase font-bold tracking-wider">Plan Status</p>
+                             <div class="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/30 inline-block mt-1">Accumulation Phase</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is NPS (National Pension System)?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>The National Pension System (NPS) is a voluntary, long-term retirement savings scheme regulated by the PFRDA (Pension Fund Regulatory and Development Authority). It was initially launched for government employees in 2004 and opened to all Indian citizens in 2009.</p>
+                    <p>Unlike traditional fixed-return instruments, NPS is a market-linked product that allows you to invest in a mix of Equity, Corporate Bonds, and Government Securities. This flexibility makes it a powerful tool for building a substantial retirement corpus that beats <a href="/inflation" class="text-blue-600 underline font-medium">Inflation</a> over the long run.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">NPS Benefits: Old vs. New Tax Regime</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed">
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+                            <span class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">01</span>
+                            Old Tax Regime
+                        </h3>
+                        <ul class="space-y-3 text-slate-600 list-none">
+                            <li><strong class="text-slate-800">Section 80CCD(1):</strong> Deduction up to ₹1.5 Lakhs (inclusive of 80C).</li>
+                            <li><strong class="text-slate-800">Section 80CCD(1B):</strong> Exclusive <strong>additional deduction of ₹50,000</strong> over and above the ₹1.5 Lakh limit.</li>
+                            <li><strong class="text-slate-800">Section 80CCD(2):</strong> Employer contribution up to 10% of salary is deductible.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+                            <span class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold">02</span>
+                            New Tax Regime
+                        </h3>
+                        <ul class="space-y-3 text-slate-600 list-none">
+                            <li><strong class="text-slate-800">Corporate Benefit:</strong> Deduction under <strong>Section 80CCD(2)</strong> remains available.</li>
+                            <li><strong class="text-slate-800">Limits:</strong> Deduction for employer contribution up to 14% of salary is allowed.</li>
+                            <li><strong class="text-slate-800">Note:</strong> The extra ₹50,000 self-contribution deduction (1B) is <strong>not</strong> available in the New Regime.</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="mt-6 text-slate-500 text-xs text-center italic">Tip: Use our <a href="/retirement" class="text-blue-600 underline">Retirement Calculator</a> to see how these tax savings impact your final corpus.</p>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How NPS Helps Build Retirement Wealth</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>NPS follows a systematic accumulation approach. During your working years, you contribute regularly via <a href="/sip" class="text-blue-600 underline font-medium">monthly SIPs</a>. Upon reaching age 60, you can withdraw up to 60% of the total corpus as a tax-free lump sum. The remaining 40% must be used to purchase an <strong>Annuity</strong>, which provides a regular monthly pension.</p>
+                    <p>By starting early, you benefit from the <a href="/cagr" class="text-blue-600 underline font-medium">Power of Compounding</a>. Even a small monthly contribution of ₹5,000 started at age 25 can result in a massive corpus by the time you reach 60.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-slate-600">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">NPS Tax Benefits (Section 80CCD) Breakdown</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-blue-600 mb-2 uppercase text-xs">Section 80CCD(1)</h4>
+                        <p class="leading-relaxed">Tax deduction on your own contributions up to 10% of salary (Basic + DA) within the overall ₹1.5 Lakh limit of Section 80C.</p>
+                    </div>
+                    <div class="p-5 bg-emerald-50 rounded-xl border border-emerald-200">
+                        <h4 class="font-bold text-emerald-600 mb-2 uppercase text-xs">Section 80CCD(1B)</h4>
+                        <p class="leading-relaxed">An exclusive <strong>additional deduction</strong> of up to ₹50,000 for NPS contributions, over and above the ₹1.5 Lakh limit of 80C.</p>
+                    </div>
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-blue-600 mb-2 uppercase text-xs">Section 80CCD(2)</h4>
+                        <p class="leading-relaxed">Employer’s contribution up to 14% of salary is deductible for the employee under both old and new tax regimes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is NPS and how does it work?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">NPS is a retirement tool where you invest monthly into Tier-1 accounts. The money is managed by professional fund managers across Equity, Debt, and Govt Bonds. It matures at age 60.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What return can I expect from NPS?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Returns are market-linked. Portfolios with 50-75% equity exposure have historically delivered 10-12% annual returns over long periods.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How much pension will NPS give?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">It depends on your annuity amount (min 40% of corpus) and the annuity rate at retirement (usually 5-7%). Monthly pension is calculated as (Annuity Amount * Rate) / 12.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is NPS better than EPF?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">EPF offers guaranteed returns (8.15%), while NPS offers higher potential through equity exposure. NPS also provides higher tax benefits under section 80CCD(1B).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can I withdraw NPS early?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Partial withdrawals up to 25% of your own contribution are allowed for specific reasons (marriage, medical, house purchase) after 3 years of joining.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <a href="/retirement" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Retirement Calculator</h4>
+                    </a>
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                    <a href="/swp" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SWP Calculator</h4>
+                    </a>
+                    <a href="/inflation" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Inflation</h4>
+                    </a>
+                    <a href="/salary-hike" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Salary Hike</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Calculations are based on estimated historical returns. Actual NPS returns vary by fund manager and market conditions. Annuity rates are subject to change by providers at the time of purchase.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            curAge: document.getElementById('currentAge'),
+            retAge: document.getElementById('retirementAge'),
+            monthlyInp: document.getElementById('monthlyInput'),
+            monthlyRng: document.getElementById('monthlyRange'),
+            retInp: document.getElementById('returnInput'),
+            retRng: document.getElementById('returnRange'),
+            annuityRateInp: document.getElementById('annuityRateInput'),
+            annuityRateRng: document.getElementById('annuityRateRange'),
+            savInp: document.getElementById('existingInput'),
+            savRng: document.getElementById('existingRange'),
+            totalCorpusDisp: document.getElementById('totalCorpusDisp'),
+            lumpSumDisp: document.getElementById('lumpSumDisp'),
+            monthlyPensionDisp: document.getElementById('monthlyPensionDisp'),
+            yearsRemainingDisp: document.getElementById('yearsRemainingDisp'),
+            investedBar: document.getElementById('investedBar'),
+            growthBar: document.getElementById('growthBar'),
+            investedLabel: document.getElementById('investedLabel'),
+            growthLabel: document.getElementById('growthLabel'),
+            annuityAmtDisp: document.getElementById('annuityAmtDisp'),
+            insightsBox: document.getElementById('insightsBox'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function updateCalculations() {
+            const currentAge = parseFloat(elements.curAge.value) || 0;
+            const retirementAge = parseFloat(elements.retAge.value) || 60;
+            const monthlyContribution = parseFloat(elements.monthlyInp.value) || 0;
+            const returns = (parseFloat(elements.retInp.value) || 0) / 100;
+            const annuityRate = (parseFloat(elements.annuityRateInp.value) || 0) / 100;
+            const existingSavings = parseFloat(elements.savInp.value) || 0;
+
+            const yearsToRetire = Math.max(0, retirementAge - currentAge);
+            elements.yearsRemainingDisp.textContent = yearsToRetire;
+
+            const monthlyRate = returns / 12;
+            const totalMonths = yearsToRetire * 12;
+
+            // 1. Calculate Future Value of Monthly Contributions (SIP Formula)
+            let futureSIPSavings = 0;
+            if (monthlyRate > 0) {
+                futureSIPSavings = monthlyContribution * ((Math.pow(1 + monthlyRate, totalMonths) - 1) / monthlyRate) * (1 + monthlyRate);
+            } else {
+                futureSIPSavings = monthlyContribution * totalMonths;
+            }
+
+            // 2. Calculate Growth of existing savings
+            const futureExistingSavings = existingSavings * Math.pow(1 + returns, yearsToRetire);
+
+            const totalCorpus = futureSIPSavings + futureExistingSavings;
+            const lumpSum = totalCorpus * 0.60;
+            const annuityAmt = totalCorpus * 0.40;
+            const monthlyPension = (annuityAmt * annuityRate) / 12;
+
+            const totalInvested = existingSavings + (monthlyContribution * totalMonths);
+            const totalGrowth = Math.max(0, totalCorpus - totalInvested);
+
+            elements.totalCorpusDisp.textContent = formatInr(totalCorpus);
+            elements.lumpSumDisp.textContent = formatInr(lumpSum);
+            elements.monthlyPensionDisp.textContent = formatInr(monthlyPension);
+            elements.annuityAmtDisp.textContent = formatInr(annuityAmt);
+
+            // Update Progress Bar
+            elements.investedLabel.textContent = "Invested: " + formatCompact(totalInvested);
+            elements.growthLabel.textContent = "Growth: " + formatCompact(totalGrowth);
+            const investedPerc = (totalInvested / totalCorpus) * 100 || 0;
+            elements.investedBar.style.width = investedPerc + "%";
+            elements.growthBar.style.width = (100 - investedPerc) + "%";
+
+            elements.insightsBox.innerHTML = `
+                <p>💡 <strong>Insight:</strong> By retiring at ${retirementAge}, you can withdraw a tax-free lump sum of <strong>${formatInr(lumpSum)}</strong> and enjoy a regular pension of <strong>${formatInr(monthlyPension)}</strong> per month.</p>
+            `;
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.monthlyInp, elements.monthlyRng);
+            setupSync(elements.retInp, elements.retRng);
+            setupSync(elements.annuityRateInp, elements.annuityRateRng);
+            setupSync(elements.savInp, elements.savRng);
+            elements.curAge.addEventListener('input', updateCalculations);
+            elements.retAge.addEventListener('input', updateCalculations);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
