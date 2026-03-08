@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Loan Calculator India (2026) – Calculate Vehicle Loan EMI Instantly</title>
+    <meta name="description" content="Use our Car Loan Calculator to calculate your monthly EMI, total interest payable, and total loan repayment amount for your vehicle loan. Plan your auto financing with accurate projections.">
+    <meta name="keywords" content="car loan calculator india, vehicle loan calculator, auto loan emi calculator, car loan emi calculator, vehicle emi calculator, car financing india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/car-loan/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Car Loan Calculator India – Estimate Your Monthly Auto EMI">
+    <meta property="og:description" content="Calculate your car loan installments, interest costs, and repayment tenure instantly. Plan your next car purchase with data-driven precision.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/car-loan/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Car Loan Calculator India (2026)",
+      "description": "Professional tool to calculate monthly car loan EMIs and total interest payable based on Indian bank rates.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Car Loan", "item": "https://arthcalculator.in/car-loan" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is car loan EMI calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Car loan EMI is calculated using the formula [P x R x (1+R)^N]/[(1+R)^N-1], where P is the loan amount, R is the monthly interest rate, and N is the number of months."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I prepay a car loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, most lenders allow prepayment, though unlike home loans, some car loans may attract a small prepayment penalty depending on the bank's policy."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .table-container::-webkit-scrollbar { height: 4px; }
+        .table-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center text-pretty">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Car Loan</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Car Loan Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate your monthly vehicle loan installments instantly. Plan your new car purchase by estimating total interest, loan amount financed, and viewing a detailed yearly repayment schedule.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm tracking-wide">Vehicle Finance 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Loan Details
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">On-road Car Price (₹)</label>
+                            <input type="number" id="priceInput" value="1000000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="priceRange" min="100000" max="20000000" step="50000" value="1000000" class="w-full">
+                    </div>
+
+                    <div class="mb-8 text-pretty">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Down Payment (₹)</label>
+                            <input type="number" id="downInput" value="200000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="downRange" min="0" max="10000000" step="25000" value="200000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Interest Rate (% p.a)</label>
+                            <input type="number" id="rateInput" value="9" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="rateRange" min="1" max="25" step="0.1" value="9" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Loan Tenure (Years)</label>
+                            <input type="number" id="yearsInput" value="5" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="10" step="1" value="5" class="w-full">
+                    </div>
+
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 mb-6 flex justify-between items-center">
+                        <span class="text-xs font-bold text-blue-800 uppercase tracking-wide">Loan Amount Financed</span>
+                        <span id="loanAmountDisp" class="text-lg font-black text-blue-900">₹0</span>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Car EMI</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Monthly EMI Amount</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 block mb-6 text-center md:text-left" id="emiDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 text-pretty">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Payment (P+I)</p>
+                            <p class="font-bold text-slate-800 text-lg" id="totalPaymentDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Interest Payable</p>
+                            <p class="font-bold text-red-500 text-lg" id="totalInterestDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-blue-600">Principal Amount</span>
+                            <span class="text-indigo-600">Total Interest</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="principalBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 80%"></div>
+                            <div id="interestBar" class="h-full bg-indigo-400 transition-all duration-700" style="width: 20%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-bold uppercase" id="principalLabel">P: ₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-bold uppercase" id="interestLabel">I: ₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-8">
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4 uppercase tracking-wider">Yearly Repayment Schedule</h3>
+                    <div id="tableSection" class="table-container border border-slate-100 rounded-xl overflow-hidden bg-white">
+                        <div class="overflow-x-auto max-h-[350px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm border-collapse">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Principal Paid</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Interest Paid</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right text-pretty">Balance Left</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="amortTable" class="divide-y divide-slate-50"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is a Car Loan Calculator?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>A Car Loan Calculator (or auto loan calculator) is a specialized financial tool designed to help car buyers determine their monthly liability before making a purchase. By providing the car price and down payment, it allows you to see the actual amount you need to borrow and how your interest rates impact your monthly cash flow.</p>
+                    <p>In India, car loans are typically offered for tenures of 3 to 7 years. Use this tool to find a balance between a comfortable EMI and the total interest cost. Before finalising your car, you may also want to check your <a href="/loan-eligibility" class="text-blue-600 underline font-medium">Loan Eligibility</a> based on your monthly income.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How Car Loan EMI is Calculated</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>Car loans in India generally use the <strong>Reducing Balance Method</strong>. Our calculator uses the standard mathematical formula for amortized loans:</p>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm font-bold">EMI = [P × r × (1+r)^n] / [(1+r)^n − 1]</div>
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li><strong>P (Principal):</strong> The actual loan amount (Price - Down Payment).</li>
+                        <li><strong>r (Monthly Interest Rate):</strong> Yearly rate divided by 12 and then by 100.</li>
+                        <li><strong>n (Number of Months):</strong> Total tenure years multiplied by 12.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Factors Affecting Your Car Loan EMI</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm leading-relaxed text-pretty">
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-blue-600 mb-2 uppercase text-xs">Interest Rate</h4>
+                        <p>Unlike home loans, car loan rates are usually fixed. Even a 1% difference can change your EMI significantly.</p>
+                    </div>
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-blue-600 mb-2 uppercase text-xs">Loan Tenure</h4>
+                        <p>Most car loans are for 5 years. Extending to 7 years reduces EMI but increases the total interest burden.</p>
+                    </div>
+                    <div class="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-blue-600 mb-2 uppercase text-xs">Down Payment</h4>
+                        <p>Higher down payments reduce your principal amount, which lowers your interest and EMI instantly.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Example Car Loan Calculation</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Suppose you are buying a car worth <strong>₹10,00,000</strong>. You pay <strong>₹2,00,000</strong> as down payment, leaving a <strong>loan amount of ₹8,00,000</strong>. At a <strong>9% interest rate</strong> for <strong>5 years</strong>:</p>
+                    <ul class="list-none space-y-2 font-bold text-slate-800 bg-slate-50 p-6 rounded-xl border border-slate-200 max-w-lg">
+                        <li class="flex justify-between border-b pb-2"><span>Monthly EMI:</span> <span>₹16,607</span></li>
+                        <li class="flex justify-between border-b pb-2 text-red-500"><span>Total Interest:</span> <span>₹1,96,403</span></li>
+                        <li class="flex justify-between pt-2 text-blue-600 text-lg"><span>Total Repayment:</span> <span>₹9,96,403</span></li>
+                    </ul>
+                    <p class="mt-4">Using a <a href="/loan-prepayment" class="text-blue-600 underline">Loan Prepayment</a> strategy can help you save a large portion of that interest if you have surplus cash later.</p>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the typical interest rate for car loans in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">In 2026, car loan rates in India generally range from 8.5% to 12%, depending on the bank, your credit score, and whether the car is new or used.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How much down payment is required?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Most banks require a minimum down payment of 10-20% of the on-road price. Some premium salary accounts may offer 100% on-road funding.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is a longer tenure better for a car loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">A longer tenure (7 years) makes the EMI affordable but you end up paying significantly more interest. Since cars are depreciating assets, a 3-5 year tenure is usually recommended.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can I use my SIP savings to pay for a car?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes. If you have been investing in a <a href="/sip" class="text-blue-600 underline">SIP</a> for 3-5 years, using that corpus for a higher down payment can save you lakhs in loan interest.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What documents are required for a car loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Typically: ID proof, Address proof, Salary slips (3 months), ITR (2 years), and Bank statements (6 months).</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <a href="/emi" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">EMI Calculator</h4>
+                    </a>
+                    <a href="/home-loan" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Home Loan</h4>
+                    </a>
+                    <a href="/loan-eligibility" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Loan Eligibility</h4>
+                    </a>
+                    <a href="/loan-prepayment" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Prepayment</h4>
+                    </a>
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Calculations are based on the reducing balance method. Actual bank EMIs may vary depending on credit score, bank processing fees, and insurance costs added to the principal.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            priceInp: document.getElementById('priceInput'),
+            priceRng: document.getElementById('priceRange'), 
+            downInp: document.getElementById('downInput'),
+            downRng: document.getElementById('downRange'),
+            rateInp: document.getElementById('rateInput'),
+            rateRng: document.getElementById('rateRange'),
+            yearsInp: document.getElementById('yearsInput'),
+            yearsRng: document.getElementById('yearsRange'),
+            loanAmountDisp: document.getElementById('loanAmountDisp'),
+            emiDisp: document.getElementById('emiDisp'),
+            totalPaymentDisp: document.getElementById('totalPaymentDisp'),
+            totalInterestDisp: document.getElementById('totalInterestDisp'),
+            principalBar: document.getElementById('principalBar'),
+            interestBar: document.getElementById('interestBar'),
+            principalLabel: document.getElementById('principalLabel'),
+            interestLabel: document.getElementById('interestLabel'),
+            amortTable: document.getElementById('amortTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function updateCalculations() {
+            const price = parseFloat(elements.priceInp.value) || 0;
+            const downPayment = parseFloat(elements.downInp.value) || 0;
+            const annualRate = parseFloat(elements.rateInp.value) || 0;
+            const years = parseFloat(elements.yearsInp.value) || 0;
+
+            const principal = Math.max(0, price - downPayment);
+            const r = annualRate / 12 / 100;
+            const n = years * 12;
+
+            let emi = 0;
+            if (principal > 0 && n > 0) {
+                if (r > 0) {
+                    emi = principal * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+                } else {
+                    emi = principal / n;
+                }
+            }
+
+            const totalPayment = emi * n;
+            const totalInterest = totalPayment - principal;
+
+            // UI Updates
+            elements.loanAmountDisp.textContent = formatInr(principal);
+            elements.emiDisp.textContent = formatInr(emi);
+            elements.totalPaymentDisp.textContent = formatInr(totalPayment);
+            elements.totalInterestDisp.textContent = formatInr(totalInterest);
+
+            elements.principalLabel.textContent = "Principal: " + formatCompact(principal);
+            elements.interestLabel.textContent = "Interest: " + formatCompact(totalInterest);
+
+            const pPerc = (principal / totalPayment) * 100 || 0;
+            elements.principalBar.style.width = pPerc + "%";
+            elements.interestBar.style.width = (100 - pPerc) + "%";
+
+            renderTable(principal, r, n, emi);
+        }
+
+        function renderTable(principal, monthlyRate, totalMonths, emi) {
+            elements.amortTable.innerHTML = '';
+            let balance = principal;
+            let yearlyPrincipal = 0;
+            let yearlyInterest = 0;
+
+            for (let m = 1; m <= totalMonths; m++) {
+                const interest = balance * monthlyRate;
+                const paidPrincipal = emi - interest;
+                yearlyPrincipal += paidPrincipal;
+                yearlyInterest += interest;
+                balance -= paidPrincipal;
+
+                if (m % 12 === 0 || m === totalMonths) {
+                    const row = `<tr>
+                        <td class="px-4 py-3 font-medium text-slate-600">Year ${Math.ceil(m / 12)}</td>
+                        <td class="px-4 py-3 text-right text-emerald-600 font-medium">${formatCompact(yearlyPrincipal)}</td>
+                        <td class="px-4 py-3 text-right text-indigo-400">${formatCompact(yearlyInterest)}</td>
+                        <td class="px-4 py-3 text-right font-bold text-slate-800">${formatInr(Math.max(0, balance))}</td>
+                    </tr>`;
+                    elements.amortTable.insertAdjacentHTML('beforeend', row);
+                    yearlyPrincipal = 0;
+                    yearlyInterest = 0;
+                }
+            }
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.priceInp, elements.priceRng);
+            setupSync(elements.downInp, elements.downRng);
+            setupSync(elements.rateInp, elements.rateRng);
+            setupSync(elements.yearsInp, elements.yearsRng);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
