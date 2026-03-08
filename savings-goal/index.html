@@ -148,9 +148,9 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Target Goal Amount (₹)</label>
-                            <input type="number" id="goalInput" value="5000000" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" id="goalInput" value="5000000" step="100000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
-                        <input type="range" id="goalRange" min="100000" max="50000000" step="100000" value="5000000" class="w-full">
+                        <input type="range" id="goalRange" min="100000" max="500000000" step="500000" value="5000000" class="w-full">
                     </div>
 
                     <div class="mb-8">
@@ -158,7 +158,7 @@
                             <label class="text-sm font-medium text-slate-600">Current Savings (₹)</label>
                             <input type="number" id="savingsInput" value="500000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
-                        <input type="range" id="savingsRange" min="0" max="10000000" step="10000" value="500000" class="w-full">
+                        <input type="range" id="savingsRange" min="0" max="100000000" step="50000" value="500000" class="w-full">
                     </div>
 
                     <div class="mb-8">
@@ -172,9 +172,9 @@
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Time to Goal (Years)</label>
-                            <input type="number" id="yearsInput" value="15" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" id="yearsInput" value="15" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all text-pretty">
                         </div>
-                        <input type="range" id="yearsRange" min="1" max="40" step="1" value="15" class="w-full">
+                        <input type="range" id="yearsRange" min="1" max="50" step="1" value="15" class="w-full">
                     </div>
 
                     <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Investment Needed</button>
@@ -200,7 +200,7 @@
                         </div>
                     </div>
 
-                    <div class="mb-8">
+                    <div class="mb-8 text-pretty">
                         <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
                             <span class="text-blue-600">Total Principal</span>
                             <span class="text-emerald-600">Wealth Gained</span>
@@ -230,7 +230,7 @@
 
         <!-- SEO Content Sections -->
         <div class="space-y-12 mb-12">
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">What is a Savings Goal Calculator?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p>A Savings Goal Calculator is a financial planning tool used to determine the monthly contribution required to reach a specific future monetary target. Unlike a standard <a href="/sip" class="text-blue-600 underline">SIP Calculator</a> that tells you the future value of a current investment, this tool works backward from your goal.</p>
@@ -238,7 +238,7 @@
                 </div>
             </section>
 
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-slate-600 text-sm sm:text-base leading-relaxed">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-slate-600 text-sm sm:text-base leading-relaxed text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">How to Plan Your Financial Goals</h2>
                 <p class="mb-4">Successful goal-based investing starts with defining the nature of the target. Common goals for Indian investors include:</p>
                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 list-none mb-6">
@@ -274,7 +274,7 @@
                     <p>Suppose you want to accumulate <strong>₹50,00,000</strong> for a child's marriage in <strong>15 years</strong>. You currently have <strong>₹5,00,000</strong> saved and expect a <strong>12% annual return</strong>.</p>
                     <ul class="list-none space-y-2 font-bold text-slate-800 bg-slate-50 p-6 rounded-xl border border-slate-200 max-w-lg">
                         <li>🎯 Target Goal: ₹50,00,000</li>
-                        <li>📈 Future Value of Existing Savings: ₹27,36,783</li>
+                        <li>📈 Future Value of Current Savings: ₹27,36,783</li>
                         <li>💸 Shortfall to be met by SIP: ₹22,63,217</li>
                         <li>📅 Monthly Investment Required: ~₹4,530</li>
                     </ul>
@@ -284,12 +284,12 @@
 
             <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto py-10" id="faqs">
-                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is a savings goal calculator?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It is a tool that tells you how much money you need to save every month to reach a specific financial target in the future.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much should I save monthly?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">A standard thumb rule is to save at least 20% of your income. However, for specific goals, use our calculator to find the exact number required.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is SIP good for goal-based investing?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes, SIPs are the most disciplined way to reach financial goals as they average market volatility and compound your wealth automatically.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do returns affect savings goals?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Higher returns mean you need to invest a smaller amount monthly to reach the same goal. However, higher returns usually come with higher market risks.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do returns affect savings goals?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Higher returns mean you need to invest a smaller amount monthly to reach the same goal. However, higher returns usually come with higher market risks.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Can inflation affect my savings goal?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes. A ₹1 Crore goal today may only buy ₹60 Lakhs worth of goods in 10 years. You should adjust your target amount using our <a href="/inflation" class="text-blue-600">Inflation Tool</a>.</div></details>
                 </div>
             </section>
@@ -298,8 +298,8 @@
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
                 <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         </div>
                         <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
@@ -314,7 +314,7 @@
                         <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
                         </div>
-                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Inflation</h4>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Inflation</h4>
                     </a>
                     <a href="/retirement" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
                         <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
