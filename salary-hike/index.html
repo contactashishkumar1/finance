@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Hike Calculator India (2026) – Calculate Salary Increment & Percentage Raise</title>
+    <meta name="description" content="Use our Salary Hike Calculator India to calculate your new salary after an increment. Find the exact percentage hike and annual increase instantly.">
+    <meta name="keywords" content="salary hike calculator, salary increment calculator india, salary raise percentage calculator, new salary after increment, salary growth calculator, increment percentage calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/salary-hike/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Salary Hike Calculator India – Calculate Your Increment %">
+    <meta property="og:description" content="Calculate your new monthly salary and annual raise percentage. Plan your career growth with our precise increment calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/salary-hike/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Salary Hike Calculator India (2026)",
+      "description": "High-precision tool to calculate salary increments, percentage raises, and new monthly income in India.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Salary Hike", "item": "https://arthcalculator.in/salary-hike" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a good salary hike in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In India, an average annual salary hike usually ranges between 8% and 12%. High performers often receive 15% to 20%, depending on the industry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to calculate salary increment percentage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The formula is: ((New Salary - Old Salary) / Old Salary) x 100."
+          }
+        },
+        {
+            "@type": "Question",
+            "name": "Does inflation affect salary hikes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If your hike percentage is lower than the inflation rate, your real purchasing power actually decreases despite a nominal increase in salary."
+            }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Salary Hike Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Salary Hike Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate your new monthly salary after an increment. Find your exact annual salary increase and percentage growth instantly to better plan your investments.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-emerald-50 text-emerald-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-emerald-100 shadow-sm">Increment Tracker 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Increment Details
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Current Monthly Salary (₹)</label>
+                            <input type="number" id="salaryInput" value="50000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="salaryRange" min="5000" max="1000000" step="1000" value="50000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Expected Hike (%)</label>
+                            <input type="number" id="hikeInput" value="10" step="0.5" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="hikeRange" min="0" max="100" step="0.5" value="10" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label class="text-sm font-medium text-slate-600">Optional Bonus Increase (Annual ₹)</label>
+                            <input type="number" id="bonusInput" value="0" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="bonusRange" min="0" max="1000000" step="5000" value="0" class="w-full">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate New Salary</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">New Estimated Monthly Salary</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 block mb-2 text-center md:text-left" id="newSalaryDisp">₹0</span>
+                    
+                    <p class="text-[11px] text-slate-400 italic mb-6 text-center md:text-left leading-relaxed">
+                        *This is your <strong>Gross Monthly Salary</strong>. Final 'In-Hand' pay will be subject to TDS, PF, and Professional Tax deductions.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Annual Salary Increase</p>
+                            <p class="font-bold text-emerald-600 text-lg" id="annualIncreaseDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Percentage Growth</p>
+                            <p class="font-bold text-blue-600 text-lg" id="percGrowthDisp">0%</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between text-[11px] mb-2 font-bold uppercase">
+                            <span class="text-slate-400">Old Salary</span>
+                            <span class="text-emerald-600">New Salary</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="oldBar" class="h-full bg-slate-300 transition-all duration-700" style="width: 80%"></div>
+                            <div id="newBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 20%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-slate-300 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="oldLabel">Old: ₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-emerald-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="newLabel">New: ₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4 text-pretty"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is a Salary Hike?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>A salary hike is an increase in the base compensation provided by an employer to an employee. Typically, hikes are provided annually as part of a performance appraisal process or during a promotion.</p>
+                    <p>Understanding your hike in percentage terms is crucial for long-term financial planning. A higher salary provides more disposable income, which should ideally be channeled into growth assets. Use our <a href="/sip" class="text-blue-600 underline font-medium">SIP Calculator</a> or evaluate long-term investment returns using the <a href="/cagr" class="text-blue-600 underline font-medium">CAGR Calculator</a>. Don't forget to account for the impact of <a href="/inflation" class="text-blue-600 underline font-medium">Inflation</a> on your real income growth.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How Salary Increments Work in India</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>In India, salary increments are influenced by three major factors: Individual Performance, Company Growth, and the Consumer Price Index (CPI).</p>
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li><strong>Performance Appraisal:</strong> Merit-based increases given to performers.</li>
+                        <li><strong>Promotion Hike:</strong> Jumps (usually 15% to 30%) when moving grades.</li>
+                        <li><strong>Market Correction:</strong> Adjustments to keep salaries competitive.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Formula Used in Salary Hike Calculator</h2>
+                <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                    New Salary = Old Salary × (1 + Hike% / 100) + (Annual Bonus / 12)
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Tips to Increase Your Salary Faster</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-blue-400 mb-2">Upskilling & Certifications</h4>
+                        <p class="text-slate-300">Continuous learning makes you more valuable and gives you leverage during appraisal discussions.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-emerald-400 mb-2">Internal Mobility</h4>
+                        <p class="text-slate-300">Taking on larger responsibilities internally often leads to higher percentage raises than baseline increments.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the average salary hike in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Historically, average hikes range from 8.5% to 10.5%. High-growth sectors like IT often see higher numbers.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is salary hike calculated on CTC or basic salary?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">In most Indian companies, the percentage hike is applied to the Total CTC. However, the exact breakdown of components may change.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is a good salary hike after promotion?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">A promotion commanding higher responsibilities usually attracts a hike between 20% and 40%, depending on the level and industry standards.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Does inflation affect salary hikes?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes. If your hike is 6% but inflation is also 6%, your real purchasing power hasn't changed. High inflation often forces employers to offer better increments to retain talent.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do companies calculate annual increment?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Companies use a 'Merit Matrix' which cross-references performance ratings with current positioning in the salary range. Market trends also play key roles.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is a merit salary increase?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">A merit increase is a raise given to an employee based on their individual performance and contribution rather than a standard cost-of-living adjustment.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How often do salary hikes happen?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Most companies in India follow an annual increment cycle, typically aligned with the financial year (April). Some follow the calendar year (January).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do I negotiate a higher hike?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Showcase documented achievements, demonstrate your impact on revenue or cost-savings, and have industry salary benchmark data ready for a factual discussion.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider text-center md:text-left">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-6 gap-4">
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                    <a href="/emi" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">EMI Calculator</h4>
+                    </a>
+                    <a href="/cagr" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">CAGR Tool</h4>
+                    </a>
+                    <a href="/inflation" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Inflation</h4>
+                    </a>
+                    <a href="/income-tax" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Income Tax</h4>
+                    </a>
+                    <a href="/loan-eligibility" class="p-5 border border-slate-100 rounded-2xl hover:border-purple-500 hover:bg-purple-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Loan Eligibility</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                This calculator provides mathematical estimations based on your inputs. Tax deductions, PF contributions, and employer-specific components are not accounted for in this base growth calculation.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            salaryInp: document.getElementById('salaryInput'),
+            salaryRng: document.getElementById('salaryRange'), 
+            hikeInp: document.getElementById('hikeInput'),
+            hikeRng: document.getElementById('hikeRange'),
+            bonusInp: document.getElementById('bonusInput'),
+            bonusRng: document.getElementById('bonusRange'),
+            newSalaryDisp: document.getElementById('newSalaryDisp'),
+            annualIncreaseDisp: document.getElementById('annualIncreaseDisp'),
+            percGrowthDisp: document.getElementById('percGrowthDisp'),
+            oldBar: document.getElementById('oldBar'),
+            newBar: document.getElementById('newBar'),
+            oldLabel: document.getElementById('oldLabel'),
+            newLabel: document.getElementById('newLabel'),
+            insightsBox: document.getElementById('insightsBox'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function updateCalculations() {
+            const oldSalary = parseFloat(elements.salaryInp.value) || 0;
+            const hikePerc = parseFloat(elements.hikeInp.value) || 0;
+            const annualBonus = parseFloat(elements.bonusInp.value) || 0;
+
+            const hikeAmountMonthly = oldSalary * (hikePerc / 100);
+            const monthlyBonusComp = annualBonus / 12;
+            const newSalaryMonthly = oldSalary + hikeAmountMonthly + monthlyBonusComp;
+            
+            const totalAnnualOld = oldSalary * 12;
+            const totalAnnualNew = newSalaryMonthly * 12;
+            const annualIncrease = totalAnnualNew - totalAnnualOld;
+            const percGrowth = oldSalary > 0 ? ((newSalaryMonthly - oldSalary) / oldSalary) * 100 : 0;
+
+            elements.newSalaryDisp.textContent = formatInr(newSalaryMonthly);
+            elements.annualIncreaseDisp.textContent = formatInr(annualIncrease);
+            elements.percGrowthDisp.textContent = percGrowth.toFixed(1) + "%";
+            elements.oldLabel.textContent = "Old: " + formatCompact(oldSalary);
+            elements.newLabel.textContent = "New: " + formatCompact(newSalaryMonthly);
+
+            const oldPortion = (oldSalary / newSalaryMonthly) * 100 || 0;
+            elements.oldBar.style.width = oldPortion + "%";
+            elements.newBar.style.width = (100 - oldPortion) + "%";
+
+            elements.insightsBox.innerHTML = `
+                <p>💡 <strong>Analysis:</strong> Your gross monthly income will rise by <strong>${formatInr(newSalaryMonthly - oldSalary)}</strong>. Annualized, this is an increase of <strong>${formatInr(annualIncrease)}</strong>.</p>
+            `;
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.salaryInp, elements.salaryRng);
+            setupSync(elements.hikeInp, elements.hikeRng);
+            setupSync(elements.bonusInp, elements.bonusRng);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // Fetch Navbar and Footer
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
