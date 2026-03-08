@@ -4,77 +4,146 @@
 
 <url>
 <loc>https://arthcalculator.in/</loc>
-<priority>1.0</priority>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/calculators/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/calculators</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/emi/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/sip</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/sip/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/swp</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/cagr/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/emi</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/fd/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/home-loan</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/epf/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/car-loan</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/ppf/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/loan-eligibility</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/hra/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/loan-prepayment</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/gst/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/debt-payoff</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/gratuity/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/credit-card-interest</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/income-tax/</loc>
-<priority>0.9</priority>
+<loc>https://arthcalculator.in/no-cost-emi</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/about/</loc>
-<priority>0.5</priority>
+<loc>https://arthcalculator.in/cagr</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/privacy-policy/</loc>
-<priority>0.5</priority>
+<loc>https://arthcalculator.in/xirr</loc>
 </url>
 
 <url>
-<loc>https://arthcalculator.in/disclaimer/</loc>
-<priority>0.5</priority>
+<loc>https://arthcalculator.in/lumpsum</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/compound-interest</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/simple-interest</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/inflation</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/real-return</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/retirement</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/fire</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/nps</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/net-worth</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/savings-goal</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/crorepati</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/salary-hike</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/take-home-salary</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/income-tax</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/gst</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/hra</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/epf</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/ppf</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/gratuity</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/about</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/privacy-policy</loc>
+</url>
+
+<url>
+<loc>https://arthcalculator.in/disclaimer</loc>
 </url>
 
 </urlset>
