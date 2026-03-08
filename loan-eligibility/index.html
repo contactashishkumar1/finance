@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Eligibility Calculator India (2026) – Check Loan Amount Based on Salary</title>
+    <meta name="description" content="Use our Loan Eligibility Calculator India to estimate how much home or personal loan you can get based on salary, interest rate and tenure.">
+    <meta name="keywords" content="Loan Eligibility Calculator India, home loan eligibility based on salary, personal loan eligibility, FOIR calculator India, bank loan eligibility 2026, how much loan can I get">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/loan-eligibility/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Loan Eligibility Calculator India – Check Your Max Loan Amount">
+    <meta property="og:description" content="Estimate your eligible loan amount instantly. Plan your home or car purchase by factoring in your income and existing obligations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/loan-eligibility">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Loan Eligibility Calculator India (2026)",
+      "description": "High-precision tool to calculate bank loan eligibility based on monthly income and debt obligations in India.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Loan Eligibility", "item": "https://arthcalculator.in/loan-eligibility" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is FOIR in loan eligibility?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FOIR stands for Fixed Obligation to Income Ratio. It is the percentage of your monthly income that a bank considers available for paying loan EMIs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much loan can I get on ₹50,000 salary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At a 60% FOIR, you can afford ₹30,000 in EMIs. For a 20-year home loan at 8.5%, this equates to roughly ₹34.5 Lakhs."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .table-container::-webkit-scrollbar { height: 4px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+        select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Loan Eligibility</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Loan Eligibility Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Find out how much home or personal loan you qualify for based on your net income and existing EMIs. Built using standard Indian banking FOIR guidelines.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm">Credit Check 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Financial Profile
+                    </h2>
+
+                    <div class="mb-8">
+                        <label class="text-sm font-medium text-slate-600 block mb-2 text-pretty">Employment Type</label>
+                        <select id="empTypeSelect" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 transition-all bg-white cursor-pointer">
+                            <option value="salaried" selected>Salaried Professional</option>
+                            <option value="self">Self-Employed / Business</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <!-- Label ID for dynamic text switching -->
+                            <label id="incomeLabelText" class="text-sm font-medium text-slate-600">Net Monthly Salary (₹)</label>
+                            <input type="number" id="salaryInput" value="75000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="salaryRange" min="10000" max="1000000" step="1000" value="75000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Existing EMIs (₹)</label>
+                            <input type="number" id="existingInput" value="0" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="existingRange" min="0" max="200000" step="1000" value="0" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Interest Rate (%)</label>
+                            <input type="number" id="rateInput" value="8.5" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="rateRange" min="5" max="20" step="0.1" value="8.5" class="w-full">
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Tenure (Years)</label>
+                            <input type="number" id="yearsInput" value="20" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="30" value="20" class="w-full">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Check Eligibility</button>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Eligible Loan Amount</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 block mb-6 text-center md:text-left" id="eligibleAmountDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Max EMI Allowed</p>
+                            <p class="font-bold text-slate-800 text-lg" id="maxEmiDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Interest</p>
+                            <p class="font-bold text-red-500 text-lg" id="totalInterestDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between text-[11px] mb-2 font-bold uppercase">
+                            <span class="text-blue-600">Principal</span>
+                            <span class="text-red-500">Interest</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
+                            <div id="returnsBar" class="h-full bg-red-400 transition-all duration-700" style="width: 50%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="investedLabel">Principal: ₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-red-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="returnsLabel">Interest: ₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4"></div>
+                    
+                    <p class="text-[10px] text-slate-400 italic">Disclaimer: This is an estimate based on FOIR norms. Actual bank eligibility depends on your credit score and stability.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Content Section -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Loan Eligibility?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Loan Eligibility is the maximum amount of money a bank or financial institution is willing to lend you. It is determined by your repayment capacity, primarily based on your income, age, existing debts, and credit history. Understanding your eligibility helps you apply for the right loan amount and improves the chances of approval.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">FOIR: How Banks Calculate Eligibility</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>Banks in India use a metric called <strong>FOIR (Fixed Obligation to Income Ratio)</strong> to determine your capacity to pay EMIs. It represents the percentage of your income that can go toward debt repayment.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <h3 class="font-bold text-slate-800 mb-2">1. Salaried Professionals (60% FOIR)</h3>
+                            <p class="text-slate-600 text-xs">Banks usually assume that salaried individuals have a predictable income. Therefore, they allow up to <strong>60%</strong> of the net salary to be used for all combined EMIs. If your salary is ₹1 Lakh, your total EMIs (new + existing) cannot exceed ₹60,000.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <h3 class="font-bold text-slate-800 mb-2">2. Self-Employed / Business (50% FOIR)</h3>
+                            <p class="text-slate-600 text-xs">Business income can be volatile. Consequently, banks apply a more conservative <strong>50%</strong> FOIR for self-employed individuals to account for business fluctuations and operating costs. This ensures the borrower remains financially stable.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Formula Used</h2>
+                <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                    Eligible Principal = [ (Income × FOIR) − Existing EMIs ] ÷ EMI per Rupee
+                </div>
+                <p class="text-xs text-slate-500 font-medium leading-relaxed text-center">The "EMI per Rupee" is calculated using the standard amortized loan formula for ₹1 based on the selected interest rate and tenure.</p>
+            </section>
+
+            <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Tips to Increase Your Loan Eligibility</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-blue-400 mb-2">Add a Co-Applicant</h4>
+                        <p class="text-slate-300">Combining income with a spouse or parent significantly increases the total eligibility as the bank considers the household income.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-emerald-400 mb-2">Clear Short-term Debts</h4>
+                        <p class="text-slate-300">Closing small credit card dues or personal loans reduces your "Existing EMIs," freeing up more of your income for the bank's assessment.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What salary is required for ₹50 lakh home loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Assuming 8.5% interest and 20-year tenure, the net monthly salary required is approx ₹75,000 to ₹85,000 if you have no other debts.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much loan can I get on ₹50,000 salary?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">On a ₹50,000 salary, banks allow max EMIs of ₹30,000. At 8.5% for 20 years, you could qualify for approx ₹34.5 Lakh.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Do existing EMIs affect eligibility?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Yes, heavily. Every rupee you pay for an existing loan reduces the "disposable income" available for the new loan.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the maximum loan tenure in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">For Home Loans, the maximum tenure is typically 30 years. For Personal Loans, it is usually 5 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Can joint applicants increase eligibility?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes. Banks combine the income of both applicants, which can nearly double your eligibility if both are high earners.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is loan eligibility same as EMI affordability?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">No. Eligibility is what a bank is *willing* to give. Affordability is what you *should* take without affecting your savings like <a href="/sip" class="text-blue-600 underline">SIPs</a>.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do banks verify income?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Banks verify income via salary slips (3-6 months), ITR (2-3 years), and bank statements showing regular salary credits.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the "EMI per Rupee" factor?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It is a mathematical ratio used by lenders to quickly calculate principal based on a target EMI. It changes with interest rates and tenure.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6 uppercase tracking-wider text-center md:text-left">Related Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <a href="/sip" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center"><h4 class="font-bold text-slate-800 text-xs uppercase group-hover:text-blue-600">SIP Tool</h4></a>
+                    <a href="/emi" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center"><h4 class="font-bold text-slate-800 text-xs uppercase group-hover:text-blue-600">EMI Tool</h4></a>
+                    <a href="/cagr" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center"><h4 class="font-bold text-slate-800 text-xs uppercase group-hover:text-blue-600">CAGR Tool</h4></a>
+                    <a href="/inflation" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center"><h4 class="font-bold text-slate-800 text-xs uppercase group-hover:text-blue-600">Inflation</h4></a>
+                    <a href="/swp" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center"><h4 class="font-bold text-slate-800 text-xs uppercase group-hover:text-blue-600">SWP Tool</h4></a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Estimated results for educational purposes only. Final loan amount depends on your credit score and bank policy.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            salaryInp: document.getElementById('salaryInput'),
+            salaryRng: document.getElementById('salaryRange'), 
+            existingInp: document.getElementById('existingInput'),
+            existingRng: document.getElementById('existingRange'),
+            rateInp: document.getElementById('rateInput'),
+            rateRng: document.getElementById('rateRange'),
+            yearsInp: document.getElementById('yearsInput'),
+            yearsRng: document.getElementById('yearsRange'),
+            empType: document.getElementById('empTypeSelect'),
+            salaryLabel: document.getElementById('incomeLabelText'), // Dynamic label
+            eligibleAmountDisp: document.getElementById('eligibleAmountDisp'),
+            maxEmiDisp: document.getElementById('maxEmiDisp'),
+            totalInterestDisp: document.getElementById('totalInterestDisp'),
+            investedBar: document.getElementById('investedBar'),
+            returnsBar: document.getElementById('returnsBar'),
+            investedLabel: document.getElementById('investedLabel'),
+            returnsLabel: document.getElementById('returnsLabel'),
+            insightsBox: document.getElementById('insightsBox'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function updateCalculations() {
+            const isSalaried = elements.empType.value === 'salaried';
+            const income = parseFloat(elements.salaryInp.value) || 0;
+            const existingEmi = parseFloat(elements.existingInp.value) || 0;
+            const annualRate = parseFloat(elements.rateInp.value) || 0;
+            const years = parseFloat(elements.yearsInp.value) || 0;
+
+            // DYNAMIC LABEL UPDATE
+            elements.salaryLabel.textContent = isSalaried ? "Net Monthly Salary (₹)" : "Net Monthly Income (₹)";
+
+            // FOIR Logic: Salaried gets 60%, Self gets 50%
+            const FOIR = isSalaried ? 0.60 : 0.50;
+            const maxTotalEmi = income * FOIR;
+            const availableNewEmi = maxTotalEmi - existingEmi;
+            
+            if (availableNewEmi <= 0) {
+                elements.eligibleAmountDisp.textContent = "₹0";
+                elements.maxEmiDisp.textContent = "₹0";
+                elements.totalInterestDisp.textContent = "₹0";
+                elements.investedLabel.textContent = "Principal: ₹0";
+                elements.returnsLabel.textContent = "Interest: ₹0";
+                elements.investedBar.style.width = "0%";
+                elements.returnsBar.style.width = "0%";
+                elements.insightsBox.innerHTML = `⚠️ Your existing debt of ${formatInr(existingEmi)} exceeds the bank's maximum allowable ${FOIR*100}% debt limit for your income.`;
+                return;
+            }
+
+            const r = annualRate / 12 / 100;
+            const n = years * 12;
+
+            const emiFactor = (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+            const maxLoan = availableNewEmi / emiFactor;
+            const totalRepayment = availableNewEmi * n;
+            const totalInterest = totalRepayment - maxLoan;
+
+            elements.eligibleAmountDisp.textContent = formatInr(maxLoan);
+            elements.maxEmiDisp.textContent = formatInr(availableNewEmi);
+            elements.totalInterestDisp.textContent = formatInr(totalInterest);
+
+            elements.investedLabel.textContent = "Principal: " + formatCompact(maxLoan);
+            elements.returnsLabel.textContent = "Interest: " + formatCompact(totalInterest);
+
+            const pPerc = (maxLoan / totalRepayment) * 100 || 0;
+            elements.investedBar.style.width = pPerc + "%";
+            elements.returnsBar.style.width = (100 - pPerc) + "%";
+
+            elements.insightsBox.innerHTML = `
+                <p>💡 <strong>Insight:</strong> Based on a <strong>${FOIR*100}% FOIR</strong>, you can afford a total monthly EMI of ${formatInr(maxTotalEmi)}. Since you already pay ${formatInr(existingEmi)}, you can take a new loan with an EMI of <strong>${formatInr(availableNewEmi)}</strong>.</p>
+            `;
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.salaryInp, elements.salaryRng);
+            setupSync(elements.existingInp, elements.existingRng);
+            setupSync(elements.rateInp, elements.rateRng);
+            setupSync(elements.yearsInp, elements.yearsRng);
+            elements.empType.addEventListener('change', updateCalculations);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
