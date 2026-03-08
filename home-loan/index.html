@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Loan Calculator India (2026) – Calculate EMI, Interest & Loan Cost</title>
+    <meta name="description" content="Use our Home Loan Calculator India to calculate your EMI, total interest payable, and total loan repayment instantly. Plan your housing loan with accurate projections.">
+    <meta name="keywords" content="home loan calculator india, home loan emi calculator, housing loan calculator, calculate home loan emi, mortgage calculator india, home loan interest calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/home-loan/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Home Loan Calculator India – Calculate Your Monthly Installments">
+    <meta property="og:description" content="Plan your dream home with our precise EMI calculator. Get instant results for total interest, principal breakdown, and amortization schedule.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/home-loan/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Home Loan Calculator India (2026)",
+      "description": "Calculate monthly home loan EMIs and total interest payable using the latest Indian bank interest rates.",
+      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Home Loan", "item": "https://arthcalculator.in/home-loan" }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is EMI in home loan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EMI stands for Equated Monthly Installment. It is a fixed amount paid by a borrower to a lender at a specified date each month to repay both principal and interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is prepayment allowed in home loans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, as per RBI guidelines, most banks in India do not charge any prepayment penalty on floating-rate home loans for individual borrowers."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .table-container::-webkit-scrollbar { height: 4px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Home Loan Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Home Loan Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate your monthly housing loan installments instantly. Plan your home purchase by estimating total interest, principal breakup, and viewing a detailed amortization schedule.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm tracking-wide">Mortgage Planning 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        Loan Details
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Property Value / Loan (₹)</label>
+                            <input type="number" id="principalInput" value="5000000" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="principalRange" min="100000" max="50000000" step="100000" value="5000000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label class="text-sm font-medium text-slate-600">Down Payment (Optional ₹)</label>
+                            <input type="number" id="downPaymentInput" value="0" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="downPaymentRange" min="0" max="25000000" step="50000" value="0" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Interest Rate (%)</label>
+                            <input type="number" id="rateInput" value="8.5" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="rateRange" min="5" max="15" step="0.1" value="8.5" class="w-full">
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label class="text-sm font-medium text-slate-600">Loan Tenure (Years)</label>
+                            <input type="number" id="yearsInput" value="20" step="1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="30" step="1" value="20" class="w-full">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate EMI</button>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
+                        <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">Actual Loan Amount</p>
+                        <h3 id="netLoanDisp" class="text-lg font-bold leading-tight">₹0</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200">
+                        <p class="text-indigo-100 text-[10px] font-medium uppercase mb-1">Total Interest</p>
+                        <h3 id="totalInterestDisp" class="text-lg font-bold leading-tight">₹0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Monthly EMI</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 block mb-6 text-center md:text-left" id="emiValDisp">₹0</span>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 mb-8 text-pretty">
+                        <div class="flex justify-between items-center text-sm font-medium text-slate-600 mb-1">
+                            <span>Total Payment (Principal + Int)</span>
+                            <span id="totalPaymentDisp" class="text-slate-900 font-bold">₹0</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 italic">Does not include bank processing fees and documentation charges.</p>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-blue-600">Principal Amount</span>
+                            <span class="text-indigo-600">Total Interest</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="principalBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
+                            <div id="interestBar" class="h-full bg-indigo-400 transition-all duration-700" style="width: 50%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-bold uppercase" id="principalLabel">P: ₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-bold uppercase" id="interestLabel">I: ₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-8">
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4 uppercase tracking-wider text-pretty">Yearly Amortization Schedule</h3>
+                    <div id="tableSection" class="table-container border border-slate-100 rounded-xl overflow-hidden bg-white">
+                        <div class="overflow-x-auto max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm border-collapse">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Principal Paid</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Interest Paid</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable" class="divide-y divide-slate-50"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO Content Sections -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is a Home Loan?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>A Home Loan (or housing loan) is a sum of money borrowed from a financial institution to purchase, construct, or renovate a residential property. The property itself serves as collateral for the loan.</p>
+                    <p>In India, home loans are popular not just for property ownership but also for the significant tax benefits they offer. Before committing, it is vital to check your <a href="/loan-eligibility" class="text-blue-600 underline font-medium">Loan Eligibility</a> to see what amount you qualify for.</p>
+                </div>
+            </section>
+
+            <!-- NEW EDUCATIONAL SECTION: TAX BENEFITS -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Tax Benefits of Home Loan (Old Tax Regime)</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed space-y-6">
+                    <p>Home loans offer substantial tax savings in India, but these are restricted to the <strong>Old Tax Regime</strong>. If you opt for the New Tax Regime, most of these deductions are scrapped.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2 text-pretty">
+                                <span class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                                Section 24(b): Interest Paid
+                            </h3>
+                            <p class="text-slate-600 text-xs">You can claim a deduction of up to <strong>₹2,00,000</strong> per year on the interest portion of your Home Loan EMI. This applies to self-occupied properties. For let-out properties, the interest deduction can be claimed in full against rental income, though loss set-off against other heads is limited to ₹2 Lakh.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2 text-pretty">
+                                <span class="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                                Section 80C: Principal Repaid
+                            </h3>
+                            <p class="text-slate-600 text-xs">The principal portion of your EMI is eligible for deduction under Section 80C, up to a maximum limit of <strong>₹1,50,000</strong>. This limit is shared with other investments like PPF, LIC, and ELSS. Additionally, stamp duty and registration charges can also be claimed under this section once.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 border border-red-100 p-6 rounded-2xl mt-6">
+                        <h4 class="font-bold text-red-900 mb-2 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                            Important Notice: New Tax Regime (2025-26)
+                        </h4>
+                        <p class="text-red-800 text-xs leading-relaxed">
+                            Under the <strong>New Tax Regime</strong>, the deduction for home loan interest on self-occupied property (Section 24b) and the principal repayment deduction (Section 80C) are <strong>not available</strong>. Taxpayers must evaluate both regimes using an <a href="/income-tax" class="font-bold underline text-red-900">Income Tax Calculator</a> before deciding to switch.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How Home Loan EMI is Calculated</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed space-y-6">
+                    <p>The calculation of Home Loan EMI follows the reducing balance method. Our calculator uses the standard mathematical formula:</p>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm font-bold">EMI = [P × r × (1+r)^n] / [(1+r)^n − 1]</div>
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li><strong>P:</strong> Net Loan Amount (Property Value - Down Payment)</li>
+                        <li><strong>r:</strong> Monthly interest rate (Annual rate / 12 / 100)</li>
+                        <li><strong>n:</strong> Loan tenure in months</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Factors Affecting Your Home Loan EMI</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-2">Interest Rate</h4>
+                        <p>A higher rate directly increases your EMI. Even a 0.5% difference can cost lakhs over a 20-year period.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-2">Loan Tenure</h4>
+                        <p>Longer tenures reduce the EMI but significantly increase the total interest paid. Plan your tenure using our <a href="/emi" class="text-blue-600 underline">EMI Tool</a>.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-2">Down Payment</h4>
+                        <p>Paying more upfront reduces the principal amount, lowering both your EMI and total interest burden.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <h4 class="font-bold text-slate-800 mb-2">Credit Score</h4>
+                        <p>A high CIBIL score (750+) often helps you negotiate lower interest rates with top banks.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-pretty">Example Home Loan Calculation</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed space-y-4">
+                    <p>Suppose you are buying a home worth <strong>₹50,00,000</strong> with a <strong>20-year tenure</strong> at an interest rate of <strong>8.5%</strong>. If you make zero down payment:</p>
+                    <ul class="list-none space-y-2 font-bold text-slate-800">
+                        <li>💰 Monthly EMI: ₹43,391</li>
+                        <li>📉 Total Interest: ₹54,13,879</li>
+                        <li>🏦 Total Repayment: ₹1,04,13,879</li>
+                    </ul>
+                    <p class="mt-4">Notice that the total interest is actually <strong>more</strong> than the original loan amount. This highlights the importance of accounting for <a href="/inflation" class="text-blue-600">Inflation</a> and the benefit of periodic prepayments to reduce total cost.</p>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is EMI in home loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">EMI is the fixed monthly payment that covers a part of the principal and the interest on the remaining loan amount.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How much home loan can I get?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">It depends on your income, age, and existing debts. Usually, banks lend 50-60% of your net monthly income as EMI. Check our <a href="/loan-eligibility" class="text-blue-600">Loan Eligibility Tool</a> for details.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What salary is required for ₹50 lakh home loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">For a ₹50L loan (8.5%, 20Y), the EMI is ~₹43,400. To qualify, a net monthly salary of approx ₹85,000 to ₹1,00,000 is required.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm text-pretty">Should I choose longer tenure or higher EMI?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Choose the highest EMI you can comfortably afford. Shortening the tenure even by 5 years can save you lakhs in total interest.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm text-pretty">How much down payment is required?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Typically, banks finance 80-90% of the property value (LTV ratio), so you need 10-20% as a down payment from your own <a href="/sip" class="text-blue-600">mutual fund savings</a>.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm text-pretty">Is prepayment allowed in home loans?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">Yes. Most banks allow zero-penalty prepayments on floating-rate loans. This is the most efficient way to reduce your <a href="/cagr" class="text-blue-600 font-medium">overall loan cost</a>.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <a href="/emi" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">EMI Calculator</h4>
+                    </a>
+                    <a href="/loan-eligibility" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Loan Eligibility</h4>
+                    </a>
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                    <a href="/inflation" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Inflation</h4>
+                    </a>
+                    <a href="/cagr" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 hover:-translate-y-1 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">CAGR Tool</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Calculations are based on the reducing balance method used by major banks. Actual bank EMIs may vary based on credit profile, specific bank policies, and changes in the RBI Repo Rate.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            principalInp: document.getElementById('principalInput'),
+            principalRng: document.getElementById('principalRange'), 
+            downInp: document.getElementById('downPaymentInput'),
+            downRng: document.getElementById('downPaymentRange'),
+            rateInp: document.getElementById('rateInput'),
+            rateRng: document.getElementById('rateRange'),
+            yearsInp: document.getElementById('yearsInput'),
+            yearsRng: document.getElementById('yearsRange'),
+            emiValDisp: document.getElementById('emiValDisp'),
+            totalPaymentDisp: document.getElementById('totalPaymentDisp'),
+            netLoanDisp: document.getElementById('netLoanDisp'),
+            totalInterestDisp: document.getElementById('totalInterestDisp'),
+            principalBar: document.getElementById('principalBar'),
+            interestBar: document.getElementById('interestBar'),
+            principalLabel: document.getElementById('principalLabel'),
+            interestLabel: document.getElementById('interestLabel'),
+            projectionTable: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function updateCalculations() {
+            const propertyVal = parseFloat(elements.principalInp.value) || 0;
+            const downPayment = parseFloat(elements.downInp.value) || 0;
+            const annualRate = parseFloat(elements.rateInp.value) || 0;
+            const years = parseFloat(elements.yearsInp.value) || 0;
+
+            const principal = Math.max(0, propertyVal - downPayment);
+            const r = annualRate / 12 / 100;
+            const n = years * 12;
+
+            let emi = 0;
+            if (principal > 0 && n > 0) {
+                if (r > 0) {
+                    emi = principal * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+                } else {
+                    emi = principal / n;
+                }
+            }
+
+            const totalPayment = emi * n;
+            const totalInterest = totalPayment - principal;
+
+            // Basic UI Updates
+            elements.emiValDisp.textContent = formatInr(emi);
+            elements.totalPaymentDisp.textContent = formatInr(totalPayment);
+            elements.netLoanDisp.textContent = formatInr(principal);
+            elements.totalInterestDisp.textContent = formatInr(totalInterest);
+
+            // Progress Bar & Labels
+            elements.principalLabel.textContent = "Principal: " + formatCompact(principal);
+            elements.interestLabel.textContent = "Interest: " + formatCompact(totalInterest);
+            const pPerc = (principal / totalPayment) * 100 || 0;
+            elements.principalBar.style.width = pPerc + "%";
+            elements.interestBar.style.width = (100 - pPerc) + "%";
+
+            renderTable(principal, r, n, emi);
+        }
+
+        function renderTable(principal, monthlyRate, totalMonths, emi) {
+            elements.projectionTable.innerHTML = '';
+            let balance = principal;
+            let yearlyPrincipal = 0;
+            let yearlyInterest = 0;
+
+            for (let m = 1; m <= totalMonths; m++) {
+                const interest = balance * monthlyRate;
+                const paidPrincipal = emi - interest;
+                yearlyPrincipal += paidPrincipal;
+                yearlyInterest += interest;
+                balance -= paidPrincipal;
+
+                if (m % 12 === 0 || m === totalMonths) {
+                    const row = `<tr>
+                        <td class="px-4 py-3 font-medium text-slate-600">Year ${Math.ceil(m / 12)}</td>
+                        <td class="px-4 py-3 text-right text-emerald-600">${formatInr(yearlyPrincipal)}</td>
+                        <td class="px-4 py-3 text-right text-red-400">${formatInr(yearlyInterest)}</td>
+                        <td class="px-4 py-3 text-right font-bold text-slate-800">${formatInr(Math.max(0, balance))}</td>
+                    </tr>`;
+                    elements.projectionTable.insertAdjacentHTML('beforeend', row);
+                    yearlyPrincipal = 0;
+                    yearlyInterest = 0;
+                }
+            }
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.principalInp, elements.principalRng);
+            setupSync(elements.downInp, elements.downRng);
+            setupSync(elements.rateInp, elements.rateRng);
+            setupSync(elements.yearsInp, elements.yearsRng);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
