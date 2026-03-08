@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inflation Calculator India – Calculate Future Value & Purchasing Power (2026)</title>
-    <meta name="description" content="Use the best Inflation Calculator India (2026) to estimate the future cost of your goals. Calculate purchasing power loss and how inflation affects your savings over time.">
-    <meta name="keywords" content="Inflation Calculator India, future value calculator, purchasing power calculator, cost of living calculator India, inflation impact on savings">
+    <title>Inflation Calculator India – Future Value & Purchasing Power Calculator (2026)</title>
+    <meta name="description" content="Calculate the impact of inflation on your savings with the best Inflation Calculator India (2026). Estimate future costs, purchasing power loss, and plan your retirement wealth.">
+    <meta name="keywords" content="Inflation Calculator India, future value inflation calculator, purchasing power calculator, cost of living calculator India, inflation impact on savings, retirement planning India">
     <meta name="author" content="Ashish Kumar">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/inflation/">
     
-    <!-- Font Optimization -->
+    <!-- Optimization & Libraries -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Inflation Calculator India – Calculate Future Value & Costs">
-    <meta property="og:description" content="Understand the impact of inflation on your money. Calculate how much you'll need in the future to maintain your current lifestyle.">
+    <meta property="og:description" content="Calculate how much you'll need in the future to maintain your current lifestyle. Visualize purchasing power loss with interactive charts.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arthcalculator.in/inflation/">
     
@@ -27,89 +28,11 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Inflation Calculator India (2026)",
-      "description": "A high-precision financial tool to calculate the impact of inflation on the future value of money.",
+      "description": "High-precision tool to calculate future value and purchasing power loss due to inflation in India.",
       "publisher": {
         "@type": "Organization",
-        "name": "Financial Suite India"
+        "name": "ArthCalculator"
       }
-    }
-    </script>
-
-    <!-- Schema Markup: Breadcrumb -->
-    <script type="application/ld+json">
-    {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Financial Calculators",
-       "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "Inflation Calculator",
-       "item": "https://arthcalculator.in/inflation/"
-      }
-     ]
-    }
-    </script>
-
-    <!-- Schema Markup: FAQ (SEO Optimized) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the average inflation rate in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Historically, the average inflation rate in India has hovered between 5% and 6% over the last decade. It is crucial to account for this when planning long-term goals."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does inflation affect my savings?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Inflation reduces the 'real value' of your money. If the inflation rate is 6%, your money must grow at more than 6% just to maintain its purchasing power."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Rule of 72 in inflation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Rule of 72 can estimate how long it will take for the cost of living to double. Divide 72 by the inflation rate (e.g., 72 / 6% inflation = 12 years). This means your expenses could double in 12 years."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I protect my wealth from inflation in India?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "To beat inflation, you must invest in assets that offer returns higher than the inflation rate. This typically includes Equity Mutual Funds (via SIP), Real Estate, or Gold, as traditional savings accounts often yield lower than inflation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the difference between Nominal and Real returns?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nominal return is the percentage gain on your investment. Real return is the nominal return minus the inflation rate. If your FD gives 7% but inflation is 6%, your real return is only 1%."
-          }
-        }
-      ]
     }
     </script>
 
@@ -130,6 +53,8 @@
         details summary::-webkit-details-marker { display: none; }
         details[open] summary svg { transform: rotate(180deg); }
         .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
+        .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
     </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
@@ -145,7 +70,7 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="text-blue-600">Inflation Calculator</li>
@@ -154,27 +79,28 @@
 
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="max-w-3xl">
-                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Inflation Calculator India (2026) – Future Cost & Purchasing Power Calculator</h1>
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Inflation Calculator India</h1>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed text-pretty">
-                        Calculate how much your money will be worth in the future or how much a current expense will cost years from now. Our tool helps you factor in the Indian inflation rate for precise long-term planning.
+                        Determine the future cost of your lifestyle and see how much the value of your money decreases over time. Factor in Indian inflation rates for precise retirement and financial planning.
                     </p>
-                    
-                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
-                        <a href="#about-inflation" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
-                        <span class="text-slate-300">|</span>
-                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
-                        <span class="text-slate-300">|</span>
-                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
-                    </div>
                 </div>
-                <div class="hidden md:block mt-4 md:mt-0 text-pretty">
-                    <span class="bg-red-50 text-red-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-red-100 shadow-sm">2026 Inflation Adjusted</span>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-red-50 text-red-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-red-100 shadow-sm">Updated for 2026</span>
                 </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4">
+        
+        <!-- Quick Examples Section -->
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest w-full mb-2 text-center md:text-left">Quick Examples:</span>
+            <button onclick="applyExample(50000, 6, 25)" class="btn-outline text-[10px] sm:text-xs px-3 py-1.5 rounded-full font-medium text-slate-600">₹50k Monthly Exp (25Y)</button>
+            <button onclick="applyExample(1000000, 6, 15)" class="btn-outline text-[10px] sm:text-xs px-3 py-1.5 rounded-full font-medium text-slate-600">₹10 Lakh Savings (15Y)</button>
+            <button onclick="applyExample(500000, 7, 10)" class="btn-outline text-[10px] sm:text-xs px-3 py-1.5 rounded-full font-medium text-slate-600">₹5 Lakh Goal (10Y)</button>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
             
             <!-- Left Side: Inputs -->
@@ -188,7 +114,7 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Current Amount (₹)</label>
-                            <input type="number" id="monthlyInput" value="100000" min="1000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" id="monthlyInput" value="100000" min="1000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="monthlyRange" min="1000" max="10000000" step="5000" value="100000" class="w-full py-2 cursor-pointer">
                     </div>
@@ -197,18 +123,25 @@
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Inflation Rate (% p.a)</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="rateInput" value="6" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" id="rateInput" value="6" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
                             </div>
                         </div>
                         <input type="range" id="rateRange" min="1" max="20" step="0.1" value="6" class="w-full py-2 cursor-pointer">
+                        
+                        <!-- Scenario Buttons -->
+                        <div class="mt-4 flex gap-2">
+                            <button onclick="setRate(4)" class="flex-1 py-1.5 text-[10px] font-bold rounded-lg border border-slate-200 hover:bg-slate-50">Conservative (4%)</button>
+                            <button onclick="setRate(6)" class="flex-1 py-1.5 text-[10px] font-bold rounded-lg border border-slate-200 hover:bg-slate-50">Average (6%)</button>
+                            <button onclick="setRate(8)" class="flex-1 py-1.5 text-[10px] font-bold rounded-lg border border-slate-200 hover:bg-slate-50">High (8%)</button>
+                        </div>
                     </div>
 
                     <div class="mb-6">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Number of Years</label>
                             <div class="relative w-full sm:w-28">
-                                <input type="number" id="yearsInput" value="10" min="1" max="50" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <input type="number" id="yearsInput" value="10" min="1" max="50" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
                             </div>
                         </div>
@@ -218,17 +151,6 @@
                     <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
                         Calculate Impact
                     </button>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
-                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Today's Value</p>
-                        <h3 id="totalInvestedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
-                    </div>
-                    <div class="bg-red-500 p-5 rounded-2xl text-white shadow-lg shadow-red-200">
-                        <p class="text-red-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Cost Increase</p>
-                        <h3 id="wealthGainedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
-                    </div>
                 </div>
             </div>
 
@@ -246,8 +168,8 @@
                         <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
                              <div class="h-8 w-1 bg-red-500 rounded-full mr-3"></div>
                              <div>
-                                <p class="text-[10px] text-slate-500 uppercase font-bold">Years of Impact</p>
-                                <p class="font-bold text-slate-800 text-sm" id="finalMonthlyDisp">10 Years</p>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Total Increase %</p>
+                                <p class="font-bold text-slate-800 text-sm" id="percentageGrowth">0%</p>
                              </div>
                         </div>
                     </div>
@@ -273,152 +195,140 @@
                         </div>
                     </div>
 
-                    <hr class="border-slate-100 mb-6">
+                    <!-- Additional Insights -->
+                    <div id="insightsBox" class="bg-slate-50 p-4 rounded-xl border border-slate-100 mb-8 text-sm text-slate-600 leading-relaxed text-pretty">
+                        <!-- Dynamic Insights Injected -->
+                    </div>
 
-                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4 text-pretty">Year-on-Year Cost Increase</h3>
-                    <div id="tableSection" class="overflow-hidden">
-                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
-                            <table class="w-full text-left text-[11px] sm:text-sm">
-                                <thead class="bg-slate-50 sticky top-0 z-10">
-                                    <tr>
-                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Year</th>
-                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Annual Addition</th>
-                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Cumulative Value</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="projectionTable"></tbody>
-                            </table>
-                        </div>
+                    <hr class="border-slate-100 mb-8">
+
+                    <!-- Interactive Chart -->
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-6">Purchasing Power Loss Visualization</h3>
+                    <div class="h-[250px] sm:h-[300px] w-full" style="position: relative;">
+                        <canvas id="inflationChart"></canvas>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Educational Content Section -->
+        <!-- SEO Content Sections -->
         <div class="space-y-12 mb-12">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about-inflation">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Understanding Inflation in India</h2>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is Inflation?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed text-sm sm:text-base">
                     <p class="mb-4">
-                        Inflation is the rate at which the general level of prices for goods and services is rising, and, subsequently, purchasing power is falling. In simple terms, ₹100 today will not buy the same amount of goods 10 years from now.
+                        Inflation is the rate at which the general level of prices for goods and services is rising. As inflation grows, every rupee you own buys a smaller percentage of a good or service. This process is essentially the <strong>erosion of purchasing power</strong>.
                     </p>
-                    <p class="mb-4">
-                        For Indian savers, understanding inflation is the first step toward wealth creation. If you invest in a <a href="/fd" class="text-blue-600 hover:underline">Fixed Deposit</a> offering 7% interest while inflation is at 6%, your real growth is only 1%. This is why aggressive tools like <a href="/sip" class="text-blue-600 hover:underline">Mutual Fund SIPs</a> are often recommended to beat long-term inflation.
+                    <p class="mb-4 text-pretty text-slate-600">
+                        In an Indian context, if the inflation rate is 6%, an item that costs ₹100 today will cost ₹106 next year. While this seems small in the short term, over 20-30 years, it can quadruple the cost of education, healthcare, and daily living. Use our <strong>Purchasing Power Calculator</strong> above to see how your money devalues.
                     </p>
                 </div>
             </section>
 
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Inflation Calculation Formula</h3>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Why Inflation Matters for Financial Planning</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 leading-relaxed text-sm sm:text-base">
+                    <p class="mb-4">
+                        Failing to account for inflation is the biggest mistake in long-term financial planning. Here is why it matters:
+                    </p>
+                    <ul class="list-disc ml-6 space-y-3 mb-6">
+                        <li><strong>Retirement Planning:</strong> ₹1 Lakh monthly expense today might require ₹4 Lakhs monthly in 25 years just to maintain the same standard of living.</li>
+                        <li><strong>Savings Goals:</strong> If your <a href="/fd" class="text-blue-600 underline">Fixed Deposit</a> earns 7% interest but inflation is 6%, your "Real Rate of Return" is only 1%.</li>
+                        <li><strong>Investment Strategy:</strong> To beat inflation, investors often need to look beyond traditional savings and explore <a href="/sip" class="text-blue-600 underline">Mutual Fund SIPs</a> or Equity.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-4" id="formula">Inflation Formula Used in the Calculator</h2>
+                <p class="text-slate-600 mb-6">The calculator uses the compound interest formula to determine the future cost of goods:</p>
                 <div class="formula-box text-blue-800 text-center mb-6 text-sm">
                     FV = PV × (1 + r)<sup>n</sup>
                 </div>
                 <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
                     <p><strong>FV:</strong> Future Value (Cost in the future)</p>
-                    <p><strong>PV:</strong> Present Value (Current amount)</p>
-                    <p><strong>r:</strong> Annual Inflation Rate</p>
+                    <p><strong>PV:</strong> Present Value (Current amount/cost)</p>
+                    <p><strong>r:</strong> Annual Inflation Rate (decimal)</p>
                     <p><strong>n:</strong> Number of Years</p>
                 </div>
             </section>
 
-            <!-- Related Tools Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial Tools</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <a href="/sip" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Growth that beats inflation.</p>
-                    </a>
-                    <a href="/income-tax" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Income Tax</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Plan your tax outflows.</p>
-                    </a>
-                    <a href="/emi" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Manage your loan repayments.</p>
-                    </a>
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Example of Inflation Calculation</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed text-pretty">
+                    <p class="mb-4 text-slate-600">
+                        Let's take a common goal: <strong>Higher Education</strong>. If a course costs <strong>₹10,00,000</strong> today, what will it cost in 15 years assuming a 6% average inflation rate?
+                    </p>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 font-medium">
+                        Calculation: 1,000,000 × (1 + 0.06)<sup>15</sup> = <strong>₹23,96,558</strong>
+                    </div>
+                    <p class="mt-4 text-slate-600">
+                        This means in just 15 years, the cost has more than doubled. This is why using a <strong>Future Value Inflation Calculator</strong> is vital for parenting and retirement goals.
+                    </p>
                 </div>
             </section>
 
-            <!-- FAQ Section (SEO Optimized) -->
+            <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Why should I use an inflation calculator?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            It helps you set realistic financial goals. For example, if your child's education costs ₹10 Lakhs today, the calculator will show you that at 6% inflation, it will cost nearly ₹18 Lakhs in 10 years.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is "Purchasing Power"?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Purchasing power is the value of a currency expressed in terms of the amount of goods or services that one unit of money can buy. It weakens as inflation rises.
-                        </div>
-                    </details>
-                    <!-- New SEO FAQ 1 -->
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is the "Rule of 72" in inflation?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            The Rule of 72 is a quick way to estimate how long it will take for your expenses to double. Simply divide 72 by the inflation rate. For instance, at a 6% inflation rate, your cost of living will double in roughly 12 years (72 / 6).
-                        </div>
-                    </details>
-                    <!-- New SEO FAQ 2 -->
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">How can I protect my savings from inflation in India?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What inflation rate should I assume in India?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">
-                            To protect your wealth, you should diversify into growth-oriented assets. Historically, Equity Mutual Funds, Real Estate, and Gold have provided inflation-beating returns in the long term. Using an <a href="/sip" class="text-blue-600 underline">SIP</a> is a proven method for retail investors to stay ahead of the rising cost of living.
+                            For long-term planning (10-20 years), assuming an inflation rate of <strong>6%</strong> is standard for India. For specific sectors like Education or Healthcare, inflation can be as high as 8-10%.
                         </div>
                     </details>
-                    <!-- New SEO FAQ 3 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is the difference between Nominal and Real Rate of Return?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">How accurate are inflation calculators?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            The Nominal rate is the percentage return your investment generates before inflation. The Real rate is what you actually earn after subtracting inflation. For example, if your investment yields 10% and inflation is 6%, your Real rate of return is 4%.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">
+                            They are mathematically accurate based on your inputs. However, actual inflation fluctuates due to government policy, global oil prices, and monsoon performance.
                         </div>
                     </details>
-                    <!-- New SEO FAQ 4 -->
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">What is "Lifestyle Inflation"?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Does inflation affect all expenses equally?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Lifestyle inflation occurs when your spending increases as your income grows. Unlike economic inflation, which is external, lifestyle inflation is a personal choice that can make it harder to build long-term wealth even if your salary is high.
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">
+                            No. Electronics often see "deflation" or stable prices, while services like education, housing, and domestic help usually grow faster than the average CPI inflation rate.
                         </div>
                     </details>
-                    <!-- New SEO FAQ 5 -->
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">Is a 6% inflation rate normal for India?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes, India is a developing economy, and the RBI typically aims to keep inflation in the 4% to 6% range. While this might seem high compared to developed nations, it is a standard expectation for the Indian market.
-                        </div>
-                    </details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Inflation vs Investment Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="/sip" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Growth that beats inflation.</p>
+                    </a>
+                    <a href="/cagr" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate your growth rate.</p>
+                    </a>
+                    <a href="/swp" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SWP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan retirement income.</p>
+                    </a>
+                    <a href="/emi" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Manage loan costs.</p>
+                    </a>
                 </div>
             </section>
 
             <!-- Disclaimer -->
             <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
                 <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                The results provided are estimates based on user-input inflation rates. Actual inflation varies year-on-year based on economic factors. This tool is for educational purposes only.
+                This calculator provides estimated results for educational purposes only. Actual inflation varies year-on-year based on economic factors. ArthCalculator is not responsible for any financial decisions made based on these estimations.
                 <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
             </div>
         </div>
@@ -426,11 +336,32 @@
 
 <div id="footer"></div>
 <script>
-fetch("/navbar").then(res => res.text()).then(data => { document.getElementById("navbar").innerHTML = data; });
-fetch("/footer").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+fetch("/navbar.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("navbar").innerHTML = data;
+
+  // Activate hamburger AFTER navbar loads
+  const btn = document.getElementById("menuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  if(btn){
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  }
+});
+
+fetch("/footer.html")
+.then(res => res.text())
+.then(data => {
+  document.getElementById("footer").innerHTML = data;
+});
 </script>
     
     <script>
+        let inflationChart = null;
+
         const elements = {
             amountInput: document.getElementById('monthlyInput'),
             amountRange: document.getElementById('monthlyRange'), 
@@ -439,23 +370,40 @@ fetch("/footer").then(res => res.text()).then(data => { document.getElementById(
             yearsInput: document.getElementById('yearsInput'),
             yearsRange: document.getElementById('yearsRange'),
             maturityValue: document.getElementById('maturityValue'),
+            percentageGrowth: document.getElementById('percentageGrowth'),
             investedLabel: document.getElementById('investedLabel'),
             returnsLabel: document.getElementById('returnsLabel'),
             investedBar: document.getElementById('investedBar'),
             returnsBar: document.getElementById('returnsBar'),
-            finalMonthlyDisp: document.getElementById('finalMonthlyDisp'),
             totalInvestedMobile: document.getElementById('totalInvestedMobile'),
             wealthGainedMobile: document.getElementById('wealthGainedMobile'),
             projectionTable: document.getElementById('projectionTable'),
+            insightsBox: document.getElementById('insightsBox'),
             calcBtn: document.getElementById('calcBtn')
         };
 
         function formatIndian(val) {
-            return "₹" + (new Intl.NumberFormat('en-IN').format(Math.round(val)));
+            return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val)));
         }
 
         function formatCompact(val) {
             return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+        }
+
+        function applyExample(amount, rate, years) {
+            elements.amountInput.value = amount;
+            elements.amountRange.value = amount;
+            elements.rateInput.value = rate;
+            elements.rateRange.value = rate;
+            elements.yearsInput.value = years;
+            elements.yearsRange.value = years;
+            updateCalculations();
+        }
+
+        function setRate(rate) {
+            elements.rateInput.value = rate;
+            elements.rateRange.value = rate;
+            updateCalculations();
         }
 
         function updateCalculations() {
@@ -465,38 +413,99 @@ fetch("/footer").then(res => res.text()).then(data => { document.getElementById(
 
             const FV = PV * Math.pow(1 + r, n);
             const impact = FV - PV;
+            const purchasingPower = PV / Math.pow(1 + r, n);
+            const totalIncreasePerc = ((FV - PV) / PV) * 100;
 
             elements.maturityValue.textContent = formatIndian(FV);
             elements.totalInvestedMobile.textContent = formatIndian(PV);
             elements.wealthGainedMobile.textContent = formatIndian(impact);
+            elements.percentageGrowth.textContent = totalIncreasePerc.toFixed(1) + "%";
             
             elements.investedLabel.textContent = `Today: ₹${formatCompact(PV)}`;
             elements.returnsLabel.textContent = `Impact: ₹${formatCompact(impact)}`;
-            elements.finalMonthlyDisp.textContent = n + " Years";
 
             const basePercent = (PV / FV) * 100 || 0;
             elements.investedBar.style.width = `${basePercent}%`;
             elements.returnsBar.style.width = `${100 - basePercent}%`;
 
-            renderTable(PV, r, n);
+            // Insights Injection
+            elements.insightsBox.innerHTML = `
+                <p>💡 <strong>Insight:</strong> ${formatIndian(PV)} today will require <strong>${formatIndian(FV)}</strong> after ${n} years at ${elements.rateInput.value}% inflation.</p>
+                <p class="mt-2 text-red-600">⚠️ Your current savings of ${formatIndian(PV)} will only have the purchasing power of <strong>${formatIndian(purchasingPower)}</strong> in ${n} years.</p>
+            `;
+
+            renderTableAndChart(PV, r, n);
         }
 
-        function renderTable(pv, rate, years) {
-            elements.projectionTable.innerHTML = '';
+        function renderTableAndChart(pv, rate, years) {
+            const labels = ['Year 0'];
+            const dataFutureValues = [pv];
+            const dataPurchasingPower = [pv];
+
             let currentVal = pv;
             for (let y = 1; y <= years; y++) {
                 const increase = currentVal * rate;
                 const closing = currentVal + increase;
-                const row = document.createElement('tr');
-                row.className = 'hover:bg-slate-50 transition-colors';
-                row.innerHTML = `
-                    <td class="px-3 py-3 border-b border-slate-100 font-medium text-slate-700">Year ${y}</td>
-                    <td class="px-3 py-3 border-b border-slate-100 text-right text-red-500">+ ₹${formatCompact(increase)}</td>
-                    <td class="px-3 py-3 border-b border-slate-100 text-right font-bold text-slate-800">₹${formatCompact(closing)}</td>
-                `;
-                elements.projectionTable.appendChild(row);
+                const ppLoss = pv / Math.pow(1 + rate, y);
+
+                labels.push('Year ' + y);
+                dataFutureValues.push(closing);
+                dataPurchasingPower.push(ppLoss);
+
                 currentVal = closing;
             }
+
+            updateChart(labels, dataFutureValues, dataPurchasingPower);
+        }
+
+        function updateChart(labels, futureValues, ppValues) {
+            const ctx = document.getElementById('inflationChart').getContext('2d');
+            
+            if (inflationChart) {
+                inflationChart.destroy();
+            }
+
+            inflationChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Future Cost (FV)',
+                            data: futureValues,
+                            borderColor: '#ef4444',
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 2
+                        },
+                        {
+                            label: 'Purchasing Power Value',
+                            data: ppValues,
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            pointRadius: 2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { font: { size: 10, weight: '600' } } },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
+                    scales: {
+                        y: { 
+                            beginAtZero: false,
+                            ticks: { callback: value => '₹' + formatCompact(value), font: { size: 10 } }
+                        },
+                        x: { ticks: { font: { size: 10 } } }
+                    }
+                }
+            });
         }
 
         function setupSync(input, range) {
@@ -509,6 +518,8 @@ fetch("/footer").then(res => res.text()).then(data => { document.getElementById(
             setupSync(elements.rateInput, elements.rateRange);
             setupSync(elements.yearsInput, elements.yearsRange);
             elements.calcBtn.addEventListener('click', updateCalculations);
+            
+            // Initial call
             updateCalculations();
         });
     </script>
