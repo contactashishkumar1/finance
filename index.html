@@ -3,104 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- FIXED SEO TITLE -->
     <title>Financial Calculators India – SIP, EMI, FD & Investment Planning Tools</title>
-
-    <meta name="description" content="An independent educational platform providing precise financial calculators for SIP, EMI, FD, and CAGR. Understand the math behind your money before you invest.">
+    <meta name="description" content="Independent educational platform providing 30+ precise financial calculators for SIP, EMI, FD, and CAGR. Managed by experts to simplify Indian tax and investment planning.">
     <meta name="author" content="Ashish Kumar">
-    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://arthcalculator.in/">
 
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Financial Calculators India – SIP, EMI, FD & Investment Planning Tools">
-    <meta property="og:description" content="An independent educational platform providing precise financial calculators for SIP, EMI, FD, and CAGR. Understand the math behind your money before you invest.">
+    <meta property="og:title" content="Financial Calculators India – ArthCalculator">
+    <meta property="og:description" content="Calculate SIP, EMI, Income Tax, and more with 30+ free professional tools built for the Indian market.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://contactashishkumar1.github.io/Finance/">
-
-    <!-- ADDED PREVIEW IMAGE -->
-    <meta property="og:image" content="https://contactashishkumar1.github.io/Finance/favicon.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-
+    <meta property="og:url" content="https://arthcalculator.in/">
     <meta property="og:site_name" content="ArthCalculator">
 
-    <link rel="canonical" href="https://contactashishkumar1.github.io/Finance/">
-
-    <!-- Website Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "ArthCalculator",
-      "url": "https://contactashishkumar1.github.io/Finance/",
-      "description": "Free financial calculators for SIP, EMI, FD and investment planning in India."
-    }
-    </script>
-
-    <!-- FIXED ORGANIZATION SCHEMA (E-E-A-T IMPORTANT) -->
+    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ArthCalculator",
-      "url": "https://contactashishkumar1.github.io/Finance/",
-      "logo": "https://contactashishkumar1.github.io/Finance/favicon.png",
-      "founder": {
-        "@type": "Person",
-        "name": "Ashish Kumar"
-      },
-      "description": "Educational financial calculators for investment and loan planning."
+      "url": "https://arthcalculator.in/",
+      "logo": "https://arthcalculator.in/favicon.png",
+      "description": "Independent financial education platform providing free calculators for Indian users."
+    }
+    </script>
+
+    <!-- WebSite Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://arthcalculator.in/calculators/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: inline-block;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        .nav-link {
-            transition: all 0.2s ease;
-            position: relative;
-            padding: 0.5rem 0.25rem;
-        }
-        .nav-link.active {
-            color: #2563eb;
-            font-weight: 600;
-        }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #2563eb;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05); }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="text-slate-800 antialiased">
-  <div id="navbar"></div>
-    
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="/" aria-label="ArthCalculator Home" class="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight hover:text-blue-600 transition-colors flex items-center gap-1">
+                        <span class="text-blue-600">Arth</span>Calculator
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6 overflow-x-auto no-scrollbar ml-4 py-1">
+                    <a href="/calculators/" class="nav-link text-slate-500 hover:text-blue-600 text-sm font-medium whitespace-nowrap">Calculators</a>
+                    <a href="/sip/" class="nav-link text-slate-500 hover:text-blue-600 text-sm font-medium whitespace-nowrap">SIP</a>
+                    <a href="/emi/" class="nav-link text-slate-500 hover:text-blue-600 text-sm font-medium whitespace-nowrap">EMI</a>
+                    <a href="/about/" class="nav-link text-slate-500 hover:text-blue-600 text-sm font-medium whitespace-nowrap">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <header class="bg-white border-b border-slate-200 pt-16 pb-20 sm:pt-24 sm:pb-28">
-        <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="max-w-4xl mx-auto px-4 text-center text-pretty">
+            <!-- Total Count Trust Signal Updated -->
+            <div class="mb-6 inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-4 py-1.5 rounded-full text-blue-700 text-xs font-bold uppercase tracking-wider">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                30+ Financial Calculators and Growing 🚀
+            </div>
+            
             <h1 class="text-4xl sm:text-6xl font-bold gradient-text leading-[1.2] mb-4 pb-2">Financial Calculators India – Master Your Investments, Tax & Savings</h1>
             <p class="text-slate-600 text-sm sm:text-lg font-medium mb-6 leading-relaxed">
                 Accurate planning tools for SIP, Income Tax, EMI, EPF, and more—built on official Indian financial protocols and verified mathematical formulas.
@@ -109,335 +97,141 @@
                 ArthCalculator provides the data clarity you need to plan your future wealth, optimize tax liability, and manage loans using real numbers instead of guesswork.
             </p>
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="/sip" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 text-center">
+                <a href="/sip/" aria-label="Open SIP Calculator" class="w-full sm:w-auto px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 text-center">
                     Start with SIP Calculator
                 </a>
-                <a href="#calculators" class="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 hover:border-blue-300 text-slate-700 font-bold rounded-xl transition-all text-center">
-                    Explore All 10 Tools
+                <a href="/calculators/" aria-label="View All Calculators" class="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 hover:border-blue-300 text-slate-700 font-bold rounded-xl transition-all text-center">
+                    Explore All Tools
                 </a>
             </div>
-            <p class="text-slate-400 text-[10px] mt-6 uppercase tracking-wider font-bold">Comprehensive Suite for Investment, Tax, & Retirement Planning</p>
+
+            <!-- SEO Intro Paragraph Updated -->
+            <div class="mt-16 pt-10 border-t border-slate-100 text-slate-600 text-sm sm:text-base leading-relaxed max-w-4xl mx-auto text-pretty">
+                <p>ArthCalculator is an <strong>independent financial education platform for Indian users</strong>. Whether you are looking to calculate your <strong>Mutual Fund SIP returns</strong>, estimate <strong>Home Loan EMIs</strong>, or compare <strong>Income Tax regimes</strong>, our precision-built calculators provide instant, accurate data. Developed by financial experts, these tools help you navigate complex decisions like retirement corpus planning, debt payoff strategies, and tax optimizations with ease.</p>
+            </div>
         </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-4 py-16 space-y-24">
 
-        <!-- Calculator Tools Section -->
-        <section id="calculators">
+        <!-- Browse by Category Section -->
+        <section id="categories">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-slate-900 mb-4">Precision Planning Tools</h2>
-                <p class="text-slate-500">Select a tool below to begin your calculations.</p>
+                <h2 class="text-2xl font-bold text-slate-900 mb-2">Browse by Category</h2>
+                <p class="text-slate-500 text-sm">Find exactly what you need to calculate today.</p>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- SIP -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">SIP Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Estimate wealth gain through mutual fund systematic plans with annual step-up options.</p>
-                    </div>
-                    <a href="/sip" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <a href="/calculators/#investment" aria-label="Investment Calculators Section" class="p-8 bg-blue-50 border border-blue-100 rounded-3xl text-center group hover:bg-blue-600 transition-all">
+                    <div class="text-3xl mb-3">💰</div>
+                    <h3 class="text-lg font-bold text-blue-900 group-hover:text-white transition-colors">Investment Calculators</h3>
+                    <p class="text-blue-700 text-xs mt-2 group-hover:text-blue-100 transition-colors">SIP, CAGR, Retirement & more</p>
+                </a>
+                <a href="/calculators/#loans" aria-label="Loan Calculators Section" class="p-8 bg-indigo-50 border border-indigo-100 rounded-3xl text-center group hover:bg-indigo-600 transition-all">
+                    <div class="text-3xl mb-3">💳</div>
+                    <h3 class="text-lg font-bold text-indigo-900 group-hover:text-white transition-colors">Loan Calculators</h3>
+                    <p class="text-indigo-700 text-xs mt-2 group-hover:text-indigo-100 transition-colors">Home, Car, Prepayment & more</p>
+                </a>
+                <a href="/calculators/#tax" aria-label="Tax & Salary Section" class="p-8 bg-emerald-50 border border-emerald-100 rounded-3xl text-center group hover:bg-emerald-600 transition-all">
+                    <div class="text-3xl mb-3">📑</div>
+                    <h3 class="text-lg font-bold text-emerald-900 group-hover:text-white transition-colors">Tax & Salary</h3>
+                    <p class="text-emerald-700 text-xs mt-2 group-hover:text-emerald-100 transition-colors">Income Tax, GST, HRA & more</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Popular Calculators Section -->
+        <section id="popular">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-2">Popular Tools ⭐</h2>
+                    <p class="text-slate-500">Most used financial planners by Indian users.</p>
                 </div>
-                <!-- EMI -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">EMI Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Calculate monthly installments and total interest burden for home or car loans.</p>
-                    </div>
-                    <a href="/emi" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
+                <a href="/calculators/" aria-label="View all tools" class="text-blue-600 font-bold text-sm hover:underline">View All 30+ Tools →</a>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <a href="/sip/" aria-label="SIP Calculator" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:scale-[1.02] hover:shadow-lg transition-all card-shadow flex flex-col justify-between group">
+                    <div><h3 class="text-lg font-bold text-slate-800 mb-2">SIP Calculator 💰</h3><p class="text-xs text-slate-500 mb-6">Estimate future wealth gain through mutual fund systematic plans in India.</p></div>
+                    <span class="text-blue-600 text-xs font-bold group-hover:translate-x-1 transition-transform">Calculate Now →</span>
+                </a>
+
+                <a href="/emi/" aria-label="EMI Calculator" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:scale-[1.02] hover:shadow-lg transition-all card-shadow flex flex-col justify-between group text-pretty">
+                    <div><h3 class="text-lg font-bold text-slate-800 mb-2">EMI Calculator 💳</h3><p class="text-xs text-slate-500 mb-6">Calculate monthly installments for Home, Car, or Personal loans.</p></div>
+                    <span class="text-blue-600 text-xs font-bold group-hover:translate-x-1 transition-transform">Calculate Now →</span>
+                </a>
+
+                <a href="/income-tax/" aria-label="Income Tax Calculator" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:scale-[1.02] hover:shadow-lg transition-all card-shadow flex flex-col justify-between group">
+                    <div><h3 class="text-lg font-bold text-slate-800 mb-2">Income Tax 📑</h3><p class="text-xs text-slate-500 mb-6">Compare Old vs New tax regimes for FY 2025-26 under Budget rules.</p></div>
+                    <span class="text-blue-600 text-xs font-bold group-hover:translate-x-1 transition-transform">Calculate Now →</span>
+                </a>
+
+                <a href="/gst/" aria-label="GST Calculator" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:scale-[1.02] hover:shadow-lg transition-all card-shadow flex flex-col justify-between group">
+                    <div><h3 class="text-lg font-bold text-slate-800 mb-2">GST Calculator 📦</h3><p class="text-xs text-slate-500 mb-6">Instantly add or remove Goods and Services Tax from any billing amount.</p></div>
+                    <span class="text-blue-600 text-xs font-bold group-hover:translate-x-1 transition-transform">Calculate Now →</span>
+                </a>
+
+                <a href="/retirement/" aria-label="Retirement Calculator" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:scale-[1.02] hover:shadow-lg transition-all card-shadow flex flex-col justify-between group">
+                    <div><h3 class="text-lg font-bold text-slate-800 mb-2">Retirement 👴</h3><p class="text-xs text-slate-500 mb-6">Determine the exact corpus you need to maintain your lifestyle after 60.</p></div>
+                    <span class="text-blue-600 text-xs font-bold group-hover:translate-x-1 transition-transform">Calculate Now →</span>
+                </a>
+
+                <a href="/cagr/" aria-label="CAGR Calculator" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:scale-[1.02] hover:shadow-lg transition-all card-shadow flex flex-col justify-between group">
+                    <div><h3 class="text-lg font-bold text-slate-800 mb-2">CAGR Tool 📊</h3><p class="text-xs text-slate-500 mb-6">Find the compounded annual growth rate of any asset or business in India.</p></div>
+                    <span class="text-blue-600 text-xs font-bold group-hover:translate-x-1 transition-transform">Calculate Now →</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Trust Signals Section -->
+        <section id="trust" class="bg-slate-50 rounded-[2.5rem] border border-slate-200 p-8 sm:p-12 text-center text-pretty">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 uppercase tracking-widest text-xs opacity-50">Why Trust Our Calculators?</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="space-y-2">
+                    <div class="text-blue-600 text-2xl">✨</div>
+                    <h4 class="font-bold text-slate-800 text-sm">Free to use</h4>
+                    <p class="text-slate-500 text-[10px] uppercase">Always & Forever</p>
                 </div>
-                <!-- FD -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">FD Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Determine maturity value of fixed deposits based on compounding frequencies.</p>
-                    </div>
-                    <a href="/fd" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
+                <div class="space-y-2">
+                    <div class="text-blue-600 text-2xl">🔓</div>
+                    <h4 class="font-bold text-slate-800 text-sm">No login required</h4>
+                    <p class="text-slate-500 text-[10px] uppercase">Your Data, Your Privacy</p>
                 </div>
-                <!-- CAGR -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">CAGR Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Calculate the compound annual growth rate of any asset over a specific period.</p>
-                    </div>
-                    <a href="/cagr" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
+                <div class="space-y-2">
+                    <div class="text-blue-600 text-2xl">🧮</div>
+                    <h4 class="font-bold text-slate-800 text-sm">Accurate formulas</h4>
+                    <p class="text-slate-500 text-[10px] uppercase">CA-Verified Math</p>
                 </div>
-                <!-- GST -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">GST Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6 text-pretty">Quickly add or remove GST from any price and calculate tax-inclusive values used in Indian billing.</p>
-                    </div>
-                    <a href="/gst" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
-                </div>
-                <!-- Income Tax -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">Income Tax Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Estimate your income tax under both the Old and New tax regimes using FY 2025-26 slabs.</p>
-                    </div>
-                    <a href="/income-tax" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
-                </div>
-                <!-- HRA -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">HRA Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Calculate House Rent Allowance exemption under Section 10(13A) based on salary and rent paid.</p>
-                    </div>
-                    <a href="/hra" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
-                </div>
-                <!-- PPF -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">PPF Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Estimate long-term Public Provident Fund maturity value using current 7.1% interest rate.</p>
-                    </div>
-                    <a href="/ppf" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
-                </div>
-                <!-- Gratuity -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">Gratuity Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Calculate gratuity payable after completing 5 years of service using standard legal formulas.</p>
-                    </div>
-                    <a href="/gratuity" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
-                </div>
-                <!-- EPF -->
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all card-shadow flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-slate-800 mb-2">EPF Calculator</h3>
-                        <p class="text-xs text-slate-500 mb-6">Estimate the retirement corpus accumulated through Employee Provident Fund with EPS capping logic.</p>
-                    </div>
-                    <a href="/epf" class="inline-flex items-center justify-center py-2 px-4 bg-slate-50 hover:bg-blue-600 hover:text-white text-blue-600 font-bold rounded-lg transition-colors text-sm">Open Tool</a>
+                <div class="space-y-2">
+                    <div class="text-blue-600 text-2xl">🇮🇳</div>
+                    <h4 class="font-bold text-slate-800 text-sm">Built for India</h4>
+                    <p class="text-slate-500 text-[10px] uppercase">Local Tax Slabs</p>
                 </div>
             </div>
         </section>
 
-        <!-- Why You Should Calculate Section -->
-        <section class="space-y-12">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-slate-900">Why You Should Calculate Before Investing</h2>
-                <p class="text-slate-500 mt-2">Numbers reveal truths that intuition often misses.</p>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow">
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Avoid loan traps</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">Most borrowers underestimate total interest paid over long tenures.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow">
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Know real returns</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">Inflation and taxes reduce actual investment gains significantly.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow">
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Plan goals scientifically</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">Reverse calculation helps determine exact monthly savings needed.</p>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow">
-                    <h4 class="text-lg font-bold text-slate-800 mb-2">Compare options objectively</h4>
-                    <p class="text-xs text-slate-500 leading-relaxed">Numbers reveal whether loan prepayment or investing is better.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Affordability Check Section -->
-        <section class="space-y-12">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-slate-900">Find Out What You Can Afford</h2>
-                <p class="text-slate-500 mt-2">Objective analysis for your primary financial goals.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Monthly Investment Planning</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">Estimate how much you should invest every month to reach your financial goals using the power of compounding.</p>
-                    <a href="/sip" class="block text-center py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Use SIP Calculator</a>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Loan Affordability</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">Understand the EMI you can comfortably pay before taking a loan by calculating total interest and repayment impact.</p>
-                    <a href="/emi" class="block text-center py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Calculate EMI</a>
-                </div>
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Safe Savings Return</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">Check exact returns on fixed deposits based on compounding frequency before locking your money in long-term savings.</p>
-                    <a href="/fd" class="block text-center py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Compare FD Returns</a>
-                </div>
-                <!-- Salary Tax Planning -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow flex flex-col">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3 text-pretty">Salary Tax Planning (2026)</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">Before filing taxes each year, use the Income Tax Calculator to compare Old vs New regimes and estimate your tax liability accurately.</p>
-                    <a href="/income-tax" class="block text-center py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Plan My Taxes</a>
-                </div>
-                <!-- Retirement Savings -->
-                <div class="bg-white p-8 rounded-2xl border border-slate-100 card-shadow flex flex-col text-pretty">
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">Retirement Savings</h3>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-8 flex-grow">Salaried employees should estimate their long-term retirement savings using the EPF Calculator to understand how PF deductions grow with compounding.</p>
-                    <a href="/epf" class="block text-center py-3 bg-blue-50 text-blue-600 font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all">Estimate EPF Maturity</a>
+        <!-- Internal Linking Block -->
+        <section id="directory-preview" class="border-t border-slate-100 pt-16">
+            <div class="text-center mb-12 text-pretty text-pretty">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Quick Directory Links</h2>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-4 text-sm font-semibold text-slate-500">
+                    <a href="/sip/" aria-label="Go to SIP Calculator" class="hover:text-blue-600 transition-colors">SIP Calculator</a>
+                    <a href="/emi/" aria-label="Go to EMI Calculator" class="hover:text-blue-600 transition-colors">EMI Calculator</a>
+                    <a href="/income-tax/" aria-label="Go to Income Tax Calculator" class="hover:text-blue-600 transition-colors">Income Tax Calculator</a>
+                    <a href="/net-worth/" aria-label="Go to Net Worth Calculator" class="hover:text-blue-600 transition-colors">Net Worth Calculator</a>
+                    <a href="/retirement/" aria-label="Go to Retirement Calculator" class="hover:text-blue-600 transition-colors">Retirement Calculator</a>
                 </div>
             </div>
         </section>
         
-        <!-- Introduction Section -->
-        <section class="max-w-4xl mx-auto">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-4">Mastering Your Personal Finances in 2026</h2>
-            <div class="space-y-6 text-slate-600 leading-relaxed text-sm sm:text-base">
-                <p>
-                    Financial freedom isn't about how much you earn; it's about how much you keep and grow. In the Indian economy of 2026, navigating market volatility, evolving tax slabs, and rising inflation requires a data-driven approach. Most investment decisions are unfortunately based on emotional bias rather than fundamental math.
-                </p>
-                <p>
-                    Small differences in interest rates or compounding frequencies often result in wealth gaps amounting to lakhs of rupees. Without using an accurate <strong>SIP return calculator</strong> or <strong>loan emi tool</strong>, investors risk underestimating the corpus required for milestones like buying a home or retirement.
-                </p>
-                <p>
-                    Our mission at <strong>ArthCalculator</strong> is to provide absolute transparency. Whether you are using our <a href="/sip" class="text-blue-600 font-semibold underline">SIP calculator</a> to reach ₹1 Crore or checking your eligibility using the <a href="/hra" class="text-blue-600 font-semibold underline">HRA Calculator</a>, these tools use verified Indian financial protocols to give you a clear roadmap.
-                </p>
-            </div>
-        </section>
-
-        <!-- Learning Section: How Money Grows -->
-        <section class="bg-white p-6 sm:p-12 rounded-3xl border border-slate-200 card-shadow">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-10 text-center">The Wealth Growth Pillars</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-pretty">
-                <div class="space-y-4">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg">01</div>
-                    <h3 class="text-lg font-bold text-slate-800">Compounding Power</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        Compounding is the "snowball effect" of interest. When your <a href="/fd" class="text-blue-600 underline">Fixed Deposit</a> or <a href="/ppf" class="text-blue-600 underline">PPF account</a> reinvests returns, the growth becomes exponential over a 15-year tenure.
-                    </p>
-                </div>
-                <div class="space-y-4">
-                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center font-bold text-lg">02</div>
-                    <h3 class="text-lg font-bold text-slate-800">Inflation Protection</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        A rupee today will buy less in 2030. Use our <a href="/cagr" class="text-blue-600 underline">CAGR Calculator</a> to ensure your investments are actually beating the 6% average Indian inflation rate.
-                    </p>
-                </div>
-                <div class="space-y-4">
-                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-lg">03</div>
-                    <h3 class="text-lg font-bold text-slate-800">Tax Efficiency</h3>
-                    <p class="text-sm text-slate-500 leading-relaxed">
-                        Smart planning involves minimizing leakage. Compare the <a href="/income-tax" class="text-blue-600 underline">New vs Old Tax Regime</a> to see if 80C deductions or HRA exemptions provide better savings for you.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Common Financial Situations Guide -->
-        <section class="space-y-12">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 border-l-4 border-emerald-500 pl-4">Tailored Financial Guidance</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <h4 class="font-bold text-slate-800 mb-2">First-Time Investors</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">Don't wait for a large sum. Even a ₹2,000 monthly SIP can grow into a significant corpus. Check the 15-15-15 rule using our SIP tool.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <h4 class="font-bold text-slate-800 mb-2">Business Billing</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">Ensure compliant invoicing. Use the <a href="/gst" class="text-blue-600 underline">GST Calculator</a> to quickly calculate base prices and net tax amounts for 18% or 12% slabs.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
-                    <h4 class="font-bold text-slate-800 mb-2">Retiring Employees</h4>
-                    <p class="text-sm text-slate-500 leading-relaxed">Estimate your full exit benefit. Combine your <strong>EPF maturity</strong> with the <strong>Gratuity calculation</strong> to understand your starting retirement pool.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Deep Dive Educational SEO Content -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center text-pretty">
-            <div>
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 leading-tight">Investment Strategy: Fixed vs Market Growth</h2>
-                <div class="space-y-6 text-slate-600 text-sm sm:text-base leading-relaxed">
-                    <p>
-                        <strong>Safe Assets (PPF/FD):</strong> Conservative tools like the <a href="/ppf" class="text-blue-600 font-semibold underline">Public Provident Fund</a> are essential for capital protection. They offer government-backed safety and tax-free returns, which is vital for long-term pillars like daughter's education or pension.
-                    </p>
-                    <p>
-                        <strong>Growth Assets (SIP):</strong> To truly build wealth and beat the cost of living, equity-linked SIPs are unmatched. Historically, the Indian Nifty 50 has provided a CAGR of 12-14% over decades. Use our <a href="/sip" class="text-blue-600 font-semibold underline">SIP tool</a> to model different market return scenarios.
-                    </p>
-                    <p>
-                        <strong>Balancing Debt:</strong> While investing is important, debt management is crucial. If your <a href="/emi" class="text-blue-600 font-semibold underline">Home Loan EMI</a> interest rate is higher than your post-tax FD rate, consider making principal prepayments to save on the total interest burden.
-                    </p>
-                </div>
-            </div>
-            <div class="bg-slate-900 p-8 sm:p-12 rounded-3xl text-white">
-                <div class="space-y-8">
-                    <div>
-                        <h4 class="text-blue-400 font-bold mb-2 uppercase text-xs tracking-widest">Financial Success Rule</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed italic">
-                            "Budgeting is telling your money where to go instead of wondering where it went." - Use these calculators to take command of your cash flow.
-                        </p>
-                    </div>
-                    <div class="h-px bg-slate-800"></div>
-                    <div>
-                        <h4 class="text-emerald-400 font-bold mb-2 uppercase text-xs tracking-widest">Retirement Benchmark</h4>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            A common benchmark for a comfortable retirement in urban India is a corpus of <strong>25x to 30x of your annual expenses</strong>. Calculate your current <a href="/epf" class="text-emerald-400 underline">EPF balance growth</a> to see if you are on track.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Approach Section -->
-        <section class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Our Analytical Philosophy</h2>
-            <p class="text-slate-500 leading-relaxed max-w-2xl mx-auto mb-8">
-                ArthCalculator is a purely educational project designed to bridge the gap between financial complexity and retail investors.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                <div class="p-4">
-                    <h4 class="font-bold text-slate-800 mb-2">Mathematical Accuracy</h4>
-                    <p class="text-xs text-slate-500">Formulas are derived from standard actuarial and Indian banking protocols.</p>
-                </div>
-                <div class="p-4">
-                    <h4 class="font-bold text-slate-800 mb-2">Unbiased Access</h4>
-                    <p class="text-xs text-slate-500">We do not sell products. No broker logins or insurance leads required.</p>
-                </div>
-                <div class="p-4">
-                    <h4 class="font-bold text-slate-800 mb-2">Budget 2025 Ready</h4>
-                    <p class="text-xs text-slate-500">All tax-related tools are updated with the latest ₹12 Lakh rebate and slab changes.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Final Internal Link List -->
-        <section class="pt-16 border-t border-slate-100">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Explore All Financial Tools</h2>
-            <div class="flex flex-wrap justify-center gap-x-8 gap-y-6 text-sm font-semibold text-blue-600">
-                <a href="/sip" class="hover:underline">SIP Calculator</a>
-                <a href="/emi" class="hover:underline">EMI Calculator</a>
-                <a href="/fd" class="hover:underline">FD Calculator</a>
-                <a href="/cagr" class="hover:underline">CAGR Calculator</a>
-                <a href="/gst" class="hover:underline">GST Calculator</a>
-                <a href="/income-tax" class="hover:underline">Income Tax Calculator</a>
-                <a href="/hra" class="hover:underline">HRA Calculator</a>
-                <a href="/ppf" class="hover:underline">PPF Calculator</a>
-                <a href="/gratuity" class="hover:underline">Gratuity Calculator</a>
-                <a href="/epf" class="hover:underline">EPF Calculator</a>
-            </div>
-        </section>
-
+        <!-- Freshness Signal -->
+        <div class="text-center py-4">
+            <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Calculators updated for FY 2025-26 & 2026-27</p>
+        </div>
     </main>
-    
-<div id="footer"></div>
-<script>
-fetch("/navbar.html")
-.then(res => res.text())
-.then(data => {
-  document.getElementById("navbar").innerHTML = data;
 
-  // Activate hamburger AFTER navbar loads
-  const btn = document.getElementById("menuBtn");
-  const menu = document.getElementById("mobileMenu");
-
-  if(btn){
-    btn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  }
-});
-
-fetch("/footer.html")
-.then(res => res.text())
-.then(data => {
-  document.getElementById("footer").innerHTML = data;
-});
-</script>
-
+    <footer class="text-center py-10 text-slate-400 text-xs border-t border-slate-200 bg-white mt-4 px-4">
+        <p>© 2026 ArthCalculator — Built for Indian Financial Education</p>
+    </footer>
 </body>
 </html>
