@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intraday Profit Calculator – Calculate Trading Profit After Charges</title>
+    <meta name="description" content="Calculate your intraday trading profit after brokerage, STT, GST and all statutory charges. Know your exact break-even price and net profit before entering a trade.">
+    <meta name="keywords" content="intraday profit calculator, intraday brokerage calculator, net profit calculator trading, stock market profit after tax, stt calculator intraday, break even price calculator stocks">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-14">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/intraday-profit-calculator/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Intraday Profit Calculator",
+     "url":"https://arthcalculator.in/intraday-profit-calculator/",
+     "description":"Calculate net profit for intraday trades after deducting all Indian trading charges.",
+     "inLanguage":"en"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Intraday Profit Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculates net trading profit for intraday equity trades including brokerage, STT, GST and SEBI charges.",
+      "featureList": [
+        "Net Profit Calculation",
+        "Statutory Charges Breakdown",
+        "Break-even Price Analysis",
+        "Trade Quality Indicator"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Intraday Profit", "item": "https://arthcalculator.in/intraday-profit-calculator/" }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center text-pretty">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center text-pretty">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Intraday Profit</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty text-pretty text-pretty text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Intraday Profit Calculator – Calculate Profit After All Charges</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Accurately calculate your net take-home profit from intraday trading. Account for brokerage, STT, exchange fees, and GST to see your true gains or losses.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 shadow-sm uppercase tracking-wide">Intraday Special</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Quick Action Micro-Strip -->
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all">Example Trade</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-slate-50 transition-all">Reset All</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty text-pretty">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide text-pretty text-pretty text-pretty text-pretty">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Transaction Details
+                    </h2>
+
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label for="buyPrice" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Buy Price (₹)</label>
+                            <input type="number" id="buyPrice" value="1000" step="0.05" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        </div>
+                        <div>
+                            <label for="sellPrice" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Sell Price (₹)</label>
+                            <input type="number" id="sellPrice" value="1010" step="0.05" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="quantity" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Quantity</label>
+                        <input type="number" id="quantity" value="500" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                    </div>
+
+                    <div class="mb-8">
+                        <label for="brokerageRate" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Max Brokerage per order (₹)</label>
+                        <input type="number" id="brokerageRate" value="20" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <p class="text-[9px] text-slate-400 mt-2">Discount brokers charge max ₹20 per side.</p>
+                    </div>
+
+                    <button type="button" id="calcBtn" onclick="calculate()" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate Profit</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6 text-pretty text-pretty text-pretty">
+                <!-- Main Net Profit Card -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left text-pretty">Net Profit / Loss</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold block mb-6 text-center md:text-left" id="netProfitDisp">₹0.00</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 text-pretty text-pretty">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Gross P&L</p>
+                            <p class="font-bold text-slate-800 text-sm" id="grossProfitDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-red-50 rounded-xl border border-red-100 text-pretty text-pretty">
+                            <p class="text-[10px] text-red-600 uppercase font-bold mb-1">Total Charges</p>
+                            <p class="font-bold text-red-700 text-sm" id="totalChargesDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 text-pretty text-pretty text-pretty">
+                            <p class="text-[10px] text-blue-600 uppercase font-bold mb-1 text-pretty text-pretty">Break-even Price</p>
+                            <p class="font-bold text-blue-700 text-sm" id="breakEvenDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-6 text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty"></div>
+
+                    <div class="p-4 bg-slate-900 rounded-xl text-white flex justify-between items-center text-pretty text-pretty text-pretty">
+                        <div>
+                            <p class="text-slate-400 text-[10px] uppercase font-bold">Total Turnover</p>
+                            <p class="font-bold text-sm" id="turnoverDisp">₹0</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-slate-400 text-[10px] uppercase font-bold text-pretty text-pretty text-pretty">Net Return %</p>
+                            <p class="font-bold text-sm" id="returnPercDisp">0.00%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quality Indicator -->
+                <div id="qualityCard" class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white transition-colors duration-500 text-pretty text-pretty">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Trade Viability</p>
+                            <h4 class="text-2xl font-black text-white" id="qualityLabel">Waiting for Entry</h4>
+                        </div>
+                        <div class="text-right">
+                             <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Status</p>
+                             <div id="statusBadge" class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/20 inline-block mt-1 uppercase tracking-widest text-pretty text-pretty text-pretty text-pretty">Pending</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="copyBtn" onclick="copyResults()" class="w-full py-3 border border-blue-200 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    Copy P&L Breakdown
+                </button>
+            </div>
+        </div>
+
+        <!-- content: SEO KNOWLEDGE SECTION -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Intraday Trading?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty text-pretty text-pretty text-pretty text-pretty">
+                    <p>Intraday trading is the practice of buying and selling financial instruments (like stocks) within the same trading day. The primary goal is to capitalize on short-term price movements. In India, most intraday traders use margin (leverage) provided by their brokers to increase their exposure.</p>
+                    <p>However, intraday trading is not just about the stock price move. Because the number of trades is high, statutory costs like STT and GST can significantly impact your bottom line. Professional traders always use an <strong>Intraday Profit Calculator</strong> to determine their break-even point before placing an order.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight text-pretty text-pretty">How Intraday Profit is Calculated</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6 text-pretty text-pretty text-pretty">
+                    <p>Calculating the true profit of a day trade requires a two-step process: finding the Gross P&L and then subtracting the complex statutory charges.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-pretty">
+                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty">
+                            <h3 class="font-bold text-slate-800 text-lg mb-3">1. Gross Profit/Loss</h3>
+                            <p class="text-slate-500 leading-relaxed text-xs">This is the simple difference between your selling price and buying price, multiplied by the quantity. If you buy at ₹1000 and sell at ₹1005 with 100 shares, your Gross Profit is ₹500.</p>
+                        </div>
+                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty text-pretty text-pretty text-pretty text-pretty">
+                            <h3 class="font-bold text-slate-800 text-lg mb-3 text-pretty">2. Net Take-Home Profit</h3>
+                            <p class="text-slate-500 leading-relaxed text-xs text-pretty text-pretty">This is the amount that actually hits your ledger. It is <strong>Gross Profit − (Brokerage + STT + Transaction Charges + GST + SEBI Fees + Stamp Duty)</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Why Brokerage and Taxes Matter</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty text-pretty">
+                    <p>Many beginners fail because they chase "small profits" that are completely wiped out by charges. For example, a ₹0.50 move in a ₹1000 stock might look like a profit, but once you account for the STT (0.025% on sell) and the ₹40 flat brokerage (buy + sell), you might actually be in a net loss. This is known as the <strong>"Negative Yield"</strong> trap.</p>
+                    <p>To scale your wealth effectively, combine this tool with our <a href="/position-size-calculator/" class="text-blue-600 underline font-medium">Position Size Calculator</a> to ensure you aren't over-leveraging and our <a href="/risk-reward-calculator/" class="text-blue-600 underline font-medium">Risk Reward Calculator</a> to filter out low-probability trades.</p>
+                </div>
+            </section>
+
+            <!-- PRO TRADING INSIGHTS SECTION -->
+            <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold mb-6">Pro Trading Rules: Managing Costs</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm text-pretty text-pretty text-pretty">
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 text-pretty">
+                        <h4 class="font-bold text-blue-400 mb-2 uppercase text-[10px]">Track the Break-even</h4>
+                        <p class="text-slate-300">Never exit a scalp trade until the price clears your "Break-even Price." Our calculator shows this value instantly so you can set your limit orders correctly.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 text-pretty text-pretty text-pretty text-pretty text-pretty">
+                        <h4 class="font-bold text-emerald-400 mb-2 uppercase text-[10px]">Avoid Overtrading</h4>
+                        <p class="text-slate-300">Each trade costs money. 10 trades with small wins often result in less profit than 1 high-conviction trade due to the recurring flat brokerage fee.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 text-pretty text-pretty text-pretty text-pretty">
+                        <h4 class="font-bold text-purple-400 mb-2 uppercase text-[10px]">Tax Harvesting</h4>
+                        <p class="text-slate-300">If you have significant intraday losses at the end of the year, use our <a href="/tax-loss-harvesting/" class="text-purple-300 underline">Tax Loss Harvesting Tool</a> to offset capital gains tax.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section (SEO Optimized) -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty text-pretty text-pretty text-pretty text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4 text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is intraday profit?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Intraday profit is the realized gain from buying and selling a stock on the same day, after deducting all trading costs like brokerage and taxes.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How much are the charges for intraday trading in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Charges include Brokerage (approx ₹20), STT (0.025% on sell), Transaction fees (0.00297%), GST (18% on fees), and SEBI charges. Use the calculator above for an exact breakdown.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is intraday trading profitable?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Intraday trading can be profitable for disciplined traders with a strong risk management plan. However, a high win rate is required to overcome the impact of recurring transaction costs.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Why does brokerage matter so much?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty text-pretty text-pretty">Because it is a fixed cost. On a small trade, a ₹40 brokerage could be 50% of your gross profit. Professional traders use discount brokers to keep this cost capped.</div></details>
+                </div>
+            </section>
+
+            <!-- Popular Trader Tools Grid -->
+            <section class="max-w-6xl mx-auto pt-8 border-t border-slate-200 text-pretty text-pretty text-pretty">
+                <div class="text-center mb-10 text-pretty text-pretty text-pretty text-pretty text-pretty">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Popular Trader Tools</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-pretty text-pretty text-pretty text-pretty">
+                    <a href="/brokerage-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800">Brokerage Calc</h4></a>
+                    <a href="/risk-reward-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800 text-pretty">Risk Reward</h4></a>
+                    <a href="/position-size-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800 text-pretty">Position Size</h4></a>
+                    <a href="/intraday-profit-calculator/" class="p-4 bg-blue-50 border border-blue-200 rounded-xl text-center card-shadow text-pretty text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-blue-800">Intraday Profit</h4></a>
+                    <a href="/stock-average/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">Stock Average</h4></a>
+                </div>
+            </section>
+
+            <!-- Related Tools List -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty text-pretty text-pretty text-pretty text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-pretty text-pretty">
+                    <a href="/sip/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty text-pretty text-pretty text-pretty">SIP Calculator</h4>
+                    </a>
+                    <a href="/capital-gains-tax/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty text-pretty text-pretty">Capital Gains</h4>
+                    </a>
+                    <a href="/tax-loss-harvesting/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty text-pretty">Tax Harvesting</h4>
+                    </a>
+                    <a href="/cagr/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty text-pretty text-pretty">CAGR Tool</h4>
+                    </a>
+                    <a href="/net-worth/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty text-pretty text-pretty">Net Worth</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Calculations are based on current statutory charges (Budget 2026). These charges are calculated using major avg charges charged by Brokers and Govt (Actual may vary based on actual charges). Intraday trading is high risk and not suitable for everyone. This tool does not provide financial advice or trade recommendations. Always consult a SEBI registered investment advisor.
+                <p class="mt-4 font-semibold italic text-slate-600 text-pretty">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            buyPrice: document.getElementById('buyPrice'),
+            sellPrice: document.getElementById('sellPrice'),
+            quantity: document.getElementById('quantity'),
+            brokerageRate: document.getElementById('brokerageRate'),
+            
+            netProfitDisp: document.getElementById('netProfitDisp'),
+            grossProfitDisp: document.getElementById('grossProfitDisp'),
+            totalChargesDisp: document.getElementById('totalChargesDisp'),
+            breakEvenDisp: document.getElementById('breakEvenDisp'),
+            turnoverDisp: document.getElementById('turnoverDisp'),
+            returnPercDisp: document.getElementById('returnPercDisp'),
+            
+            insightsBox: document.getElementById('insightsBox'),
+            qualityCard: document.getElementById('qualityCard'),
+            qualityLabel: document.getElementById('qualityLabel'),
+            statusBadge: document.getElementById('statusBadge'),
+            copyBtn: document.getElementById('copyBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2 }).format(val)); }
+
+        function calculate() {
+            const buy = parseFloat(elements.buyPrice.value) || 0;
+            const sell = parseFloat(elements.sellPrice.value) || 0;
+            const qty = parseFloat(elements.quantity.value) || 0;
+            const maxOrderFee = parseFloat(elements.brokerageRate.value) || 20;
+
+            // Validation
+            if (buy <= 0 || qty <= 0) return;
+
+            const buyValue = buy * qty;
+            const sellValue = sell * qty;
+            const turnover = buyValue + sellValue;
+
+            // --- INDIAN INTRADAY MATH ---
+            // 1. Brokerage: Min(0.03% or Max Fee) for both sides
+            const buyBrok = Math.min(buyValue * 0.0003, maxOrderFee);
+            const sellBrok = Math.min(sellValue * 0.0003, maxOrderFee);
+            const totalBrokerage = Number((buyBrok + sellBrok).toFixed(2));
+
+            // 2. STT: 0.025% on Sell value only
+            const stt = Math.round(sellValue * 0.00025);
+
+            // 3. Transaction Charges: 0.00297% (NSE Equity latest)
+            const txCharges = turnover * 0.0000297;
+
+            // 4. GST: 18% on (Brokerage + Tx Charges)
+            const gst = (totalBrokerage + txCharges) * 0.18;
+
+            // 5. SEBI: ₹10/Crore (0.0001%)
+            const sebi = Math.round(turnover) * 0.000001;
+
+            // 6. Stamp Duty: 0.003% on Buy value only
+            const stamp = buyValue * 0.00003;
+
+            const totalCharges = totalBrokerage + stt + txCharges + gst + sebi + stamp;
+            const grossProfit = (sell - buy) * qty;
+            const netProfit = grossProfit - totalCharges;
+            
+            const breakEvenMove = totalCharges / qty;
+            const breakEvenPrice = buy + breakEvenMove;
+            const returnPerc = (netProfit / buyValue) * 100;
+
+            // Update UI
+            elements.netProfitDisp.textContent = formatInr(netProfit);
+            elements.netProfitDisp.className = "text-3xl sm:text-4xl md:text-5xl font-extrabold block mb-6 text-center md:text-left " + (netProfit >= 0 ? "text-emerald-600" : "text-red-600");
+            
+            elements.grossProfitDisp.textContent = formatInr(grossProfit);
+            elements.totalChargesDisp.textContent = formatInr(totalCharges);
+            elements.breakEvenDisp.textContent = "₹" + breakEvenPrice.toFixed(2);
+            elements.turnoverDisp.textContent = formatInr(turnover);
+            elements.returnPercDisp.textContent = returnPerc.toFixed(2) + "%";
+
+            // Insights
+            elements.insightsBox.innerHTML = `
+                <div class="space-y-1">
+                    <p>🎯 <strong>Break-even:</strong> Price must cross <strong>₹${breakEvenPrice.toFixed(2)}</strong> to cover all taxes and brokerage.</p>
+                    <p class="mt-2 text-pretty text-pretty">📈 <strong>Profit Leverage:</strong> If the price increases by ₹1, your net profit grows by <strong>${formatInr(qty)}</strong>.</p>
+                </div>
+            `;
+
+            // Trade Quality Score
+            if (netProfit > 50) {
+                elements.qualityCard.className = "bg-emerald-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
+                elements.qualityLabel.textContent = "Profitable Setup";
+                elements.statusBadge.textContent = "Trade Green";
+                elements.statusBadge.className = "bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full text-[10px] font-bold border border-emerald-500/30 inline-block mt-1 uppercase";
+            } else if (netProfit < -50) {
+                elements.qualityCard.className = "bg-red-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
+                elements.qualityLabel.textContent = "Losing Trade";
+                elements.statusBadge.textContent = "Trade Red";
+                elements.statusBadge.className = "bg-red-500/20 text-red-200 px-3 py-1 rounded-full text-[10px] font-bold border border-red-500/30 inline-block mt-1 uppercase";
+            } else {
+                elements.qualityCard.className = "bg-orange-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
+                elements.qualityLabel.textContent = "Breakeven Zone";
+                elements.statusBadge.textContent = "Neutral";
+                elements.statusBadge.className = "bg-orange-500/20 text-orange-200 px-3 py-1 rounded-full text-[10px] font-bold border border-orange-500/30 inline-block mt-1 uppercase";
+            }
+        }
+
+        async function copyResults() {
+            const txt = `Intraday Trade Metrics:\nGross P&L: ${elements.grossProfitDisp.innerText}\nCharges: ${elements.totalChargesDisp.innerText}\nNet P&L: ${elements.netProfitDisp.innerText}\nBreak-even: ${elements.breakEvenDisp.innerText}\nVia ArthCalculator.in`;
+            try {
+                await navigator.clipboard.writeText(txt);
+                const old = elements.copyBtn.innerText;
+                elements.copyBtn.innerText = "✓ Copied!";
+                setTimeout(() => elements.copyBtn.innerHTML = old, 2000);
+            } catch (err) {}
+        }
+
+        function resetCalculator() {
+            elements.buyPrice.value = 0;
+            elements.sellPrice.value = 0;
+            elements.quantity.value = 0;
+            calculate();
+        }
+
+        function applyExample() {
+            elements.buyPrice.value = 1000;
+            elements.sellPrice.value = 1010;
+            elements.quantity.value = 500;
+            calculate();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            ['buyPrice', 'sellPrice', 'quantity', 'brokerageRate'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calculate);
+            });
+            calculate();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
