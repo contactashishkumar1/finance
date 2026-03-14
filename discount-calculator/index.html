@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator – Calculate Sale Price & Savings</title>
+    <meta name="description" content="Calculate discount percentage, final price and total savings using this free discount calculator. Supports stacked discounts and GST pricing.">
+    <meta name="keywords" content="discount calculator, sale price calculator, percentage discount tool, calculate savings, multi discount calculator, gst after discount calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-14">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/discount-calculator/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Discount Calculator",
+     "url":"https://arthcalculator.in/discount-calculator/",
+     "description":"Calculate net savings and final prices after multiple discounts and GST application.",
+     "inLanguage":"en"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Discount Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculates sale price, percentage reductions, and total savings including hidden multi-buy discounts.",
+      "featureList": [
+        "Percentage discount calculation",
+        "Fixed amount discount tracking",
+        "Stacked/Multiple discount support",
+        "GST after discount application"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Discount Calculator", "item": "https://arthcalculator.in/discount-calculator/" }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        .tab-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .tab-btn.active { background-color: #2563eb; color: white; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Discount Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight text-pretty">Discount Calculator – Calculate Sale Price & Net Savings</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Instantly find your final price after discounts. Supports stacked offers (like 20% + 10% extra), GST inclusion, and reverse calculation for maximum shopping transparency.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 uppercase tracking-wide shadow-sm">Consumer Transparency</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Quick Action Strip -->
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all">Apply Example</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-red-50 transition-all">Reset All</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        Price & Offers
+                    </h2>
+
+                    <!-- Calculation Mode Tabs -->
+                    <div class="flex p-1 bg-slate-100 rounded-xl mb-8">
+                        <button onclick="setMode('percent')" id="tabPercent" class="tab-btn flex-1 py-2 text-xs font-bold rounded-lg active">By Percent %</button>
+                        <button onclick="setMode('amount')" id="tabAmount" class="tab-btn flex-1 py-2 text-xs font-bold rounded-lg text-slate-500">By Amount ₹</button>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="originalPrice" class="text-sm font-medium text-slate-600 block mb-2">Original Price (₹)</label>
+                        <input type="number" id="originalPrice" value="5000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div id="primaryDiscountGroup">
+                            <label id="discountLabel" class="text-xs font-bold text-slate-500 uppercase block mb-2">Discount %</label>
+                            <input type="number" id="primaryDiscount" value="25" class="w-full px-3 py-2 border rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500 transition-all outline-none">
+                        </div>
+                        <div id="extraDiscountGroup">
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2">Extra % (Optional)</label>
+                            <input type="number" id="extraDiscount" value="0" class="w-full px-3 py-2 border rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500 transition-all outline-none">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="gstRate" class="text-xs font-bold text-slate-500 uppercase block mb-2">Add GST After Discount? (%)</label>
+                        <select id="gstRate" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 transition-all bg-white cursor-pointer text-sm">
+                            <option value="0" selected>No GST (0%)</option>
+                            <option value="5">5% GST</option>
+                            <option value="12">12% GST</option>
+                            <option value="18">18% GST</option>
+                            <option value="28">28% GST</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-8">
+                        <label for="units" class="text-xs font-bold text-slate-500 uppercase block mb-2">Quantity (Units)</label>
+                        <input type="number" id="units" value="1" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                    </div>
+
+                    <button type="button" onclick="calculate()" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate Final Price</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <!-- Main Result Card -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Final Payable Price</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-8 text-center md:text-left" id="finalPriceDisp">₹0.00</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1">Total Savings</p>
+                            <p class="font-bold text-emerald-700 text-lg" id="savingsDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Effective Disc.</p>
+                            <p class="font-bold text-slate-800 text-lg" id="effDiscDisp">0%</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <p class="text-[10px] text-blue-600 uppercase font-bold mb-1">Tax Amount</p>
+                            <p class="font-bold text-blue-700 text-lg" id="taxAmtDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-6"></div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-blue-600">Final Price</span>
+                            <span class="text-emerald-600">Savings Impact</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="finalBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 70%"></div>
+                            <div id="savingsBar" class="h-full bg-emerald-400 transition-all duration-700" style="width: 30%"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
+                            <span id="finalLabel">Pay: ₹0</span>
+                            <span id="savingsLabel">Save: ₹0</span>
+                        </div>
+                    </div>
+
+                    <div id="qualityCard" class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white transition-colors duration-500">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Discount Rating</p>
+                                <h4 class="text-2xl font-black text-white" id="qualityLabel">Calculate Now</h4>
+                            </div>
+                            <div class="text-right">
+                                 <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Net % Off</p>
+                                 <div id="statusBadge" class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/20 inline-block mt-1 uppercase">0% Off</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button id="copyBtn" onclick="copyResults()" class="w-full mt-6 py-3 border border-blue-200 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        Copy Savings Result
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO Knowledge Sections -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is a Discount?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>A discount is a reduction in the original price of a product or service. It is most commonly used by retailers and businesses to attract customers, clear inventory, or reward loyalty. Calculating a discount accurately is essential for budgeting and ensuring you are getting the value promised by marketing banners.</p>
+                    <p>When shopping, you often encounter complex offers like "Flat 50% + Extra 10%." Many assume this equals a 60% discount, but it is actually a <strong>Stacked Discount</strong> resulting in a 55% effective reduction. Using our Discount Calculator prevents these common mathematical traps.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight text-pretty">Common Types of Discounts</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed text-pretty">
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3">1. Trade Discount</h3>
+                        <p class="text-slate-600">Used between businesses (B2B). A manufacturer might offer a wholesaler a discount from the catalog price. This affects the starting <a href="/markup-calculator/" class="text-blue-600 underline">Markup calculation</a> for the retailer.</p>
+                    </div>
+                    <div class="p-6 bg-blue-50 border border-blue-200 rounded-2xl text-pretty">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3 text-pretty">2. Cash Discount</h3>
+                        <p class="text-slate-600">An incentive for the buyer to pay the bill promptly. For example, a 2/10 net 30 offer means you get a 2% discount if you pay within 10 days.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty text-pretty">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3">3. Stacked/Incremental Discounts</h3>
+                        <p class="text-slate-600">Common in festival sales (like Diwali or Big Billion Days). An additional discount is applied to the already reduced price, not the original price.</p>
+                    </div>
+                    <div class="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-pretty text-pretty">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3 text-pretty">4. Quantity Discounts</h3>
+                        <p class="text-slate-600 text-pretty text-pretty">"Buy 2 Get 1 Free" is effectively a 33.3% discount on the total bundle. Businesses use this to increase their average order value.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">How Businesses Use Discounting Strategies</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Discounting is not just about lowering prices; it is a psychological tool. Businesses often use <strong>Anchoring</strong>—showing a high original price (MRP) so the discount feels more significant. This helps improve the <a href="/margin-calculator/" class="text-blue-600 underline">Gross Margin</a> by driving higher volumes.</p>
+                    <p>However, excessive discounting can hurt your brand and lead to a negative <a href="/roi-calculator/" class="text-blue-600 underline">ROI</a>. Savvy business owners use our <a href="/break-even-calculator/" class="text-blue-600 underline">Break Even Calculator</a> to ensure that even after a 40% discount, the remaining price still covers the variable and fixed costs of the product.</p>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-2xl font-bold mb-6">Psychology of Discounts: The "Free" Factor</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-pretty text-pretty">
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-blue-400 mb-2 uppercase text-xs">Loss Aversion</h4>
+                        <p class="text-slate-400">Consumers feel more pain losing a ₹500 discount than the joy of saving ₹500. Limited-time offers exploit this to create urgency.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-emerald-400 mb-2 uppercase text-xs">The Zero Price Effect</h4>
+                        <p class="text-slate-400 text-pretty">"Buy 1 Get 1" is often more successful than "50% Off Everything" because the word "Free" triggers a disproportionate emotional response.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">How do you calculate discount manually?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t">Multiply the original price by the discount decimal (e.g., for 20%, multiply by 0.20). Subtract that amount from the original price to get the sale price.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is a 50% + 50% discount free?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">No. A 50% + 50% stacked discount equals 75% off. You pay half of the remaining half. Formula: 1 - (0.50 * 0.50) = 0.75.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">How to calculate GST on a discounted price?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty text-pretty">GST is always applied to the final transaction value. First, subtract the discount from the original price, then add the GST percentage (e.g. 18%) to that subtotal.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">What is the difference between margin and discount?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty text-pretty text-pretty">Discount is a price reduction given to the customer. <a href="/margin-calculator/" class="text-blue-600 underline">Margin</a> is the profit a business keeps after all costs. Discounts always lower the profit margin.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Business Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <a href="/margin-calculator/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Margin Calculator</h4>
+                    </a>
+                    <a href="/markup-calculator/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Markup Calculator</h4>
+                    </a>
+                    <a href="/roi-calculator/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">ROI Calculator</h4>
+                    </a>
+                    <a href="/break-even-calculator/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Break Even</h4>
+                    </a>
+                    <a href="/gst/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">GST Tool</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                Discount calculations are based on mathematical formulas for price reductions. Market practice for rounding decimals may vary by vendor. Final billing including surcharges or payment method fees should be verified with the merchant. This tool is for educational purposes only.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Dynamic Grid -->
+    <section class="max-w-6xl mx-auto px-4 pt-8 border-t border-slate-200 text-pretty text-pretty text-pretty">
+        <div class="text-center mb-10 text-pretty text-pretty text-pretty text-pretty">
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Popular Finance Tools</h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <a href="/discount-calculator/" class="p-4 bg-blue-50 border border-blue-200 rounded-xl text-center card-shadow text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-blue-800">Discount Calc</h4></a>
+            <a href="/margin-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">Margin Calc</h4></a>
+            <a href="/roi-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">ROI Tool</h4></a>
+            <a href="/break-even-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">Break Even</h4></a>
+            <a href="/cagr/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">CAGR Tool</h4></a>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script>
+        let currentMode = 'percent';
+
+        const elements = {
+            originalPrice: document.getElementById('originalPrice'),
+            primaryDiscount: document.getElementById('primaryDiscount'),
+            extraDiscount: document.getElementById('extraDiscount'),
+            discountLabel: document.getElementById('discountLabel'),
+            gstRate: document.getElementById('gstRate'),
+            units: document.getElementById('units'),
+            
+            finalPriceDisp: document.getElementById('finalPriceDisp'),
+            savingsDisp: document.getElementById('savingsDisp'),
+            effDiscDisp: document.getElementById('effDiscDisp'),
+            taxAmtDisp: document.getElementById('taxAmtDisp'),
+            totalPaidDisp: document.getElementById('totalPaidDisp'),
+            effectiveRateDisp: document.getElementById('effectiveRateDisp'),
+            
+            finalBar: document.getElementById('finalBar'),
+            savingsBar: document.getElementById('savingsBar'),
+            finalLabel: document.getElementById('finalLabel'),
+            savingsLabel: document.getElementById('savingsLabel'),
+            
+            qualityLabel: document.getElementById('qualityLabel'),
+            statusBadge: document.getElementById('statusBadge'),
+            qualityCard: document.getElementById('qualityCard'),
+            insightsBox: document.getElementById('insightsBox'),
+            copyBtn: document.getElementById('copyBtn')
+        };
+
+        function setMode(mode) {
+            currentMode = mode;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active', 'text-white', 'bg-blue-600');
+                btn.classList.add('text-slate-500');
+            });
+            const activeTab = document.getElementById(mode === 'amount' ? 'tabAmount' : 'tabPercent');
+            activeTab.classList.add('active', 'text-white', 'bg-blue-600');
+            activeTab.classList.remove('text-slate-500');
+
+            if (mode === 'amount') {
+                elements.discountLabel.textContent = "Discount Amount (₹)";
+                elements.primaryDiscount.value = 1000;
+                document.getElementById('extraDiscountGroup').classList.add('invisible');
+            } else {
+                elements.discountLabel.textContent = "Discount %";
+                elements.primaryDiscount.value = 25;
+                document.getElementById('extraDiscountGroup').classList.remove('invisible');
+            }
+            calculate();
+        }
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2 }).format(val)); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function calculate() {
+            const original = parseFloat(elements.originalPrice.value) || 0;
+            const primary = parseFloat(elements.primaryDiscount.value) || 0;
+            const extra = parseFloat(elements.extraDiscount.value) || 0;
+            const gst = parseFloat(elements.gstRate.value) || 0;
+            const qty = parseFloat(elements.units.value) || 1;
+
+            if (original <= 0) {
+                elements.finalPriceDisp.textContent = "₹0.00";
+                return;
+            }
+
+            let discountedPrice = 0;
+            let totalSavings = 0;
+            let effectiveDiscPerc = 0;
+
+            if (currentMode === 'percent') {
+                // Stacked logic: Price * (1-d1) * (1-d2)
+                discountedPrice = original * (1 - (primary / 100)) * (1 - (extra / 100));
+                totalSavings = original - discountedPrice;
+            } else {
+                // Fixed amount logic
+                totalSavings = primary;
+                discountedPrice = Math.max(0, original - primary);
+            }
+
+            // Apply Quantity
+            const totalRevenueBeforeTax = discountedPrice * qty;
+            const totalSavingsWithQty = totalSavings * qty;
+
+            // Apply GST
+            const taxAmount = totalRevenueBeforeTax * (gst / 100);
+            const finalPayable = totalRevenueBeforeTax + taxAmount;
+
+            effectiveDiscPerc = (totalSavings / original) * 100;
+
+            // UI Update
+            elements.finalPriceDisp.textContent = formatInr(finalPayable);
+            elements.savingsDisp.textContent = formatInr(totalSavingsWithQty);
+            elements.effDiscDisp.textContent = effectiveDiscPerc.toFixed(1) + "%";
+            elements.taxAmtDisp.textContent = formatInr(taxAmount);
+            elements.totalPaidDisp.textContent = formatInr(finalPayable);
+            elements.effectiveRateDisp.textContent = ((finalPayable - (original * qty)) / (original * qty) * 100).toFixed(1) + "% Net";
+
+            // Bar Update
+            const finalBarWidth = (finalPayable / (original * qty + taxAmount)) * 100;
+            elements.finalBar.style.width = finalBarWidth + "%";
+            elements.savingsBar.style.width = (100 - finalBarWidth) + "%";
+            elements.finalLabel.textContent = "Pay: " + formatCompact(finalPayable);
+            elements.savingsLabel.textContent = "Save: " + formatCompact(totalSavingsWithQty);
+
+            // Insights
+            let insightText = `<div class="space-y-1">`;
+            if (finalPayable < (original * qty)) {
+                insightText += `<p>✅ <strong>Awesome!</strong> You are saving <strong>${formatInr(totalSavingsWithQty)}</strong> on this purchase.</p>`;
+                insightText += `<p class="mt-2 text-pretty">💰 Your effective discount is <strong>${effectiveDiscPerc.toFixed(2)}%</strong>. Each unit now costs you ${formatInr(finalPayable/qty)}.</p>`;
+                if (gst > 0) {
+                    insightText += `<p class="mt-2 text-blue-700">🏢 Note: Final price includes ${formatInr(taxAmount)} as ${gst}% GST applied after the discount.</p>`;
+                }
+            } else {
+                insightText += `<p class="text-red-700">⚠️ <strong>Note:</strong> Tax or fees have brought the final price close to or above the original list price.</p>`;
+            }
+            insightText += `</div>`;
+            elements.insightsBox.innerHTML = insightText;
+
+            // Quality / Status
+            const badge = elements.statusBadge;
+            const label = elements.qualityLabel;
+            const card = elements.qualityCard;
+            
+            badge.textContent = effectiveDiscPerc.toFixed(1) + "% Off";
+            if (effectiveDiscPerc < 15) {
+                card.className = "bg-slate-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
+                label.textContent = "Standard Price";
+            } else if (effectiveDiscPerc < 30) {
+                card.className = "bg-blue-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
+                label.textContent = "Good Deal";
+            } else if (effectiveDiscPerc < 50) {
+                card.className = "bg-indigo-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
+                label.textContent = "Great Bargain";
+            } else {
+                card.className = "bg-emerald-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
+                label.textContent = "Steal Deal! 🔥";
+            }
+        }
+
+        async function copyResults() {
+            const text = `Discount Summary:\nFinal Price: ${elements.finalPriceDisp.innerText}\nSavings: ${elements.savingsDisp.innerText}\nEffective Off: ${elements.effDiscDisp.innerText}\nVia ArthCalculator.in`;
+            try {
+                await navigator.clipboard.writeText(text);
+                const originalText = "Copy Savings Result";
+                elements.copyBtn.innerText = "✓ Copied!";
+                setTimeout(() => elements.copyBtn.innerText = originalText, 2000);
+            } catch (err) {}
+        }
+
+        function resetCalculator() {
+            elements.originalPrice.value = 0;
+            elements.primaryDiscount.value = 0;
+            elements.extraDiscount.value = 0;
+            elements.units.value = 1;
+            elements.gstRate.value = "0";
+            calculate();
+        }
+
+        function applyExample() {
+            elements.originalPrice.value = 5000;
+            elements.primaryDiscount.value = 30;
+            elements.extraDiscount.value = 10;
+            elements.units.value = 1;
+            elements.gstRate.value = "0";
+            setMode('percent');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            [elements.originalPrice, elements.primaryDiscount, elements.extraDiscount, elements.units].forEach(input => {
+                input.addEventListener('input', calculate);
+            });
+            elements.gstRate.addEventListener('change', calculate);
+            calculate();
+        });
+
+        // Provided Fetch Script
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
