@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan vs Investment Calculator – Should You Prepay Loan or Invest?</title>
+    <meta name="description" content="Compare whether you should prepay your loan or invest extra money. Calculate interest savings vs investment returns based on Indian bank rates and mutual fund growth.">
+    <meta name="keywords" content="loan vs investment calculator india, prepay home loan or invest in sip, debt vs equity calculator, loan interest savings calculator, opportunity cost of prepayment, financial independence india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-14">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/loan-vs-investment-calculator/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Loan vs Investment Calculator",
+     "url":"https://arthcalculator.in/loan-vs-investment-calculator/",
+     "description":"Analyze the financial outcome of prepaying a loan versus investing the same amount in the stock market or mutual funds.",
+     "inLanguage":"en"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Loan vs Investment Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "A decision-making tool to compare interest saved through loan prepayment vs wealth growth via investments.",
+      "featureList": [
+        "Loan Interest Savings Calculation",
+        "Investment Future Value Estimation",
+        "Net Wealth Difference Analysis",
+        "Reducing Balance Math"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Loan vs Investment", "item": "https://arthcalculator.in/loan-vs-investment-calculator/" }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Loan vs Investment</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Loan vs Investment Calculator – Prepay or Invest?</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Compare whether you should use your extra funds to prepay an existing loan or invest them in the market. Find out which path generates more <strong>net wealth</strong> for you over the long term.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 shadow-sm uppercase tracking-wide">Strategy Tool 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Quick Action Strip -->
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all text-pretty">Apply Example</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-slate-50 transition-all">Reset All</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <!-- Loan Inputs -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        Loan Profile
+                    </h2>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-sm font-medium text-slate-600">Outstanding Principal (₹)</label>
+                                <input type="number" id="loanAmount" value="2000000" class="w-32 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                            </div>
+                            <input type="range" id="loanRange" min="50000" max="50000000" step="50000" value="2000000" class="w-full">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-2">Loan Rate (%)</label>
+                                <input type="number" id="loanRate" value="9" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-2">Remaining Tenure (Yrs)</label>
+                                <input type="number" id="tenure" value="10" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Inputs -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        The Choice
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-sm font-medium text-slate-600">Extra Money Available (₹)</label>
+                                <input type="number" id="extraMoney" value="500000" class="w-32 px-3 py-2 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                            </div>
+                            <input type="range" id="extraRange" min="5000" max="10000000" step="5000" value="500000" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-sm font-medium text-slate-600 text-pretty">Expected Invest Return (%)</label>
+                                <input type="number" id="investRate" value="12" step="0.1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 text-sm">
+                            </div>
+                            <input type="range" id="investRange" min="1" max="30" step="0.1" value="12" class="w-full">
+                        </div>
+                    </div>
+                    <button type="button" id="calcBtn" onclick="calculate()" class="w-full mt-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Compare Options</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <!-- Decision Result Card -->
+                <div id="decisionCard" class="p-6 sm:p-8 rounded-3xl text-white transition-colors duration-500 card-shadow flex flex-col items-center text-center text-pretty">
+                    <p class="text-[10px] uppercase font-bold tracking-widest opacity-80 mb-2">Mathematical Advantage</p>
+                    <h2 id="decisionText" class="text-2xl sm:text-4xl font-black mb-2">Calculating...</h2>
+                    <p id="advantageAmount" class="text-sm font-medium opacity-90"></p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pretty">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                        <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Interest Avoided (Prepay)</p>
+                        <h3 id="loanSavingDisp" class="text-xl font-extrabold text-blue-600">₹0</h3>
+                        <p class="text-[9px] text-slate-400 mt-2">Interest expense prevented by paying off principal early.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                        <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Wealth Gained (Invest)</p>
+                        <h3 id="investWealthDisp" class="text-xl font-extrabold text-emerald-600">₹0</h3>
+                        <p class="text-[9px] text-slate-400 mt-2">Total profit earned by investing the extra funds.</p>
+                    </div>
+                </div>
+
+                <!-- Breakdown -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Outcome Comparison</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-sm border-b border-slate-50 pb-3">
+                            <span class="text-slate-500">Loan Interest Savings</span>
+                            <span id="finalInterestDisp" class="font-bold text-blue-600">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-slate-50 pb-3">
+                            <span class="text-slate-500">Investment Final Value</span>
+                            <span id="finalInvestFvDisp" class="font-bold text-emerald-600">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-slate-50 pb-3">
+                            <span class="text-slate-500">Net Wealth Difference</span>
+                            <span id="diffDisp" class="font-bold text-slate-800">₹0</span>
+                        </div>
+                    </div>
+                    
+                    <div id="insightsBox" class="mt-8 bg-blue-50 p-5 rounded-xl border border-blue-100 text-xs sm:text-sm text-blue-800 leading-relaxed text-pretty"></div>
+                    
+                    <button id="copyBtn" onclick="copyResults()" class="w-full mt-6 py-3 border border-blue-200 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        Copy Comparison Result
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO Knowledge & FAQs -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Should I Prepay My Loan or Invest?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
+                    <p>One of the most debated topics in personal finance is whether to prioritize debt repayment or market investment when you have extra cash. The answer lies in a concept called <strong>Spread Analysis</strong>—the difference between your loan interest rate and your expected investment return rate.</p>
+                    <p>While prepaying a <a href="/home-loan/" class="text-blue-600 underline">Home Loan</a> provides a guaranteed "return" (by avoiding interest cost), investing in <a href="/sip/" class="text-blue-600 underline">SIPs</a> offers potentially higher, albeit market-linked, returns. This calculator compares the two paths over your remaining loan tenure to help you maximize your net worth.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Understanding Opportunity Cost</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Every rupee you use to prepay a loan has an <strong>Opportunity Cost</strong>—the potential profit that money could have earned if it were invested elsewhere. Conversely, every rupee you invest instead of prepaying a loan has a <strong>Debt Cost</strong>—the interest that the bank continues to charge on that portion of the principal.</p>
+                    <p>In high-inflation environments, debt becomes cheaper to carry over time, making investing more attractive. However, for high-interest liabilities like credit cards or personal loans, prepayment is almost always the mathematically superior choice.</p>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-2xl font-bold mb-6">Financial Strategy: Debt vs Equity</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-blue-400 mb-2">When Prepayment Wins</h4>
+                        <p class="text-slate-300">If your loan rate is above 12% (e.g., Personal Loans) or if you are in the first 5 years of a Home Loan where interest components are highest. Prepayment also reduces psychological stress.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-emerald-400 mb-2">When Investing Wins</h4>
+                        <p class="text-slate-300">If your loan rate is low (e.g., subsidized Home Loans at 8%) and you are investing in growth assets like Equity MFs targeting 12-15% returns over 10+ years.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Should I prepay loan or invest?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Mathematically, you should choose the option with the higher percentage. If investment return > loan interest, invest. Otherwise, prepay.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is loan prepayment better than SIP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Prepayment gives a 100% guaranteed 'return' of the interest saved. SIP returns are subject to market volatility but historically provide higher long-term growth in India.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm">What interest rate makes prepayment better?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Generally, if your loan rate is above 10-12%, prepaying is safer and smarter. If it's below 9% (like Home Loans), investing in diversified equity funds is often better.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Does the home loan tax benefit change the decision?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Yes. If you are in the Old Tax Regime, the effective interest rate of your home loan is lower because of tax deductions. This makes carrying the loan and investing elsewhere even more attractive.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools List -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <a href="/emi/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">EMI Calculator</h4>
+                    </a>
+                    <a href="/loan-prepayment/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Prepayment</h4>
+                    </a>
+                    <a href="/sip/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                    <a href="/cagr/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">CAGR Tool</h4>
+                    </a>
+                    <a href="/net-worth/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Net Worth</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty">Disclaimer</p>
+                Investment returns are market-linked and not guaranteed. Interest savings are based on standard reducing balance math. This tool provides mathematical estimations and does not constitute financial advice. Always consult a certified financial planner.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            loanInput: document.getElementById('loanAmount'),
+            loanRange: document.getElementById('loanRange'),
+            rateInput: document.getElementById('loanRate'),
+            tenureInput: document.getElementById('tenure'),
+            extraMoney: document.getElementById('extraMoney'),
+            extraRange: document.getElementById('extraRange'),
+            investRate: document.getElementById('investRate'),
+            investRange: document.getElementById('investRange'),
+            
+            decisionCard: document.getElementById('decisionCard'),
+            decisionText: document.getElementById('decisionText'),
+            advantageAmt: document.getElementById('advantageAmount'),
+            loanSavingDisp: document.getElementById('loanSavingDisp'),
+            investWealthDisp: document.getElementById('investWealthDisp'),
+            finalInterestDisp: document.getElementById('finalInterestDisp'),
+            finalInvestFvDisp: document.getElementById('finalInvestFvDisp'),
+            diffDisp: document.getElementById('diffDisp'),
+            insightsBox: document.getElementById('insightsBox')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+
+        function calculate() {
+            const P = parseFloat(elements.loanInput.value) || 0;
+            const L_rate = parseFloat(elements.rateInput.value) || 0;
+            const T_years = parseFloat(elements.tenureInput.value) || 0;
+            const extra = parseFloat(elements.extraMoney.value) || 0;
+            const I_rate = parseFloat(elements.investRate.value) || 0;
+
+            if (P <= 0 || T_years <= 0 || extra <= 0) return;
+
+            // --- 1. LOAN SAVINGS (Interest Avoided) ---
+            // If you pay 'extra' amount into the loan today, you avoid paying interest on it for T years.
+            // Using compound interest formula since EMIs are fixed (preventing interest on interest charging).
+            const rLoan = L_rate / 100;
+            const interestAvoided = extra * Math.pow(1 + rLoan, T_years) - extra;
+
+            // --- 2. INVESTMENT GROWTH ---
+            const rInvest = I_rate / 100;
+            const investmentProfit = extra * Math.pow(1 + rInvest, T_years) - extra;
+            const investmentTotal = extra + investmentProfit;
+
+            // --- 3. COMPARISON ---
+            const difference = Math.abs(investmentProfit - interestAvoided);
+
+            // UI Updates
+            elements.loanSavingDisp.textContent = formatInr(interestAvoided);
+            elements.investWealthDisp.textContent = formatInr(investmentProfit);
+            elements.finalInterestDisp.textContent = formatInr(interestAvoided);
+            elements.finalInvestFvDisp.textContent = formatInr(investmentTotal);
+            elements.diffDisp.textContent = formatInr(difference);
+
+            if (investmentProfit > interestAvoided) {
+                elements.decisionCard.className = "p-6 sm:p-8 rounded-3xl text-white transition-all bg-emerald-600 card-shadow flex flex-col items-center text-center";
+                elements.decisionText.textContent = "Investing is Better";
+                elements.advantageAmt.textContent = `Wealth advantage: ${formatInr(difference)} over ${T_years} years.`;
+                elements.insightsBox.innerHTML = `<p>🚀 <strong>Alpha Growth:</strong> Your expected investment return of ${I_rate}% is higher than your loan cost of ${L_rate}%. By investing <strong>${formatInr(extra)}</strong>, you grow your wealth by <strong>${formatInr(investmentProfit)}</strong>, which beats the interest savings.</p>`;
+            } else {
+                elements.decisionCard.className = "p-6 sm:p-8 rounded-3xl text-white transition-all bg-blue-600 card-shadow flex flex-col items-center text-center";
+                elements.decisionText.textContent = "Prepayment is Better";
+                elements.advantageAmt.textContent = `Interest advantage: ${formatInr(difference)} saved.`;
+                elements.insightsBox.innerHTML = `<p>🛡️ <strong>Debt Shield:</strong> Your loan cost of ${L_rate}% is higher than your investment returns. Prepaying <strong>${formatInr(extra)}</strong> acts as a guaranteed return by stopping <strong>${formatInr(interestAvoided)}</strong> in interest charges.</p>`;
+            }
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; calculate(); });
+            range.addEventListener('input', () => { input.value = range.value; calculate(); });
+        }
+
+        function resetCalculator() {
+            elements.loanInput.value = 2000000;
+            elements.extraMoney.value = 500000;
+            elements.investRate.value = 12;
+            calculate();
+        }
+
+        function applyExample() {
+            elements.loanInput.value = 3000000;
+            elements.loanRange.value = 3000000;
+            elements.rateInput.value = 8.5;
+            elements.tenure.value = 15;
+            elements.extraMoney.value = 1000000;
+            elements.extraRange.value = 1000000;
+            elements.investRate.value = 13.5;
+            calculate();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.loanInput, elements.loanRange);
+            setupSync(elements.extraMoney, elements.extraRange);
+            setupSync(elements.investRate, elements.investRange);
+            ['loanRate', 'tenure'].forEach(id => {
+                document.getElementById(id).addEventListener('input', calculate);
+            });
+            calculate();
+        });
+
+        // Provided Fetch Script
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
