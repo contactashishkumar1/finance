@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital Gains Tax Calculator India – LTCG & STCG (Budget 2024 Rules)</title>
+    <meta name="description" content="Calculate Long Term and Short Term Capital Gains tax on stocks and mutual funds in India. Updated for Budget 2024 with 12.5% LTCG and 20% STCG rules.">
+    <meta name="keywords" content="capital gains calculator india, ltcg calculator, stcg calculator, mutual fund tax calculator, stock tax calculator, budget 2024 tax rules, ltcg 12.5 percent, tax on equity india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/capital-gains-tax/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Capital Gains Tax Calculator India – Budget 2024 Updated">
+    <meta property="og:description" content="Calculate your tax liability on stocks and mutual funds using 12.5% LTCG and 20% STCG rates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/capital-gains-tax/">
+    <meta property="og:site_name" content="ArthCalculator">
+
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Capital Gains Tax Calculator India",
+     "url":"https://arthcalculator.in/capital-gains-tax/",
+     "description":"Calculate investment tax liability using current LTCG and STCG rules in India.",
+     "inLanguage":"en"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Capital Gains Tax Calculator India",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculate capital gains tax on equity, mutual funds and other assets in India.",
+      "featureList": [
+        "LTCG calculation",
+        "STCG calculation",
+        "Equity tax",
+        "Debt tax",
+        "Indexation support",
+        "Budget 2024 rules"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Capital Gains Tax", "item": "https://arthcalculator.in/capital-gains-tax/" }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is LTCG tax free up to 1.25 lakh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, for equity shares and equity mutual funds, LTCG is exempt up to ₹1,25,000 total per financial year starting from July 23, 2024."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the new STCG rate on shares?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Short Term Capital Gains (STCG) tax on listed equity shares has been increased from 15% to 20% in the latest budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I pay Cess on Capital Gains?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A 4% Health and Education Cess is applied on the base tax amount for both LTCG and STCG in India."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Hero -->
+    <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0 text-pretty">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Capital Gains Tax</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Capital Gains Tax Calculator – Stocks & Mutual Funds</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate LTCG and STCG tax on equity, mutual funds and other assets using <strong>latest Budget 2024 tax rules</strong>. Plan your exits with complete tax clarity.
+                    </p>
+                    <p class="text-[10px] sm:text-xs font-bold text-slate-400 mt-4 uppercase tracking-tight">Part of our <a href="/calculators/#tax" class="text-blue-600 hover:underline">Tax Calculators</a> collection</p>
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest justify-center md:justify-start">
+                        <span>Free</span> <span>•</span> <span>Instant</span> <span>•</span> <span>No Signup</span> <span>•</span> <span>Private</span> <span>•</span> <span>Built for India</span>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase border border-blue-100 shadow-sm tracking-wide">Budget 2024 Rules</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Asset Details
+                    </h2>
+
+                    <div class="mb-6">
+                        <label for="assetType" class="text-sm font-medium text-slate-600 block mb-2">Asset Type</label>
+                        <select id="assetType" aria-label="Select Asset Type" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 transition-all bg-white cursor-pointer text-sm">
+                            <option value="equity">Equity Shares / Equity MFs</option>
+                            <option value="debt">Debt Mutual Funds (Post Apr-23)</option>
+                            <option value="other">Other Assets (Gold/Estate)</option>
+                        </select>
+                    </div>
+
+                    <div id="slabContainer" class="mb-6 hidden">
+                        <label for="slabRate" class="text-sm font-medium text-slate-600 block mb-2">Your Income Tax Slab</label>
+                        <select id="slabRate" aria-label="Select Income Tax Slab" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 transition-all bg-white cursor-pointer text-sm">
+                            <option value="5">5% Bracket</option>
+                            <option value="20">20% Bracket</option>
+                            <option value="30" selected>30% Bracket (Standard)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label for="buyPrice" class="text-sm font-medium text-slate-600">Purchase Price (₹)</label>
+                            <input type="number" id="buyPrice" value="500000" step="1000" class="w-32 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="buyRange" aria-label="Purchase Price Slider" min="1000" max="10000000" step="5000" value="500000" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label for="sellPrice" class="text-sm font-medium text-slate-600">Sale Price (₹)</label>
+                            <input type="number" id="sellPrice" value="850000" step="1000" class="w-32 px-3 py-2 border border-slate-200 rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="sellRange" aria-label="Sale Price Slider" min="1000" max="20000000" step="5000" value="850000" class="w-full">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label for="buyDate" class="text-xs font-bold text-slate-500 uppercase block mb-2">Purchase Date</label>
+                            <input type="date" id="buyDate" aria-label="Purchase Date" value="2023-04-01" class="w-full px-3 py-2 border rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="sellDate" class="text-xs font-bold text-slate-500 uppercase block mb-2">Sale Date</label>
+                            <input type="date" id="sellDate" aria-label="Sale Date" value="2025-05-01" class="w-full px-3 py-2 border rounded-lg font-bold text-sm focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label for="chargesInput" class="text-sm font-medium text-slate-600">Brokerage / Charges (₹)</label>
+                            <input type="number" id="chargesInput" value="0" step="100" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <p class="text-[10px] text-slate-400">Total commissions, STT and turnover charges.</p>
+                    </div>
+
+                    <hr class="border-slate-100 my-6">
+                    
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Advanced Options</h3>
+                    <div class="space-y-4">
+                        <label id="indexationContainer" class="flex items-center gap-3 cursor-pointer group hidden">
+                            <div class="relative">
+                                <input type="checkbox" id="indexationToggle" aria-label="Apply Indexation" class="sr-only peer">
+                                <div class="w-10 h-5 bg-slate-200 rounded-full peer peer-checked:bg-blue-600 transition-all"></div>
+                                <div class="absolute left-1 top-1 w-3 h-3 bg-white rounded-full peer-checked:translate-x-5 transition-all"></div>
+                            </div>
+                            <span class="text-sm font-medium text-slate-600 group-hover:text-slate-900 transition-colors">Apply Indexation (LTCG Only)</span>
+                        </label>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full mt-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Tax Payable</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left text-pretty">Final Tax Payable (incl. Cess)</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-600 block mb-6 text-center md:text-left" id="taxPayableDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Capital Gain</p>
+                            <p class="font-bold text-slate-800 text-lg" id="totalGainDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1 text-pretty">Net Profit (Post-Tax)</p>
+                            <p class="font-bold text-emerald-700 text-lg" id="netProfitDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase text-pretty">
+                            <span class="text-blue-600 font-bold">Net Profit</span>
+                            <span class="text-red-500 font-bold">Tax Liability</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="gainBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 80%"></div>
+                            <div id="taxBar" class="h-full bg-red-400 transition-all duration-700" style="width: 20%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4 text-pretty">
+                            <div class="flex items-center text-pretty">
+                                <div class="w-3 h-3 bg-emerald-500 rounded-sm mr-2 text-pretty"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="gainLabel">Profit: ₹0</span>
+                            </div>
+                            <div class="flex items-center text-pretty">
+                                <div class="w-3 h-3 bg-red-400 rounded-sm mr-2 text-pretty text-pretty text-pretty"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="taxLabel">Tax: ₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-xs sm:text-sm text-blue-800 leading-relaxed mb-6 text-pretty"></div>
+                    
+                    <button id="copyBtn" class="w-full mb-6 py-2 border border-blue-200 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        Copy Calculation Result
+                    </button>
+
+                    <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4 text-pretty">
+                        <div class="text-center sm:text-left text-pretty">
+                            <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Holding Duration</p>
+                            <p class="font-bold text-slate-800 text-xs" id="holdingDisp">0 Years, 0 Months, 0 Days</p>
+                        </div>
+                        <div class="text-center sm:text-right text-pretty">
+                            <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Tax Category</p>
+                            <span id="taxStatusBadge" class="bg-slate-900 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest text-pretty">STCG (20%)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Amount After Tax</p>
+                            <h4 class="text-2xl font-black text-white" id="amountAfterTaxDisp">₹0</h4>
+                        </div>
+                        <div class="text-right">
+                             <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Effective Tax Rate</p>
+                             <div id="effectiveRateBadge" class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-bold border border-blue-500/30 inline-block mt-1">0%</div>
+                        </div>
+                    </div>
+                    <p class="text-[9px] text-slate-500 mt-4 uppercase font-bold tracking-widest">Note: Surcharge not included for income above ₹50L.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO KNOWLEDGE -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Budget 2024: New Capital Gains Tax Rates</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>The Union Budget 2024 introduced significant changes to the capital gains tax structure in India to simplify the holding periods and tax rates across different asset classes.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-pretty text-pretty">
+                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                            <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">Equity (Stocks/MFs)</h3>
+                            <ul class="space-y-3 list-none">
+                                <li><strong class="text-blue-600">STCG:</strong> Rate increased from 15% to <strong>20%</strong>.</li>
+                                <li><strong class="text-emerald-600">LTCG:</strong> Rate increased from 10% to <strong>12.5%</strong>.</li>
+                                <li><strong class="text-emerald-600">Exemption:</strong> Annual LTCG limit raised to <strong>₹1.25 Lakh</strong>.</li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty">
+                            <h3 class="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">Other Assets (Gold/Estate)</h3>
+                            <ul class="space-y-3 list-none">
+                                <li><strong class="text-blue-600">LTCG:</strong> Reduced from 20% to <strong>12.5%</strong>.</li>
+                                <li><strong class="text-red-500">Indexation:</strong> Removed for assets bought after 2001 (optional grandfathering for certain cases).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Capital Gains Tax?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Capital Gains Tax is the tax you pay on the profit earned from the sale of an asset (like stocks, mutual funds, gold, or real estate). If the sale price is higher than the purchase price, the difference is your <strong>Capital Gain</strong>.</p>
+                    <p>In India, these gains are divided into <strong>Short Term (STCG)</strong> and <strong>Long Term (LTCG)</strong> based on how long you held the asset. For a deeper look at your overall annual taxes, use our <a href="/income-tax/" class="text-blue-600 underline font-medium">Income Tax Calculator</a>.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight text-pretty">Difference between LTCG and STCG</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
+                    <p>The primary difference lies in the holding period. For listed equity assets, the threshold is 12 months. For other assets like real estate or unlisted shares, the threshold is unified at 24 months post-Budget 2024. Gains made before these periods are Short Term and usually taxed at higher rates or slab rates.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Tax on Stocks & Mutual Funds</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty text-pretty">
+                    <p>Equity-oriented mutual funds (where equity exposure is >65%) are taxed like stocks. Debt-oriented mutual funds bought after April 1, 2023, no longer enjoy LTCG benefits and are taxed at your income tax slab rate regardless of holding period. You can track your investment growth with our <a href="/sip/" class="text-blue-600 underline font-medium">SIP Calculator</a> or <a href="/lumpsum/" class="text-blue-600 underline font-medium">Lumpsum Calculator</a>.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">How to Reduce Capital Gains Tax Legally</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
+                    <ul class="list-disc ml-5 space-y-2">
+                        <li><strong>Tax-Loss Harvesting:</strong> Offsetting your capital gains by selling underperforming assets at a loss.</li>
+                        <li><strong>Exemption limit:</strong> Booking profits up to ₹1.25 Lakh every year to utilize the tax-free LTCG limit.</li>
+                        <li><strong>Section 54/54F:</strong> Reinvesting real estate gains into another residential property.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4 text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is LTCG tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">LTCG (Long Term Capital Gains) tax applies when you sell an asset after holding it for a specified long-term period (1 year for stocks, 2 years for property).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is LTCG tax free up to 1.25 lakh?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">Yes, for equity shares and equity mutual funds, LTCG is exempt up to ₹1,25,000 total per financial year starting from July 2024.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the new STCG rate on shares?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty">The Short Term Capital Gains (STCG) tax on listed equity shares has been increased from 15% to 20% in the latest budget.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Do mutual funds have capital gains tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">Yes. Every redemption from a mutual fund is a taxable event. The tax rate depends on whether the fund is Equity or Debt oriented.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How to save capital gains tax?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty text-pretty">You can save tax by utilizing the ₹1.25L annual exemption, using 'Tax Loss Harvesting' (offsetting losses against gains), or reinvesting property gains under Section 54/54F.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty text-pretty text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <a href="/income-tax" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Income Tax</h4>
+                    </a>
+                    <a href="/sip" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty">SIP Calculator</h4>
+                    </a>
+                    <a href="/cagr" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty">CAGR Tool</h4>
+                    </a>
+                    <a href="/net-worth" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Net Worth</h4>
+                    </a>
+                    <a href="/xirr" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">XIRR Tool</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                This calculator uses Budget 2024 rules (12.5% LTCG, 20% STCG). It does not account for surcharges, complex grandfathering clauses, or corporate tax slabs. Please consult a Chartered Accountant for final tax filing.
+                <p class="mt-4 font-bold text-slate-400 uppercase tracking-widest text-[9px]">Updated for FY 2026-27 financial planning guidelines</p>
+                <p class="mt-1 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            assetType: document.getElementById('assetType'),
+            slabContainer: document.getElementById('slabContainer'),
+            slabRate: document.getElementById('slabRate'),
+            buyPrice: document.getElementById('buyPrice'),
+            buyRange: document.getElementById('buyRange'), 
+            sellPrice: document.getElementById('sellPrice'),
+            sellRange: document.getElementById('sellRange'),
+            buyDate: document.getElementById('buyDate'),
+            sellDate: document.getElementById('sellDate'),
+            charges: document.getElementById('chargesInput'),
+            indexationToggle: document.getElementById('indexationToggle'),
+            indexationContainer: document.getElementById('indexationContainer'),
+            taxPayableDisp: document.getElementById('taxPayableDisp'),
+            totalGainDisp: document.getElementById('totalGainDisp'),
+            netProfitDisp: document.getElementById('netProfitDisp'),
+            amountAfterTaxDisp: document.getElementById('amountAfterTaxDisp'),
+            effRateBadge: document.getElementById('effectiveRateBadge'),
+            gainBar: document.getElementById('gainBar'),
+            taxBar: document.getElementById('taxBar'),
+            gainLabel: document.getElementById('gainLabel'),
+            taxLabel: document.getElementById('taxLabel'),
+            holdingDisp: document.getElementById('holdingDisp'),
+            taxStatusBadge: document.getElementById('taxStatusBadge'),
+            insightsBox: document.getElementById('insightsBox'),
+            copyBtn: document.getElementById('copyBtn'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        async function copyResults() {
+            const text = elements.insightsBox.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                const originalText = elements.copyBtn.innerText;
+                elements.copyBtn.innerText = "✓ Copied!";
+                setTimeout(() => elements.copyBtn.innerText = originalText, 2000);
+            } catch (err) {}
+        }
+
+        function calculate() {
+            const assetType = elements.assetType.value;
+            const buyVal = parseFloat(elements.buyPrice.value) || 0;
+            const sellVal = parseFloat(elements.sellPrice.value) || 0;
+            const charges = parseFloat(elements.charges.value) || 0;
+            const useIndexation = elements.indexationToggle.checked;
+            const slabRate = parseFloat(elements.slabRate.value) || 30;
+
+            const bDate = new Date(elements.buyDate.value);
+            const sDate = new Date(elements.sellDate.value);
+
+            if (isNaN(bDate.getTime()) || isNaN(sDate.getTime())) return;
+
+            // Visibility toggle for slab rate
+            if (assetType === 'debt' || assetType === 'other') {
+                elements.slabContainer.classList.remove('hidden');
+            } else {
+                elements.slabContainer.classList.add('hidden');
+            }
+
+            // 1. Calculate Holding Period
+            const diffTime = Math.abs(sDate - bDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            const yearsHeld = Math.floor(diffDays / 365);
+            const monthsHeld = Math.floor((diffDays % 365) / 30.44);
+            const daysHeld = Math.floor(diffDays % 30.44);
+            elements.holdingDisp.textContent = `${yearsHeld} Years, ${monthsHeld} Months, ${daysHeld} Days`;
+
+            // 2. STCG vs LTCG logic
+            let isLtcg = false;
+            if (assetType === 'equity') isLtcg = diffDays >= 365;
+            else if (assetType === 'debt') isLtcg = false; 
+            else isLtcg = diffDays >= (2 * 365); 
+
+            // Indexation visibility
+            if (assetType === 'other' && isLtcg) {
+                elements.indexationContainer.classList.remove('hidden');
+                elements.indexationContainer.classList.add('flex');
+            } else {
+                elements.indexationContainer.classList.add('hidden');
+                elements.indexationToggle.checked = false;
+            }
+
+            const grossGain = sellVal - buyVal - charges;
+            
+            if (grossGain <= 0) {
+                elements.taxPayableDisp.textContent = "₹0";
+                elements.totalGainDisp.textContent = formatInr(grossGain);
+                elements.netProfitDisp.textContent = formatInr(grossGain);
+                elements.amountAfterTaxDisp.textContent = formatInr(sellVal);
+                elements.effRateBadge.textContent = "0%";
+                elements.taxBar.style.width = "0%";
+                elements.gainBar.style.width = "100%";
+                elements.taxStatusBadge.textContent = "No tax applicable";
+                elements.insightsBox.innerHTML = `<div class="font-bold text-red-600">Capital Loss: ${formatInr(Math.abs(grossGain))}</div><p>No tax is payable. Loss can be carried forward as per I.T. rules.</p>`;
+                return;
+            }
+
+            let taxableGain = grossGain;
+            let baseTax = 0;
+            let exemptionApplied = 0;
+            let indexationMsg = "";
+            let taxCategoryLabel = "";
+
+            if (assetType === 'equity') {
+                if (isLtcg) {
+                    exemptionApplied = Math.min(grossGain, 125000);
+                    taxableGain = Math.max(0, grossGain - 125000); 
+                    baseTax = taxableGain * 0.125; 
+                    taxCategoryLabel = "LTCG (12.5% after ₹1.25L exemption)";
+                } else {
+                    baseTax = grossGain * 0.20; 
+                    taxCategoryLabel = "STCG (20%)";
+                }
+            } else if (assetType === 'debt') {
+                baseTax = grossGain * (slabRate / 100);
+                taxCategoryLabel = "Taxed as Income (Slab)";
+            } else {
+                if (isLtcg) {
+                    if (useIndexation) {
+                        const preciseYears = diffDays / 365.25;
+                        const indexedCost = buyVal * Math.pow(1.05, preciseYears);
+                        taxableGain = Math.max(0, sellVal - indexedCost - charges);
+                        baseTax = taxableGain * 0.125;
+                        indexationMsg = "<p class='text-[10px] opacity-70 mt-1 italic'>* Indexation uses estimated 5% inflation factor for illustration.</p>";
+                        taxCategoryLabel = "LTCG Indexed (12.5%)";
+                    } else {
+                        baseTax = grossGain * 0.125;
+                        taxCategoryLabel = "LTCG (12.5%)";
+                    }
+                } else {
+                    baseTax = grossGain * (slabRate / 100);
+                    taxCategoryLabel = `STCG (Slab ${slabRate}%)`;
+                }
+            }
+            
+            const cess = baseTax * 0.04;
+            const totalTax = baseTax + cess;
+            const netProfit = grossGain - totalTax;
+            const effectiveRate = (totalTax / grossGain) * 100;
+            const amountAfterTax = sellVal - totalTax;
+
+            elements.taxPayableDisp.textContent = formatInr(totalTax);
+            elements.totalGainDisp.textContent = formatInr(grossGain);
+            elements.netProfitDisp.textContent = formatInr(netProfit);
+            elements.amountAfterTaxDisp.textContent = formatInr(amountAfterTax);
+            elements.effRateBadge.textContent = effectiveRate.toFixed(2) + "%";
+            elements.taxStatusBadge.textContent = taxCategoryLabel;
+
+            elements.insightsBox.innerHTML = `
+                <div class="space-y-1.5">
+                    <div class="flex justify-between"><span>Holding Type:</span> <span class="font-bold">${isLtcg ? "Long Term" : "Short Term"}</span></div>
+                    <div class="flex justify-between"><span>Tax Type:</span> <span class="font-bold">${taxCategoryLabel}</span></div>
+                    <div class="flex justify-between"><span>Total Gain:</span> <span class="font-bold">${formatInr(grossGain)}</span></div>
+                    ${exemptionApplied > 0 ? `<div class="flex justify-between text-emerald-600"><span>Exemption Used:</span> <span>${formatInr(exemptionApplied)}</span></div>` : ''}
+                    <div class="flex justify-between"><span>Taxable Gain:</span> <span>${formatInr(taxableGain)}</span></div>
+                    <div class="flex justify-between"><span>Base Tax:</span> <span>${formatInr(baseTax)}</span></div>
+                    <div class="flex justify-between"><span>Cess (4%):</span> <span>${formatInr(cess)}</span></div>
+                    <div class="flex justify-between border-t border-blue-200 pt-1 font-bold"><span>Total Tax:</span> <span>${formatInr(totalTax)}</span></div>
+                    <div class="flex justify-between pt-1 text-slate-900"><span>Net Profit:</span> <span>${formatInr(netProfit)}</span></div>
+                    <div class="flex justify-between pt-1"><span>Sale Value:</span> <span>${formatInr(sellVal)}</span></div>
+                    <div class="flex justify-between font-bold text-blue-700 border-t border-blue-100 pt-1"><span>Amount After Tax:</span> <span>${formatInr(amountAfterTax)}</span></div>
+                    <div class="mt-2 pt-2 border-t border-blue-100 text-[10px] uppercase font-bold flex justify-between">
+                        <span>Effective Tax Rate:</span> <span>${effectiveRate.toFixed(2)}%</span>
+                    </div>
+                    ${indexationMsg}
+                </div>
+            `;
+
+            const taxPerc = (totalTax / Math.max(grossGain, 1)) * 100;
+            elements.taxBar.style.width = Math.min(100, taxPerc) + "%";
+            elements.gainBar.style.width = Math.max(0, 100 - taxPerc) + "%";
+            elements.gainLabel.textContent = "Profit: " + formatCompact(netProfit);
+            elements.taxLabel.textContent = "Tax: " + formatCompact(totalTax);
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; calculate(); });
+            r.addEventListener('input', () => { i.value = r.value; calculate(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.buyPrice, elements.buyRange);
+            setupSync(elements.sellPrice, elements.sellRange);
+            elements.buyDate.addEventListener('input', calculate);
+            elements.sellDate.addEventListener('input', calculate);
+            elements.assetType.addEventListener('change', () => {
+                elements.indexationToggle.checked = false;
+                calculate();
+            });
+            elements.slabRate.addEventListener('change', calculate);
+            elements.indexationToggle.addEventListener('change', calculate);
+            elements.charges.addEventListener('input', calculate);
+            elements.copyBtn.addEventListener('click', copyResults);
+            calculate();
+        });
+
+        // Provided Fetch Script
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
