@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule of 72 Calculator India – Investment Doubling Time</title>
+    <meta name="description" content="Use our Rule of 72 calculator to estimate how fast your investments double. Calculate nominal and inflation-adjusted doubling time. Free tool for Indian investors.">
+    <meta name="keywords" content="rule of 72 calculator india, money doubling calculator, how long to double money, investment doubling time, rule of 114, rule of 144, inflation adjusted doubling">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/rule-of-72/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Rule of 72 Calculator",
+     "url":"https://arthcalculator.in/rule-of-72/",
+     "description":"Calculate investment doubling time using Rule of 72.",
+     "inLanguage":"en"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Rule of 72 Calculator India",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculate how many years it takes for an investment to double using the Rule of 72 formula.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Rule of 72", "item": "https://arthcalculator.in/rule-of-72/" }
+      ]
+    }
+    </script>
+
+    <!-- Expanded FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the Rule of 72?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Rule of 72 is a simplified way to estimate how many years it will take to double your investment at a fixed annual rate of interest."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to calculate doubling time with inflation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To calculate the real doubling time, subtract the inflation rate from your return rate, then divide 72 by the resulting real return rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Rule of 72 accurate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a highly accurate approximation for typical interest rates between 5% and 15%. For extremely high or low rates, its precision decreases slightly compared to the complex logarithmic formula."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Rule of 72 work for SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The Rule of 72 applies only to a single one-time (lumpsum) investment. For periodic investments, you should use an SIP calculator."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What return doubles money in 10 years?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "According to the rule, you need an annual return of approximately 7.2% to double your money in exactly 10 years (72 / 10 = 7.2)."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Header & Hero -->
+    <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Rule of 72</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Rule of 72 Calculator – Find How Fast Your Money Doubles</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate how many years your investment will take to double using the Rule of 72 formula. Plan your compounding journey with ease.
+                    </p>
+                    <p class="text-[10px] sm:text-xs font-bold text-slate-400 mt-4 uppercase tracking-tight">Part of our <a href="/calculators/#investment" class="text-blue-600 hover:underline">Investment Calculators</a> collection</p>
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest justify-center md:justify-start">
+                        <span>Free</span> <span>•</span> <span>Instant</span> <span>•</span> <span>No Signup</span> <span>•</span> <span>Private</span>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 uppercase tracking-wide shadow-sm">Wealth Doubling Tool</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Investment Profile
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Expected Annual Return (%)</label>
+                            <input type="number" id="rateInput" value="12" step="0.5" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="rateRange" min="1" max="30" step="0.5" value="12" class="w-full text-pretty">
+                        <div class="grid grid-cols-3 gap-2 mt-4 text-pretty text-pretty text-pretty">
+                            <button onclick="setRate(7.1)" class="py-1.5 text-[10px] font-bold border rounded-lg hover:bg-blue-50 transition-all text-slate-500">PPF (7.1%)</button>
+                            <button onclick="setRate(12)" class="py-1.5 text-[10px] font-bold border rounded-lg hover:bg-blue-50 transition-all text-slate-500">Equity (12%)</button>
+                            <button onclick="setRate(15)" class="py-1.5 text-[10px] font-bold border rounded-lg hover:bg-blue-50 transition-all text-slate-500 text-pretty">Alpha (15%)</button>
+                        </div>
+                    </div>
+
+                    <div class="mb-6 text-pretty text-pretty">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Expected Inflation (%) <span class="text-[10px] text-slate-400 font-normal italic">(Optional)</span></label>
+                            <input type="number" id="inflationInput" value="0" step="0.1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="inflationRange" min="0" max="15" step="0.1" value="0" class="w-full">
+                        <p class="text-[10px] text-slate-400 mt-2 italic">Standard Indian CPI Inflation is approx 6%.</p>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate Doubling Time</button>
+                </div>
+
+                <!-- Trust Signals Block -->
+                <section id="trust" class="bg-white rounded-2xl border border-slate-200 p-6 text-center text-pretty card-shadow">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-1">
+                            <div class="text-blue-600 text-lg">✨</div>
+                            <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter">Free tool</h4>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-blue-600 text-lg">🔓</div>
+                            <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter">No login</h4>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-blue-600 text-lg">🔒</div>
+                            <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter">Private</h4>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-blue-600 text-lg text-pretty">🇮🇳</div>
+                            <h4 class="font-bold text-slate-800 text-[10px] uppercase tracking-tighter text-pretty text-pretty">Built for India</h4>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Years to Double Money</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-6 text-center md:text-left" id="yearsToDoubleDisp">0 Years</span>
+
+                    <div id="realResultBox" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Real Return Rate</p>
+                            <p class="font-bold text-slate-800 text-lg" id="realRateDisp">0%</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1">Real Doubling Time</p>
+                            <p class="font-bold text-emerald-700 text-lg" id="realYearsDisp">0 Years</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-blue-600">Initial Value</span>
+                            <span class="text-slate-400">Target Value</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="progressFill" class="h-full bg-blue-500 transition-all duration-1000" style="width: 50%"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500 text-pretty">
+                            <span id="startLabel">Now (1x)</span>
+                            <span id="targetLabel">End (2x)</span>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-6 text-pretty text-pretty"></div>
+                    
+                    <div class="pt-6 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4 text-pretty text-pretty text-pretty">
+                        <div class="text-center sm:text-left">
+                            <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Quick Comparison</p>
+                            <p class="font-bold text-slate-800 text-xs italic">Rate: <span id="summaryRate">12%</span> | Double: <span id="summaryYears">6 Years</span></p>
+                        </div>
+                        <div class="text-center sm:text-right">
+                             <a href="/cagr/" class="text-[10px] text-blue-600 hover:underline font-bold uppercase tracking-widest text-pretty text-pretty text-pretty">Verify with CAGR →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formula Card -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Calculation Formula</h3>
+                    <div class="space-y-4 text-pretty text-pretty">
+                        <div class="formula-box text-blue-800 text-center font-bold text-sm">
+                            Years to Double = 72 ÷ Interest Rate
+                        </div>
+                        <div id="realFormula" class="hidden formula-box text-emerald-800 text-center font-bold text-sm text-pretty">
+                            Real Doubling = 72 ÷ (Return − Inflation)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Knowledge Section -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is the Rule of 72?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>The Rule of 72 is a simple, standard mathematical shortcut used to estimate the number of years required to double the invested money at a given fixed annual rate of return. It is a favorite tool for investors to quickly grasp the power of <a href="/compound-interest/" class="text-blue-600 underline font-medium">Compound Interest</a> without needing a complex calculator.</p>
+                    <p>By dividing 72 by the annual interest rate, investors can get a rough estimate of how long it will take for their initial investment to duplicate in value. For example, if your <a href="/sip/" class="text-blue-600 underline">SIP investment</a> earns 12%, your money doubles in approximately 6 years.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Why Investors Use the Rule of 72</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed text-pretty text-pretty text-pretty text-pretty">
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3">Mental Math</h3>
+                        <p class="text-slate-600">It provides a fast way to evaluate investment opportunities on the go. If an agent promises to double your money in 10 years, you instantly know the return rate is roughly 7.2%.</p>
+                    </div>
+                    <div class="p-6 bg-blue-50 border border-blue-200 rounded-2xl text-pretty">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3">Goal Setting</h3>
+                        <p class="text-slate-600 text-pretty">It helps in reverse-engineering <a href="/savings-goal/" class="text-blue-600 underline">savings goals</a>. If you want your corpus to double twice in 20 years, you know you need at least a 7.2% return rate.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Examples Table Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Rule of 72 Examples (Money Doubling Time Chart)</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700">Expected Annual Return</th>
+                                <th class="p-4 border-b font-bold text-slate-700">Years to Double</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-600">
+                            <tr><td class="p-4 border-b font-medium text-pretty">6% Return</td><td class="p-4 border-b">12 Years</td></tr>
+                            <tr><td class="p-4 border-b font-medium text-pretty">8% Return</td><td class="p-4 border-b text-indigo-600 font-bold">9 Years</td></tr>
+                            <tr><td class="p-4 border-b font-medium text-pretty">10% Return</td><td class="p-4 border-b">7.2 Years</td></tr>
+                            <tr><td class="p-4 border-b font-medium text-pretty text-emerald-600">12% Return</td><td class="p-4 border-b text-emerald-600 font-bold text-pretty text-pretty">6 Years</td></tr>
+                            <tr><td class="p-4 border-b font-medium text-pretty text-pretty">15% Return</td><td class="p-4 border-b text-pretty text-pretty">4.8 Years</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-slate-600 text-sm mt-4 text-pretty">
+                    If you are wondering <strong>how long it takes to double money in India</strong>, 
+                    Rule of 72 gives a quick estimate without complex formulas.
+                </p>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How long to double money in India?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>In the Indian financial context, doubling your money depends heavily on the asset class you choose. Here are some real-world scenarios:</p>
+                    <ul class="list-disc ml-5 space-y-3">
+                        <li><strong>₹1 Lakh at 12%:</strong> Investing in an Index Mutual Fund often yields 12% over long tenures. Your 1 lakh grows to 2 lakhs in <strong>6 years</strong>.</li>
+                        <li><strong>₹5 Lakh at 10%:</strong> Moderate hybrid funds or balanced portfolios can target 10% returns. Your money doubles in <strong>7.2 years</strong>.</li>
+                        <li><strong>₹10 Lakh at 8%:</strong> Safe debt instruments or Senior Citizen schemes around 8% will take <strong>9 years</strong> to double your corpus.</li>
+                    </ul>
+                    <p>Always verify point-to-point performance using our <a href="/cagr/" class="text-blue-600 underline font-medium">CAGR Calculator</a> for more accuracy.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Rule of 72 vs Rule of 70 vs Rule of 69</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>While 72 is the most famous, other variations exist based on the type of compounding:</p>
+                    <ul class="list-none space-y-4">
+                        <li class="p-4 bg-slate-50 rounded-xl border border-slate-100"><strong>Rule of 72:</strong> Best for <strong>general investing</strong> and discrete annual compounding (like FDs). It's the standard for mental math.</li>
+                        <li class="p-4 bg-slate-50 rounded-xl border border-slate-100"><strong>Rule of 70:</strong> Most commonly used to calculate <strong>inflation impact</strong> or economic growth rates.</li>
+                        <li class="p-4 bg-slate-50 rounded-xl border border-slate-100"><strong>Rule of 69:</strong> The most accurate for <strong>continuous compounding</strong> (used in some professional derivatives or daily compounding accounts).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Beyond 72: Rules of 114 and 144</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>While the Rule of 72 estimates doubling, you can use other numbers for different milestones:</p>
+                    <ul class="list-disc ml-5 space-y-2 text-pretty">
+                        <li><strong>Rule of 114 (Tripling):</strong> Divide 114 by the interest rate to see how many years it takes to <strong>triple (3x)</strong> your money.</li>
+                        <li><strong>Rule of 144 (Quadrupling):</strong> Divide 144 by the interest rate to see how many years it takes to <strong>quadruple (4x)</strong> your money.</li>
+                    </ul>
+                    <p><strong>Example:</strong> At 12% returns, money doubles in 6 years (72/12), triples in 9.5 years (114/12), and quadruples in 12 years (144/12).</p>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold mb-6">Limitations of the Rule of 72</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-pretty text-pretty text-pretty">
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-blue-400 mb-2">Interest Rate Range</h4>
+                        <p class="text-slate-400 text-pretty">The rule is most accurate for interest rates between 6% and 10%. For extremely high or low rates, the deviation increases.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
+                        <h4 class="font-bold text-emerald-400 mb-2">Compound Frequency</h4>
+                        <p class="text-slate-400 text-pretty">It assumes annual compounding. If your investment compounds monthly or daily, the actual time will be slightly shorter.</p>
+                    </div>
+                    <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 text-pretty text-pretty">
+                        <h4 class="font-bold text-purple-400 mb-2 text-pretty text-pretty">Real vs Nominal Returns</h4>
+                        <p class="text-slate-400 text-pretty text-pretty">It doesn't account for purchasing power unless you use our <a href="/real-return/" class="text-purple-400 underline font-medium">Real Return Tool</a> to adjust for <a href="/inflation/" class="text-purple-400 underline font-medium">Inflation</a>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4 text-pretty text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Is the Rule of 72 accurate?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">It is a very close approximation for interest rates under 20%. For most standard bank or mutual fund returns in India, it is remarkably accurate.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Does the Rule of 72 work for SIPs?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">No. The Rule of 72 is for one-time lumpsum investments. For SIPs, use a dedicated SIP tool as you are adding new principal every month.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm text-pretty text-pretty text-pretty text-pretty">Can Rule of 72 predict inflation impact?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty text-pretty text-pretty">Yes. You can divide 72 by the inflation rate to see how fast your money loses half its value. At 6% inflation, your money's buying power halves in 12 years. Use our <a href="/inflation/" class="text-blue-600">Inflation Tool</a> for precise calculations.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">Why is the number 72 used?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t text-pretty text-pretty">72 is used because it has many divisors (2, 3, 4, 6, 8, 9, 12), making the mental math very easy for most common interest rates.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 text-pretty text-pretty">
+                    <a href="/cagr/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty">CAGR Tool</h4>
+                    </a>
+                    <a href="/inflation/" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Inflation</h4>
+                    </a>
+                    <a href="/sip/" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors text-pretty text-pretty text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty text-pretty">SIP Calculator</h4>
+                    </a>
+                    <a href="/compound-interest/" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors text-pretty text-pretty text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty">Compound Int.</h4>
+                    </a>
+                    <a href="/real-return/" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors text-pretty text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Real Return</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Bottom Internal Links Block -->
+            <section class="max-w-4xl mx-auto border-t border-slate-100 pt-8 text-center text-pretty text-pretty text-pretty">
+                <p class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 text-pretty">Also Explore Our Other Financial Planners:</p>
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-tight text-pretty text-pretty">
+                    <a href="/retirement/" class="hover:text-blue-600 transition-colors">Retirement Calculator</a>
+                    <a href="/net-worth/" class="hover:text-blue-600 transition-colors">Net Worth Calculator</a>
+                    <a href="/compound-interest/" class="hover:text-blue-600 transition-colors text-pretty text-pretty text-pretty">Compound Interest Calculator</a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty text-pretty">Disclaimer</p>
+                Calculations are based on the Rule of 72 mathematical approximation. Actual doubling time may vary based on market conditions, compounding frequency, and tax implications. This tool is for educational purposes only.
+                <p class="mt-4 font-bold text-slate-400 uppercase tracking-widest text-[9px] text-pretty">Updated for FY 2026-27 financial planning guidelines</p>
+                <p class="mt-1 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            rateInp: document.getElementById('rateInput'),
+            rateRng: document.getElementById('rateRange'),
+            infInp: document.getElementById('inflationInput'),
+            infRng: document.getElementById('inflationRange'),
+            yearsDisp: document.getElementById('yearsToDoubleDisp'),
+            realBox: document.getElementById('realResultBox'),
+            realRate: document.getElementById('realRateDisp'),
+            realYears: document.getElementById('realYearsDisp'),
+            progressFill: document.getElementById('progressFill'),
+            insights: document.getElementById('insightsBox'),
+            summaryRate: document.getElementById('summaryRate'),
+            summaryYears: document.getElementById('summaryYears'),
+            realFormula: document.getElementById('realFormula'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function setRate(r) {
+            elements.rateInp.value = r;
+            elements.rateRng.value = r;
+            calculate();
+        }
+
+        function calculate() {
+            const rNominal = parseFloat(elements.rateInp.value) || 0;
+            const rInflation = parseFloat(elements.infInp.value) || 0;
+
+            if (rNominal <= 0) {
+                elements.yearsDisp.textContent = "N/A";
+                return;
+            }
+
+            // 1. Basic Rule of 72
+            const yearsToDouble = (72 / rNominal).toFixed(1);
+            elements.yearsDisp.textContent = yearsToDouble + " Years";
+            elements.summaryRate.textContent = rNominal + "%";
+            elements.summaryYears.textContent = yearsToDouble + " Years";
+
+            // 2. Inflation Adjusted Logic
+            if (rInflation > 0) {
+                elements.realBox.classList.remove('hidden');
+                elements.realFormula.classList.remove('hidden');
+                const realRate = rNominal - rInflation;
+                
+                if (realRate <= 0) {
+                    elements.realRate.textContent = realRate.toFixed(1) + "%";
+                    elements.realYears.textContent = "Never (Below Inf)";
+                    elements.insights.innerHTML = `⚠️ <strong>Alert:</strong> Your returns (${rNominal}%) are lower than or equal to inflation (${rInflation}%). Your money is losing real value over time.`;
+                } else {
+                    const realDoublingYears = (72 / realRate).toFixed(1);
+                    elements.realRate.textContent = realRate.toFixed(1) + "%";
+                    elements.realYears.textContent = realDoublingYears + " Years";
+                    elements.insights.innerHTML = `✅ <strong>Insight:</strong> At ${rNominal}% returns, your money doubles in <strong>${yearsToDouble} years</strong>. However, due to ${rInflation}% inflation, your actual purchasing power takes <strong>${realDoublingYears} years</strong> to double.`;
+                }
+            } else {
+                elements.realBox.classList.add('hidden');
+                elements.realFormula.classList.add('hidden');
+                elements.insights.innerHTML = `💡 <strong>Compounding Magic:</strong> At ${rNominal}% interest, every ₹1 Lakh you invest today will grow to ₹2 Lakhs in just <strong>${yearsToDouble} years</strong>.`;
+            }
+
+            // Progress bar mapping (Meaningful visual: 15% return fills the bar)
+            elements.progressFill.style.width = Math.min(100, (rNominal / 15) * 100) + "%";
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; calculate(); });
+            r.addEventListener('input', () => { i.value = r.value; calculate(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.rateInp, elements.rateRng);
+            setupSync(elements.infInp, elements.infRng);
+            // calcBtn logic fix integrated (ID exists on button)
+            elements.calcBtn.addEventListener('click', calculate);
+            calculate();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
