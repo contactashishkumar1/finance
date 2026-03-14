@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Loss Harvesting Calculator India – Capital Gains Tax Saving Tool</title>
+    <meta name="description" content="Calculate how much tax you can save using tax loss harvesting. Offset capital gains using losses as per Indian Income Tax rules. Updated for latest 12.5% LTCG and 20% STCG rules.">
+    <meta name="keywords" content="tax loss harvesting india, capital gain tax calculator india, stcg ltcg calculator, tax saving capital gains, offset capital losses india, budget 2024 tax harvesting">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-08">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/tax-loss-harvesting/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Tax Loss Harvesting Calculator India",
+     "url":"https://arthcalculator.in/tax-loss-harvesting/",
+     "description":"Calculate tax savings by offsetting capital losses against gains in the Indian stock market.",
+     "inLanguage":"en"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Tax Loss Harvesting Calculator India",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculate capital gains tax savings by offsetting STCL and LTCL against gains under Budget 2024 rules.",
+      "featureList": [
+        "LTCG calculation",
+        "STCG calculation",
+        "Equity tax",
+        "Loss set-off logic",
+        "Budget 2024 rules"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+        { "@type": "ListItem", "position": 3, "name": "Tax Loss Harvesting", "item": "https://arthcalculator.in/tax-loss-harvesting/" }
+      ]
+    }
+    </script>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is tax loss harvesting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tax loss harvesting is the strategy of selling securities at a loss to offset a capital gains tax liability. This strategy is used to reduce net taxable income by realizing losses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is tax loss harvesting legal in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, offsetting capital losses against gains is perfectly legal under the Income Tax Act of India as part of legitimate tax planning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many years can I carry forward losses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both STCL and LTCL can be carried forward for 8 assessment years to be adjusted against future capital gains."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Hero -->
+    <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Tax Loss Harvesting</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Tax Loss Harvesting Calculator – Offset Capital Losses & Save Tax</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate how much tax you can save by offsetting capital gains using losses as per Indian Income Tax rules. Updated for <strong>Budget 2024 Statutory Rules</strong> (12.5% LTCG / 20% STCG).
+                    </p>
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 mt-4 text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest justify-center md:justify-start">
+                        <span>Free</span> <span>•</span> <span>Instant</span> <span>•</span> <span>No Signup</span> <span>•</span> <span>Private</span> <span>•</span> <span>Built for India</span>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 uppercase tracking-wide shadow-sm">Capital Gains Strategy</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-6 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Capital Gains & Losses
+                    </h2>
+
+                    <!-- STCG Group -->
+                    <div class="space-y-6 mb-10">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label for="stcgInp" class="text-sm font-medium text-slate-600">Short Term Capital Gains (₹)</label>
+                                <input type="number" id="stcgInp" value="100000" step="5000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            </div>
+                            <input type="range" id="stcgRng" min="0" max="10000000" step="10000" value="100000" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label for="stclInp" class="text-sm font-medium text-slate-600">Short Term Capital Loss (₹)</label>
+                                <input type="number" id="stclInp" value="0" step="5000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            </div>
+                            <input type="range" id="stclRng" min="0" max="5000000" step="5000" value="0" class="w-full">
+                        </div>
+                    </div>
+
+                    <!-- LTCG Group -->
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label for="ltcgInp" class="text-sm font-medium text-slate-600">Long Term Capital Gains (₹)</label>
+                                <input type="number" id="ltcgInp" value="250000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            </div>
+                            <input type="range" id="ltcgRng" min="0" max="10000000" step="10000" value="250000" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label for="ltclInp" class="text-sm font-medium text-slate-600">Long Term Capital Loss (₹)</label>
+                                <input type="number" id="ltclInp" value="0" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            </div>
+                            <input type="range" id="ltclRng" min="0" max="5000000" step="10000" value="0" class="w-full">
+                        </div>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-100 flex items-center justify-between">
+                        <label for="exemptCheck" class="flex items-center gap-3 cursor-pointer group">
+                            <div class="relative">
+                                <input type="checkbox" id="exemptCheck" checked class="sr-only peer">
+                                <div class="w-10 h-5 bg-slate-200 rounded-full peer-checked:bg-blue-600 transition-all"></div>
+                                <div class="absolute left-1 top-1 w-3 h-3 bg-white rounded-full peer-checked:translate-x-5 transition-all"></div>
+                            </div>
+                            <span class="text-xs font-bold text-slate-600 group-hover:text-blue-600 transition-colors">Apply ₹1.25L LTCG Exemption</span>
+                        </label>
+                        <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest">Equity Tax: 12.5% / 20%</span>
+                    </div>
+
+                    <button type="button" onclick="calculate()" class="w-full mt-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all">Calculate Tax Savings</button>
+                </div>
+
+                <!-- Correct Tax Rule Info Box -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Equity Taxation Rules (Latest)</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-xs">
+                        <div class="space-y-2">
+                            <p class="flex justify-between"><span>STCG (&lt;12m):</span> <span class="font-bold text-slate-900">20%</span></p>
+                            <p class="flex justify-between"><span>LTCG (&gt;12m):</span> <span class="font-bold text-slate-900">12.5%</span></p>
+                            <p class="flex justify-between text-emerald-600"><span>LTCG Exemption:</span> <span class="font-bold">₹1.25 Lakh/yr</span></p>
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-slate-500 font-bold uppercase text-[9px] tracking-tighter">Loss Set-off Rules</p>
+                            <p class="text-slate-600 leading-tight">STCL &rarr; Offset both STCG & LTCG</p>
+                            <p class="text-slate-600 leading-tight">LTCL &rarr; Offset LTCG only</p>
+                            <p class="text-slate-400 font-medium">Carry Forward: 8 Years</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-6 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left text-pretty">Total Tax Saved</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-emerald-600 block mb-6 text-center md:text-left" id="taxSavedDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Tax Without Harvesting</p>
+                            <p class="font-bold text-slate-800 text-lg" id="taxBeforeDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                            <p class="text-[10px] text-blue-600 uppercase font-bold mb-1 text-pretty text-pretty">Tax After Harvesting</p>
+                            <p class="font-bold text-blue-700 text-lg" id="taxAfterDisp">₹0</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-8 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-blue-600">Final Tax Liability</span>
+                            <span class="text-emerald-600">Amount Saved</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100 text-pretty">
+                            <div id="taxBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 70%"></div>
+                            <div id="savedBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 30%"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
+                            <span id="taxLabel">Final: ₹0</span>
+                            <span id="savedLabel">Saved: ₹0</span>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-6"></div>
+                    
+                    <button id="copyBtn" onclick="copyResults()" class="w-full mb-6 py-2 border border-blue-200 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        Copy Calculation Result
+                    </button>
+
+                    <div class="pt-6 border-t border-slate-100 grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Carry Forward Loss</p>
+                            <p class="font-bold text-slate-800 text-sm" id="cfLossDisp">₹0</p>
+                        </div>
+                        <div class="text-right text-pretty">
+                            <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">Tax reduction %</p>
+                            <span id="reductionPercDisp" class="bg-slate-900 text-white text-[10px] px-3 py-1 rounded-full font-bold">0% Saved</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Tax Loss Harvesting?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Tax Loss Harvesting is a legal financial strategy where an investor sells securities (like stocks or mutual funds) that are currently trading at a loss to offset the capital gains tax liability of other profitable investments. By "realizing" these losses, you can reduce the net taxable income in your annual <a href="/income-tax" class="text-blue-600 underline font-medium">tax planning</a>.</p>
+                    <p>In India, this is a popular strategy to optimize the portfolio before the end of the financial year (March 31st). Since the introduction of 12.5% LTCG on equity in Budget 2024, harvesting has become even more critical for long-term <a href="/retirement" class="text-blue-600 underline font-medium">Retirement Planning</a>.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Tax Harvesting Example: ₹3 Lakh LTCG</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Suppose you have booked a <strong>Long Term Capital Gain (LTCG)</strong> of <strong>₹3,00,000</strong>. You also hold a stock that is currently down by <strong>₹1,00,000</strong>.</p>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 mb-6 text-pretty">
+                        <ul class="space-y-2 list-none">
+                            <li class="flex justify-between"><span>LTCG Gain:</span> <strong>₹3,00,000</strong></li>
+                            <li class="flex justify-between"><span>₹1.25L Exemption:</span> <strong class="text-emerald-600">- ₹1,25,000</strong></li>
+                            <li class="flex justify-between border-b pb-2"><span>Taxable Gain (Before Harvesting):</span> <strong>₹1,75,000</strong></li>
+                            <li class="flex justify-between pt-2"><span>Realized Loss (Harvested):</span> <strong class="text-red-500">- ₹1,00,000</strong></li>
+                            <li class="flex justify-between font-bold text-blue-600 text-lg"><span>Final Taxable Gain:</span> <span>₹75,000</span></li>
+                        </ul>
+                    </div>
+                    <p>By harvesting the ₹1 Lakh loss, you only pay tax on ₹75,000 instead of ₹1,75,000, saving you over <strong>₹13,000</strong> (including Cess) in actual cash.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">When to Use Tax Loss Harvesting</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed text-pretty text-pretty">
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3">Year-End Planning</h3>
+                        <p class="text-slate-600">Most investors review their realized gains in March and sell loss-making stocks to reduce the final tax bill before the financial year ends on March 31st.</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <h3 class="font-bold text-slate-800 text-lg mb-3 text-pretty">Portfolio Rebalancing</h3>
+                        <p class="text-slate-600">When rebalancing from equity to debt (or vice versa), use losses in underperforming segments to offset the gains from the profit-making segments.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is tax loss harvesting?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is selling loss-making investments to reduce your net capital gain, thereby paying lower capital gains tax.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is tax loss harvesting legal in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Yes, it is a valid tax planning strategy allowed under the Income Tax Act for set-off and carry-forward of losses.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can STCL offset LTCG?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Yes, Short Term Capital Loss (STCL) can be set off against both Short Term and Long Term Capital Gains.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can LTCL offset STCG?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">No. Long Term Capital Loss can only be set off against Long Term Capital Gains. It cannot be used to reduce STCG.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How many years can losses be carried forward?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Both STCL and LTCL can be carried forward for 8 assessment years provided the tax return is filed before the due date.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                    <a href="/capital-gains-tax-calculator/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Cap Gains Tax</h4>
+                    </a>
+                    <a href="/sip/" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">SIP Tool</h4>
+                    </a>
+                    <a href="/cagr/" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">CAGR Tool</h4>
+                    </a>
+                    <a href="/income-tax/" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Income Tax</h4>
+                    </a>
+                    <a href="/net-worth/" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Net Worth</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty text-pretty">Disclaimer</p>
+                Tax laws in India are subject to frequent changes. This calculator uses current rules for equity set-offs. 4% health and education cess is included. Surcharge for high income individuals (above ₹50L) is not included. Always consult a Qualified Chartered Accountant for final tax filing.
+                <p class="mt-4 font-semibold italic text-slate-600 text-pretty">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            stcgInp: document.getElementById('stcgInp'),
+            stcgRng: document.getElementById('stcgRng'),
+            stclInp: document.getElementById('stclInp'),
+            stclRng: document.getElementById('stclRng'),
+            ltcgInp: document.getElementById('ltcgInp'),
+            ltcgRng: document.getElementById('ltcgRng'),
+            ltclInp: document.getElementById('ltclInp'),
+            ltclRng: document.getElementById('ltclRng'),
+            exempt: document.getElementById('exemptCheck'),
+            taxSavedDisp: document.getElementById('taxSavedDisp'),
+            taxBeforeDisp: document.getElementById('taxBeforeDisp'),
+            taxAfterDisp: document.getElementById('taxAfterDisp'),
+            taxLabel: document.getElementById('taxLabel'),
+            savedLabel: document.getElementById('savedLabel'),
+            taxBar: document.getElementById('taxBar'),
+            savedBar: document.getElementById('savedBar'),
+            cfLossDisp: document.getElementById('cfLossDisp'),
+            reductionPercDisp: document.getElementById('reductionPercDisp'),
+            insightsBox: document.getElementById('insightsBox'),
+            copyBtn: document.getElementById('copyBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        async function copyResults() {
+            const text = elements.insightsBox.innerText;
+            try {
+                await navigator.clipboard.writeText(text);
+                const originalText = "Copy Calculation Result";
+                elements.copyBtn.innerText = "✓ Copied";
+                setTimeout(() => {
+                    elements.copyBtn.innerText = originalText;
+                }, 2000);
+            } catch (err) {}
+        }
+
+        // PROFESSIONAL CALCULATION ENGINE
+        function calculate() {
+            const STCG = parseFloat(elements.stcgInp.value) || 0;
+            const STCL = parseFloat(elements.stclInp.value) || 0;
+            const LTCG = parseFloat(elements.ltcgInp.value) || 0;
+            const LTCL = parseFloat(elements.ltclInp.value) || 0;
+            const applyExemption = elements.exempt.checked;
+
+            const LTCG_EXEMPTION = 125000;
+            const CESS = 1.04;
+            const STCG_RATE = 0.20;
+            const LTCG_RATE = 0.125;
+
+            // --- 1. TAX BEFORE HARVESTING ---
+            const taxBeforeSTCG = STCG * STCG_RATE;
+            const taxableLtcgBefore = applyExemption ? Math.max(0, LTCG - LTCG_EXEMPTION) : LTCG;
+            const taxBeforeLTCG = taxableLtcgBefore * LTCG_RATE;
+            const taxBefore = (taxBeforeSTCG + taxBeforeLTCG) * CESS;
+
+            // --- 2. TAX WITH HARVESTING (Correct Optimal Set-off Logic) ---
+            // Rule 1: STCL offsets STCG first
+            let netSTCG = Math.max(0, STCG - STCL);
+            let remainingSTCL = Math.max(0, STCL - STCG);
+
+            // Rule 2: Remaining STCL offsets LTCG
+            let netLTCG_mid = LTCG;
+            if (remainingSTCL > 0) {
+                let used = Math.min(netLTCG_mid, remainingSTCL);
+                netLTCG_mid -= used;
+                remainingSTCL -= used;
+            }
+
+            // Rule 3: LTCL offsets remaining LTCG only
+            let unusedLTCL = Math.max(0, LTCL - netLTCG_mid);
+            let netLTCG = Math.max(0, netLTCG_mid - LTCL);
+
+            // --- 3. APPLY EXEMPTION AFTER ALL ADJUSTMENTS ---
+            const taxableLTCG = applyExemption ? Math.max(0, netLTCG - LTCG_EXEMPTION) : netLTCG;
+            const exemptionUsed = applyExemption ? Math.min(netLTCG, LTCG_EXEMPTION) : 0;
+            const unusedExemption = applyExemption ? Math.max(0, LTCG_EXEMPTION - netLTCG) : 0;
+
+            // Final Tax Calculation
+            const taxAfterSTCG = netSTCG * STCG_RATE;
+            const taxAfterLTCG = taxableLTCG * LTCG_RATE;
+            const taxAfter = (taxAfterSTCG + taxAfterLTCG) * CESS;
+
+            // --- 4. FINAL NUMBERS & METRICS ---
+            const taxSaved = Math.max(0, taxBefore - taxAfter);
+            const carryForwardLoss = remainingSTCL + unusedLTCL;
+            const effectiveSaving = taxBefore > 0 ? (taxSaved / taxBefore) * 100 : 0;
+            
+            const totalGainsAfter = netSTCG + netLTCG;
+            const totalGainsBefore = STCG + LTCG;
+            const effTaxRateAfter = totalGainsAfter > 0 ? (taxAfter / totalGainsAfter) * 100 : 0;
+
+            // UPDATE UI
+            elements.taxSavedDisp.textContent = formatInr(taxSaved);
+            elements.taxBeforeDisp.textContent = formatInr(taxBefore);
+            elements.taxAfterDisp.textContent = formatInr(taxAfter);
+            elements.cfLossDisp.textContent = formatInr(carryForwardLoss);
+            elements.reductionPercDisp.textContent = effectiveSaving.toFixed(1) + "% Saved";
+
+            // Visual Progress
+            const totalWidth = Math.max(taxBefore, 1);
+            elements.taxBar.style.width = Math.min(100, (taxAfter / totalWidth) * 100) + "%";
+            elements.savedBar.style.width = Math.min(100, (taxSaved / totalWidth) * 100) + "%";
+            elements.taxLabel.textContent = "Final: " + formatCompact(taxAfter);
+            elements.savedLabel.textContent = "Saved: " + formatCompact(taxSaved);
+
+            // --- 5. INSIGHTS GENERATION ---
+            let insightText = `<div class="space-y-2">`;
+            if (taxSaved > 0) {
+                insightText += `<p>🚀 <strong>Total Tax Saved:</strong> You reduced your liability by <strong>${formatInr(taxSaved)}</strong> (${effectiveSaving.toFixed(1)}%).</p>`;
+            } else if (totalGainsBefore > 0) {
+                insightText += `<p>📊 <strong>Status:</strong> Gains are within exempt limits or fully offset. Zero tax liability.</p>`;
+            } else {
+                insightText += `<p>ℹ️ Enter your capital gains to see how harvesting losses saves money.</p>`;
+            }
+
+            if (applyExemption) {
+                if (unusedExemption > 0 && netLTCG > 0) {
+                    insightText += `<p class="mt-2 text-emerald-700 font-bold uppercase text-[10px]">💡 You still have ${formatInr(unusedExemption)} LTCG exemption available. You may harvest more gains tax-free.</p>`;
+                } else if (netLTCG >= LTCG_EXEMPTION) {
+                    insightText += `<p class="mt-2 text-slate-500 text-[10px] uppercase font-bold tracking-tighter">✅ You fully utilised the ₹1.25L LTCG exemption.</p>`;
+                }
+            }
+            
+            if (carryForwardLoss > 0) {
+                insightText += `<p class="mt-2 text-indigo-700 font-medium">📜 <strong>${formatInr(carryForwardLoss)}</strong> loss can be carried forward for 8 years.</p>`;
+            }
+
+            // Professional Audit Table
+            insightText += `
+                <div class="mt-4 pt-4 border-t border-blue-200 text-[10px] uppercase font-bold grid grid-cols-2 gap-y-2">
+                    <span class="text-slate-500">Holding Type:</span> <span class="text-right text-slate-900">${netSTCG > 0 && netLTCG > 0 ? "Mixed" : (netLTCG > 0 ? "Long Term" : "Short Term")}</span>
+                    <span class="text-slate-500">Tax Before Harvesting:</span> <span class="text-right text-slate-900">${formatInr(taxBefore)}</span>
+                    <span class="text-slate-500">Tax After Harvesting:</span> <span class="text-right text-blue-600">${formatInr(taxAfter)}</span>
+                    <span class="text-slate-500">Exemption Used:</span> <span class="text-right text-slate-900">${formatInr(exemptionUsed)}</span>
+                    <span class="text-slate-500">Total Gains After:</span> <span class="text-right text-slate-900">${formatInr(totalGainsAfter)}</span>
+                    <span class="text-slate-500">Effective Tax Rate:</span> <span class="text-right text-red-500">${effTaxRateAfter.toFixed(2)}%</span>
+                </div>
+            `;
+            insightText += `</div>`;
+            
+            elements.insightsBox.innerHTML = insightText;
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; calculate(); });
+            r.addEventListener('input', () => { i.value = r.value; calculate(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.stcgInp, elements.stcgRng);
+            setupSync(elements.stclInp, elements.stclRng);
+            setupSync(elements.ltcgInp, elements.ltcgRng);
+            setupSync(elements.ltclInp, elements.ltclRng);
+            elements.exempt.addEventListener('change', calculate);
+            calculate();
+        });
+
+        // Provided Fetch Script
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
