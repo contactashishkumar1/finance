@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent vs Buy Calculator – Should You Rent or Buy a House?</title>
+    <meta name="description" content="Compare renting vs buying a house in India using EMI, rent growth, property appreciation, and investment returns. Make a smarter decision on your home purchase.">
+    <meta name="keywords" content="rent vs buy calculator india, home loan vs rent calculator, buy house or rent calculator, property appreciation calculator, house rent increase calculator, real estate investment india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-14">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/rent-vs-buy-calculator/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Rent vs Buy Calculator",
+     "url":"https://arthcalculator.in/rent-vs-buy-calculator/",
+     "description":"A comprehensive financial tool to compare the long-term wealth impact of renting a house versus buying one in India.",
+     "inLanguage":"en"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Rent vs Buy Calculator India",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculates the financial difference between renting and buying a property by factoring in EMIs, appreciation, and investment returns.",
+      "featureList": [
+        "EMI Calculation",
+        "Rent Escalation Tracking",
+        "Property Appreciation Analysis",
+        "Opportunity Cost of Down Payment"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Rent vs Buy Calculator", "item": "https://arthcalculator.in/rent-vs-buy-calculator/" }
+      ]
+    }
+    </script>
+
+    <!-- EXPANDED FAQ SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is renting better than buying in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the Price-to-Rent ratio. In most Indian metros, rental yields are low (2-3%), making renting cheaper monthly, but buying wins long-term if appreciation is over 5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I buy a house or invest in SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mathematically, if your SIP returns (usually 12-15%) are higher than the property appreciation + interest costs, renting and investing is better. Use our SIP calculator to compare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the tax benefits of buying a house in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under the Old Tax Regime, you can claim up to ₹2 Lakh for interest (Section 24) and ₹1.5 Lakh for principal (Section 80C) annually."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-8 sm:py-12 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0 text-pretty">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Rent vs Buy</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Rent vs Buy Calculator – Should You Buy or Rent?</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Compare the long-term wealth generation of buying a house versus renting and investing the difference. Factor in property appreciation, interest rates, and the <strong>opportunity cost of your down payment</strong>.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 shadow-sm uppercase tracking-wide">Real Estate Analysis</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Quick Action Strip -->
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all text-pretty">Apply Example</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-slate-50 transition-all">Reset All</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty text-pretty">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <!-- Buy Inputs -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        Buy Parameters
+                    </h2>
+
+                    <div class="space-y-6 text-pretty text-pretty">
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2">City Type (Appreciation Dropdown)</label>
+                            <select id="citySelect" onchange="handleCityChange()" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 transition-all bg-white cursor-pointer text-sm">
+                                <option value="custom">Custom Values</option>
+                                <option value="tier1">Tier 1 (Metro - High Appreciation)</option>
+                                <option value="tier2" selected>Tier 2 (Standard Growth)</option>
+                                <option value="tier3">Tier 3 (Slow Growth)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2">Property Price (₹)</label>
+                            <input type="number" id="propPrice" value="8000000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2">Down Payment (₹)</label>
+                            <input type="number" id="downPayment" value="2000000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-2">Loan Rate (%)</label>
+                                <input type="number" id="loanRate" value="8.5" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-2">Tenure (Yrs)</label>
+                                <input type="number" id="tenure" value="20" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-2">Appreciation (%)</label>
+                                <input type="number" id="appreciation" value="5" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-2">Maintenance (%)</label>
+                                <input type="number" id="maintenance" value="1" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rent Inputs -->
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg>
+                        Rent & Invest Parameters
+                    </h2>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2">Investment Strategy</label>
+                            <select id="portfolioSelect" onchange="handlePortfolioChange()" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 transition-all bg-white cursor-pointer text-sm text-pretty">
+                                <option value="custom">Custom Return</option>
+                                <option value="cons">Conservative (Debt/FD - 7%)</option>
+                                <option value="mod" selected>Moderate (Hybrid - 10%)</option>
+                                <option value="agg">Aggressive (Equity - 12%)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-xs font-bold text-slate-500 uppercase block mb-2">Monthly Rent (₹)</label>
+                            <input type="number" id="monthlyRent" value="25000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-2 text-pretty">Annual Rent Inc (%)</label>
+                                <input type="number" id="rentInc" value="5" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-sm">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-2">Invest Return (%)</label>
+                                <input type="number" id="investReturn" value="10" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-sm text-pretty">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" onclick="calculate()" class="w-full mt-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty text-pretty">Compare Rent vs Buy</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <!-- Main Decision Card -->
+                <div id="decisionCard" class="p-6 sm:p-8 rounded-3xl text-white transition-colors duration-500 card-shadow flex flex-col items-center text-center text-pretty">
+                    <p class="text-[10px] uppercase font-bold tracking-widest opacity-80 mb-2">Recommendation</p>
+                    <h2 id="decisionText" class="text-2xl sm:text-4xl font-black mb-2 text-pretty">Calculating...</h2>
+                    <p id="advantageAmount" class="text-sm font-medium opacity-90 text-pretty"></p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pretty text-pretty text-pretty">
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                        <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Net Wealth (Buying)</p>
+                        <h3 id="buyWealthDisp" class="text-xl font-extrabold text-blue-600 text-pretty">₹0</h3>
+                        <p class="text-[9px] text-slate-400 mt-2">Future Property Value minus Loan interest and maintenance costs.</p>
+                    </div>
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 card-shadow">
+                        <p class="text-[10px] text-slate-500 uppercase font-bold mb-1 text-pretty">Net Wealth (Renting)</p>
+                        <h3 id="rentWealthDisp" class="text-xl font-extrabold text-emerald-600 text-pretty">₹0</h3>
+                        <p class="text-[9px] text-slate-400 mt-2">Invested Downpayment minus total rent paid over tenure.</p>
+                    </div>
+                </div>
+
+                <!-- Detailed Breakdown Cards -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Financial Breakdown</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-sm border-b border-slate-50 pb-3">
+                            <span class="text-slate-500">Total Rent Paid</span>
+                            <span id="totalRentDisp" class="font-bold text-red-500">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-slate-50 pb-3">
+                            <span class="text-slate-500">Total Home Loan EMI</span>
+                            <span id="totalEmiDisp" class="font-bold text-slate-800">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-slate-50 pb-3 text-pretty">
+                            <span class="text-slate-500">Total Interest Component</span>
+                            <span id="totalInterestDisp" class="font-bold text-red-400">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-slate-50 pb-3 text-pretty">
+                            <span class="text-slate-500">Property Future Value</span>
+                            <span id="propFvDisp" class="font-bold text-blue-600">₹0</span>
+                        </div>
+                        <div class="flex justify-between items-center text-sm border-b border-slate-50 pb-3 text-pretty">
+                            <span class="text-slate-500">Investment Future Value</span>
+                            <span id="investFvDisp" class="font-bold text-emerald-600 text-pretty">₹0</span>
+                        </div>
+                    </div>
+                    
+                    <div id="insightsBox" class="mt-8 bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed text-pretty text-pretty text-pretty"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content: SEO Content & Knowledge Section -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Should You Rent or Buy a House?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty text-pretty">
+                    <p>The "Rent vs Buy" debate is one of the most significant financial decisions an individual makes. In the Indian context, it is not just a matter of monthly cash flow but also of <strong>opportunity cost</strong> and <strong>long-term wealth creation</strong>. While buying a home builds equity and offers emotional stability, renting preserves liquidity and allows you to invest your lump-sum capital elsewhere.</p>
+                    <p>When you buy, you commit to a <a href="/home-loan/" class="text-blue-600 underline">Home Loan</a> for 20-30 years. When you rent, you pay for the utility of the house without the burden of interest or maintenance. This calculator helps you compare both scenarios over a specific time period to see which path leaves you with a higher net worth.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">Pros and Cons Breakdown</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+                    <div class="p-6 bg-blue-50 border border-blue-100 rounded-2xl text-pretty text-pretty text-pretty">
+                        <h3 class="font-bold text-blue-900 text-lg mb-4">Pros of Buying</h3>
+                        <ul class="space-y-2 list-none text-blue-800 text-pretty">
+                            <li>✅ Fixed housing cost (EMI stays constant).</li>
+                            <li>✅ Forced savings through principal repayment.</li>
+                            <li>✅ Tax benefits under Section 24 and 80C.</li>
+                            <li>✅ Asset appreciation over decades.</li>
+                        </ul>
+                    </div>
+                    <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl text-pretty text-pretty text-pretty">
+                        <h3 class="font-bold text-emerald-900 text-lg mb-4 text-pretty">Pros of Renting</h3>
+                        <ul class="space-y-2 list-none text-emerald-800 text-pretty">
+                            <li>✅ Geographic mobility for career growth.</li>
+                            <li>✅ Down payment can be invested in high-yield <a href="/sip/" class="text-emerald-600 underline">SIPs</a>.</li>
+                            <li>✅ No maintenance, insurance, or property tax.</li>
+                            <li>✅ Lower monthly cash outflow in early years.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4 text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is renting better than buying in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">It depends on the Price-to-Rent ratio. In most Indian metros, rental yields are low (2-3%), making renting cheaper monthly, but buying wins if you plan to stay for 15+ years due to appreciation.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">When should I buy a house?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">You should buy when you have a stable income, a 20% down payment ready, and a plan to stay in the same city for at least 7 to 10 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Should I buy a house or invest in SIP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">Mathematically, if your <a href="/sip/" class="text-blue-600 underline">SIP returns</a> (usually 12-15%) are significantly higher than the property appreciation + loan interest costs, renting and investing is better for building a large corpus.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What are the tax benefits of home loans in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">In the Old Regime, you get deductions up to ₹2 Lakh for interest (Section 24) and ₹1.5 Lakh for principal (Section 80C). Use our <a href="/income-tax/" class="text-blue-600 underline">Income Tax Tool</a> to check regime suitability.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does property appreciation beat stock market returns?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">Historically, real estate in Tier 1 cities grows at 5-8%, while Nifty 50 has a <a href="/cagr/" class="text-blue-600 underline">CAGR</a> of 12-14%. Stocks generally outperform real estate, but real estate provides leverage (loan) which can amplify returns on equity.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How does inflation affect my decision?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">Inflation causes rent to rise every year, while EMI usually remains stable. High <a href="/inflation/" class="text-blue-600 underline">inflation</a> makes buying more attractive because your housing cost is locked in.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does owning a house increase your net worth faster?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">It depends on the location. In a high-growth area, a house is a major contributor to your <a href="/net-worth/" class="text-blue-600 underline">Net Worth</a>. However, it is an illiquid asset compared to stocks or mutual funds.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What happens if I make prepayments on my home loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">Prepayments significantly reduce the interest burden and tenure. Check the impact with our <a href="/loan-prepayment/" class="text-blue-600 underline">Loan Prepayment Calculator</a> to see how much wealth you can save.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools List -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty text-pretty text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <a href="/emi/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">EMI Calculator</h4>
+                    </a>
+                    <a href="/home-loan/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Home Loan</h4>
+                    </a>
+                    <a href="/inflation/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Inflation Tool</h4>
+                    </a>
+                    <a href="/sip/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">SIP Calculator</h4>
+                    </a>
+                    <a href="/real-return/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Real Return</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty text-pretty">Disclaimer</p>
+                Property appreciation and investment returns are subject to market volatility. These results provide mathematical estimations and should not be treated as financial advice. Always consult a certified financial planner and legal expert before signing property agreements.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            propPrice: document.getElementById('propPrice'),
+            downPayment: document.getElementById('downPayment'),
+            loanRate: document.getElementById('loanRate'),
+            tenure: document.getElementById('tenure'),
+            appreciation: document.getElementById('appreciation'),
+            maintenance: document.getElementById('maintenance'),
+            monthlyRent: document.getElementById('monthlyRent'),
+            rentInc: document.getElementById('rentInc'),
+            investReturn: document.getElementById('investReturn'),
+            citySelect: document.getElementById('citySelect'),
+            portfolioSelect: document.getElementById('portfolioSelect'),
+            
+            decisionCard: document.getElementById('decisionCard'),
+            decisionText: document.getElementById('decisionText'),
+            advantageAmt: document.getElementById('advantageAmount'),
+            buyWealthDisp: document.getElementById('buyWealthDisp'),
+            rentWealthDisp: document.getElementById('rentWealthDisp'),
+            totalRentDisp: document.getElementById('totalRentDisp'),
+            totalEmiDisp: document.getElementById('totalEmiDisp'),
+            totalInterestDisp: document.getElementById('totalInterestDisp'),
+            propFvDisp: document.getElementById('propFvDisp'),
+            investFvDisp: document.getElementById('investFvDisp'),
+            insightsBox: document.getElementById('insightsBox')
+        };
+
+        const CONFIGS = {
+            cities: {
+                tier1: { appreciation: 7.5, maintenance: 1.5 },
+                tier2: { appreciation: 5.0, maintenance: 1.0 },
+                tier3: { appreciation: 3.5, maintenance: 0.8 }
+            },
+            portfolios: {
+                cons: 7,
+                mod: 10,
+                agg: 12
+            }
+        };
+
+        function handleCityChange() {
+            const val = elements.citySelect.value;
+            if (val !== 'custom') {
+                elements.appreciation.value = CONFIGS.cities[val].appreciation;
+                elements.maintenance.value = CONFIGS.cities[val].maintenance;
+            }
+            calculate();
+        }
+
+        function handlePortfolioChange() {
+            const val = elements.portfolioSelect.value;
+            if (val !== 'custom') {
+                elements.investReturn.value = CONFIGS.portfolios[val];
+            }
+            calculate();
+        }
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+
+        function calculate() {
+            const P_price = parseFloat(elements.propPrice.value) || 0;
+            const DP = parseFloat(elements.downPayment.value) || 0;
+            const L_rate = parseFloat(elements.loanRate.value) || 0;
+            const T_years = parseFloat(elements.tenure.value) || 0;
+            const Appr = (parseFloat(elements.appreciation.value) || 0) / 100;
+            const MaintRate = (parseFloat(elements.maintenance.value) || 0) / 100;
+            
+            const R_start = parseFloat(elements.monthlyRent.value) || 0;
+            const R_inc = (parseFloat(elements.rentInc.value) || 0) / 100;
+            const I_return = (parseFloat(elements.investReturn.value) || 0) / 100;
+
+            if (P_price <= 0 || T_years <= 0) return;
+
+            // --- BUY SCENARIO ---
+            const loanAmount = Math.max(0, P_price - DP);
+            const r = (L_rate / 12) / 100;
+            const n = T_years * 12;
+
+            let emi = 0;
+            if (loanAmount > 0) {
+                emi = (r > 0) ? (loanAmount * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1) : (loanAmount / n);
+            }
+
+            const totalEmiPaid = emi * n;
+            const totalInterest = totalEmiPaid - loanAmount;
+            const totalMaint = P_price * MaintRate * T_years;
+            const futurePropValue = P_price * Math.pow(1 + Appr, T_years);
+            
+            const wealthBuying = futurePropValue - totalInterest - totalMaint - DP;
+
+            // --- RENT SCENARIO ---
+            let totalRentPaid = 0;
+            let currentRent = R_start;
+            for(let i=0; i < T_years; i++) {
+                totalRentPaid += (currentRent * 12);
+                currentRent *= (1 + R_inc);
+            }
+
+            const investFv = DP * Math.pow(1 + I_return, T_years);
+            const wealthRenting = investFv - totalRentPaid;
+
+            // --- DISPLAY RESULTS ---
+            elements.buyWealthDisp.textContent = formatInr(wealthBuying);
+            elements.rentWealthDisp.textContent = formatInr(wealthRenting);
+            elements.totalRentDisp.textContent = formatInr(totalRentPaid);
+            elements.totalEmiDisp.textContent = formatInr(totalEmiPaid);
+            elements.totalInterestDisp.textContent = formatInr(totalInterest);
+            elements.propFvDisp.textContent = formatInr(futurePropValue);
+            elements.investFvDisp.textContent = formatInr(investFv);
+
+            const diff = Math.abs(wealthBuying - wealthRenting);
+            if (wealthBuying > wealthRenting) {
+                elements.decisionCard.className = "p-6 sm:p-8 rounded-3xl text-white transition-all bg-blue-600 card-shadow flex flex-col items-center text-center";
+                elements.decisionText.textContent = "Buying is Better";
+                elements.advantageAmt.textContent = `Buy advantage: ${formatInr(diff)} extra wealth.`;
+                elements.insightsBox.innerHTML = `<p>🚀 <strong>Home Ownership Wins:</strong> Buying this property is a strong financial move. Over ${T_years} years, the appreciation of the house (${formatInr(futurePropValue)}) outweighs the interest costs and the potential investment returns of renting.</p>`;
+            } else {
+                elements.decisionCard.className = "p-6 sm:p-8 rounded-3xl text-white transition-all bg-emerald-600 card-shadow flex flex-col items-center text-center";
+                elements.decisionText.textContent = "Renting is Better";
+                elements.advantageAmt.textContent = `Rent advantage: ${formatInr(diff)} extra wealth.`;
+                elements.insightsBox.innerHTML = `<p>💰 <strong>Liquidity Wins:</strong> Renting is mathematically superior in this scenario. By renting and investing your down payment of ${formatInr(DP)}, you build a massive corpus of <strong>${formatInr(investFv)}</strong>, which beats the property value growth.</p>`;
+            }
+        }
+
+        function resetCalculator() {
+            elements.propPrice.value = 5000000;
+            elements.downPayment.value = 1000000;
+            elements.monthlyRent.value = 15000;
+            elements.citySelect.value = "tier2";
+            elements.portfolioSelect.value = "mod";
+            calculate();
+        }
+
+        function applyExample() {
+            elements.propPrice.value = 8000000;
+            elements.downPayment.value = 2000000;
+            elements.monthlyRent.value = 25000;
+            elements.tenure.value = 20;
+            elements.appreciation.value = 5;
+            elements.investReturn.value = 11;
+            calculate();
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const inputs = ['propPrice', 'downPayment', 'loanRate', 'tenure', 'appreciation', 'maintenance', 'monthlyRent', 'rentInc', 'investReturn'];
+            inputs.forEach(id => {
+                document.getElementById(id).addEventListener('input', calculate);
+            });
+            calculate();
+        });
+
+        // Provided Fetch Script
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
