@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflation Adjusted SIP Calculator – Calculate Real SIP Returns</title>
+    <meta name="description" content="Calculate your mutual fund SIP returns after adjusting for inflation. Find the real future value and purchasing power of your investments using our free calculator.">
+    <meta name="keywords" content="inflation adjusted sip calculator, real sip return calculator india, sip calculator with inflation, real value of sip, purchasing power calculator, mutual fund return calculator with inflation">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-15">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/inflation-adjusted-sip-calculator/">
+    
+    <!-- Performance Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Inflation Adjusted SIP Calculator",
+     "url":"https://arthcalculator.in/inflation-adjusted-sip-calculator/",
+     "description":"Calculate the real, inflation-adjusted future value of your monthly SIP investments.",
+     "inLanguage":"en"
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Inflation Adjusted SIP Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculates real wealth growth by adjusting nominal SIP returns for annual inflation rates.",
+      "featureList": [
+        "Nominal vs Real Value calculation",
+        "Step-up SIP support",
+        "Purchasing Power analysis",
+        "Investment Quality Indicator"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in" },
+        { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators" },
+        { "@type": "ListItem", "position": 3, "name": "Inflation Adjusted SIP", "item": "https://arthcalculator.in/inflation-adjusted-sip-calculator/" }
+      ]
+    }
+    </script>
+
+    <!-- UPDATED EXPANDED FAQ SCHEMA -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an inflation adjusted SIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a calculation that discounts the future value of your SIP by the inflation rate to show what that money is worth in today's buying power."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is real return lower than nominal return?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nominal return is the raw growth percentage. Real return subtracts the inflation rate, representing the actual growth in your purchasing power."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does a 10% annual step-up help with inflation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Stepping up your SIP ensures your investment amount grows along with inflation and your income, helping you reach your goals faster."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the silent thief of wealth?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inflation is known as the silent thief because it reduces the value of your cash slowly over time without decreasing the number on your bank statement."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+    <div id="navbar"></div>
+
+    <!-- Header & Hero -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Inflation Adjusted SIP</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight text-pretty">Inflation Adjusted SIP Calculator</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate the <strong>Real Purchasing Power</strong> of your future SIP corpus. Factor in annual inflation and see exactly how much your target wealth will buy in today's terms.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 shadow-sm uppercase tracking-wide">Real Value Audit</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Quick Action Micro-Strip -->
+        <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all">Apply Example</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-slate-50 transition-all">Reset All</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Wealth Parameters
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label for="sipInput" class="text-sm font-medium text-slate-600">Monthly SIP Amount (₹)</label>
+                            <input type="number" id="sipInput" value="10000" step="500" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="sipRange" min="500" max="500000" step="500" value="10000" class="w-full">
+                    </div>
+
+                    <div class="mb-8 text-pretty">
+                        <div class="flex justify-between items-center mb-3">
+                            <label for="returnInput" class="text-sm font-medium text-slate-600">Expected Annual Return (%)</label>
+                            <input type="number" id="returnInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="returnRange" min="1" max="25" step="0.1" value="12" class="w-full">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label for="inflationInput" class="text-sm font-medium text-slate-600">Estimated Inflation (%)</label>
+                            <input type="number" id="inflationInput" value="6" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="inflationRange" min="1" max="15" step="0.1" value="6" class="w-full">
+                        <p class="text-[10px] text-slate-400 mt-2 italic">Avg. Indian Inflation (CPI) is approx 6%.</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label for="yearsInput" class="text-sm font-medium text-slate-600">Investment Tenure (Years)</label>
+                            <input type="number" id="yearsInput" value="20" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="50" step="1" value="20" class="w-full">
+                    </div>
+
+                    <div class="mb-6 pt-6 border-t border-slate-50 text-pretty">
+                        <div class="flex justify-between items-center mb-3 text-pretty">
+                            <label for="stepUpInput" class="text-sm font-medium text-slate-400 font-bold uppercase tracking-tighter">Annual Step-up SIP (%) <span class="text-[10px] lowercase font-normal">(Optional)</span></label>
+                            <input type="number" id="stepUpInput" value="0" step="1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                        </div>
+                        <input type="range" id="stepUpRange" min="0" max="50" step="1" value="0" class="w-full">
+                    </div>
+
+                    <button type="button" id="calcBtn" onclick="calculate()" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate Real Wealth</button>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Inflation Adjusted Value (Real Wealth)</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-emerald-600 block mb-6 text-center md:text-left" id="realFvDisp">₹0</span>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 text-pretty">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Face Value (Nominal)</p>
+                            <p class="font-bold text-slate-800 text-lg" id="nominalFvDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Invested</p>
+                            <p class="font-bold text-slate-800 text-lg" id="totalInvestedDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 text-pretty">
+                            <p class="text-[10px] text-blue-600 uppercase font-bold mb-1">Real Return (%)</p>
+                            <p class="font-bold text-blue-700 text-lg" id="realRateDisp">0%</p>
+                        </div>
+                    </div>
+
+                    <div class="p-6 bg-slate-900 rounded-3xl text-white mb-8 shadow-xl text-pretty text-pretty">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-2xl">⏳</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-widest text-pretty">Purchasing Power Analysis</h4>
+                                <p class="text-sm sm:text-base font-medium leading-relaxed mt-1" id="powerInsight">
+                                    Your future corpus will have the buying power of <strong>₹0</strong> in today's economy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="insightsBox" class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-6 text-pretty"></div>
+
+                    <!-- Quality Indicator -->
+                    <div id="qualityCard" class="bg-slate-100 p-6 sm:p-8 rounded-2xl transition-colors duration-500 flex justify-between items-center border border-slate-200 text-pretty">
+                        <div>
+                            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Investment Quality</p>
+                            <h4 class="text-2xl font-black text-slate-900" id="qualityLabel">Calculating...</h4>
+                        </div>
+                        <div id="statusBadge" class="bg-white text-slate-900 px-3 py-1 rounded-full text-[10px] font-bold border border-slate-200 uppercase tracking-widest text-pretty">Pending</div>
+                    </div>
+                </div>
+
+                <button id="copyBtn" onclick="copyResults()" class="w-full py-3 border border-blue-200 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    Copy Real Wealth Report
+                </button>
+            </div>
+        </div>
+
+        <!-- content: SEO Knowledge Sections -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Inflation Adjusted SIP Return?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>An inflation-adjusted SIP return (also known as the <strong>Real Rate of Return</strong>) is the actual growth of your investment after removing the effect of rising prices in the economy. While your mutual fund portal might show a future corpus of ₹1 Crore, if inflation is high, that ₹1 Crore in the year 2046 might only buy what ₹30 Lakhs buys today.</p>
+                    <p>By using an <strong>Inflation Adjusted SIP Calculator</strong>, you can set more realistic financial goals. Instead of targeting a "nominal" number, you target a "purchasing power" goal, ensuring your retirement or child's education fund actually covers the future costs.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight">How Inflation Erosion Works</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm leading-relaxed space-y-6">
+                    <p>Inflation is the rate at which the general level of prices for goods and services is rising. As inflation rises, every rupee you own buys a smaller percentage of a good or service. This is why a "safe" 7% return in a Fixed Deposit might actually be a 1% real return if inflation is 6%.</p>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm font-bold text-pretty text-pretty">
+                        Real Return = [(1 + Nominal Return) / (1 + Inflation Rate)] - 1
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4 text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is an inflation adjusted SIP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">It is a calculation that discounts the future value of your SIP by the inflation rate to show what that money is worth in today's buying power.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Why is my real return lower than nominal return?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">Nominal return is the percentage growth shown on your statement. Real return subtracts the inflation rate, representing the actual growth in your purchasing power.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How does a 10% annual step-up help with inflation?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">As your income and prices rise, a fixed SIP becomes a smaller part of your budget. A 10% step-up mirrors your likely salary growth, ensuring your wealth builds exponentially.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Which mutual funds are best for beating inflation in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">Equity mutual funds, especially index and flexi-cap funds, have historically provided 12-15% returns, which is well above the 6% Indian inflation average.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the "Silent Thief" of wealth?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty">Inflation is called the silent thief because it doesn't reduce the count of rupees in your wallet, it just reduces what those rupees can buy, eroding your wealth invisibly.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">How often should I review the inflation rate?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty text-pretty text-pretty">You should review it annually. While long-term averages are stable, short-term spikes (like fuel price surges) can affect your immediate monthly budget and savings capacity.</div></details>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left text-pretty text-pretty text-pretty">Related Financial Planning Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-pretty">
+                    <a href="/inflation/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty">Inflation Tool</h4>
+                    </a>
+                    <a href="/retirement/" class="p-5 border border-slate-100 rounded-2xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Retirement</h4>
+                    </a>
+                    <a href="/real-return/" class="p-5 border border-slate-100 rounded-2xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center text-pretty text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white text-pretty text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Real Return</h4>
+                    </a>
+                    <a href="/fire-calculator/" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">FIRE Plan</h4>
+                    </a>
+                    <a href="/nps/" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-pretty text-pretty text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A10.003 10.003 0 0012 11V5a2 2 0 00-2-2H8a2 2 0 00-2 2v2m4 6h.01M5 20h.01M8 17h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty text-pretty text-pretty">NPS Calc</h4>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Popular Tools Grid (UNIQUE SET) -->
+            <section class="max-w-6xl mx-auto px-4 pt-8 border-t border-slate-200 text-pretty text-pretty">
+                <div class="text-center mb-10 text-pretty">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2 uppercase text-pretty">Popular Investment Tools</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-pretty text-pretty text-pretty">
+                    <a href="/sip/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all"><h4 class="text-xs font-bold text-slate-800 uppercase text-pretty">SIP Calc</h4></a>
+                    <a href="/lumpsum/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800 uppercase">Lumpsum</h4></a>
+                    <a href="/cagr/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800 uppercase">CAGR Tool</h4></a>
+                    <a href="/required-cagr-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800 uppercase">Req. CAGR</h4></a>
+                    <a href="/crorepati-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800 uppercase text-pretty">Crorepati</h4></a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty text-pretty text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide text-pretty text-pretty">Disclaimer</p>
+                Calculations are based on the standard compounded annual growth rate (CAGR) formula adjusted for inflation. Mutual fund investments are subject to market risks. Real purchasing power varies based on local city-specific inflation and lifestyle choices. This tool is for educational purposes only.
+                <p class="mt-4 font-semibold italic text-slate-600 text-pretty">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        const elements = {
+            sipInp: document.getElementById('sipInput'),
+            sipRng: document.getElementById('sipRange'), 
+            returnInp: document.getElementById('returnInput'),
+            returnRng: document.getElementById('returnRange'),
+            inflationInp: document.getElementById('inflationInput'),
+            inflationRng: document.getElementById('inflationRange'),
+            yearsInp: document.getElementById('yearsInput'),
+            yearsRng: document.getElementById('yearsRange'),
+            stepUpInp: document.getElementById('stepUpInput'),
+            stepUpRng: document.getElementById('stepUpRange'),
+            
+            realFvDisp: document.getElementById('realFvDisp'),
+            nominalFvDisp: document.getElementById('nominalFvDisp'),
+            totalInvestedDisp: document.getElementById('totalInvestedDisp'),
+            realRateDisp: document.getElementById('realRateDisp'),
+            powerInsight: document.getElementById('powerInsight'),
+            qualityLabel: document.getElementById('qualityLabel'),
+            statusBadge: document.getElementById('statusBadge'),
+            qualityCard: document.getElementById('qualityCard'),
+            insightsBox: document.getElementById('insightsBox'),
+            copyBtn: document.getElementById('copyBtn')
+        };
+
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+
+        function calculate() {
+            const initialSip = parseFloat(elements.sipInp.value) || 0;
+            const rAnnualNominal = parseFloat(elements.returnInp.value) || 0;
+            const iAnnual = parseFloat(elements.inflationInp.value) || 0;
+            const years = parseFloat(elements.yearsInp.value) || 0;
+            const stepUpPerc = (parseFloat(elements.stepUpInp.value) || 0) / 100;
+
+            if (initialSip <= 0 || years <= 0) return;
+
+            // 1. Calculate Real Annual Rate (Fisher Equation)
+            const rNominal = rAnnualNominal / 100;
+            const iRate = iAnnual / 100;
+            const realAnnualRate = ((1 + rNominal) / (1 + iRate)) - 1;
+
+            // 2. Iterative SIP Calculation (Handles Step-Up and Monthly Compounding)
+            let nominalFV = 0;
+            let totalInvested = 0;
+            let currentSip = initialSip;
+            const monthlyRateNominal = rNominal / 12;
+
+            for (let y = 1; y <= years; y++) {
+                for (let m = 1; m <= 12; m++) {
+                    totalInvested += currentSip;
+                    nominalFV = (nominalFV + currentSip) * (1 + monthlyRateNominal);
+                }
+                currentSip = currentSip * (1 + stepUpPerc);
+            }
+
+            // 3. Real Future Value (Purchasing Power)
+            const realFV = nominalFV / Math.pow(1 + iRate, years);
+
+            // UI Update
+            elements.realFvDisp.textContent = formatInr(realFV);
+            elements.nominalFvDisp.textContent = formatInr(nominalFV);
+            elements.totalInvestedDisp.textContent = formatInr(totalInvested);
+            elements.realRateDisp.textContent = (realAnnualRate * 100).toFixed(2) + "%";
+
+            elements.powerInsight.innerHTML = `Your future corpus of ${formatInr(nominalFV)} will have the buying power of <strong>${formatInr(realFV)}</strong> in today's economy.`;
+
+            // Insight Logic
+            const wealthReduction = nominalFV - realFV;
+            let insightText = `<div class="space-y-1">`;
+            insightText += `<p>📉 <strong>Inflation Impact:</strong> Rising costs reduce your future purchasing power by <strong>${formatInr(wealthReduction)}</strong>.</p>`;
+            if (realAnnualRate <= 0) {
+                insightText += `<p class="mt-2 text-red-700 font-bold">⚠️ Warning: Inflation is eroding your wealth faster than your returns.</p>`;
+            } else {
+                insightText += `<p class="mt-2 text-emerald-700">💰 Your real annual growth (beating inflation) is <strong>${(realAnnualRate * 100).toFixed(2)}%</strong>.</p>`;
+            }
+            insightText += `</div>`;
+            elements.insightsBox.innerHTML = insightText;
+
+            // Quality Badge Logic
+            const realRatePerc = realAnnualRate * 100;
+            if (realRatePerc < 3) {
+                elements.qualityCard.className = "bg-red-50 p-6 sm:p-8 rounded-2xl flex justify-between items-center border border-red-100 transition-all";
+                elements.qualityLabel.textContent = "Low Wealth Growth";
+                elements.statusBadge.textContent = "Wealth Eroding";
+                elements.statusBadge.className = "bg-red-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest";
+            } else if (realRatePerc <= 6) {
+                elements.qualityCard.className = "bg-orange-50 p-6 sm:p-8 rounded-2xl flex justify-between items-center border border-orange-100 transition-all";
+                elements.qualityLabel.textContent = "Moderate Growth";
+                elements.statusBadge.textContent = "Stable";
+                elements.statusBadge.className = "bg-orange-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest";
+            } else if (realRatePerc <= 10) {
+                elements.qualityCard.className = "bg-blue-50 p-6 sm:p-8 rounded-2xl flex justify-between items-center border border-blue-100 transition-all";
+                elements.qualityLabel.textContent = "Strong Growth";
+                elements.statusBadge.textContent = "Healthy";
+                elements.statusBadge.className = "bg-blue-600 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest";
+            } else {
+                elements.qualityCard.className = "bg-emerald-50 p-6 sm:p-8 rounded-2xl flex justify-between items-center border border-emerald-100 transition-all";
+                elements.qualityLabel.textContent = "Excellent Growth";
+                elements.statusBadge.textContent = "High Alpha";
+                elements.statusBadge.className = "bg-emerald-600 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest";
+            }
+        }
+
+        function setupSync(i, r) {
+            i.addEventListener('input', () => { r.value = i.value; calculate(); });
+            r.addEventListener('input', () => { i.value = r.value; calculate(); });
+        }
+
+        async function copyResults() {
+            const realVal = elements.realFvDisp.innerText;
+            const nomVal = elements.nominalFvDisp.innerText;
+            const text = `Real Wealth Analysis:\nNominal Value: ${nomVal}\nInflation Adjusted (Today's Value): ${realVal}\nVia ArthCalculator.in`;
+            try {
+                await navigator.clipboard.writeText(text);
+                const originalText = "Copy Real Wealth Report";
+                elements.copyBtn.innerText = "✓ Copied to clipboard";
+                setTimeout(() => elements.copyBtn.innerText = originalText, 2000);
+            } catch (err) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.sipInp, elements.sipRng);
+            setupSync(elements.returnInp, elements.returnRng);
+            setupSync(elements.inflationInp, elements.inflationRng);
+            setupSync(elements.yearsInp, elements.yearsRng);
+            setupSync(elements.stepUpInp, elements.stepUpRng);
+            calculate();
+        });
+
+        // NAVBAR & FOOTER FETCH
+        fetch("/navbar.html").then(res => res.text()).then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+    </script>
+</body>
+</html>
