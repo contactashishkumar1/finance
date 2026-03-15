@@ -51,7 +51,7 @@
     }
     </script>
 
-    <!-- Schema Markup: FAQPage -->
+    <!-- Schema Markup: FAQPage (Expanded to 14 Questions) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -71,6 +71,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "It depends on your current age and expenses. A common rule is to save enough to build a corpus 25 times your annual expenses at retirement age."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does inflation affect my goals?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inflation reduces the purchasing power of money. A goal of 1 Crore today might require nearly 3 Crores in 20 years to maintain the same value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the 25x rule in retirement planning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 25x rule suggests that your retirement corpus should be 25 times your estimated annual expenses at the time of retirement to sustain a 4% annual withdrawal rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to reach financial goals faster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The two best ways are: 1) Start as early as possible to maximize compounding and 2) Use a Step-up SIP to increase your investment amount annually."
           }
         }
       ]
@@ -172,8 +196,16 @@
             </div>
         </section>
 
-        <!-- Main Content Grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+        <!-- Quick Examples Strip -->
+        <div class="mb-8 flex flex-wrap gap-2 justify-center md:justify-start">
+            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest w-full mb-1 text-center md:text-left">Quick Examples:</span>
+            <button onclick="applyExample('ret1cr')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50">1 Cr Retirement</button>
+            <button onclick="applyExample('edu25l')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50">₹25L Education</button>
+            <button onclick="applyExample('house1cr')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50">₹1 Cr House</button>
+            <button onclick="applyExample('emg6l')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50">₹6L Emergency Fund</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
@@ -210,8 +242,8 @@
 
             <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
-                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left text-pretty">Required Monthly SIP</h2>
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Required Monthly SIP</h2>
                     <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-8 text-center md:text-left" id="requiredSipDisp">₹0</span>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -231,9 +263,9 @@
 
                     <div id="insightsBox" class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-8"></div>
 
-                    <div class="mb-10 text-pretty">
+                    <div class="mb-10">
                         <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
-                            <span class="text-blue-600">Total Invested</span>
+                            <span class="text-blue-600">Principal Invested</span>
                             <span class="text-emerald-600 font-bold">Compound Profit</span>
                         </div>
                         <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
@@ -254,7 +286,7 @@
                         </div>
                         <div class="text-right">
                              <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Status</p>
-                             <div id="statusBadge" class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/20 uppercase tracking-widest text-pretty">Pending</div>
+                             <div id="statusBadge" class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/20 uppercase tracking-widest">Pending</div>
                         </div>
                     </div>
                 </div>
@@ -264,7 +296,7 @@
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
                         Copy Plan
                     </button>
-                    <button onclick="shareResult()" class="flex-1 py-3 bg-slate-900 text-white rounded-lg text-xs font-bold hover:bg-black transition-all flex items-center justify-center gap-2 text-pretty">
+                    <button onclick="shareResult()" class="flex-1 py-3 bg-slate-900 text-white rounded-lg text-xs font-bold hover:bg-black transition-all flex items-center justify-center gap-2">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
                         Share Strategy
                     </button>
@@ -272,59 +304,57 @@
             </div>
         </div>
 
-        <!-- content: SEO Knowledge Section (1200+ Words Structure) -->
-        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12 text-pretty">
+        <!-- content: SEO Knowledge Section -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12">
             <h2 class="text-2xl font-bold text-slate-900 mb-6">How to Plan Multiple Financial Goals Correctly</h2>
             <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
                 <p>Most individuals struggle with the "where do I start" problem. Balancing immediate needs like an emergency fund with 30-year goals like retirement requires a structured approach.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-pretty">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="space-y-4">
                         <h3 class="font-bold text-slate-900">Step 1: Inventory Your Milestones</h3>
                         <p>List every significant expense you expect in the next 30 years. Categorize them into Short-term (Vacation, Car), Medium-term (House Downpayment, Higher Studies), and Long-term (Retirement).</p>
                         <h3 class="font-bold text-slate-900">Step 2: Apply Realistic Inflation</h3>
                         <p>A ₹25 Lakh course today will cost much more in the future. Always apply 6% general inflation or 10% education inflation to your "Target Today" values to find the real future requirement.</p>
+                    </div>
+                    <div class="space-y-4">
                         <h3 class="font-bold text-slate-900">Step 3: Calculate the SIP Gap</h3>
                         <p>Use our reverse-SIP engine to find how much money you need to set aside every month for each specific goal. This provides the mathematical foundation of your plan.</p>
-                    </div>
-                    <div class="space-y-4 text-pretty">
                         <h3 class="font-bold text-slate-900">Step 4: Prioritize & Allocate</h3>
                         <p>If your total required SIP exceeds your savings capacity, prioritize. Retirement and Emergency Funds are usually non-negotiable, whereas a Vacation or Luxury Car goal can be pushed back.</p>
-                        <h3 class="font-bold text-slate-900">Step 5: Review & Rebalance Yearly</h3>
-                        <p>Life changes. Your salary might increase or market returns might exceed expectations. Review your Goal Planner every year to stay aligned with your net worth growth.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Knowledge Breakdown for 7 Goals -->
-        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12 text-pretty">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8 uppercase tracking-tight text-pretty">Strategic Roadmap for 7 Life Goals</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-pretty">
+        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8 uppercase tracking-tight">Strategic Roadmap for 7 Life Goals</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="border-l-4 border-blue-600 pl-6">
                     <h3 class="text-xl font-bold text-slate-900 mb-3">1. Retirement Planning</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-3">Retirement is the only goal for which you can't get a loan. We use the <strong>4% Safe Withdrawal Rule</strong>. It assumes you need a corpus 25-30 times your annual expenses to sustain your lifestyle for 30+ years post-retirement.</p>
                 </div>
                 <div class="border-l-4 border-emerald-600 pl-6">
                     <h3 class="text-xl font-bold text-slate-900 mb-3">2. Child Education</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty">Education inflation in India is approx 10-12%. A professional degree that costs ₹15L today will likely cost ₹60L in 15 years. SIPs in equity funds are essential to bridge this inflation gap.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Education inflation in India is approx 10-12%. A professional degree that costs ₹15L today will likely cost ₹60L in 15 years. SIPs in equity funds are essential to bridge this inflation gap.</p>
                 </div>
                 <div class="border-l-4 border-indigo-600 pl-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3 text-pretty">3. House Purchase</h3>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">3. House Purchase</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-3">Focus on the <strong>Down Payment</strong>. Saving for 20-30% of the future appreciated value of a house reduces your loan burden and saves lakhs in interest.</p>
                 </div>
                 <div class="border-l-4 border-red-600 pl-6">
                     <h3 class="text-xl font-bold text-slate-900 mb-3">4. Car Purchase</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty">Cars are depreciating assets. A 3-5 year "Sinking Fund" approach allows you to buy a vehicle with cash, avoiding high-interest auto loans entirely.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Cars are depreciating assets. A 3-5 year "Sinking Fund" approach allows you to buy a vehicle with cash, avoiding high-interest auto loans entirely.</p>
                 </div>
                 <div class="border-l-4 border-yellow-500 pl-6">
                     <h3 class="text-xl font-bold text-slate-900 mb-3">5. Vacation Planning</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty">Short-term lifestyle goals should prioritize capital safety. Monthly parking of funds in liquid or debt instruments ensures you travel without credit card debt.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Short-term lifestyle goals should prioritize capital safety. Monthly parking of funds in liquid or debt instruments ensures you travel without credit card debt.</p>
                 </div>
                 <div class="border-l-4 border-purple-600 pl-6">
                     <h3 class="text-xl font-bold text-slate-900 mb-3">6. Emergency Fund</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty text-pretty">Aim for 6-12 months of mandatory expenses. This fund should be kept in sweep-in FDs or liquid funds to handle job losses or medical shocks.</p>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Aim for 6-12 months of mandatory expenses. This fund should be kept in sweep-in FDs or liquid funds to handle job losses or medical shocks.</p>
                 </div>
-                <div class="border-l-4 border-blue-900 pl-6 md:col-span-2 text-pretty text-pretty text-pretty">
+                <div class="border-l-4 border-blue-900 pl-6 md:col-span-2">
                     <h3 class="text-xl font-bold text-slate-900 mb-3">7. Wealth Creation</h3>
                     <p class="text-slate-600 text-sm leading-relaxed mb-3">The "Opportunity Fund." Building general wealth for the long term utilizes the maximum power of compounding to achieve financial freedom early.</p>
                 </div>
@@ -369,7 +399,7 @@
         <!-- Disclaimer -->
         <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
             <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
-            Calculations are based on mathematical annuity formulas and standard financial planning assumptions. Mutual fund returns are subject to market risks. Inflation rates provided are historical averages. This tool provides estimations for educational purposes and does not constitute financial advice.
+            Calculations are based on mathematical annuity formulas and standard financial planning assumptions. Mutual fund returns are subject to market volatility. Inflation rates provided are historical averages. This tool provides estimations for educational purposes and does not constitute financial advice.
             <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
         </div>
     </main>
@@ -425,19 +455,28 @@
                     <h3 class="text-xs font-black text-purple-600 uppercase tracking-widest">Safety Net Settings</h3>
                     <div><label class="text-sm font-medium text-slate-600">Monthly Expenses (₹)</label><input type="number" id="emgExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                     <div><label class="text-sm font-medium text-slate-600">Buffer Months</label><input type="number" id="emgMonths" value="6" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Target Time (Years)</label><input type="number" id="emgTime" value="2" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    <div><label class="text-sm font-medium text-slate-600">Target Time (Years)</label><input type="number" id="emgYears" value="2" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                     <p class="p-3 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-lg border border-purple-100 uppercase">Emergency funds should be kept in liquid or debt funds.</p>
                 </div>`,
             wealth: `
                 <div class="space-y-6">
                     <h3 class="text-xs font-black text-indigo-600 uppercase tracking-widest">Growth Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600">Target Corpus (Today ₹)</label><input type="number" id="wealthTarget" value="10000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    <div><label class="text-sm font-medium text-slate-600">Target Amount Today (₹)</label><input type="number" id="wealthTarget" value="10000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                     <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" id="wealthYears" value="15" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                </div>`,
+            car: `
+                <div class="space-y-6">
+                    <h3 class="text-xs font-black text-slate-900 uppercase tracking-widest">Vehicle Settings</h3>
+                    <div><label class="text-sm font-medium text-slate-600">Car Price Today (₹)</label><input type="number" id="carPrice" value="1000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" id="carYears" value="5" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                </div>`,
+            vacation: `
+                <div class="space-y-6">
+                    <h3 class="text-xs font-black text-slate-900 uppercase tracking-widest">Vacation Settings</h3>
+                    <div><label class="text-sm font-medium text-slate-600">Trip Cost Today (₹)</label><input type="number" id="vacPrice" value="500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" id="vacYears" value="3" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
                 </div>`
         };
-
-        inputsMap.car = inputsMap.wealth.replace('Target Corpus (Today ₹)', 'Car Price Today (₹)').replace('Growth Settings', 'Vehicle Settings').replace('wealthYears', 'carYears').replace('wealthTarget', 'carPrice');
-        inputsMap.vacation = inputsMap.wealth.replace('Target Corpus (Today ₹)', 'Trip Cost Today (₹)').replace('Growth Settings', 'Vacation Settings').replace('wealthYears', 'vacYears').replace('wealthTarget', 'vacPrice');
 
         function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
         function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
@@ -484,44 +523,52 @@
         }
 
         function runMath() {
-            let FV = 0, years = 0, returnRate = parseFloat(document.getElementById('retRate').value) || 0;
-            const stepUp = (parseFloat(document.getElementById('stepUpInput').value) || 0) / 100;
-            const existing = parseFloat(document.getElementById('existingInput').value) || 0;
+            let FV = 0, years = 0, returnRate = parseFloat(document.getElementById('retRate')?.value) || 0;
+            const stepUp = (parseFloat(document.getElementById('stepUpInput')?.value) || 0) / 100;
+            const existing = parseFloat(document.getElementById('existingInput')?.value) || 0;
             const insightBox = document.getElementById('insightsBox');
 
             try {
                 if (currentGoal === 'retirement') {
-                    const cur = parseInt(document.getElementById('curAge').value);
-                    const ret = parseInt(document.getElementById('retAge').value);
-                    const exp = parseFloat(document.getElementById('monthlyExp').value);
-                    const inf = (parseFloat(document.getElementById('infRate').value) || 0) / 100;
-                    const rule = document.querySelector('input[name="retRule"]:checked').value;
+                    const cur = parseInt(document.getElementById('curAge')?.value || 30);
+                    const ret = parseInt(document.getElementById('retAge')?.value || 60);
+                    const exp = parseFloat(document.getElementById('monthlyExp')?.value || 0);
+                    const inf = (parseFloat(document.getElementById('infRate')?.value) || 0) / 100;
+                    const rule = document.querySelector('input[name="retRule"]:checked')?.value || '25x';
                     if (ret <= cur) throw "Retirement age > current age.";
                     years = ret - cur;
                     const futureMonthlyExp = exp * Math.pow(1 + inf, years);
                     FV = rule === '25x' ? (futureMonthlyExp * 12 * 25) : ((futureMonthlyExp * 12) / 0.04);
                 } else if (currentGoal === 'education') {
-                    const cAge = parseInt(document.getElementById('childAge').value);
-                    const sAge = parseInt(document.getElementById('studyAge').value);
-                    const cost = parseFloat(document.getElementById('courseCost').value);
-                    const inf = (parseFloat(document.getElementById('eduInf').value) || 0) / 100;
+                    const cAge = parseInt(document.getElementById('childAge')?.value || 3);
+                    const sAge = parseInt(document.getElementById('studyAge')?.value || 18);
+                    const cost = parseFloat(document.getElementById('courseCost')?.value || 0);
+                    const inf = (parseFloat(document.getElementById('eduInf')?.value) || 0) / 100;
                     if (sAge <= cAge) throw "Admission age > child age.";
                     years = sAge - cAge;
                     FV = cost * Math.pow(1 + inf, years);
                 } else if (currentGoal === 'house') {
-                    const price = parseFloat(document.getElementById('housePrice').value);
-                    const grow = parseFloat(document.getElementById('houseGrow').value) / 100;
-                    const dp = parseFloat(document.getElementById('houseDP').value) / 100;
-                    years = parseInt(document.getElementById('houseYears').value);
+                    const price = parseFloat(document.getElementById('housePrice')?.value || 0);
+                    const grow = parseFloat(document.getElementById('houseGrow')?.value || 5) / 100;
+                    const dp = parseFloat(document.getElementById('houseDP')?.value || 20) / 100;
+                    years = parseInt(document.getElementById('houseYears')?.value || 10);
                     FV = (price * Math.pow(1 + grow, years)) * dp;
                 } else if (currentGoal === 'emergency') {
-                    const exp = parseFloat(document.getElementById('emgExp').value);
-                    const months = parseInt(document.getElementById('emgMonths').value);
-                    years = parseInt(document.getElementById('emgTime').value);
+                    const exp = parseFloat(document.getElementById('emgExp')?.value || 0);
+                    const months = parseInt(document.getElementById('emgMonths')?.value || 6);
+                    years = parseInt(document.getElementById('emgYears')?.value || 2);
                     FV = exp * months;
-                } else {
-                    FV = parseFloat(document.getElementById(currentGoal + 'Price')?.value || document.getElementById('wealthTarget').value);
-                    years = parseInt(document.getElementById(currentGoal + 'Years')?.value || document.getElementById('wealthYears').value);
+                } else if (currentGoal === 'car') {
+                    const price = parseFloat(document.getElementById('carPrice')?.value || 0);
+                    years = parseInt(document.getElementById('carYears')?.value || 1);
+                    FV = price * Math.pow(1 + 0.06, years);
+                } else if (currentGoal === 'vacation') {
+                    const cost = parseFloat(document.getElementById('vacPrice')?.value || 0);
+                    years = parseInt(document.getElementById('vacYears')?.value || 1);
+                    FV = cost * Math.pow(1 + 0.06, years);
+                } else if (currentGoal === 'wealth') {
+                    FV = parseFloat(document.getElementById('wealthTarget')?.value || 0);
+                    years = parseInt(document.getElementById('wealthYears')?.value || 1);
                 }
                 if (years <= 0) throw "Period must be > 0.";
             } catch (err) { insightBox.innerHTML = `<span class="text-red-600 font-bold">⚠️ ${err}</span>`; return; }
@@ -611,7 +658,14 @@
             { q: "How to reach financial goals faster?", a: "Start early, use an annual Step-up SIP (10-15% increase per year), and diversify into growth assets like equity mutual funds." },
             { q: "How much for child education in India?", a: "With 10% education inflation, aim for 3-4x the current fee if admission is 15 years away." },
             { q: "Should I prioritize a house or retirement?", a: "Retirement is non-negotiable. Plan for a house down payment while property appreciates at 5-6% to keep future loans manageable." },
-            { q: "Impact of starting 5 years late?", a: "A 5-year delay can often double the SIP required to hit the same target due to the loss of compounding years." }
+            { q: "Impact of starting 5 years late?", a: "A 5-year delay can often double the SIP required to hit the same target due to the loss of compounding years." },
+            { q: "Is SIP better than Lumpsum for life goals?", a: "SIP is generally better for salaried individuals as it instills discipline and provides Rupee Cost Averaging, reducing the risk of timing the market." },
+            { q: "How do I handle multiple overlapping goals?", a: "Prioritize non-negotiable goals (Retirement, Kids' Education) first. Use a Step-up SIP to increase contributions as your income grows to cover secondary goals." },
+            { q: "Does the planner account for existing savings?", a: "Yes, our planner allows you to input current savings, which are then grown at your expected return rate to reduce the final SIP requirement." },
+            { q: "Can I use the same SIP for multiple life goals?", a: "While possible, it is better to tag separate SIPs to specific goals. This helps in choosing the right asset class and prevents using retirement funds for vacations." },
+            { q: "What return rate should I assume for a 15-year goal?", a: "For long tenures, a balanced equity portfolio in India historically targets 12-14% CAGR. Planning with 12% is considered conservative and safer for long-term estimates." },
+            { q: "How often should I review my goal plan?", a: "Annual reviews are ideal. You should update your Net Worth and adjust your SIP amounts if your salary increases or your goal costs change significantly." },
+            { q: "Is HRA exemption part of the plan?", a: "HRA reduces your taxable income, increasing your disposable income for SIPs. You can calculate your tax savings separately to optimize your plan." }
         ];
 
         window.addEventListener('DOMContentLoaded', () => {
