@@ -3,535 +3,701 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary SEO -->
     <title>Future Value Calculator India (2026) – Calculate Investment Growth</title>
-    <meta name="description" content="Use our Future Value Calculator India to estimate how your investment grows with compound interest. Plan financial goals and compare returns easily.">
-    <meta name="keywords" content="future value calculator india, FV calculator, investment growth calculator, compound interest calculator, compound interest india">
-    <meta name="author" content="Arthcalculator">
+    <meta name="description" content="Use our Future Value Calculator India to estimate how your investment grows with compound interest. Calculate wealth gain, growth percentage, and view yearly projections.">
+    <meta name="keywords" content="Future Value Calculator India, FV Calculator, Investment Growth Calculator, Compound Interest Calculator India, Wealth Growth 2026">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/future-value/">
-    <meta property="article:modified_time" content="2026-03-22T09:00:00+05:30">
-
-    <!-- Open Graph / Facebook -->
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Future Value Calculator India (2026) – Calculate Investment Growth">
+    <meta property="og:description" content="Calculate the future value of your investments using our high-precision tool. View total wealth gained and annual growth schedules.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arthcalculator.in/future-value/">
-    <meta property="og:title" content="Future Value Calculator India (2026) – Calculate Investment Growth">
-    <meta property="og:description" content="Estimate your investment's future value with precision. Professional financial tool for Indian investors.">
-
-    <!-- CDNs -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(90deg, #2563eb, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        .animate-result { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        
-        /* Range Slider Styling */
-        input[type=range] { -webkit-appearance: none; background: transparent; }
-        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 6px; cursor: pointer; background: #e2e8f0; border-radius: 10px; }
-        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 20px; width: 20px; border-radius: 50%; background: #2563eb; cursor: pointer; border: 3px solid white; box-shadow: 0 0 10px rgba(37, 99, 235, 0.3); margin-top: -7px; }
-        
-        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
-        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
-        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
-        .sticky-header th { position: sticky; top: 0; background: white; z-index: 10; border-bottom: 1px solid #f1f5f9; }
-        
-        /* Navbar compatibility */
-        #navbar { z-index: 50; position: fixed; top: 0; left: 0; width: 100%; }
-        .formula-box { background: #f1f5f9; border-radius: 12px; padding: 1.5rem; border: 1px dashed #cbd5e1; }
-    </style>
-
-    <!-- Schema.org Implementation -->
+    
+    <!-- Schema Markup: WebPage -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Future Value Calculator India",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "offers": { "@type": "Offer", "price": "0" }
+      "@type": "WebPage",
+      "name": "Future Value Calculator India (2026)",
+      "description": "A financial tool to calculate the future value of lump sum investments with compounding options.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Financial Suite India"
+      }
     }
     </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Future Value Calculator",
+       "item": "https://arthcalculator.in/future-value/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Future Value (FV)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Future Value is the value of a current asset at a specific date in the future based on an assumed rate of growth. It uses the principle of compounding to calculate the final worth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does compounding frequency affect Future Value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The more frequently interest is compounded (e.g., monthly vs annual), the higher the Future Value will be, as you earn interest on previously earned interest more often."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .nav-link {
+            transition: all 0.2s ease;
+            position: relative;
+            padding: 0.5rem 0.25rem;
+        }
+        .nav-link.active {
+            color: #2563eb;
+            font-weight: 600;
+        }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #2563eb;
+        }
+        details summary {
+            list-style: none;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary svg {
+            transform: rotate(180deg);
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        /* Custom Toggle Styling to match existing theme */
+        .freq-btn.active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+    </style>
 </head>
-<body class="antialiased">
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
 
-    <!-- Dynamic Navbar -->
-    <div id="navbar"></div>
-
-    <main class="max-w-6xl mx-auto px-4 pt-20 sm:pt-24 pb-12">
-        
-        <!-- Breadcrumb Header -->
-        <div class="py-6 sm:py-10">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-bold">
-                <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
-                <span class="mx-2 text-slate-300">/</span>
-                <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
-                <span class="mx-2 text-slate-300">/</span>
-                <span class="text-slate-900">Future Value Calculator</span>
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Breadcrumb Navigation -->
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Future Value Calculator</li>
+                </ol>
             </nav>
 
-            <h1 class="gradient-text text-xl sm:text-3xl md:text-4xl font-extrabold mb-2 leading-tight">
-                Future Value Calculator India – Calculate Investment Growth
-            </h1>
-            <div class="flex items-center gap-3">
-                <span class="bg-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Updated March 2026</span>
-                <span class="text-slate-400 text-[10px] sm:text-xs font-bold uppercase tracking-widest">~3 min read</span>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Future Value Calculator India (2026) – Calculate Investment Growth</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Estimate the future worth of your lump sum investments. Our Future Value calculator helps you plan your financial goals in India for 2026 by showing how compound interest grows your principal over time.
+                    </p>
+                    
+                    <!-- Anchor Jump Links -->
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-fv" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
             </div>
         </div>
+    </header>
 
-        <!-- Calculator Layout Grid -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-16 items-start">
+  <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
             
-            <!-- Left Side: Inputs Card -->
-            <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                
-                <!-- Present Value -->
-                <div class="mb-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <label class="text-slate-700 font-bold text-sm sm:text-base flex items-center gap-2">
-                            Present Investment (₹)
-                        </label>
-                        <input type="number" id="pvInput" value="100000" class="w-28 sm:w-32 text-right font-bold text-blue-600 border-b-2 border-slate-200 focus:border-blue-500 outline-none transition-all py-1 bg-transparent">
-                    </div>
-                    <input type="range" id="pvSlider" min="1000" max="10000000" step="1000" value="100000" class="w-full">
-                </div>
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Investment Details
+                    </h2>
 
-                <!-- Interest Rate -->
-                <div class="mb-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <label class="text-slate-700 font-bold text-sm sm:text-base">Expected Interest Rate (%)</label>
-                        <input type="number" id="rateInput" value="12" step="0.1" class="w-20 text-right font-bold text-blue-600 border-b-2 border-slate-200 focus:border-blue-500 outline-none transition-all py-1 bg-transparent">
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Present Value (₹)</label>
+                            <input type="number" id="monthlyInput" value="100000" min="1000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="monthlyRange" min="1000" max="10000000" step="1000" value="100000" class="w-full py-2 cursor-pointer">
                     </div>
-                    <input type="range" id="rateSlider" min="1" max="30" step="0.1" value="12" class="w-full">
-                </div>
 
-                <!-- Tenure -->
-                <div class="mb-10">
-                    <div class="flex justify-between items-center mb-4">
-                        <label class="text-slate-700 font-bold text-sm sm:text-base">Time Period (Years)</label>
-                        <input type="number" id="timeInput" value="10" class="w-20 text-right font-bold text-blue-600 border-b-2 border-slate-200 focus:border-blue-500 outline-none transition-all py-1 bg-transparent">
+                    <!-- Interest Rate -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Expected Return (% p.a)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="rateInput" value="12" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="rateRange" min="1" max="30" step="0.1" value="12" class="w-full py-2 cursor-pointer">
                     </div>
-                    <input type="range" id="timeSlider" min="1" max="40" step="1" value="10" class="w-full">
-                </div>
 
-                <!-- Frequency Toggle -->
-                <div class="mb-8">
-                    <p class="text-slate-500 font-bold text-[10px] uppercase tracking-widest mb-3">Compounding Frequency</p>
-                    <div class="p-1 bg-slate-100 rounded-xl grid grid-cols-2 gap-1">
-                        <button id="annualComp" class="py-2 rounded-lg text-xs font-bold bg-white text-blue-600 shadow-sm transition-all">Annual</button>
-                        <button id="monthlyComp" class="py-2 rounded-lg text-xs font-bold text-slate-500 hover:text-blue-600 transition-all">Monthly</button>
+                    <!-- Tenure -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Time Period (Years)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="yearsInput" value="10" min="1" max="50" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="50" step="1" value="10" class="w-full py-2 cursor-pointer">
                     </div>
-                </div>
 
-                <!-- Buttons -->
-                <div class="grid grid-cols-2 gap-3">
-                    <button id="applyExample" class="bg-blue-50 text-blue-600 font-bold py-3 px-4 rounded-xl hover:bg-blue-100 transition-all text-sm">Example</button>
-                    <button id="resetBtn" class="bg-slate-100 text-slate-600 font-bold py-3 px-4 rounded-xl hover:bg-slate-200 transition-all text-sm">Reset</button>
-                </div>
-            </div>
-
-            <!-- Right Side: Results & Chart Card -->
-            <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
-                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
-                    <div>
-                        <p class="text-slate-400 font-bold text-[10px] uppercase tracking-widest mb-1">Estimated Future Value</p>
-                        <h2 id="fvDisplay" class="text-4xl md:text-5xl font-extrabold text-blue-600 animate-result">₹0</h2>
+                    <!-- Compounding Toggle (Addition within layout) -->
+                    <div class="mb-6">
+                        <label class="text-sm font-medium text-slate-600 mb-3 block">Compounding Frequency</label>
+                        <div class="flex bg-slate-50 p-1 rounded-xl border border-slate-200">
+                            <button id="compAnnually" class="freq-btn active flex-1 py-2 text-xs font-bold rounded-lg transition-all">Annually</button>
+                            <button id="compMonthly" class="freq-btn flex-1 py-2 text-xs font-bold rounded-lg transition-all">Monthly</button>
+                        </div>
                     </div>
-                    <button id="copyResult" class="text-blue-600 bg-blue-50 px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-2 hover:bg-blue-100 transition-all border border-blue-100">
-                        Copy Result
+
+                    <div id="stepUpContainer" class="hidden">
+                         <input type="number" id="stepUpInput" value="0">
+                         <input type="range" id="stepUpRange" value="0">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Calculate Future Value
                     </button>
                 </div>
 
-                <!-- Breakdown Bar -->
-                <div class="mb-10">
-                    <div class="flex justify-between text-[10px] font-extrabold text-slate-400 mb-2 uppercase tracking-wider">
-                        <span>Principal</span>
-                        <span>Total Gain</span>
+                <!-- Summary Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Invested Amount</p>
+                        <h3 id="totalInvestedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
-                    <div class="w-full h-3 bg-slate-100 rounded-full flex overflow-hidden shadow-inner">
-                        <div id="investedBar" class="h-full bg-slate-300 transition-all duration-1000"></div>
-                        <div id="gainBar" class="h-full bg-blue-600 transition-all duration-1000"></div>
-                    </div>
-                </div>
-
-                <!-- Stat Cards -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <p class="text-slate-400 text-[10px] font-extrabold uppercase mb-1 tracking-widest">Initial</p>
-                        <p id="totalInvestedStat" class="text-slate-900 font-bold text-sm sm:text-base">₹0</p>
-                    </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <p class="text-slate-400 text-[10px] font-extrabold uppercase mb-1 tracking-widest">Growth</p>
-                        <p id="totalGainStat" class="text-green-600 font-bold text-sm sm:text-base">₹0</p>
-                    </div>
-                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <p class="text-slate-400 text-[10px] font-extrabold uppercase mb-1 tracking-widest">Returns %</p>
-                        <p id="growthPercentStat" class="text-blue-600 font-bold text-sm sm:text-base">0%</p>
-                    </div>
-                </div>
-
-                <!-- Chart Container (Inline) -->
-                <div class="border-t border-slate-100 pt-8">
-                    <div class="flex justify-between items-center mb-4">
-                        <h3 class="font-bold text-slate-800 text-sm">Growth Visualization</h3>
-                        <button id="toggleChart" class="text-[10px] font-bold text-slate-400 hover:text-blue-600 uppercase tracking-widest">Hide Chart</button>
-                    </div>
-                    <div id="chartWrapper" class="h-[250px] w-full">
-                        <canvas id="growthChart"></canvas>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Wealth Gained</p>
+                        <h3 id="wealthGainedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Projection Table -->
-        <section class="mb-16">
-            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-shadow">
-                <div class="p-6 sm:p-8 border-b border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                    <div>
-                        <h2 class="text-xl font-bold text-slate-900 mb-1">Future Value Projection Table</h2>
-                        <p class="text-slate-500 text-xs sm:text-sm">Comprehensive year-on-year analysis of your investment.</p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <div class="flex bg-slate-100 p-1 rounded-lg">
-                            <button id="viewYearly" class="px-3 py-1.5 rounded-md text-[10px] font-bold bg-white text-blue-600 shadow-sm transition-all">Yearly</button>
-                            <button id="viewMonthly" class="px-3 py-1.5 rounded-md text-[10px] font-bold text-slate-500 hover:text-blue-600 transition-all">Monthly</button>
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Investment Projection</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Future Value (Maturity)</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="maturityValue">₹0</span>
+                            </div>
                         </div>
-                        <button id="downloadCSV" class="bg-slate-900 text-white px-4 py-2 rounded-xl text-[10px] font-bold hover:bg-blue-700 transition-all">Export CSV</button>
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
+                             <div class="h-8 w-1 bg-emerald-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Total Growth %</p>
+                                <p class="font-bold text-slate-800 text-sm" id="finalMonthlyDisp">0%</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs">Invested Amount</span>
+                            <span class="text-indigo-600 font-bold uppercase text-xs">Returns Earned</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                            <div id="returnsBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 50%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="investedLabel">₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="returnsLabel">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Key Highlights Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Wealth Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Impact of Power of Compounding</li>
+                            <li class="flex items-center gap-2">📈 Yearly wealth growth breakdown</li>
+                            <li class="flex items-center gap-2">🔄 Compare Annual vs Monthly gains</li>
+                            <li class="flex items-center gap-2">⚡ Visualization of growth trajectory</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Yearly Growth Schedule</h3>
+                    <p class="text-xs text-slate-500 mb-4">See how your principal accumulates interest and grows exponentially over your chosen period.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Opening Bal</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Interest Earned</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Closing Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable"></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="overflow-x-auto max-h-[400px] custom-scrollbar sticky-header">
-                    <table class="w-full text-left text-xs sm:text-sm border-collapse">
-                        <thead class="text-slate-400 font-bold uppercase tracking-widest text-[10px]">
-                            <tr>
-                                <th class="px-6 py-4" id="colLabel">Year</th>
-                                <th class="px-6 py-4">Opening Balance</th>
-                                <th class="px-6 py-4">Interest Earned</th>
-                                <th class="px-6 py-4">Closing Balance</th>
-                                <th class="px-6 py-4 text-right">Cumulative Gain</th>
+
+                <!-- Formula and Example -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is Future Value Calculated?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        FV = PV × (1 + r/n)<sup>nt</sup>
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>FV:</strong> Future Value | <strong>PV:</strong> Present Value (Initial Investment)</p>
+                        <p><strong>r:</strong> Annual Interest Rate (as decimal)</p>
+                        <p><strong>n:</strong> Number of times interest compounds per year</p>
+                        <p><strong>t:</strong> Number of years</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example FV Calculation (India)</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If you invest <strong>₹1,00,000</strong> for <strong>10 years</strong> at an expected return of <strong>12% p.a.</strong> (compounded annually):
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Invested Amount: <strong>₹1,00,000</strong></li>
+                            <li>Future Value: <strong>₹3,10,585</strong></li>
+                            <li>Total Wealth Gained: <strong>₹2,10,585</strong></li>
+                            <li>Growth Percentage: <strong>210.6%</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparative Content -->
+        <div class="space-y-12 mb-12">
+            
+            <!-- Tenure Comparison Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6" id="about-fv">What is Future Value (FV)?</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    Future Value (FV) is a financial concept that determines the value of a current asset at a specified date in the future, based on an assumed rate of growth. In India, investors use FV to plan for long-term goals like retirement, child education, or buying property. Understanding FV helps you see how inflation-adjusted returns or high-growth equity investments can multiply your wealth.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Investment Goal</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Typical Tenure</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Compounding Impact</th>
                             </tr>
                         </thead>
-                        <tbody id="projectionTableBody" class="text-slate-700 divide-y divide-slate-100"></tbody>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Fixed Deposit (FD)</td>
+                                <td class="p-4 border-b">1 - 5 Years</td>
+                                <td class="p-4 border-b text-blue-600 font-bold">Stable Growth</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Mutual Funds / Equity</td>
+                                <td class="p-4 border-b font-semibold">5 - 15 Years</td>
+                                <td class="p-4 border-b text-emerald-600 font-bold">High Growth</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Retirement Planning</td>
+                                <td class="p-4 border-b text-blue-600">20+ Years</td>
+                                <td class="p-4 border-b text-red-500 font-bold">Exponential Wealth</td>
+                            </tr>
+                        </tbody>
                     </table>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Educational Content -->
-        <section class="mb-16">
-            <div class="grid grid-cols-1 gap-12">
-                <article class="prose prose-slate max-w-none">
-                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900">What is Future Value (FV)?</h2>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
-                        Future Value (FV) is a financial estimation tool used to calculate the value of a current asset at a specified date in the future, based on an assumed rate of growth. It determines how much your current investment will be worth after a certain number of years, accounting for the power of compound interest.
-                    </p>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">
-                        For Indian investors, calculating the Future Value is essential for long-term goal planning. Whether you are investing in a Fixed Deposit (FD), Public Provident Fund (PPF), or look at mutual fund projections through an <a href="/sip/" class="text-blue-600 hover:underline">SIP Calculator</a>, knowing the end maturity value helps in deciding capital allocation.
-                    </p>
+            <!-- Comparison Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Future Value vs CAGR – What's the Difference?</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    While <a href="/fd" class="text-blue-600 hover:underline font-semibold">Fixed Deposits (FD)</a> have a fixed FV, equity investments are measured by <a href="/cagr" class="text-blue-600 hover:underline font-semibold">CAGR (Compound Annual Growth Rate)</a>. FV tells you the <strong>final amount</strong> you will receive, whereas CAGR tells you the <strong>annual rate</strong> at which your money grew to reach that amount. Both are critical for Indian investors to evaluate performance against inflation.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Metric</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Future Value (FV)</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">CAGR</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Focus</td>
+                                <td class="p-4 border-b text-emerald-600 font-bold">Absolute Maturity Amount</td>
+                                <td class="p-4 border-b">Percentage Growth Rate</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Usage</td>
+                                <td class="p-4 border-b">Setting Target Goals</td>
+                                <td class="p-4 border-b text-blue-600 font-semibold">Comparing Investments</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Primary Variable</td>
+                                <td class="p-4 border-b">Time and Rate</td>
+                                <td class="p-4 border-b text-red-500">Starting and Ending Values</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 mt-10">Future Value Formula</h2>
-                    <div class="formula-box my-8">
-                        <p class="text-center font-mono text-lg sm:text-2xl text-blue-600 font-bold">FV = PV × (1 + r)^n</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-500 italic mt-6 border-t pt-4 border-slate-200">
-                            <p><strong>PV:</strong> Present Value (Current Amount)</p>
-                            <p><strong>r:</strong> Rate of interest per period</p>
-                            <p><strong>n:</strong> Number of compounding periods</p>
-                        </div>
+            <!-- Goal Section -->
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Importance of Calculating Future Value</h2>
+                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
+                    Calculating FV is the first step toward financial freedom. It allows you to:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">Beat Inflation</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Strategy: Ensure your maturity value covers the cost of goods in the future. A ₹1 Cr goal today might require ₹2.5 Cr in 15 years.</p>
+                        <p class="text-lg font-bold text-white">Protect Purchasing Power</p>
                     </div>
-
-                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 mt-10">Why Future Value Matters</h2>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">
-                        Understanding Future Value allows you to plan for specific life milestones like buying a home, children's education, or retirement. It helps investors visualize the opportunity cost of spending money today versus investing it for the future. 
-                    </p>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">
-                        When compared with our <a href="/inflation/" class="text-blue-600 hover:underline">Inflation Calculator</a>, Future Value helps you understand if your current maturity projection will be sufficient to meet the rising costs of living 20 years from now.
-                    </p>
-
-                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 mt-10">Future Value vs CAGR</h2>
-                    <p class="text-sm sm:text-base text-slate-600 leading-relaxed mt-4">
-                        While <strong>Future Value</strong> determines the final amount your investment will grow into, <strong>CAGR</strong> (Compound Annual Growth Rate) measures the annual rate of return you need to reach that goal. You can use our <a href="/cagr/" class="text-blue-600 hover:underline font-bold">CAGR Calculator</a> to analyze past performance, while the FV tool is used to predict future wealth based on expected returns.
-                    </p>
-                </article>
-
-                <!-- FAQ Section -->
-                <div class="space-y-4 pt-12 border-t border-slate-100">
-                    <h2 class="text-xl sm:text-3xl font-extrabold text-slate-900 mb-8">Frequently Asked Questions</h2>
-                    <div class="space-y-3">
-                        <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm" open>
-                            <summary class="flex justify-between items-center p-5 cursor-pointer font-bold text-slate-800 hover:bg-slate-50 transition-all text-sm sm:text-base">
-                                How is Future Value calculated in India?
-                                <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
-                            </summary>
-                            <div class="p-5 text-slate-600 border-t border-slate-100 text-xs sm:text-sm leading-relaxed">
-                                Future Value is calculated using the compound interest formula. It takes your initial principal and adds the interest earned in each period back to the balance, which then earns more interest.
-                            </div>
-                        </details>
-                        <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                            <summary class="flex justify-between items-center p-5 cursor-pointer font-bold text-slate-800 hover:bg-slate-50 transition-all text-sm sm:text-base">
-                                Does FV guarantee returns?
-                                <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
-                            </summary>
-                            <div class="p-5 text-slate-600 border-t border-slate-100 text-xs sm:text-sm leading-relaxed">
-                                No, Future Value is a mathematical estimate based on assumptions. Actual returns on market-linked investments like mutual funds or stocks may vary.
-                            </div>
-                        </details>
-                        <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                            <summary class="flex justify-between items-center p-5 cursor-pointer font-bold text-slate-800 hover:bg-slate-50 transition-all text-sm sm:text-base">
-                                Does inflation affect the Future Value calculation?
-                                <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
-                            </summary>
-                            <div class="p-5 text-slate-600 border-t border-slate-100 text-xs sm:text-sm leading-relaxed">
-                                Standard FV formulas do not account for inflation. To find the "real" value, you should use an inflation-adjusted interest rate (Expected Return - Predicted Inflation).
-                            </div>
-                        </details>
-                        <details class="group bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-                            <summary class="flex justify-between items-center p-5 cursor-pointer font-bold text-slate-800 hover:bg-slate-50 transition-all text-sm sm:text-base">
-                                What interest rate should I assume for FV?
-                                <span class="group-open:rotate-180 transition-transform text-slate-400">▼</span>
-                            </summary>
-                            <div class="p-5 text-slate-600 border-t border-slate-100 text-xs sm:text-sm leading-relaxed">
-                                For fixed income like PPF, use current govt rates (~7%). For long-term equity mutual funds, an assumption of 10-12% is generally considered standard for projections.
-                            </div>
-                        </details>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Goal Alignment</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Strategy: Calculate FV to decide if your current savings rate is sufficient for major life events like marriages or higher studies.</p>
+                        <p class="text-lg font-bold text-white">Data-Driven Planning</p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Related Calculators -->
-        <section class="pt-12 border-t border-slate-100">
-            <h3 class="text-sm font-extrabold text-slate-400 uppercase tracking-widest mb-8">Related Calculators</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <a href="/sip/" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all group">
-                    <p class="text-lg font-bold text-slate-900 group-hover:text-blue-600 mb-1">SIP</p>
-                    <p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Invest Monthly</p>
-                </a>
-                <a href="/cagr/" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all group">
-                    <p class="text-lg font-bold text-slate-900 group-hover:text-blue-600 mb-1">CAGR</p>
-                    <p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Growth Rate</p>
-                </a>
-                <a href="/lumpsum/" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all group">
-                    <p class="text-lg font-bold text-slate-900 group-hover:text-blue-600 mb-1">Lumpsum</p>
-                    <p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Single Investment</p>
-                </a>
-                <a href="/retirement/" class="bg-white p-6 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all group">
-                    <p class="text-lg font-bold text-slate-900 group-hover:text-blue-600 mb-1">Retirement</p>
-                    <p class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Plan Future</p>
-                </a>
-            </div>
-        </section>
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Future Value FAQs (2026)</h2>
+                <div class="space-y-4" id="faqContainer">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What is the difference between Simple Interest and Compound Interest?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Simple interest is calculated only on the principal amount. Compound interest (used in FV) is calculated on the principal and the accumulated interest from previous periods, leading to exponential growth.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. How does the "Time Period" affect my Future Value?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Time is the most powerful factor in wealth creation. Due to compounding, your money grows much faster in the later years of your investment tenure than in the initial years.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Does inflation affect Future Value?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Standard FV calculations do not account for inflation. To find your "Real" Future Value, you should subtract the expected inflation rate (e.g., 6%) from your investment's nominal return rate.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Which compounding frequency is best?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Higher frequency compounding is always mathematically better for the investor. Monthly compounding results in a slightly higher Future Value than annual compounding for the same interest rate and tenure.
+                        </div>
+                    </details>
+                </div>
+            </section>
 
-        <!-- Disclaimer -->
-        <p class="text-[10px] text-slate-400 text-center max-w-3xl mx-auto leading-relaxed mt-16 mb-8 uppercase tracking-widest font-bold">
-            Disclaimer: This calculator provides estimates for educational purposes only. Mutual fund investments are subject to market risks. Please read all scheme-related documents carefully before investing.
-        </p>
+            <!-- Quick Summary -->
+            <section class="bg-blue-600 p-8 rounded-2xl text-white">
+                <h2 class="text-xl font-bold mb-4">Quick Summary</h2>
+                <div class="text-sm space-y-2 opacity-95 leading-relaxed">
+                    <p>• Future Value (FV) estimates the growth of a lump sum investment over time.</p>
+                    <p>• It relies on the <strong>Power of Compounding</strong> to multiply wealth.</p>
+                    <p>• Longer time periods lead to significantly higher maturity amounts.</p>
+                    <p>• Compounding frequency (Monthly/Annual) impacts the final yield.</p>
+                </div>
+            </section>
+
+            <!-- Related Calculators -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="/sip" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan monthly mutual fund growth.</p>
+                    </a>
+                    <a href="/emi" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate loan installments.</p>
+                    </a>
+                    <a href="/cagr" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check compound annual growth.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Disclaimer -->
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                This calculator provides mathematical projections based on the inputs provided and compounding formulas. Market returns are not guaranteed. Actual Future Value may vary due to taxes (LTCG/STCG), inflation, and market volatility.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
     </main>
 
-    <!-- Dynamic Footer -->
-    <div id="footer"></div>
-
+<div id="footer"></div>
+<script>
+// Mock fetching logic for demo
+document.getElementById("navbar").innerHTML = `<nav class='bg-white border-b py-4 px-6 flex justify-between items-center max-w-6xl mx-auto rounded-b-xl'><div class='font-bold text-xl text-blue-600'>ArthCalculator</div><div class='hidden md:flex gap-6 text-sm font-semibold text-slate-600'><a href='/'>Home</a><a href='/calculators'>Calculators</a><a href='/contact'>Contact</a></div></nav>`;
+document.getElementById("footer").innerHTML = `<footer class='text-center py-10 text-slate-400 text-xs border-t'>&copy; 2026 ArthCalculator. All rights reserved.</footer>`;
+</script>
+    
     <script>
-        // --- Shared Core Logic ---
-        const pvInput = document.getElementById('pvInput');
-        const pvSlider = document.getElementById('pvSlider');
-        const rateInput = document.getElementById('rateInput');
-        const rateSlider = document.getElementById('rateSlider');
-        const timeInput = document.getElementById('timeInput');
-        const timeSlider = document.getElementById('timeSlider');
-        
-        const fvDisplay = document.getElementById('fvDisplay');
-        const investedBar = document.getElementById('investedBar');
-        const gainBar = document.getElementById('gainBar');
-        const totalInvestedStat = document.getElementById('totalInvestedStat');
-        const totalGainStat = document.getElementById('totalGainStat');
-        const growthPercentStat = document.getElementById('growthPercentStat');
-        const projectionTableBody = document.getElementById('projectionTableBody');
-        
-        const annualCompBtn = document.getElementById('annualComp');
-        const monthlyCompBtn = document.getElementById('monthlyComp');
-        const viewYearlyBtn = document.getElementById('viewYearly');
-        const viewMonthlyBtn = document.getElementById('viewMonthly');
-        const downloadCSVBtn = document.getElementById('downloadCSV');
-        const toggleChartBtn = document.getElementById('toggleChart');
-        const chartWrapper = document.getElementById('chartWrapper');
+        // DOM Elements
+        const elements = {
+            monthlyInput: document.getElementById('monthlyInput'), // Present Value
+            monthlyRange: document.getElementById('monthlyRange'), 
+            rateInput: document.getElementById('rateInput'),
+            rateRange: document.getElementById('rateRange'),
+            yearsInput: document.getElementById('yearsInput'),
+            yearsRange: document.getElementById('yearsRange'),
+            maturityValue: document.getElementById('maturityValue'), // FV
+            investedLabel: document.getElementById('investedLabel'), 
+            returnsLabel: document.getElementById('returnsLabel'),
+            investedBar: document.getElementById('investedBar'), 
+            returnsBar: document.getElementById('returnsBar'),
+            finalMonthlyDisp: document.getElementById('finalMonthlyDisp'), // Growth %
+            totalInvestedMobile: document.getElementById('totalInvestedMobile'), 
+            wealthGainedMobile: document.getElementById('wealthGainedMobile'), 
+            projectionTable: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn'),
+            compAnnually: document.getElementById('compAnnually'),
+            compMonthly: document.getElementById('compMonthly')
+        };
 
-        let compoundingType = 'annual'; 
-        let tableViewMode = 'yearly';
-        let chartInstance = null;
+        let compoundingFrequency = 1; // 1 for annual, 12 for monthly
 
-        const indianCurrency = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 });
-        const compactNumber = new Intl.NumberFormat('en-IN', { notation: 'compact', compactDisplay: 'short', maximumFractionDigits: 1 });
-
-        // --- Theme Loaders ---
-        function loadTheme() {
-            fetch("navbar.html").then(r => r.text()).then(d => document.getElementById("navbar").innerHTML = d).catch(e => console.log(e));
-            fetch("footer.html").then(r => r.text()).then(d => document.getElementById("footer").innerHTML = d).catch(e => console.log(e));
-        }
-
-        function init() {
-            loadTheme();
-            
-            [ [pvInput, pvSlider], [rateInput, rateSlider], [timeInput, timeSlider] ].forEach(([i, s]) => {
-                i.addEventListener('input', () => { s.value = i.value; update(); });
-                s.addEventListener('input', () => { i.value = s.value; update(); });
-            });
-            
-            initChart();
-            update();
-        }
-
-        function update() {
-            const pv = parseFloat(pvInput.value) || 0;
-            const r = (parseFloat(rateInput.value) || 0) / 100;
-            const t = parseInt(timeInput.value) || 0;
-            
-            let fv = compoundingType === 'annual' ? pv * Math.pow((1 + r), t) : pv * Math.pow((1 + r/12), 12 * t);
-            const totalGain = fv - pv;
-            const growthPercent = pv > 0 ? (totalGain / pv) * 100 : 0;
-
-            // UI Text
-            animateValue(fv, fvDisplay);
-            totalInvestedStat.textContent = indianCurrency.format(pv);
-            totalGainStat.textContent = indianCurrency.format(totalGain);
-            growthPercentStat.textContent = growthPercent.toFixed(1) + '%';
-
-            // Bars
-            const investRatio = pv > 0 ? (pv / fv) * 100 : 50;
-            investedBar.style.width = investRatio + '%';
-            gainBar.style.width = (100 - investRatio) + '%';
-
-            refreshTable(pv, r, t);
-            refreshChart(pv, r, t);
-        }
-
-        function animateValue(target, el) {
-            let start = 0;
-            const duration = 400;
-            const startTime = performance.now();
-            function run(now) {
-                const elapsed = now - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-                el.textContent = indianCurrency.format(progress * target);
-                if (progress < 1) requestAnimationFrame(run);
+        function formatIndian(val, withDenom = true) {
+            const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            const absoluteValue = absFormatter.format(val);
+            let indianDenom = "";
+            if (withDenom) {
+                if (val >= 10000000) indianDenom = ` (${(val / 10000000).toFixed(2)} Cr)`;
+                else if (val >= 100000) indianDenom = ` (${(val / 100000).toFixed(2)} L)`;
             }
-            requestAnimationFrame(run);
+            return "₹" + absoluteValue + indianDenom;
         }
 
-        function refreshTable(pv, r, t) {
-            projectionTableBody.innerHTML = '';
-            let current = pv;
+        function formatCompact(val) {
+            try {
+                return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+            } catch (e) {
+                return val.toLocaleString('en-IN');
+            }
+        }
+
+        function updateCalculations() {
+            const PV = parseFloat(elements.monthlyInput.value) || 0;
+            const annualRate = parseFloat(elements.rateInput.value) || 0;
+            const t = parseFloat(elements.yearsInput.value) || 0;
+            const r = annualRate / 100;
+            const n = compoundingFrequency;
+
+            // Future Value Formula: FV = PV * (1 + r/n)^(nt)
+            const FV = PV * Math.pow(1 + (r / n), n * t);
+            const totalGain = FV - PV;
+            const growthPercent = PV > 0 ? (totalGain / PV) * 100 : 0;
+
+            // Results Display
+            elements.maturityValue.textContent = "₹" + (new Intl.NumberFormat('en-IN').format(Math.round(FV)));
+            elements.finalMonthlyDisp.textContent = growthPercent.toFixed(1) + "%";
+            
+            elements.investedLabel.textContent = `Invested: ₹${formatCompact(PV)}`;
+            elements.returnsLabel.textContent = `Wealth Gained: ₹${formatCompact(totalGain)}`;
+            
+            elements.totalInvestedMobile.textContent = formatIndian(PV);
+            elements.wealthGainedMobile.textContent = formatIndian(totalGain);
+
+            // Bar visualization
+            const investedPercent = (PV / FV) * 100 || 0;
+            const returnsPercent = (totalGain / FV) * 100 || 0;
+            elements.investedBar.style.width = `${investedPercent}%`;
+            elements.returnsBar.style.width = `${returnsPercent}%`;
+
+            renderTable(PV, r, t, n);
+        }
+
+        function renderTable(pv, r, years, n) {
+            elements.projectionTable.innerHTML = '';
+            let currentBalance = pv;
             let cumulativeGain = 0;
-            const periods = tableViewMode === 'yearly' ? t : t * 12;
-            const ratePerPeriod = tableViewMode === 'yearly' 
-                ? (compoundingType === 'annual' ? r : Math.pow(1+r/12, 12)-1) 
-                : r/12;
 
-            document.getElementById('colLabel').textContent = tableViewMode === 'yearly' ? 'Year' : 'Month';
-
-            for (let i = 1; i <= periods; i++) {
-                const interest = current * ratePerPeriod;
-                const opening = current;
-                current += interest;
-                cumulativeGain += interest;
+            for (let y = 1; y <= years; y++) {
+                const openingBal = currentBalance;
+                // Calculate balance at end of year y
+                const closingBal = pv * Math.pow(1 + (r / n), n * y);
+                const interestEarned = closingBal - openingBal;
+                cumulativeGain = closingBal - pv;
 
                 const row = document.createElement('tr');
-                row.className = "hover:bg-blue-50/50 transition-colors odd:bg-slate-50/30";
+                row.className = 'hover:bg-slate-50 transition-colors';
                 row.innerHTML = `
-                    <td class="px-6 py-4 font-bold text-slate-500">${i}</td>
-                    <td class="px-6 py-4 text-slate-400 font-medium">${indianCurrency.format(opening)}</td>
-                    <td class="px-6 py-4 text-green-600 font-bold">+${indianCurrency.format(interest)}</td>
-                    <td class="px-6 py-4 font-extrabold text-slate-800">${indianCurrency.format(current)}</td>
-                    <td class="px-6 py-4 text-right text-slate-400 font-bold">${indianCurrency.format(cumulativeGain)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 font-medium text-slate-700">Year ${y}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-600">₹${formatCompact(openingBal)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-indigo-600">₹${formatCompact(interestEarned)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right font-bold text-slate-800">₹${formatCompact(closingBal)}</td>
                 `;
-                projectionTableBody.appendChild(row);
+                elements.projectionTable.appendChild(row);
+                currentBalance = closingBal;
             }
         }
 
-        function initChart() {
-            const ctx = document.getElementById('growthChart').getContext('2d');
-            chartInstance = new Chart(ctx, {
-                type: 'line',
-                data: { labels: [], datasets: [
-                    { label: 'Growth', data: [], borderColor: '#2563eb', backgroundColor: 'rgba(37, 99, 235, 0.1)', fill: true, tension: 0.4, pointRadius: 0, borderWidth: 3 },
-                    { label: 'Principal', data: [], borderColor: '#cbd5e1', borderDash: [5, 5], pointRadius: 0, borderWidth: 2 }
-                ]},
-                options: {
-                    responsive: true, maintainAspectRatio: false,
-                    plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false, callbacks: { label: (c) => c.dataset.label + ': ' + indianCurrency.format(c.raw) } } },
-                    scales: { y: { ticks: { callback: v => compactNumber.format(v) }, grid: { color: '#f1f5f9' } }, x: { grid: { display: false } } }
-                }
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.monthlyInput, elements.monthlyRange);
+            setupSync(elements.rateInput, elements.rateRange);
+            setupSync(elements.yearsInput, elements.yearsRange);
+
+            elements.compAnnually.addEventListener('click', () => {
+                compoundingFrequency = 1;
+                elements.compAnnually.classList.add('active');
+                elements.compMonthly.classList.remove('active');
+                updateCalculations();
             });
-        }
 
-        function refreshChart(pv, r, t) {
-            if (!chartInstance) return;
-            const labels = [], values = [], principals = [];
-            let curr = pv;
-            const annualRate = compoundingType === 'annual' ? r : Math.pow(1+r/12, 12)-1;
-            for (let i = 0; i <= t; i++) {
-                labels.push('Y' + i);
-                values.push(curr);
-                principals.push(pv);
-                curr *= (1 + annualRate);
-            }
-            chartInstance.data.labels = labels;
-            chartInstance.data.datasets[0].data = values;
-            chartInstance.data.datasets[1].data = principals;
-            chartInstance.update();
-        }
-
-        // --- Event Handlers ---
-        annualCompBtn.onclick = () => { compoundingType = 'annual'; setActive(annualCompBtn, monthlyCompBtn); update(); };
-        monthlyCompBtn.onclick = () => { compoundingType = 'monthly'; setActive(monthlyCompBtn, annualCompBtn); update(); };
-        viewYearlyBtn.onclick = () => { tableViewMode = 'yearly'; setActive(viewYearlyBtn, viewMonthlyBtn); update(); };
-        viewMonthlyBtn.onclick = () => { tableViewMode = 'monthly'; setActive(viewMonthlyBtn, viewYearlyBtn); update(); };
-
-        function setActive(active, inactive) {
-            active.classList.add('bg-white', 'shadow-sm', 'text-blue-600');
-            active.classList.remove('text-slate-500');
-            inactive.classList.remove('bg-white', 'shadow-sm', 'text-blue-600');
-            inactive.classList.add('text-slate-500');
-        }
-
-        document.getElementById('applyExample').onclick = () => { pvInput.value = pvSlider.value = 100000; rateInput.value = rateSlider.value = 12; timeInput.value = timeSlider.value = 10; update(); };
-        document.getElementById('resetBtn').onclick = () => { pvInput.value = pvSlider.value = 500000; rateInput.value = rateSlider.value = 10; timeInput.value = 15; timeSlider.value = 15; update(); };
-        
-        document.getElementById('copyResult').onclick = () => {
-            const val = fvDisplay.textContent;
-            const dummy = document.createElement("textarea");
-            document.body.appendChild(dummy);
-            dummy.value = `Estimated Future Value: ${val}`;
-            dummy.select();
-            document.execCommand("copy");
-            document.body.removeChild(dummy);
-            alert("Result copied to clipboard!");
-        };
-
-        toggleChartBtn.onclick = () => {
-            const isHidden = chartWrapper.classList.contains('hidden');
-            chartWrapper.classList.toggle('hidden');
-            toggleChartBtn.textContent = isHidden ? 'Hide Chart' : 'Show Chart';
-        };
-
-        downloadCSVBtn.onclick = () => {
-            let csv = "Period,Opening,Interest,Closing,Cumulative Gain\n";
-            projectionTableBody.querySelectorAll('tr').forEach(r => {
-                csv += Array.from(r.querySelectorAll('td')).map(td => td.textContent.replace(/[₹, \+]/g, '')).join(",") + "\n";
+            elements.compMonthly.addEventListener('click', () => {
+                compoundingFrequency = 12;
+                elements.compMonthly.classList.add('active');
+                elements.compAnnually.classList.remove('active');
+                updateCalculations();
             });
-            const blob = new Blob([csv], { type: 'text/csv' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.setAttribute('href', url);
-            a.setAttribute('download', 'FutureValue_Projection.csv');
-            a.click();
-        };
 
-        window.onload = init;
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
     </script>
 </body>
 </html>
