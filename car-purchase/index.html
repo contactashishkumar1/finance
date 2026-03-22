@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Purchase Planner India 2026 – Future Car Cost & SIP Calculator</title>
+    <meta name="description" content="Use the best Car Purchase Planner India (2026). Calculate the inflation-adjusted future cost of your dream car and find the monthly SIP needed to buy it without a loan.">
+    <meta name="keywords" content="Car Purchase Planner India, Car Savings Calculator, Future Car Price, Auto Loan vs SIP, Vehicle Savings Goal, Car Budget Planner 2026">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/car-purchase/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Car Purchase Planner India (2026) – Fund Your Dream Vehicle">
+    <meta property="og:description" content="Calculate exactly how much to save for your next car. Account for 8% auto inflation and see your required monthly SIP and future maturity value.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/car-purchase/">
+    <meta property="og:image" content="/favicon.ico">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Car Purchase Planner India (2026)",
+      "description": "An advanced financial tool to plan for vehicle purchases by calculating inflation-adjusted future costs and required monthly investments.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Arthcalculator"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Car Purchase Planner",
+       "item": "https://arthcalculator.in/car-purchase/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is it better to buy a car on loan or cash?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Buying a car with saved cash (via SIP) is mathematically superior because you earn interest on your savings instead of paying high interest (9-12%) on a depreciating asset."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much should I spend on a car in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A common rule is that your car price should not exceed 50% of your annual income, or the monthly EMI should be within 10-15% of your take-home salary."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Car Purchase Planner</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Car Purchase Planner India (2026) – Dream Vehicle Fund</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Plan your next vehicle upgrade with intelligence. Calculate the future on-road price of your car and determine the exact monthly SIP needed to avoid high-interest auto loans in 2026.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Vehicle Purchase Goal
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Current On-Road Price (₹)</label>
+                            <input type="number" id="budgetInput" value="1500000" min="100000" step="50000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="budgetRange" min="100000" max="10000000" step="50000" value="1500000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Years to Purchase</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="yearsInput" value="5" min="1" max="20" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="15" step="1" value="5" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Auto Price Inflation (% p.a)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="inflationInput" value="8" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="inflationRange" min="1" max="15" step="0.5" value="8" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Expected ROI (% p.a)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="rateInput" value="12" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="rateRange" min="1" max="30" step="0.1" value="12" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Calculate Plan
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 transition-all hover:-translate-y-1">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Future Car Cost</p>
+                        <h3 id="futureCostCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹22.04 Lakhs</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 transition-all hover:-translate-y-1">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Required SIP</p>
+                        <h3 id="sipCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹26,800</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Maturity Analysis</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Total Fund Target</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="totalFundValue">₹22,03,992</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Timeline</p>
+                                <p class="font-bold text-slate-800 text-sm" id="timeLeftDisp">5 Years</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs">Total Principal Saved</span>
+                            <span class="text-indigo-600 font-bold uppercase text-xs">Compounded Growth</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 70%"></div>
+                            <div id="returnsBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 30%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="investedLabel">Invested: ₹16L</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="returnsLabel">Returns: ₹6L</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Key Highlights Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Strategic Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Adjusted for 8% Auto-Sector Inflation</li>
+                            <li class="flex items-center gap-2">📊 Reverse SIP goal calculation</li>
+                            <li class="flex items-center gap-2">⚖️ Save Interest Cost (approx 10% p.a)</li>
+                            <li class="flex items-center gap-2">📈 Precise wealth accumulation view</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Yearly Goal Roadmap</h3>
+                    <p class="text-xs text-slate-500 mb-4">See how the car's price inflates and your savings catch up over the years.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Inflated Price</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">SIP Portfolio</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is Car Purchase Planned?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Future Cost = Price<sub>now</sub> × (1 + inflation)<sup>years</sup>
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>Required SIP:</strong> We reverse-calculate the monthly investment needed to reach the future cost.</p>
+                        <p><strong>Auto Inflation:</strong> Typically higher (8-10%) due to raw material and technology upgrades.</p>
+                        <p><strong>Margin of Safety:</strong> We assume month-start contributions for high-accuracy compounding.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example Planning</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        Planning for a <strong>₹15 Lakh</strong> SUV in <strong>5 years</strong> with <strong>8% inflation</strong>:<br>
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Future Price: <strong>₹22.04 Lakhs</strong></li>
+                            <li>Monthly SIP (at 12% ROI): <strong>₹26,793</strong></li>
+                            <li>Total Saved: <strong>₹16.07 Lakhs</strong> | Interest: <strong>₹5.97 Lakhs</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 mb-12" id="about">
+            <!-- Educational Content Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Strategic Car Buying in 2026 India</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>
+                        A car is one of the most significant "depreciating assets" an individual buys. In the Indian market of 2026, the cost of ownership has increased due to higher road taxes, insurance premiums, and the shift toward Electric Vehicles (EVs). Using a <strong>Car Purchase Planner</strong> ensures you don't fall into the trap of over-leveraging yourself with a long-term auto loan that costs you more in interest than the car's resale value.
+                    </p>
+                    <p>
+                        The smartest way to buy a vehicle is to "save and pay." While an auto loan charges you 9-11% interest, an equity-based SIP can earn you 12-14% returns. This effectively reduces the cost of the car by lakhs of rupees. Our planner helps you identify the **Gap between Appreciation and Depreciation**, showing you exactly how much to save monthly to own your dream car debt-free.
+                    </p>
+                    <h3 class="text-xl font-bold text-slate-800 mt-8">The "8-10-12" Rule for Cars</h3>
+                    <p>
+                        To maintain financial health, experts suggest the 8-10-12 framework:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>8% Inflation:</strong> Always assume the price of your target model will rise by 8% every year.</li>
+                        <li><strong>10% Income:</strong> Your total monthly car-related costs (including fuel and maintenance) should not exceed 10% of your take-home pay.</li>
+                        <li><strong>12% ROI:</strong> Aim for a 12% return on your car fund by using a balanced mutual fund portfolio.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Car Loan vs. SIP: Wealth Impact</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    Comparison for a ₹15 Lakh car purchase over a 5-year period.
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Factor</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Car Loan (After Buying)</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">SIP Plan (Before Buying)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Monthly Cash Flow</td>
+                                <td class="p-4 border-b text-red-600 font-bold">₹31,000 EMI</td>
+                                <td class="p-4 border-b text-emerald-600 font-bold">₹26,800 SIP</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Total Outgo</td>
+                                <td class="p-4 border-b">₹18.6 Lakhs</td>
+                                <td class="p-4 border-b text-blue-600 font-semibold">₹16.0 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Net Wealth Difference</td>
+                                <td class="p-4 border-b">Negative (Interest Paid)</td>
+                                <td class="p-4 border-b font-bold">₹2.6 Lakhs Saved</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Pro Strategies to Buy Your Car Faster</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">Use the "Year-End" Bonus</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Instead of increasing your SIP, put your annual bonus as a 'Top-up' in your car fund. This can reduce your waiting period by 12-18 months.</p>
+                        <p class="text-lg font-bold text-white">Accelerate Growth</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Resale Value Hedge</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">If you are upgrading, calculate the expected resale value of your current car and subtract it from the 'Current Price' input to lower your required monthly SIP.</p>
+                        <p class="text-lg font-bold text-white">Reduce Target</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Car Purchase Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Why is auto inflation higher than general inflation?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Automotive prices rise due to stricter safety norms, emission standards (like BS-VII/VIII), and advanced tech features (ADAs, EV batteries). A 8-10% inflation assumption is safer for the Indian market.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Should I include insurance and road tax in the budget?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes. Always use the 'On-Road Price' which includes GST, Road Tax, Insurance, and registration. This is the real amount you will pay at the showroom.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Can I reach ₹20 Lakhs in 5 years with a ₹15,000 SIP?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            With 12% ROI, a ₹15,000 SIP will reach approximately ₹12.3 Lakhs in 5 years. To reach ₹20 Lakhs, you would need a SIP of about ₹24,500.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Is an EV more affordable in the long run?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            EVs have a higher upfront purchase price but significantly lower running costs (approx 1/5th of petrol). If you drive more than 1,500km a month, the total cost of ownership (TCO) becomes cheaper within 4 years.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Should I use a liquid fund for car planning?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Only if your goal is less than 2 years away. For 3-5 year car goals, balanced or aggressive hybrid funds are better as they provide a higher ROI (10-12%) than liquid funds (6-7%).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What is the impact of taxes on car savings?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Capital gains from your mutual fund investments will be taxed at 12.5% (LTCG) as of 2026. You should aim for a corpus that is 10% higher than your target to cover these taxes.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Can I buy a used car through this planner?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Absolutely. Enter the current market price of a used model. Since used car prices don't inflate as fast as new ones, you can use a lower inflation rate (4-5%) for a more accurate result.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Should I stop my car SIP during a market crash?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No! A market crash is the best time to continue your SIP. You will get more mutual fund units at lower prices, which will significantly boost your fund value when the market recovers.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Purchase Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Standard SIP</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check fixed monthly returns.</p>
+                    </a>
+                    <a href="/goal-step-up/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Step Up Goal SIP</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Accelerate car purchase time.</p>
+                    </a>
+                    <a href="/multiple-goals/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Multi-Goal Planner</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Track car with other goals.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Popular Tools -->
+            <section class="max-w-6xl mx-auto py-8 text-center">
+                <h3 class="text-xl font-bold mb-8 text-slate-800">Popular Tools on Arthcalculator</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="/emi/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">EMI</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/sip/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">SIP</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/income-tax/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">Tax</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/gst/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">GST</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/fd/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">FD</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/retirement-withdrawal/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">GOAL</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Planner</span>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                The Car Purchase Planner provides estimates based on compounding and inflation models. Actual car prices and investment returns may vary significantly based on OEM pricing changes and market conditions. This tool is for illustrative purposes only and is not financial advice.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- NAVBAR FOOTER LOADER SCRIPT (MANDATORY EXACT CODE) -->
+    <script>
+    fetch("/navbar.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn && menu){
+    btn.addEventListener("click",()=>{
+    menu.classList.toggle("hidden");
+    });
+    }
+    }
+    });
+
+    fetch("/footer.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+     document.getElementById("footer").innerHTML=data;
+     }
+    });
+    </script>
+    
+    <script>
+        const elements = {
+            budgetIn: document.getElementById('budgetInput'),
+            budgetRan: document.getElementById('budgetRange'),
+            yearsIn: document.getElementById('yearsInput'),
+            yearsRan: document.getElementById('yearsRange'),
+            infIn: document.getElementById('inflationInput'),
+            infRan: document.getElementById('inflationRange'),
+            rateIn: document.getElementById('rateInput'),
+            rateRan: document.getElementById('rateRange'),
+            totalFundVal: document.getElementById('totalFundValue'),
+            sipCard: document.getElementById('sipCard'),
+            futureCostCard: document.getElementById('futureCostCard'),
+            timeDisp: document.getElementById('timeLeftDisp'),
+            iBar: document.getElementById('investedBar'),
+            rBar: document.getElementById('returnsBar'),
+            iLab: document.getElementById('investedLabel'),
+            rLab: document.getElementById('returnsLabel'),
+            mobileTotal: document.getElementById('totalInvestedMobile'),
+            mobileReturns: document.getElementById('wealthGainedMobile'),
+            table: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatIndian(val, withDenom = true) {
+            const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            const absoluteValue = absFormatter.format(val);
+            let indianDenom = "";
+            if (withDenom) {
+                if (val >= 10000000) indianDenom = ` (${(val / 10000000).toFixed(2)} Cr)`;
+                else if (val >= 100000) indianDenom = ` (${(val / 100000).toFixed(2)} L)`;
+            }
+            return "₹" + absoluteValue + indianDenom;
+        }
+
+        function formatCompact(val) {
+            return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+        }
+
+        function updateCalculations() {
+            const currentBudget = parseFloat(elements.budgetIn.value) || 0;
+            const years = parseFloat(elements.yearsIn.value) || 0;
+            const inflation = parseFloat(elements.infIn.value) || 0;
+            const roi = parseFloat(elements.rateIn.value) || 0;
+
+            // 1. Calculate Future Cost
+            const futureCost = currentBudget * Math.pow(1 + (inflation / 100), years);
+
+            // 2. Calculate Required Monthly SIP
+            // SIP = FV / [ ((1+i)^n - 1) / i * (1+i) ]
+            const i = (roi / 12) / 100;
+            const n = years * 12;
+            let requiredSip = 0;
+            if (n > 0) {
+                if (i > 0) {
+                    requiredSip = futureCost / (((Math.pow(1 + i, n) - 1) / i) * (1 + i));
+                } else {
+                    requiredSip = futureCost / n;
+                }
+            }
+
+            const totalInvested = requiredSip * n;
+            const returns = futureCost - totalInvested;
+
+            // Results Display
+            elements.totalFundVal.textContent = formatIndian(Math.round(futureCost));
+            elements.sipCard.textContent = "₹" + (new Intl.NumberFormat('en-IN').format(Math.round(requiredSip)));
+            elements.futureCostCard.textContent = formatIndian(futureCost, true);
+            elements.timeDisp.textContent = `${years} Years`;
+
+            elements.mobileTotal.textContent = formatIndian(totalInvested);
+            elements.mobileReturns.textContent = formatIndian(returns);
+
+            // Visualization
+            const pPercent = (totalInvested / futureCost) * 100 || 0;
+            elements.iBar.style.width = `${pPercent}%`;
+            elements.rBar.style.width = `${100 - pPercent}%`;
+            
+            elements.iLab.textContent = `Invested: ₹${formatCompact(totalInvested)}`;
+            elements.rLab.textContent = `Gains: ₹${formatCompact(returns)}`;
+
+            renderTable(currentBudget, inflation, requiredSip, i, years);
+        }
+
+        function renderTable(startBudget, inflation, monthlySip, monthlyRoi, totalYears) {
+            elements.table.innerHTML = '';
+            let currentBalance = 0;
+            let cumulativeInvested = 0;
+
+            for (let y = 1; y <= totalYears; y++) {
+                const inflatedCost = startBudget * Math.pow(1 + (inflation / 100), y);
+                
+                // SIP growth for 12 months
+                for (let m = 1; m <= 12; m++) {
+                    currentBalance += monthlySip;
+                    currentBalance *= (1 + monthlyRoi);
+                }
+                cumulativeInvested += (monthlySip * 12);
+                
+                const gap = inflatedCost - currentBalance;
+                const status = gap > 0 ? "Underfunded" : "Target Met";
+                const color = gap > 0 ? "text-red-500" : "text-emerald-600";
+
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-slate-50 transition-colors';
+                row.innerHTML = `
+                    <td class="px-3 py-3 border-b border-slate-100 font-medium text-slate-700">Year ${y}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-600">₹${formatCompact(inflatedCost)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-indigo-600">₹${formatCompact(currentBalance)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right font-black ${color}">${status}</td>
+                `;
+                elements.table.appendChild(row);
+            }
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.budgetIn, elements.budgetRan);
+            setupSync(elements.yearsIn, elements.yearsRan);
+            setupSync(elements.infIn, elements.infRan);
+            setupSync(elements.rateIn, elements.rateRan);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+    </script>
+</body>
+</html>
