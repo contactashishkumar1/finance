@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunity Cost Calculator India (2026) – Investment Comparison Tool</title>
+    <meta name="description" content="Compare two investment options and calculate opportunity cost. Useful for financial decision making. Evaluate missed profits and choose the better investment.">
+    <meta name="keywords" content="Opportunity Cost Calculator India, Investment Comparison, Financial Decision Making, Missed Profit Calculator, 2026 Financial Tools">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/opportunity-cost-calculator/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Opportunity Cost Calculator India (2026) – Investment Comparison Tool">
+    <meta property="og:description" content="Use our Opportunity Cost tool to compare investments and calculate missed returns. Make smarter financial choices today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/opportunity-cost-calculator/">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Opportunity Cost Calculator India (2026)",
+      "description": "A financial tool to calculate the opportunity cost by comparing two investment returns over a period.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Financial Suite India"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Opportunity Cost Calculator",
+       "item": "https://arthcalculator.in/opportunity-cost-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Opportunity Cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Opportunity cost is the profit or value lost by choosing one alternative over another. In investing, it is the difference between the returns of the chosen option and the best alternative foregone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Opportunity Cost important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It helps investors and businesses make rational decisions by quantifying what they are giving up. It ensures that capital is allocated to the most productive asset."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to calculate Opportunity Cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The basic formula is Opportunity Cost = (Return of Best Foregone Option) - (Return of Chosen Option)."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .card-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .result-animate {
+            transition: all 0.5s ease-out;
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Opportunity Cost Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Opportunity Cost Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Compare two investment options and calculate the value of missed profits. Quantify the "cost" of your financial decisions and choose the most productive asset.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-cost" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline transition-all duration-300">What is Opportunity Cost</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline transition-all duration-300">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline transition-all duration-300">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow card-hover">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+                        Comparison Inputs
+                    </h2>
+
+                    <!-- Option A Return -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Option A Return (₹)</label>
+                            <input type="number" id="optionAInput" value="500000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="optionARange" min="1000" max="10000000" step="1000" value="500000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <!-- Option B Return -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Option B Return (₹)</label>
+                            <input type="number" id="optionBInput" value="450000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="optionBRange" min="1000" max="10000000" step="1000" value="450000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <!-- Investment Period -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Period (Years) - Optional</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="yearsInput" value="5" min="1" max="30" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="30" step="1" value="5" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Calculate Opportunity Cost
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 card-hover">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Difference</p>
+                        <h3 id="diffVal" class="text-lg sm:text-xl font-bold leading-tight break-all result-animate">₹0</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 card-hover">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Best Choice</p>
+                        <h3 id="bestChoiceVal" class="text-lg sm:text-xl font-bold leading-tight break-all result-animate">Option A</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow card-hover">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Calculation Results</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Opportunity Cost</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words result-animate" id="mainResultVal">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar / Visualizer -->
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs" id="labelA">Option A</span>
+                            <span class="text-indigo-600 font-bold uppercase text-xs" id="labelB">Option B</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="barA" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                            <div id="barB" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Comparison Breakdown</h3>
+                    <p class="text-xs text-slate-500 mb-4">Detailed side-by-side comparison of the two financial scenarios.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Investment</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right">Total Value</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right">Difference</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="comparisonTableBody">
+                                    <tr class="hover:bg-slate-50 transition-all duration-300">
+                                        <td class="px-3 py-3 border-b border-slate-100 font-medium">Option A</td>
+                                        <td id="tableValA" class="px-3 py-3 border-b border-slate-100 text-right">₹0</td>
+                                        <td id="tableDiffA" class="px-3 py-3 border-b border-slate-100 text-right font-bold text-emerald-600">₹0</td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition-all duration-300">
+                                        <td class="px-3 py-3 border-b border-slate-100 font-medium">Option B</td>
+                                        <td id="tableValB" class="px-3 py-3 border-b border-slate-100 text-right">₹0</td>
+                                        <td id="tableDiffB" class="px-3 py-3 border-b border-slate-100 text-right font-bold text-red-500">₹0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow card-hover">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Opportunity Cost Formula</h3>
+                    <div class="formula-box text-blue-800 text-center text-sm">
+                        Opportunity Cost = Return of Option X - Return of Option Y
+                    </div>
+                    <div class="text-xs sm:text-sm text-slate-600 mt-6 space-y-1">
+                        <p><strong>Option X:</strong> The higher performing investment foregone.</p>
+                        <p><strong>Option Y:</strong> The current investment chosen.</p>
+                        <p><strong>Result:</strong> Positive value represents missed profit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educational Content -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover" id="about-cost">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is Opportunity Cost?</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    <strong>Opportunity Cost</strong> is a fundamental economic concept that quantifies the benefits an individual, investor, or business misses out on when choosing one alternative over another. In simple terms, it is the cost of the "next best alternative" foregone. For Indian investors, this often means comparing the returns of a <a href="/fd-calculator/" class="text-blue-600 hover:underline">Fixed Deposit</a> vs a <a href="/sip/" class="text-blue-600 hover:underline">Mutual Fund SIP</a>.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-3">Why it Matters in Investing</h3>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex gap-2">✅ <strong>Resource Allocation:</strong> Ensures you aren't settling for low returns when better options exist.</li>
+                            <li class="flex gap-2">✅ <strong>Decision Clarity:</strong> Helps in choosing between real estate, gold, and equity.</li>
+                            <li class="flex gap-2">✅ <strong>Risk Analysis:</strong> Quantifies if the risk of Option A is worth the extra profit over Option B.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-3">Example Scenario</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            If you invest ₹10 Lakhs in a Savings Account earning 3% interest (₹30,000) instead of an FD earning 7% (₹70,000), your <strong>Opportunity Cost</strong> is ₹40,000. You haven't "lost" money in the traditional sense, but you've missed out on ₹40,000 in potential gains.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Opportunity Cost in Business & Daily Life</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    Beyond personal finance, businesses use this to decide whether to reinvest profits into new machinery or pay out dividends. In daily life, spending ₹1,00,000 on a dinner has an opportunity cost of what that ₹1,00,000 could have earned if invested for 10 years at a 12% <a href="/cagr/" class="text-blue-600 hover:underline">CAGR</a>. Using tools like the <a href="/roi-calculator/" class="text-blue-600 hover:underline">ROI Calculator</a> or <a href="/npv-calculator/" class="text-blue-600 hover:underline">NPV Calculator</a> can further refine these comparisons.
+                </p>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Opportunity Cost FAQs</h2>
+                <div class="space-y-4" id="faqContainer">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What is the basic definition of Opportunity Cost?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            It is the value of the next best alternative that you give up when you make a specific choice or decision.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Is Opportunity Cost the same as ROI?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No. ROI (Return on Investment) measures the gain from a specific investment. Opportunity Cost compares that gain to what could have been earned elsewhere.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Can Opportunity Cost be negative?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Mathematically, if your current choice is the best one, the opportunity cost compared to other options is zero or negative (meaning you didn't miss out). Usually, we use the term to represent missed gains.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. How do businesses use this concept?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Businesses use it for capital budgeting. If they have ₹1 Crore, they decide whether to launch a new product or pay off debt by comparing the potential returns of both.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Investment Calculators -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Investment Calculators</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    <a href="/roi-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">ROI Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Return on Investment.</p>
+                    </a>
+                    <a href="/npv-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">NPV Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Net Present Value.</p>
+                    </a>
+                    <a href="/payback-period-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Payback Period</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Capital recovery time.</p>
+                    </a>
+                    <a href="/cagr/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Compound growth.</p>
+                    </a>
+                    <a href="/portfolio-return-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Portfolio Return</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Total wealth gain.</p>
+                    </a>
+                    <a href="/irr-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">IRR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Internal rate of return.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Popular Financial Calculators -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Popular Financial Calculators</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <a href="/emi/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <div class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">EMI</h4>
+                    </a>
+                    <a href="/income-tax-calculator/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Income Tax</h4>
+                    </a>
+                    <a href="/gst-calculator/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">GST</h4>
+                    </a>
+                    <a href="/fd-calculator/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <div class="w-8 h-8 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">FD</h4>
+                    </a>
+                    <a href="/retirement-calculator/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <div class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Retirement</h4>
+                    </a>
+                    <a href="/take-home-salary-calculator/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <div class="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Take Home</h4>
+                    </a>
+                    <a href="/sip/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">SIP</h4>
+                    </a>
+                    <a href="/loan-eligibility-calculator/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
+                        <div class="w-8 h-8 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Loan Elig.</h4>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                This Opportunity Cost Calculator is a conceptual tool based on historical or estimated data provided by the user. It does not guarantee future results. Decision making should involve professional financial consultation.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("/navbar.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+
+            // Activate hamburger AFTER navbar loads
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+
+            if(btn){
+                btn.addEventListener("click", () => {
+                    menu.classList.toggle("hidden");
+                });
+            }
+        });
+
+        fetch("/footer.html")
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById("footer").innerHTML = data;
+        });
+
+        const elements = {
+            optionAInput: document.getElementById('optionAInput'),
+            optionARange: document.getElementById('optionARange'),
+            optionBInput: document.getElementById('optionBInput'),
+            optionBRange: document.getElementById('optionBRange'),
+            yearsInput: document.getElementById('yearsInput'),
+            yearsRange: document.getElementById('yearsRange'),
+            mainResultVal: document.getElementById('mainResultVal'),
+            diffVal: document.getElementById('diffVal'),
+            bestChoiceVal: document.getElementById('bestChoiceVal'),
+            barA: document.getElementById('barA'),
+            barB: document.getElementById('barB'),
+            labelA: document.getElementById('labelA'),
+            labelB: document.getElementById('labelB'),
+            tableValA: document.getElementById('tableValA'),
+            tableValB: document.getElementById('tableValB'),
+            tableDiffA: document.getElementById('tableDiffA'),
+            tableDiffB: document.getElementById('tableDiffB'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatIndian(val, withDenom = true) {
+            const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            let formatted = "₹" + absFormatter.format(Math.abs(val));
+            if (withDenom) {
+                const valAbs = Math.abs(val);
+                if (valAbs >= 10000000) formatted += ` (${(valAbs / 10000000).toFixed(2)} Cr)`;
+                else if (valAbs >= 100000) formatted += ` (${(valAbs / 100000).toFixed(2)} L)`;
+            }
+            return formatted;
+        }
+
+        function updateCalculations() {
+            const valA = parseFloat(elements.optionAInput.value) || 0;
+            const valB = parseFloat(elements.optionBInput.value) || 0;
+            
+            const diff = Math.abs(valA - valB);
+            const best = valA >= valB ? "Option A" : "Option B";
+
+            // Display Updates
+            elements.mainResultVal.textContent = formatIndian(diff);
+            elements.diffVal.textContent = formatIndian(diff);
+            elements.bestChoiceVal.textContent = best;
+            
+            // Progress Bar
+            const total = valA + valB;
+            const percentA = total > 0 ? (valA / total) * 100 : 50;
+            const percentB = total > 0 ? (valB / total) * 100 : 50;
+            elements.barA.style.width = percentA + "%";
+            elements.barB.style.width = percentB + "%";
+
+            // Table Updates
+            elements.tableValA.textContent = formatIndian(valA);
+            elements.tableValB.textContent = formatIndian(valB);
+            
+            if (valA >= valB) {
+                elements.tableDiffA.textContent = "Best Choice";
+                elements.tableDiffA.className = "px-3 py-3 border-b border-slate-100 text-right font-bold text-emerald-600";
+                elements.tableDiffB.textContent = "-" + formatIndian(diff, false);
+                elements.tableDiffB.className = "px-3 py-3 border-b border-slate-100 text-right font-bold text-red-500";
+            } else {
+                elements.tableDiffB.textContent = "Best Choice";
+                elements.tableDiffB.className = "px-3 py-3 border-b border-slate-100 text-right font-bold text-emerald-600";
+                elements.tableDiffA.textContent = "-" + formatIndian(diff, false);
+                elements.tableDiffA.className = "px-3 py-3 border-b border-slate-100 text-right font-bold text-red-500";
+            }
+
+            // Animate result change
+            elements.mainResultVal.style.opacity = "0";
+            setTimeout(() => {
+                elements.mainResultVal.style.opacity = "1";
+            }, 50);
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.optionAInput, elements.optionARange);
+            setupSync(elements.optionBInput, elements.optionBRange);
+            setupSync(elements.yearsInput, elements.yearsRange);
+
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+    </script>
+</body>
+</html>
