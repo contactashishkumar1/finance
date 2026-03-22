@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Value of Money Calculator India (2026) – PV FV Calculator</title>
+    <meta name="description" content="Calculate present and future value of investments using Time Value of Money concept. Essential for financial planning and investment analysis.">
+    <meta name="keywords" content="TVM Calculator India, Time Value of Money, PV FV Calculator, Present Value, Future Value, Financial Planning 2026">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/time-value-of-money/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Time Value of Money Calculator India (2026) – PV FV Calculator">
+    <meta property="og:description" content="Use our high-precision TVM tool to calculate PV and FV. View annual growth schedules and total wealth gain.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/time-value-of-money/">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Time Value of Money Calculator India (2026)",
+      "description": "A financial tool to calculate PV and FV based on the Time Value of Money principle.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Financial Suite India"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Time Value of Money Calculator",
+       "item": "https://arthcalculator.in/time-value-of-money/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Time Value of Money (TVM)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "TVM is the concept that money available today is worth more than the same amount in the future due to its potential earning capacity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is TVM used in investing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Investors use TVM to compare the value of different cash flows at different points in time, helping them make better investment decisions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between PV and FV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PV (Present Value) is the current worth of a future sum, while FV (Future Value) is the value of a current sum at a future date."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        .card-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        .card-hover:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .toggle-btn.active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        .result-animate {
+            transition: all 0.5s ease-out;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">TVM Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Time Value of Money Calculator India (2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate Present Value (PV) and Future Value (FV) with compound interest. Evaluate investment worth, understand discounting, and plan your financial goals across time.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-tvm" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">What is TVM</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow card-hover">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Calculator Mode
+                    </h2>
+
+                    <!-- Mode Toggle -->
+                    <div class="mb-8">
+                        <label class="text-sm font-medium text-slate-600 mb-3 block">What do you want to calculate?</label>
+                        <div class="flex bg-slate-50 p-1 rounded-xl border border-slate-200">
+                            <button id="modeFV" class="toggle-btn active flex-1 py-2 text-xs font-bold rounded-lg transition-all">Future Value (FV)</button>
+                            <button id="modePV" class="toggle-btn flex-1 py-2 text-xs font-bold rounded-lg transition-all">Present Value (PV)</button>
+                        </div>
+                    </div>
+
+                    <!-- PV Input (Enabled in FV Mode) -->
+                    <div class="mb-8" id="pvSection">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Present Value (₹)</label>
+                            <input type="number" id="pvInput" value="100000" min="0" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="pvRange" min="0" max="10000000" step="1000" value="100000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <!-- FV Input (Enabled in PV Mode) -->
+                    <div class="mb-8 hidden" id="fvSection">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Future Value (₹)</label>
+                            <input type="number" id="fvInput" value="250000" min="0" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="fvRange" min="0" max="50000000" step="1000" value="250000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <!-- Interest Rate -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Interest Rate (% p.a)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="rateInput" value="12" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="rateRange" min="1" max="50" step="0.1" value="12" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <!-- Tenure -->
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Time Period (Years)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="yearsInput" value="10" min="1" max="50" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="50" step="1" value="10" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <!-- Compounding -->
+                    <div class="mb-6">
+                        <label class="text-sm font-medium text-slate-600 mb-3 block">Compounding Frequency</label>
+                        <div class="flex bg-slate-50 p-1 rounded-xl border border-slate-200">
+                            <button id="compAnnually" class="toggle-btn active flex-1 py-2 text-xs font-bold rounded-lg transition-all">Yearly</button>
+                            <button id="compMonthly" class="toggle-btn flex-1 py-2 text-xs font-bold rounded-lg transition-all">Monthly</button>
+                        </div>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all hover:scale-[1.02] shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Calculate Value
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 card-hover">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1" id="secondaryResultLabel">Total Growth</p>
+                        <h3 id="secondaryResultVal" class="text-lg sm:text-xl font-bold leading-tight break-all result-animate">₹0</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 card-hover">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Growth %</p>
+                        <h3 id="growthPercentVal" class="text-lg sm:text-xl font-bold leading-tight break-all result-animate">0%</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow card-hover">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Valuation Summary</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider" id="mainResultLabel">Future Value</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words result-animate" id="mainResultVal">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs" id="barLabel1">Present Value</span>
+                            <span class="text-indigo-600 font-bold uppercase text-xs" id="barLabel2">Interest/Growth</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="bar1" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                            <div id="bar2" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Yearly Wealth Breakdown</h3>
+                    <p class="text-xs text-slate-500 mb-4">A yearly view of how your capital appreciates across the chosen period.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Opening Value</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Interest Earned</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Closing Value</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Total Growth</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow card-hover">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">TVM Formulas</h3>
+                    <div class="space-y-4">
+                        <div class="formula-box text-blue-800 text-center text-sm">
+                            <div class="font-bold mb-1">Future Value (FV):</div>
+                            FV = PV × (1 + r/n)<sup>nt</sup>
+                        </div>
+                        <div class="formula-box text-indigo-800 text-center text-sm">
+                            <div class="font-bold mb-1">Present Value (PV):</div>
+                            PV = FV / (1 + r/n)<sup>nt</sup>
+                        </div>
+                    </div>
+                    <div class="text-xs sm:text-sm text-slate-600 mt-6 space-y-1">
+                        <p><strong>PV:</strong> Present Value | <strong>FV:</strong> Future Value</p>
+                        <p><strong>r:</strong> Annual Interest Rate | <strong>t:</strong> Time in Years</p>
+                        <p><strong>n:</strong> Compounding frequency per year</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparative Content -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover" id="about-tvm">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is Time Value of Money (TVM)?</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    The <strong>Time Value of Money (TVM)</strong> is a fundamental financial concept that money available at the present time is worth more than the same amount in the future. This is because money can earn interest or be invested to generate returns. In the Indian context, understanding TVM is crucial for comparing <a href="/fd/" class="text-blue-600 hover:underline">fixed deposits</a>, <a href="/sip/" class="text-blue-600 hover:underline">mutual fund SIPs</a>, and retirement corpuses.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-3">Why money today is worth more?</h3>
+                        <ul class="space-y-3 text-slate-600 text-sm">
+                            <li class="flex gap-2">✅ <strong>Opportunity Cost:</strong> You can invest it and earn a return.</li>
+                            <li class="flex gap-2">✅ <strong>Inflation:</strong> Rising prices erode the purchasing power of future cash.</li>
+                            <li class="flex gap-2">✅ <strong>Risk:</strong> Future cash flows are uncertain compared to money in hand.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-800 mb-3">TVM Example</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            If you have ₹1,00,000 today and invest it at a 10% interest rate, you will have ₹1,10,000 in one year. Conversely, if you need ₹1,10,000 in one year, you only need to save ₹1,00,000 today. The ₹10,000 difference is the "Time Value" of that money.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Importance of TVM in Investing</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    Whether you are choosing between a lump sum payment today or an annuity in the future, TVM allows you to compare them on equal footing. It is the basis for <a href="/cagr/" class="text-blue-600 hover:underline">CAGR</a> calculations and <a href="/retirement/" class="text-blue-600 hover:underline">retirement planning</a>. By using our <a href="/future-value/" class="text-blue-600 hover:underline">Future Value</a> and Present Value features, you can see how <a href="/inflation/" class="text-blue-600 hover:underline">inflation</a> and <a href="/real-return/" class="text-blue-600 hover:underline">real returns</a> impact your lifestyle goals.
+                </p>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">TVM Frequently Asked Questions</h2>
+                <div class="space-y-4" id="faqContainer">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What are the 5 variables of TVM?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The five key variables are Present Value (PV), Future Value (FV), Interest Rate (i), Number of Periods (n), and Payment Amount (PMT). This calculator focuses on the relationship between PV, FV, Rate, and Time.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. How does inflation affect TVM?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Inflation reduces the purchasing power of money over time. When calculating TVM for real-world goals, it is advisable to use an inflation-adjusted interest rate to see the "Real" future value.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Difference between Yearly and Monthly compounding?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The more frequently interest is compounded, the higher the total interest earned. Monthly compounding results in a slightly higher Future Value than yearly compounding for the same interest rate.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Where is TVM used in daily life?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            It is used to calculate EMI for home loans, evaluate insurance policies, decide whether to take a discount on early payment of bills, and determine how much to save today for a future retirement goal.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Calculators -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial Calculators</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan monthly fund growth.</p>
+                    </a>
+                    <a href="/fd/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">FD Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check fixed deposit returns.</p>
+                    </a>
+                    <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check compound growth rates.</p>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                Calculations are based on the standard TVM formulas. Market returns and bank interest rates vary. This tool is for educational and planning purposes only and does not constitute financial advice.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("navbar.html").then(res => res.text()).then(data => document.getElementById("navbar").innerHTML = data);
+        fetch("footer.html").then(res => res.text()).then(data => document.getElementById("footer").innerHTML = data);
+
+        const elements = {
+            pvInput: document.getElementById('pvInput'),
+            pvRange: document.getElementById('pvRange'),
+            fvInput: document.getElementById('fvInput'),
+            fvRange: document.getElementById('fvRange'),
+            rateInput: document.getElementById('rateInput'),
+            rateRange: document.getElementById('rateRange'),
+            yearsInput: document.getElementById('yearsInput'),
+            yearsRange: document.getElementById('yearsRange'),
+            mainResultVal: document.getElementById('mainResultVal'),
+            mainResultLabel: document.getElementById('mainResultLabel'),
+            secondaryResultVal: document.getElementById('secondaryResultVal'),
+            secondaryResultLabel: document.getElementById('secondaryResultLabel'),
+            growthPercentVal: document.getElementById('growthPercentVal'),
+            bar1: document.getElementById('bar1'),
+            bar2: document.getElementById('bar2'),
+            barLabel1: document.getElementById('barLabel1'),
+            barLabel2: document.getElementById('barLabel2'),
+            projectionTable: document.getElementById('projectionTable'),
+            modeFV: document.getElementById('modeFV'),
+            modePV: document.getElementById('modePV'),
+            compAnnually: document.getElementById('compAnnually'),
+            compMonthly: document.getElementById('compMonthly'),
+            pvSection: document.getElementById('pvSection'),
+            fvSection: document.getElementById('fvSection'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        let currentMode = 'FV'; // FV or PV
+        let compoundingFreq = 1; // 1 or 12
+
+        function formatIndian(val, withDenom = true) {
+            const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            let formatted = "₹" + absFormatter.format(val);
+            if (withDenom) {
+                if (val >= 10000000) formatted += ` (${(val / 10000000).toFixed(2)} Cr)`;
+                else if (val >= 100000) formatted += ` (${(val / 100000).toFixed(2)} L)`;
+            }
+            return formatted;
+        }
+
+        function formatCompact(val) {
+            return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+        }
+
+        function updateCalculations() {
+            const pv = parseFloat(elements.pvInput.value) || 0;
+            const fv_input = parseFloat(elements.fvInput.value) || 0;
+            const r_annual = parseFloat(elements.rateInput.value) || 0;
+            const t = parseFloat(elements.yearsInput.value) || 0;
+            const n = compoundingFreq;
+            const r = r_annual / 100;
+
+            let resultVal = 0;
+            let totalGrowth = 0;
+            let growthPercent = 0;
+
+            if (currentMode === 'FV') {
+                resultVal = pv * Math.pow(1 + (r / n), n * t);
+                totalGrowth = resultVal - pv;
+                growthPercent = pv > 0 ? (totalGrowth / pv) * 100 : 0;
+
+                elements.mainResultLabel.textContent = "Future Value (FV)";
+                elements.secondaryResultLabel.textContent = "Total Growth";
+                elements.barLabel1.textContent = "Present Value";
+                elements.barLabel2.textContent = "Growth Earned";
+                
+                const pvRatio = (pv / resultVal) * 100;
+                elements.bar1.style.width = `${pvRatio}%`;
+                elements.bar2.style.width = `${100 - pvRatio}%`;
+            } else {
+                resultVal = fv_input / Math.pow(1 + (r / n), n * t);
+                totalGrowth = fv_input - resultVal;
+                growthPercent = resultVal > 0 ? (totalGrowth / resultVal) * 100 : 0;
+
+                elements.mainResultLabel.textContent = "Present Value (PV)";
+                elements.secondaryResultLabel.textContent = "Value Erosion";
+                elements.barLabel1.textContent = "Present Value";
+                elements.barLabel2.textContent = "Future Erosion";
+
+                const pvRatio = (resultVal / fv_input) * 100;
+                elements.bar1.style.width = `${pvRatio}%`;
+                elements.bar2.style.width = `${100 - pvRatio}%`;
+            }
+
+            elements.mainResultVal.textContent = formatIndian(resultVal);
+            elements.secondaryResultVal.textContent = formatIndian(totalGrowth);
+            elements.growthPercentVal.textContent = growthPercent.toFixed(1) + "%";
+
+            renderTable(currentMode === 'FV' ? pv : resultVal, r, t, n);
+        }
+
+        function renderTable(startPV, r, years, n) {
+            elements.projectionTable.innerHTML = '';
+            let currentVal = startPV;
+            const basePV = startPV;
+
+            for (let y = 1; y <= years; y++) {
+                const opening = currentVal;
+                const closing = basePV * Math.pow(1 + (r / n), n * y);
+                const interest = closing - opening;
+                const totalGrowth = closing - basePV;
+
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-slate-50 transition-colors';
+                row.innerHTML = `
+                    <td class="px-3 py-3 border-b border-slate-100 font-medium text-slate-700">Year ${y}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-600">₹${formatCompact(opening)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-indigo-600">₹${formatCompact(interest)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right font-bold text-slate-800">₹${formatCompact(closing)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-emerald-600">₹${formatCompact(totalGrowth)}</td>
+                `;
+                elements.projectionTable.appendChild(row);
+                currentVal = closing;
+            }
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.pvInput, elements.pvRange);
+            setupSync(elements.fvInput, elements.fvRange);
+            setupSync(elements.rateInput, elements.rateRange);
+            setupSync(elements.yearsInput, elements.yearsRange);
+
+            elements.modeFV.addEventListener('click', () => {
+                currentMode = 'FV';
+                elements.modeFV.classList.add('active');
+                elements.modePV.classList.remove('active');
+                elements.pvSection.classList.remove('hidden');
+                elements.fvSection.classList.add('hidden');
+                updateCalculations();
+            });
+
+            elements.modePV.addEventListener('click', () => {
+                currentMode = 'PV';
+                elements.modePV.classList.add('active');
+                elements.modeFV.classList.remove('active');
+                elements.pvSection.classList.add('hidden');
+                elements.fvSection.classList.remove('hidden');
+                updateCalculations();
+            });
+
+            elements.compAnnually.addEventListener('click', () => {
+                compoundingFreq = 1;
+                elements.compAnnually.classList.add('active');
+                elements.compMonthly.classList.remove('active');
+                updateCalculations();
+            });
+
+            elements.compMonthly.addEventListener('click', () => {
+                compoundingFreq = 12;
+                elements.compMonthly.classList.add('active');
+                elements.compAnnually.classList.remove('active');
+                updateCalculations();
+            });
+
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+    </script>
+</body>
+</html>
