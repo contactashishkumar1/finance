@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner India 2026 – 50/30/20 Rule Monthly Budget Calculator</title>
+    <meta name="description" content="Use the best Budget Planner India (2026) to manage your monthly expenses. Apply the 50/30/20 rule to balance needs, wants, and savings for a secure financial future.">
+    <meta name="keywords" content="Budget Planner India, Monthly Budget Calculator, 50 30 20 Rule India, Expense Manager Tool, Financial Planning 2026, Personal Finance India">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/budget-planner/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Budget Planner India (2026) – Manage Your Monthly Expenses">
+    <meta property="og:description" content="Take control of your finances with our professional 50/30/20 budget planner. Calculate your ideal spending and savings ratio instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/budget-planner/">
+    <meta property="og:image" content="/favicon.ico">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Budget Planner India (2026)",
+      "description": "A comprehensive personal finance tool to plan monthly budgets using the 50/30/20 principle.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Arthcalculator"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Budget Planner",
+       "item": "https://arthcalculator.in/budget-planner/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the 50/30/20 rule?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 50/30/20 rule is a simple budgeting guideline: spend 50% of your income on needs, 30% on wants, and put 20% toward savings and debt repayment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What counts as a 'Need' in a budget?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Needs are essential expenses you must pay to live and work, such as rent/EMI, groceries, utilities, insurance, and basic transportation."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Budget Planner</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Budget Planner India (2026) – Optimize Monthly Spending</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Master your money using the 50/30/20 rule. Calculate exactly how much you should spend on needs and wants while ensuring your savings goals are met every month.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Income Details
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Monthly Take-home Salary (₹)</label>
+                            <input type="number" id="incomeInput" value="75000" min="5000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="incomeRange" min="5000" max="1000000" step="1000" value="75000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8 p-4 bg-blue-50/50 rounded-xl border border-blue-100">
+                        <h3 class="text-xs font-bold text-blue-600 uppercase mb-4">Budget Ratio (50/30/20)</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs text-slate-500 font-medium">Needs (%)</span>
+                                <input type="number" id="needsIn" value="50" min="0" max="100" class="w-16 px-2 py-1 border border-slate-200 rounded text-right text-xs font-bold">
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xs text-slate-500 font-medium">Wants (%)</span>
+                                <input type="number" id="wantsIn" value="30" min="0" max="100" class="w-16 px-2 py-1 border border-slate-200 rounded text-right text-xs font-bold">
+                            </div>
+                            <div class="flex justify-between items-center border-t border-blue-100 pt-3">
+                                <span class="text-xs text-blue-600 font-bold uppercase">Savings (%)</span>
+                                <span id="savingsDisp" class="text-xs font-bold text-blue-700">20%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Apply Budget Rule
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 transition-all hover:-translate-y-1">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Essential Needs</p>
+                        <h3 id="needsCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹37,500</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 transition-all hover:-translate-y-1">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Monthly Savings</p>
+                        <h3 id="savingsCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹15,000</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Allocation Summary</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Investable Savings</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="resultValue">₹15,000</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Health Check</p>
+                                <p class="font-bold text-slate-800 text-sm" id="healthDisp">Ideal Ratio</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs">Needs (50%)</span>
+                            <span class="text-indigo-600 font-bold uppercase text-xs">Wants (30%)</span>
+                            <span class="text-emerald-500 font-bold uppercase text-xs">Savings (20%)</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="needsBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                            <div id="wantsBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 30%"></div>
+                            <div id="savingsBar" class="h-full bg-emerald-400 transition-all duration-700 ease-out" style="width: 20%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="needsLabel">₹37,500</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="wantsLabel">₹22,500</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="savingsLabel">₹15,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Key Highlights Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Planner Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Prioritizes wealth creation</li>
+                            <li class="flex items-center gap-2">📊 Balances lifestyle and logic</li>
+                            <li class="flex items-center gap-2">⚖️ Protects from lifestyle inflation</li>
+                            <li class="flex items-center gap-2">📈 Clear path to early retirement</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Expense Category Breakdown</h3>
+                    <p class="text-xs text-slate-500 mb-4">Examples of what should fall under each budget category in 2026.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Category</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Budgeted Amount</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Budget %</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Examples</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is the 50/30/20 Budget Calculated?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Total Savings = Income × (Remaining Ratio / 100)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>Needs (50%):</strong> Survival expenses like Rent, EMI, Food, Bills.</p>
+                        <p><strong>Wants (30%):</strong> Lifestyle expenses like Dining out, OTT, Travel.</p>
+                        <p><strong>Savings (20%):</strong> Wealth creation via SIP, PPF, FD, and Debt repayment.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example Budget Calculation</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If your monthly take-home salary is <strong>₹1,00,000</strong>:<br>
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Needs budget: <strong>₹50,000</strong> (Max)</li>
+                            <li>Wants budget: <strong>₹30,000</strong> (Flex)</li>
+                            <li><strong>Minimum Savings: ₹20,000</strong> (Non-negotiable)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 mb-12" id="about">
+            <!-- Educational Content Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Mastering Your Money with the 50/30/20 Rule</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>
+                        In the fast-paced Indian economy of 2026, managing personal finances is more about discipline than intelligence. The <strong>50/30/20 rule</strong>, popularized by Senator Elizabeth Warren, is a intuitive framework that ensures you enjoy your today while securing your tomorrow. This <strong>Budget Planner</strong> is designed to help you implement this rule based on the current cost of living in Indian cities.
+                    </p>
+                    <p>
+                        Most people approach budgeting as a restriction on spending. In reality, a good budget is a permission to spend guilt-free. When you know your "Needs" are covered and your "Savings" are automated, you can spend the remaining "Wants" budget on your passions without financial anxiety.
+                    </p>
+                    <h3 class="text-xl font-bold text-slate-800 mt-8">Defining Your Categories</h3>
+                    <p>
+                        <strong>50% Needs:</strong> These are your non-negotiable obligations. If you stop paying these, your life or work suffers significantly. This includes Home Loan EMIs, rent, school fees, electricity bills, and basic insurance premiums. In expensive metros like Mumbai or Gurgaon, this might stretch to 60%, but the goal is always to bring it down to 50%.
+                    </p>
+                    <p>
+                        <strong>30% Wants:</strong> This is the lifestyle component. Dining at fancy restaurants, your Netflix and Prime subscriptions, the latest smartphone upgrade, and weekend getaways fall here. This category is "elastic"—meaning you can cut it down instantly during a crisis.
+                    </p>
+                    <p>
+                        <strong>20% Savings & Debt:</strong> This is the most important 20% of your life. It includes your SIPs in mutual funds, EPF/PPF contributions, and extra repayments toward high-interest debt like credit cards or personal loans. High-performers in 2026 often aim for a "reverse budget" where they save 30-40% first and live on the rest.
+                    </p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Budgeting Benchmarks for 2026</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Profile Type</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Strategy</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">The Survivor</td>
+                                <td class="p-4 border-b text-red-500 font-bold">70% Needs / 20% Wants / 10% Savings</td>
+                                <td class="p-4 border-b">Struggles with long-term wealth; high stress.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">The Standard</td>
+                                <td class="p-4 border-b text-blue-600 font-bold">50% Needs / 30% Wants / 20% Savings</td>
+                                <td class="p-4 border-b">Balanced life; hits retirement goals on time.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">The FIRE Aspirant</td>
+                                <td class="p-4 border-b text-emerald-600 font-bold">30% Needs / 20% Wants / 50% Savings</td>
+                                <td class="p-4 border-b text-emerald-700 font-semibold">Early retirement possible within 10-15 years.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Pro Strategies to Stick to Your Budget</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">Automate Your Savings</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Don't wait for the month-end to save. Set up auto-debit SIPs for the same day your salary arrives. If you don't see the money in your account, you won't spend it.</p>
+                        <p class="text-lg font-bold text-white">"Pay Yourself First"</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">The 48-Hour Rule</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">For any "Want" purchase above ₹2,000, wait for 48 hours before buying. Most impulse urges disappear by then, keeping your wants budget under 30%.</p>
+                        <p class="text-lg font-bold text-white">Zero Impulse Spending</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Should I use gross salary or take-home salary?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Always use your **net take-home salary** (after PF and income tax deductions). This represents the actual cash you have available to spend or save.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Where do insurance premiums fit in?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Health and Life insurance are "Needs." They protect your family and capital. They should be part of the 50% needs budget.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. My rent is 40% of my income, what should I do?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            If rent is 40%, you only have 10% left for other needs (Food, Utilities). You must drastically cut your "Wants" from 30% to perhaps 15% to ensure you still maintain a 15-20% saving rate.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Does credit card repayment count as a need?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Minimum due is a "Need," but aggressive repayment of the full balance is a "Saving/Debt" activity (the 20% category).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. What if I earn a variable bonus?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Bonuses should ideally be split 10/90. Spend 10% on a "Want" to celebrate, and put 90% into "Savings" or high-value "Needs" (like a home loan prepay).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. Is SIP considered a need or a saving?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Mutual Fund SIPs are definitely "Savings" (the 20% category). They are investments for your future self.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. How often should I re-evaluate my budget?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Review your spending every month. Re-calculate the whole budget whenever your income changes (hike/new job) or your major expenses change (new rent/EMI).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Can I use this for business budgeting?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The 50/30/20 rule is strictly for personal finance. Business budgeting requires a different approach like the "Profit First" method or Zerobased budgeting.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Planning Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Invest your 20% savings.</p>
+                    </a>
+                    <a href="/emi/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate your 50% needs.</p>
+                    </a>
+                    <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Tax Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan your take-home salary.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Popular Tools -->
+            <section class="max-w-6xl mx-auto py-8">
+                <h3 class="text-xl font-bold mb-8 text-slate-800">Popular Tools on Arthcalculator</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="/emi/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">EMI</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/sip/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">SIP</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/income-tax/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">TAX</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/gst/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">GST</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/fd/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">FD</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/retirement-withdrawal/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">GOAL</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Planner</span>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                The 50/30/20 rule is a general guideline. Your individual financial situation may require different ratios. Consult a certified financial planner for personalized advice.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+    fetch("/navbar.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn && menu){
+    btn.addEventListener("click",()=>{
+    menu.classList.toggle("hidden");
+    });
+    }
+    }
+    });
+
+    fetch("/footer.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+     document.getElementById("footer").innerHTML=data;
+     }
+    });
+    </script>
+    
+    <script>
+        const elements = {
+            incomeIn: document.getElementById('incomeInput'),
+            incomeRan: document.getElementById('incomeRange'),
+            needsIn: document.getElementById('needsIn'),
+            wantsIn: document.getElementById('wantsIn'),
+            savingsDisp: document.getElementById('savingsDisp'),
+            resultValue: document.getElementById('resultValue'),
+            healthDisp: document.getElementById('healthDisp'),
+            needsCard: document.getElementById('needsCard'),
+            savingsCard: document.getElementById('savingsCard'),
+            needsBar: document.getElementById('needsBar'),
+            wantsBar: document.getElementById('wantsBar'),
+            savingsBar: document.getElementById('savingsBar'),
+            needsLabel: document.getElementById('needsLabel'),
+            wantsLabel: document.getElementById('wantsLabel'),
+            savingsLabel: document.getElementById('savingsLabel'),
+            table: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatIndian(val) {
+            const formatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            return "₹" + formatter.format(val);
+        }
+
+        function updateCalculations() {
+            const income = parseFloat(elements.incomeIn.value) || 0;
+            const needsP = parseFloat(elements.needsIn.value) || 0;
+            const wantsP = parseFloat(elements.wantsIn.value) || 0;
+            
+            let savingsP = 100 - (needsP + wantsP);
+            if (savingsP < 0) savingsP = 0;
+            elements.savingsDisp.textContent = savingsP + "%";
+
+            const needsAmt = (income * needsP) / 100;
+            const wantsAmt = (income * wantsP) / 100;
+            const savingsAmt = (income * savingsP) / 100;
+
+            // Display Values
+            elements.resultValue.textContent = formatIndian(savingsAmt);
+            elements.needsCard.textContent = formatIndian(needsAmt);
+            elements.savingsCard.textContent = formatIndian(savingsAmt);
+            
+            // Labels
+            elements.needsLabel.textContent = formatIndian(needsAmt);
+            elements.wantsLabel.textContent = formatIndian(wantsAmt);
+            elements.savingsLabel.textContent = formatIndian(savingsAmt);
+
+            // Bars
+            elements.needsBar.style.width = `${needsP}%`;
+            elements.wantsBar.style.width = `${wantsP}%`;
+            elements.savingsBar.style.width = `${savingsP}%`;
+
+            // Assessment
+            let health = "Review Ratio";
+            if (savingsP >= 20 && needsP <= 50) health = "Perfect Balance";
+            else if (savingsP >= 30) health = "Wealth Builder";
+            else if (needsP > 60) health = "High Risk";
+            elements.healthDisp.textContent = health;
+
+            renderTable(needsAmt, wantsAmt, savingsAmt, needsP, wantsP, savingsP);
+        }
+
+        function renderTable(nA, wA, sA, nP, wP, sP) {
+            elements.table.innerHTML = '';
+            const data = [
+                { cat: 'Needs (Essentials)', amt: nA, pct: nP, examples: 'Rent, Groceries, Utilities, EMI' },
+                { cat: 'Wants (Lifestyle)', amt: wA, pct: wP, examples: 'Dining, Subscriptions, Shopping' },
+                { cat: 'Savings & Debt', amt: sA, pct: sP, examples: 'SIPs, PPF, Debt Prepayment' }
+            ];
+
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-slate-50 transition-colors';
+                row.innerHTML = `
+                    <td class="px-3 py-3 border-b border-slate-100 font-bold text-slate-700">${item.cat}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-900 font-medium">${formatIndian(item.amt)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-500">${item.pct}%</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right italic text-slate-400 text-[10px]">${item.examples}</td>
+                `;
+                elements.table.appendChild(row);
+            });
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.incomeIn, elements.incomeRan);
+            elements.needsIn.addEventListener('input', updateCalculations);
+            elements.wantsIn.addEventListener('input', updateCalculations);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+    </script>
+</body>
+</html>
