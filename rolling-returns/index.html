@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Returns Calculator India 2026 – Investment Consistency Calculator</title>
+    <meta name="description" content="Use the best Rolling Returns Calculator India (2026) to analyze mutual fund consistency. Calculate 3Y, 5Y, and 10Y rolling returns to see the probability of negative returns.">
+    <meta name="keywords" content="Rolling Returns Calculator India, Mutual Fund Consistency Tool, SIP Rolling Returns, Average Rolling Return, Stock Market Analysis 2026">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/rolling-returns/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Rolling Returns Calculator India (2026) – Measure Portfolio Consistency">
+    <meta property="og:description" content="Stop looking at point-to-point returns. Use our rolling returns tool to understand the true historical performance range of your investments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/rolling-returns/">
+    <meta property="og:image" content="/favicon.ico">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Rolling Returns Calculator India (2026)",
+      "description": "A professional financial tool to calculate rolling returns and probability of returns for mutual funds.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Arthcalculator"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Rolling Returns",
+       "item": "https://arthcalculator.in/rolling-returns/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are rolling returns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rolling returns are annualized returns of an investment over a specific window of time (e.g., 3 years) measured on a continuous basis. It removes point-to-point bias."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is 3-year or 5-year rolling return important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It shows how consistent a fund is. While 1-year returns can be volatile, 5-year rolling returns in Indian equity often show a 0% probability of negative returns."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Rolling Returns</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Rolling Returns Calculator India (2026) – Consistency Analyzer</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Don't rely on lucky point-to-point returns. Use our rolling returns calculator to analyze fund consistency over 3Y, 5Y, and 10Y cycles. Discover the probability of positive returns for your portfolio.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Portfolio Performance
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Expected Annual Return (%)</label>
+                            <input type="number" id="returnInput" value="12" min="1" max="100" step="0.5" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="returnRange" min="1" max="50" step="0.5" value="12" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Portfolio Volatility (Std Dev %)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="volInput" value="15" min="1" max="50" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="volRange" min="1" max="40" step="0.5" value="15" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Rolling Window (Years)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="windowInput" value="3" min="1" max="20" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="windowRange" min="1" max="15" step="1" value="3" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Simulate Consistency
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 transition-all hover:-translate-y-1">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Max Potential</p>
+                        <h3 id="maxReturnCard" class="text-lg sm:text-xl font-bold leading-tight break-all">18.50%</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 transition-all hover:-translate-y-1">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Min Potential</p>
+                        <h3 id="minReturnCard" class="text-lg sm:text-xl font-bold leading-tight break-all">5.50%</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Rolling Returns Summary</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Average Rolling Return</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="avgReturnDisp">12.00%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Negative Prob.</p>
+                                <p class="font-bold text-slate-800 text-sm" id="probDisp">Low (2%)</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs">Positive Consistency</span>
+                            <span class="text-indigo-600 font-bold uppercase text-xs">Downside Risk</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="consistencyBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 80%"></div>
+                            <div id="riskBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 20%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="consistencyLabel">Stable Returns</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="riskLabel">Potential Drawdown</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Key Highlights Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Statistical Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Removes point-to-point bias</li>
+                            <li class="flex items-center gap-2">📊 Analyzes 100+ rolling data points</li>
+                            <li class="flex items-center gap-2">⚖️ Highlights return distribution range</li>
+                            <li class="flex items-center gap-2">📈 Critical for SIP goal planning</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Return Distribution Probability</h3>
+                    <p class="text-xs text-slate-500 mb-4">Probability of your 3-year rolling returns falling within specific buckets.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Return Bucket</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Probability</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Investment Experience</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Frequency</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How are Rolling Returns Calculated?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Rolling CAGR = [(Value<sub>end</sub> / Value<sub>start</sub>)<sup>1/n</sup> - 1] × 100
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>Value<sub>start</sub>:</strong> Portfolio value at any day t.</p>
+                        <p><strong>Value<sub>end</sub>:</strong> Portfolio value at t + window period (e.g. 3 years).</p>
+                        <p><strong>n:</strong> Window length in years.</p>
+                        <p>This is repeated for every possible day in the total observation history.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example Analysis (India)</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        In the Indian market, if a Nifty 50 Index fund has an average return of 12% and volatility of 18%:<br>
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>1-Year Rolling: Probability of Negative Return ~ 25%</li>
+                            <li>3-Year Rolling: Probability of Negative Return ~ 10%</li>
+                            <li><strong>7-Year Rolling: Probability of Negative Return ~ 0%</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 mb-12">
+            <!-- Educational Content Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Why Rolling Returns are the Best Measure of Consistency</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>
+                        Most investors look at "trailing returns" or "point-to-point returns." For example, checking a fund's performance from January 2023 to January 2026. However, this is heavily biased by the specific start and end dates. If the market was at a record high on the end date, the returns look great. If it crashed that morning, they look terrible.
+                    </p>
+                    <p>
+                        The <strong>Rolling Returns Calculator</strong> solves this bias. Instead of one data point, it looks at hundreds of "rolling windows." It calculates the 3-year return for someone who started on Jan 1st, then for someone who started on Jan 2nd, and so on. This gives you a range of experiences: the best-case return, the worst-case return, and the average return an investor likely received.
+                    </p>
+                    <h3 class="text-xl font-bold text-slate-800 mt-8">The Importance of Time Horizon</h3>
+                    <p>
+                        Rolling returns prove one of the most powerful laws of the Indian stock market: **Time reduces risk.** As you increase the rolling window from 1 year to 5 or 10 years, the gap between the "Maximum" and "Minimum" returns narrows significantly. This narrowing is what financial experts call "convergence towards the mean," and it is the foundation of successful long-term SIP investing.
+                    </p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Rolling vs. Trailing Returns – Comparison</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Metric</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Trailing Returns</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Rolling Returns</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Observation Type</td>
+                                <td class="p-4 border-b">Single Point</td>
+                                <td class="p-4 border-b text-blue-600 font-bold">Continuous Series</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Market Bias</td>
+                                <td class="p-4 border-b text-red-500 font-semibold">High (Recency Bias)</td>
+                                <td class="p-4 border-b text-emerald-600 font-semibold">None (Cycles Covered)</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Best For</td>
+                                <td class="p-4 border-b">Recent hype check</td>
+                                <td class="p-4 border-b font-bold text-slate-900">Selection of consistent funds</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Pro Strategies: How to Use Rolling Data?</h2>
+                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
+                    When analyzing mutual funds in 2026, don't just pick the one with the highest 1-year return. Use these professional benchmarks:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">The "Minimum" Anchor</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Look at the 'Minimum' rolling return of a fund over 5 years. If the minimum is still positive (e.g. > 6%), it shows the fund is extremely resilient during crises.</p>
+                        <p class="text-lg font-bold text-white">Safety Check</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Beat the Benchmark</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Calculate the Alpha based on the average rolling return. An active fund is only worth it if its average rolling return consistently stays 2-3% above the index.</p>
+                        <p class="text-lg font-bold text-white">Skill Analysis</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. How are rolling returns different from CAGR?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            CAGR is a single point-to-point calculation. Rolling Returns are a series of many CAGR calculations over time. While a fund might have a 12% CAGR, its rolling returns might have ranged from -5% to +35% during that same period.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. What is a 'rolling window'?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            A window is the duration for which return is calculated. Common windows are 3 years, 5 years, or 7 years. Each window moves forward one day at a time, "rolling" through history.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Does a high rolling return mean low risk?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Not necessarily. A high average rolling return is good, but you should also look at the 'Minimum' return in the rolling period. A fund with a 15% average but a -10% minimum is riskier than one with 12% average and a +2% minimum.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Why does the rolling return range narrow over time?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            This is due to the "law of large numbers." In the short term, random market shocks dominate returns. Over the long term (10+ years), the underlying earnings growth of companies becomes the primary driver, which is more stable.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Should I use rolling returns for debt funds?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes. It is very useful for dynamic bond funds to see if the manager's interest rate calls are actually adding value over a 3-year rolling period compared to simple FDs.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What is 'outperformance consistency'?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            This is the percentage of rolling periods where the fund beat its benchmark. A consistency score above 70% is considered excellent for an active manager.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Can I calculate rolling returns for stocks?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes. It is a great way to evaluate if a blue-chip stock is a reliable compounding machine or a volatile cyclical bet.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Is tax included in rolling returns?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No, rolling returns are usually reported on a pre-tax basis. In India, for equity funds, you should manually account for the 12.5% LTCG tax on gains above ₹1.25 Lakh.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Analysis Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="/alpha/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Alpha</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Measure manager skill.</p>
+                    </a>
+                    <a href="/beta/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Beta</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check market sensitivity.</p>
+                    </a>
+                    <a href="/sharpe-ratio/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Sharpe Ratio</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check risk-adjusted returns.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Popular Tools -->
+            <section class="max-w-6xl mx-auto py-8 text-center">
+                <h3 class="text-xl font-bold mb-8 text-slate-800">Popular Tools on Arthcalculator</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="/emi/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">EMI</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/sip/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">SIP</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/income-tax/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">Tax</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/gst/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">GST</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/fd/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">FD</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/retirement-withdrawal/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">GOAL</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Planner</span>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                Rolling returns are based on statistical simulations and historical modeling. Market investments are subject to risks. Past performance does not guarantee future results. This tool is for educational purposes and is not financial advice.
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- NAVBAR FOOTER LOADER SCRIPT (MANDATORY EXACT CODE) -->
+    <script>
+    fetch("/navbar.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn && menu){
+    btn.addEventListener("click",()=>{
+    menu.classList.toggle("hidden");
+    });
+    }
+    }
+    });
+
+    fetch("/footer.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+     document.getElementById("footer").innerHTML=data;
+     }
+    });
+    </script>
+    
+    <script>
+        const elements = {
+            avgIn: document.getElementById('returnInput'),
+            avgRan: document.getElementById('returnRange'),
+            volIn: document.getElementById('volInput'),
+            volRan: document.getElementById('volRange'),
+            winIn: document.getElementById('windowInput'),
+            winRan: document.getElementById('windowRange'),
+            maxCard: document.getElementById('maxReturnCard'),
+            minCard: document.getElementById('minReturnCard'),
+            avgDisp: document.getElementById('avgReturnDisp'),
+            probDisp: document.getElementById('probDisp'),
+            cBar: document.getElementById('consistencyBar'),
+            rBar: document.getElementById('riskBar'),
+            cLab: document.getElementById('consistencyLabel'),
+            rLab: document.getElementById('riskLabel'),
+            table: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        // Simplified Gaussian CDF for probability of negative return
+        function normalCDF(x, mean, std) {
+            return 0.5 * (1 + erf((x - mean) / (std * Math.sqrt(2))));
+        }
+
+        function erf(x) {
+            const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741, a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
+            const sign = (x < 0) ? -1 : 1;
+            x = Math.abs(x);
+            const t = 1.0 / (1.0 + p * x);
+            const y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
+            return sign * y;
+        }
+
+        function updateCalculations() {
+            const mean = parseFloat(elements.avgIn.value) || 0;
+            const vol = parseFloat(elements.volIn.value) || 0;
+            const years = parseFloat(elements.winIn.value) || 1;
+
+            // Rolling window standard deviation decreases with sqrt(years)
+            const rollingStd = vol / Math.sqrt(years);
+            
+            // Stats based on normal distribution (95% confidence)
+            const maxVal = mean + (1.96 * rollingStd);
+            const minVal = mean - (1.96 * rollingStd);
+            
+            // Probability of negative return
+            const probNeg = normalCDF(0, mean, rollingStd) * 100;
+
+            // Results Display
+            elements.avgDisp.textContent = mean.toFixed(2) + "%";
+            elements.maxCard.textContent = maxVal.toFixed(2) + "%";
+            elements.minCard.textContent = minVal.toFixed(2) + "%";
+            
+            let probText = "Negligible (<1%)";
+            if (probNeg >= 1) probText = `Low (${probNeg.toFixed(0)}%)`;
+            if (probNeg > 15) probText = `Moderate (${probNeg.toFixed(0)}%)`;
+            if (probNeg > 30) probText = `High (${probNeg.toFixed(0)}%)`;
+
+            elements.probDisp.textContent = probText;
+
+            // Visuals
+            const consistency = 100 - probNeg;
+            elements.cBar.style.width = `${consistency}%`;
+            elements.rBar.style.width = `${probNeg}%`;
+            elements.cLab.textContent = `Consis: ${consistency.toFixed(0)}%`;
+            elements.rLab.textContent = `Risk: ${probNeg.toFixed(0)}%`;
+
+            renderTable(mean, rollingStd);
+        }
+
+        function renderTable(mean, std) {
+            elements.table.innerHTML = '';
+            
+            const buckets = [
+                { range: 'Below 0%', type: 'Negative Loss' },
+                { range: '0% to 8%', type: 'Debt-like' },
+                { range: '8% to 15%', type: 'Equities Avg' },
+                { range: 'Above 15%', type: 'Superior' }
+            ];
+
+            buckets.forEach(bucket => {
+                let prob = 0;
+                if (bucket.range === 'Below 0%') prob = normalCDF(0, mean, std);
+                else if (bucket.range === '0% to 8%') prob = normalCDF(8, mean, std) - normalCDF(0, mean, std);
+                else if (bucket.range === '8% to 15%') prob = normalCDF(15, mean, std) - normalCDF(8, mean, std);
+                else if (bucket.range === 'Above 15%') prob = 1 - normalCDF(15, mean, std);
+
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-slate-50 transition-colors';
+                row.innerHTML = `
+                    <td class="px-3 py-3 border-b border-slate-100 font-bold text-slate-700">${bucket.range}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-600">${(prob * 100).toFixed(1)}%</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-indigo-600 font-medium">${bucket.type}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right font-black text-slate-800">${Math.round(prob * 100)} / 100</td>
+                `;
+                elements.table.appendChild(row);
+            });
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.avgIn, elements.avgRan);
+            setupSync(elements.volIn, elements.volRan);
+            setupSync(elements.winIn, elements.winRan);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+    </script>
+</body>
+</html>
