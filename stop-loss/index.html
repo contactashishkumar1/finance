@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Loss Calculator India 2026 – Risk Management & Target Calculator</title>
+    <meta name="description" content="Use the best Stop Loss Calculator India (2026) to manage your trading risk. Calculate stop loss price, total risk amount, and risk-reward ratio for stocks and F&O.">
+    <meta name="keywords" content="Stop Loss Calculator India, Risk Management Tool, Stock Market Stop Loss, Trading Risk Calculator, Risk Reward Ratio Calculator 2026">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/stop-loss/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Stop Loss Calculator India (2026) – Protect Your Capital">
+    <meta property="og:description" content="Calculate the exact stop loss price and total risk for your trades. Optimize your risk management with our professional calculator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/stop-loss/">
+    <meta property="og:image" content="/favicon.ico">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Stop Loss Calculator India (2026)",
+      "description": "A professional financial tool to calculate stop loss levels and manage trading risk effectively.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Arthcalculator"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Stop Loss",
+       "item": "https://arthcalculator.in/stop-loss/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Stop Loss?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A stop loss is an advance order to sell an asset when it reaches a specific price point. It is used to limit the loss or gain on a trade."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is stop loss price calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a long position: Stop Loss Price = Entry Price - (Entry Price x Stop Loss Percentage / 100). For a short position: Stop Loss Price = Entry Price + (Entry Price x Stop Loss Percentage / 100)."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Stop Loss Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Stop Loss Calculator India (2026) – Risk Management Planner</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Plan your trades with military precision. Calculate the exact stop loss price, maximum risk amount, and risk-reward ratio to ensure your capital is protected in the Indian stock market for 2026.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Risk Control</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Trade Details
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Entry Price (₹)</label>
+                            <input type="number" id="entryInput" value="1000" min="1" step="1" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="entryRange" min="1" max="100000" step="10" value="1000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Stop Loss (%)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="slPercentInput" value="2" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="slPercentRange" min="0.1" max="50" step="0.1" value="2" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Quantity (Lots/Shares)</label>
+                            <input type="number" id="qtyInput" value="100" min="1" step="1" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="qtyRange" min="1" max="10000" step="1" value="100" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Target Price (₹)</label>
+                            <div class="relative w-full sm:w-32">
+                                <input type="number" id="targetInput" value="1060" min="1" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            </div>
+                        </div>
+                        <input type="range" id="targetRange" min="1" max="110000" step="10" value="1060" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-1">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Analyze Trade Risk
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-red-600 p-5 rounded-2xl text-white shadow-lg shadow-red-200 transition-all hover:-translate-y-1">
+                        <p class="text-red-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Risk Amount</p>
+                        <h3 id="totalRiskDisp" class="text-lg sm:text-xl font-bold leading-tight break-all">₹2,000</h3>
+                    </div>
+                    <div class="bg-emerald-600 p-5 rounded-2xl text-white shadow-lg shadow-emerald-200 transition-all hover:-translate-y-1">
+                        <p class="text-emerald-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Profit Potential</p>
+                        <h3 id="totalProfitDisp" class="text-lg sm:text-xl font-bold leading-tight break-all">₹6,000</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Trade Risk Summary</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Stop Loss Price Level</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="slPriceValue">₹980.00</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">R/R Ratio</p>
+                                <p class="font-bold text-slate-800 text-sm" id="rrRatioDisp">1 : 3.0</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-red-600 font-bold uppercase text-xs">Risk Area</span>
+                            <span class="text-emerald-600 font-bold uppercase text-xs">Profit Area</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="riskBar" class="h-full bg-red-400 transition-all duration-700 ease-out" style="width: 25%"></div>
+                            <div id="profitBar" class="h-full bg-emerald-400 transition-all duration-700 ease-out" style="width: 75%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-red-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="riskLabel">Risk: ₹2,000</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-emerald-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="profitLabel">Profit: ₹6,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Key Highlights Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Plan Insight
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Protects trading capital</li>
+                            <li class="flex items-center gap-2">📊 Optimizes position sizing</li>
+                            <li class="flex items-center gap-2">⚖️ Visual Risk-Reward balance</li>
+                            <li class="flex items-center gap-2">📈 Precise exit point planning</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Risk-Reward Sensitivity Table</h3>
+                    <p class="text-xs text-slate-500 mb-4">How your risk profile changes with different Stop Loss percentages.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">SL (%)</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">SL Price</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Total Risk</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">R/R Ratio</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is Stop Loss Calculated?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        SL Price = Entry Price - (Entry Price × SL% / 100)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>Total Risk:</strong> (Entry Price - SL Price) × Quantity</p>
+                        <p><strong>R/R Ratio:</strong> (Target - Entry) / (Entry - SL Price)</p>
+                        <p>For <strong>Short Trades</strong>, reverse the subtraction: SL = Entry + (Entry × SL%).</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example Trade Strategy</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If you buy <strong>100 shares</strong> of a stock at <strong>₹1000</strong> with a <strong>2%</strong> stop loss and <strong>₹1060</strong> target:<br>
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Stop Loss Price: <strong>₹980</strong></li>
+                            <li>Total Risk: <strong>₹2,000</strong></li>
+                            <li>Potential Profit: <strong>₹6,000</strong></li>
+                            <li><strong>Risk-Reward Ratio: 1 : 3.0</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 mb-12" id="about">
+            <!-- Educational Content Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">The Importance of Stop Loss in Trading</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>
+                        A <strong>Stop Loss</strong> is the single most important tool in an active trader's arsenal. In the highly volatile Indian markets of 2026, where stock prices can fluctuate wildly due to global cues, earnings, or news, trading without a stop loss is equivalent to driving without brakes. It is a predetermined exit point designed to limit an investor's loss on a security position.
+                    </p>
+                    <p>
+                        The <strong>Stop Loss Calculator</strong> helps you quantify your risk before you hit the "buy" button. Professional traders follow a "1% Rule," where they never risk more than 1% of their total trading capital on a single trade. By calculating your stop loss price and total risk amount, you can adjust your position size (quantity) to ensure a single bad trade doesn't wipe out your account.
+                    </p>
+                    <h3 class="text-xl font-bold text-slate-800 mt-8">Types of Stop Loss Strategies</h3>
+                    <p>
+                        Different market conditions require different exit strategies:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Percentage-Based:</strong> A fixed exit point (e.g., 2% below entry). Simple to calculate but doesn't account for stock-specific volatility.</li>
+                        <li><strong>Volatility-Based:</strong> Using tools like Average True Range (ATR) to set stop losses based on how much the stock usually moves.</li>
+                        <li><strong>Support/Resistance Based:</strong> Placing the stop loss just below a major support level or above a resistance level.</li>
+                        <li><strong>Trailing Stop Loss:</strong> An order that moves as the stock price moves in your favor, locking in profits while still protecting against a sudden reversal.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Risk-Reward Ratio Benchmarks</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">R/R Ratio</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Rating</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Long-term Viability</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">1 : 1</td>
+                                <td class="p-4 border-b text-red-500 font-bold">Poor</td>
+                                <td class="p-4 border-b">Requires >50% win rate to stay profitable.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">1 : 2</td>
+                                <td class="p-4 border-b font-semibold text-slate-700">Good</td>
+                                <td class="p-4 border-b">Standard professional benchmark. Highly viable.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">1 : 3+</td>
+                                <td class="p-4 border-b text-emerald-600 font-bold">Excellent</td>
+                                <td class="p-4 border-b">Sustainable even with a low win rate (35-40%).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Pro Tips for Capital Protection</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">The "Gap-Down" Risk</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Remember that stop-loss orders might not trigger at your exact price if the stock "gaps down" at the market opening. Always use a 'Stop Loss Limit' order to control slippage.</p>
+                        <p class="text-lg font-bold text-white">Focus: Slippage Management</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Avoid "Mental" Stop Loss</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Emotions often prevent traders from exiting losing trades. Always place a hard system-level stop loss with your broker immediately after entering the trade.</p>
+                        <p class="text-lg font-bold text-white">Behavioral Discipline</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Stop Loss Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Where should I set my stop loss?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            It depends on the stock's volatility. A common technical method is to place it just below the recent "swing low" for a buy position or just above the "swing high" for a sell position.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Should I ever move my stop loss further away?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            NEVER. Moving a stop loss deeper to avoid being "stopped out" is a cardinal sin in trading. It turns a controlled loss into a catastrophic one. You should only move your stop loss to protect profits (trailing).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Does a stop loss guarantee I won't lose more?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No. In fast-moving markets or if a stock gaps down overnight, your order might be executed at a price significantly lower than your stop loss trigger. This is called "Slippage."
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. What is a Trailing Stop Loss?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            A trailing stop loss follows the stock price as it rises (for long trades). If the stock goes up, the stop loss also moves up. If the stock drops, the stop loss stays at its highest level, protecting accumulated gains.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Is stop loss mandatory in Intraday trading?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            While not legally mandatory, it is practically essential. Intraday trading involves high leverage (5x to 25x). Without a stop loss, a small move against you can result in a margin call and heavy capital depletion.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What is the difference between SL and SL-M?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            SL (Stop Loss Limit) allows you to specify the exact price to sell at. SL-M (Stop Loss Market) triggers a sell order at whatever the current market price is once the trigger is hit. SL-M ensures execution but may suffer more slippage.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Can I set multiple stop losses?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            You can exit your position in tiers (e.g., exit 50% at 2% loss and the remaining at 4% loss), but for most retail traders, a single well-calculated stop loss is more efficient.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Should investors also use stop losses?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes. Even if you are a long-term investor, a wide "hard" stop loss (e.g., 20-30%) can protect you from "Black Swan" events or permanent structural failure in a company's business model.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Trading Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="/options-profit/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Options Profit</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate F&O trade P&L.</p>
+                    </a>
+                    <a href="/beta/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Beta Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Measure market sensitivity.</p>
+                    </a>
+                    <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check annualized returns.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Popular Tools -->
+            <section class="max-w-6xl mx-auto py-8 text-center">
+                <h3 class="text-xl font-bold mb-8 text-slate-800">Popular Tools on Arthcalculator</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="/emi/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">EMI</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/sip/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">SIP</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/income-tax/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">Tax</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/gst/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">GST</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/fd/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">FD</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/retirement-withdrawal/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">GOAL</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Planner</span>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                Stop loss calculations are based on input data and mathematical formulas. Market conditions, slippage, and brokerage can significantly impact actual trade outcomes. This tool is for educational and risk-planning purposes only. Consult a professional financial advisor before trading.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- NAVBAR FOOTER LOADER SCRIPT (MANDATORY EXACT CODE) -->
+    <script>
+    fetch("/navbar.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn && menu){
+    btn.addEventListener("click",()=>{
+    menu.classList.toggle("hidden");
+    });
+    }
+    }
+    });
+
+    fetch("/footer.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+     document.getElementById("footer").innerHTML=data;
+     }
+    });
+    </script>
+    
+    <script>
+        const elements = {
+            entryIn: document.getElementById('entryInput'),
+            entryRan: document.getElementById('entryRange'),
+            slIn: document.getElementById('slPercentInput'),
+            slRan: document.getElementById('slPercentRange'),
+            qtyIn: document.getElementById('qtyInput'),
+            qtyRan: document.getElementById('qtyRange'),
+            targetIn: document.getElementById('targetInput'),
+            targetRan: document.getElementById('targetRange'),
+            slPriceValue: document.getElementById('slPriceValue'),
+            rrRatioDisp: document.getElementById('rrRatioDisp'),
+            totalRiskDisp: document.getElementById('totalRiskDisp'),
+            totalProfitDisp: document.getElementById('totalProfitDisp'),
+            riskBar: document.getElementById('riskBar'),
+            profitBar: document.getElementById('profitBar'),
+            riskLabel: document.getElementById('riskLabel'),
+            profitLabel: document.getElementById('profitLabel'),
+            table: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatIndian(val) {
+            const formatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            return "₹" + formatter.format(val);
+        }
+
+        function updateCalculations() {
+            const entry = parseFloat(elements.entryIn.value) || 0;
+            const slPercent = parseFloat(elements.slIn.value) || 0;
+            const qty = parseFloat(elements.qtyIn.value) || 0;
+            const target = parseFloat(elements.targetIn.value) || 0;
+
+            const slPrice = entry - (entry * (slPercent / 100));
+            const riskPerShare = entry - slPrice;
+            const totalRisk = riskPerShare * qty;
+
+            const profitPerShare = target - entry;
+            const totalProfit = profitPerShare * qty;
+
+            const rrRatio = riskPerShare > 0 ? (profitPerShare / riskPerShare).toFixed(1) : 0;
+
+            // Results Display
+            elements.slPriceValue.textContent = formatIndian(slPrice.toFixed(2));
+            elements.rrRatioDisp.textContent = `1 : ${rrRatio}`;
+            elements.totalRiskDisp.textContent = formatIndian(Math.round(totalRisk));
+            elements.totalProfitDisp.textContent = formatIndian(Math.round(totalProfit));
+
+            // Visualization
+            const totalScope = Math.abs(totalRisk) + Math.abs(totalProfit);
+            const riskPercent = totalScope > 0 ? (Math.abs(totalRisk) / totalScope) * 100 : 0;
+            elements.riskBar.style.width = `${riskPercent}%`;
+            elements.profitBar.style.width = `${100 - riskPercent}%`;
+            
+            elements.riskLabel.textContent = `Risk: ${formatIndian(Math.round(totalRisk))}`;
+            elements.profitLabel.textContent = `Profit: ${formatIndian(Math.round(totalProfit))}`;
+
+            renderTable(entry, target, qty, slPercent);
+        }
+
+        function renderTable(entry, target, qty, currentSL) {
+            elements.table.innerHTML = '';
+            const slVariations = [1.0, 2.0, 3.0, 5.0, 7.0, 10.0, 15.0];
+            
+            slVariations.forEach(val => {
+                const slPrice = entry - (entry * (val / 100));
+                const risk = (entry - slPrice) * qty;
+                const reward = (target - entry) * qty;
+                const rr = risk > 0 ? (reward / risk).toFixed(1) : 0;
+                
+                const isCurrent = Math.abs(val - currentSL) < 0.05;
+
+                const row = document.createElement('tr');
+                row.className = `hover:bg-slate-50 transition-colors ${isCurrent ? 'bg-blue-50 font-bold' : ''}`;
+                row.innerHTML = `
+                    <td class="px-3 py-3 border-b border-slate-100 font-medium text-slate-700">${val}%</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-600">₹${slPrice.toFixed(2)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-red-600 font-bold">${formatIndian(Math.round(risk))}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right font-black text-slate-800">1 : ${rr}</td>
+                `;
+                elements.table.appendChild(row);
+            });
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.entryIn, elements.entryRan);
+            setupSync(elements.slIn, elements.slRan);
+            setupSync(elements.qtyIn, elements.qtyRan);
+            setupSync(elements.targetIn, elements.targetRan);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+    </script>
+</body>
+</html>
