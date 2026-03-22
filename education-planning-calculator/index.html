@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Planning Calculator India 2026 – Future Cost & Savings Calculator</title>
+    <meta name="description" content="Use the best Education Planning Calculator India (2026) to estimate the future cost of higher education and calculate monthly savings required. Plan for college costs with inflation.">
+    <meta name="keywords" content="Education Planning Calculator India, College Cost Calculator, Higher Education Planner, Education Inflation Calculator, Child Education Fund 2026">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/education-planning-calculator/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Education Planning Calculator India (2026) – Calculate Future College Costs">
+    <meta property="og:description" content="Estimate the future cost of your child's education and find out exactly how much you need to save every month.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/education-planning-calculator/">
+    <meta property="og:image" content="/favicon.ico">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Education Planning Calculator India (2026)",
+      "description": "A high-precision financial tool to calculate future education costs and monthly investment goals.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Arthcalculator"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Education Planning Calculator",
+       "item": "https://arthcalculator.in/education-planning-calculator/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the average education inflation in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Education inflation in India typically ranges between 8% to 12% per year, which is significantly higher than the standard consumer price inflation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate the future cost of a college degree?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Future Cost = Current Cost x (1 + Inflation Rate)^Number of Years. This accounts for the rising cost of tuition and living expenses over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I choose an Education Loan or save for college?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Saving in advance is always cheaper as you earn interest on your savings, whereas a loan requires you to pay high interest (usually 9-12% p.a.). Education loans should only be a fallback for gaps in funding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does currency depreciation affect foreign education planning?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When planning for overseas education, you must account for Rupee depreciation (historically 3-4% p.a. against the USD) in addition to university tuition inflation."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .formula-box {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Education Planner</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Education Planning Calculator India (2026) – Plan Your Child's Future</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate the future cost of higher education in India or abroad. Account for education inflation and determine exactly how much you need to invest monthly to reach your goal by 2026.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-planning" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Calculator Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Goal Details
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Current Education Cost (₹)</label>
+                            <input type="number" id="monthlyInput" value="1000000" min="50000" step="50000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="monthlyRange" min="50000" max="20000000" step="50000" value="1000000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Years Until Education</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="yearsInput" value="10" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="25" step="1" value="10" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Expected Inflation (% p.a)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="rateInput" value="10" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="rateRange" min="1" max="20" step="0.5" value="10" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Expected ROI (% p.a)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="roiInput" value="12" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
+                            </div>
+                        </div>
+                        <input type="range" id="roiRange" min="1" max="30" step="0.5" value="12" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Calculate Savings
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Savings Needed</p>
+                        <h3 id="totalInvestedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Estimated Returns</p>
+                        <h3 id="wealthGainedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Education Goal Summary</h2>
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Required Monthly Savings</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="maturityValue">₹0</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Future Goal Value</p>
+                                <p class="font-bold text-slate-800 text-sm" id="finalMonthlyDisp">₹0</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs">Principal Savings</span>
+                            <span class="text-indigo-600 font-bold uppercase text-xs">Interest Growth</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                            <div id="returnsBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 50%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="investedLabel">₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="returnsLabel">₹0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Key Highlights Box -->
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            Key Strategic Insights
+                        </h4>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                            <li class="flex items-center gap-2">✅ Impact of Education Inflation</li>
+                            <li class="flex items-center gap-2">📉 Compounding benefits of early start</li>
+                            <li class="flex items-center gap-2">🔄 Monthly SIP investment analysis</li>
+                            <li class="flex items-center gap-2">⚡ Future cost vs current savings</li>
+                        </ul>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Yearly Growth Projection</h3>
+                    <p class="text-xs text-slate-500 mb-4">See how your education fund grows over the selected period with compounding interest.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Total Saved</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Interest Gained</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Corpus Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="projectionTable"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is Future Education Cost Calculated?</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        FV = PV × (1 + r)<sup>n</sup>
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
+                        <p><strong>FV:</strong> Future Cost of Education | <strong>PV:</strong> Current Cost</p>
+                        <p><strong>r:</strong> Yearly Inflation Rate | <strong>n:</strong> Years to Start</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example Planning Calculation</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                        If a degree costs <strong>₹10,00,000</strong> today and is needed in <strong>10 years</strong> with <strong>10% inflation</strong>:<br>
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Future Cost: <strong>₹25,93,742</strong></li>
+                            <li>Monthly Saving (at 12% ROI): <strong>₹11,163</strong></li>
+                            <li>Total Invested: <strong>₹13,39,560</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparative Content -->
+        <div class="space-y-12 mb-12">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about-planning">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Why Education Planning is Critical in India?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>
+                        Education inflation in India is significantly higher than general inflation, often touching double digits. A professional degree that costs ₹10 Lakhs today could easily exceed ₹40 Lakhs in 15 years. Without a dedicated <strong>Education Planning Calculator</strong>, most parents underestimate the required corpus, leading to heavy education loans later.
+                    </p>
+                    <p>
+                        Planning early allows you to leverage the power of compounding. By investing in equity mutual funds or Sukanya Samriddhi Yojana (for girls), you can build a massive corpus with small monthly contributions. Our calculator helps you bridge the gap between current affordability and future necessity.
+                    </p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Comparison: Starting Early vs. Delayed Planning</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+                    See how your monthly burden increases the longer you wait to start saving for your child's higher education. (Target Corpus: ₹50 Lakhs)
+                </p>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Horizon</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Monthly SIP (12% ROI)</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Total Invested</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">15 Years</td>
+                                <td class="p-4 border-b text-emerald-600 font-bold">₹10,000</td>
+                                <td class="p-4 border-b">₹18 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">10 Years</td>
+                                <td class="p-4 border-b font-semibold">₹21,500</td>
+                                <td class="p-4 border-b">₹25.8 Lakhs</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">5 Years</td>
+                                <td class="p-4 border-b text-red-500 font-bold">₹61,000</td>
+                                <td class="p-4 border-b text-red-500 font-bold">₹36.6 Lakhs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">Top Investment Options for Education Goals</h2>
+                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
+                    Choosing the right asset class is as important as the amount you save. Depending on your time horizon:
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">Long Term (10+ Years)</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Strategy: High Equity exposure. Direct Stocks or Equity Mutual Funds (Small/Midcap) can provide 12-15% CAGR.</p>
+                        <p class="text-lg font-bold text-white">Growth Focus</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Short Term (< 5 Years)</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Strategy: Capital Protection. Debt Funds, FDs, or Short-term Bonds are better to ensure the money is available when needed.</p>
+                        <p class="text-lg font-bold text-white">Stability Focus</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Education Planning Frequently Asked Questions (2026)</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Should I consider foreign education in my plan?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes, if you aspire for your child to study abroad, you must account for currency depreciation (USD/INR) alongside education inflation. Usually, adding an extra 3-4% to inflation covers this.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. How much should I invest monthly?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            This depends on the current cost of the degree and the time left. Use our <strong>Education Planning Calculator</strong> above to get the exact monthly SIP amount based on your specific requirements.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. What is the impact of taxes on education savings?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Most long-term capital gains (LTCG) in equity are taxed at 12.5% (above ₹1.25 Lakh). You should ideally target a corpus that is 10-15% higher than your actual goal to account for future taxes.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Should I choose an Education Loan or save for college?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Saving in advance is always cheaper as you earn interest on your savings, whereas a loan requires you to pay high interest (usually 9-12% p.a.). Education loans should only be a fallback for gaps in funding.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. How does currency depreciation affect foreign education planning?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            When planning for overseas education, you must account for Rupee depreciation (historically 3-4% p.a. against the USD) in addition to university tuition inflation.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. How to save for a child's education in India?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The best way is to start a Goal-based SIP in diversified equity mutual funds. For a girl child, Sukanya Samriddhi Yojana (SSY) is an excellent debt-based option with tax benefits.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. What are the tax-saving options for child education?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Under Section 80C, you can claim tax deductions for school/college tuition fees. For investments, SSY offers EEE status, while ELSS mutual funds offer 80C benefits during the accumulation phase.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="/sip" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate returns for monthly investments.</p>
+                    </a>
+                    <a href="/ssy-calculator" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SSY Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan savings for your girl child.</p>
+                    </a>
+                    <a href="/inflation-calculator" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Inflation Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check the impact of rising prices.</p>
+                    </a>
+                    <a href="/cagr-calculator" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Check compound growth rate.</p>
+                    </a>
+                    <a href="/lumpsum-calculator" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Lumpsum Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan your one-time investments.</p>
+                    </a>
+                    <a href="/personal-loan-calculator" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Education Loan EMI</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Calculate monthly loan repayments.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Popular Tools -->
+            <section class="max-w-6xl mx-auto py-8">
+                <h3 class="text-xl font-bold mb-8 text-slate-800">Popular Tools on Arthcalculator</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="/emi" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">EMI</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/sip" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">SIP</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/income-tax" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">TAX</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/gst" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">GST</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/fd" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">FD</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/retirement" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all flex flex-col items-center group">
+                        <span class="text-blue-600 font-bold group-hover:scale-110 transition-transform mb-1 text-sm">GOAL</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Planner</span>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                This calculator provides estimates based on compound interest and inflation formulas. Actual future costs and investment returns may vary based on market conditions and educational institution policies. This tool is for illustrative purposes only.
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- NAVBAR FOOTER LOADER SCRIPT (MANDATORY EXACT CODE) -->
+    <script>
+    fetch("/navbar.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+
+    document.getElementById("navbar").innerHTML=data;
+
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+
+    if(btn && menu){
+
+    btn.addEventListener("click",()=>{
+    menu.classList.toggle("hidden");
+    });
+
+    }
+
+    }
+    });
+
+    fetch("/footer.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+     document.getElementById("footer").innerHTML=data;
+     }
+    });
+    </script>
+    
+    <script>
+        const elements = {
+            monthlyInput: document.getElementById('monthlyInput'), // Current Cost
+            monthlyRange: document.getElementById('monthlyRange'), 
+            yearsInput: document.getElementById('yearsInput'), // Years to start
+            yearsRange: document.getElementById('yearsRange'),
+            rateInput: document.getElementById('rateInput'), // Inflation
+            rateRange: document.getElementById('rateRange'),
+            roiInput: document.getElementById('roiInput'), // ROI
+            roiRange: document.getElementById('roiRange'),
+            maturityValue: document.getElementById('maturityValue'), // Required Monthly
+            investedLabel: document.getElementById('investedLabel'), 
+            returnsLabel: document.getElementById('returnsLabel'), 
+            investedBar: document.getElementById('investedBar'), 
+            returnsBar: document.getElementById('returnsBar'), 
+            finalMonthlyDisp: document.getElementById('finalMonthlyDisp'), // Future Goal Value
+            totalInvestedMobile: document.getElementById('totalInvestedMobile'), // Total Invested
+            wealthGainedMobile: document.getElementById('wealthGainedMobile'), // Total Interest
+            projectionTable: document.getElementById('projectionTable'),
+            calcBtn: document.getElementById('calcBtn')
+        };
+
+        function formatIndian(val, withDenom = true) {
+            const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            const absoluteValue = absFormatter.format(val);
+            let indianDenom = "";
+            if (withDenom) {
+                if (val >= 10000000) indianDenom = ` (${(val / 10000000).toFixed(2)} Cr)`;
+                else if (val >= 100000) indianDenom = ` (${(val / 100000).toFixed(2)} L)`;
+            }
+            return "₹" + absoluteValue + indianDenom;
+        }
+
+        function formatCompact(val) {
+            try {
+                return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val);
+            } catch (e) {
+                return val.toLocaleString('en-IN');
+            }
+        }
+
+        function updateCalculations() {
+            const currentCost = parseFloat(elements.monthlyInput.value) || 0;
+            const years = parseFloat(elements.yearsInput.value) || 0;
+            const inflation = parseFloat(elements.rateInput.value) || 0;
+            const roi = parseFloat(elements.roiInput.value) || 0;
+
+            // 1. Calculate Future Cost
+            const futureCost = currentCost * Math.pow(1 + (inflation / 100), years);
+
+            // 2. Calculate Monthly Savings (PMT formula for Future Value)
+            // PMT = FV * (r / ((1+r)^n - 1))
+            const monthlyROI = (roi / 12) / 100;
+            const months = years * 12;
+            let requiredMonthly = 0;
+            if (months > 0) {
+                if (monthlyROI > 0) {
+                    requiredMonthly = futureCost * (monthlyROI / (Math.pow(1 + monthlyROI, months) - 1));
+                } else {
+                    requiredMonthly = futureCost / months;
+                }
+            }
+
+            const totalInvested = requiredMonthly * months;
+            const totalGains = futureCost - totalInvested;
+
+            // Results Display
+            elements.maturityValue.textContent = "₹" + (new Intl.NumberFormat('en-IN').format(Math.round(requiredMonthly)));
+            elements.finalMonthlyDisp.textContent = formatIndian(futureCost);
+            
+            elements.investedLabel.textContent = `Saved: ₹${formatCompact(totalInvested)}`;
+            elements.returnsLabel.textContent = `Growth: ₹${formatCompact(totalGains)}`;
+            
+            elements.totalInvestedMobile.textContent = formatIndian(totalInvested);
+            elements.wealthGainedMobile.textContent = formatIndian(totalGains);
+
+            // Bar visualization
+            const principalPercent = (totalInvested / futureCost) * 100 || 0;
+            const interestPercent = (totalGains / futureCost) * 100 || 0;
+            elements.investedBar.style.width = `${principalPercent}%`;
+            elements.returnsBar.style.width = `${interestPercent}%`;
+
+            renderTable(requiredMonthly, monthlyROI, years);
+        }
+
+        function renderTable(monthlySavings, monthlyRate, totalYears) {
+            elements.projectionTable.innerHTML = '';
+            let currentBalance = 0;
+            let totalInvested = 0;
+
+            for (let y = 1; y <= totalYears; y++) {
+                let yearlyInterest = 0;
+                let yearlyInvestment = 0;
+
+                for (let m = 1; m <= 12; m++) {
+                    const interest = currentBalance * monthlyRate;
+                    yearlyInterest += interest;
+                    yearlyInvestment += monthlySavings;
+                    currentBalance += (monthlySavings + interest);
+                }
+
+                totalInvested += yearlyInvestment;
+
+                const row = document.createElement('tr');
+                row.className = 'hover:bg-slate-50 transition-colors';
+                row.innerHTML = `
+                    <td class="px-3 py-3 border-b border-slate-100 font-medium text-slate-700">Year ${y}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-600">₹${formatCompact(totalInvested)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-indigo-600">₹${formatCompact(currentBalance - totalInvested)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right font-bold text-slate-800">₹${formatCompact(currentBalance)}</td>
+                `;
+                elements.projectionTable.appendChild(row);
+            }
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
+            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.monthlyInput, elements.monthlyRange);
+            setupSync(elements.yearsInput, elements.yearsRange);
+            setupSync(elements.rateInput, elements.rateRange);
+            setupSync(elements.roiInput, elements.roiRange);
+            elements.calcBtn.addEventListener('click', updateCalculations);
+            updateCalculations();
+        });
+    </script>
+</body>
+</html>
