@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Expense Tracker India 2026 – Daily Spending & Budget Manager</title>
+    <meta name="description" content="Use the professional Monthly Expense Tracker India (2026) to manage your daily spending. Categorize expenses, track remaining balance, and optimize your personal budget.">
+    <meta name="keywords" content="Monthly Expense Tracker India, Daily Spending Manager, Budget Tracker Tool, Expense Categorization, Personal Finance India 2026, Money Manager">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/expense-tracker/">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Monthly Expense Tracker India (2026) – Take Control of Your Spending">
+    <meta property="og:description" content="Track every Rupee with our easy-to-use expense manager. Categorize your spending and save more every month.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/expense-tracker/">
+    <meta property="og:image" content="/favicon.ico">
+    
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Monthly Expense Tracker India (2026)",
+      "description": "An interactive digital tool to log, categorize, and analyze monthly personal expenses.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Arthcalculator"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+     "@context": "https://schema.org",
+     "@type": "BreadcrumbList",
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://arthcalculator.in/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Financial Calculators",
+       "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Monthly Expense Tracker",
+       "item": "https://arthcalculator.in/expense-tracker/"
+      }
+     ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why should I track my monthly expenses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tracking expenses helps you identify 'money leaks,' manage your cash flow, and ensure that you are staying within your budget while working toward your savings goals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the best way to categorize expenses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Common categories include Housing (Rent/EMI), Food (Groceries/Dining), Transport, Utilities, Entertainment, and Savings. Separating Fixed and Variable expenses is also highly effective."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        }
+        input[type="range"] {
+            accent-color: #2563eb;
+            height: 6px;
+        }
+        .table-container::-webkit-scrollbar {
+            height: 4px;
+        }
+        .table-container::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .expense-row:hover .delete-btn {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+    <div id="navbar"></div>
+
+    <!-- Header & Breadcrumbs -->
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600">Monthly Expense Tracker</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Monthly Expense Tracker India (2026) – Daily Spending Manager</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Track your daily spending and manage your monthly budget effortlessly. Categorize your expenses, monitor your balance, and identify areas to save more money in 2026.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Strategy</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Main Interface -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs & Setup -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Monthly Budget Setup
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Monthly Budget (₹)</label>
+                            <input type="number" id="budgetInput" value="50000" min="1000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="budgetRange" min="5000" max="500000" step="1000" value="50000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <hr class="border-slate-100 my-6">
+
+                    <h2 class="text-md font-semibold mb-4 text-slate-700">Add New Expense</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-xs font-bold text-slate-400 uppercase block mb-1">Expense Description</label>
+                            <input type="text" id="descIn" placeholder="e.g., Grocery Shopping" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-medium">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-xs font-bold text-slate-400 uppercase block mb-1">Category</label>
+                                <select id="catIn" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-medium bg-white">
+                                    <option value="Housing">Housing</option>
+                                    <option value="Food">Food</option>
+                                    <option value="Transport">Transport</option>
+                                    <option value="Utilities">Utilities</option>
+                                    <option value="Lifestyle">Lifestyle</option>
+                                    <option value="Health">Health</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-xs font-bold text-slate-400 uppercase block mb-1">Amount (₹)</label>
+                                <input type="number" id="amtIn" placeholder="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all font-bold">
+                            </div>
+                        </div>
+                        <button type="button" id="addBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            Add Expense
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 transition-all hover:-translate-y-1">
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Spent</p>
+                        <h3 id="totalSpentCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
+                    </div>
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 transition-all hover:-translate-y-1">
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Remaining Balance</p>
+                        <h3 id="balanceCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹50,000</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Analytics & List -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Spending Analytics</h2>
+                    
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
+                        <div class="w-full">
+                            <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Budget Utilization</h2>
+                            <div class="mt-1">
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="utilizationDisp">0%</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold">Status</p>
+                                <p class="font-bold text-slate-800 text-sm" id="healthDisp">Under Budget</p>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Utilization Bar -->
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase text-xs">Spent Amount</span>
+                            <span class="text-slate-300 font-bold uppercase text-xs">Unused Budget</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                            <div id="spentBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 0%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="spentLabel">₹0</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-slate-200 rounded-sm mr-2"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="remainLabel">₹50,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-slate-100 mb-6">
+
+                    <!-- Expense List Table -->
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Expense Log</h3>
+                    <p class="text-xs text-slate-500 mb-4">A detailed record of your monthly transactions.</p>
+                    <div id="tableSection" class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                    <tr>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Category</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b">Description</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Amount (₹)</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="expenseList">
+                                    <tr>
+                                        <td colspan="4" class="px-3 py-10 text-center text-slate-400 italic">No expenses added yet. Start by adding one above.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Stats Box -->
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4" id="categoryStats">
+                        <!-- Dynamic categories will appear here -->
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">The "Envelope" Tracking Method</h3>
+                    <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+                        Digital expense tracking in 2026 is based on the traditional "envelope method." You assign a specific limit to each category at the start of the month. As you spend, you subtract the Rupee amount from that specific category's "envelope." This real-time feedback loop is proven to reduce impulse spending by over 25%.
+                    </p>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Balance = Budget - &Sigma;(Expenses)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="space-y-12 mb-12" id="about">
+            <!-- Educational Content Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Mastering Your Cash Flow with Expense Tracking</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>
+                        In the modern Indian economy of 2026, money moves faster than ever. With UPI, credit cards, and auto-debits, it is easy to lose track of where your salary goes. The <strong>Monthly Expense Tracker</strong> is not just a digital ledger; it is your most powerful tool for behavioral financial change. By logging your expenses daily, you create "financial awareness," which is the first step toward wealth creation.
+                    </p>
+                    <p>
+                        Most people fail at saving because they treat it as an afterthought. They spend first and save whatever is left. Successful individuals use a tracker to identify "discretionary leakages"—small, recurring costs like un-used OTT subscriptions, daily expensive coffees, or impulse online shopping—that can add up to thousands of Rupees every year.
+                    </p>
+                    <h3 class="text-xl font-bold text-slate-800 mt-8">Fixed vs. Variable Expenses</h3>
+                    <p>
+                        A professional expense tracking strategy divides spending into two main groups:
+                    </p>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Fixed Expenses:</strong> These are your non-negotiable costs like Rent/EMI, insurance premiums, and school fees. They rarely change and are predictable.</li>
+                        <li><strong>Variable Expenses:</strong> These are the "danger zones." Food delivery, entertainment, shopping, and fuel fall here. These fluctuate based on your choices and are the easiest to optimize.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Indian Middle-Class Spending Benchmarks (2026)</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50">
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Category</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Target %</th>
+                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Optimization Tip</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Housing & EMIs</td>
+                                <td class="p-4 border-b text-blue-600 font-bold">30% - 35%</td>
+                                <td class="p-4 border-b">Ensure Home Loan is under 30% of Take-home.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Food & Groceries</td>
+                                <td class="p-4 border-b text-blue-600 font-bold">15% - 20%</td>
+                                <td class="p-4 border-b">Reduce 'Dining Out' to once a week.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 border-b font-medium text-slate-600">Lifestyle & Leisure</td>
+                                <td class="p-4 border-b text-blue-600 font-bold">10% - 15%</td>
+                                <td class="p-4 border-b">Cancel OTT apps you haven't used in 30 days.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
+                <h2 class="text-2xl font-bold mb-6">The "Cash Flow Positive" Strategy</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-emerald-400 font-bold mb-2">The 24-Hour Review</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Never let 24 hours pass without logging your expenses. Memory fades, and small cash transactions are easily forgotten, skewing your monthly analysis.</p>
+                        <p class="text-lg font-bold text-white">Accuracy Wins</p>
+                    </div>
+                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                        <h4 class="text-blue-400 font-bold mb-2">Build a "Buffer"</h4>
+                        <p class="text-xs text-slate-400 mb-3 text-pretty">Always allocate 5% of your budget to 'Unforeseen' expenses. If you don't use it, it automatically becomes additional savings at the end of the month.</p>
+                        <p class="text-lg font-bold text-white">Stress-Free Tracking</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="max-w-4xl mx-auto" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Expense Tracking Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Is tracking expenses daily necessary?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Daily tracking is highly recommended for accuracy. Small 'frictionless' payments like UPI or cash for parking/snacks are often forgotten if not logged immediately, leading to a large discrepancy at month-end.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. How do I handle Credit Card spending in the tracker?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Treat Credit Card swipes as immediate expenses. Log the purchase when you make it, not when you pay the bill. This ensures your tracker reflects your real-time 'available' cash accurately.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Should I track business and personal expenses together?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            No. Mixing business and personal expenses is a common financial mistake. Always use separate bank accounts and separate trackers to maintain clean books for tax audits and personal budget clarity.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. What is 'Lifestyle Creep'?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Lifestyle creep happens when your expenses increase as your income rises. By using a tracker, you can spot when your "Wants" are growing faster than your "Savings," allowing you to course-correct early.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Does tracking help with Income Tax?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes. Categorizing expenses helps you identify tax-deductible costs like medical insurance premiums, charitable donations, and interest on home loans, making your tax filing easier.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. How to handle seasonal expenses like Diwali or School Fees?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            The best method is to amortize them. If school fees are ₹60,000 every six months, create a "Education sinking fund" and track a ₹10,000 monthly contribution as a fixed expense.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Can I track joint expenses with my spouse?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Absolutely. Sharing a digital tracker with a partner promotes transparency and helps in coordinating high-value goals like buying a house or planning family vacations.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. What is the 'Zero-Based' tracking method?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            In zero-based tracking, your Income minus Expenses (including savings) must equal zero. Every Rupee has a job. If you have surplus at the end of the month, you "spend" it on your debt or extra investments.
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Management Tools</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <a href="/budget-planner/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Budget Planner</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Set your 50/30/20 goals.</p>
+                    </a>
+                    <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Invest your monthly surplus.</p>
+                    </a>
+                    <a href="/emi/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan your fixed obligations.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Popular Tools -->
+            <section class="max-w-6xl mx-auto py-8 text-center">
+                <h3 class="text-xl font-bold mb-8 text-slate-800">Popular Tools on Arthcalculator</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                    <a href="/emi/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">EMI</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/sip/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">SIP</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/income-tax/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">Tax</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/gst/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">GST</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/fd/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">FD</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    </a>
+                    <a href="/retirement-withdrawal/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
+                        <span class="text-blue-600 font-bold block text-sm">GOAL</span>
+                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Planner</span>
+                    </a>
+                </div>
+            </section>
+
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
+                The Monthly Expense Tracker provides a mathematical summary of user-entered data. It does not provide legal, tax, or investment advice. Always consult a certified financial planner for personal financial decisions.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- NAVBAR FOOTER LOADER SCRIPT (MANDATORY EXACT CODE) -->
+    <script>
+    fetch("/navbar.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn && menu){
+    btn.addEventListener("click",()=>{
+    menu.classList.toggle("hidden");
+    });
+    }
+    }
+    });
+
+    fetch("/footer.html")
+    .then(res=>{
+     if(!res.ok) return "";
+     return res.text();
+    })
+    .then(data=>{
+     if(data){
+     document.getElementById("footer").innerHTML=data;
+     }
+    });
+    </script>
+    
+    <script>
+        // State Management
+        let expenses = [];
+        let budget = 50000;
+
+        const elements = {
+            budgetIn: document.getElementById('budgetInput'),
+            budgetRan: document.getElementById('budgetRange'),
+            descIn: document.getElementById('descIn'),
+            catIn: document.getElementById('catIn'),
+            amtIn: document.getElementById('amtIn'),
+            addBtn: document.getElementById('addBtn'),
+            calcBtn: document.getElementById('calcBtn'),
+            totalSpentCard: document.getElementById('totalSpentCard'),
+            balanceCard: document.getElementById('balanceCard'),
+            utilizationDisp: document.getElementById('utilizationDisp'),
+            healthDisp: document.getElementById('healthDisp'),
+            spentBar: document.getElementById('spentBar'),
+            spentLabel: document.getElementById('spentLabel'),
+            remainLabel: document.getElementById('remainLabel'),
+            expenseList: document.getElementById('expenseList'),
+            categoryStats: document.getElementById('categoryStats')
+        };
+
+        function formatIndian(val) {
+            const formatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
+            return "₹" + formatter.format(val);
+        }
+
+        function updateUI() {
+            const totalSpent = expenses.reduce((acc, curr) => acc + curr.amount, 0);
+            const balance = budget - totalSpent;
+            const utilization = budget > 0 ? (totalSpent / budget) * 100 : 0;
+
+            // Update Cards
+            elements.totalSpentCard.textContent = formatIndian(totalSpent);
+            elements.balanceCard.textContent = formatIndian(balance);
+            elements.utilizationDisp.textContent = utilization.toFixed(1) + "%";
+
+            // Update Bar
+            elements.spentBar.style.width = `${Math.min(100, utilization)}%`;
+            elements.spentLabel.textContent = formatIndian(totalSpent);
+            elements.remainLabel.textContent = formatIndian(balance);
+
+            // Health Status
+            let health = "Under Budget";
+            if (utilization >= 100) health = "Budget Overrun!";
+            else if (utilization >= 85) health = "Critical Limit";
+            else if (utilization >= 70) health = "Warning Level";
+            elements.healthDisp.textContent = health;
+            elements.healthDisp.className = utilization >= 100 ? "font-bold text-red-600 text-sm" : "font-bold text-slate-800 text-sm";
+
+            renderList();
+            renderCategoryStats();
+        }
+
+        function renderList() {
+            if (expenses.length === 0) {
+                elements.expenseList.innerHTML = `<tr><td colspan="4" class="px-3 py-10 text-center text-slate-400 italic">No expenses added yet. Start by adding one above.</td></tr>`;
+                return;
+            }
+
+            elements.expenseList.innerHTML = '';
+            expenses.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.className = 'expense-row group border-b border-slate-50 transition-colors hover:bg-slate-50/50';
+                row.innerHTML = `
+                    <td class="px-3 py-3">
+                        <span class="bg-blue-50 text-blue-600 text-[10px] font-bold px-2 py-1 rounded uppercase">${item.category}</span>
+                    </td>
+                    <td class="px-3 py-3 font-medium text-slate-700">${item.desc}</td>
+                    <td class="px-3 py-3 text-right font-bold text-slate-900">${formatIndian(item.amount)}</td>
+                    <td class="px-3 py-3 text-center">
+                        <button onclick="deleteExpense(${index})" class="delete-btn opacity-0 group-hover:opacity-100 text-red-400 hover:text-red-600 transition-all p-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                        </button>
+                    </td>
+                `;
+                elements.expenseList.appendChild(row);
+            });
+        }
+
+        function renderCategoryStats() {
+            const catTotals = expenses.reduce((acc, curr) => {
+                acc[curr.category] = (acc[curr.category] || 0) + curr.amount;
+                return acc;
+            }, {});
+
+            elements.categoryStats.innerHTML = '';
+            Object.keys(catTotals).forEach(cat => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-50 p-3 rounded-xl border border-slate-100";
+                card.innerHTML = `
+                    <p class="text-[10px] text-slate-400 uppercase font-bold mb-1">${cat}</p>
+                    <p class="font-bold text-slate-700 text-sm">${formatIndian(catTotals[cat])}</p>
+                `;
+                elements.categoryStats.appendChild(card);
+            });
+        }
+
+        function addExpense() {
+            const desc = elements.descIn.value.trim();
+            const category = elements.catIn.value;
+            const amount = parseFloat(elements.amtIn.value);
+
+            if (!desc || isNaN(amount) || amount <= 0) {
+                return;
+            }
+
+            expenses.unshift({ desc, category, amount });
+            elements.descIn.value = '';
+            elements.amtIn.value = '';
+            updateUI();
+        }
+
+        function deleteExpense(index) {
+            expenses.splice(index, 1);
+            updateUI();
+        }
+
+        function setupSync(input, range) {
+            input.addEventListener('input', () => { 
+                range.value = input.value; 
+                budget = parseFloat(input.value);
+                updateUI(); 
+            });
+            range.addEventListener('input', () => { 
+                input.value = range.value; 
+                budget = parseFloat(range.value);
+                updateUI(); 
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setupSync(elements.budgetIn, elements.budgetRan);
+            elements.addBtn.addEventListener('click', addExpense);
+            elements.calcBtn.addEventListener('click', updateUI);
+            
+            // Allow Enter key to add expense
+            elements.amtIn.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') addExpense();
+            });
+
+            updateUI();
+        });
+    </script>
+</body>
+</html>
