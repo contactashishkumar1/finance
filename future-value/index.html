@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Value Calculator India (2026) – Calculate Investment Growth</title>
-    <meta name="description" content="Use our Future Value Calculator India to estimate how your investment grows with compound interest. Calculate wealth gain, growth percentage, and view yearly projections.">
+    <meta name="description" content="Use our Future Value Calculator India to estimate how your investment grows using compound interest. Calculate wealth gain, growth percentage, and view yearly projections.">
     <meta name="keywords" content="Future Value Calculator India, FV Calculator, Investment Growth Calculator, Compound Interest Calculator India, Wealth Growth 2026">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/future-value/">
@@ -73,10 +73,34 @@
         },
         {
           "@type": "Question",
-          "name": "How does compounding frequency affect Future Value?",
+          "name": "How is Future Value calculated?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The more frequently interest is compounded (e.g., monthly vs annual), the higher the Future Value will be, as you earn interest on previously earned interest more often."
+            "text": "FV is calculated using the formula FV = PV × (1 + r/n)^(nt), where PV is present value, r is interest rate, n is compounding frequency, and t is time in years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a higher compounding frequency increase Future Value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the more frequently interest is compounded (e.g., monthly vs annually), the higher the Future Value will be, as interest is earned on interest more often."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the importance of Future Value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It helps investors plan for long-term goals like retirement or education by showing how much their current savings will grow over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Future Value different from CAGR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Future Value is the absolute maturity amount, whereas CAGR is the annual growth rate required to reach that amount over time."
           }
         }
       ]
@@ -152,7 +176,6 @@
             font-family: 'Courier New', Courier, monospace;
             overflow-x: auto;
         }
-        /* Custom Toggle Styling to match existing theme */
         .freq-btn.active {
             background-color: #2563eb;
             color: white;
@@ -174,7 +197,7 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="text-blue-600">Future Value Calculator</li>
@@ -185,7 +208,7 @@
                 <div class="max-w-3xl">
                     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Future Value Calculator India (2026) – Calculate Investment Growth</h1>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
-                        Estimate the future worth of your lump sum investments. Our Future Value calculator helps you plan your financial goals in India for 2026 by showing how compound interest grows your principal over time.
+                        Estimate the future worth of your lump sum investments using our Future Value calculator. Plan your financial goals in India for 2026 by seeing how compound interest grows your principal over time.
                     </p>
                     
                     <!-- Anchor Jump Links -->
@@ -221,15 +244,15 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Present Value (₹)</label>
-                            <input type="number" id="monthlyInput" value="100000" min="1000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" id="pvInput" value="100000" min="1000" step="1000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
-                        <input type="range" id="monthlyRange" min="1000" max="10000000" step="1000" value="100000" class="w-full py-2 cursor-pointer">
+                        <input type="range" id="pvRange" min="1000" max="10000000" step="1000" value="100000" class="w-full py-2 cursor-pointer">
                     </div>
 
                     <!-- Interest Rate -->
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
-                            <label class="text-sm font-medium text-slate-600">Expected Return (% p.a)</label>
+                            <label class="text-sm font-medium text-slate-600">Interest Rate (% p.a)</label>
                             <div class="relative w-full sm:w-28">
                                 <input type="number" id="rateInput" value="12" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                                 <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">%</span>
@@ -250,18 +273,13 @@
                         <input type="range" id="yearsRange" min="1" max="50" step="1" value="10" class="w-full py-2 cursor-pointer">
                     </div>
 
-                    <!-- Compounding Toggle (Addition within layout) -->
+                    <!-- Compounding Toggle -->
                     <div class="mb-6">
                         <label class="text-sm font-medium text-slate-600 mb-3 block">Compounding Frequency</label>
                         <div class="flex bg-slate-50 p-1 rounded-xl border border-slate-200">
                             <button id="compAnnually" class="freq-btn active flex-1 py-2 text-xs font-bold rounded-lg transition-all">Annually</button>
                             <button id="compMonthly" class="freq-btn flex-1 py-2 text-xs font-bold rounded-lg transition-all">Monthly</button>
                         </div>
-                    </div>
-
-                    <div id="stepUpContainer" class="hidden">
-                         <input type="number" id="stepUpInput" value="0">
-                         <input type="range" id="stepUpRange" value="0">
                     </div>
 
                     <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
@@ -273,11 +291,11 @@
                 <!-- Summary Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200">
-                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Invested Amount</p>
+                        <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Present Value</p>
                         <h3 id="totalInvestedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
                     <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200">
-                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Wealth Gained</p>
+                        <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Gain</p>
                         <h3 id="wealthGainedMobile" class="text-lg sm:text-xl font-bold leading-tight break-all">₹0</h3>
                     </div>
                 </div>
@@ -349,9 +367,10 @@
                                 <thead class="bg-slate-50 sticky top-0 z-10">
                                     <tr>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b">Year</th>
-                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Opening Bal</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Opening Balance</th>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Interest Earned</th>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Closing Balance</th>
+                                        <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Total Gain</th>
                                     </tr>
                                 </thead>
                                 <tbody id="projectionTable"></tbody>
@@ -369,8 +388,8 @@
                     <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
                         <p><strong>FV:</strong> Future Value | <strong>PV:</strong> Present Value (Initial Investment)</p>
                         <p><strong>r:</strong> Annual Interest Rate (as decimal)</p>
-                        <p><strong>n:</strong> Number of times interest compounds per year</p>
-                        <p><strong>t:</strong> Number of years</p>
+                        <p><strong>n:</strong> Compounding frequency (1 for annual, 12 for monthly)</p>
+                        <p><strong>t:</strong> Time period in years</p>
                     </div>
 
                     <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example FV Calculation (India)</h3>
@@ -390,11 +409,10 @@
         <!-- Comparative Content -->
         <div class="space-y-12 mb-12">
             
-            <!-- Tenure Comparison Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6" id="about-fv">What is Future Value (FV)?</h2>
                 <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                    Future Value (FV) is a financial concept that determines the value of a current asset at a specified date in the future, based on an assumed rate of growth. In India, investors use FV to plan for long-term goals like retirement, child education, or buying property. Understanding FV helps you see how inflation-adjusted returns or high-growth equity investments can multiply your wealth.
+                    Future Value (FV) is a financial concept that determines the value of a current asset at a specified date in the future, based on an assumed rate of growth. In India, investors use FV to plan for long-term goals like <a href="/retirement/" class="text-blue-600 hover:underline font-semibold">retirement planning</a>, child education, or buying property. Understanding FV helps you see how <a href="/inflation/" class="text-blue-600 hover:underline font-semibold">inflation-adjusted</a> returns or high-growth equity investments can multiply your wealth.
                 </p>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse border border-slate-100">
@@ -417,7 +435,7 @@
                                 <td class="p-4 border-b text-emerald-600 font-bold">High Growth</td>
                             </tr>
                             <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Retirement Planning</td>
+                                <td class="p-4 border-b font-medium text-slate-600">Retirement Fund</td>
                                 <td class="p-4 border-b text-blue-600">20+ Years</td>
                                 <td class="p-4 border-b text-red-500 font-bold">Exponential Wealth</td>
                             </tr>
@@ -426,57 +444,27 @@
                 </div>
             </section>
 
-            <!-- Comparison Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Future Value vs CAGR – What's the Difference?</h2>
                 <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                    While <a href="/fd" class="text-blue-600 hover:underline font-semibold">Fixed Deposits (FD)</a> have a fixed FV, equity investments are measured by <a href="/cagr" class="text-blue-600 hover:underline font-semibold">CAGR (Compound Annual Growth Rate)</a>. FV tells you the <strong>final amount</strong> you will receive, whereas CAGR tells you the <strong>annual rate</strong> at which your money grew to reach that amount. Both are critical for Indian investors to evaluate performance against inflation.
+                    While <a href="/fd/" class="text-blue-600 hover:underline font-semibold">Fixed Deposits (FD)</a> have a fixed FV, equity investments are often measured by <a href="/cagr/" class="text-blue-600 hover:underline font-semibold">CAGR (Compound Annual Growth Rate)</a>. FV tells you the <strong>final amount</strong> you will receive, whereas CAGR tells you the <strong>annual rate</strong> at which your money grew. Both are critical for <a href="/lumpsum/" class="text-blue-600 hover:underline font-semibold">lumpsum investment</a> planning.
                 </p>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse border border-slate-100">
-                        <thead>
-                            <tr class="bg-slate-50">
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Metric</th>
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Future Value (FV)</th>
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">CAGR</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-sm">
-                            <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Focus</td>
-                                <td class="p-4 border-b text-emerald-600 font-bold">Absolute Maturity Amount</td>
-                                <td class="p-4 border-b">Percentage Growth Rate</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Usage</td>
-                                <td class="p-4 border-b">Setting Target Goals</td>
-                                <td class="p-4 border-b text-blue-600 font-semibold">Comparing Investments</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Primary Variable</td>
-                                <td class="p-4 border-b">Time and Rate</td>
-                                <td class="p-4 border-b text-red-500">Starting and Ending Values</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
             </section>
 
-            <!-- Goal Section -->
             <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
                 <h2 class="text-2xl font-bold mb-6">Importance of Calculating Future Value</h2>
                 <p class="text-slate-300 text-sm mb-8 leading-relaxed">
-                    Calculating FV is the first step toward financial freedom. It allows you to:
+                    Calculating FV is the first step toward financial freedom. It allows you to beat inflation and align your goals with actual data. Use our <a href="/sip/" class="text-blue-600 hover:underline font-semibold">SIP Calculator</a> to compare recurring vs one-time investments.
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                         <h4 class="text-emerald-400 font-bold mb-2">Beat Inflation</h4>
-                        <p class="text-xs text-slate-400 mb-3 text-pretty">Strategy: Ensure your maturity value covers the cost of goods in the future. A ₹1 Cr goal today might require ₹2.5 Cr in 15 years.</p>
+                        <p class="text-xs text-slate-400 mb-3">Ensure your maturity value covers future costs of living.</p>
                         <p class="text-lg font-bold text-white">Protect Purchasing Power</p>
                     </div>
                     <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                         <h4 class="text-blue-400 font-bold mb-2">Goal Alignment</h4>
-                        <p class="text-xs text-slate-400 mb-3 text-pretty">Strategy: Calculate FV to decide if your current savings rate is sufficient for major life events like marriages or higher studies.</p>
+                        <p class="text-xs text-slate-400 mb-3">Decide if your current savings rate is sufficient for major events.</p>
                         <p class="text-lg font-bold text-white">Data-Driven Planning</p>
                     </div>
                 </div>
@@ -488,104 +476,117 @@
                 <div class="space-y-4" id="faqContainer">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What is the difference between Simple Interest and Compound Interest?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What is Future Value (FV)?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Simple interest is calculated only on the principal amount. Compound interest (used in FV) is calculated on the principal and the accumulated interest from previous periods, leading to exponential growth.
+                            Future Value is the estimated worth of a current asset at a future date based on an assumed rate of growth and compounding.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. How does the "Time Period" affect my Future Value?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. How is Future Value calculated?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Time is the most powerful factor in wealth creation. Due to compounding, your money grows much faster in the later years of your investment tenure than in the initial years.
+                            FV is calculated using the formula FV = PV × (1 + r/n)^(nt), where PV is present value, r is rate, n is compounding frequency, and t is time.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Does inflation affect Future Value?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Does compounding frequency affect the final amount?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Standard FV calculations do not account for inflation. To find your "Real" Future Value, you should subtract the expected inflation rate (e.g., 6%) from your investment's nominal return rate.
+                            Yes, the more frequently interest is compounded (e.g., monthly), the higher the Future Value due to interest being earned on interest more often.
                         </div>
                     </details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Which compounding frequency is best?</span>
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. What is the difference between FV and CAGR?</span>
                             <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Higher frequency compounding is always mathematically better for the investor. Monthly compounding results in a slightly higher Future Value than annual compounding for the same interest rate and tenure.
+                            FV is the total amount you will have in the future, while CAGR is the annual growth rate that gets you there.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Is inflation considered in Future Value?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Standard FV calculations don't account for inflation. You should subtract the inflation rate from your expected return to see the "Real" Future Value.
                         </div>
                     </details>
                 </div>
             </section>
 
-            <!-- Quick Summary -->
             <section class="bg-blue-600 p-8 rounded-2xl text-white">
                 <h2 class="text-xl font-bold mb-4">Quick Summary</h2>
                 <div class="text-sm space-y-2 opacity-95 leading-relaxed">
-                    <p>• Future Value (FV) estimates the growth of a lump sum investment over time.</p>
-                    <p>• It relies on the <strong>Power of Compounding</strong> to multiply wealth.</p>
-                    <p>• Longer time periods lead to significantly higher maturity amounts.</p>
-                    <p>• Compounding frequency (Monthly/Annual) impacts the final yield.</p>
+                    <p>• Future Value (FV) estimates the growth of a lump sum over time.</p>
+                    <p>• Compounding frequency significantly impacts final wealth.</p>
+                    <p>• Use FV to plan long-term milestones effectively.</p>
                 </div>
             </section>
 
-            <!-- Related Calculators -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
                 <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial Calculators</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <a href="/sip" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                    <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
                         <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">SIP Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Plan monthly mutual fund growth.</p>
+                        <p class="text-[10px] text-slate-500 mt-1">Plan monthly fund growth.</p>
                     </a>
-                    <a href="/emi" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                    <a href="/emi/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
                         <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
                         <p class="text-[10px] text-slate-500 mt-1">Calculate loan installments.</p>
                     </a>
-                    <a href="/cagr" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
+                    <a href="/cagr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
                         <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Check compound annual growth.</p>
+                        <p class="text-[10px] text-slate-500 mt-1">Check growth rates.</p>
                     </a>
                 </div>
             </section>
 
-            <!-- Disclaimer -->
             <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
                 <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                This calculator provides mathematical projections based on the inputs provided and compounding formulas. Market returns are not guaranteed. Actual Future Value may vary due to taxes (LTCG/STCG), inflation, and market volatility.
+                Projections are based on mathematical formulas. Market returns are not guaranteed. Actual value may vary due to taxes and market volatility.
                 <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
             </div>
         </div>
     </main>
 
 <div id="footer"></div>
+
 <script>
-// Mock fetching logic for demo
-document.getElementById("navbar").innerHTML = `<nav class='bg-white border-b py-4 px-6 flex justify-between items-center max-w-6xl mx-auto rounded-b-xl'><div class='font-bold text-xl text-blue-600'>ArthCalculator</div><div class='hidden md:flex gap-6 text-sm font-semibold text-slate-600'><a href='/'>Home</a><a href='/calculators'>Calculators</a><a href='/contact'>Contact</a></div></nav>`;
-document.getElementById("footer").innerHTML = `<footer class='text-center py-10 text-slate-400 text-xs border-t'>&copy; 2026 ArthCalculator. All rights reserved.</footer>`;
+    fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar").innerHTML = data;
+    });
+
+    fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
 </script>
     
     <script>
-        // DOM Elements
         const elements = {
-            monthlyInput: document.getElementById('monthlyInput'), // Present Value
-            monthlyRange: document.getElementById('monthlyRange'), 
+            pvInput: document.getElementById('pvInput'),
+            pvRange: document.getElementById('pvRange'), 
             rateInput: document.getElementById('rateInput'),
             rateRange: document.getElementById('rateRange'),
             yearsInput: document.getElementById('yearsInput'),
             yearsRange: document.getElementById('yearsRange'),
-            maturityValue: document.getElementById('maturityValue'), // FV
+            maturityValue: document.getElementById('maturityValue'),
             investedLabel: document.getElementById('investedLabel'), 
             returnsLabel: document.getElementById('returnsLabel'),
             investedBar: document.getElementById('investedBar'), 
             returnsBar: document.getElementById('returnsBar'),
-            finalMonthlyDisp: document.getElementById('finalMonthlyDisp'), // Growth %
+            finalMonthlyDisp: document.getElementById('finalMonthlyDisp'),
             totalInvestedMobile: document.getElementById('totalInvestedMobile'), 
             wealthGainedMobile: document.getElementById('wealthGainedMobile'), 
             projectionTable: document.getElementById('projectionTable'),
@@ -594,7 +595,7 @@ document.getElementById("footer").innerHTML = `<footer class='text-center py-10 
             compMonthly: document.getElementById('compMonthly')
         };
 
-        let compoundingFrequency = 1; // 1 for annual, 12 for monthly
+        let compoundingFrequency = 1;
 
         function formatIndian(val, withDenom = true) {
             const absFormatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
@@ -616,28 +617,25 @@ document.getElementById("footer").innerHTML = `<footer class='text-center py-10 
         }
 
         function updateCalculations() {
-            const PV = parseFloat(elements.monthlyInput.value) || 0;
+            const PV = parseFloat(elements.pvInput.value) || 0;
             const annualRate = parseFloat(elements.rateInput.value) || 0;
             const t = parseFloat(elements.yearsInput.value) || 0;
             const r = annualRate / 100;
             const n = compoundingFrequency;
 
-            // Future Value Formula: FV = PV * (1 + r/n)^(nt)
             const FV = PV * Math.pow(1 + (r / n), n * t);
             const totalGain = FV - PV;
             const growthPercent = PV > 0 ? (totalGain / PV) * 100 : 0;
 
-            // Results Display
             elements.maturityValue.textContent = "₹" + (new Intl.NumberFormat('en-IN').format(Math.round(FV)));
             elements.finalMonthlyDisp.textContent = growthPercent.toFixed(1) + "%";
             
             elements.investedLabel.textContent = `Invested: ₹${formatCompact(PV)}`;
-            elements.returnsLabel.textContent = `Wealth Gained: ₹${formatCompact(totalGain)}`;
+            elements.returnsLabel.textContent = `Total Gain: ₹${formatCompact(totalGain)}`;
             
             elements.totalInvestedMobile.textContent = formatIndian(PV);
             elements.wealthGainedMobile.textContent = formatIndian(totalGain);
 
-            // Bar visualization
             const investedPercent = (PV / FV) * 100 || 0;
             const returnsPercent = (totalGain / FV) * 100 || 0;
             elements.investedBar.style.width = `${investedPercent}%`;
@@ -649,14 +647,12 @@ document.getElementById("footer").innerHTML = `<footer class='text-center py-10 
         function renderTable(pv, r, years, n) {
             elements.projectionTable.innerHTML = '';
             let currentBalance = pv;
-            let cumulativeGain = 0;
 
             for (let y = 1; y <= years; y++) {
                 const openingBal = currentBalance;
-                // Calculate balance at end of year y
                 const closingBal = pv * Math.pow(1 + (r / n), n * y);
                 const interestEarned = closingBal - openingBal;
-                cumulativeGain = closingBal - pv;
+                const totalGainSoFar = closingBal - pv;
 
                 const row = document.createElement('tr');
                 row.className = 'hover:bg-slate-50 transition-colors';
@@ -665,6 +661,7 @@ document.getElementById("footer").innerHTML = `<footer class='text-center py-10 
                     <td class="px-3 py-3 border-b border-slate-100 text-right text-slate-600">₹${formatCompact(openingBal)}</td>
                     <td class="px-3 py-3 border-b border-slate-100 text-right text-indigo-600">₹${formatCompact(interestEarned)}</td>
                     <td class="px-3 py-3 border-b border-slate-100 text-right font-bold text-slate-800">₹${formatCompact(closingBal)}</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-emerald-600">₹${formatCompact(totalGainSoFar)}</td>
                 `;
                 elements.projectionTable.appendChild(row);
                 currentBalance = closingBal;
@@ -677,7 +674,7 @@ document.getElementById("footer").innerHTML = `<footer class='text-center py-10 
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            setupSync(elements.monthlyInput, elements.monthlyRange);
+            setupSync(elements.pvInput, elements.pvRange);
             setupSync(elements.rateInput, elements.rateRange);
             setupSync(elements.yearsInput, elements.yearsRange);
 
