@@ -18,23 +18,6 @@
     <!-- Chart.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="SWP Calculator India – Systematic Withdrawal Plan Calculator (2026)">
-    <meta property="og:description" content="Plan your retirement income with precision. Calculate monthly withdrawals and visualize your future balance with interactive charts.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arthcalculator.in/swp/">
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "SWP Calculator India (2026)",
-      "description": "Professional tool to calculate monthly withdrawals and remaining balance for Systematic Withdrawal Plans in India.",
-      "publisher": { "@type": "Organization", "name": "ArthCalculator" }
-    }
-    </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
@@ -54,7 +37,6 @@
         .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
         .btn-outline { border: 1px solid #e2e8f0; transition: all 0.2s; }
         .btn-outline:hover { border-color: #2563eb; color: #2563eb; background: #eff6ff; }
-        /* Fix for chart and table visibility */
         .chart-wrapper { height: 320px; width: 100%; position: relative; }
     </style>
 </head>
@@ -151,7 +133,7 @@
                 </div>
             </div>
 
-            <!-- Results -->
+            <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
                     <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2">Final Balance Remaining</h2>
@@ -159,8 +141,8 @@
 
                     <div class="mb-8">
                         <div class="flex justify-between text-[11px] mb-2 font-bold uppercase">
-                            <span class="text-blue-600">Total Withdrawn</span>
-                            <span class="text-emerald-600">Remaining Corpus</span>
+                            <span class="text-blue-600">Total Amount Withdrawn</span>
+                            <span class="text-emerald-600">Final Balance</span>
                         </div>
                         <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
                             <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
@@ -209,32 +191,27 @@
             </div>
         </div>
 
-        <!-- Easy Breakdown Section -->
+        <!-- Educational Content Section -->
         <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12 text-pretty">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-wide">Steady Income vs Capital Growth (Simple Breakdown)</h2>
+            <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-wide">Steady Income vs Capital Growth</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="p-6 bg-blue-50 border border-blue-100 rounded-2xl">
-                    <h3 class="font-bold text-blue-900 text-lg mb-3">1. Monthly Cashflow (The "Paycheck")</h3>
-                    <p class="text-blue-800 text-sm leading-relaxed">SWP acts like a regular paycheck you pay yourself. You decide how much to take out every month.</p>
-                    <p class="mt-4 text-xs font-bold text-blue-600 uppercase tracking-wide">Example:</p>
-                    <p class="text-blue-700 text-xs mt-1">If you take ₹25,000 every month, you get the peace of mind that your expenses are covered without manually selling fund units every time.</p>
+                    <h3 class="font-bold text-blue-900 text-lg mb-3">1. Monthly Cashflow Logic</h3>
+                    <p class="text-blue-800 text-sm leading-relaxed">In this calculator, the withdrawal happens at the **start of each month**. Interest for that month is then calculated on the remaining balance. This accurately mirrors how Indian mutual fund houses execute SWP instructions.</p>
                 </div>
                 <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
-                    <h3 class="font-bold text-emerald-900 text-lg mb-3">2. Remaining Corpus (The "Growth Engine")</h3>
-                    <p class="text-emerald-800 text-sm leading-relaxed">Unlike a standard withdrawal, the money left in the fund continues to earn returns. If you withdraw less than what you earn, your fund can grow even while you spend.</p>
-                    <p class="mt-4 text-xs font-bold text-emerald-600 uppercase tracking-wide">Example:</p>
-                    <p class="text-emerald-700 text-xs mt-1">On a ₹50 Lakh corpus at 10% return, you earn ₹5 Lakh/year. If you only withdraw ₹3 Lakh/year, your corpus actually increases to ₹52 Lakh!</p>
+                    <h3 class="font-bold text-emerald-900 text-lg mb-3">2. Wealth Preservation</h3>
+                    <p class="text-emerald-800 text-sm leading-relaxed">If your expected ROI on the residual balance is higher than your withdrawal rate, your corpus will actually grow over time, creating a "perpetual" source of income.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SEO Content Sections -->
         <div class="space-y-12 mb-12">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">What is a Systematic Withdrawal Plan (SWP)?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p>A Systematic Withdrawal Plan (SWP) is a facility offered by mutual funds that allows an investor to withdraw a fixed amount of money at regular intervals (usually monthly). It is the mathematical opposite of a <a href="/sip" class="text-blue-600 underline font-medium">SIP (Systematic Investment Plan)</a>.</p>
-                    <p>While SIP is used to accumulate wealth, SWP is the primary tool for <strong>wealth distribution</strong>. It is widely used by retirees in India to generate a steady monthly income from their accumulated corpus while keeping the remaining principal invested in market-linked instruments for better returns than traditional <a href="/fd" class="text-blue-600 underline font-medium">Fixed Deposits</a>.</p>
+                    <p>While SIP is used to accumulate wealth, SWP is the primary tool for <strong>wealth distribution</strong>. It is widely used by retirees in India to generate a steady monthly income from their accumulated corpus while keeping the remaining principal invested in market-linked instruments for better returns than traditional Fixed Deposits.</p>
                 </div>
             </section>
 
@@ -244,17 +221,17 @@
                 <ul class="list-disc ml-5 space-y-3 mb-4">
                     <li><strong>Tax Efficiency:</strong> Only the capital gains portion of the withdrawal is taxed, making it more efficient than interest from savings accounts.</li>
                     <li><strong>Flexibility:</strong> You can increase, decrease, or stop the withdrawal amount anytime based on your needs.</li>
-                    <li><strong>Inflation Protection:</strong> Because the remaining balance stays in equity or hybrid funds, it has the potential to grow and hedge against <a href="/inflation" class="text-blue-600 underline font-medium">rising costs</a>.</li>
+                    <li><strong>Inflation Protection:</strong> Because the remaining balance stays in equity or hybrid funds, it has the potential to grow and hedge against rising costs.</li>
                 </ul>
             </section>
 
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">SWP Formula</h2>
-                <div class="formula-box text-blue-800 text-center mb-6 text-sm">Balance<sub>new</sub> = [Balance<sub>prev</sub> × (1 + r)] − W</div>
-                <p class="text-xs text-slate-500 font-medium"><strong>Balance<sub>new</sub>:</strong> New Balance | <strong>r:</strong> Monthly Return Rate | <strong>W:</strong> Withdrawal Amount</p>
+                <div class="formula-box text-blue-800 text-center mb-6 text-sm">Balance<sub>new</sub> = [Balance<sub>prev</sub> - W] × (1 + r)</div>
+                <p class="text-xs text-slate-500 font-medium text-center"><strong>Balance<sub>new</sub>:</strong> End of Month Balance | <strong>r:</strong> Monthly Return Rate | <strong>W:</strong> Monthly Withdrawal</p>
             </section>
 
-            <!-- FAQ Section (10 items) -->
+            <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4">
@@ -294,9 +271,9 @@
                 </div>
             </section>
 
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
                 <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
-                Estimated results for educational purposes only. Mutual fund investments are subject to market risks.
+                Estimated results for educational purposes only. Mutual fund investments are subject to market risks. Past performance is not an indicator of future returns.
                 <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
             </div>
         </div>
@@ -305,7 +282,6 @@
     <div id="footer"></div>
 
     <script>
-        // DOM Elements
         const elements = {
             pInput: document.getElementById('principalInput'),
             pRange: document.getElementById('principalRange'), 
@@ -342,16 +318,17 @@
 
         function updateCalculations() {
             const principal = parseFloat(elements.pInput.value) || 0;
-            const withdrawal = parseFloat(elements.wInput.value) || 0;
+            const monthlyWithdrawal = parseFloat(elements.wInput.value) || 0;
             const rAnnual = parseFloat(elements.rateInput.value) || 0;
             const years = parseFloat(elements.yearsInput.value) || 0;
 
             const rMonthly = rAnnual / 12 / 100;
-            const totalMonths = years * 12;
+            const totalMonths = Math.round(years * 12);
 
             let balance = principal;
             let totalWithdrawn = 0;
             let totalInterest = 0;
+            
             const labels = ['0'];
             const balanceData = [principal];
             const withdrawData = [0];
@@ -361,42 +338,64 @@
             let yearlyInterest = 0;
 
             for (let m = 1; m <= totalMonths; m++) {
+                // 1. Withdrawal happens at start of month (BOP)
+                let currentWithdrawal = 0;
+                if (balance > 0) {
+                    currentWithdrawal = Math.min(monthlyWithdrawal, balance);
+                    balance -= currentWithdrawal;
+                }
+                
+                // 2. Interest is calculated on the REMAINING balance (Post-Withdrawal Logic)
                 const interestEarned = balance * rMonthly;
+                balance += interestEarned;
+
+                // Accumulate stats
+                totalWithdrawn += currentWithdrawal;
+                yearlyWithdraw += currentWithdrawal;
                 totalInterest += interestEarned;
                 yearlyInterest += interestEarned;
-
-                balance = (balance + interestEarned) - withdrawal;
-                const actualWithdrawal = balance < 0 ? (withdrawal + balance) : withdrawal;
-                if (balance < 0) balance = 0;
-
-                totalWithdrawn += actualWithdrawal;
-                yearlyWithdraw += actualWithdrawal;
 
                 if (m % 12 === 0 || m === totalMonths) {
                     const year = Math.ceil(m / 12);
                     labels.push('Y' + year);
-                    balanceData.push(balance);
-                    withdrawData.push(totalWithdrawn);
+                    balanceData.push(Math.round(balance));
+                    withdrawData.push(Math.round(totalWithdrawn));
                     
-                    tableRows.push(`<tr><td class="px-4 py-3 border-b text-slate-600 font-medium">Year ${year}</td><td class="px-4 py-3 border-b text-right">${formatInr(yearlyWithdraw)}</td><td class="px-4 py-3 border-b text-right text-emerald-600">+ ${formatInr(yearlyInterest)}</td><td class="px-4 py-3 border-b text-right font-bold text-slate-800">${formatInr(balance)}</td></tr>`);
+                    tableRows.push(`
+                        <tr class="hover:bg-slate-50 transition-colors">
+                            <td class="px-4 py-3 border-b text-slate-600 font-medium">Year ${year}</td>
+                            <td class="px-4 py-3 border-b text-right font-medium">${formatInr(yearlyWithdraw)}</td>
+                            <td class="px-4 py-3 border-b text-right text-emerald-600">+ ${formatInr(yearlyInterest)}</td>
+                            <td class="px-4 py-3 border-b text-right font-bold text-slate-800">${formatInr(balance)}</td>
+                        </tr>
+                    `);
                     
                     yearlyWithdraw = 0;
                     yearlyInterest = 0;
                 }
+                
+                if (balance <= 0 && currentWithdrawal < monthlyWithdrawal) break; 
             }
 
+            // UI Display
             elements.finalBalanceDisp.textContent = formatInr(balance);
             elements.investedLabel.textContent = "Total Withdrawn: " + formatCompact(totalWithdrawn);
-            elements.returnsLabel.textContent = "Balance: " + formatCompact(balance);
+            elements.returnsLabel.textContent = "Remaining: " + formatCompact(balance);
 
-            const totalPie = totalWithdrawn + balance;
-            const wPerc = (totalWithdrawn / totalPie) * 100 || 0;
+            const totalScope = totalWithdrawn + balance;
+            const wPerc = totalScope > 0 ? (totalWithdrawn / totalScope) * 100 : 0;
             elements.investedBar.style.width = wPerc + "%";
             elements.returnsBar.style.width = (100 - wPerc) + "%";
 
             elements.insightsBox.innerHTML = `
-                <p>💡 <strong>Analysis:</strong> You started with ${formatInr(principal)} and withdrew <strong>${formatInr(totalWithdrawn)}</strong> over ${years} years.</p>
-                <p class="mt-2 text-slate-600">💰 Interest Generated: Your corpus earned <strong>${formatInr(totalInterest)}</strong> in returns during this period.</p>
+                <div class="flex items-start gap-3">
+                    <span class="text-xl">📊</span>
+                    <div>
+                        <p class="font-bold text-slate-800">Calculation Result:</p>
+                        <p class="mt-1">You started with ${formatInr(principal)} and withdrew <strong>${formatInr(totalWithdrawn)}</strong> over the period.</p>
+                        <p class="mt-2 text-emerald-700">Wealth Gained: Your corpus earned <strong>${formatInr(totalInterest)}</strong> in returns on the residual balance.</p>
+                    </div>
+                </div>
             `;
 
             elements.projectionTable.innerHTML = tableRows.join('');
@@ -411,11 +410,19 @@
                 data: {
                     labels: labels,
                     datasets: [
-                        { label: 'Remaining Balance', data: balanceData, borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', fill: true, tension: 0.4 },
-                        { label: 'Total Withdrawn', data: withdrawData, borderColor: '#3b82f6', backgroundColor: 'rgba(59, 130, 246, 0.1)', fill: true, tension: 0.4 }
+                        { label: 'Remaining Balance', data: balanceData, borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', fill: true, tension: 0.3, pointRadius: 2 },
+                        { label: 'Total Withdrawn', data: withdrawData, borderColor: '#3b82f6', backgroundColor: 'rgba(59, 130, 246, 0.1)', fill: true, tension: 0.3, pointRadius: 2 }
                     ]
                 },
-                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } }, scales: { y: { ticks: { callback: v => formatCompact(v) } } } }
+                options: { 
+                    responsive: true, 
+                    maintainAspectRatio: false, 
+                    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } } },
+                    scales: { 
+                        y: { ticks: { callback: v => formatCompact(v), font: { size: 10 } } },
+                        x: { ticks: { font: { size: 10 } } }
+                    } 
+                }
             });
         }
 
@@ -433,16 +440,13 @@
             updateCalculations();
         });
 
-        // NAVBAR & FOOTER FETCH
-        fetch("/navbar.html")
-        .then(res => res.text())
-        .then(data => {
+        // Dynamic Components
+        fetch("/navbar.html").then(res => res.text()).then(data => {
             document.getElementById("navbar").innerHTML = data;
             const btn = document.getElementById("menuBtn");
             const menu = document.getElementById("mobileMenu");
             if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
         });
-
         fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
     </script>
 </body>
