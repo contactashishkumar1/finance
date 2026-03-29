@@ -1,137 +1,122 @@
-// calculator-index.js
-// Automatically builds a search index from /sitemap.xml so all calculator pages
-// listed in your sitemap are included without manual maintenance.
+const calculatorIndex = [
 
-const CALCULATOR_SITEMAP_URL = "/sitemap.xml";
-const CALCULATOR_INDEX_EXCLUDE = new Set([
-  "https://arthcalculator.in/",
-  "https://arthcalculator.in/calculators/",
-  "https://arthcalculator.in/about/",
-]);
+{ name:"Alpha Calculator", url:"/alpha/", keywords:"alpha return portfolio" },
+{ name:"Asset Allocation Calculator", url:"/asset-allocation/", keywords:"portfolio allocation" },
+{ name:"Beta Calculator", url:"/beta/", keywords:"beta volatility" },
+{ name:"Break Even Calculator", url:"/break-even-calculator/", keywords:"break even profit" },
+{ name:"Brokerage Calculator", url:"/brokerage-calculator/", keywords:"brokerage trading" },
+{ name:"Budget Planner", url:"/budget-planner/", keywords:"budget expense" },
+{ name:"CAGR Calculator", url:"/cagr/", keywords:"cagr growth" },
+{ name:"Capital Gains Tax", url:"/capital-gains-tax/", keywords:"capital gains tax" },
+{ name:"Car Loan Calculator", url:"/car-loan/", keywords:"car loan emi" },
+{ name:"Car Purchase Planner", url:"/car-purchase/", keywords:"car purchase" },
+{ name:"Commission Calculator", url:"/commission-calculator/", keywords:"commission sales" },
+{ name:"Compound Interest", url:"/compound-interest/", keywords:"compound interest" },
+{ name:"Cost of Debt", url:"/cost-of-debt/", keywords:"debt cost" },
+{ name:"Cost of Equity", url:"/cost-of-equity/", keywords:"equity cost" },
+{ name:"Credit Card Interest", url:"/credit-card-interest/", keywords:"credit card interest" },
+{ name:"Crorepati Calculator", url:"/crorepati-calculator/", keywords:"crorepati wealth" },
+{ name:"DCF Calculator", url:"/dcf/", keywords:"discounted cash flow" },
+{ name:"Debt Payoff", url:"/debt-payoff/", keywords:"debt payoff" },
+{ name:"Debt to Income", url:"/debt-to-income/", keywords:"dti ratio" },
+{ name:"Discount Calculator", url:"/discount-calculator/", keywords:"discount price" },
+{ name:"Dividend Yield", url:"/dividend-yield/", keywords:"dividend yield" },
+{ name:"Early Retirement", url:"/early-retirement/", keywords:"retirement fire" },
+{ name:"EBITDA Calculator", url:"/ebitda/", keywords:"ebitda profit" },
+{ name:"Education Cost", url:"/education-cost/", keywords:"education planning" },
+{ name:"Education Planner", url:"/education-planning/", keywords:"education goal" },
+{ name:"Emergency Fund", url:"/emergency-fund/", keywords:"emergency savings" },
+{ name:"EMI Calculator", url:"/emi/", keywords:"loan emi" },
+{ name:"Enterprise Value", url:"/enterprise-value/", keywords:"enterprise value" },
+{ name:"EPF Calculator", url:"/epf/", keywords:"epf provident fund" },
+{ name:"Expense Ratio", url:"/expense-ratio/", keywords:"expense ratio" },
+{ name:"Expense Tracker", url:"/expense-tracker/", keywords:"expense tracker" },
+{ name:"FD Calculator", url:"/fd/", keywords:"fixed deposit" },
+{ name:"Financial Goal Planner", url:"/financial-goal-planner/", keywords:"goal planner" },
+{ name:"Financial Independence", url:"/financial-independence/", keywords:"fire independence" },
+{ name:"FIRE Calculator", url:"/fire-calculator/", keywords:"financial independence retire early" },
+{ name:"Future Value", url:"/future-value/", keywords:"future value" },
+{ name:"Futures Profit", url:"/futures-profit/", keywords:"futures profit" },
+{ name:"Goal Portfolio", url:"/goal-portfolio/", keywords:"goal portfolio" },
+{ name:"Goal Priority", url:"/goal-priority/", keywords:"goal priority" },
+{ name:"Goal SIP", url:"/goal-sip-calculator/", keywords:"goal sip" },
+{ name:"Goal Step Up", url:"/goal-step-up/", keywords:"step up sip" },
+{ name:"Gratuity Calculator", url:"/gratuity/", keywords:"gratuity" },
+{ name:"GST Calculator", url:"/gst/", keywords:"gst tax" },
+{ name:"GST Profit Calculator", url:"/gst-profit-calculator/", keywords:"gst profit" },
+{ name:"Home Affordability", url:"/home-affordability/", keywords:"home affordability" },
+{ name:"Home Loan", url:"/home-loan/", keywords:"home loan emi" },
+{ name:"HRA Calculator", url:"/hra/", keywords:"hra tax" },
+{ name:"Income Tax", url:"/income-tax/", keywords:"income tax" },
+{ name:"Inflation Calculator", url:"/inflation/", keywords:"inflation" },
+{ name:"Inflation Adjusted Salary", url:"/inflation-adjusted-salary-calculator/", keywords:"inflation salary" },
+{ name:"Inflation Adjusted SIP", url:"/inflation-adjusted-sip-calculator/", keywords:"inflation sip" },
+{ name:"Information Ratio", url:"/information-ratio/", keywords:"information ratio" },
+{ name:"Intraday Profit", url:"/intraday-profit-calculator/", keywords:"intraday trading" },
+{ name:"Inventory Turnover", url:"/inventory-turnover/", keywords:"inventory turnover" },
+{ name:"IRR Calculator", url:"/irr-calculator/", keywords:"irr return" },
+{ name:"Loan Affordability", url:"/loan-affordability/", keywords:"loan affordability" },
+{ name:"Loan Balance", url:"/loan-balance-calculator/", keywords:"loan balance" },
+{ name:"Loan Eligibility", url:"/loan-eligibility/", keywords:"loan eligibility" },
+{ name:"Loan Prepayment", url:"/loan-prepayment/", keywords:"loan prepayment" },
+{ name:"Loan vs Investment", url:"/loan-vs-investment-calculator/", keywords:"loan vs investment" },
+{ name:"Lumpsum Calculator", url:"/lumpsum/", keywords:"lumpsum investment" },
+{ name:"Margin Calculator", url:"/margin-calculator/", keywords:"margin profit" },
+{ name:"Markup Calculator", url:"/markup-calculator/", keywords:"markup" },
+{ name:"Marriage Planner", url:"/marriage-planner/", keywords:"marriage planning" },
+{ name:"Mortgage Balance", url:"/mortgage-balance/", keywords:"mortgage balance" },
+{ name:"Multiple Goals", url:"/multiple-goals/", keywords:"multiple goals" },
+{ name:"Mutual Fund Returns", url:"/mutual-fund-returns/", keywords:"mutual fund returns" },
+{ name:"Net Worth", url:"/net-worth/", keywords:"net worth" },
+{ name:"No Cost EMI", url:"/no-cost-emi/", keywords:"no cost emi" },
+{ name:"NPS Calculator", url:"/nps/", keywords:"nps pension" },
+{ name:"NPV Calculator", url:"/npv-calculator/", keywords:"npv" },
+{ name:"Opportunity Cost", url:"/opportunity-cost-calculator/", keywords:"opportunity cost" },
+{ name:"Options Profit", url:"/options-profit/", keywords:"options profit" },
+{ name:"Passive Income", url:"/passive-income/", keywords:"passive income" },
+{ name:"Payback Period", url:"/payback-period-calculator/", keywords:"payback period" },
+{ name:"Percentage Calculator", url:"/percentage/", keywords:"percentage" },
+{ name:"Personal Loan EMI", url:"/personal-loan-emi/", keywords:"personal loan emi" },
+{ name:"Portfolio Rebalancing", url:"/portfolio-rebalancing/", keywords:"portfolio rebalance" },
+{ name:"Portfolio Return", url:"/portfolio-return-calculator/", keywords:"portfolio return" },
+{ name:"Position Size", url:"/position-size-calculator/", keywords:"position sizing" },
+{ name:"PPF Calculator", url:"/ppf/", keywords:"ppf" },
+{ name:"Present Value", url:"/present-value/", keywords:"present value" },
+{ name:"Profit Margin", url:"/profit-margin/", keywords:"profit margin" },
+{ name:"Property Appreciation", url:"/property-appreciation/", keywords:"property appreciation" },
+{ name:"Property ROI", url:"/property-roi/", keywords:"property roi" },
+{ name:"RD Calculator", url:"/rd/", keywords:"rd deposit" },
+{ name:"Real Return", url:"/real-return/", keywords:"real return" },
+{ name:"Rent vs Buy", url:"/rent-vs-buy-calculator/", keywords:"rent vs buy" },
+{ name:"Rental Yield", url:"/rental-yield/", keywords:"rental yield" },
+{ name:"Required CAGR", url:"/required-cagr-calculator/", keywords:"required cagr" },
+{ name:"Retirement Calculator", url:"/retirement/", keywords:"retirement" },
+{ name:"Retirement Withdrawal", url:"/retirement-withdrawal/", keywords:"retirement withdrawal" },
+{ name:"Risk Reward", url:"/risk-reward-calculator/", keywords:"risk reward" },
+{ name:"ROI Calculator", url:"/roi-calculator/", keywords:"roi" },
+{ name:"Rolling Returns", url:"/rolling-returns/", keywords:"rolling returns" },
+{ name:"Rule of 72", url:"/rule-of-72/", keywords:"rule 72" },
+{ name:"Salary Hike", url:"/salary-hike/", keywords:"salary hike" },
+{ name:"Savings Goal", url:"/savings-goal/", keywords:"savings goal" },
+{ name:"Sharpe Ratio", url:"/sharpe-ratio/", keywords:"sharpe ratio" },
+{ name:"Side Income", url:"/side-income/", keywords:"side income" },
+{ name:"Simple Interest", url:"/simple-interest/", keywords:"simple interest" },
+{ name:"SIP Calculator", url:"/sip/", keywords:"sip" },
+{ name:"Sortino Ratio", url:"/sortino-ratio/", keywords:"sortino ratio" },
+{ name:"SSY Calculator", url:"/ssy/", keywords:"ssy" },
+{ name:"Stamp Duty", url:"/stamp-duty/", keywords:"stamp duty" },
+{ name:"Step Up SIP", url:"/step-up-sip/", keywords:"step up sip" },
+{ name:"Stock Average", url:"/stock-average/", keywords:"stock average" },
+{ name:"Stop Loss", url:"/stop-loss/", keywords:"stop loss" },
+{ name:"SWP Calculator", url:"/swp/", keywords:"swp withdrawal" },
+{ name:"Take Home Salary", url:"/take-home-salary/", keywords:"salary take home" },
+{ name:"Tax Loss Harvesting", url:"/tax-loss-harvesting/", keywords:"tax harvesting" },
+{ name:"Time Value of Money", url:"/time-value-of-money/", keywords:"tvm" },
+{ name:"Treynor Ratio", url:"/treynor-ratio/", keywords:"treynor ratio" },
+{ name:"Vacation Goal", url:"/vacation-goal/", keywords:"vacation goal" },
+{ name:"WACC Calculator", url:"/wacc/", keywords:"wacc" },
+{ name:"Wealth Projection", url:"/wealth-projection/", keywords:"wealth projection" },
+{ name:"Working Capital", url:"/working-capital/", keywords:"working capital" },
+{ name:"XIRR Calculator", url:"/xirr/", keywords:"xirr" }
 
-function prettifyCalculatorNameFromUrl(url) {
-  try {
-    const u = new URL(url, window.location.origin);
-    const slug = u.pathname.replace(/^\/+|\/+$/g, "");
-    if (!slug) return "Home";
-
-    const special = {
-      "cagr": "CAGR Calculator",
-      "xirr": "XIRR Calculator",
-      "irr-calculator": "IRR Calculator",
-      "dcf": "DCF Calculator",
-      "ebitda": "EBITDA Calculator",
-      "epf": "EPF Calculator",
-      "fd": "FD Calculator",
-      "fire-calculator": "FIRE Calculator",
-      "hra": "HRA Calculator",
-      "nps": "NPS Calculator",
-      "npv-calculator": "NPV Calculator",
-      "ppf": "PPF Calculator",
-      "rd": "RD Calculator",
-      "roi-calculator": "ROI Calculator",
-      "ssy": "SSY Calculator",
-      "sip": "SIP Calculator",
-      "emi": "EMI Calculator",
-      "wacc": "WACC Calculator",
-      "gst": "GST Calculator",
-      "beta": "Beta Calculator",
-      "alpha": "Alpha Calculator",
-    };
-
-    if (special[slug]) return special[slug];
-
-    const words = slug
-      .split("/")
-      .pop()
-      .split("-")
-      .filter(Boolean)
-      .map(w => (w.length <= 3 ? w.toUpperCase() : w.charAt(0).toUpperCase() + w.slice(1)));
-
-    let title = words.join(" ");
-    if (!/calculator/i.test(title) && !/planner/i.test(title) && !/ratio/i.test(title)) {
-      title += " Calculator";
-    }
-    return title;
-  } catch {
-    return url;
-  }
-}
-
-function buildKeywordsFromUrl(url) {
-  const path = new URL(url, window.location.origin).pathname.replace(/^\/+|\/+$/g, "");
-  const parts = path.split("-").filter(Boolean);
-  const words = parts.map(p => p.toLowerCase()).join(" ");
-  const aliases = {
-    "cagr": "compound annual growth rate return growth",
-    "xirr": "extended internal rate of return annualized return",
-    "irr": "internal rate of return",
-    "dcf": "discounted cash flow valuation",
-    "ebitda": "earnings before interest taxes depreciation amortization",
-    "epf": "employee provident fund",
-    "fd": "fixed deposit",
-    "fire": "financial independence retire early",
-    "nps": "national pension system",
-    "npv": "net present value",
-    "ppf": "public provident fund",
-    "rd": "recurring deposit",
-    "roi": "return on investment",
-    "ssy": "sukanya samriddhi yojana",
-    "sip": "systematic investment plan mutual fund",
-    "emi": "equated monthly installment loan",
-    "wacc": "weighted average cost of capital",
-    "gst": "goods and services tax",
-    "beta": "beta market volatility",
-    "alpha": "alpha excess return",
-    "ratio": "finance investment risk return",
-    "planner": "planning savings goal",
-    "calculator": "calculator tool",
-  };
-
-  const extra = parts.flatMap(p => aliases[p.toLowerCase()] ? [aliases[p.toLowerCase()]] : []);
-  return [words, ...extra].join(" ");
-}
-
-async function loadCalculatorIndexFromSitemap() {
-  const response = await fetch(CALCULATOR_SITEMAP_URL, { cache: "no-store" });
-  if (!response.ok) {
-    throw new Error(`Failed to load sitemap: ${response.status}`);
-  }
-
-  const xmlText = await response.text();
-  const xmlDoc = new DOMParser().parseFromString(xmlText, "application/xml");
-
-  const parserError = xmlDoc.querySelector("parsererror");
-  if (parserError) {
-    throw new Error("Invalid sitemap XML");
-  }
-
-  const locNodes = Array.from(xmlDoc.querySelectorAll("url > loc"));
-  const urls = locNodes
-    .map(node => node.textContent.trim())
-    .filter(url => url.startsWith("https://arthcalculator.in/"))
-    .filter(url => !CALCULATOR_INDEX_EXCLUDE.has(url));
-
-  return urls.map(url => ({
-    name: prettifyCalculatorNameFromUrl(url),
-    url: new URL(url).pathname,
-    keywords: buildKeywordsFromUrl(url),
-  }));
-}
-
-// Global list used by navbar search.
-let calculatorIndex = [];
-
-// Loads automatically on page load.
-window.loadCalculatorIndex = async function () {
-  try {
-    calculatorIndex = await loadCalculatorIndexFromSitemap();
-    window.calculatorIndex = calculatorIndex;
-    return calculatorIndex;
-  } catch (error) {
-    console.error("Calculator index load failed:", error);
-    calculatorIndex = [];
-    window.calculatorIndex = calculatorIndex;
-    return calculatorIndex;
-  }
-};
+];
