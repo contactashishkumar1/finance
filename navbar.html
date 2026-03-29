@@ -177,16 +177,6 @@ btn.addEventListener("click", () => {
 menu.classList.toggle("hidden");
 });
 
-/* LOAD CALCULATORS */
-
-window.loadCalculatorIndex().then((data)=>{
-
-calculatorIndex=data;
-
-console.log("Loaded calculators:",calculatorIndex.length);
-
-});
-
 /* SEARCH */
 
 function searchCalculator(inputId,resultId){
