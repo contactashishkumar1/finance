@@ -272,14 +272,14 @@
                     <!-- Key Highlights Box -->
                     <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
                         <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             Plan Insight
                         </h4>
                         <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
                             <li class="flex items-center gap-2">✅ Measures skill relative to index</li>
                             <li class="flex items-center gap-2">📊 Punishes inconsistent performance</li>
                             <li class="flex items-center gap-2">⚖️ Evaluates risk-adjusted skill</li>
-                            <li class="flex items-center gap-2">📈 Superior for active funds</li>
+                            <li class="flex items-center gap-2">📈 Precise wealth accumulation view</li>
                         </ul>
                     </div>
 
@@ -586,62 +586,86 @@
             errorBar: document.getElementById('errorBar'),
             activeLab: document.getElementById('activeLabel'),
             errorLab: document.getElementById('errorLabel'),
-            mobileActive: document.getElementById('totalInvestedMobile'), // Re-purposed to Active Return
-            mobileStatus: document.getElementById('wealthGainedMobile'), // Re-purposed to Consistency
+            // Safe DOM checks for these potentially missing IDs
+            mobileActive: document.getElementById('totalInvestedMobile'), 
+            mobileStatus: document.getElementById('wealthGainedMobile'), 
             table: document.getElementById('projectionTable'),
             calcBtn: document.getElementById('calcBtn')
         };
 
         function updateCalculations() {
-            const rp = parseFloat(elements.portIn.value) || 0;
-            const rb = parseFloat(elements.benchIn.value) || 0;
-            const te = parseFloat(elements.errorIn.value) || 0.1;
+            // Input Validation and Sanitization
+            const rp = parseFloat(elements.portIn.value);
+            const rb = parseFloat(elements.benchIn.value);
+            const te = parseFloat(elements.errorIn.value);
+
+            // NAN & Infinity Protection
+            if (isNaN(rp) || isNaN(rb) || isNaN(te) || te <= 0) {
+                if (elements.irValue) elements.irValue.textContent = "0.00";
+                if (elements.activeCard) elements.activeCard.textContent = "0.00%";
+                if (elements.assessmentDisp) elements.assessmentDisp.textContent = "Invalid Risk";
+                if (elements.consistencyCard) elements.consistencyCard.textContent = "N/A";
+                return;
+            }
 
             const activeReturn = rp - rb;
             const ir = activeReturn / te;
 
-            // Results Display
-            elements.irValue.textContent = ir.toFixed(2);
-            elements.activeCard.textContent = activeReturn.toFixed(2) + "%";
+            // Results Display with 2-decimal rounding
+            if (elements.irValue) elements.irValue.textContent = ir.toFixed(2);
+            if (elements.activeCard) elements.activeCard.textContent = activeReturn.toFixed(2) + "%";
             
             let assessment = "Poor";
             let consistency = "Low";
+            
+            // Financial Threshold Logic
             if (ir >= 1.0) { assessment = "Exceptional"; consistency = "Superior"; }
             else if (ir >= 0.75) { assessment = "Very Good"; consistency = "High"; }
             else if (ir >= 0.5) { assessment = "Good"; consistency = "Strong"; }
             else if (ir > 0) { assessment = "Adequate"; consistency = "Moderate"; }
+            else { assessment = "Poor"; consistency = "Low"; }
 
-            elements.assessmentDisp.textContent = assessment;
-            elements.consistencyCard.textContent = consistency;
+            if (elements.assessmentDisp) elements.assessmentDisp.textContent = assessment;
+            if (elements.consistencyCard) elements.consistencyCard.textContent = consistency;
 
-            // Mobile Cards
-            elements.mobileActive.textContent = activeReturn.toFixed(2) + "%";
-            elements.mobileStatus.textContent = consistency;
+            // Optional Mobile Elements (Safe Checks)
+            if (elements.mobileActive) elements.mobileActive.textContent = activeReturn.toFixed(2) + "%";
+            if (elements.mobileStatus) elements.mobileStatus.textContent = consistency;
 
-            // Visualization
-            const totalAbs = Math.abs(activeReturn) + te;
-            const activePercent = (Math.max(0, activeReturn) / totalAbs) * 100 || 0;
-            elements.activeBar.style.width = `${activePercent}%`;
-            elements.errorBar.style.width = `${100 - activePercent}%`;
+            // Visualization Logic
+            const absActive = Math.abs(activeReturn);
+            const absError = Math.abs(te);
+            const totalScale = absActive + absError || 1;
             
-            elements.activeLab.textContent = `Active: ${activeReturn.toFixed(2)}%`;
-            elements.errorLab.textContent = `Error: ${te.toFixed(2)}%`;
+            // Only show growth bar if active return is positive
+            const activePercent = activeReturn > 0 ? (activeReturn / totalScale) * 100 : 0;
+            const errorPercent = 100 - activePercent;
+
+            if (elements.activeBar) elements.activeBar.style.width = `${activePercent}%`;
+            if (elements.errorBar) elements.errorBar.style.width = `${errorPercent}%`;
+            
+            if (elements.activeLab) elements.activeLab.textContent = `Active: ${activeReturn.toFixed(2)}%`;
+            if (elements.errorLab) elements.errorLab.textContent = `Error: ${te.toFixed(2)}%`;
 
             renderTable(activeReturn, te);
         }
 
         function renderTable(activeReturn, currentError) {
+            if (!elements.table) return;
             elements.table.innerHTML = '';
             const errorPoints = [1.0, 2.0, 4.0, 6.0, 8.0, 10.0, 15.0, 20.0];
             
             errorPoints.forEach(errorVal => {
                 const irVal = activeReturn / errorVal;
+                // Highlighting closest current row
                 const isCurrent = Math.abs(errorVal - currentError) < 0.1;
                 
                 let skill = "Poor";
                 let colorClass = "text-red-500";
+                
                 if (irVal >= 1.0) { skill = "Exceptional"; colorClass = "text-emerald-600"; }
                 else if (irVal >= 0.5) { skill = "Good"; colorClass = "text-blue-600"; }
+                else if (irVal > 0) { skill = "Adequate"; colorClass = "text-slate-600"; }
 
                 const row = document.createElement('tr');
                 row.className = `hover:bg-slate-50 transition-colors ${isCurrent ? 'bg-blue-50 font-bold' : ''}`;
@@ -656,15 +680,36 @@
         }
 
         function setupSync(input, range) {
-            input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
-            range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+            if (!input || !range) return;
+            input.addEventListener('input', () => { 
+                range.value = input.value; 
+                updateCalculations(); 
+            });
+            range.addEventListener('input', () => { 
+                input.value = range.value; 
+                updateCalculations(); 
+            });
         }
 
         window.addEventListener('DOMContentLoaded', () => {
             setupSync(elements.portIn, elements.portRan);
             setupSync(elements.benchIn, elements.benchRan);
             setupSync(elements.errorIn, elements.errorRan);
-            elements.calcBtn.addEventListener('click', updateCalculations);
+            
+            if (elements.calcBtn) {
+                elements.calcBtn.addEventListener('click', updateCalculations);
+            }
+
+            // Real-time input sanitization for numeric fields
+            [elements.portIn, elements.benchIn, elements.errorIn].forEach(el => {
+                if (el) {
+                    el.addEventListener('change', () => {
+                        if (isNaN(parseFloat(el.value))) el.value = 0;
+                        updateCalculations();
+                    });
+                }
+            });
+
             updateCalculations();
         });
     </script>
