@@ -141,18 +141,18 @@
                     <div class="grid grid-cols-2 gap-4 mb-8">
                         <div>
                             <label class="text-xs font-medium text-slate-600 block mb-1 uppercase tracking-tighter">Current Age</label>
-                            <input type="number" id="currentAge" value="30" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" id="currentAge" value="30" min="1" max="100" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
                         </div>
                         <div>
                             <label class="text-xs font-medium text-slate-600 block mb-1 uppercase tracking-tighter">Desired FIRE Age</label>
-                            <input type="number" id="fireAge" value="45" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
+                            <input type="number" id="fireAge" value="45" min="1" max="100" class="w-full px-3 py-2 border rounded-lg font-bold focus:ring-2 focus:ring-blue-500">
                         </div>
                     </div>
 
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Annual Expenses (Today ₹)</label>
-                            <input type="number" id="expenseInput" value="600000" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" id="expenseInput" value="600000" min="0" step="10000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="expenseRange" min="50000" max="10000000" step="50000" value="600000" class="w-full">
                     </div>
@@ -160,23 +160,23 @@
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Current Savings (₹)</label>
-                            <input type="number" id="savingsInput" value="1000000" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" id="savingsInput" value="1000000" min="0" step="50000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
-                        <input type="range" id="savingsRange" min="0" max="500000000" step="100000" value="1000000" class="w-full">
+                        <input type="range" id="savingsRange" min="0" max="100000000" step="100000" value="1000000" class="w-full">
                     </div>
 
                     <div class="mb-8">
                         <div class="flex justify-between items-center mb-3">
                             <label class="text-sm font-medium text-slate-600">Monthly SIP / Investment (₹)</label>
-                            <input type="number" id="sipInput" value="50000" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" id="sipInput" value="50000" min="0" step="1000" class="w-32 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
-                        <input type="range" id="sipRange" min="0" max="5000000" step="5000" value="50000" class="w-full">
+                        <input type="range" id="sipRange" min="0" max="1000000" step="5000" value="50000" class="w-full">
                     </div>
 
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-3 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Expected Investment Return (%)</label>
-                            <input type="number" id="returnInput" value="12" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
+                            <input type="number" id="returnInput" value="12" min="0.1" max="30" step="0.1" class="w-24 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500 transition-all">
                         </div>
                         <input type="range" id="returnRange" min="1" max="25" step="0.1" value="12" class="w-full">
                     </div>
@@ -208,8 +208,8 @@
                             <span class="text-slate-400">Target Goal</span>
                         </div>
                         <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
-                            <div id="wealthBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
-                            <div id="targetBar" class="h-full bg-slate-300 transition-all duration-700" style="width: 50%"></div>
+                            <div id="wealthBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 0%"></div>
+                            <div id="targetBar" class="h-full bg-slate-300 transition-all duration-700" style="width: 100%"></div>
                         </div>
                         <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
                             <span id="wealthLabel">Projected: ₹0</span>
@@ -219,7 +219,7 @@
 
                     <div id="insightsBox" class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4"></div>
                     
-                    <p class="text-[10px] text-slate-400 italic">Analysis: Your target FIRE number is calculated using the <strong>25x annual expense rule</strong> (4% safe withdrawal rate).</p>
+                    <p class="text-[10px] text-slate-400 italic">Analysis: Your target FIRE number is calculated using the <strong>25x inflated annual expense rule</strong> (accounting for 6% inflation until retirement).</p>
                 </div>
                 
                 <div class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white">
@@ -292,7 +292,7 @@
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the FIRE movement?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It is a financial strategy focused on extreme saving and investing to gain financial freedom and retire decades before the traditional age of 60.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How much money do I need to retire early?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">A safe estimate is 25 to 30 times your annual expenses. If you spend ₹6 Lakhs a year, you need at least ₹1.5 Crore to ₹1.8 Crore invested.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is FIRE possible with a normal salary in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes, but it requires a very high savings rate (usually >40%) and avoiding lifestyle inflation. Starting early and using <a href="/sip" class="text-blue-600 underline">SIPs</a> is the most practical path.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is FIRE possible with a normal salary in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes, but it requires a very high savings rate (usually >40%) and avoiding lifestyle inflation. Starting early and using <a href="/sip" class="text-blue-600 underline">SIPs</a> is the most practical path.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How long does it take to reach financial independence?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">It primarily depends on your "Savings Rate." If you save 50% of your income, you can technically retire in approximately 17 years. If you save 70%, it can take less than 10 years.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What are the best investments for FIRE?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Most FIRE seekers use a mix of broad market Index Funds, Equity Mutual Funds for growth, and Debt funds/PPF for stability as they get closer to their early retirement date.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does FIRE account for medical emergencies?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">A robust FIRE plan must include a separate emergency fund and comprehensive health insurance coverage outside of your "FIRE Number" to handle medical inflation.</div></details>
@@ -321,13 +321,13 @@
                         </div>
                         <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Savings Goal</h4>
                     </a>
-                    <a href="/inflation" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                    <a href="/inflation" class="p-5 border border-slate-100 rounded-2xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-center text-pretty">
                         <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
                         </div>
                         <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Inflation</h4>
                     </a>
-                    <a href="/real-return" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                    <a href="/real-return" class="p-5 border border-slate-100 rounded-2xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center text-center text-pretty">
                         <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors text-pretty">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         </div>
@@ -372,29 +372,47 @@
             calcBtn: document.getElementById('calcBtn')
         };
 
-        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
-        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+        function formatInr(val) { 
+            if (isNaN(val) || !isFinite(val)) return "₹0";
+            return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); 
+        }
+        
+        function formatCompact(val) { 
+            if (isNaN(val) || !isFinite(val)) return "0";
+            return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); 
+        }
 
         function updateCalculations() {
-            const currentAge = parseFloat(elements.curAge.value) || 0;
-            const fireAge = parseFloat(elements.fireAge.value) || 0;
-            const annualExp = parseFloat(elements.expInp.value) || 0;
-            const currentSavings = parseFloat(elements.savInp.value) || 0;
-            const monthlySIP = parseFloat(elements.sipInp.value) || 0;
-            const returns = (parseFloat(elements.retInp.value) || 0) / 100;
+            // Input Validation & Sanitization
+            const currentAge = Math.max(1, parseFloat(elements.curAge.value) || 0);
+            const fireAge = Math.max(currentAge + 1, parseFloat(elements.fireAge.value) || currentAge + 1);
+            const annualExp = Math.max(0, parseFloat(elements.expInp.value) || 0);
+            const currentSavings = Math.max(0, parseFloat(elements.savInp.value) || 0);
+            const monthlySIP = Math.max(0, parseFloat(elements.sipInp.value) || 0);
+            const returns = (Math.max(0.1, parseFloat(elements.retInp.value) || 0.1)) / 100;
+            const inflation = 0.06; // Standard 6% inflation for India context
+
+            // Sync Inputs
+            elements.curAge.value = currentAge;
+            elements.fireAge.value = fireAge;
+            elements.expInp.value = annualExp;
+            elements.savInp.value = currentSavings;
+            elements.sipInp.value = monthlySIP;
+            elements.retInp.value = (returns * 100).toFixed(1);
 
             const nYears = Math.max(0, fireAge - currentAge);
             elements.yearsRemainingDisp.textContent = nYears;
 
-            // 1. Calculate FIRE Number (Annual Exp * 25)
-            // We assume annual expense stays constant in today's terms for the FIRE base number
-            const fireNumber = annualExp * 25;
+            // 1. Calculate Inflated FIRE Number
+            // Professional FIRE calculation must inflate expenses to retirement age
+            const futureAnnualExp = annualExp * Math.pow(1 + inflation, nYears);
+            const fireNumber = futureAnnualExp * 25; // 25x rule (4% withdrawal)
 
             // 2. Projected Wealth at FIRE Age
-            // Part A: Lumpsum Growth
+            // Lumpsum Growth
             const futureSavings = currentSavings * Math.pow(1 + returns, nYears);
             
-            // Part B: SIP Growth
+            // SIP Growth (Annuity Due - start of month)
             const rMonthly = returns / 12;
             const totalMonths = nYears * 12;
             let futureSIP = 0;
@@ -405,6 +423,8 @@
             }
 
             const projectedWealth = futureSavings + futureSIP;
+            
+            // Safe Monthly Withdrawal Rate (4% of final corpus / 12)
             const passiveMonthly = (projectedWealth * 0.04) / 12;
 
             // UI Display
@@ -416,22 +436,22 @@
             elements.targetLabel.textContent = "Target: " + formatCompact(fireNumber);
 
             // Bar visualization
-            const totalMax = Math.max(projectedWealth, fireNumber);
-            const wealthPerc = (projectedWealth / totalMax) * 100 || 0;
-            const targetPerc = (fireNumber / totalMax) * 100 || 0;
+            const totalMax = Math.max(projectedWealth, fireNumber, 1);
+            const wealthPerc = Math.min(100, (projectedWealth / totalMax) * 100);
+            const targetPerc = 100 - wealthPerc;
 
-            elements.wealthBar.style.width = (projectedWealth >= fireNumber) ? "100%" : wealthPerc + "%";
-            elements.targetBar.style.width = (projectedWealth >= fireNumber) ? "0%" : (100 - wealthPerc) + "%";
+            elements.wealthBar.style.width = wealthPerc + "%";
+            elements.targetBar.style.width = targetPerc + "%";
 
             // Insights & Status
             if (projectedWealth >= fireNumber) {
-                elements.insightsBox.innerHTML = `✅ <strong>Congratulations!</strong> Your projected wealth of ${formatInr(projectedWealth)} exceeds your FIRE target. You are on track for early retirement.`;
+                elements.insightsBox.innerHTML = `✅ <strong>Congratulations!</strong> Your projected wealth of ${formatInr(projectedWealth)} exceeds your inflation-adjusted FIRE target of ${formatInr(fireNumber)}. You are on track for early retirement.`;
                 elements.insightsBox.className = "bg-emerald-50 p-4 rounded-xl border border-emerald-100 text-sm text-emerald-800 leading-relaxed mb-4";
                 elements.statusBadge.textContent = "FIRE Achievable";
                 elements.statusBadge.className = "bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/30 inline-block mt-1";
             } else {
                 const gap = fireNumber - projectedWealth;
-                elements.insightsBox.innerHTML = `💡 <strong>Strategy:</strong> You have a shortfall of <strong>${formatInr(gap)}</strong>. Consider increasing your SIP or extending your target age.`;
+                elements.insightsBox.innerHTML = `💡 <strong>Strategy:</strong> To reach financial independence by age ${fireAge}, you have a shortfall of <strong>${formatInr(gap)}</strong>. Consider increasing your SIP or targeting a slightly higher ROI.`;
                 elements.insightsBox.className = "bg-blue-50 p-4 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-4 text-pretty";
                 elements.statusBadge.textContent = "Accumulation Mode";
                 elements.statusBadge.className = "bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-bold border border-blue-500/30 inline-block mt-1";
@@ -439,7 +459,8 @@
         }
 
         function setupSync(i, r) {
-            i.addEventListener('input', () => { r.value = i.value; updateCalculations(); });
+            if (!i || !r) return;
+            i.addEventListener('change', () => { r.value = i.value; updateCalculations(); });
             r.addEventListener('input', () => { i.value = r.value; updateCalculations(); });
         }
 
@@ -448,20 +469,27 @@
             setupSync(elements.savInp, elements.savRng);
             setupSync(elements.sipInp, elements.sipRng);
             setupSync(elements.retInp, elements.retRng);
+            
             elements.curAge.addEventListener('input', updateCalculations);
             elements.fireAge.addEventListener('input', updateCalculations);
             elements.calcBtn.addEventListener('click', updateCalculations);
+            
             updateCalculations();
         });
 
         // NAVBAR & FOOTER FETCH
         fetch("/navbar.html").then(res => res.text()).then(data => {
-            document.getElementById("navbar").innerHTML = data;
-            const btn = document.getElementById("menuBtn");
-            const menu = document.getElementById("mobileMenu");
-            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
-        });
-        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
+            if (data) {
+                document.getElementById("navbar").innerHTML = data;
+                const btn = document.getElementById("menuBtn");
+                const menu = document.getElementById("mobileMenu");
+                if(btn && menu){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+            }
+        }).catch(err => console.log("Navbar fetch error"));
+
+        fetch("/footer.html").then(res => res.text()).then(data => { 
+            if (data) document.getElementById("footer").innerHTML = data; 
+        }).catch(err => console.log("Footer fetch error"));
     </script>
 </body>
 </html>
