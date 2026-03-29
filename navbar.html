@@ -1,218 +1,51 @@
-<nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-
-<div class="max-w-6xl mx-auto px-4">
-
-<div class="flex justify-between items-center h-16 gap-4">
-
-<!-- Logo -->
-<a href="/" class="text-blue-600 font-bold text-lg hover:opacity-80 transition">
-ArthCalculator
-</a>
-
-<!-- Desktop Search -->
-<div class="hidden md:block relative w-72">
-
-<input
-id="calculatorSearch"
-type="text"
-placeholder="Search calculators..."
-class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500">
-
-<div
-id="searchResults"
-class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50">
-</div>
-
-</div>
-
-<!-- Desktop Menu -->
-<div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
-
-<a href="/calculators/" class="nav-link">All Calculators</a>
-
-<a href="/financial-goal-planner/"
-class="nav-link font-semibold text-blue-600">
-Goal Planner
-</a>
-
-<a href="/sip/" class="nav-link">SIP</a>
-
-<a href="/emi/" class="nav-link">EMI</a>
-
-<a href="/income-tax/" class="nav-link">Income Tax</a>
-
-<a href="/ppf/" class="nav-link">PPF</a>
-
-<a href="/about/" class="nav-link">About</a>
-
-</div>
-
-<!-- Mobile Button -->
-<button id="menuBtn"
-class="md:hidden text-slate-700 hover:text-blue-600">
-
-<svg xmlns="http://www.w3.org/2000/svg"
-class="h-6 w-6"
-fill="none"
-viewBox="0 0 24 24"
-stroke="currentColor">
-
-<path stroke-linecap="round"
-stroke-linejoin="round"
-stroke-width="2"
-d="M4 6h16M4 12h16M4 18h16"/>
-
-</svg>
-
-</button>
-
-</div>
-
-</div>
-
-<!-- Mobile Menu -->
-<div id="mobileMenu"
-class="hidden md:hidden border-t border-slate-200 bg-white">
-
-<div class="flex flex-col p-4 space-y-4 text-sm font-medium text-slate-700">
-
-<!-- Mobile Search -->
-<div class="relative">
-
-<input
-id="mobileCalculatorSearch"
-type="text"
-placeholder="Search calculators..."
-class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm">
-
-<div
-id="mobileSearchResults"
-class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50">
-</div>
-
-</div>
-
-<a href="/calculators/" class="hover:text-blue-600">
-All Calculators
-</a>
-
-<a href="/financial-goal-planner/"
-class="text-blue-600 font-semibold">
-Financial Goal Planner ⭐
-</a>
-
-<a href="/sip/" class="hover:text-blue-600">
-SIP Calculator
-</a>
-
-<a href="/emi/" class="hover:text-blue-600">
-EMI Calculator
-</a>
-
-<a href="/income-tax/" class="hover:text-blue-600">
-Income Tax
-</a>
-
-<a href="/ppf/" class="hover:text-blue-600">
-PPF Calculator
-</a>
-
-<a href="/about/" class="hover:text-blue-600">
-About
-</a>
-
-</div>
-
-</div>
-
-</nav>
-
-<style>
-
-.nav-link{
-position:relative;
-padding-bottom:4px;
-transition:all 0.2s ease;
-}
-
-.nav-link:hover{
-color:#2563eb;
-}
-
-.nav-link::after{
-content:"";
-position:absolute;
-left:0;
-bottom:0;
-width:0;
-height:2px;
-background:#2563eb;
-transition:width 0.25s ease;
-}
-
-.nav-link:hover::after{
-width:100%;
-}
-
-.nav-link.active{
-color:#2563eb;
-font-weight:600;
-}
-
-.nav-link.active::after{
-width:100%;
-}
-
-</style>
-
-<!-- LOAD CALCULATOR DATA FIRST -->
 <script src="/js/calculator-index.js"></script>
 
 <script>
 
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded", function(){
 
 const btn=document.getElementById("menuBtn");
-
 const menu=document.getElementById("mobileMenu");
 
+if(btn){
 btn.addEventListener("click",()=>{
-
 menu.classList.toggle("hidden");
-
 });
-
-/* SEARCH FUNCTION */
+}
 
 function searchCalculator(inputId,resultId){
 
 let input=document.getElementById(inputId);
-
 let results=document.getElementById(resultId);
+
+if(!input || !results) return;
 
 let value=input.value.toLowerCase();
 
 results.innerHTML="";
 
 if(value===""){
-
 results.classList.add("hidden");
-
 return;
-
 }
 
-if(!window.calculators){
+/* SAFE CHECK */
+if(typeof window.calculators === "undefined"){
+console.log("Calculator index not loaded yet");
 return;
 }
 
 let matches=window.calculators.filter(calc=>
 
 calc.name.toLowerCase().includes(value) ||
-
 calc.keywords.toLowerCase().includes(value)
 
 );
+
+if(matches.length===0){
+results.classList.add("hidden");
+return;
+}
 
 matches.slice(0,8).forEach(calc=>{
 
@@ -232,11 +65,13 @@ results.classList.remove("hidden");
 
 }
 
-/* DESKTOP SEARCH */
+/* DESKTOP */
 
-document
-.getElementById("calculatorSearch")
-.addEventListener("keyup",function(){
+let desktopSearch=document.getElementById("calculatorSearch");
+
+if(desktopSearch){
+
+desktopSearch.addEventListener("input",function(){
 
 searchCalculator(
 "calculatorSearch",
@@ -245,11 +80,15 @@ searchCalculator(
 
 });
 
-/* MOBILE SEARCH */
+}
 
-document
-.getElementById("mobileCalculatorSearch")
-.addEventListener("keyup",function(){
+/* MOBILE */
+
+let mobileSearch=document.getElementById("mobileCalculatorSearch");
+
+if(mobileSearch){
+
+mobileSearch.addEventListener("input",function(){
 
 searchCalculator(
 "mobileCalculatorSearch",
@@ -257,6 +96,8 @@ searchCalculator(
 );
 
 });
+
+}
 
 });
 
