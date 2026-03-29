@@ -165,7 +165,8 @@ width:100%;
 </style>
 
 <!-- Calculator Index -->
-<script src="/calculator-index.js"></script>
+
+<script src="/js/calculator-index.js"></script>
 
 <script>
 
@@ -177,7 +178,11 @@ menu.classList.toggle("hidden");
 });
 
 /* LOAD CALCULATORS */
-window.loadCalculatorIndex();
+window.loadCalculatorIndex().then(() => {
+
+console.log("Calculator index loaded:", calculatorIndex.length);
+
+});
 
 /* SEARCH FUNCTION */
 
@@ -197,6 +202,10 @@ results.classList.add("hidden");
 
 return;
 
+}
+
+if(!calculatorIndex || calculatorIndex.length===0){
+return;
 }
 
 let matches=calculatorIndex.filter(calc=>
