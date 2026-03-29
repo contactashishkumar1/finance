@@ -152,7 +152,6 @@
   width:100%;
 }
 
-/* Active page support */
 .nav-link.active{
 color:#2563eb;
 font-weight:600;
@@ -165,10 +164,11 @@ width:100%;
 </style>
 
 <!-- Calculator Index -->
-
 <script src="/js/calculator-index.js"></script>
 
 <script>
+
+let calculatorIndex=[];
 
 const btn = document.getElementById("menuBtn");
 const menu = document.getElementById("mobileMenu");
@@ -178,13 +178,16 @@ menu.classList.toggle("hidden");
 });
 
 /* LOAD CALCULATORS */
-window.loadCalculatorIndex().then(() => {
 
-console.log("Calculator index loaded:", calculatorIndex.length);
+window.loadCalculatorIndex().then((data)=>{
+
+calculatorIndex=data;
+
+console.log("Loaded calculators:",calculatorIndex.length);
 
 });
 
-/* SEARCH FUNCTION */
+/* SEARCH */
 
 function searchCalculator(inputId,resultId){
 
@@ -212,7 +215,7 @@ let matches=calculatorIndex.filter(calc=>
 
 calc.name.toLowerCase().includes(value) ||
 
-calc.keywords.includes(value)
+calc.keywords.toLowerCase().includes(value)
 
 );
 
@@ -234,7 +237,7 @@ results.classList.remove("hidden");
 
 }
 
-/* DESKTOP SEARCH */
+/* DESKTOP */
 
 document
 .getElementById("calculatorSearch")
@@ -247,7 +250,7 @@ searchCalculator(
 
 });
 
-/* MOBILE SEARCH */
+/* MOBILE */
 
 document
 .getElementById("mobileCalculatorSearch")
