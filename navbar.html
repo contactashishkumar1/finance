@@ -1,127 +1,129 @@
 <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-4">
 
-    <div class="flex justify-between items-center h-16 gap-4">
+<div class="max-w-6xl mx-auto px-4">
 
-      <!-- Logo -->
-      <a href="/" class="text-blue-600 font-bold text-lg hover:opacity-80 transition">
-        ArthCalculator
-      </a>
+<div class="flex justify-between items-center h-16 gap-4">
 
-      <!-- Desktop Search -->
-      <div class="hidden md:block relative w-72">
+<!-- Logo -->
+<a href="/" class="text-blue-600 font-bold text-lg hover:opacity-80 transition">
+ArthCalculator
+</a>
 
-        <input
-        id="calculatorSearch"
-        type="text"
-        placeholder="Search calculators..."
-        class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500">
+<!-- Desktop Search -->
+<div class="hidden md:block relative w-72">
 
-        <div
-        id="searchResults"
-        class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50">
-        </div>
+<input
+id="calculatorSearch"
+type="text"
+placeholder="Search calculators..."
+class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500">
 
-      </div>
+<div
+id="searchResults"
+class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50">
+</div>
 
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+</div>
 
-        <a href="/calculators/" class="nav-link">All Calculators</a>
+<!-- Desktop Menu -->
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
 
-        <a href="/financial-goal-planner/" class="nav-link font-semibold text-blue-600">
-        Goal Planner
-        </a>
+<a href="/calculators/" class="nav-link">All Calculators</a>
 
-        <a href="/sip/" class="nav-link">SIP</a>
+<a href="/financial-goal-planner/"
+class="nav-link font-semibold text-blue-600">
+Goal Planner
+</a>
 
-        <a href="/emi/" class="nav-link">EMI</a>
+<a href="/sip/" class="nav-link">SIP</a>
 
-        <a href="/income-tax/" class="nav-link">Income Tax</a>
+<a href="/emi/" class="nav-link">EMI</a>
 
-        <a href="/ppf/" class="nav-link">PPF</a>
+<a href="/income-tax/" class="nav-link">Income Tax</a>
 
-        <a href="/about/" class="nav-link">About</a>
+<a href="/ppf/" class="nav-link">PPF</a>
 
-      </div>
+<a href="/about/" class="nav-link">About</a>
 
-      <!-- Mobile Button -->
-      <button id="menuBtn"
-      class="md:hidden text-slate-700 hover:text-blue-600">
+</div>
 
-        <svg xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor">
+<!-- Mobile Button -->
+<button id="menuBtn"
+class="md:hidden text-slate-700 hover:text-blue-600">
 
-          <path stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16"/>
+<svg xmlns="http://www.w3.org/2000/svg"
+class="h-6 w-6"
+fill="none"
+viewBox="0 0 24 24"
+stroke="currentColor">
 
-        </svg>
+<path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M4 6h16M4 12h16M4 18h16"/>
 
-      </button>
+</svg>
 
-    </div>
+</button>
 
-  </div>
+</div>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu"
-  class="hidden md:hidden border-t border-slate-200 bg-white">
+</div>
 
-    <div class="flex flex-col p-4 space-y-4 text-sm font-medium text-slate-700">
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+class="hidden md:hidden border-t border-slate-200 bg-white">
 
-      <!-- Mobile Search -->
-      <div class="relative">
+<div class="flex flex-col p-4 space-y-4 text-sm font-medium text-slate-700">
 
-        <input
-        id="mobileCalculatorSearch"
-        type="text"
-        placeholder="Search calculators..."
-        class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm">
+<!-- Mobile Search -->
+<div class="relative">
 
-        <div
-        id="mobileSearchResults"
-        class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50">
-        </div>
+<input
+id="mobileCalculatorSearch"
+type="text"
+placeholder="Search calculators..."
+class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm">
 
-      </div>
+<div
+id="mobileSearchResults"
+class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50">
+</div>
 
-      <a href="/calculators/" class="hover:text-blue-600">
-      All Calculators
-      </a>
+</div>
 
-      <a href="/financial-goal-planner/"
-      class="text-blue-600 font-semibold">
-      Financial Goal Planner ⭐
-      </a>
+<a href="/calculators/" class="hover:text-blue-600">
+All Calculators
+</a>
 
-      <a href="/sip/" class="hover:text-blue-600">
-      SIP Calculator
-      </a>
+<a href="/financial-goal-planner/"
+class="text-blue-600 font-semibold">
+Financial Goal Planner ⭐
+</a>
 
-      <a href="/emi/" class="hover:text-blue-600">
-      EMI Calculator
-      </a>
+<a href="/sip/" class="hover:text-blue-600">
+SIP Calculator
+</a>
 
-      <a href="/income-tax/" class="hover:text-blue-600">
-      Income Tax
-      </a>
+<a href="/emi/" class="hover:text-blue-600">
+EMI Calculator
+</a>
 
-      <a href="/ppf/" class="hover:text-blue-600">
-      PPF Calculator
-      </a>
+<a href="/income-tax/" class="hover:text-blue-600">
+Income Tax
+</a>
 
-      <a href="/about/" class="hover:text-blue-600">
-      About
-      </a>
+<a href="/ppf/" class="hover:text-blue-600">
+PPF Calculator
+</a>
 
-    </div>
+<a href="/about/" class="hover:text-blue-600">
+About
+</a>
 
-  </div>
+</div>
+
+</div>
 
 </nav>
 
@@ -163,10 +165,12 @@ width:100%;
 
 </style>
 
-<!-- Calculator Data -->
+<!-- LOAD CALCULATOR DATA FIRST -->
 <script src="/js/calculator-index.js"></script>
 
 <script>
+
+document.addEventListener("DOMContentLoaded",function(){
 
 const btn=document.getElementById("menuBtn");
 
@@ -198,6 +202,10 @@ return;
 
 }
 
+if(!window.calculators){
+return;
+}
+
 let matches=window.calculators.filter(calc=>
 
 calc.name.toLowerCase().includes(value) ||
@@ -224,7 +232,7 @@ results.classList.remove("hidden");
 
 }
 
-/* DESKTOP */
+/* DESKTOP SEARCH */
 
 document
 .getElementById("calculatorSearch")
@@ -237,7 +245,7 @@ searchCalculator(
 
 });
 
-/* MOBILE */
+/* MOBILE SEARCH */
 
 document
 .getElementById("mobileCalculatorSearch")
@@ -247,6 +255,8 @@ searchCalculator(
 "mobileCalculatorSearch",
 "mobileSearchResults"
 );
+
+});
 
 });
 
