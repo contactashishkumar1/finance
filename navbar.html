@@ -10,24 +10,27 @@
 
       <!-- Desktop Search -->
       <div class="hidden md:block relative w-72">
+
         <input
-          id="calculatorSearch"
-          type="text"
-          placeholder="Search calculators..."
-          class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        >
+        id="calculatorSearch"
+        type="text"
+        placeholder="Search calculators..."
+        class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500">
+
         <div
-          id="searchResults"
-          class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50"
-        ></div>
+        id="searchResults"
+        class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50">
+        </div>
+
       </div>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+
         <a href="/calculators/" class="nav-link">All Calculators</a>
 
         <a href="/financial-goal-planner/" class="nav-link font-semibold text-blue-600">
-          Goal Planner
+        Goal Planner
         </a>
 
         <a href="/sip/" class="nav-link">SIP</a>
@@ -39,20 +42,26 @@
         <a href="/ppf/" class="nav-link">PPF</a>
 
         <a href="/about/" class="nav-link">About</a>
+
       </div>
 
       <!-- Mobile Button -->
-      <button id="menuBtn" class="md:hidden text-slate-700 hover:text-blue-600 transition">
+      <button id="menuBtn"
+      class="md:hidden text-slate-700 hover:text-blue-600">
+
         <svg xmlns="http://www.w3.org/2000/svg"
-             class="h-6 w-6"
-             fill="none"
-             viewBox="0 0 24 24"
-             stroke="currentColor">
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor">
+
           <path stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"/>
+
         </svg>
+
       </button>
 
     </div>
@@ -60,175 +69,185 @@
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white">
+  <div id="mobileMenu"
+  class="hidden md:hidden border-t border-slate-200 bg-white">
+
     <div class="flex flex-col p-4 space-y-4 text-sm font-medium text-slate-700">
 
       <!-- Mobile Search -->
       <div class="relative">
+
         <input
-          id="mobileCalculatorSearch"
-          type="text"
-          placeholder="Search calculators..."
-          class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm"
-        >
+        id="mobileCalculatorSearch"
+        type="text"
+        placeholder="Search calculators..."
+        class="w-full border border-slate-200 rounded-lg px-4 py-2 text-sm">
+
         <div
-          id="mobileSearchResults"
-          class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50"
-        ></div>
+        id="mobileSearchResults"
+        class="hidden absolute w-full bg-white border border-slate-200 rounded-lg shadow-lg mt-2 max-h-80 overflow-y-auto z-50">
+        </div>
+
       </div>
 
-      <a href="/calculators/" class="hover:text-blue-600">All Calculators</a>
-
-      <a href="/financial-goal-planner/" class="text-blue-600 font-semibold">
-        Financial Goal Planner ⭐
+      <a href="/calculators/" class="hover:text-blue-600">
+      All Calculators
       </a>
 
-      <a href="/sip/" class="hover:text-blue-600">SIP Calculator</a>
+      <a href="/financial-goal-planner/"
+      class="text-blue-600 font-semibold">
+      Financial Goal Planner ⭐
+      </a>
 
-      <a href="/emi/" class="hover:text-blue-600">EMI Calculator</a>
+      <a href="/sip/" class="hover:text-blue-600">
+      SIP Calculator
+      </a>
 
-      <a href="/income-tax/" class="hover:text-blue-600">Income Tax</a>
+      <a href="/emi/" class="hover:text-blue-600">
+      EMI Calculator
+      </a>
 
-      <a href="/ppf/" class="hover:text-blue-600">PPF Calculator</a>
+      <a href="/income-tax/" class="hover:text-blue-600">
+      Income Tax
+      </a>
 
-      <a href="/about/" class="hover:text-blue-600">About</a>
+      <a href="/ppf/" class="hover:text-blue-600">
+      PPF Calculator
+      </a>
+
+      <a href="/about/" class="hover:text-blue-600">
+      About
+      </a>
+
     </div>
+
   </div>
+
 </nav>
 
 <style>
+
 .nav-link{
-  position:relative;
-  padding-bottom:4px;
-  transition:all 0.2s ease;
+position:relative;
+padding-bottom:4px;
+transition:all 0.2s ease;
 }
 
 .nav-link:hover{
-  color:#2563eb;
+color:#2563eb;
 }
 
 .nav-link::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:0;
-  height:2px;
-  background:#2563eb;
-  transition:width 0.25s ease;
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:2px;
+background:#2563eb;
+transition:width 0.25s ease;
 }
 
 .nav-link:hover::after{
-  width:100%;
+width:100%;
 }
 
 .nav-link.active{
-  color:#2563eb;
-  font-weight:600;
+color:#2563eb;
+font-weight:600;
 }
 
 .nav-link.active::after{
-  width:100%;
+width:100%;
 }
+
 </style>
 
+<!-- Calculator Data -->
 <script src="/js/calculator-index.js"></script>
 
 <script>
-const btn = document.getElementById("menuBtn");
-const menu = document.getElementById("mobileMenu");
-const desktopInput = document.getElementById("calculatorSearch");
-const desktopResults = document.getElementById("searchResults");
-const mobileInput = document.getElementById("mobileCalculatorSearch");
-const mobileResults = document.getElementById("mobileSearchResults");
 
-if (btn && menu) {
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-}
+const btn=document.getElementById("menuBtn");
 
-window.calculatorIndex = window.calculatorIndex || [];
+const menu=document.getElementById("mobileMenu");
 
-function normalizeText(value) {
-  return (value || "").toLowerCase().trim();
-}
+btn.addEventListener("click",()=>{
 
-function renderResults(inputEl, resultsEl) {
-  if (!inputEl || !resultsEl) return;
+menu.classList.toggle("hidden");
 
-  const query = normalizeText(inputEl.value);
-  resultsEl.innerHTML = "";
-
-  if (!query) {
-    resultsEl.classList.add("hidden");
-    return;
-  }
-
-  const list = Array.isArray(window.calculatorIndex) ? window.calculatorIndex : [];
-  const matches = list.filter((calc) => {
-    const name = normalizeText(calc.name);
-    const keywords = normalizeText(calc.keywords);
-    const url = normalizeText(calc.url);
-    return name.includes(query) || keywords.includes(query) || url.includes(query);
-  }).slice(0, 8);
-
-  if (matches.length === 0) {
-    const empty = document.createElement("div");
-    empty.className = "px-4 py-3 text-sm text-slate-500";
-    empty.textContent = "No matching calculators found";
-    resultsEl.appendChild(empty);
-    resultsEl.classList.remove("hidden");
-    return;
-  }
-
-  matches.forEach((calc) => {
-    const item = document.createElement("a");
-    item.href = calc.url;
-    item.className = "block px-4 py-2 hover:bg-blue-50 text-sm border-b border-slate-100 last:border-b-0";
-    item.textContent = calc.name;
-    resultsEl.appendChild(item);
-  });
-
-  resultsEl.classList.remove("hidden");
-}
-
-if (desktopInput && desktopResults) {
-  desktopInput.addEventListener("input", () => renderResults(desktopInput, desktopResults));
-  desktopInput.addEventListener("focus", () => renderResults(desktopInput, desktopResults));
-}
-
-if (mobileInput && mobileResults) {
-  mobileInput.addEventListener("input", () => renderResults(mobileInput, mobileResults));
-  mobileInput.addEventListener("focus", () => renderResults(mobileInput, mobileResults));
-}
-
-document.addEventListener("click", (e) => {
-  if (desktopInput && desktopResults && !desktopInput.contains(e.target) && !desktopResults.contains(e.target)) {
-    desktopResults.classList.add("hidden");
-  }
-  if (mobileInput && mobileResults && !mobileInput.contains(e.target) && !mobileResults.contains(e.target)) {
-    mobileResults.classList.add("hidden");
-  }
 });
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    if (desktopResults) desktopResults.classList.add("hidden");
-    if (mobileResults) mobileResults.classList.add("hidden");
-  }
+/* SEARCH FUNCTION */
+
+function searchCalculator(inputId,resultId){
+
+let input=document.getElementById(inputId);
+
+let results=document.getElementById(resultId);
+
+let value=input.value.toLowerCase();
+
+results.innerHTML="";
+
+if(value===""){
+
+results.classList.add("hidden");
+
+return;
+
+}
+
+let matches=window.calculators.filter(calc=>
+
+calc.name.toLowerCase().includes(value) ||
+
+calc.keywords.toLowerCase().includes(value)
+
+);
+
+matches.slice(0,8).forEach(calc=>{
+
+let item=document.createElement("a");
+
+item.href=calc.url;
+
+item.className="block px-4 py-2 hover:bg-blue-50 text-sm";
+
+item.textContent=calc.name;
+
+results.appendChild(item);
+
 });
 
-if (typeof window.loadCalculatorIndex === "function") {
-  window.loadCalculatorIndex()
-    .then((data) => {
-      if (Array.isArray(data)) {
-        window.calculatorIndex = data;
-      }
-      console.log("Loaded calculators:", window.calculatorIndex.length);
-    })
-    .catch((error) => {
-      console.error("Calculator index load failed:", error);
-    });
+results.classList.remove("hidden");
+
 }
+
+/* DESKTOP */
+
+document
+.getElementById("calculatorSearch")
+.addEventListener("keyup",function(){
+
+searchCalculator(
+"calculatorSearch",
+"searchResults"
+);
+
+});
+
+/* MOBILE */
+
+document
+.getElementById("mobileCalculatorSearch")
+.addEventListener("keyup",function(){
+
+searchCalculator(
+"mobileCalculatorSearch",
+"mobileSearchResults"
+);
+
+});
+
 </script>
