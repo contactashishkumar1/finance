@@ -72,10 +72,10 @@
         .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
         .nav-link.active { color: #2563eb; font-weight: 600; }
         .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
-        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
         details summary { list-style: none; }
         details summary::-webkit-details-marker { display: none; }
         details[open] summary svg { transform: rotate(180deg); }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
@@ -115,8 +115,8 @@
     <main class="max-w-6xl mx-auto px-4">
         <!-- Quick Action Micro-Strip -->
         <div class="mb-6 flex flex-wrap gap-2 justify-center md:justify-start">
-            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600 hover:bg-slate-50 transition-all">Apply Example</button>
-            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500 hover:bg-red-50 transition-all">Reset All</button>
+            <button onclick="applyExample()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-slate-600">Apply Example</button>
+            <button onclick="resetCalculator()" class="border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold uppercase tracking-tighter text-red-500">Reset All</button>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
@@ -131,22 +131,22 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         <div>
                             <label for="costInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Cost Price (₹)</label>
-                            <input type="number" id="costInp" value="500" step="0.01" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                            <input type="number" id="costInp" value="500" step="0.01" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         </div>
                         <div>
                             <label for="sellInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight text-pretty">Selling Price (₹)</label>
-                            <input type="number" id="sellInp" value="800" step="0.01" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                            <input type="number" id="sellInp" value="800" step="0.01" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         </div>
                     </div>
 
                     <div class="mb-6">
                         <label for="unitsInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Units Sold (Optional)</label>
-                        <input type="number" id="unitsInp" value="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <input type="number" id="unitsInp" value="1" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                     </div>
 
                     <div class="mb-8">
                         <label for="expenseInp" class="text-xs font-bold text-slate-500 uppercase block mb-2 tracking-tight">Operating Expenses (₹)</label>
-                        <input type="number" id="expenseInp" value="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
+                        <input type="number" id="expenseInp" value="0" min="0" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold focus:ring-2 focus:ring-blue-500 text-sm outline-none transition-all">
                         <p class="text-[9px] text-slate-400 mt-2 italic">Salary, rent, marketing etc. (used for Net Margin calculation).</p>
                     </div>
 
@@ -169,6 +169,27 @@
                         <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
                             <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Markup Percentage</p>
                             <p class="font-bold text-slate-800 text-lg" id="markupDisp">0%</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10">
+                        <div class="flex justify-between text-[11px] mb-2 font-bold uppercase">
+                            <span class="text-blue-600">Product Cost</span>
+                            <span class="text-emerald-600">Profit Margin</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="retainedBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
+                            <div id="lossBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 50%"></div>
+                        </div>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="retainedLabel">Cost: 0%</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 bg-emerald-500 rounded-sm mr-2"></div>
+                                <span class="text-[10px] font-bold text-slate-500 uppercase" id="lossLabel">Margin: 0%</span>
+                            </div>
                         </div>
                     </div>
 
@@ -225,12 +246,12 @@
                         <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
                             <h3 class="font-bold text-slate-800 text-lg mb-2 text-pretty">1. Profit Margin (Sales Base)</h3>
                             <p class="text-slate-500 text-xs mb-4">Calculated as a percentage of the <strong>Selling Price</strong>.</p>
-                            <div class="formula-box text-blue-800 text-xs">Margin = (Price - Cost) / Price</div>
+                            <div class="formula-box text-blue-800 text-xs text-center font-bold">Margin = (Price - Cost) / Price</div>
                         </div>
                         <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty">
                             <h3 class="font-bold text-slate-800 text-lg mb-2 text-pretty">2. Markup (Cost Base)</h3>
                             <p class="text-slate-500 text-xs mb-4">Calculated as a percentage of the <strong>Cost Price</strong>.</p>
-                            <div class="formula-box text-blue-800 text-xs">Markup = (Price - Cost) / Cost</div>
+                            <div class="formula-box text-blue-800 text-xs text-center font-bold">Markup = (Price - Cost) / Cost</div>
                         </div>
                     </div>
                     <p class="mt-4 text-pretty">Understanding this difference is vital for setting prices that cover your <a href="/break-even-calculator/" class="text-blue-600 underline">Fixed Costs</a> and ensure business longevity.</p>
@@ -273,7 +294,7 @@
                 <div class="space-y-4">
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a good profit margin?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It depends on the industry. Retail might operate on 10-15% margins, while Software (SaaS) or Luxury goods can exceed 50-70%. Generally, 20% is considered healthy.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How do I calculate margin from markup?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Use the formula: Margin = Markup / (1 + Markup). For example, a 100% markup (doubling the price) results in a 50% profit margin.</div></details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is 10% margin good for a startup?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">A 10% gross margin is usually low for a startup because it leaves very little room to cover operating expenses and marketing. Aim for at least 25% gross margin.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is 10% margin good for a startup?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">A 10% gross margin is usually low for a startup because it leaves very little room to cover operating expenses and marketing. Aim for at least 25% gross margin.</div></details>
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Why did my net margin drop?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">Common reasons include rising raw material costs, high customer acquisition costs (marketing), or increasing utility and staff expenses.</div></details>
                 </div>
             </section>
@@ -324,8 +345,8 @@
         </div>
     </main>
 
-    <!-- Popular Business Tools Grid (Footer linked) -->
-    <section class="max-w-6xl mx-auto px-4 pt-8 border-t border-slate-200 text-pretty text-pretty">
+    <!-- Popular Business Tools Grid -->
+    <section class="max-w-6xl mx-auto px-4 pt-8 border-t border-slate-200 text-pretty text-pretty mb-12">
         <div class="text-center mb-10 text-pretty">
             <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Popular Business Tools</h2>
         </div>
@@ -365,91 +386,113 @@
             copyBtn: document.getElementById('copyBtn')
         };
 
-        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
-        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+        function formatInr(val) { 
+            const isNegative = val < 0;
+            const absVal = Math.abs(val);
+            return (isNegative ? "-₹" : "₹") + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 2, minimumFractionDigits: 2 }).format(absVal)); 
+        }
 
         function calculate() {
-            const cost = parseFloat(elements.costInp.value) || 0;
-            const sell = parseFloat(elements.sellInp.value) || 0;
-            const units = parseFloat(elements.unitsInp.value) || 0;
-            const expenses = parseFloat(elements.expenseInp.value) || 0;
+            // Input Validation: treated as numbers, default to 0
+            const cost = Math.max(0, parseFloat(elements.costInp.value) || 0);
+            const sell = Math.max(0, parseFloat(elements.sellInp.value) || 0);
+            const units = Math.max(0, parseFloat(elements.unitsInp.value) || 0);
+            const expenses = Math.max(0, parseFloat(elements.expenseInp.value) || 0);
 
-            if (sell === 0) {
-                elements.marginDisp.textContent = "0%";
-                return;
+            // Per unit metrics
+            const profitPerUnit = sell - cost;
+            
+            // Zero division protection
+            const marginPerc = sell > 0 ? (profitPerUnit / sell) * 100 : 0;
+            const markupPerc = cost > 0 ? (profitPerUnit / cost) * 100 : 0;
+            
+            // Total volume metrics
+            const totalRevenue = sell * units;
+            const totalGrossProfit = profitPerUnit * units;
+            const totalNetProfit = totalGrossProfit - expenses;
+            const netMarginPerc = totalRevenue > 0 ? (totalNetProfit / totalRevenue) * 100 : 0;
+
+            // UI Display - Standardizing to 2 decimal places
+            elements.marginDisp.textContent = marginPerc.toFixed(2) + "%";
+            elements.profitPerUnitDisp.textContent = formatInr(profitPerUnit);
+            elements.markupDisp.textContent = markupPerc.toFixed(2) + "%";
+            elements.totalProfitDisp.textContent = formatInr(totalGrossProfit);
+            
+            // Net Margin displays N/A if revenue is zero
+            elements.netMarginDisp.textContent = totalRevenue > 0 ? netMarginPerc.toFixed(2) + "%" : "0.00%";
+
+            // Progress Bar Logic (NaN and Bounds Protection)
+            let barCost = 0;
+            let barMargin = 0;
+
+            if (sell > 0) {
+                // If making a profit
+                if (sell >= cost) {
+                    barCost = (cost / sell) * 100;
+                    barMargin = 100 - barCost;
+                    elements.lossBar.className = "h-full bg-emerald-500 transition-all duration-700";
+                } else {
+                    // If making a loss
+                    barCost = 100;
+                    barMargin = 0; // Negative margin logic usually doesn't show well on standard bars
+                    elements.lossBar.className = "h-full bg-red-500 transition-all duration-700";
+                }
+            } else if (cost > 0) {
+                // Cost exists but selling price is 0
+                barCost = 100;
+                barMargin = 0;
             }
 
-            const profit = sell - cost;
-            const marginPerc = (profit / sell) * 100;
-            const markupPerc = cost > 0 ? (profit / cost) * 100 : 0;
+            elements.retainedBar.style.width = barCost + "%";
+            elements.lossBar.style.width = barMargin + "%";
             
-            const totalRevenue = sell * units;
-            const totalGrossProfit = profit * units;
-            const netProfit = totalGrossProfit - expenses;
-            const netMargin = totalRevenue > 0 ? (netProfit / totalRevenue) * 100 : 0;
+            // Update labels
+            elements.retainedLabel.textContent = `Cost: ${cost > sell ? ( (cost/sell)*100 ).toFixed(1) : barCost.toFixed(1)}%`;
+            elements.lossLabel.textContent = `Margin: ${marginPerc.toFixed(1)}%`;
 
-            // UI Display
-            elements.marginDisp.textContent = marginPerc.toFixed(2) + "%";
-            elements.profitPerUnitDisp.textContent = formatInr(profit);
-            elements.markupDisp.textContent = markupPerc.toFixed(1) + "%";
-            elements.totalProfitDisp.textContent = units > 0 ? formatInr(totalGrossProfit) : formatInr(profit);
-            elements.netMarginDisp.textContent = expenses > 0 ? netMargin.toFixed(1) + "%" : "N/A";
+            // Quality Score Logic
+            updateQuality(marginPerc, profitPerUnit, netMarginPerc);
 
-            // Bar Progress
-            const costPerc = Math.max(0, Math.min(100, (cost / sell) * 100));
-            const gainPerc = 100 - costPerc;
-            elements.retainedBar.style.width = costPerc + "%";
-            elements.lossBar.style.width = gainPerc + "%";
-            elements.retainedLabel.textContent = "Cost: " + costPerc.toFixed(1) + "%";
-            elements.lossLabel.textContent = "Margin: " + gainPerc.toFixed(1) + "%";
-
-            // Quality Logic
-            updateQuality(marginPerc, profit);
-
-            // Insights
+            // Insights Content
             let insightText = `<div class="space-y-1">`;
-            if (profit > 0) {
-                insightText += `<p>✅ <strong>Insight:</strong> Your profit per unit is <strong>${formatInr(profit)}</strong>.</p>`;
-                insightText += `<p class="mt-2">💰 For every ₹100 of sales, you keep <strong>₹${marginPerc.toFixed(2)}</strong> after direct costs.</p>`;
-                if (expenses > 0 && units > 0) {
-                    insightText += `<p class="mt-2 text-indigo-700">🏢 After covering ₹${formatInr(expenses)} overheads, your actual net margin is <strong>${netMargin.toFixed(2)}%</strong>.</p>`;
+            if (profitPerUnit > 0) {
+                insightText += `<p>✅ <strong>Per Unit:</strong> You keep <strong>₹${marginPerc.toFixed(2)}</strong> for every ₹100 of revenue.</p>`;
+                if (units > 0) {
+                    insightText += `<p class="mt-2">💰 <strong>Net Position:</strong> Total net profit after ₹${expenses.toLocaleString('en-IN')} expenses is <strong>${formatInr(totalNetProfit)}</strong>.</p>`;
                 }
+            } else if (profitPerUnit < 0) {
+                insightText += `<p class="text-red-700 font-bold">⚠️ Financial Warning: You are losing ${formatInr(Math.abs(profitPerUnit))} on every unit sold.</p>`;
             } else {
-                insightText += `<p class="text-red-700">⚠️ <strong>Alert:</strong> Your selling price is lower than or equal to cost. You are operating at a <strong>loss</strong>.</p>`;
+                insightText += `<p>⚖️ <strong>Break-even:</strong> You are selling exactly at cost price. No profit or loss generated.</p>`;
             }
             insightText += `</div>`;
             elements.insightsBox.innerHTML = insightText;
         }
 
-        function updateQuality(margin, profit) {
+        function updateQuality(margin, profitPerUnit, netMargin) {
             const card = elements.qualityCard;
             const label = elements.qualityLabel;
             const badge = elements.statusBadge;
 
-            if (profit <= 0) {
+            if (profitPerUnit < 0) {
                 card.className = "bg-red-950 p-6 sm:p-8 rounded-2xl text-white transition-all";
-                label.textContent = "Loss Making Trade";
-                badge.textContent = "Invalid Pricing";
+                label.textContent = "Loss Making Venture";
+                badge.textContent = "CRITICAL";
                 badge.className = "bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-[10px] font-bold border border-red-500/30 inline-block mt-1 uppercase";
             } else if (margin < 10) {
                 card.className = "bg-red-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
-                label.textContent = "Low Margin Business";
-                badge.textContent = "Thin Edge";
+                label.textContent = "Thin Margin Risks";
+                badge.textContent = "LOW EDGE";
                 badge.className = "bg-red-500/20 text-red-200 px-3 py-1 rounded-full text-[10px] font-bold border border-red-500/30 inline-block mt-1 uppercase";
-            } else if (margin <= 25) {
-                card.className = "bg-orange-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
-                label.textContent = "Healthy Margin";
-                badge.textContent = "Standard";
-                badge.className = "bg-orange-500/20 text-orange-200 px-3 py-1 rounded-full text-[10px] font-bold border border-orange-500/30 inline-block mt-1 uppercase";
-            } else if (margin <= 50) {
+            } else if (margin <= 30) {
                 card.className = "bg-blue-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
-                label.textContent = "Strong Margin";
-                badge.textContent = "High Quality";
+                label.textContent = "Healthy Business";
+                badge.textContent = "STANDARD";
                 badge.className = "bg-blue-500/20 text-blue-200 px-3 py-1 rounded-full text-[10px] font-bold border border-blue-500/30 inline-block mt-1 uppercase";
             } else {
                 card.className = "bg-emerald-900 p-6 sm:p-8 rounded-2xl text-white transition-all";
-                label.textContent = "Excellent Margin";
-                badge.textContent = "Premium Alpha";
+                label.textContent = "High Alpha Business";
+                badge.textContent = "PREMIUM";
                 badge.className = "bg-emerald-500/20 text-emerald-200 px-3 py-1 rounded-full text-[10px] font-bold border border-emerald-500/30 inline-block mt-1 uppercase";
             }
         }
@@ -461,13 +504,22 @@
                 const originalText = "Copy Margin Breakdown";
                 elements.copyBtn.innerText = "✓ Copied!";
                 setTimeout(() => elements.copyBtn.innerText = originalText, 2000);
-            } catch (err) {}
+            } catch (err) {
+                const textArea = document.createElement("textarea");
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                elements.copyBtn.innerText = "✓ Copied!";
+                setTimeout(() => elements.copyBtn.innerText = "Copy Margin Breakdown", 2000);
+            }
         }
 
         function resetCalculator() {
             elements.costInp.value = 0;
             elements.sellInp.value = 0;
-            elements.unitsInp.value = 0;
+            elements.unitsInp.value = 1;
             elements.expenseInp.value = 0;
             calculate();
         }
@@ -492,9 +544,9 @@
             document.getElementById("navbar").innerHTML = data;
             const btn = document.getElementById("menuBtn");
             const menu = document.getElementById("mobileMenu");
-            if(btn){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+            if(btn && menu){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
         });
         fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
     </script>
 </body>
-</html>
+</html> 
