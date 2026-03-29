@@ -85,7 +85,7 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
@@ -181,17 +181,17 @@
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Cost Price (₹)</label>
-                            <input type="number" id="costInput" value="1000" min="1" step="10" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" id="costInput" value="1000" min="0" step="0.01" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
-                        <input type="range" id="costRange" min="10" max="100000" step="10" value="1000" class="w-full py-2 cursor-pointer">
+                        <input type="range" id="costRange" min="0" max="100000" step="10" value="1000" class="w-full py-2 cursor-pointer">
                     </div>
 
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
                             <label class="text-sm font-medium text-slate-600">Revenue / Selling Price (₹)</label>
-                            <input type="number" id="revenueInput" value="1500" min="1" step="10" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                            <input type="number" id="revenueInput" value="1500" min="0" step="0.01" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
-                        <input type="range" id="revenueRange" min="10" max="150000" step="10" value="1500" class="w-full py-2 cursor-pointer">
+                        <input type="range" id="revenueRange" min="0" max="150000" step="10" value="1500" class="w-full py-2 cursor-pointer">
                     </div>
 
                     <hr class="border-slate-100 my-6">
@@ -199,7 +199,7 @@
                     <div class="mb-6 p-4 bg-blue-50/50 rounded-xl border border-blue-100">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
                             <label class="text-xs font-bold text-blue-600 uppercase">Operating Expenses (%)</label>
-                            <input type="number" id="opexInput" value="5" min="0" max="100" step="0.5" class="w-full sm:w-32 px-3 py-1 border border-blue-200 rounded-lg text-left sm:text-right font-bold text-blue-700 focus:outline-none">
+                            <input type="number" id="opexInput" value="5" min="0" max="100" step="0.1" class="w-full sm:w-32 px-3 py-1 border border-blue-200 rounded-lg text-left sm:text-right font-bold text-blue-700 focus:outline-none">
                         </div>
                         <p class="text-[10px] text-blue-400 mt-2 italic">Marketing, shipping, and storage costs.</p>
                     </div>
@@ -217,7 +217,7 @@
                     </div>
                     <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 transition-all hover:-translate-y-1">
                         <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Markup Percentage</p>
-                        <h3 id="markupCard" class="text-lg sm:text-xl font-bold leading-tight break-all">50.0%</h3>
+                        <h3 id="markupCard" class="text-lg sm:text-xl font-bold leading-tight break-all">50.00%</h3>
                     </div>
                 </div>
             </div>
@@ -248,17 +248,17 @@
                             <span class="text-indigo-600 font-bold uppercase text-xs">Cost of Goods</span>
                         </div>
                         <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
-                            <div id="profitBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 33%"></div>
-                            <div id="costBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 67%"></div>
+                            <div id="profitBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 33.33%"></div>
+                            <div id="costBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 66.67%"></div>
                         </div>
                         <div class="flex flex-wrap justify-between mt-4 gap-4">
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
-                                <span class="text-[10px] sm:text-xs text-slate-500" id="profitLabel">Profit: 33%</span>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="profitLabel">Profit: 33.33%</span>
                             </div>
                             <div class="flex items-center">
                                 <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
-                                <span class="text-[10px] sm:text-xs text-slate-500" id="costLabel">Cost: 67%</span>
+                                <span class="text-[10px] sm:text-xs text-slate-500" id="costLabel">Cost: 66.67%</span>
                             </div>
                         </div>
                     </div>
@@ -405,7 +405,7 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Is a 20% margin considered good for a business?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             It depends on the industry. For a grocery store, a 20% margin is fantastic. For a software company, it's quite low. Generally, a net profit margin of 10-15% across all industries is considered healthy.
@@ -414,7 +414,7 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Why is my margin percentage always lower than my markup?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             This is a mathematical rule. Margin is calculated against the higher value (Revenue), while Markup is calculated against the lower value (Cost). Therefore, the markup percentage will always be higher than the margin percentage.
@@ -423,7 +423,7 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Does Profit Margin include GST?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             GST is a pass-through tax. When calculating internal margins, you should always use figures **Net of GST**. Exclude the GST you collect from customers and the input tax credit you claim to see your true business profit.
@@ -432,7 +432,7 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. What is the difference between Gross Margin and Net Margin?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             Gross margin only considers the direct cost of the product. Net margin subtracts everything else—rent, salaries, marketing, taxes, and interest. Net margin is your "take-home" profit.
@@ -441,7 +441,7 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Can profit margin be over 100%?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             No. Margin is a part of the total revenue. You cannot have a profit that is larger than the total amount you collected. However, **Markup** can be 200%, 500%, or even 1000%.
@@ -450,7 +450,7 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. How does high inflation affect my margins?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             Inflation increases your cost price. If you don't increase your selling price proportionally, your profit margin will shrink. This is called "Margin Compression."
@@ -459,7 +459,7 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. What is 'Margin of Safety' in business?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             In business, this is the amount by which sales can drop before the company starts losing money. A higher profit margin provides a much larger margin of safety.
@@ -468,7 +468,7 @@
                     <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
                         <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
                             <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Should I focus on Margin or Volume?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
                         <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
                             This is the classic business dilemma. Luxury brands focus on high margins and low volume. Supermarkets focus on low margins and high volume. Most successful small businesses aim for a balance—moderate volume with a healthy 20-30% margin.
@@ -584,65 +584,66 @@
             costBar: document.getElementById('costBar'),
             profitLab: document.getElementById('profitLabel'),
             costLab: document.getElementById('costLabel'),
-            mobilePortfolio: document.getElementById('totalPortfolioMobile'),
-            mobileAdjustment: document.getElementById('totalAdjustmentMobile'),
             table: document.getElementById('projectionTable'),
             calcBtn: document.getElementById('calcBtn')
         };
 
         function formatIndian(val) {
+            const isNegative = val < 0;
             const formatter = new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 });
-            return "₹" + formatter.format(val);
+            return (isNegative ? "-₹" : "₹") + formatter.format(Math.abs(val));
         }
 
         function updateCalculations() {
-            const cost = parseFloat(elements.costIn.value) || 0;
-            const revenue = parseFloat(elements.revIn.value) || 1;
-            const opexPercent = parseFloat(elements.opexIn.value) || 0;
+            // Input Validation: Positive numbers only, default to 0
+            const cost = Math.max(0, parseFloat(elements.costIn.value) || 0);
+            const revenue = Math.max(0, parseFloat(elements.revIn.value) || 0);
+            const opexPercent = Math.max(0, Math.min(100, parseFloat(elements.opexIn.value) || 0));
 
+            // Logic Protection: Division by zero and NaN
             const grossProfit = revenue - cost;
-            const margin = (grossProfit / revenue) * 100;
-            const markup = cost > 0 ? (grossProfit / cost) * 100 : 0;
+            const margin = revenue > 0 ? (grossProfit / revenue) * 100 : 0;
+            const markup = cost > 0 ? (grossProfit / cost) * 100 : (revenue > 0 ? 100 : 0);
             
-            // Estimates for Net Profit based on OPEX input
-            const totalOpexAmt = revenue * (opexPercent / 100);
-            const estNetProfit = grossProfit - totalOpexAmt;
-
-            // Results Display
-            elements.marginVal.textContent = margin.toFixed(2) + "%";
-            elements.grossProfitCard.textContent = formatIndian(grossProfit);
-            elements.markupCard.textContent = markup.toFixed(1) + "%";
-            
-            elements.mobilePortfolio.textContent = formatIndian(revenue);
-            elements.mobileAdjustment.textContent = formatIndian(grossProfit);
-
-            let health = "Average";
+            // Financial Status Determination
+            let health = "Neutral";
             if (margin >= 40) health = "High Efficiency";
             else if (margin >= 20) health = "Healthy";
-            else if (margin < 10) health = "Critical";
+            else if (margin > 0) health = "Thin Edge";
+            else if (revenue > 0 && margin <= 0) health = "Loss Making";
+
+            // Results Display - Standard 2 decimals for finance
+            elements.marginVal.textContent = margin.toFixed(2) + "%";
+            elements.grossProfitCard.textContent = formatIndian(grossProfit);
+            elements.markupCard.textContent = markup.toFixed(2) + "%";
             elements.healthDisp.textContent = health;
 
-            // Visualization
-            const profitPct = Math.max(0, Math.min(100, margin));
-            elements.profitBar.style.width = `${profitPct}%`;
-            elements.costBar.style.width = `${100 - profitPct}%`;
+            // Visualization Update
+            // Profit Bar reflects the positive portion of the margin
+            const profitPctForBar = Math.max(0, Math.min(100, margin));
+            const costPctForBar = 100 - profitPctForBar;
             
-            elements.profitLab.textContent = `Profit: ${profitPct.toFixed(0)}%`;
-            elements.costLab.textContent = `Cost: ${(100-profitPct).toFixed(0)}%`;
+            elements.profitBar.style.width = profitPctForBar + "%";
+            elements.costBar.style.width = costPctForBar + "%";
+            
+            elements.profitLab.textContent = `Profit: ${profitPctForBar.toFixed(2)}%`;
+            elements.costLab.textContent = `Cost: ${costPctForBar.toFixed(2)}%`;
 
             renderTable(cost, revenue);
         }
 
         function renderTable(cost, currentRev) {
             elements.table.innerHTML = '';
-            // Revenue factors to show sensitivity
+            // Factors for price sensitivity analysis
             const factors = [0.8, 0.9, 1.0, 1.1, 1.2, 1.5, 2.0];
             
             factors.forEach(f => {
                 const testRev = currentRev * f;
+                if (testRev <= 0) return;
+
                 const testProfit = testRev - cost;
                 const testMargin = (testProfit / testRev) * 100;
-                const testMarkup = (testProfit / cost) * 100;
+                const testMarkup = cost > 0 ? (testProfit / cost) * 100 : 100;
                 const isCurrent = Math.abs(f - 1.0) < 0.01;
                 
                 const row = document.createElement('tr');
@@ -651,8 +652,8 @@
                 row.innerHTML = `
                     <td class="px-3 py-3 border-b border-slate-100 font-medium text-slate-700">₹${Math.round(testRev).toLocaleString('en-IN')}</td>
                     <td class="px-3 py-3 border-b border-slate-100 text-right ${testProfit >= 0 ? 'text-emerald-600' : 'text-red-500'}">₹${Math.round(testProfit).toLocaleString('en-IN')}</td>
-                    <td class="px-3 py-3 border-b border-slate-100 text-right text-indigo-600 font-bold">${testMargin.toFixed(1)}%</td>
-                    <td class="px-3 py-3 border-b border-slate-100 text-right font-black text-slate-800">${testMarkup.toFixed(1)}%</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right text-indigo-600 font-bold">${testMargin.toFixed(2)}%</td>
+                    <td class="px-3 py-3 border-b border-slate-100 text-right font-black text-slate-800">${testMarkup.toFixed(2)}%</td>
                 `;
                 elements.table.appendChild(row);
             });
