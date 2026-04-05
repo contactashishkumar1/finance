@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Defer Chart.js for better performance -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 
     <!-- Schema Markup: WebPage -->
     <script type="application/ld+json">
@@ -32,7 +32,11 @@
       "@type": "WebPage",
       "name": "XIRR Calculator India – Calculate SIP & Mutual Fund Returns (Free 2026)",
       "description": "Professional tool to calculate the annualized return (XIRR) for irregular cash flows in mutual funds and stocks.",
-     "publisher": { "@type": "Organization", "name": "ArthCalculator" },
+     "publisher": { 
+"@type": "Organization",
+"name": "ArthCalculator",
+"url":"https://arthcalculator.in/"
+},
 
 "dateModified":"2026-04-05"
         }
@@ -332,8 +336,8 @@ How to use this XIRR Calculator
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">What is XIRR?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
-                    <p>XIRR (Extended Internal Rate of Return) is a method used to calculate the annualized rate of return for a series of cash flows occurring at irregular intervals. If you invest monthly through <a href="/sip" class="text-blue-600 underline font-medium">SIPs</a>, you can estimate your potential growth using our <a href="/sip" class="text-blue-600 font-medium underline">SIP Calculator</a>, but XIRR is the only way to track actual performance when your timing varies.</p>
-                    <p>While <a href="/cagr" class="text-blue-600 underline font-medium">CAGR</a> is great for point-to-point lump sum investments, it fails when you have multiple investments or partial withdrawals. In the Indian context, XIRR is the actual "personal inflation-beating return" you earn on your mutual fund portfolio. It accounts for the exact date of every rupee invested, providing a clear comparison against the rates from our <a href="/inflation" class="text-blue-600 underline font-medium">Inflation Calculator</a>.</p>
+                    <p>XIRR (Extended Internal Rate of Return) is a method used to calculate the annualized rate of return for a series of cash flows occurring at irregular intervals. If you invest monthly through <a href="/sip/" class="text-blue-600 underline font-medium">SIPs</a>, you can estimate your potential growth using our <a href="/sip" class="text-blue-600 font-medium underline">SIP Calculator</a>, but XIRR is the only way to track actual performance when your timing varies.</p>
+                    <p>While <a href="/cagr/" class="text-blue-600 underline font-medium">CAGR</a> is great for point-to-point lump sum investments, it fails when you have multiple investments or partial withdrawals. In the Indian context, XIRR is the actual "personal inflation-beating return" you earn on your mutual fund portfolio. It accounts for the exact date of every rupee invested, providing a clear comparison against the rates from our <a href="/inflation/" class="text-blue-600 underline font-medium">Inflation Calculator</a>.</p>
                 </div>
             </section>
 
@@ -475,7 +479,7 @@ CAGR Calculator
             <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty">
                 <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
                 Estimated results for educational purposes only. XIRR is calculated based on mathematical models and may vary slightly from bank/broker statements. Mutual fund investments are subject to market risks.
-                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: April 2026</p>
             </div>
         </div>
     </main>
