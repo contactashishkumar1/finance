@@ -14,7 +14,7 @@
     <meta property="og:title" content="CAGR Calculator India – Calculate Compound Annual Growth Rate">
     <meta property="og:description" content="Calculate your investment's average annual growth rate with our professional CAGR calculator. Simple, fast, and accurate.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arthcalculator.in/cagr">
+    <meta property="og:url" content="https://arthcalculator.in/cagr/">
 
 <script type="application/ld+json">
 {
@@ -45,13 +45,40 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "CAGR Calculator India",
+        "url":"https://arthcalculator.in/cagr/",
       "description": "A high-precision financial tool to calculate the Compound Annual Growth Rate (CAGR) of investments.",
+        "datePublished":"2026-03-01",
+"dateModified":"2026-04-05",
       "publisher": {
         "@type": "Organization",
-        "name": "Financial Suite India"
+       "name": "ArthCalculator",
+"url":"https://arthcalculator.in/"
       }
     }
     </script>
+
+    <script type="application/ld+json">
+{
+"@context":"https://schema.org",
+
+"@type":"SoftwareApplication",
+
+"name":"CAGR Calculator",
+
+"applicationCategory":"FinanceApplication",
+
+"operatingSystem":"Web",
+
+"url":"https://arthcalculator.in/cagr/",
+
+"offers":{
+"@type":"Offer",
+"price":"0",
+"priceCurrency":"INR"
+}
+
+}
+</script>
 
     <!-- Expanded Schema Markup: FAQ for SEO -->
     <script type="application/ld+json">
@@ -80,7 +107,7 @@
           "name": "What is the difference between CAGR and XIRR?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "CAGR is used for point-to-point investments (one-time buy and sell). XIRR (Extended Internal Rate of Return) is used for multiple cash flows at different intervals, such as SIPs or irregular dividends."
+            "text": "CAGR is used for point-to-point investments (one-time buy and sell). <a href="/xirr/" class="text-blue-600 underline"> XIRR calculator </a> is used for multiple cash flows at different intervals, such as SIPs or irregular dividends."
           }
         },
         {
@@ -111,7 +138,41 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+
+"@type":"HowTo",
+
+"name":"How to calculate CAGR",
+
+"step":[
+{
+"@type":"HowToStep",
+"name":"Enter initial value",
+"text":"Enter your starting investment"
+},
+{
+"@type":"HowToStep",
+"name":"Enter final value",
+"text":"Enter investment current value"
+},
+{
+"@type":"HowToStep",
+"name":"Enter years",
+"text":"Enter investment duration"
+},
+{
+"@type":"HowToStep",
+"name":"Calculate",
+"text":"Click calculate to see CAGR"
+}
+]
+
+}
+</script>
+    
+<script src="https://cdn.tailwindcss.com" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -182,7 +243,7 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/#calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="text-blue-600">CAGR Calculator</li>
@@ -326,6 +387,27 @@
             </div>
         </div>
 
+        <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+
+<h2 class="text-xl font-bold mb-4">
+When should you NOT use CAGR?
+</h2>
+
+<ul class="list-disc ml-5 text-slate-600 text-sm">
+
+<li>When investments have multiple cash flows → use XIRR</li>
+
+<li>When measuring short term returns</li>
+
+<li>When withdrawals happen frequently</li>
+
+<li>When comparing SIP investments</li>
+
+</ul>
+
+</section>
+
+        
         <!-- Educational Content -->
         <div class="space-y-12 mb-12">
             
@@ -349,6 +431,38 @@
                     </div>
                 </div>
             </section>
+
+            <section class="bg-white p-6 rounded-2xl border">
+
+<h2 class="font-bold text-xl mb-4">
+CAGR vs Absolute Return
+</h2>
+
+<table class="w-full text-sm">
+
+<tr>
+<th class="text-left">CAGR</th>
+<th class="text-left">Absolute Return</th>
+</tr>
+
+<tr>
+<td>Accounts for time</td>
+<td>Ignores time</td>
+</tr>
+
+<tr>
+<td>Compounding based</td>
+<td>Simple calculation</td>
+</tr>
+
+<tr>
+<td>Better comparison</td>
+<td>Basic performance view</td>
+</tr>
+
+</table>
+
+</section>
 
             <!-- SEO Optimized FAQ Section -->
             <section class="max-w-4xl mx-auto" id="faqs">
@@ -438,16 +552,6 @@ fetch("/footer")
   document.getElementById("footer").innerHTML = data;
 });
 </script>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Financial Suite India",
-      "url": "https://arthcalculator.in/",
-      "description": "Free financial calculators for SIP, EMI, FD and investment planning in India."
-    }
-    </script>
 
     <script>
         const elements = {
