@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sharpe Ratio Calculator India (2026) – Risk Adjusted Return Tool</title>
     <meta name="description" content="Calculate Sharpe Ratio to measure investment return compared to risk. Essential tool for portfolio and mutual fund analysis. Evaluate risk-adjusted performance easily.">
-    <meta name="keywords" content="Sharpe Ratio Calculator India, Risk Adjusted Return, Portfolio Analysis, Mutual Fund Sharpe Ratio, Standard Deviation, 2026 Financial Tools">
+    <meta name="keywords" content="Sharpe Ratio Calculator India, Risk Adjusted Return, Portfolio Analysis, Mutual Fund Sharpe Ratio, Standard Deviation, 2026 Financial Tools, alpha beta calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-11">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/sharpe-ratio/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Sharpe Ratio Calculator India (2026) – Risk Adjusted Return Tool">
     <meta property="og:description" content="Use our high-precision Sharpe Ratio tool to measure portfolio performance against risk. Essential for Indian mutual fund investors.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arthcalculator.in/sharpe-ratio/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+    <meta property="og:site_name" content="ArthCalculator">
     
     <!-- Schema Markup: WebPage -->
     <script type="application/ld+json">
@@ -21,11 +26,65 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Sharpe Ratio Calculator India (2026)",
+      "url": "https://arthcalculator.in/sharpe-ratio/",
       "description": "A financial tool to calculate risk-adjusted returns of an investment portfolio.",
       "publisher": {
         "@type": "Organization",
-        "name": "Financial Suite India"
+        "name": "ArthCalculator",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://arthcalculator.in/logo.png"
+        }
       }
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Sharpe Ratio Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculates risk-adjusted returns of an investment portfolio compared to a risk-free asset.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate Sharpe Ratio",
+      "description": "Determine your portfolio's risk-efficiency in four simple steps.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Enter Portfolio Return",
+          "text": "Input the total annualized return percentage of your investment portfolio."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enter Risk-Free Rate",
+          "text": "Input the current rate of return on a risk-free asset like 10-year G-Sec or FD (usually 6-7%)."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enter Standard Deviation",
+          "text": "Input the volatility or standard deviation percentage of your investment returns."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Analyze Result",
+          "text": "Review the Sharpe Ratio result. A higher value indicates better risk-adjusted performance."
+        }
+      ]
     }
     </script>
 
@@ -36,22 +95,22 @@
      "@type": "BreadcrumbList",
      "itemListElement": [
       {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
       },
       {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Financial Calculators",
-       "item": "https://arthcalculator.in/calculators/"
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
       },
       {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "Sharpe Ratio Calculator",
-       "item": "https://arthcalculator.in/sharpe-ratio/"
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Sharpe Ratio Calculator",
+        "item": "https://arthcalculator.in/sharpe-ratio/"
       }
      ]
     }
@@ -91,7 +150,7 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -104,6 +163,7 @@
             background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            display: inline-block;
         }
         .card-shadow {
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
@@ -154,16 +214,19 @@
                         <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">Sharpe Ratio Calculator</li>
+                    <li class="text-blue-600 font-bold">Sharpe Ratio Calculator</li>
                 </ol>
             </nav>
 
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
                 <div class="max-w-3xl">
                     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Sharpe Ratio Calculator India (2026)</h1>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
                         Calculate the risk-adjusted return of your investment portfolio. Understand if your returns are due to smart investment decisions or excessive risk-taking.
                     </p>
+                    <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl text-sm text-blue-800 text-pretty">
+                        <strong>SEO Power Hook:</strong> Professional investors prioritize risk-adjusted efficiency over absolute gains. Use this tool to filter out lucky high-risk outliers and ensure your long-term <a href="/net-worth/" class="font-bold underline text-blue-700">Net Worth</a> is built on a stable foundation.
+                    </div>
                     <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
                         <a href="#about-sharpe" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline transition-all duration-300">What is Sharpe Ratio</a>
                         <span class="text-slate-300">|</span>
@@ -184,8 +247,8 @@
             
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
-                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow card-hover">
-                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow card-hover text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
                         <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                         Portfolio Metrics
                     </h2>
@@ -201,7 +264,7 @@
 
                     <!-- Risk Free Rate -->
                     <div class="mb-8">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Risk Free Rate (%)</label>
                             <div class="relative w-full sm:w-28">
                                 <input type="number" id="riskFreeInput" value="7" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
@@ -229,7 +292,7 @@
                     </button>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pretty">
                     <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 card-hover">
                         <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Excess Return</p>
                         <h3 id="excessReturnVal" class="text-lg sm:text-xl font-bold leading-tight break-all result-animate">0%</h3>
@@ -243,24 +306,24 @@
 
             <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow card-hover">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow card-hover text-pretty">
                     <h2 class="text-slate-800 font-bold text-lg mb-6">Performance Summary</h2>
                     <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
                         <div class="w-full">
                             <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Sharpe Ratio</h2>
-                            <div class="mt-1">
+                            <div class="mt-1 text-pretty">
                                 <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words result-animate" id="mainResultVal">0.00</span>
                             </div>
                         </div>
                     </div>
 
                     <!-- Progress Bar / Visualizer -->
-                    <div class="mb-10">
+                    <div class="mb-10 text-pretty">
                         <div class="flex justify-between text-[11px] mb-3">
                             <span class="text-blue-600 font-bold uppercase text-xs">Risk-Efficiency Scale</span>
                             <span class="text-indigo-600 font-bold uppercase text-xs" id="scaleLabel">Target: 1.0+</span>
                         </div>
-                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
                             <div id="resultBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 0%"></div>
                         </div>
                     </div>
@@ -269,7 +332,7 @@
 
                     <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Interpretation Guide</h3>
                     <p class="text-xs text-slate-500 mb-4">How to read your Sharpe Ratio results for Indian markets.</p>
-                    <div id="tableSection" class="overflow-hidden">
+                    <div id="tableSection" class="overflow-hidden text-pretty text-pretty">
                         <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
                             <table class="w-full text-left text-[11px] sm:text-sm">
                                 <thead class="bg-slate-50 sticky top-0 z-10">
@@ -306,12 +369,12 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow card-hover">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow card-hover text-pretty">
                     <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Sharpe Ratio Formula</h3>
-                    <div class="formula-box text-blue-800 text-center text-sm">
+                    <div class="formula-box text-blue-800 text-center text-sm font-bold tracking-widest text-pretty">
                         Sharpe Ratio = (R<sub>p</sub> – R<sub>f</sub>) / σ
                     </div>
-                    <div class="text-xs sm:text-sm text-slate-600 mt-6 space-y-1">
+                    <div class="text-xs sm:text-sm text-slate-600 mt-6 space-y-1 text-pretty">
                         <p><strong>R<sub>p</sub>:</strong> Portfolio Return (Investment Return)</p>
                         <p><strong>R<sub>f</sub>:</strong> Risk-Free Rate (e.g., 10-year G-Sec yield)</p>
                         <p><strong>σ:</strong> Standard Deviation (Volatility of returns)</p>
@@ -321,172 +384,79 @@
         </div>
 
         <!-- Educational Content -->
-        <div class="space-y-12 mb-12">
+        <div class="space-y-12 mb-12 text-pretty">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover" id="about-sharpe">
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">What is the Sharpe Ratio?</h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                    The <strong>Sharpe Ratio</strong> is a widely used financial metric that helps investors understand the return of an investment compared to its risk. Developed by Nobel laureate William F. Sharpe, it calculates the "excess return" per unit of volatility. In the Indian mutual fund industry, it is a critical tool for comparing two funds that might have the same <a href="/cagr/" class="text-blue-600 hover:underline">CAGR</a> but different risk profiles.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="font-bold text-slate-800 mb-3">Why Risk-Adjusted Returns Matter</h3>
-                        <ul class="space-y-3 text-slate-600 text-sm">
-                            <li class="flex gap-2">✅ <strong>Volatility Protection:</strong> High returns aren't impressive if the portfolio swings wildly.</li>
-                            <li class="flex gap-2">✅ <strong>Smart Allocation:</strong> Helps in choosing <a href="/risk-reward-calculator/" class="text-blue-600 hover:underline">risk-reward</a> balanced assets.</li>
-                            <li class="flex gap-2">✅ <strong>Fund Evaluation:</strong> Essential for analyzing Equity and Hybrid funds in India.</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="font-bold text-slate-800 mb-3">Example Calculation</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            Suppose Mutual Fund A has a return of 15% and a standard deviation of 10%. If the Risk-Free Rate (G-Sec) is 7%, the calculation is: <br>
-                            <strong>(15 - 7) / 10 = 0.8.</strong> <br>
-                            This suggests the fund generates 0.8% excess return for every 1% of risk taken.
-                        </p>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
+                    <p>
+                        The <strong>Sharpe Ratio</strong> is a widely used financial metric that helps investors understand the return of an investment compared to its risk. Developed by Nobel laureate William F. Sharpe, it calculates the "excess return" per unit of volatility. In the Indian mutual fund industry, it is a critical tool for comparing two funds that might have the same <a href="/cagr/" class="text-blue-600 hover:underline">CAGR</a> but different risk profiles.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-pretty">
+                        <div>
+                            <h3 class="font-bold text-slate-800 mb-3">Why Risk-Adjusted Returns Matter</h3>
+                            <ul class="space-y-3 text-slate-600 text-sm">
+                                <li class="flex gap-2">✅ <strong>Volatility Protection:</strong> High returns aren't impressive if the portfolio swings wildly. Use an <a href="/alpha/" class="underline">Alpha Tool</a> to see value-add.</li>
+                                <li class="flex gap-2">✅ <strong>Smart Allocation:</strong> Helps in choosing <a href="/risk-reward-calculator/" class="text-blue-600 hover:underline">risk-reward</a> balanced assets. Check <a href="/beta/" class="underline">Beta values</a> for market sensitivity.</li>
+                                <li class="flex gap-2">✅ <strong>Fund Evaluation:</strong> Essential for analyzing Equity and Hybrid funds in India before starting a <a href="/sip/" class="underline">SIP Plan</a>.</li>
+                            </ul>
+                        </div>
+                        <div class="text-pretty">
+                            <h3 class="font-bold text-slate-800 mb-3">Example Calculation</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Suppose Mutual Fund A has a return of 15% and a standard deviation of 10%. If the Risk-Free Rate (G-Sec) is 7%, the calculation is: <br>
+                                <strong>(15 - 7) / 10 = 0.8.</strong> <br>
+                                This suggests the fund generates 0.8% excess return for every 1% of risk taken.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover text-pretty">
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Limitations of the Sharpe Ratio</h2>
-                <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                    While powerful, the Sharpe Ratio assumes that investment returns are normally distributed. It treats all volatility as "bad," even if the volatility is on the upside (profit). For a more nuanced view, investors often use the <a href="/roi-calculator/" class="text-blue-600 hover:underline">ROI Calculator</a> or <a href="/irr-calculator/" class="text-blue-600 hover:underline">IRR Calculator</a> alongside it to see total project or portfolio health. For specific downside risk, one might look at the Sortino Ratio.
-                </p>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
+                    <p>
+                        While powerful, the Sharpe Ratio assumes that investment returns are normally distributed. It treats all volatility as "bad," even if the volatility is on the upside (profit). For a more nuanced view, investors often use the <a href="/xirr/" class="text-blue-600 hover:underline">XIRR Calculator</a> to track personalized performance or a <a href="/lumpsum/" class="text-blue-600 hover:underline">Lumpsum Calculator</a> to see absolute growth targets.
+                    </p>
+                    <p>
+                        Professional money managers also utilize <a href="/portfolio-rebalancing/" class="text-blue-600 underline">Portfolio Rebalancing</a> strategies to keep the standard deviation within an acceptable range, thereby maintaining a consistent Sharpe Ratio over long horizons.
+                    </p>
+                </div>
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto" id="faqs">
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Sharpe Ratio FAQs</h2>
-                <div class="space-y-4" id="faqContainer">
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. What is the Sharpe Ratio?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            It is a measure of risk-adjusted return, calculated by subtracting the risk-free rate from the portfolio return and dividing the result by the standard deviation of the portfolio's excess return.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. What is a good Sharpe Ratio in India?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            In the Indian context, a ratio above 1.0 is considered good. Top-performing large-cap or flexi-cap mutual funds often maintain ratios between 1.5 and 2.5 during bull markets.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Difference between Sharpe and Sortino?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Sharpe uses Total Volatility (Standard Deviation), whereas Sortino only uses Downside Volatility. This makes Sortino more popular for aggressive investors who don't mind "upside volatility."
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. How do investors use this tool?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Investors use it to compare similar mutual funds. If Fund A and Fund B both return 15%, but Fund A has a Sharpe of 1.2 and Fund B has 0.8, Fund A is the more efficient choice.
-                        </div>
-                    </details>
-                </div>
-            </section>
-
-            <!-- Related Investment Calculators -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover">
-                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Investment Calculators</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                    <a href="/cagr/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">CAGR Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Check compound growth rate.</p>
-                    </a>
-                    <a href="/portfolio-return-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Portfolio Return</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Calculate total wealth.</p>
-                    </a>
-                    <a href="/irr-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">IRR Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Internal rate of return.</p>
-                    </a>
-                    <a href="/roi-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">ROI Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Return on Investment.</p>
-                    </a>
-                    <a href="/risk-reward-calculator/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Risk Reward</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Analyze trade potential.</p>
-                    </a>
-                    <a href="/inflation/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Inflation</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Check real worth.</p>
-                    </a>
+                <div class="space-y-4 text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the Sharpe Ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">It is a measure of risk-adjusted return, calculated by subtracting the risk-free rate from the portfolio return and dividing by volatility. This calculator follows standard Sharpe Ratio formula used by professional investors.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a good Sharpe Ratio in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">In the Indian context, a ratio above 1.0 is considered good. Top-performing mutual funds often maintain ratios between 1.5 and 2.5 during bull markets.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Difference between Sharpe and Sortino?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Sharpe uses Total Volatility, whereas Sortino only uses Downside Volatility. This makes Sortino more popular for aggressive investors who focus on loss prevention.</div></details>
                 </div>
             </section>
 
             <!-- Popular Financial Calculators -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover">
-                <h2 class="text-xl font-bold text-slate-900 mb-6">Popular Financial Calculators</h2>
-                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                    <a href="/emi/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <div class="w-8 h-8 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        </div>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">EMI</h4>
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow card-hover text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider text-center md:text-left">Popular Investment Tools</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-pretty text-pretty">
+                    <a href="/alpha/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] uppercase">Alpha Tool</h4>
                     </a>
-                    <a href="/income-tax/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <div class="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-                        </div>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Income Tax</h4>
+                    <a href="/beta/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] uppercase">Beta Tool</h4>
                     </a>
-                    <a href="/gst/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <div class="w-8 h-8 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg>
-                        </div>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">GST</h4>
+                    <a href="/xirr/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] uppercase">XIRR Tool</h4>
                     </a>
-                    <a href="/fd/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <div class="w-8 h-8 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">FD</h4>
-                    </a>
-                    <a href="/retirement/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <div class="w-8 h-8 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z"></path></svg>
-                        </div>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Retirement</h4>
-                    </a>
-                    <a href="/take-home-salary/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <div class="w-8 h-8 bg-rose-100 text-rose-600 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Take Home</h4>
-                    </a>
-                    <a href="/sip/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <div class="w-8 h-8 bg-sky-100 text-sky-600 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                        </div>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">SIP</h4>
-                    </a>
-                    <a href="/loan-eligibility/" class="block p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group">
-                        <div class="w-8 h-8 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center mb-3">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        </div>
-                        <h4 class="font-bold text-slate-800 text-xs sm:text-sm">Loan Elig.</h4>
+                    <a href="/portfolio-rebalancing/" class="p-4 border border-slate-200 rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-blue-500 hover:bg-blue-50 group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] uppercase">Rebalancing</h4>
                     </a>
                 </div>
             </section>
 
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed">
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-center text-pretty text-pretty">
                 <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                The Sharpe Ratio is a mathematical tool and does not guarantee future results. It depends on standard deviation which assumes normal distribution of returns. Historical performance is not indicative of future performance.
-                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+                The Sharpe Ratio is a mathematical tool and does not guarantee future results. It depends on standard deviation which assumes normal distribution of returns. This calculator follows standard Sharpe Ratio formula used by professional investors. Historical performance is not indicative of future performance.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: April 11, 2026</p>
             </div>
         </div>
     </main>
@@ -498,11 +468,8 @@ fetch("/navbar.html")
 .then(res => res.text())
 .then(data => {
   document.getElementById("navbar").innerHTML = data;
-
-  // Activate hamburger AFTER navbar loads
   const btn = document.getElementById("menuBtn");
   const menu = document.getElementById("mobileMenu");
-
   if(btn){
     btn.addEventListener("click", () => {
       menu.classList.toggle("hidden");
@@ -534,32 +501,30 @@ fetch("/footer.html")
         function updateCalculations() {
             const returnP = parseFloat(elements.returnInput.value) || 0;
             const riskFree = parseFloat(elements.riskFreeInput.value) || 0;
-            const stdDev = parseFloat(elements.stdDevInput.value) || 0.1; // Prevent division by zero
+            const stdDev = parseFloat(elements.stdDevInput.value) || 0.1;
 
             const excessReturn = returnP - riskFree;
             const sharpeRatio = excessReturn / stdDev;
 
-            // Display Updates
             elements.mainResultVal.textContent = sharpeRatio.toFixed(2);
             elements.excessReturnVal.textContent = excessReturn.toFixed(1) + "%";
             
-            // Interpretation Logic
             let quality = "";
             let barColor = "";
-            let barWidth = Math.min((sharpeRatio / 4) * 100, 100); // Scale bar to max 4.0
+            let barWidth = Math.min((sharpeRatio / 4) * 100, 100); 
             
             if (sharpeRatio < 1) {
                 quality = "Weak";
-                barColor = "#ef4444"; // Red
+                barColor = "#ef4444"; 
             } else if (sharpeRatio < 2) {
                 quality = "Good";
-                barColor = "#3b82f6"; // Blue
+                barColor = "#3b82f6"; 
             } else if (sharpeRatio < 3) {
                 quality = "Strong";
-                barColor = "#6366f1"; // Indigo
+                barColor = "#6366f1"; 
             } else {
                 quality = "Excellent";
-                barColor = "#10b981"; // Emerald
+                barColor = "#10b981"; 
             }
 
             if (sharpeRatio <= 0) barWidth = 0;
@@ -569,7 +534,6 @@ fetch("/footer.html")
             elements.resultBar.style.backgroundColor = barColor;
             elements.scaleLabel.textContent = "Status: " + quality;
 
-            // Animate result change
             elements.mainResultVal.style.opacity = "0";
             setTimeout(() => {
                 elements.mainResultVal.style.opacity = "1";
