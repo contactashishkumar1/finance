@@ -3,28 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brokerage Calculator India – Calculate Trading Charges & Profit</title>
-    <meta name="description" content="Calculate brokerage, STT, GST, SEBI charges and total profit for intraday and delivery trades. Supports Zerodha, Groww, Upstox and Angel One brokerage models.">
+    <title>Brokerage Calculator India (2026) – Zerodha, Groww Charges + Net Profit</title>
+    <meta name="description" content="Calculate brokerage, STT, GST and total trading charges for Zerodha, Groww, Upstox and Angel One. Know exact net profit before trading.">
     <meta name="keywords" content="brokerage calculator india, trading charges calculator, intraday brokerage calculator, delivery brokerage calculator, stt calculator india, gst on brokerage, sebi charges calculator, zerodha brokerage calculator, groww brokerage calculator, upstox brokerage calculator, angel one brokerage calculator">
     <meta name="author" content="Ashish Kumar">
-    <meta name="last-modified" content="2026-03-14">
+    <meta name="last-modified" content="2026-03-22">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/brokerage-calculator/">
+  <link rel="icon" href="/favicon.png">
     
     <!-- Performance Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Brokerage Calculator India (2026) – Zerodha, Groww, Upstox">
+    <meta property="og:description" content="Calculate net profit after deducting brokerage, STT, and other statutory charges for equity trading.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/brokerage-calculator/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
     <!-- Schema Markup: WebPage -->
     <script type="application/ld+json">
     {
-     "@context":"https://schema.org",
-     "@type":"WebPage",
-     "name":"Brokerage Calculator India",
-     "url":"https://arthcalculator.in/brokerage-calculator/",
-     "description":"Calculate net profit after deducting brokerage, STT, and other statutory charges for equity trading.",
-     "inLanguage":"en"
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Brokerage Calculator India",
+      "url":"https://arthcalculator.in/brokerage-calculator/",
+      "description":"Calculate net profit after deducting brokerage, STT, and other statutory charges for equity trading.",
+      "datePublished": "2024-03-14",
+      "dateModified": "2026-03-22",
+      "inLanguage":"en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/logo.png"
     }
     </script>
 
@@ -51,6 +81,33 @@
     }
     </script>
 
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate Brokerage and Net Profit",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "text": "Select your stock broker (Zerodha, Groww, etc.) to apply their specific charge model."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "Enter your trade details including Buy Price, Sell Price, and Quantity."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "The tool automatically calculates Brokerage, STT, GST, and SEBI charges."
+        },
+        {
+          "@type": "HowToStep",
+          "text": "View your Net Profit or Loss and the Break-even Price required for the trade."
+        }
+      ]
+    }
+    </script>
+
     <!-- Schema Markup: Breadcrumb -->
     <script type="application/ld+json">
     {
@@ -64,7 +121,57 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is brokerage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brokerage is the fee charged by your stockbroker for facilitating your trade on the exchange. Discount brokers charge flat fees, while full-service brokers charge percentages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is STT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "STT (Securities Transaction Tax) is a direct tax levied by the Indian Government on every stock market purchase or sale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is GST charged on brokerage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trading facilitation is considered a service. Thus, 18% GST is applied to the Brokerage fee and the Exchange Transaction charges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is delivery trade really free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The 'Brokerage' component is zero for many brokers. However, you still pay STT (0.1%), Stamp Duty, and DP charges."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which trade type is cheaper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Intraday has lower STT (0.025%) but charges brokerage on both buy/sell. Delivery has no brokerage but higher STT (0.1%)."
+          }
+        }
+      ]
+    }
+    </script>
+
+ <script src="https://cdn.tailwindcss.com" defer></script>
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
         .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -75,6 +182,7 @@
         details summary { list-style: none; }
         details summary::-webkit-details-marker { display: none; }
         details[open] summary svg { transform: rotate(180deg); }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
         input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
         select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.25rem; }
     </style>
@@ -100,8 +208,8 @@
             </nav>
 
             <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
-                <div class="max-w-3xl text-center md:text-left">
-                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Brokerage Calculator – Calculate Trading Charges & Profit</h1>
+                <div class="max-w-3xl text-center md:text-left text-pretty">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Brokerage Calculator India – Calculate Trading Charges & Profit</h1>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
                         Calculate brokerage, STT, GST, and SEBI charges for intraday and delivery trades. Supports Zerodha, Groww, Angel One and Upstox brokerage structures.
                     </p>
@@ -180,7 +288,7 @@
                         </div>
                     </div>
 
-                    <button type="button" onclick="calculate()" class="w-full mt-4 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty">Calculate Net Profit</button>
+                    <button type="button" onclick="calculate()" class="w-full mt-4 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all text-pretty uppercase">Calculate Net Profit</button>
                 </div>
             </div>
 
@@ -188,7 +296,7 @@
             <div class="lg:col-span-7 space-y-6">
                 <!-- Result Summary Card -->
                 <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
-                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Net Profit / Loss</h2>
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left text-pretty">Net Profit / Loss</h2>
                     <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold block mb-6 text-center md:text-left" id="netProfitDisp">₹0</span>
 
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
@@ -226,14 +334,14 @@
                     <div class="overflow-x-auto">
                         <table class="w-full text-left text-xs border-collapse">
                             <thead>
-                                <tr class="bg-slate-50 text-slate-500 font-bold uppercase">
+                                <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-pretty">
                                     <th class="p-3 border-b">Charge Component</th>
                                     <th class="p-3 border-b text-right">Amount (₹)</th>
                                 </tr>
                             </thead>
                             <tbody class="text-slate-600 divide-y divide-slate-50">
                                 <tr><td class="p-3 font-medium">Brokerage</td><td id="tableBrokerage" class="p-3 text-right font-bold">₹0</td></tr>
-                                <tr><td class="p-3">STT / CTT (Securities Transaction Tax)</td><td id="tableSTT" class="p-3 text-right">₹0</td></tr>
+                                <tr><td class="p-3 text-pretty">STT / CTT (Securities Transaction Tax)</td><td id="tableSTT" class="p-3 text-right">₹0</td></tr>
                                 <tr><td class="p-3 text-pretty">Transaction Charges (NSE/BSE Exchange)</td><td id="tableTx" class="p-3 text-right">₹0</td></tr>
                                 <tr><td class="p-3">GST (18% on Brokerage + Tx)</td><td id="tableGST" class="p-3 text-right">₹0</td></tr>
                                 <tr><td class="p-3">SEBI Charges</td><td id="tableSEBI" class="p-3 text-right">₹0</td></tr>
@@ -254,17 +362,49 @@
             </div>
         </div>
 
+        <!-- NEW SEO CONTENT SECTION 1: Comparison -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Brokerage Charges for Zerodha vs Groww vs Upstox</h2>
+            <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                <p>Most popular discount brokers in India follow the "₹20 per order" model. However, their total charges vary based on specific components like DP charges and platform fees.</p>
+                <ul class="list-disc ml-5 space-y-3">
+                    <li><strong>Zerodha:</strong> Charges 0.03% or ₹20 (whichever is lower) for intraday. Delivery trades are free (₹0 brokerage). DP charges are ₹13.5 + GST per script.</li>
+                    <li><strong>Groww:</strong> Charges a flat ₹20 or 0.05% per order for both intraday and delivery. This means even delivery trades cost brokerage on Groww.</li>
+                    <li><strong>Upstox:</strong> Similar to Zerodha for intraday (₹20 or 0.05%). Delivery is often free or ₹20 depending on the plan.</li>
+                </ul>
+                <p>Plan your long-term wealth after taxes using our <a href="/capital-gains-tax/" class="text-blue-600 underline">Capital Gains Tax Calculator</a>.</p>
+            </div>
+        </section>
+
+        <!-- NEW SEO CONTENT SECTION 2: Cheapest -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Which Broker is Cheapest in India?</h2>
+            <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                <p>Choosing the cheapest broker depends on your trading frequency and volume. If you are an active day trader, discount brokers with a <strong>flat fee</strong> (₹20 per order) are significantly cheaper than full-service brokers who charge a percentage (0.10% to 0.50%).</p>
+                <p>For small-ticket traders, a percentage-based model might be cheaper if the 0.03% calculation comes to less than ₹20. Use our <a href="/intraday-profit-calculator/" class="text-blue-600 underline">Intraday Profit tool</a> to see the exact percentage impact on your trade.</p>
+            </div>
+        </section>
+
+        <!-- NEW SEO CONTENT SECTION 3: Impact -->
+        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty mb-12">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">How Brokerage Affects Your Profit</h2>
+            <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                <p>High brokerage and taxes can turn a winning strategy into a losing one, especially for scalpers. Small trades (e.g., buying 10 shares of a ₹500 stock) are heavily penalized by flat ₹20 fees because the brokerage becomes 0.4% of the trade value before any taxes.</p>
+                <p><strong>Overtrading Risk:</strong> Taking multiple trades with small targets often leads to "Brokerage Bleeding," where your broker makes more money than you. Always evaluate your <a href="/risk-reward-calculator/" class="text-blue-600 underline">Risk-Reward Ratio</a> to ensure your profit targets are significantly higher than your transaction costs.</p>
+            </div>
+        </section>
+
         <!-- SEO Content & Knowledge Base -->
         <div class="space-y-12 mb-12 text-pretty">
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">What are Trading Charges in India?</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
-                    <p>In India, the cost of a stock market trade is much more than just the price of the share. Every buy and sell order involves several statutory and non-statutory charges. These charges are often the difference between a profitable trade and a losing one.</p>
-                    <p>Using a <strong>Brokerage Calculator</strong> is essential for active traders to know their exact break-even point. Whether you are doing <a href="/stock-average/" class="text-blue-600 underline">Averaging</a> or fresh entry, accounting for STT and GST is mandatory for accurate tax planning under <a href="/capital-gains-tax/" class="text-blue-600 underline">Capital Gains</a> rules.</p>
+                    <p>In India, the cost of a stock market trade is much more than just the price of the share. Every buy and sell order involves several statutory and non-statutory charges. These charges are often the difference between a profitable trade and a losing one. Track your net results using our <a href="/intraday-profit-calculator/" class="text-blue-600 underline">Intraday Profit Tool</a>.</p>
+                    <p>Using a <strong>Brokerage Calculator</strong> is essential for active traders to know their exact break-even point. Whether you are doing <a href="/stock-average/" class="text-blue-600 underline">Averaging</a> or fresh entry, accounting for STT and GST is mandatory for accurate tax planning under <a href="/income-tax/" class="text-blue-600 underline">Income Tax</a> rules.</p>
                 </div>
             </section>
 
-            <!-- Example Calculation Section (RESTORED) -->
+            <!-- Example Calculation Section -->
             <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
                 <h2 class="text-2xl font-bold text-slate-900 mb-6">Example: Trading 100 Shares of SBI</h2>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 overflow-x-auto">
@@ -284,7 +424,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
                     <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-pretty">
                         <h3 class="font-bold text-slate-800 text-lg mb-3">1. STT / CTT</h3>
-                        <p class="text-slate-600 leading-relaxed text-pretty">Securities Transaction Tax is the largest component. For Delivery, it's 0.1% on both sides. For Intraday, it's 0.025% on the sell side only. This is paid directly to the Govt of India.</p>
+                        <p class="text-slate-600 leading-relaxed text-pretty text-pretty">Securities Transaction Tax is the largest component. For Delivery, it's 0.1% on both sides. For Intraday, it's 0.025% on the sell side only. This is paid directly to the Govt of India.</p>
                     </div>
                     <div class="p-6 bg-slate-50 border border-slate-200 rounded-2xl">
                         <h3 class="font-bold text-slate-800 text-lg mb-3">2. Transaction Charges</h3>
@@ -302,7 +442,7 @@
             </section>
 
             <section class="bg-slate-900 p-8 sm:p-10 rounded-2xl text-white text-pretty text-pretty">
-                <h2 class="text-2xl font-bold mb-6 text-pretty text-pretty">How to Reduce Your Trading Costs</h2>
+                <h2 class="text-2xl font-bold mb-6 text-pretty">How to Reduce Your Trading Costs</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                     <div class="bg-slate-800 p-5 rounded-xl border border-slate-700">
                         <h4 class="font-bold text-blue-400 mb-2">Trade Larger Quantities</h4>
@@ -315,7 +455,7 @@
                 </div>
             </section>
 
-            <!-- FAQ Section (EXPANDED) -->
+            <!-- FAQ Section -->
             <section class="max-w-4xl mx-auto py-10" id="faqs">
                 <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
                 <div class="space-y-4 text-pretty">
@@ -328,7 +468,7 @@
                 </div>
             </section>
 
-            <!-- Popular Trader Tools Grid (RESTORED) -->
+            <!-- Popular Trader Tools Grid -->
             <section class="max-w-6xl mx-auto pt-8 border-t border-slate-200 text-pretty">
                 <div class="text-center mb-10">
                     <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Popular Trader Tools</h2>
@@ -336,9 +476,9 @@
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
                     <a href="/stock-average/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800">Stock Average</h4></a>
                     <a href="/brokerage-calculator/" class="p-4 bg-blue-50 border border-blue-200 rounded-xl text-center card-shadow text-pretty"><h4 class="text-xs font-bold text-blue-800">Brokerage</h4></a>
-                    <a href="/cagr/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800">CAGR Tool</h4></a>
-                    <a href="/capital-gains-tax/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">Capital Gains</h4></a>
-                    <a href="/tax-loss-harvesting/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty text-pretty"><h4 class="text-xs font-bold text-slate-800">Tax Harvesting</h4></a>
+                    <a href="/intraday-profit-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800">Intraday Profit</h4></a>
+                    <a href="/options-profit/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800">Options Profit</h4></a>
+                    <a href="/risk-reward-calculator/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all text-pretty"><h4 class="text-xs font-bold text-slate-800">Risk Reward</h4></a>
                 </div>
             </section>
 
@@ -358,13 +498,19 @@
                         </div>
                         <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Net Worth</h4>
                     </a>
+                    <a href="/income-tax/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Income Tax</h4>
+                    </a>
                 </div>
             </section>
 
             <!-- Disclaimer -->
             <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-pretty text-pretty text-pretty">
                 <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
-                Brokerage rates and taxes are subject to change by brokers and regulatory bodies (SEBI/NSE/BSE). This calculator provides mathematical estimations. Actual billing in your contract note may vary due to round-offs and dynamic DP charges.
+                Brokerage rates and taxes are subject to change by brokers and regulatory bodies (SEBI/NSE/BSE). This calculator provides mathematical estimations. Actual billing in your contract note may vary due to round-offs and dynamic DP charges. This calculator uses the latest Indian stock market trading fee structures.
                 <p class="mt-4 font-semibold italic text-slate-600 text-pretty">Last Updated: March 2026</p>
             </div>
         </div>
@@ -372,7 +518,7 @@
 
     <div id="footer"></div>
 
-    <script>
+    <script defer>
         const elements = {
             brokerSelect: document.getElementById('brokerSelect'),
             tradeType: document.getElementById('tradeType'),
@@ -516,7 +662,7 @@
             let insightText = `
                 <div class="space-y-1">
                     <p>🎯 <strong>Break-even:</strong> You need a sell price above <strong>₹${breakEvenPrice.toFixed(2)}</strong> to cover all costs.</p>
-                    <p class="mt-2 text-pretty">📊 Supports discount brokerage structures (₹20 per order).</p>
+                    <p class="mt-2 text-pretty">📊 Supports discount brokerage structures (₹20 per order). This calculator uses standard brokerage and statutory charge formulas used by Indian stock brokers.</p>
                 </div>
             `;
             
@@ -555,7 +701,8 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             ['buyPrice', 'sellPrice', 'quantity', 'brokerageRate', 'tradeType', 'dpChargeInput'].forEach(id => {
-                document.getElementById(id).addEventListener('input', calculate);
+                const el = document.getElementById(id);
+                if(el) el.addEventListener('input', calculate);
             });
             calculate();
         });
