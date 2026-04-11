@@ -1,691 +1,692 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Goal Planner India – Calculate SIP for Retirement, Education & Life Goals</title>
-    <meta name="description" content="Goal based investing calculator to plan retirement, education, house, car and emergency fund with inflation adjusted SIP calculations.">
-    <meta name="keywords" content="financial goal planner india, life goals calculator, required sip for retirement, child education planning calculator, home purchase savings plan, goal based investing tool">
-    <meta name="author" content="Ashish Kumar">
-    <meta name="last-modified" content="2026-03-15">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://arthcalculator.in/financial-goal-planner/">
-    
-    <!-- Performance Optimization -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Schema Markup: WebPage -->
-    <script type="application/ld+json">
-    {
-     "@context":"https://schema.org",
-     "@type":"WebPage",
-     "name":"Financial Goal Planner",
-     "url":"https://arthcalculator.in/financial-goal-planner/",
-     "description":"Plan multiple life goals like retirement, house, and education with a single professional interface.",
-     "inLanguage":"en"
-    }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Goal Planner India (2026) – Calculate SIP for Retirement, Education, House & Life Goals</title>
+    <meta name="description" content="Free Financial Goal Planner India: Calculate SIP for retirement, child education, house, car and life goals with inflation-adjusted projections. Plan multiple goals in one place.">
+    <meta name="keywords" content="financial goal planner india, life goals calculator, required sip for retirement, child education planning calculator, home purchase savings plan, goal based investing tool, wealth creation india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-03-15">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/financial-goal-planner/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Performance Optimization -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Financial Goal Planner India (2026) – Calculate SIP for Retirement, Education, House & Life Goals">
+    <meta property="og:description" content="Free Financial Goal Planner India: Calculate SIP for retirement, child education, house, car and life goals with inflation-adjusted projections.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/financial-goal-planner/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+    <meta property="og:site_name" content="ArthCalculator">
 
-    <!-- Schema Markup: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Financial Goal Planner",
-      "operatingSystem": "All",
-      "applicationCategory": "FinanceApplication",
-      "description": "Calculates required monthly SIP to achieve retirement, house, car, and education goals with inflation adjustment.",
-      "featureList": [
-        "Goal based dynamic inputs",
-        "Inflation adjusted target setting",
-        "Reverse SIP calculation",
-        "Investment difficulty indicator"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "INR"
-      }
-    }
-    </script>
+    <!-- Schema Markup: WebPage -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"WebPage",
+     "name":"Financial Goal Planner India",
+     "url":"https://arthcalculator.in/financial-goal-planner/",
+     "description":"Plan multiple life goals like retirement, house, and education with a single professional interface.",
+     "datePublished": "2024-01-15",
+     "dateModified": "2026-03-15",
+     "inLanguage":"en",
+     "publisher": {
+        "@type": "Organization",
+        "name": "ArthCalculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
 
-    <!-- Schema Markup: FAQPage (Expanded to 14 Questions) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is financial goal planning?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Financial goal planning is the process of identifying specific life milestones and calculating the exact investment needed today to reach those future targets, adjusted for inflation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much SIP is needed for retirement?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It depends on your current age and expenses. A common rule is to save enough to build a corpus 25 times your annual expenses at retirement age."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does inflation affect my goals?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Inflation reduces the purchasing power of money. A goal of 1 Crore today might require nearly 3 Crores in 20 years to maintain the same value."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the 25x rule in retirement planning?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The 25x rule suggests that your retirement corpus should be 25 times your estimated annual expenses at the time of retirement to sustain a 4% annual withdrawal rate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How to reach financial goals faster?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The two best ways are: 1) Start as early as possible to maximize compounding and 2) Use a Step-up SIP to increase your investment amount annually."
-          }
-        }
-      ]
-    }
-    </script>
+    <!-- Schema Markup: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArthCalculator",
+      "url": "https://arthcalculator.in",
+      "logo": "https://arthcalculator.in/favicon.png"
+    }
+    </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
-        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
-        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
-        .nav-link.active { color: #2563eb; font-weight: 600; }
-        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
-        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-        input[type="range"] { accent-color: #2563eb; height: 6px; }
-        details summary { list-style: none; }
-        details summary::-webkit-details-marker { display: none; }
-        details[open] summary svg { transform: rotate(180deg); }
-        
-        .goal-container { scroll-snap-type: x mandatory; display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.5rem; }
-        .goal-card { cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; scroll-snap-align: center; flex-shrink: 0; }
-        .goal-card:hover { transform: translateY(-4px); border-color: #e2e8f0; }
-        .goal-card.active { border-color: #2563eb; background-color: #eff6ff; }
-        .goal-card.active h3 { color: #2563eb; }
-        .goal-card.active .icon-bg { background-color: #2563eb; color: white; }
-        
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .spinner { width: 1.2rem; height: 1.2rem; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: #fff; animation: spin 0.6s linear infinite; display: inline-block; }
-    </style>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
+        
+        .goal-container { scroll-snap-type: x mandatory; display: flex; gap: 1rem; overflow-x: auto; padding-bottom: 0.5rem; }
+        .goal-card { cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; scroll-snap-align: center; flex-shrink: 0; }
+        .goal-card:hover { transform: translateY(-4px); border-color: #e2e8f0; }
+        .goal-card.active { border-color: #2563eb; background-color: #eff6ff; }
+        .goal-card.active h3 { color: #2563eb; }
+        .goal-card.active .icon-bg { background-color: #2563eb; color: white; }
+        
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .spinner { width: 1.2rem; height: 1.2rem; border: 3px solid rgba(255,255,255,0.3); border-radius: 50%; border-top-color: #fff; animation: spin 0.6s linear infinite; display: inline-block; }
+    </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
-    <div id="navbar"></div>
+    <div id="navbar"></div>
 
-    <!-- Header -->
-    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
-        <div class="max-w-6xl mx-auto px-4">
-            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
-                <ol class="flex list-none p-0">
-                    <li class="flex items-center">
-                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
-                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                    </li>
-                    <li class="flex items-center">
-                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
-                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
-                    </li>
-                    <li class="text-blue-600 font-bold">Goal Planner</li>
-                </ol>
-            </nav>
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4 text-pretty">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center text-pretty text-pretty">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Goal Planner</li>
+                </ol>
+            </nav>
 
-            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
-                <div class="max-w-3xl">
-                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Financial Goal Planner India – All-in-One Life Goal Calculator</h1>
-                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
-                        Calculate the monthly SIP required for your life milestones. Factor in <strong>inflation</strong> and <strong>retirement logic</strong> to secure your family's future with data-driven precision.
-                    </p>
-                </div>
-                <div class="hidden md:block mt-4 md:mt-0">
-                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 shadow-sm uppercase tracking-wide">Flagship Suite 2026</span>
-                </div>
-            </div>
-        </div>
-    </header>
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Financial Goal Planner India – Calculate SIP for All Life Goals (Retirement, Education, House & More)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed text-pretty text-pretty">
+                        Stop guessing your future. Secure your dreams by planning exactly how much to save today for a stress-free tomorrow. Calculate the monthly SIP required for your life milestones.
+                    </p>
+                    <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl text-sm text-blue-800 text-pretty">
+                        <strong>Pro Tip:</strong> Achieving big goals requires beating inflation. Use our <a href="/cagr/" class="font-bold underline text-blue-700">CAGR Calculator</a> to track your annual growth or start a <a href="/sip/" class="font-bold underline text-blue-700">SIP Calculator</a> today to maximize compounding.
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full border border-blue-100 shadow-sm uppercase tracking-wide">Flagship Suite 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <main class="max-w-6xl mx-auto px-4">
-        <!-- Goal Selection -->
-        <section class="mb-10 pb-2">
-            <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Step 1: Choose Your Financial Goal</h2>
-            <div class="goal-container no-scrollbar">
-                <div onclick="selectGoal('retirement')" id="card-retirement" class="goal-card active bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
-                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">👴</div>
-                    <h3 class="text-xs font-bold">Retirement</h3>
-                </div>
-                <div onclick="selectGoal('education')" id="card-education" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
-                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">🎓</div>
-                    <h3 class="text-xs font-bold">Education</h3>
-                </div>
-                <div onclick="selectGoal('house')" id="card-house" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
-                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">🏡</div>
-                    <h3 class="text-xs font-bold">House</h3>
-                </div>
-                <div onclick="selectGoal('car')" id="card-car" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
-                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">🚗</div>
-                    <h3 class="text-xs font-bold">Car</h3>
-                </div>
-                <div onclick="selectGoal('vacation')" id="card-vacation" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
-                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">✈️</div>
-                    <h3 class="text-xs font-bold">Vacation</h3>
-                </div>
-                <div onclick="selectGoal('emergency')" id="card-emergency" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
-                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">🛡️</div>
-                    <h3 class="text-xs font-bold">Emergency</h3>
-                </div>
-                <div onclick="selectGoal('wealth')" id="card-wealth" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
-                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">💎</div>
-                    <h3 class="text-xs font-bold">Wealth</h3>
-                </div>
-            </div>
-        </section>
+    <main class="max-w-6xl mx-auto px-4">
+        <!-- Goal Selection -->
+        <section class="mb-10 pb-2">
+            <h2 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Step 1: Choose Your Financial Goal</h2>
+            <div class="goal-container no-scrollbar text-pretty">
+                <div onclick="selectGoal('retirement')" id="card-retirement" class="goal-card active bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
+                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">👴</div>
+                    <h3 class="text-xs font-bold">Retirement</h3>
+                </div>
+                <div onclick="selectGoal('education')" id="card-education" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
+                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">🎓</div>
+                    <h3 class="text-xs font-bold">Education</h3>
+                </div>
+                <div onclick="selectGoal('house')" id="card-house" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
+                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">🏡</div>
+                    <h3 class="text-xs font-bold">House</h3>
+                </div>
+                <div onclick="selectGoal('car')" id="card-car" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
+                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">🚗</div>
+                    <h3 class="text-xs font-bold">Car</h3>
+                </div>
+                <div onclick="selectGoal('vacation')" id="card-vacation" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
+                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl">✈️</div>
+                    <h3 class="text-xs font-bold">Vacation</h3>
+                </div>
+                <div onclick="selectGoal('emergency')" id="card-emergency" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
+                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl text-pretty">🛡️</div>
+                    <h3 class="text-xs font-bold">Emergency</h3>
+                </div>
+                <div onclick="selectGoal('wealth')" id="card-wealth" class="goal-card bg-white p-4 rounded-2xl w-40 flex flex-col items-center text-center card-shadow">
+                    <div class="icon-bg w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center mb-3 text-xl text-pretty">💎</div>
+                    <h3 class="text-xs font-bold">Wealth</h3>
+                </div>
+            </div>
+        </section>
 
-        <!-- Quick Examples Strip -->
-        <div class="mb-8 flex flex-wrap gap-2 justify-center md:justify-start">
-            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest w-full mb-1 text-center md:text-left">Quick Examples:</span>
-            <button onclick="applyExample('ret1cr')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50">1 Cr Retirement</button>
-            <button onclick="applyExample('edu25l')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50">₹25L Education</button>
-            <button onclick="applyExample('house1cr')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50">₹1 Cr House</button>
-            <button onclick="applyExample('emg6l')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50">₹6L Emergency Fund</button>
-        </div>
+        <!-- Quick Examples -->
+        <div class="mb-8 flex flex-wrap gap-2 justify-center md:justify-start">
+            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest w-full mb-1 text-center md:text-left">Quick Examples:</span>
+            <button onclick="applyExample('ret1cr')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50 transition-all">1 Cr Retirement</button>
+            <button onclick="applyExample('edu25l')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50 transition-all text-pretty">₹25L Education</button>
+            <button onclick="applyExample('house1cr')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50 transition-all text-pretty">₹1 Cr House</button>
+            <button onclick="applyExample('emg6l')" class="btn-outline border border-slate-200 text-[10px] px-3 py-1.5 rounded-full font-bold text-slate-600 hover:bg-slate-50 transition-all text-pretty">₹6L Emergency Fund</button>
+        </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
-            <!-- Left Side: Inputs -->
-            <div class="lg:col-span-5 space-y-6">
-                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
-                    <div id="dynamicInputs" class="space-y-6">
-                        <!-- JS Swaps this -->
-                    </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <div id="dynamicInputs" class="space-y-6 text-pretty text-pretty">
+                        <!-- JS Swaps this -->
+                    </div>
 
-                    <div class="mt-8 pt-8 border-t border-slate-50 space-y-6">
-                        <div>
-                            <div class="flex justify-between items-center mb-3">
-                                <label class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Annual Step-up SIP (%)</label>
-                                <input type="number" id="stepUpInput" value="10" step="1" class="w-16 px-2 py-1 border rounded text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
-                            </div>
-                            <input type="range" id="stepUpRange" min="0" max="50" step="1" value="10" class="w-full">
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center mb-3">
-                                <label class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Existing Savings (₹)</label>
-                                <input type="number" id="existingInput" value="0" step="10000" class="w-24 px-2 py-1 border rounded text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
-                            </div>
-                            <input type="range" id="existingRange" min="0" max="10000000" step="10000" value="0" class="w-full">
-                        </div>
-                    </div>
+                    <div class="mt-8 pt-8 border-t border-slate-100 space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Annual Step-up SIP (%)</label>
+                                <input type="number" id="stepUpInput" value="10" step="1" class="w-16 px-2 py-1 border rounded text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <input type="range" id="stepUpRange" min="0" max="50" step="1" value="10" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-3 text-pretty">
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-tighter">Existing Savings (₹)</label>
+                                <input type="number" id="existingInput" value="0" step="10000" class="w-24 px-2 py-1 border rounded text-right font-bold text-xs focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <input type="range" id="existingRange" min="0" max="10000000" step="10000" value="0" class="w-full">
+                        </div>
+                    </div>
 
-                    <div class="mt-6 flex gap-2">
-                        <button type="button" id="calcBtn" onclick="calculate()" class="flex-1 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
-                            <span id="btnText">Update Plan</span>
-                            <span id="btnSpinner" class="spinner hidden"></span>
-                        </button>
-                    </div>
-                    <p class="text-[9px] text-slate-400 mt-4 text-center font-medium uppercase tracking-widest italic">Built using standard financial planning assumptions.</p>
-                </div>
-            </div>
+                    <div class="mt-6 flex gap-2">
+                        <button type="button" id="calcBtn" onclick="calculate()" class="flex-1 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                            <span id="btnText">Update Plan</span>
+                            <span id="btnSpinner" class="spinner hidden"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-            <!-- Right Side: Results -->
-            <div class="lg:col-span-7 space-y-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
-                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left">Required Monthly SIP</h2>
-                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-8 text-center md:text-left" id="requiredSipDisp">₹0</span>
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6 text-pretty">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider mb-2 text-center md:text-left text-pretty text-pretty">Required Monthly SIP</h2>
+                    <span class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-600 block mb-8 text-center md:text-left" id="requiredSipDisp">₹0</span>
 
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Target Corpus</p>
-                            <p class="font-bold text-slate-800 text-lg" id="targetWealthDisp">₹0</p>
-                        </div>
-                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Invested</p>
-                            <p class="font-bold text-slate-800 text-lg" id="totalInvestedDisp">₹0</p>
-                        </div>
-                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
-                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1">Wealth Gain</p>
-                            <p class="font-bold text-emerald-700 text-lg" id="wealthGainDisp">₹0</p>
-                        </div>
-                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Target Corpus</p>
+                            <p class="font-bold text-slate-800 text-lg text-pretty text-pretty" id="targetWealthDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <p class="text-[10px] text-slate-500 uppercase font-bold mb-1">Total Invested</p>
+                            <p class="font-bold text-slate-800 text-lg text-pretty text-pretty" id="totalInvestedDisp">₹0</p>
+                        </div>
+                        <div class="p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                            <p class="text-[10px] text-emerald-600 uppercase font-bold mb-1">Wealth Gain</p>
+                            <p class="font-bold text-emerald-700 text-lg text-pretty text-pretty" id="wealthGainDisp">₹0</p>
+                        </div>
+                    </div>
 
-                    <div id="insightsBox" class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-8"></div>
+                    <div id="insightsBox" class="bg-blue-50 p-5 rounded-xl border border-blue-100 text-sm text-blue-800 leading-relaxed mb-8"></div>
 
-                    <div class="mb-10">
-                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
-                            <span class="text-blue-600">Principal Invested</span>
-                            <span class="text-emerald-600 font-bold">Compound Profit</span>
-                        </div>
-                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
-                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
-                            <div id="returnsBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 50%"></div>
-                        </div>
-                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500">
-                            <span id="investedLabel">Inv: ₹0</span>
-                            <span id="returnsLabel">Gain: ₹0</span>
-                        </div>
-                    </div>
+                    <div class="mb-10 text-pretty text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
+                            <span class="text-blue-600">Principal Invested</span>
+                            <span class="text-emerald-600 font-bold">Compound Profit</span>
+                        </div>
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
+                            <div id="investedBar" class="h-full bg-blue-500 transition-all duration-700" style="width: 50%"></div>
+                            <div id="returnsBar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 50%"></div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-500 text-pretty text-pretty text-pretty">
+                            <span id="investedLabel">Inv: ₹0</span>
+                            <span id="returnsLabel">Gain: ₹0</span>
+                        </div>
+                    </div>
 
-                    <div id="qualityCard" class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white transition-colors duration-500 flex flex-col md:flex-row justify-between items-center gap-4">
-                        <div>
-                            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Goal Feasibility</p>
-                            <h4 class="text-2xl font-black text-white" id="qualityLabel">Analyze Effort</h4>
-                            <p id="difficultyAdvice" class="text-[10px] text-slate-400 mt-1"></p>
-                        </div>
-                        <div class="text-right">
-                             <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Status</p>
-                             <div id="statusBadge" class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/20 uppercase tracking-widest">Pending</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex gap-4">
-                    <button id="copyBtn" onclick="copyResults()" class="flex-1 py-3 border border-blue-200 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-                        Copy Plan
-                    </button>
-                    <button onclick="shareResult()" class="flex-1 py-3 bg-slate-900 text-white rounded-lg text-xs font-bold hover:bg-black transition-all flex items-center justify-center gap-2">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
-                        Share Strategy
-                    </button>
-                </div>
-            </div>
-        </div>
+                    <div id="qualityCard" class="bg-slate-900 p-6 sm:p-8 rounded-2xl text-white transition-colors duration-500 flex flex-col md:flex-row justify-between items-center gap-4 text-pretty">
+                        <div>
+                            <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Goal Feasibility</p>
+                            <h4 class="text-2xl font-black text-white" id="qualityLabel">Analyze Effort</h4>
+                            <p id="difficultyAdvice" class="text-[10px] text-slate-400 mt-1"></p>
+                        </div>
+                        <div class="text-right">
+                             <p class="text-slate-400 text-[10px] uppercase font-bold tracking-wider">Status</p>
+                             <div id="statusBadge" class="bg-white/10 text-white px-3 py-1 rounded-full text-[10px] font-bold border border-white/20 uppercase tracking-widest text-pretty">Pending</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <button id="copyBtn" onclick="copyResults()" class="flex-1 py-3 border border-blue-200 text-blue-600 rounded-lg text-xs font-bold hover:bg-blue-50 transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        Copy Plan
+                    </button>
+                    <button onclick="shareResult()" class="flex-1 py-3 bg-slate-900 text-white rounded-lg text-xs font-bold hover:bg-black transition-all flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                        Share Strategy
+                    </button>
+                </div>
+            </div>
+        </div>
 
-        <!-- content: SEO Knowledge Section -->
-        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12">
-            <h2 class="text-2xl font-bold text-slate-900 mb-6">How to Plan Multiple Financial Goals Correctly</h2>
-            <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
-                <p>Most individuals struggle with the "where do I start" problem. Balancing immediate needs like an emergency fund with 30-year goals like retirement requires a structured approach.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="space-y-4">
-                        <h3 class="font-bold text-slate-900">Step 1: Inventory Your Milestones</h3>
-                        <p>List every significant expense you expect in the next 30 years. Categorize them into Short-term (Vacation, Car), Medium-term (House Downpayment, Higher Studies), and Long-term (Retirement).</p>
-                        <h3 class="font-bold text-slate-900">Step 2: Apply Realistic Inflation</h3>
-                        <p>A ₹25 Lakh course today will cost much more in the future. Always apply 6% general inflation or 10% education inflation to your "Target Today" values to find the real future requirement.</p>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="font-bold text-slate-900">Step 3: Calculate the SIP Gap</h3>
-                        <p>Use our reverse-SIP engine to find how much money you need to set aside every month for each specific goal. This provides the mathematical foundation of your plan.</p>
-                        <h3 class="font-bold text-slate-900">Step 4: Prioritize & Allocate</h3>
-                        <p>If your total required SIP exceeds your savings capacity, prioritize. Retirement and Emergency Funds are usually non-negotiable, whereas a Vacation or Luxury Car goal can be pushed back.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- content: SEO SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-pretty">Goal-Based Investing vs. Random Savings</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Most investors in India save "randomly"—putting money into bank accounts without a clear target. However, inflation destroys the value of idle cash. For example, using our <a href="/inflation/" class="text-blue-600 underline">Inflation Calculator</a>, you can see that ₹1 Crore in 2026 will only feel like ₹50 Lakhs in 15 years.</p>
+                    <p><strong>Goal-based investing</strong> changes the perspective. Instead of asking "how much can I save?", you ask "how much do I need?". By tagging your <a href="/sip/" class="text-blue-600 underline">SIP Calculator</a> results to specific life events like children's higher education or a house downpayment, you ensure that market volatility doesn't derail your life plans. This is the foundation of high-level <a href="/net-worth/" class="text-blue-600 underline">Net Worth</a> growth.</p>
+                </div>
+            </section>
 
-        <!-- Knowledge Breakdown for 7 Goals -->
-        <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow mb-12">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8 uppercase tracking-tight">Strategic Roadmap for 7 Life Goals</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="border-l-4 border-blue-600 pl-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">1. Retirement Planning</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Retirement is the only goal for which you can't get a loan. We use the <strong>4% Safe Withdrawal Rule</strong>. It assumes you need a corpus 25-30 times your annual expenses to sustain your lifestyle for 30+ years post-retirement.</p>
-                </div>
-                <div class="border-l-4 border-emerald-600 pl-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">2. Child Education</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Education inflation in India is approx 10-12%. A professional degree that costs ₹15L today will likely cost ₹60L in 15 years. SIPs in equity funds are essential to bridge this inflation gap.</p>
-                </div>
-                <div class="border-l-4 border-indigo-600 pl-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">3. House Purchase</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Focus on the <strong>Down Payment</strong>. Saving for 20-30% of the future appreciated value of a house reduces your loan burden and saves lakhs in interest.</p>
-                </div>
-                <div class="border-l-4 border-red-600 pl-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">4. Car Purchase</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Cars are depreciating assets. A 3-5 year "Sinking Fund" approach allows you to buy a vehicle with cash, avoiding high-interest auto loans entirely.</p>
-                </div>
-                <div class="border-l-4 border-yellow-500 pl-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">5. Vacation Planning</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Short-term lifestyle goals should prioritize capital safety. Monthly parking of funds in liquid or debt instruments ensures you travel without credit card debt.</p>
-                </div>
-                <div class="border-l-4 border-purple-600 pl-6">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">6. Emergency Fund</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3">Aim for 6-12 months of mandatory expenses. This fund should be kept in sweep-in FDs or liquid funds to handle job losses or medical shocks.</p>
-                </div>
-                <div class="border-l-4 border-blue-900 pl-6 md:col-span-2">
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">7. Wealth Creation</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-3">The "Opportunity Fund." Building general wealth for the long term utilizes the maximum power of compounding to achieve financial freedom early.</p>
-                </div>
-            </div>
-        </section>
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 uppercase tracking-tight text-pretty text-pretty">Strategic Roadmap for 7 Life Goals</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="border-l-4 border-blue-600 pl-6 text-pretty">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 text-pretty">1. Retirement Planning</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3">Retirement is the only goal for which you can't get a loan. Use a <a href="/retirement/" class="text-blue-600 underline">Retirement Calculator</a> to refine your corpus requirements based on your lifestyle.</p>
+                    </div>
+                    <div class="border-l-4 border-emerald-600 pl-6 text-pretty text-pretty">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 text-pretty">2. Child Education</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty">Education inflation in India is approx 10-12%. Plan using an <a href="/education-cost/" class="text-blue-600 underline text-pretty">Education Cost Calculator</a> to bridge the gap between today's fees and future realities.</p>
+                    </div>
+                    <div class="border-l-4 border-indigo-600 pl-6 text-pretty">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 text-pretty">3. House Purchase</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty text-pretty">Focus on the Down Payment. Saving for 20-30% reduces your long-term <a href="/emi/" class="text-blue-600 underline">EMI</a> burden significantly.</p>
+                    </div>
+                    <div class="border-l-4 border-red-600 pl-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">4. Car Purchase</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3">A car is a depreciating asset. Sinking funds via SIPs allow you to buy with cash, saving 10-12% in interest costs.</p>
+                    </div>
+                    <div class="border-l-4 border-yellow-500 pl-6 text-pretty">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 text-pretty">5. Vacation Planning</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty text-pretty">Short-term lifestyle goals should prioritize capital safety. Avoid funding holidays through credit cards by planning 12-24 months in advance.</p>
+                    </div>
+                    <div class="border-l-4 border-purple-600 pl-6 text-pretty text-pretty text-pretty">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 text-pretty">6. Emergency Fund</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty text-pretty">Keep 6-12 months of mandatory expenses in liquid funds. This provides a buffer against economic downturns and medical emergencies.</p>
+                    </div>
+                    <div class="border-l-4 border-indigo-900 pl-6 text-pretty text-pretty text-pretty">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3 text-pretty">7. Wealth Creation</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3 text-pretty text-pretty">Focus on long-term capital appreciation. Consistent investments in equity mutual funds using our <a href="/sip/" class="underline font-bold">SIP Tool</a> can turn small savings into massive generational wealth.</p>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Internal Links Unique Sets -->
-        <section class="max-w-6xl mx-auto py-12 border-t border-slate-200">
-            <h2 class="text-2xl font-bold mb-8 text-slate-800 flex items-center gap-2">Popular Planning Tools ⭐</h2>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                <a href="/retirement/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all">
-                    <h4 class="text-[10px] font-bold text-slate-400 uppercase mb-1">Financial Freedom</h4>
-                    <span class="text-xs font-bold text-slate-800">Retirement</span>
-                </a>
-                <a href="/sip/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all">
-                    <h4 class="text-[10px] font-bold text-slate-400 uppercase mb-1">Wealth Growth</h4>
-                    <span class="text-xs font-bold text-slate-800">SIP Calculator</span>
-                </a>
-                <a href="/inflation/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all">
-                    <h4 class="text-[10px] font-bold text-slate-400 uppercase mb-1">Cost Impact</h4>
-                    <span class="text-xs font-bold text-slate-800">Inflation Tool</span>
-                </a>
-                <a href="/emergency-fund/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all">
-                    <h4 class="text-[10px] font-bold text-slate-400 uppercase mb-1">Safety Net</h4>
-                    <span class="text-xs font-bold text-slate-800">Emergency Fund</span>
-                </a>
-                <a href="/net-worth/" class="p-4 bg-white border border-slate-200 rounded-xl text-center card-shadow hover:border-blue-500 transition-all">
-                    <h4 class="text-[10px] font-bold text-slate-400 uppercase mb-1">Portfolio Value</h4>
-                    <span class="text-xs font-bold text-slate-800">Net Worth</span>
-                </a>
-            </div>
-        </section>
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Financial Goal Planning FAQ</h2>
+                <div class="space-y-4" id="faqContainer">
+                    <!-- FAQ Content managed by script -->
+                </div>
+            </section>
 
-        <!-- FAQ Section -->
-        <section class="max-w-4xl mx-auto py-10" id="faqs">
-            <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
-            <div class="space-y-4" id="faqContainer">
-                <!-- Lazy loaded or static JS injected items -->
-            </div>
-        </section>
+            <section class="max-w-4xl mx-auto py-8 mb-8 border-t border-slate-100 text-pretty">
+                <div class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="shrink-0 text-blue-600">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <div class="text-sm text-slate-600 leading-relaxed text-pretty text-pretty">
+                        <h4 class="font-bold text-slate-900 mb-2">Expert Verified Financial Planning</h4>
+                        <p>This calculator is developed based on time-tested financial engineering principles, including the <strong>Time Value of Money (TVM)</strong>, <strong>geometric progression</strong> for step-up SIPs, and the <strong>Trinity Study's Safe Withdrawal Rate</strong>. All formulas are standard in the wealth management industry to ensure your life goals are built on a solid mathematical foundation.</p>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Disclaimer -->
-        <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
-            <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
-            Calculations are based on mathematical annuity formulas and standard financial planning assumptions. Mutual fund returns are subject to market volatility. Inflation rates provided are historical averages. This tool provides estimations for educational purposes and does not constitute financial advice.
-            <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
-        </div>
-    </main>
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-1 uppercase tracking-wide">Disclaimer</p>
+                This calculator follows standard financial independence formulas including inflation-adjusted expense projection and safe withdrawal rate principles. Calculations are based on mathematical annuity formulas and standard financial planning assumptions. Mutual fund returns are subject to market volatility. This tool provides estimations for educational purposes and does not constitute financial advice.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            </div>
+        </div>
+    </main>
 
-    <div id="footer"></div>
+    <div id="footer"></div>
 
-    <script>
-        let currentGoal = 'retirement';
+    <script>
+        let currentGoal = 'retirement';
 
-        const inputsMap = {
-            retirement: `
-                <div class="space-y-6">
-                    <h3 class="text-xs font-black text-blue-600 uppercase tracking-widest">Retirement Settings</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div><label class="text-xs font-bold text-slate-600">Current Age</label><input type="number" id="curAge" value="30" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                        <div><label class="text-xs font-bold text-slate-600">Retirement Age</label><input type="number" id="retAge" value="60" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    </div>
-                    <div><label class="text-sm font-medium text-slate-600">Monthly Expenses Today (₹)</label><input type="number" id="monthlyExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div><label class="text-xs font-bold text-slate-600">Inflation (%)</label><input type="number" id="infRate" value="6" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                        <div><label class="text-xs font-bold text-slate-600">Life Expectancy</label><input type="number" id="lifeExp" value="85" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-                        <label class="text-xs font-bold text-slate-400 uppercase block mb-3">Corpus Calculation Logic</label>
-                        <div class="flex gap-4">
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="retRule" value="25x" checked class="accent-blue-600"> <span class="text-xs font-bold">25X Rule</span></label>
-                            <label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="retRule" value="swr" class="accent-blue-600"> <span class="text-xs font-bold">SWR Rule (4%)</span></label>
-                        </div>
-                    </div>
-                </div>`,
-            education: `
-                <div class="space-y-6">
-                    <h3 class="text-xs font-black text-emerald-600 uppercase tracking-widest">Education Settings</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div><label class="text-xs font-bold text-slate-600">Child Age</label><input type="number" id="childAge" value="3" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                        <div><label class="text-xs font-bold text-slate-600">Admission Age</label><input type="number" id="studyAge" value="18" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    </div>
-                    <div><label class="text-sm font-medium text-slate-600">Course Cost Today (₹)</label><input type="number" id="courseCost" value="1500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Edu. Inflation (%)</label><input type="number" id="eduInf" value="10" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                </div>`,
-            house: `
-                <div class="space-y-6">
-                    <h3 class="text-xs font-black text-blue-900 uppercase tracking-widest">Property Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600">Property Price Today (₹)</label><input type="number" id="housePrice" value="8000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div><label class="text-xs font-bold text-slate-600">Appreciation (%)</label><input type="number" id="houseGrow" value="5" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                        <div><label class="text-xs font-bold text-slate-600">Down Payment (%)</label><input type="number" id="houseDP" value="20" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    </div>
-                    <div><label class="text-sm font-medium text-slate-600">Years until purchase</label><input type="number" id="houseYears" value="10" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                </div>`,
-            emergency: `
-                <div class="space-y-6">
-                    <h3 class="text-xs font-black text-purple-600 uppercase tracking-widest">Safety Net Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600">Monthly Expenses (₹)</label><input type="number" id="emgExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Buffer Months</label><input type="number" id="emgMonths" value="6" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Target Time (Years)</label><input type="number" id="emgYears" value="2" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <p class="p-3 bg-purple-50 text-purple-700 text-[10px] font-bold rounded-lg border border-purple-100 uppercase">Emergency funds should be kept in liquid or debt funds.</p>
-                </div>`,
-            wealth: `
-                <div class="space-y-6">
-                    <h3 class="text-xs font-black text-indigo-600 uppercase tracking-widest">Growth Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600">Target Amount Today (₹)</label><input type="number" id="wealthTarget" value="10000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" id="wealthYears" value="15" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                </div>`,
-            car: `
-                <div class="space-y-6">
-                    <h3 class="text-xs font-black text-slate-900 uppercase tracking-widest">Vehicle Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600">Car Price Today (₹)</label><input type="number" id="carPrice" value="1000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" id="carYears" value="5" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                </div>`,
-            vacation: `
-                <div class="space-y-6">
-                    <h3 class="text-xs font-black text-slate-900 uppercase tracking-widest">Vacation Settings</h3>
-                    <div><label class="text-sm font-medium text-slate-600">Trip Cost Today (₹)</label><input type="number" id="vacPrice" value="500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                    <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" id="vacYears" value="3" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
-                </div>`
-        };
+        const inputsMap = {
+            retirement: `
+                <div class="space-y-6">
+                    <h3 class="text-xs font-black text-blue-600 uppercase tracking-widest">Retirement Settings</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div><label class="text-xs font-bold text-slate-600">Current Age</label><input type="number" id="curAge" value="30" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Retirement Age</label><input type="number" id="retAge" value="60" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    </div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty">Monthly Expenses Today (₹)</label><input type="number" id="monthlyExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Inflation (%)</label><input type="number" id="infRate" value="6" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                        <div><label class="text-xs font-bold text-slate-600">Life Expectancy</label><input type="number" id="lifeExp" value="85" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-100 text-pretty">
+                        <label class="text-xs font-bold text-slate-400 uppercase block mb-3 text-pretty">Corpus Calculation Logic</label>
+                        <div class="flex gap-4 text-pretty text-pretty">
+                            <label class="flex items-center gap-2 cursor-pointer text-pretty"><input type="radio" name="retRule" value="25x" checked class="accent-blue-600"> <span class="text-xs font-bold text-pretty text-pretty text-pretty">25X Rule</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer text-pretty"><input type="radio" name="retRule" value="swr" class="accent-blue-600"> <span class="text-xs font-bold text-pretty text-pretty text-pretty">SWR Rule (4%)</span></label>
+                        </div>
+                    </div>
+                </div>`,
+            education: `
+                <div class="space-y-6">
+                    <h3 class="text-xs font-black text-emerald-600 uppercase tracking-widest text-pretty">Education Settings</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty text-pretty">Child Age</label><input type="number" id="childAge" value="3" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Admission Age</label><input type="number" id="studyAge" value="18" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                    </div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty">Course Cost Today (₹)</label><input type="number" id="courseCost" value="1500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Edu. Inflation (%)</label><input type="number" id="eduInf" value="10" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                </div>`,
+            house: `
+                <div class="space-y-6">
+                    <h3 class="text-xs font-black text-blue-900 uppercase tracking-widest text-pretty text-pretty text-pretty">Property Settings</h3>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Property Price Today (₹)</label><input type="number" id="housePrice" value="8000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Appreciation (%)</label><input type="number" id="houseGrow" value="5" step="0.1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                        <div><label class="text-xs font-bold text-slate-600 text-pretty">Down Payment (%)</label><input type="number" id="houseDP" value="20" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                    </div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Years until purchase</label><input type="number" id="houseYears" value="10" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                </div>`,
+            emergency: `
+                <div class="space-y-6 text-pretty text-pretty text-pretty">
+                    <h3 class="text-xs font-black text-purple-600 uppercase tracking-widest text-pretty">Safety Net Settings</h3>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Monthly Expenses (₹)</label><input type="number" id="emgExp" value="50000" step="5000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty text-pretty text-pretty">Buffer Months</label><input type="number" id="emgMonths" value="6" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600">Target Time (Years)</label><input type="number" id="emgYears" value="2" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty text-pretty"></div>
+                </div>`,
+            wealth: `
+                <div class="space-y-6 text-pretty text-pretty">
+                    <h3 class="text-xs font-black text-indigo-600 uppercase tracking-widest text-pretty">Growth Settings</h3>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Target Amount Today (₹)</label><input type="number" id="wealthTarget" value="10000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Time Horizon (Years)</label><input type="number" id="wealthYears" value="15" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                </div>`,
+            car: `
+                <div class="space-y-6 text-pretty">
+                    <h3 class="text-xs font-black text-slate-900 uppercase tracking-widest text-pretty text-pretty">Vehicle Settings</h3>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Car Price Today (₹)</label><input type="number" id="carPrice" value="1000000" step="100000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600">Time Horizon (Years)</label><input type="number" id="carYears" value="5" step="1" class="w-full px-3 py-2 border rounded-lg font-bold"></div>
+                </div>`,
+            vacation: `
+                <div class="space-y-6">
+                    <h3 class="text-xs font-black text-slate-900 uppercase tracking-widest text-pretty text-pretty text-pretty">Vacation Settings</h3>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Trip Cost Today (₹)</label><input type="number" id="vacPrice" value="500000" step="50000" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                    <div><label class="text-sm font-medium text-slate-600 text-pretty">Time Horizon (Years)</label><input type="number" id="vacYears" value="3" step="1" class="w-full px-3 py-2 border rounded-lg font-bold text-pretty"></div>
+                </div>`
+        };
 
-        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
-        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
+        const faqs = [
+            { q: "What is financial goal planning?", a: "Financial goal planning is Identifying of specific milestones and calculating the exact investment needed to reach them, factoring in inflation. Track your assets with our <a href='/net-worth/' class='underline'>Net Worth Calculator</a>." },
+            { q: "How much SIP is needed for ₹1 crore?", a: "To reach ₹1 Crore in 15 years with a 15% return, you need an SIP of ₹15,000 per month. Use our <a href='/sip/' class='underline'>SIP Calculator</a> to adjust for different timeframes." },
+            { q: "What is the 25x rule in retirement?", a: "The 25x rule states you need a corpus equal to 25 times your annual expenses to retire comfortably. Use our <a href='/fire-calculator/' class='underline'>FIRE Calculator</a> for early retirement strategies." },
+            { q: "How does inflation affect my goals?", a: "Inflation erodes purchasing power. A ₹10 Lakh wedding today will cost ₹26 Lakh in 10 years at 10% inflation. Use our <a href='/inflation/' class='underline text-pretty text-pretty'>Inflation Calculator</a> to check your future costs." },
+            { q: "What is goal-based investing?", a: "Tagging specific investments to goals like 'Child Education' or 'House Purchase'. It ensures you have the right money at the right time without touching other funds." },
+            { q: "How to plan multiple financial goals?", a: "Calculate the required SIP for each goal independently, then prioritize non-negotiable ones like Retirement and Child Education. Start as early as possible." },
+            { q: "What return to assume for SIP in India?", a: "For 10+ year horizons, 12% is a safe equity benchmark. For 3-5 year goals, 7-9% in debt or hybrid funds is conservative." },
+            { q: "Is SIP enough for retirement?", a: "SIP builds the corpus, but you must transition to a Systematic Withdrawal Plan (SWP) for monthly income post-retirement." },
+            { q: "How to reach goals faster?", a: "Use a 'Step-up SIP'—increasing your investment by 10% every year as your salary increases can cut down goal completion time by years." },
+            { q: "What is a good safe withdrawal rate?", a: "The 4% rule is standard, but for the Indian market with higher inflation, 3% is often considered a safer withdrawal rate." },
+            { q: "How to calculate actual portfolio returns?", a: "Use an <a href='/xirr/' class='underline text-pretty text-pretty'>XIRR Calculator</a> to find your personalized internal rate of return for irregular cash flows." },
+            { q: "Does this account for one-time bonuses?", a: "Yes, you can add existing savings which act like a <a href='/lumpsum/' class='underline text-pretty text-pretty'>Lumpsum Investment</a> to reduce your required monthly SIP." },
+            { q: "Can I ignore inflation in short-term goals?", a: "No. Even for a 3-year vacation, 8-10% travel inflation can significantly increase the required ticket price." },
+            { q: "Is home loan better than saving?", a: "Saving for a downpayment reduces your interest outgo by lakhs. Compare your EMI against potential SIP returns." }
+        ];
 
-        function selectGoal(goal) {
-            currentGoal = goal;
-            document.querySelectorAll('.goal-card').forEach(c => c.classList.remove('active'));
-            document.getElementById('card-' + goal).classList.add('active');
-            let defaultReturn = goal === 'emergency' ? 6 : 12;
-            document.getElementById('dynamicInputs').innerHTML = inputsMap[goal] + `
-                <div class="mt-6">
-                    <div class="flex justify-between items-center mb-3">
-                        <label class="text-sm font-medium text-slate-600">Expected Annual Return (%)</label>
-                        <input type="number" id="retRate" value="${defaultReturn}" step="0.1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
-                    </div>
-                    <input type="range" id="retRateRange" min="1" max="25" step="0.1" value="${defaultReturn}" class="w-full">
-                </div>`;
-            setupDynamicSync();
-            calculate();
-        }
+        function selectGoal(goal) {
+            currentGoal = goal;
+            document.querySelectorAll('.goal-card').forEach(c => c.classList.remove('active'));
+            const cardEl = document.getElementById('card-' + goal);
+            if (cardEl) cardEl.classList.add('active');
+            
+            let defaultReturn = goal === 'emergency' ? 6 : 12;
+            const dynamicContainer = document.getElementById('dynamicInputs');
+            if (dynamicContainer) {
+                dynamicContainer.innerHTML = (inputsMap[goal] || '') + `
+                    <div class="mt-6 text-pretty">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Expected Annual Return (%)</label>
+                            <input type="number" id="retRate" value="${defaultReturn}" step="0.1" class="w-20 px-3 py-2 border rounded-lg text-right font-bold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="retRateRange" min="1" max="25" step="0.1" value="${defaultReturn}" class="w-full">
+                    </div>`;
+                setupDynamicSync();
+                calculate();
+            }
+        }
 
-        function calculate() {
-            const btn = document.getElementById('calcBtn');
-            const spinner = document.getElementById('btnSpinner');
-            const btnText = document.getElementById('btnText');
-            btnText.classList.add('opacity-50');
-            spinner.classList.remove('hidden');
-            setTimeout(() => { runMath(); btnText.classList.remove('opacity-50'); spinner.classList.add('hidden'); }, 200);
-        }
+        function calculate() {
+            const btnText = document.getElementById('btnText'), spinner = document.getElementById('btnSpinner');
+            if (btnText && spinner) {
+                btnText.classList.add('opacity-50'); spinner.classList.remove('hidden');
+                setTimeout(() => { try { runMath(); } catch(e) { console.error(e); } finally { btnText.classList.remove('opacity-50'); spinner.classList.add('hidden'); } }, 100);
+            }
+        }
 
-        function animateNumber(id, endValue) {
-            const el = document.getElementById(id);
-            const duration = 500;
-            const startValue = 0;
-            let startTimestamp = null;
-            const step = (timestamp) => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                const current = Math.floor(progress * (endValue - startValue) + startValue);
-                el.textContent = formatInr(current);
-                if (progress < 1) window.requestAnimationFrame(step);
-            };
-            window.requestAnimationFrame(step);
-        }
+        function formatInr(val) { return "₹" + (new Intl.NumberFormat('en-IN', { maximumFractionDigits: 0 }).format(Math.round(val))); }
+        function formatCompact(val) { return new Intl.NumberFormat('en-IN', { notation: 'compact', maximumFractionDigits: 1 }).format(val); }
 
-        function runMath() {
-            let FV = 0, years = 0, returnRate = parseFloat(document.getElementById('retRate')?.value) || 0;
-            const stepUp = (parseFloat(document.getElementById('stepUpInput')?.value) || 0) / 100;
-            const existing = parseFloat(document.getElementById('existingInput')?.value) || 0;
-            const insightBox = document.getElementById('insightsBox');
+        function animateNumber(id, endValue) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const duration = 500, startValue = 0;
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const current = Math.floor(progress * (endValue - startValue) + startValue);
+                el.textContent = formatInr(current);
+                if (progress < 1) window.requestAnimationFrame(step);
+            };
+            window.requestAnimationFrame(step);
+        }
 
-            try {
-                if (currentGoal === 'retirement') {
-                    const cur = parseInt(document.getElementById('curAge')?.value || 30);
-                    const ret = parseInt(document.getElementById('retAge')?.value || 60);
-                    const exp = parseFloat(document.getElementById('monthlyExp')?.value || 0);
-                    const inf = (parseFloat(document.getElementById('infRate')?.value) || 0) / 100;
-                    const rule = document.querySelector('input[name="retRule"]:checked')?.value || '25x';
-                    if (ret <= cur) throw "Retirement age > current age.";
-                    years = ret - cur;
-                    const futureMonthlyExp = exp * Math.pow(1 + inf, years);
-                    FV = rule === '25x' ? (futureMonthlyExp * 12 * 25) : ((futureMonthlyExp * 12) / 0.04);
-                } else if (currentGoal === 'education') {
-                    const cAge = parseInt(document.getElementById('childAge')?.value || 3);
-                    const sAge = parseInt(document.getElementById('studyAge')?.value || 18);
-                    const cost = parseFloat(document.getElementById('courseCost')?.value || 0);
-                    const inf = (parseFloat(document.getElementById('eduInf')?.value) || 0) / 100;
-                    if (sAge <= cAge) throw "Admission age > child age.";
-                    years = sAge - cAge;
-                    FV = cost * Math.pow(1 + inf, years);
-                } else if (currentGoal === 'house') {
-                    const price = parseFloat(document.getElementById('housePrice')?.value || 0);
-                    const grow = parseFloat(document.getElementById('houseGrow')?.value || 5) / 100;
-                    const dp = parseFloat(document.getElementById('houseDP')?.value || 20) / 100;
-                    years = parseInt(document.getElementById('houseYears')?.value || 10);
-                    FV = (price * Math.pow(1 + grow, years)) * dp;
-                } else if (currentGoal === 'emergency') {
-                    const exp = parseFloat(document.getElementById('emgExp')?.value || 0);
-                    const months = parseInt(document.getElementById('emgMonths')?.value || 6);
-                    years = parseInt(document.getElementById('emgYears')?.value || 2);
-                    FV = exp * months;
-                } else if (currentGoal === 'car') {
-                    const price = parseFloat(document.getElementById('carPrice')?.value || 0);
-                    years = parseInt(document.getElementById('carYears')?.value || 1);
-                    FV = price * Math.pow(1 + 0.06, years);
-                } else if (currentGoal === 'vacation') {
-                    const cost = parseFloat(document.getElementById('vacPrice')?.value || 0);
-                    years = parseInt(document.getElementById('vacYears')?.value || 1);
-                    FV = cost * Math.pow(1 + 0.06, years);
-                } else if (currentGoal === 'wealth') {
-                    FV = parseFloat(document.getElementById('wealthTarget')?.value || 0);
-                    years = parseInt(document.getElementById('wealthYears')?.value || 1);
-                }
-                if (years <= 0) throw "Period must be > 0.";
-            } catch (err) { insightBox.innerHTML = `<span class="text-red-600 font-bold">⚠️ ${err}</span>`; return; }
+        function runMath() {
+            try {
+                let FV = 0, years = 0;
+                let returnRate = parseFloat(document.getElementById('retRate')?.value) || 0;
+                if (returnRate <= 0) returnRate = 1;
+                if (returnRate > 25) returnRate = 25;
+                if (currentGoal === 'emergency') { returnRate = 2; }
 
-            const fvExisting = existing * Math.pow(1 + (returnRate / 100), years);
-            const netGoal = Math.max(0, FV - fvExisting);
-            const rMonthly = returnRate / 12 / 100;
-            let requiredSip = 0;
-            if (years > 0 && netGoal > 0) {
-                if (rMonthly === 0) { requiredSip = netGoal / (years * 12); } 
-                else {
-                    let low = 0, high = netGoal;
-                    for (let i = 0; i < 60; i++) {
-                        let mid = (low + high) / 2;
-                        let tempFV = 0, curSip = mid;
-                        for (let y = 1; y <= years; y++) {
-                            for (let m = 1; m <= 12; m++) { tempFV = (tempFV + curSip) * (1 + rMonthly); }
-                            curSip *= (1 + stepUp);
-                        }
-                        if (tempFV < netGoal) low = mid; else high = mid;
-                    }
-                    requiredSip = high;
-                }
-            }
+                const stepUp = (parseFloat(document.getElementById('stepUpInput')?.value) || 0) / 100;
+                const existing = parseFloat(document.getElementById('existingInput')?.value) || 0;
+                const insightBox = document.getElementById('insightsBox');
 
-            let totalInvested = existing;
-            let tempSip = requiredSip;
-            for(let y=1; y<=years; y++) { totalInvested += (tempSip * 12); tempSip *= (1+stepUp); }
-            const wealthGain = Math.max(0, FV - totalInvested);
+                if (currentGoal === 'retirement') {
+                    const cur = parseInt(document.getElementById('curAge')?.value || 30);
+                    const ret = parseInt(document.getElementById('retAge')?.value || 60);
+                    const exp = parseFloat(document.getElementById('monthlyExp')?.value || 0);
+                    const inf = (parseFloat(document.getElementById('infRate')?.value) || 0) / 100;
+                    const rule = document.querySelector('input[name="retRule"]:checked')?.value || '25x';
+                    years = ret - cur;
+                    if (years <= 0) throw "Retirement age must be greater than current age.";
+                    const futureMonthlyExp = exp * Math.pow(1 + inf, years);
+                    FV = rule === '25x' ? (futureMonthlyExp * 12 * 25) : ((futureMonthlyExp * 12) / 0.04);
+                } else if (currentGoal === 'education') {
+                    const cAge = parseInt(document.getElementById('childAge')?.value || 3), sAge = parseInt(document.getElementById('studyAge')?.value || 18);
+                    const cost = parseFloat(document.getElementById('courseCost')?.value || 0), inf = (parseFloat(document.getElementById('eduInf')?.value) || 0) / 100;
+                    years = sAge - cAge;
+                    if (years <= 0) throw "Admission age must be greater than current age.";
+                    FV = cost * Math.pow(1 + inf, years);
+                } else if (currentGoal === 'house') {
+                    const price = parseFloat(document.getElementById('housePrice')?.value || 0), grow = parseFloat(document.getElementById('houseGrow')?.value || 5) / 100;
+                    const dp = parseFloat(document.getElementById('houseDP')?.value || 20) / 100;
+                    years = parseInt(document.getElementById('houseYears')?.value || 10);
+                    if (years <= 0) throw "Time period must be greater than 0.";
+                    FV = (price * Math.pow(1 + grow, years)) * dp;
+                } else if (currentGoal === 'emergency') {
+                    const exp = parseFloat(document.getElementById('emgExp')?.value || 0), months = parseInt(document.getElementById('emgMonths')?.value || 6);
+                    years = parseInt(document.getElementById('emgYears')?.value || 2);
+                    if (years <= 0) throw "Time period must be greater than 0.";
+                    FV = exp * months;
+                } else if (currentGoal === 'car') {
+                    const price = parseFloat(document.getElementById('carPrice')?.value || 0);
+                    years = parseInt(document.getElementById('carYears')?.value || 1); 
+                    if (years <= 0) throw "Time period must be greater than 0.";
+                    FV = price * Math.pow(1 + 0.06, years);
+                } else if (currentGoal === 'vacation') {
+                    const cost = parseFloat(document.getElementById('vacPrice')?.value || 0);
+                    years = parseInt(document.getElementById('vacYears')?.value || 1); 
+                    if (years <= 0) throw "Time period must be greater than 0.";
+                    FV = cost * Math.pow(1 + 0.06, years);
+                } else if (currentGoal === 'wealth') {
+                    FV = parseFloat(document.getElementById('wealthTarget')?.value || 0);
+                    years = parseInt(document.getElementById('wealthYears')?.value || 1);
+                    if (years <= 0) throw "Time period must be greater than 0.";
+                }
+                
+                if (isNaN(FV)) FV = 0;
 
-            animateNumber('requiredSipDisp', requiredSip);
-            document.getElementById('targetWealthDisp').textContent = formatInr(FV);
-            document.getElementById('wealthGainDisp').textContent = formatInr(wealthGain);
-            document.getElementById('totalInvestedDisp').textContent = formatInr(totalInvested);
-            document.getElementById('investedLabel').textContent = "Inv: " + formatCompact(totalInvested);
-            document.getElementById('returnsLabel').textContent = "Gain: " + formatCompact(wealthGain);
-            const pPerc = (totalInvested / FV) * 100 || 50;
-            document.getElementById('investedBar').style.width = Math.min(100, pPerc) + "%";
-            document.getElementById('returnsBar').style.width = Math.max(0, 100 - pPerc) + "%";
+                const fvExisting = currentGoal === 'emergency' ? existing : existing * Math.pow(1 + (returnRate / 100), years);
+                const netGoal = Math.max(0, FV - fvExisting);
+                const rMonthly = returnRate / 12 / 100;
+                let requiredSip = 0;
+                
+                if (years > 0 && netGoal > 0) {
+                    if (currentGoal === 'emergency') {
+                        requiredSip = netGoal / (years * 12);
+                    } else {
+                        let low = 0, high = netGoal * 2;
+                        for (let i = 0; i < 60; i++) {
+                            let mid = (low + high) / 2, tempFV = 0, curSip = mid;
+                            for (let y = 1; y <= years; y++) {
+                                tempFV = (tempFV + (curSip * 12)) * Math.pow(1 + rMonthly, 12);
+                                curSip *= (1 + stepUp);
+                            }
+                            if (tempFV < netGoal) low = mid; else high = mid;
+                        }
+                        requiredSip = high;
+                    }
+                }
+                
+                if (isNaN(requiredSip) || !FV || requiredSip < 0) requiredSip = 0;
+                if (currentGoal !== 'emergency' && requiredSip > 0 && requiredSip < 100) requiredSip = 100;
 
-            const card = document.getElementById('qualityCard'), label = document.getElementById('qualityLabel'), badge = document.getElementById('statusBadge'), advice = document.getElementById('difficultyAdvice');
-            const ratio = (requiredSip / 100000) * 100;
-            advice.textContent = years < 3 ? "Short horizon increases burden." : "Longer horizon reduces monthly SIP.";
-            if (ratio < 15) { card.className = "bg-emerald-900 p-6 sm:p-8 rounded-2xl text-white"; label.textContent = "Easy Goal"; badge.textContent = "Comfortable"; }
-            else if (ratio < 40) { card.className = "bg-blue-900 p-6 sm:p-8 rounded-2xl text-white"; label.textContent = "Disciplined Effort"; badge.textContent = "Moderate"; }
-            else { card.className = "bg-orange-900 p-6 sm:p-8 rounded-2xl text-white"; label.textContent = "⚠️ High Effort"; badge.textContent = "Aggressive"; advice.textContent = "Consider adding lumpsum or extending time."; }
-            
-            insightBox.innerHTML = `🚀 To reach <strong>${formatInr(FV)}</strong> by <strong>${new Date().getFullYear() + years}</strong>, start a monthly SIP of <strong>${formatInr(requiredSip)}</strong>.`;
-        }
+                let totalInvested = 0, tempSip = requiredSip;
+                for(let y=1; y<=years; y++) { totalInvested += (tempSip * 12); tempSip *= (1+stepUp); }
+                const wealthGain = Math.max(0, FV - (totalInvested + existing));
 
-        function setupDynamicSync() {
-            document.querySelectorAll('#dynamicInputs input').forEach(input => {
-                input.addEventListener('input', calculate);
-                const id = input.id;
-                if (id && !id.includes('Range')) {
-                    const range = document.getElementById(id + 'Range');
-                    if (range) {
-                        input.addEventListener('input', () => { range.value = input.value; calculate(); });
-                        range.addEventListener('input', () => { input.value = range.value; calculate(); });
-                    }
-                }
-            });
-            document.querySelectorAll('input[name="retRule"]').forEach(r => r.addEventListener('change', calculate));
-        }
+                const sipEl = document.getElementById('requiredSipDisp');
+                if (sipEl) animateNumber('requiredSipDisp', requiredSip);
 
-        function applyExample(type) {
-            if (type === 'ret1cr') { selectGoal('retirement'); document.getElementById('monthlyExp').value = 50000; document.getElementById('curAge').value = 35; document.getElementById('retAge').value = 60; }
-            else if (type === 'edu25l') { selectGoal('education'); document.getElementById('courseCost').value = 2500000; document.getElementById('childAge').value = 5; }
-            else if (type === 'house1cr') { selectGoal('house'); document.getElementById('housePrice').value = 10000000; document.getElementById('houseYears').value = 10; }
-            else if (type === 'emg6l') { selectGoal('emergency'); document.getElementById('emgExp').value = 100000; }
-            calculate();
-        }
+                const targetWealthEl = document.getElementById('targetWealthDisp');
+                if (targetWealthEl) targetWealthEl.textContent = formatInr(FV);
 
-        function shareResult() {
-            const text = `I'm using ArthCalculator to plan my life goals! I need an SIP of ${document.getElementById('requiredSipDisp').innerText}.`;
-            if (navigator.share) navigator.share({ title: 'My Financial Goal', text: text, url: window.location.href });
-        }
+                const wealthGainEl = document.getElementById('wealthGainDisp');
+                if (wealthGainEl) wealthGainEl.textContent = formatInr(wealthGain);
 
-        async function copyResults() {
-            try { await navigator.clipboard.writeText(document.getElementById('insightsBox').innerText); const btn = document.getElementById('copyBtn'); btn.innerText = "✓ Copied!"; setTimeout(() => btn.innerHTML = "Copy Plan", 2000); } catch (err) {}
-        }
+                const totalInvEl = document.getElementById('totalInvestedDisp');
+                if (totalInvEl) totalInvEl.textContent = formatInr(totalInvested + existing);
 
-        const faqs = [
-            { q: "What is financial goal planning?", a: "Financial goal planning is the process of identifying specific life milestones and calculating the exact investment needed today to reach those future targets, adjusted for inflation." },
-            { q: "How much SIP is needed for retirement?", a: "It depends on your current age and expenses. A common rule is to save enough to build a corpus 25 times your annual expenses at retirement age to sustain a 4% withdrawal rate." },
-            { q: "What is the 25x rule in retirement?", a: "The 25x rule suggests that your retirement corpus should be 25 times your annual expenses at age 60. This is based on the 4% withdrawal rule." },
-            { q: "How to reach financial goals faster?", a: "Start early, use an annual Step-up SIP (10-15% increase per year), and diversify into growth assets like equity mutual funds." },
-            { q: "How much for child education in India?", a: "With 10% education inflation, aim for 3-4x the current fee if admission is 15 years away." },
-            { q: "Should I prioritize a house or retirement?", a: "Retirement is non-negotiable. Plan for a house down payment while property appreciates at 5-6% to keep future loans manageable." },
-            { q: "Impact of starting 5 years late?", a: "A 5-year delay can often double the SIP required to hit the same target due to the loss of compounding years." },
-            { q: "Is SIP better than Lumpsum for life goals?", a: "SIP is generally better for salaried individuals as it instills discipline and provides Rupee Cost Averaging, reducing the risk of timing the market." },
-            { q: "How do I handle multiple overlapping goals?", a: "Prioritize non-negotiable goals (Retirement, Kids' Education) first. Use a Step-up SIP to increase contributions as your income grows to cover secondary goals." },
-            { q: "Does the planner account for existing savings?", a: "Yes, our planner allows you to input current savings, which are then grown at your expected return rate to reduce the final SIP requirement." },
-            { q: "Can I use the same SIP for multiple life goals?", a: "While possible, it is better to tag separate SIPs to specific goals. This helps in choosing the right asset class and prevents using retirement funds for vacations." },
-            { q: "What return rate should I assume for a 15-year goal?", a: "For long tenures, a balanced equity portfolio in India historically targets 12-14% CAGR. Planning with 12% is considered conservative and safer for long-term estimates." },
-            { q: "How often should I review my goal plan?", a: "Annual reviews are ideal. You should update your Net Worth and adjust your SIP amounts if your salary increases or your goal costs change significantly." },
-            { q: "Is HRA exemption part of the plan?", a: "HRA reduces your taxable income, increasing your disposable income for SIPs. You can calculate your tax savings separately to optimize your plan." }
-        ];
+                const iLabEl = document.getElementById('investedLabel');
+                if (iLabEl) iLabEl.textContent = "Inv: " + formatCompact(totalInvested + existing);
 
-        window.addEventListener('DOMContentLoaded', () => {
-            const sUI = document.getElementById('stepUpInput'), sUR = document.getElementById('stepUpRange'), eII = document.getElementById('existingInput'), eIR = document.getElementById('existingRange');
-            sUI.addEventListener('input', () => { sUR.value = sUI.value; calculate(); });
-            sUR.addEventListener('input', () => { sUI.value = sUR.value; calculate(); });
-            eII.addEventListener('input', () => { eIR.value = eII.value; calculate(); });
-            eIR.addEventListener('input', () => { eII.value = eIR.value; calculate(); });
-            selectGoal('retirement');
-            const faqContainer = document.getElementById('faqContainer');
-            faqs.forEach(f => {
-                const det = document.createElement('details');
-                det.className = "group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white";
-                det.innerHTML = `<summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm">${f.q}</span><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t border-slate-50">${f.a}</div>`;
-                faqContainer.appendChild(det);
-            });
-        });
+                const rLabEl = document.getElementById('returnsLabel');
+                if (rLabEl) rLabEl.textContent = "Gain: " + formatCompact(wealthGain);
 
-        fetch("/navbar.html").then(res => res.text()).then(data => { document.getElementById("navbar").innerHTML = data; });
-        fetch("/footer.html").then(res => res.text()).then(data => { document.getElementById("footer").innerHTML = data; });
-    </script>
+                const pPerc = FV > 0 ? (totalInvested / FV) * 100 : 50;
+                const iBarEl = document.getElementById('investedBar');
+                if (iBarEl) iBarEl.style.width = Math.min(100, pPerc) + "%";
+
+                const rBarEl = document.getElementById('returnsBar');
+                if (rBarEl) rBarEl.style.width = Math.max(0, 100 - pPerc) + "%";
+
+                const card = document.getElementById('qualityCard'), label = document.getElementById('qualityLabel'), badge = document.getElementById('statusBadge'), advice = document.getElementById('difficultyAdvice');
+                const ratio = requiredSip / 50000;
+                if (advice) advice.textContent = years < 5 ? "Short time period increases your monthly burden." : "Healthy time horizon reduces monthly SIP load.";
+                
+                if (ratio < 0.3) { 
+                    if(card) card.className = "bg-emerald-900 p-6 sm:p-8 rounded-2xl text-white transition-all"; 
+                    if(label) label.textContent = "Easy Goal"; if(badge) badge.textContent = "Comfortable"; 
+                } else if (ratio < 0.8) { 
+                    if(card) card.className = "bg-blue-900 p-6 sm:p-8 rounded-2xl text-white transition-all"; 
+                    if(label) label.textContent = "Disciplined Effort"; if(badge) badge.textContent = "Moderate"; 
+                } else { 
+                    if(card) card.className = "bg-orange-900 p-6 sm:p-8 rounded-2xl text-white transition-all"; 
+                    if(label) label.textContent = "⚠️ High Effort"; if(badge) badge.textContent = "Aggressive"; 
+                    if(advice) advice.textContent = "Consider extending the time period."; 
+                }
+                
+                if(insightBox) insightBox.innerHTML = `🚀 To reach <strong>${formatInr(FV || 0)}</strong> by <strong>${new Date().getFullYear() + years}</strong>, start a monthly SIP of <strong>${formatInr(requiredSip || 0)}</strong>.`;
+
+            } catch (e) {
+                const insightBox = document.getElementById('insightsBox');
+                if(insightBox) insightBox.innerHTML = `<span class="text-red-600 font-bold">⚠️ ${e}</span>`;
+            }
+        }
+
+        function setupDynamicSync() {
+            document.querySelectorAll('#dynamicInputs input').forEach(input => {
+                input.addEventListener('input', calculate);
+                const id = input.id;
+                if (id && !id.includes('Range')) {
+                    const range = document.getElementById(id + 'Range');
+                    if (range) {
+                        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+                        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+                    }
+                }
+            });
+            document.querySelectorAll('input[name="retRule"]').forEach(r => r.addEventListener('change', calculate));
+            const rR = document.getElementById('retRate');
+            const rRR = document.getElementById('retRateRange');
+            if (rR && rRR) {
+                rR.addEventListener('input', () => { rRR.value = rR.value; calculate(); });
+                rRR.addEventListener('input', () => { rR.value = rRR.value; calculate(); });
+            }
+        }
+
+        function applyExample(type) {
+            if (type === 'ret1cr') { selectGoal('retirement'); document.getElementById('monthlyExp').value = 50000; document.getElementById('curAge').value = 35; document.getElementById('retAge').value = 60; }
+            else if (type === 'edu25l') { selectGoal('education'); document.getElementById('courseCost').value = 2500000; document.getElementById('childAge').value = 5; }
+            else if (type === 'house1cr') { selectGoal('house'); document.getElementById('housePrice').value = 10000000; document.getElementById('houseYears').value = 10; }
+            else if (type === 'emg6l') { selectGoal('emergency'); document.getElementById('emgExp').value = 100000; }
+            calculate();
+        }
+
+        function shareResult() {
+            const sipText = document.getElementById('requiredSipDisp')?.innerText || "₹0";
+            const text = `I'm using ArthCalculator to plan my life goals! I need an SIP of ${sipText}.`;
+            if (navigator.share) navigator.share({ title: 'My Financial Goal', text: text, url: window.location.href });
+        }
+
+        async function copyResults() {
+            const box = document.getElementById('insightsBox');
+            if (!box) return;
+            try { await navigator.clipboard.writeText(box.innerText); const btn = document.getElementById('copyBtn'); if(btn) { btn.innerText = "✓ Copied!"; setTimeout(() => btn.innerHTML = "Copy Plan", 2000); } } catch (err) {}
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const sUI = document.getElementById('stepUpInput'), sUR = document.getElementById('stepUpRange'), eII = document.getElementById('existingInput'), eIR = document.getElementById('existingRange');
+            if(sUI && sUR) {
+                sUI.addEventListener('input', () => { sUR.value = sUI.value; calculate(); });
+                sUR.addEventListener('input', () => { sUI.value = sUR.value; calculate(); });
+            }
+            if(eII && eIR) {
+                eII.addEventListener('input', () => { eIR.value = eII.value; calculate(); });
+                eIR.addEventListener('input', () => { eII.value = eIR.value; calculate(); });
+            }
+            
+            try {
+                selectGoal('retirement');
+            } catch(e) {
+                console.error("Init error:", e);
+            }
+
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                faqs.forEach(f => {
+                    const det = document.createElement('details');
+                    det.className = "group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm transition-all";
+                    det.innerHTML = `<summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm text-pretty">${f.q}</span><svg class="w-5 h-5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs border-t border-slate-50 text-pretty text-pretty text-pretty">${f.a}</div>`;
+                    faqContainer.appendChild(det);
+                });
+            }
+        });
+
+        fetch("/navbar.html").then(res => res.text()).then(data => { 
+            const nav = document.getElementById("navbar");
+            if (nav) nav.innerHTML = data; 
+            const btn = document.getElementById("menuBtn");
+            const menu = document.getElementById("mobileMenu");
+            if(btn && menu){ btn.addEventListener("click", () => { menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res => res.text()).then(data => { 
+            const foot = document.getElementById("footer");
+            if (foot) foot.innerHTML = data; 
+        });
+    </script>
 </body>
 </html>
