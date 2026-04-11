@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debt to Income Ratio Calculator India 2026 – DTI & Loan Eligibility Tool</title>
     <meta name="description" content="Use the best Debt to Income (DTI) Ratio Calculator India (2026). Calculate your loan eligibility, assess financial health, and understand bank benchmarks for home loans.">
-    <meta name="keywords" content="Debt to Income Ratio Calculator India, DTI Calculator, Loan Eligibility Tool, Financial Health Ratio, Home Loan DTI Benchmark 2026">
+    <meta name="keywords" content="Debt to Income Ratio Calculator India, DTI Calculator, Loan Eligibility Tool, Financial Health Ratio, Home Loan DTI Benchmark 2026, debt to income ratio india">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/debt-to-income/">
+    <link rel="icon" href="/favicon.png">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Debt to Income Ratio Calculator India (2026) – Assess Loan Readiness">
     <meta property="og:description" content="Determine if your debt levels are healthy. Calculate your DTI ratio and see how Indian banks view your profile for new loans.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arthcalculator.in/debt-to-income/">
-    <meta property="og:image" content="/favicon.ico">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
     
     <!-- Schema Markup: WebPage -->
     <script type="application/ld+json">
@@ -22,11 +23,67 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Debt to Income Ratio Calculator India (2026)",
+      "url": "https://arthcalculator.in/debt-to-income/",
       "description": "A high-precision financial tool to calculate personal Debt-to-Income (DTI) ratios and borrowing capacity.",
+      "datePublished": "2024-03-14",
+      "dateModified": "2026-04-11",
       "publisher": {
         "@type": "Organization",
-        "name": "Arthcalculator"
+        "name": "ArthCalculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arthcalculator.in/logo.png"
+        }
       }
+    }
+    </script>
+
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Debt to Income (DTI) Calculator",
+      "operatingSystem": "Web",
+      "applicationCategory": "FinanceApplication",
+      "description": "Calculate your personal debt-to-income ratio to evaluate loan eligibility and financial health.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate Your Debt to Income Ratio",
+      "description": "Determine your borrowing capacity and financial health in four simple steps.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Input Gross Income",
+          "text": "Enter your total monthly pre-tax income from salary and business."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Add Monthly Debts",
+          "text": "List all your monthly EMI obligations, including home, car, and personal loans."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Include Fixed Costs",
+          "text": "Add other recurring fixed costs like rent and credit card minimum payments."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Review DTI Ratio",
+          "text": "Check the final percentage to see if you fall within the healthy benchmark for new loans."
+        }
+      ]
     }
     </script>
 
@@ -84,9 +141,8 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -120,13 +176,19 @@
             font-family: 'Courier New', Courier, monospace;
             overflow-x: auto;
         }
+        .nav-link { transition: all 0.2s ease; position: relative; padding: 0.5rem 0.25rem; }
+        .nav-link.active { color: #2563eb; font-weight: 600; }
+        .nav-link.active::after { content: ''; position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%); width: 4px; height: 4px; border-radius: 50%; background-color: #2563eb; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
     </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
 
     <!-- Header & Breadcrumbs -->
-    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
         <div class="max-w-6xl mx-auto px-4">
             <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
@@ -135,28 +197,21 @@
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
                     <li class="flex items-center">
-                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <a href="/calculators" class="hover:text-blue-600 transition-colors text-pretty">Financial Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">Debt to Income Ratio</li>
+                    <li class="text-blue-600 font-bold">Debt to Income Ratio</li>
                 </ol>
             </nav>
 
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
                 <div class="max-w-3xl">
                     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Debt to Income Ratio Calculator India (2026) – Assess Borrowing Health</h1>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
                         Determine your financial leverage before applying for a loan. Calculate your DTI ratio by comparing your monthly debt obligations with your gross income to ensure a healthy credit profile in 2026.
                     </p>
-                    
-                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
-                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
-                        <span class="text-slate-300">|</span>
-                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
-                        <span class="text-slate-300">|</span>
-                        <a href="#benchmarks" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Benchmarks</a>
-                        <span class="text-slate-300">|</span>
-                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    <div class="mt-4 p-4 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl text-sm text-blue-800 text-pretty">
+                        <strong>Financial Hook:</strong> In 2026, Indian banks use a DTI benchmark of 40% for <a href="/emi/" class="font-bold underline text-blue-700">Home Loans</a>. If your ratio is higher, consider a <a href="/salary-hike/" class="font-bold underline text-blue-700">Salary Hike</a> strategy or adding a <a href="/side-income/" class="font-bold underline text-blue-700">Side Income</a> to increase your eligibility.
                     </div>
                 </div>
                 <div class="hidden md:block mt-4 md:mt-0">
@@ -172,8 +227,8 @@
             
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
-                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg">
-                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
                         <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Income & Debt Details
                     </h2>
@@ -188,7 +243,7 @@
 
                     <div class="mb-8">
                         <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
-                            <label class="text-sm font-medium text-slate-600">Monthly EMI Obligations (₹)</label>
+                            <label class="text-sm font-medium text-slate-600 text-pretty">Monthly EMI Obligations (₹)</label>
                             <div class="relative w-full sm:w-32">
                                 <input type="number" id="debtInput" value="30000" step="500" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                             </div>
@@ -196,32 +251,32 @@
                         <input type="range" id="debtRange" min="0" max="500000" step="500" value="30000" class="w-full py-2 cursor-pointer">
                     </div>
 
-                    <div class="mb-6 p-4 bg-blue-50/50 rounded-xl border border-blue-100">
+                    <div class="mb-6 p-4 bg-blue-50/50 rounded-xl border border-blue-100 text-pretty text-pretty">
                         <label class="text-xs font-bold text-blue-600 uppercase mb-4 block">Include Other Fixed Costs</label>
                         <div class="space-y-4">
-                            <div class="flex justify-between items-center">
-                                <span class="text-xs text-slate-500">Rent Payments (₹)</span>
+                            <div class="flex justify-between items-center text-pretty">
+                                <span class="text-xs text-slate-500 font-medium">Rent Payments (₹)</span>
                                 <input type="number" id="rentInput" value="0" step="500" class="w-20 px-2 py-1 border border-slate-200 rounded text-right text-xs font-bold focus:ring-1 focus:ring-blue-500 focus:outline-none">
                             </div>
-                            <div class="flex justify-between items-center">
-                                <span class="text-xs text-slate-500">Credit Card Min (₹)</span>
+                            <div class="flex justify-between items-center text-pretty">
+                                <span class="text-xs text-slate-500 font-medium">Credit Card Min (₹)</span>
                                 <input type="number" id="ccInput" value="0" step="100" class="w-20 px-2 py-1 border border-slate-200 rounded text-right text-xs font-bold focus:ring-1 focus:ring-blue-500 focus:outline-none">
                             </div>
                         </div>
                     </div>
 
-                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-1">
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-1 transition-all text-pretty">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         Calculate DTI Ratio
                     </button>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pretty">
                     <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 transition-all hover:-translate-y-1">
                         <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Total Monthly Debt</p>
                         <h3 id="totalDebtCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹30,000</h3>
                     </div>
-                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 transition-all hover:-translate-y-1">
+                    <div class="bg-indigo-600 p-5 rounded-2xl text-white shadow-lg shadow-indigo-200 transition-all hover:-translate-y-1 text-pretty">
                         <p class="text-indigo-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Monthly Surplus</p>
                         <h3 id="surplusCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹70,000</h3>
                     </div>
@@ -229,8 +284,8 @@
             </div>
 
             <!-- Right Side: Results -->
-            <div class="lg:col-span-7 space-y-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+            <div class="lg:col-span-7 space-y-6 text-pretty">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
                     <h2 class="text-slate-800 font-bold text-lg mb-6">DTI Assessment Summary</h2>
                     <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
                         <div class="w-full">
@@ -240,7 +295,7 @@
                             </div>
                         </div>
                         <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
-                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3 text-pretty"></div>
                              <div>
                                 <p class="text-[10px] text-slate-500 uppercase font-bold">Risk Level</p>
                                 <p class="font-bold text-slate-800 text-sm" id="healthDisp">Moderate</p>
@@ -248,21 +303,21 @@
                         </div>
                     </div>
 
-                    <div class="mb-10">
+                    <div class="mb-10 text-pretty">
                         <div class="flex justify-between text-[11px] mb-3">
                             <span class="text-blue-600 font-bold uppercase text-xs">Monthly Debt Load</span>
                             <span class="text-slate-200 font-bold uppercase text-xs">Total Capacity</span>
                         </div>
-                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
                             <div id="dtiBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 30%"></div>
                         </div>
                         <div class="flex flex-wrap justify-between mt-4 gap-4">
                             <div class="flex items-center">
-                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2 text-pretty"></div>
                                 <span class="text-[10px] sm:text-xs text-slate-500" id="debtLabel">Debt: ₹30,000</span>
                             </div>
                             <div class="flex items-center">
-                                <div class="w-3 h-3 bg-slate-200 rounded-sm mr-2"></div>
+                                <div class="w-3 h-3 bg-slate-200 rounded-sm mr-2 text-pretty"></div>
                                 <span class="text-[10px] sm:text-xs text-slate-500" id="incomeLabel">Income: ₹1,00,000</span>
                             </div>
                         </div>
@@ -271,7 +326,7 @@
                     <hr class="border-slate-100 mb-6">
 
                     <!-- Key Highlights Box -->
-                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8 text-pretty">
                         <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             Eligibility Insight
@@ -284,12 +339,12 @@
                         </ul>
                     </div>
 
-                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1" id="benchmarks">DTI Sensitivity Matrix</h3>
-                    <p class="text-xs text-slate-500 mb-4">How your DTI ratio changes at different income levels (assuming same debt).</p>
-                    <div id="tableSection" class="overflow-hidden">
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1" id="benchmarks text-pretty">DTI Sensitivity Matrix</h3>
+                    <p class="text-xs text-slate-500 mb-4 text-pretty">How your DTI ratio changes at different income levels (assuming same debt).</p>
+                    <div id="tableSection" class="overflow-hidden text-pretty text-pretty text-pretty">
                         <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
                             <table class="w-full text-left text-[11px] sm:text-sm">
-                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                <thead class="bg-slate-50 sticky top-0 z-10 text-pretty">
                                     <tr>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b">Gross Income (₹)</th>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Monthly Debt</th>
@@ -301,22 +356,23 @@
                             </table>
                         </div>
                     </div>
+                    <p class="mt-6 text-[10px] text-slate-400 italic text-center">This calculator follows standard DTI formulas used by Indian banks and lenders.</p>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
                     <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is DTI Ratio Calculated?</h3>
-                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm font-bold">
                         DTI Ratio = (Total Monthly Debt / Gross Monthly Income) × 100
                     </div>
-                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
-                        <p><strong>Total Monthly Debt:</strong> Sum of all EMIs, Rent, and Credit Card minimums.</p>
-                        <p><strong>Gross Monthly Income:</strong> Pre-tax monthly salary or business income.</p>
-                        <p><strong>Healthy Benchmark:</strong> Below 35% is considered Excellent.</p>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm text-pretty">
+                        <p><strong>Total Monthly Debt:</strong> Sum of all <a href="/emi/" class="underline">EMIs</a>, Rent, and Credit Card minimums.</p>
+                        <p><strong>Gross Monthly Income:</strong> Pre-tax monthly salary or business income. Check your <a href="/net-worth/" class="underline">Net Worth</a> to see your full financial health.</p>
+                        <p><strong>Healthy Benchmark:</strong> Below 35% is considered Excellent by top Indian lenders.</p>
                     </div>
 
-                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example Analysis (India)</h3>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
-                        If your gross salary is <strong>₹1,00,000</strong> and your monthly EMI is <strong>₹35,000</strong>:<br>
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example text-pretty text-pretty text-pretty">Example Analysis (India)</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty text-pretty text-pretty">
+                        If your gross salary is <strong>₹1,00,000</strong> and your monthly EMI is <strong>₹35,00,000</strong>:<br>
                         <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
                             <li>Total Monthly Obligations: <strong>₹35,000</strong></li>
                             <li>Calculation: (35,000 / 1,00,000) * 100</li>
@@ -327,30 +383,30 @@
             </div>
         </div>
 
-        <div class="space-y-12 mb-12" id="about">
+        <div class="space-y-12 mb-12 text-pretty" id="about">
             <!-- Educational Content Section -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
                 <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Why Your DTI Ratio is Your Financial Vital Sign</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p>
                         The <strong>Debt-to-Income (DTI) ratio</strong> is perhaps the most important percentage in your financial life after your credit score. In the 2026 Indian banking landscape, lenders use this ratio to determine your repayment capacity. If your DTI is too high, it signals to the bank that you are "over-leveraged"—meaning even a small financial setback could lead to a default.
                     </p>
                     <p>
-                        Our <strong>DTI Calculator India</strong> helps you see your profile through the eyes of a bank manager. Whether you are planning to buy a house in Bangalore or a car in Mumbai, checking your DTI ratio first ensures you don't face a painful loan rejection.
+                        Our <strong>DTI Calculator India</strong> helps you see your profile through the eyes of a bank manager. Whether you are planning to buy a house in Bangalore or a car in Mumbai, checking your DTI ratio first ensures you don't face a painful loan rejection. Lowering your DTI often requires increasing income; see our <a href="/side-income/" class="underline">Side Income Tool</a> for inspiration.
                     </p>
                     <h3 class="text-xl font-bold text-slate-800 mt-8">The Indian Home Loan Benchmarks</h3>
                     <p>
-                        Leading Indian banks like SBI, HDFC, and ICICI typically look for an FOIR (Fixed Obligation to Income Ratio), which is synonymous with DTI. While standard guidelines suggest 40%, high-income individuals (earning over ₹2 Lakhs monthly) might get approval for DTI ratios up to 55-60%, provided their "Residual Income" is substantial. 
+                        Leading Indian banks like SBI, HDFC, and ICICI typically look for an FOIR (Fixed Obligation to Income Ratio). Use our <a href="/savings-goal/" class="underline font-medium">Savings Goal Tool</a> to plan your down payment and keep your future DTI in check. While standard guidelines suggest 40%, high-income individuals earning over ₹2 Lakhs monthly might get approval for ratios up to 55-60%, provided their "Residual Income" is substantial. For long term wealth, pair debt reduction with a <a href="/retirement/" class="underline">Retirement Plan</a>.
                     </p>
                 </div>
             </section>
 
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">DTI Ratio Classifications</h2>
-                <div class="overflow-x-auto">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 text-pretty text-pretty text-pretty text-pretty text-pretty">DTI Ratio Classifications</h2>
+                <div class="overflow-x-auto text-pretty text-pretty">
                     <table class="w-full text-left border-collapse border border-slate-100">
                         <thead>
-                            <tr class="bg-slate-50">
+                            <tr class="bg-slate-50 text-pretty">
                                 <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">DTI Percentage</th>
                                 <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Rating</th>
                                 <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Loan Eligibility</th>
@@ -363,9 +419,9 @@
                                 <td class="p-4 border-b">Highest probability of approval & lowest rates.</td>
                             </tr>
                             <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">31% - 40%</td>
-                                <td class="p-4 border-b text-blue-600 font-bold">Good</td>
-                                <td class="p-4 border-b">Strong eligibility for home and car loans.</td>
+                                <td class="p-4 border-b font-medium text-slate-600 text-pretty">31% - 40%</td>
+                                <td class="p-4 border-b text-blue-600 font-bold text-pretty">Good</td>
+                                <td class="p-4 border-b text-pretty">Strong eligibility for home and car loans.</td>
                             </tr>
                             <tr>
                                 <td class="p-4 border-b font-medium text-slate-600">41% - 50%</td>
@@ -375,164 +431,63 @@
                             <tr>
                                 <td class="p-4 border-b font-medium text-slate-600">Above 50%</td>
                                 <td class="p-4 border-b text-red-500 font-bold">High Risk</td>
-                                <td class="p-4 border-b">Likely rejection or very high interest rates.</td>
+                                <td class="p-4 border-b text-pretty">Likely rejection or very high interest rates.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
-                <h2 class="text-2xl font-bold mb-6">How to Lower Your DTI Ratio in 2026?</h2>
-                <p class="text-slate-300 text-sm mb-8 leading-relaxed">
-                    If your current ratio is above 50%, follow these 3 steps to improve your financial health:
-                </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-emerald-400 font-bold mb-2">Aggressive Debt Snowball</h4>
-                        <p class="text-xs text-slate-400 mb-3 text-pretty">Focus on paying off the loan with the highest monthly EMI first (usually personal loans). Clearing one small loan can drop your DTI by 5-10% instantly.</p>
-                        <p class="text-lg font-bold text-white">Drop EMIs Fast</p>
-                    </div>
-                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-blue-400 font-bold mb-2">Increase Nominal Income</h4>
-                        <p class="text-xs text-slate-400 mb-3 text-pretty">DTI is a ratio. If you can't lower the debt, increase the denominator. Side hustles or rental income from property are great ways to buffer your profile.</p>
-                        <p class="text-lg font-bold text-white">Income Diversification</p>
-                    </div>
-                </div>
-            </section>
-
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto" id="faqs">
-                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">DTI Frequently Asked Questions</h2>
-                <div class="space-y-4">
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Does DTI include grocery and lifestyle expenses?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            No. DTI specifically focuses on fixed debt obligations like EMIs, Rent, and minimum credit card payments. Your general living expenses (food, travel) are considered covered by the remaining income.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Why do banks use Gross Income instead of Net/Take-home?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Banks use Gross Income (pre-tax) because taxes vary by individual and investment choice. Using the gross salary provides a uniform standard for comparison across all loan applicants.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Does a zero DTI mean a perfect loan chance?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Not necessarily. While a zero DTI is great, banks also look at your "Credit History." If you have zero debt but also zero history, banks may be cautious. A DTI of 10-20% with perfect repayment history is often the "sweet spot."
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. How is rent treated in a DTI calculation?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            For standard financial health, rent is a debt obligation. However, if you are applying for a Home Loan, the bank will ignore your current rent because they assume you will move into the new house and stop paying rent.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. Does DTI affect my CIBIL score?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            DTI doesn't directly calculate into your CIBIL score, but "Credit Utilization" (which is similar) does. However, a high DTI often leads to missed payments, which will severely damage your CIBIL score.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. What is Front-end vs Back-end DTI?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Front-end DTI only looks at housing costs (EMI/Rent). Back-end DTI looks at **all** monthly debt obligations. In India, banks predominantly focus on the Back-end DTI (FOIR) for loan approvals.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Should I clear my credit card before a home loan?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes. Even if you only pay the minimum, it adds to your monthly debt obligation. Clearing the card balance lowers your DTI and can increase your home loan eligibility by lakhs.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Can joint applications help a high DTI?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Absolutely. By adding a co-applicant (spouse/parent), the bank considers the **Combined Gross Income** while dividing it by the combined debt, which often brings the overall DTI ratio into the "Healthy" range.
-                        </div>
-                    </details>
+            <section class="max-w-4xl mx-auto py-10 text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4 text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a Debt-to-Income (DTI) Ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">The Debt-to-Income (DTI) ratio is a personal finance measure that compares an individual's monthly debt payments to their monthly gross income.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a good DTI ratio for a home loan in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50">Most Indian banks prefer a DTI ratio of 40% or lower. A ratio above 50% is generally considered high risk for lenders.</div></details>
                 </div>
             </section>
 
             <!-- Related Tools -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Eligibility Tools</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <a href="/emi/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EMI Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Calculate your monthly burden.</p>
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6 uppercase tracking-wider md:text-left text-pretty">Related Financial Tools</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-pretty">
+                    <a href="/emi/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">EMI Tool</h4>
                     </a>
-                    <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Tax Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Check your take-home salary.</p>
+                    <a href="/salary-hike/" class="p-4 border border-slate-100 rounded-xl hover:border-emerald-500 hover:bg-emerald-50 transition-all group flex flex-col items-center text-pretty">
+                        <div class="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Hike Calc</h4>
                     </a>
-                    <a href="/budget-planner/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">Budget Planner</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Plan expenses using 50/30/20.</p>
+                    <a href="/net-worth/" class="p-4 border border-slate-100 rounded-xl hover:border-indigo-500 hover:bg-indigo-50 transition-all group flex flex-col items-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Net Worth</h4>
                     </a>
-                </div>
-            </section>
-
-            <!-- Popular Tools -->
-            <section class="max-w-6xl mx-auto py-8 text-center">
-                <h3 class="text-xl font-bold mb-8 text-slate-800">Popular Tools on Arthcalculator</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                    <a href="/emi/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">EMI</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    <a href="/savings-goal/" class="p-4 border border-slate-100 rounded-xl hover:border-orange-500 hover:bg-orange-50 transition-all group flex flex-col items-center text-pretty text-pretty">
+                        <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors text-pretty text-pretty">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Savings</h4>
                     </a>
-                    <a href="/sip/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">SIP</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
-                    </a>
-                    <a href="/income-tax/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">Tax</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
-                    </a>
-                    <a href="/gst/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">GST</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
-                    </a>
-                    <a href="/fd/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">FD</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
-                    </a>
-                    <a href="/retirement-withdrawal/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">GOAL</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Planner</span>
+                    <a href="/retirement/" class="p-4 border border-slate-100 rounded-xl hover:border-red-500 hover:bg-red-50 transition-all group flex flex-col items-center">
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-3 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Retire Plan</h4>
                     </a>
                 </div>
             </section>
 
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center text-pretty">
                 <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                DTI ratios are used by banks as a benchmark but do not guarantee loan approval. Final decisions depend on credit score, employer profile, and asset valuation. This tool is for educational purposes and is not financial advice.
+                DTI ratios are used by banks as a benchmark but do not guarantee loan approval. Final decisions depend on credit score, employer profile, and asset valuation. This tool is for educational purposes only.
+                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: April 11, 2026</p>
             </div>
         </div>
     </main>
@@ -655,6 +610,26 @@
         function setupSync(input, range) {
             input.addEventListener('input', () => { range.value = input.value; updateCalculations(); });
             range.addEventListener('input', () => { input.value = range.value; updateCalculations(); });
+        }
+
+        function resetCalculator() {
+            elements.incomeIn.value = 100000;
+            elements.incomeRan.value = 100000;
+            elements.debtIn.value = 30000;
+            elements.debtRan.value = 30000;
+            elements.rentIn.value = 0;
+            elements.ccIn.value = 0;
+            updateCalculations();
+        }
+
+        function applyExample() {
+            elements.incomeIn.value = 150000;
+            elements.incomeRan.value = 150000;
+            elements.debtIn.value = 45000;
+            elements.debtRan.value = 45000;
+            elements.rentIn.value = 15000;
+            elements.ccIn.value = 5000;
+            updateCalculations();
         }
 
         window.addEventListener('DOMContentLoaded', () => {
