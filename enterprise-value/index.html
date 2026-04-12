@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Value Calculator India 2026 – Intrinsic Business Value Tool</title>
-    <meta name="description" content="Use the best Enterprise Value (EV) Calculator India (2026). Calculate a company's total valuation considering Market Cap, Debt, Minority Interest, and Cash.">
-    <meta name="keywords" content="Enterprise Value Calculator India, EV Calculator, Market Cap vs Enterprise Value, Business Valuation Tool, M&A Calculator 2026, EV Formula India">
+    <title>Enterprise Value Calculator India 2026 – EV & Business Valuation Tool</title>
+    <meta name="description" content="Calculate Enterprise Value (EV) using our advanced EV Calculator India (2026). Measure total company worth including debt, cash, and equity.">
+    <meta name="keywords" content="Enterprise Value Calculator India, EV Calculator, Market Cap vs Enterprise Value, Business Valuation Tool, M&A Calculator 2026, EV Formula India, company valuation india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-12">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://arthcalculator.in/enterprise-value/">
+    <link rel="icon" href="https://arthcalculator.in/favicon.png" type="image/png">
     
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Enterprise Value Calculator India (2026) – Measure True Business Worth">
     <meta property="og:description" content="Calculate the take-over price of a company. Factor in equity value, total debt, and cash reserves with our professional EV calculator.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://arthcalculator.in/enterprise-value/">
-    <meta property="og:image" content="/favicon.ico">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+    <meta property="og:site_name" content="ArthCalculator">
     
     <!-- Schema Markup: WebPage -->
     <script type="application/ld+json">
@@ -22,43 +26,79 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Enterprise Value Calculator India (2026)",
+      "url": "https://arthcalculator.in/enterprise-value/",
       "description": "A comprehensive financial tool to calculate Enterprise Value (EV) and analyze corporate capital structure.",
       "publisher": {
         "@type": "Organization",
-        "name": "Arthcalculator"
+        "name": "ArthCalculator",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arthcalculator.in/logo.png"
+        }
       }
     }
     </script>
 
-    <!-- Schema Markup: Breadcrumb -->
+    <!-- Schema Markup: Organization -->
     <script type="application/ld+json">
     {
-     "@context": "https://schema.org",
-     "@type": "BreadcrumbList",
-     "itemListElement": [
-      {
-       "@type": "ListItem",
-       "position": 1,
-       "name": "Home",
-       "item": "https://arthcalculator.in/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 2,
-       "name": "Financial Calculators",
-       "item": "https://arthcalculator.in/calculators/"
-      },
-      {
-       "@type": "ListItem",
-       "position": 3,
-       "name": "Enterprise Value",
-       "item": "https://arthcalculator.in/enterprise-value/"
-      }
-     ]
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Arthcalculator",
+      "url": "https://arthcalculator.in/",
+      "logo": "https://arthcalculator.in/logo.png"
     }
     </script>
 
-    <!-- Schema Markup: FAQ -->
+    <!-- Schema Markup: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Enterprise Value Calculator",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      }
+    }
+    </script>
+
+    <!-- Schema Markup: HowTo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate Enterprise Value",
+      "description": "Determine the total acquisition cost of a company in four steps.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Identify Market Cap",
+          "text": "Calculate the current market value of common equity (Price x Shares Outstanding)."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Sum Total Debt",
+          "text": "Add all interest-bearing liabilities including short-term and long-term loans."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Include Preferred Items",
+          "text": "Add the value of Preferred Shares and Minority Interests."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Subtract Cash",
+          "text": "Subtract the company's liquid cash and bank balance to find the net Enterprise Value."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema Markup: FAQ (Full 8 Questions) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -69,7 +109,7 @@
           "name": "What is Enterprise Value (EV)?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Enterprise Value is a measure of a company's total value, often used as a more comprehensive alternative to equity market capitalization. It includes the market cap but also adds debt, minority interest, and preferred shares, while subtracting cash."
+            "text": "Enterprise Value is a measure of a company's total value, representing the theoretical takeover price. It includes market cap, debt, minority interest, and preferred shares minus cash."
           }
         },
         {
@@ -77,56 +117,81 @@
           "name": "Why is cash subtracted in EV?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Cash is subtracted because it reduces the effective cost of acquiring a business. If you buy a company for ₹100 Crores and it has ₹20 Crores in the bank, your net cost is only ₹80 Crores."
+            "text": "Cash is subtracted because it reduces the net cost for an acquirer. Since the buyer 'keeps' the cash inside the business, the effective price paid is lower."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Enterprise Value be lower than Market Cap?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. This occurs when a company has more cash than total debt (Net Cash positive), effectively reducing the acquisition cost below the equity value."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can EV be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if a company's cash reserves are so large that they exceed both the market cap and total debt combined."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does EV include long-term debt only?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. EV includes all interest-bearing debt, both short-term and long-term, to reflect the total capital burden of the business."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is EV used in EV/EBITDA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EBITDA is the cash flow available to both debt and equity holders. Since EV represents the total capital structure, it is the most consistent numerator for comparison."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Minority Interest in EV?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It represents the portion of subsidiaries not owned by the parent company. It is added to match the consolidated earnings reported in EBITDA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I use book value or market value for debt?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ideally, market value should be used, but since it's hard to track for private loans, book value is an acceptable and standard proxy."
           }
         }
       ]
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            -webkit-tap-highlight-color: transparent;
-            scroll-behavior: smooth;
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-        }
-        input[type="range"] {
-            accent-color: #2563eb;
-            height: 6px;
-        }
-        .table-container::-webkit-scrollbar {
-            height: 4px;
-        }
-        .table-container::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 10px;
-        }
-        .formula-box {
-            background: #f1f5f9;
-            padding: 1.5rem;
-            border-radius: 1rem;
-            font-family: 'Courier New', Courier, monospace;
-            overflow-x: auto;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .table-container::-webkit-scrollbar { height: 4px; }
+        .table-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        details summary { list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary svg { transform: rotate(180deg); }
     </style>
 </head>
 <body class="text-slate-800 antialiased min-h-screen pb-12">
     <div id="navbar"></div>
 
     <!-- Header & Breadcrumbs -->
-    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
         <div class="max-w-6xl mx-auto px-4">
             <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
                 <ol class="flex list-none p-0">
@@ -134,17 +199,20 @@
                         <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="flex items-center">
-                        <a href="/calculators" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                    <li class="flex items-center text-pretty">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
                         <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
                     </li>
-                    <li class="text-blue-600">Enterprise Value</li>
+                    <li class="text-blue-600 font-bold">Enterprise Value</li>
                 </ol>
             </nav>
 
-            <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
                 <div class="max-w-3xl">
                     <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Enterprise Value Calculator India (2026) – True Business Worth</h1>
+                    <p class="text-blue-600 font-semibold text-sm sm:text-base mt-2">
+                        Calculate the true acquisition cost of a company and analyze its total market worth beyond standard equity capitalization.
+                    </p>
                     <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
                         Determine the comprehensive value of a company. Calculate Enterprise Value (EV) by factoring in Market Cap, Total Debt, Minority Interest, and Cash reserves for high-precision valuation in 2026.
                     </p>
@@ -168,12 +236,12 @@
 
     <main class="max-w-6xl mx-auto px-4">
         <!-- Calculator Section -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
             
             <!-- Left Side: Inputs -->
             <div class="lg:col-span-5 space-y-6">
                 <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow transition-all hover:shadow-lg">
-                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-tight">
                         <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m"></path></svg>
                         Equity & Debt
                     </h2>
@@ -187,7 +255,7 @@
                     </div>
 
                     <div class="mb-8">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Total Debt (₹)</label>
                             <input type="number" id="debtInput" value="10000000" min="0" step="50000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
@@ -195,7 +263,7 @@
                     </div>
 
                     <div class="mb-8">
-                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2 text-pretty">
                             <label class="text-sm font-medium text-slate-600">Cash & Equivalents (₹)</label>
                             <input type="number" id="cashInput" value="5000000" min="0" step="50000" class="w-full sm:w-32 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
                         </div>
@@ -203,23 +271,23 @@
                     </div>
 
                     <div class="mb-6 p-4 bg-blue-50/50 rounded-xl border border-blue-100 space-y-4">
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-between items-center text-pretty">
                             <label class="text-xs font-bold text-blue-600 uppercase">Minority Interest (₹)</label>
                             <input type="number" id="minorityInput" value="0" step="10000" class="w-24 px-2 py-1 border border-blue-200 rounded text-right font-bold text-blue-700">
                         </div>
-                        <div class="flex justify-between items-center border-t border-blue-100 pt-3">
+                        <div class="flex justify-between items-center border-t border-blue-100 pt-3 text-pretty">
                             <label class="text-xs font-bold text-blue-600 uppercase">Preferred Shares (₹)</label>
                             <input type="number" id="preferredInput" value="0" step="10000" class="w-24 px-2 py-1 border border-blue-200 rounded text-right font-bold text-blue-700">
                         </div>
                     </div>
 
-                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-1">
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2 hover:-translate-y-1 text-pretty uppercase tracking-tight">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
                         Analyze Enterprise Value
                     </button>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-pretty">
                     <div class="bg-blue-600 p-5 rounded-2xl text-white shadow-lg shadow-blue-200 transition-all hover:-translate-y-1">
                         <p class="text-blue-100 text-[10px] sm:text-xs font-medium uppercase mb-1">Market Equity</p>
                         <h3 id="mcapCard" class="text-lg sm:text-xl font-bold leading-tight break-all">₹5 Cr</h3>
@@ -233,17 +301,17 @@
 
             <!-- Right Side: Results -->
             <div class="lg:col-span-7 space-y-6">
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
                     <h2 class="text-slate-800 font-bold text-lg mb-6">Valuation Summary</h2>
-                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4">
-                        <div class="w-full">
+                    <div class="flex flex-col sm:flex-row justify-between items-start mb-8 gap-4 text-pretty text-pretty">
+                        <div class="w-full text-pretty">
                             <h2 class="text-slate-400 text-xs sm:text-sm font-medium uppercase tracking-wider">Total Enterprise Value (EV)</h2>
                             <div class="mt-1">
-                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="evValue">₹5,50,00,000</span>
+                                <span class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight block break-words" id="evValue">₹5,50,0,000</span>
                             </div>
                         </div>
                         <div class="flex items-center bg-slate-50 px-4 py-2 rounded-xl border border-slate-100 whitespace-nowrap">
-                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3"></div>
+                             <div class="h-8 w-1 bg-blue-500 rounded-full mr-3 text-pretty"></div>
                              <div>
                                 <p class="text-[10px] text-slate-500 uppercase font-bold">Capital Structure</p>
                                 <p class="font-bold text-slate-800 text-sm" id="capitalStatus">Asset Rich</p>
@@ -251,36 +319,36 @@
                         </div>
                     </div>
 
-                    <div class="mb-10">
-                        <div class="flex justify-between text-[11px] mb-3">
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3 font-bold uppercase">
                             <span class="text-blue-600 font-bold uppercase text-xs">Equity Portion</span>
                             <span class="text-indigo-600 font-bold uppercase text-xs">Debt Portion</span>
                         </div>
-                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner">
+                        <div class="w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner border border-slate-100">
                             <div id="equityBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 80%"></div>
                             <div id="debtBar" class="h-full bg-indigo-400 transition-all duration-700 ease-out" style="width: 20%"></div>
                         </div>
-                        <div class="flex flex-wrap justify-between mt-4 gap-4">
-                            <div class="flex items-center">
-                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2"></div>
-                                <span class="text-[10px] sm:text-xs text-slate-500" id="equityLabel">Equity: 80%</span>
+                        <div class="flex flex-wrap justify-between mt-4 gap-4 text-pretty">
+                            <div class="flex items-center text-pretty">
+                                <div class="w-3 h-3 bg-blue-500 rounded-sm mr-2 text-pretty"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-medium" id="equityLabel">Equity: 80%</span>
                             </div>
                             <div class="flex items-center">
-                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2"></div>
-                                <span class="text-[10px] sm:text-xs text-slate-500" id="debtLabel">Debt: 20%</span>
+                                <div class="w-3 h-3 bg-indigo-400 rounded-sm mr-2 text-pretty"></div>
+                                <span class="text-[10px] sm:text-xs text-slate-500 font-medium" id="debtLabel">Debt: 20%</span>
                             </div>
                         </div>
                     </div>
 
-                    <hr class="border-slate-100 mb-6">
+                    <hr class="border-slate-100 mb-6 text-pretty">
 
                     <!-- Key Highlights Box -->
-                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8 text-pretty">
                         <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                             Enterprise Insight
                         </h4>
-                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs md:text-sm text-blue-800 font-medium text-pretty">
                             <li class="flex items-center gap-2">✅ Measures total acquisition cost</li>
                             <li class="flex items-center gap-2">📊 Better than Market Cap alone</li>
                             <li class="flex items-center gap-2">⚖️ Basis for EV/EBITDA ratios</li>
@@ -288,12 +356,12 @@
                         </ul>
                     </div>
 
-                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1">Sensitivity Analysis</h3>
-                    <p class="text-xs text-slate-500 mb-4">How the Enterprise Value changes with varying debt-to-cash scenarios.</p>
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1 text-pretty" id="benchmarks">Sensitivity Analysis</h3>
+                    <p class="text-xs text-slate-500 mb-4 text-pretty">How the Enterprise Value changes with varying debt-to-cash scenarios.</p>
                     <div id="tableSection" class="overflow-hidden">
                         <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
                             <table class="w-full text-left text-[11px] sm:text-sm">
-                                <thead class="bg-slate-50 sticky top-0 z-10">
+                                <thead class="bg-slate-50 sticky top-0 z-10 text-pretty">
                                     <tr>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b">Debt Level</th>
                                         <th class="px-3 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Net Debt (₹)</th>
@@ -307,238 +375,105 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
                     <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How is Enterprise Value Calculated?</h3>
-                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm font-bold text-pretty text-pretty">
                         EV = Market Cap + Debt + Minority Interest + Preferred Shares - Cash
                     </div>
-                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm">
-                        <p><strong>Market Cap:</strong> Market value of common equity shares.</p>
-                        <p><strong>Total Debt:</strong> All short-term and long-term interest-bearing debt.</p>
-                        <p><strong>Minority Interest:</strong> Value of subsidiaries not owned by the parent.</p>
-                        <p><strong>Cash:</strong> Liquid cash and short-term equivalents subtracted to show net cost.</p>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-xs sm:text-sm text-pretty text-pretty text-pretty">
+                        <p><strong>Market Cap:</strong> Current value of common shares. Compare this with <a href="/lumpsum/" class="underline font-bold text-blue-600">Lumpsum Investment</a> value.</p>
+                        <p><strong>Net Debt:</strong> Total Debt minus Cash. For more on cost, check the <a href="/cost-of-debt/" class="underline font-bold text-blue-600">Cost of Debt Tool</a>.</p>
+                        <p><strong>Minority Interest:</strong> Value of subsidiary stakes not owned by parent.</p>
                     </div>
 
                     <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Example Valuation Analysis</h3>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty text-pretty text-pretty text-pretty">
                         A firm has <strong>₹50 Cr Market Cap</strong>, <strong>₹10 Cr Debt</strong>, and <strong>₹5 Cr Cash</strong>:<br>
                         <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
                             <li>Equity Value: ₹50,00,00,000</li>
                             <li>Net Debt: ₹5,00,00,000 (10 Cr Debt - 5 Cr Cash)</li>
                             <li><strong>Enterprise Value: ₹55,00,00,000</strong></li>
-                            <li>This represents the total price to take over the firm completely.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="space-y-12 mb-12" id="about">
+        <div class="space-y-12 mb-12 text-pretty" id="about">
             <!-- Educational Content Section -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Mastering Enterprise Value (EV) in India (2026)</h2>
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty text-pretty">
+                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6 text-pretty">Mastering Enterprise Value (EV) in India (2026)</h2>
                 <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
                     <p>
-                        In the world of corporate finance, **Enterprise Value (EV)** is often hailed as the "takeover price" of a company. While retail investors frequently look at Market Capitalization, professional analysts and institutional investors in India use EV to understand the true cost of acquiring a business. Market Cap only tells you what the equity is worth, but when you buy a company, you also "buy" its debt and "keep" its cash.
+                        In the world of corporate finance, **Enterprise Value (EV)** is often hailed as the "takeover price" of a company. While retail investors frequently look at Market Capitalization, professional analysts use EV to understand the true cost. This is a primary input for <a href="/dcf/" class="underline font-bold text-blue-600 text-pretty">DCF Valuations</a>.
                     </p>
                     <p>
-                        The <strong>Enterprise Value Calculator</strong> provides a holistic view of a company's capital structure. In 2026, as the Indian stock market becomes more sophisticated, understanding EV is critical for calculating valuation multiples like **EV/EBITDA**, which is a superior metric compared to the standard P/E ratio for capital-intensive sectors.
+                        The <strong>Enterprise Value Calculator</strong> provides a holistic view of a company's capital structure. In 2026, understanding EV is critical for calculating valuation multiples like EV/EBITDA. To find the cost of equity for these models, use our <a href="/cost-of-equity/" class="underline font-bold text-blue-600">Cost of Equity Tool</a> or check the <a href="/wacc/" class="underline font-bold text-blue-600">WACC</a> for a weighted average.
                     </p>
-                    <h3 class="text-xl font-bold text-slate-800 mt-8">Components of Enterprise Value</h3>
+                    <h3 class="text-xl font-bold text-slate-800 mt-8 text-pretty">Components of Enterprise Value</h3>
                     <p>
-                        Our calculator uses the comprehensive formula preferred by global investment banks:
+                        Market Cap represents equity, but EV represents total capital. It includes preferred stock and minority interests while adjusting for cash reserves. Real wealth building requires understanding these structures; track your own <a href="/net-worth/" class="underline font-bold text-blue-600">Net Worth</a> to see a personal version of this structure.
                     </p>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li><strong>Market Capitalization:</strong> The most visible component. It is the total value of all outstanding equity shares at current market prices.</li>
-                        <li><strong>Total Debt:</strong> Includes both short-term loans and long-term bonds. This is added to EV because a buyer would eventually have to repay this debt.</li>
-                        <li><strong>Preferred Stock:</strong> Like debt, preferred shares have a priority claim on dividends and assets, so they are added to the acquisition cost.</li>
-                        <li><strong>Minority Interest:</strong> The portion of subsidiary companies not owned by the parent. Adding this ensures the consolidated EV reflects the total value of assets under control.</li>
-                        <li><strong>Cash and Cash Equivalents (Subtract):</strong> This reduces the acquisition price. Imagine buying a wallet for ₹100 that contains ₹20—your net cost is only ₹80.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-6">Market Cap vs. Enterprise Value</h2>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse border border-slate-100">
-                        <thead>
-                            <tr class="bg-slate-50">
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Factor</th>
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Market Capitalization</th>
-                                <th class="p-4 border-b font-bold text-slate-700 text-sm sm:text-base">Enterprise Value</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-sm">
-                            <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Focus</td>
-                                <td class="p-4 border-b">Equity Holders Only</td>
-                                <td class="p-4 border-b text-blue-600 font-bold">Total Capital Structure</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Debt Impact</td>
-                                <td class="p-4 border-b text-red-500">Ignored</td>
-                                <td class="p-4 border-b text-emerald-600">Fully Accounted</td>
-                            </tr>
-                            <tr>
-                                <td class="p-4 border-b font-medium text-slate-600">Best Use</td>
-                                <td class="p-4 border-b">Quick Size Check</td>
-                                <td class="p-4 border-b font-bold">Valuation / M&A</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <section class="bg-slate-900 p-6 sm:p-10 rounded-2xl text-white">
-                <h2 class="text-2xl font-bold mb-6">Why EV Matters for Indian Investors?</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-emerald-400 font-bold mb-2">Identifying "Cash-Rich" Firms</h4>
-                        <p class="text-xs text-slate-400 mb-3 text-pretty">Some Indian IT firms have huge cash reserves. Their EV is often much lower than their Market Cap, suggesting that an investor is getting the core business "at a discount" because of the cash cushion.</p>
-                        <p class="text-lg font-bold text-white">Focus: Safety Margin</p>
-                    </div>
-                    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
-                        <h4 class="text-blue-400 font-bold mb-2">Debt-Laden Companies</h4>
-                        <p class="text-xs text-slate-400 mb-3 text-pretty">In sectors like Infrastructure or Power, a company might have a small market cap but massive debt. Here, EV reveals the true "burden" an owner takes on, preventing the "cheap equity" trap.</p>
-                        <p class="text-lg font-bold text-white">Risk: Hidden Leverage</p>
-                    </div>
                 </div>
             </section>
 
             <!-- FAQ Section -->
-            <section class="max-w-4xl mx-auto" id="faqs">
-                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Enterprise Value Frequently Asked Questions</h2>
+            <section class="max-w-4xl mx-auto py-10 text-pretty text-pretty text-pretty" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty text-pretty">Frequently Asked Questions</h2>
                 <div class="space-y-4">
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">1. Can Enterprise Value be lower than Market Cap?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Yes. This happens when a company has more cash and cash equivalents than total debt (Net Cash positive). In such cases, the enterprise value will be lower than the market capitalization.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">2. Can EV be negative?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Technically, yes. If a company has massive amounts of cash that exceed both its market cap and total debt, EV can be negative. This usually happens in struggling companies where the market thinks the cash is going to be burned quickly.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">3. Does EV include long-term debt only?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            No. EV should include **all interest-bearing debt**, both short-term (due within 12 months) and long-term. Non-interest-bearing liabilities like accounts payable are usually excluded.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">4. Why is EV used in EV/EBITDA?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            EBITDA is the cash flow available to both debt and equity holders. Since EV represents the total capital (debt + equity), it is a mathematically consistent numerator for EBITDA.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">5. What is Minority Interest in EV?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            It represents the value of subsidiaries that the parent company does not own but consolidates in its financial statements. It is added to EV to match the consolidated earnings (EBITDA) reported by the parent.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">6. Should I use book value or market value for debt?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            In an ideal DCF or acquisition model, you should use the Market Value of Debt. However, for most calculations, the Book Value found on the balance sheet is used as a close and acceptable proxy.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">7. Does EV tell me if a stock is cheap?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            Not by itself. EV is a absolute value. You must compare it against earnings (EBITDA) or sales (EV/Sales) and benchmark it against industry peers to determine valuation attractiveness.
-                        </div>
-                    </details>
-                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white transition-all hover:shadow-md">
-                        <summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors">
-                            <span class="font-semibold text-slate-800 pr-4 text-sm sm:text-base">8. Are preferred shares debt or equity in EV?</span>
-                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </summary>
-                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
-                            They are "Hybrid." In an EV calculation, they are treated similarly to debt because they have a fixed claim that must be paid out before common equity holders.
-                        </div>
-                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">1. What is Enterprise Value (EV)?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Enterprise Value is a measure of a company's total value, often used as a more comprehensive alternative to equity market capitalization. It includes the market cap but also adds debt, minority interest, and preferred shares, while subtracting cash.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">2. Why is cash subtracted in EV?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Cash is subtracted because it reduces the effective cost of acquiring a business. If you buy a company for ₹100 Crores and it has ₹20 Crores in the bank, your net cost is only ₹80 Crores.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">3. Can Enterprise Value be lower than Market Cap?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Yes. This happens when a company has more cash and cash equivalents than total debt (Net Cash positive). In such cases, the enterprise value will be lower than the market capitalization.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">4. Can EV be negative?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">Technically, yes. If a company has massive amounts of cash that exceed both its market cap and total debt, EV can be negative. This usually happens in struggling companies where the market thinks the cash is going to be burned quickly.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">5. Does EV include long-term debt only?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty text-pretty">No. EV should include all interest-bearing debt, both short-term and long-term. Non-interest-bearing liabilities like accounts payable are usually excluded.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">6. Why is EV used in EV/EBITDA?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">EBITDA is the cash flow available to both debt and equity holders. Since EV represents the total capital (debt + equity), it is a mathematically consistent numerator for EBITDA.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">7. What is Minority Interest in EV?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">It represents the value of subsidiaries that the parent company does not own but consolidates. It is added to match the total asset value reported in EBITDA.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty shadow-sm text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer list-none hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">8. Should I use book value or market value for debt?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm border-t border-slate-50 text-pretty">In an ideal model, you should use the Market Value of Debt. However, book value is usually used as a standard and acceptable proxy in corporate finance.</div></details>
                 </div>
             </section>
 
-            <!-- Related Tools -->
-            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
-                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Valuation Tools</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <a href="/ebitda/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">EBITDA Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Measure core operating profit.</p>
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-center text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-8 uppercase tracking-wider md:text-left">Related Valuation Tools</h2>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 text-pretty text-pretty text-pretty">
+                    <a href="/dcf/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty">
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">DCF Tool</h4>
                     </a>
-                    <a href="/wacc/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">WACC</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Calculate cost of capital.</p>
+                    <a href="/wacc/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">WACC Calc</h4>
                     </a>
-                    <a href="/dcf/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group">
-                        <h4 class="font-bold text-slate-800 text-sm group-hover:text-blue-600">DCF Calculator</h4>
-                        <p class="text-[10px] text-slate-500 mt-1">Find company fair value.</p>
+                    <a href="/cost-of-equity/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty">
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight">Equity Cost</h4>
+                    </a>
+                    <a href="/cost-of-debt/" class="p-5 border border-slate-100 rounded-2xl hover:border-blue-500 hover:bg-blue-50 transition-all group flex flex-col items-center text-center text-pretty text-pretty text-pretty">
+                        <h4 class="font-bold text-slate-800 text-xs uppercase tracking-tight text-pretty">Debt Cost</h4>
                     </a>
                 </div>
             </section>
 
-            <!-- Popular Tools -->
-            <section class="max-w-6xl mx-auto py-8 text-center">
-                <h3 class="text-xl font-bold mb-8 text-slate-800">Popular Tools on Arthcalculator</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                    <a href="/emi/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">EMI</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+            <!-- Popular Tools Section -->
+            <section class="max-w-6xl mx-auto py-8 text-center text-pretty text-pretty text-pretty">
+                <h3 class="text-xl font-bold mb-8 text-slate-800 text-pretty">Popular Financial Tools</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 text-pretty text-pretty text-pretty">
+                    <a href="/cagr/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group flex flex-col items-center text-pretty text-pretty">
+                        <span class="text-blue-600 font-bold block text-xs uppercase tracking-tighter">CAGR Tool</span>
                     </a>
-                    <a href="/sip/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">SIP</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    <a href="/real-return/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group flex flex-col items-center text-pretty text-pretty">
+                        <span class="text-blue-600 font-bold block text-xs uppercase tracking-tighter">Real Return</span>
                     </a>
-                    <a href="/income-tax/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">Tax</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
+                    <a href="/net-worth/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group flex flex-col items-center text-pretty">
+                        <span class="text-blue-600 font-bold block text-xs uppercase tracking-tighter text-pretty text-pretty">Net Worth</span>
                     </a>
-                    <a href="/gst/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">GST</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
-                    </a>
-                    <a href="/fd/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">FD</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Calculator</span>
-                    </a>
-                    <a href="/retirement-withdrawal/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group">
-                        <span class="text-blue-600 font-bold block text-sm">GOAL</span>
-                        <span class="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Planner</span>
+                    <a href="/lumpsum/" class="bg-white p-4 rounded-xl border hover:shadow-lg transition-all group flex flex-col items-center text-pretty text-pretty text-pretty">
+                        <span class="text-blue-600 font-bold block text-xs uppercase tracking-tighter">Lumpsum Tool</span>
                     </a>
                 </div>
             </section>
 
-            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center">
-                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide">Disclaimer</p>
-                Enterprise Value calculations are based on accounting formulas. Actual acquisition prices can involve control premiums and strategic negotiations. This tool is for educational purposes and is not financial advice.
-                <p class="mt-4 font-semibold italic text-slate-600">Last Updated: March 2026</p>
+            <div class="p-6 bg-slate-100 border border-slate-200 rounded-2xl text-[10px] sm:text-xs text-slate-500 leading-relaxed text-center text-pretty text-pretty text-pretty">
+                <p class="font-bold text-slate-700 mb-2 uppercase tracking-wide text-pretty">Disclaimer</p>
+                Enterprise Value calculations are based on accounting formulas. Actual acquisition prices can involve control premiums and strategic negotiations. This tool is for educational purposes only and is not financial advice.
+                <p class="mt-4 font-semibold italic text-slate-600 text-pretty">Last Updated: April 12, 2026</p>
             </div>
         </div>
     </main>
@@ -603,8 +538,8 @@
             const absoluteValue = absFormatter.format(Math.abs(val));
             let indianDenom = "";
             if (withDenom) {
-                if (Math.abs(val) >= 10000000) indianDenom = ` (${(val / 10000000).toFixed(2)} Cr)`;
-                else if (Math.abs(val) >= 100000) indianDenom = ` (${(val / 100000).toFixed(2)} L)`;
+                if (Math.abs(val) >= 10000000) indianDenom = ` (${(Math.abs(val) / 10000000).toFixed(2)} Cr)`;
+                else if (Math.abs(val) >= 100000) indianDenom = ` (${(Math.abs(val) / 100000).toFixed(2)} L)`;
             }
             return (val < 0 ? "-" : "") + "₹" + absoluteValue + indianDenom;
         }
@@ -634,7 +569,8 @@
             elements.statusDisp.textContent = status;
 
             // Visualization
-            const equityWeight = ev > 0 ? (mcap / ev) * 100 : 100;
+            const totalCapital = mcap + Math.abs(netDebt) || 1;
+            const equityWeight = (mcap / totalCapital) * 100;
             const debtWeight = 100 - equityWeight;
             
             elements.equityBar.style.width = `${Math.max(0, Math.min(100, equityWeight))}%`;
@@ -650,7 +586,7 @@
             elements.table.innerHTML = '';
             // Variation factors for Debt level
             const factors = [0, 0.5, 1.0, 2.0, 5.0];
-            const currentDebt = parseFloat(elements.debtIn.value);
+            const currentDebt = parseFloat(elements.debtIn.value) || 0;
             
             factors.forEach(f => {
                 const testDebt = currentDebt * f;
