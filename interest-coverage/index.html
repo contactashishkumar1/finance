@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Coverage Ratio Calculator (2026) – EBIT vs Interest Analysis</title>
+    <meta name="description" content="Calculate Interest Coverage Ratio to assess a company's ability to pay interest expenses. Analyze EBIT vs interest obligations instantly (2026).">
+    <meta name="keywords" content="interest coverage ratio calculator, EBIT interest coverage formula, solvency ratio calculator, debt interest coverage, financial health analysis">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-25">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/interest-coverage/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Interest Coverage Ratio Calculator (2026) – EBIT vs Interest Analysis">
+    <meta property="og:description" content="Calculate Interest Coverage Ratio to assess a company's ability to pay interest expenses. Analyze EBIT vs interest obligations instantly (2026).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/interest-coverage/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Interest Coverage Ratio Calculator",
+      "description":"Advanced solvency tool to calculate the Interest Coverage Ratio (ICR) by analyzing EBIT against interest expenses.",
+      "url":"https://arthcalculator.in/interest-coverage/",
+      "publisher":{
+        "@type":"Organization",
+        "name":"ArthCalculator",
+        "url":"https://arthcalculator.in",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Interest Coverage Ratio Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Interest Coverage Ratio Calculator",
+        "item": "https://arthcalculator.in/interest-coverage/"
+      }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate Interest Coverage Ratio",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Determine EBIT",
+          "text": "Identify the company's Earnings Before Interest and Taxes (Operating Profit)."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Determine Interest Expense",
+          "text": "Identify the total interest payable on all outstanding debts."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Apply the Formula",
+          "text": "Divide EBIT by Interest Expense to calculate the ratio."
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is interest coverage ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The interest coverage ratio measures a company's ability to pay interest on its outstanding debt using its operating profit (EBIT)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good Interest Coverage Ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A ratio above 3.0 is generally considered strong, while anything below 1.0 indicates that the company is not generating enough profit to cover its interest obligations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does ICR differ from DSCR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ICR only focuses on the interest component, while DSCR (Debt Service Coverage Ratio) includes both interest and principal repayments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if the ratio is less than 1?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If ICR is less than 1, the company's operating profit is insufficient to pay its interest expenses, suggesting severe financial distress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if interest is zero?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If interest is zero, the company has no debt burden to cover. The ratio is mathematically infinite, signifying a very safe solvency position."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there industry differences for ICR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, utility and manufacturing companies often have lower ICRs due to high capital intensity, while tech firms usually maintain very high ratios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can a company improve its ICR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A company can improve its ratio by increasing revenue, cutting operating costs to boost EBIT, or paying down high-interest debt."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Interest Coverage Ratio</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Interest Coverage Ratio Calculator (2026) – EBIT vs Interest Analysis</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Assess a company's financial stability and debt burden. Use our <strong>Interest Coverage Ratio (ICR) calculator</strong> to analyze the relationship between operating profit and interest obligations in 2026.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Solvency Inputs
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600 text-pretty">EBIT (Operating Profit) (₹)</label>
+                            <input type="number" id="ebitInput" value="600000" min="0" step="10000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="ebitRange" min="0" max="10000000" step="10000" value="600000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600 text-pretty">Interest Expense (₹)</label>
+                            <input type="number" id="interestInput" value="200000" min="0" step="10000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="interestRange" min="0" max="5000000" step="10000" value="200000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div id="zeroWarning" class="hidden p-4 bg-rose-50 text-rose-600 text-xs rounded-xl border border-rose-100 font-medium">
+                        ⚠️ Please enter non-zero values for EBIT and Interest to see the analysis.
+                    </div>
+                </div>
+
+                <div class="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200 text-pretty">
+                    <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">Interest Coverage Ratio</p>
+                    <h3 id="ratioResultDisplay" class="text-3xl font-bold leading-tight">3.00 : 1</h3>
+                    <p class="text-blue-200 text-xs mt-2" id="verdictSummary">Strong ability to pay interest.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Profit vs Interest Coverage</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2 text-pretty">Profit Surplus</h4>
+                            <div class="text-3xl font-extrabold text-emerald-900" id="surplusResult">₹4,00,000</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium">Funds remaining after interest</p>
+                        </div>
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">Safety Status</h4>
+                            <div class="text-3xl font-extrabold text-blue-900" id="statusResult">Qualified</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">Debt servicing benchmark</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Operating Income (EBIT)</span>
+                            <span class="text-slate-400 font-bold uppercase">Interest Burden</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressEbit" class="h-full bg-emerald-500 transition-all duration-700 ease-out" style="width: 75%"></div>
+                            <div id="progressInterest" class="h-full bg-rose-400 transition-all duration-700 ease-out" style="width: 25%"></div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-[10px] text-slate-400 font-medium">
+                            <span class="flex items-center gap-1"><div class="w-2 h-2 bg-emerald-500 rounded-sm"></div> EBIT</span>
+                            <span class="flex items-center gap-1"><div class="w-2 h-2 bg-rose-400 rounded-sm"></div> Interest</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Strategic Solvency Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing interest payment capacity...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Metric Data Table</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Category</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-600">
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Operating Profit (EBIT)</td><td class="px-4 py-3 text-right" id="tableEbit">₹6,00,000</td></tr>
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Total Interest Expense</td><td class="px-4 py-3 text-right" id="tableInterest">₹2,00,000</td></tr>
+                                    <tr><td class="px-4 py-3 font-bold text-slate-800">Earnings Before Tax (EBT)</td><td class="px-4 py-3 text-right font-bold text-blue-600" id="tableEbt">₹4,00,000</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">ICR Formula</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        ICR = EBIT / Interest Expense
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6">
+                        <p><strong>EBIT:</strong> Earnings Before Interest and Taxes (Operating Profit).</p>
+                        <p><strong>Interest Expense:</strong> The total cost of borrowing paid during the period.</p>
+                        <p><strong>Interpretation:</strong> A ratio of 3.0 means the company earns ₹3 for every ₹1 it owes in interest.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Scenario Example</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty">
+                        A business generating <strong>₹6,00,000</strong> in EBIT with annual interest of <strong>₹2,00,000</strong>:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>ICR = 6,00,000 / 2,00,000 = <strong>3.0</strong></li>
+                            <li>Status: High safety margin to meet interest payments.</li>
+                            <li>Lenders view this as a low-risk borrower.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is the Interest Coverage Ratio (ICR)?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
+                    <p>The Interest Coverage Ratio (ICR) is a fundamental solvency metric used to determine how easily a company can pay interest on its outstanding debt. It is calculated by dividing a company's earnings before interest and taxes (EBIT) by its interest expense for a given period.</p>
+                    <p>While the <a href="/dscr/" class="text-blue-600 underline">DSCR Calculator</a> provides a broader look by including principal repayments, the ICR is a more focused test of interest burden. A high ratio indicates that the company is profitable enough to cover its interest costs multiple times over. You can further analyze your capital structure using our <a href="/debt-to-equity/" class="text-blue-600 underline">Debt to Equity Calculator</a> or evaluate liquidity with the <a href="/current-ratio/" class="text-blue-600 underline">Current Ratio Calculator</a>.</p>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Analysis Tools</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-pretty">
+                    <a href="/dscr/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">DSCR Calc</h4>
+                    </a>
+                    <a href="/debt-to-equity/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Debt to Equity</h4>
+                    </a>
+                    <a href="/current-ratio/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Current Ratio</h4>
+                    </a>
+                    <a href="/quick-ratio/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center text-pretty">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Quick Ratio</h4>
+                    </a>
+                    <a href="/financial-leverage/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Fin Leverage</h4>
+                    </a>
+                    <a href="/calculators/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">All Tools</h4>
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-slate-100 text-center text-pretty">
+                    <p class="text-sm text-slate-500">Browse all tools on our <a href="/calculators/" class="text-blue-600 font-bold hover:underline">Financial Calculators</a> page.</p>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is interest coverage ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">The interest coverage ratio is used to determine how easily a company can pay interest on its outstanding debt. It focuses on the income available relative to the interest cost.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Ideal interest coverage ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">An ideal ICR is usually 3.0 or higher. Many conservative lenders prefer to see a ratio above 4.0 to ensure a safety cushion during market downturns.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">ICR vs DSCR?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">ICR only measures the ability to pay interest, while DSCR measures the ability to pay both interest and the principal portion of a loan.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What if ICR < 1?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">If the ratio is below 1.0, the company's operating profit is not sufficient to pay its interest bills. This indicates a high risk of bankruptcy or the need to use capital reserves to pay debt.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What if interest is zero?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">If interest is zero, the ratio is infinite. This means the company has no interest-bearing debt, which is the safest financial position regarding debt coverage.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Industry differences?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Companies in stable industries like utilities can often afford lower ICRs, while cyclical companies in sectors like construction or tech need higher ICRs.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">How to improve ICR?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Companies can improve their ICR by boosting their operating profit (increasing revenue or lowering costs) or by refinancing high-interest debt into lower-interest options.</div></details>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategic Summary</h2>
+                <div class="text-sm space-y-2 opacity-95 leading-relaxed text-pretty text-pretty">
+                    <p>• Interest Coverage Ratio is a key signal of long-term solvency and financial health.</p>
+                    <p>• A ratio above 3.0 is the standard benchmark for stable, low-risk companies.</p>
+                    <p>• Always track ICR trends quarterly to spot deteriorating profitability before it impacts debt service.</p>
+                    <p>• Review your overall profile with our <a href="/calculators/" class="underline font-bold text-white">Full Calculator Hub</a> to manage business risk effectively.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/navbar.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn){
+        btn.addEventListener("click",()=>{
+            menu.classList.toggle("hidden");
+        });
+    }
+});
+
+fetch("/footer.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("footer").innerHTML=data;
+});
+</script>
+
+<script>
+    const elements = {
+        ebitInput: document.getElementById('ebitInput'),
+        ebitRange: document.getElementById('ebitRange'),
+        interestInput: document.getElementById('interestInput'),
+        interestRange: document.getElementById('interestRange'),
+        ratioResultDisplay: document.getElementById('ratioResultDisplay'),
+        surplusResult: document.getElementById('surplusResult'),
+        statusResult: document.getElementById('statusResult'),
+        progressEbit: document.getElementById('progressEbit'),
+        progressInterest: document.getElementById('progressInterest'),
+        verdictSummary: document.getElementById('verdictSummary'),
+        insightText: document.getElementById('insightText'),
+        tableEbit: document.getElementById('tableEbit'),
+        tableInterest: document.getElementById('tableInterest'),
+        tableEbt: document.getElementById('tableEbt'),
+        zeroWarning: document.getElementById('zeroWarning')
+    };
+
+    function formatINR(val) {
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculateRatio() {
+        const ebit = parseFloat(elements.ebitInput.value) || 0;
+        const interest = parseFloat(elements.interestInput.value) || 0;
+        const total = ebit + interest;
+
+        // Validation for Zero Case
+        if (ebit === 0 && interest === 0) {
+            elements.zeroWarning.classList.remove('hidden');
+            elements.ratioResultDisplay.textContent = "--";
+            elements.verdictSummary.textContent = "Awaiting input.";
+            elements.insightText.innerHTML = "Enter your operating income and interest expense to analyze coverage.";
+            
+            elements.surplusResult.textContent = formatINR(0);
+            elements.statusResult.textContent = "--";
+            elements.progressEbit.style.width = "50%";
+            elements.progressInterest.style.width = "50%";
+            return;
+        } else {
+            elements.zeroWarning.classList.add('hidden');
+        }
+
+        let ratioStr = "0.00";
+        if (interest === 0 && ebit > 0) {
+            ratioStr = "Infinity";
+        } else if (ebit === 0 && interest > 0) {
+            ratioStr = "0.00";
+        } else {
+            ratioStr = (ebit / interest).toFixed(2);
+        }
+
+        const ebt = ebit - interest;
+        const numericRatio = ratioStr === "Infinity" ? Infinity : parseFloat(ratioStr);
+
+        // Update UI
+        elements.ratioResultDisplay.textContent = ratioStr === "Infinity" ? "∞" : `${ratioStr} : 1`;
+        elements.surplusResult.textContent = ebt < 0 ? `- ${formatINR(Math.abs(ebt))}` : formatINR(ebt);
+        
+        // Table
+        elements.tableEbit.textContent = formatINR(ebit);
+        elements.tableInterest.textContent = formatINR(interest);
+        elements.tableEbt.textContent = formatINR(ebt);
+
+        // Progress Bar with safety
+        let ebitPct = 0;
+        let interestPct = 0;
+        if (total > 0) {
+            ebitPct = Math.min((ebit / total) * 100, 100);
+            interestPct = Math.min((interest / total) * 100, 100);
+        }
+        elements.progressEbit.style.width = ebitPct + "%";
+        elements.progressInterest.style.width = interestPct + "%";
+
+        // Insight Logic
+        let verdict = "";
+        let insight = "";
+        let status = "Qualified";
+
+        if (ratioStr === "Infinity" || numericRatio > 3) {
+            verdict = "Strong ability to pay interest.";
+            insight = "<strong>Strong safety margin.</strong> Your operating profit is more than triple your interest burden. This suggests very low insolvency risk.";
+            status = "Prime";
+            elements.statusResult.className = "text-3xl font-extrabold text-emerald-600";
+        } else if (numericRatio >= 1 && numericRatio <= 3) {
+            verdict = "Moderate coverage with some risk.";
+            insight = "<strong>Moderate risk.</strong> While you cover interest, your earnings are sensitive. A small drop in profit could threaten your ability to service debt.";
+            status = "Stable";
+            elements.statusResult.className = "text-3xl font-extrabold text-blue-900";
+        } else {
+            verdict = "Solvency risk detected.";
+            insight = "<strong>Unable to meet interest obligations.</strong> Your operating profit is less than your interest costs. High risk of default or bankruptcy.";
+            status = "At Risk";
+            elements.statusResult.className = "text-3xl font-extrabold text-rose-600";
+        }
+
+        elements.statusResult.textContent = status;
+        elements.verdictSummary.textContent = verdict;
+        elements.insightText.innerHTML = insight;
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculateRatio(); });
+        range.addEventListener('input', () => { input.value = range.value; calculateRatio(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.ebitInput, elements.ebitRange);
+        setupSync(elements.interestInput, elements.interestRange);
+        calculateRatio();
+    });
+</script>
+</body>
+</html>
