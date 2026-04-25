@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt to Equity Ratio Calculator (2026) – D/E Ratio Analysis</title>
+    <meta name="description" content="Calculate debt to equity ratio (D/E) to evaluate financial leverage and risk. Analyze capital structure for businesses and investments in India (2026).">
+    <meta name="keywords" content="debt to equity ratio calculator, D/E ratio formula, leverage ratio calculator, financial risk ratio india, capital structure analysis">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-25">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/debt-to-equity/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Debt to Equity Ratio Calculator (2026) – D/E Ratio Analysis">
+    <meta property="og:description" content="Calculate debt to equity ratio (D/E) to evaluate financial leverage and risk. Analyze capital structure for businesses and investments in India (2026).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/debt-to-equity/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Debt to Equity Ratio Calculator",
+      "description":"Advanced business tool to calculate the debt to equity ratio and analyze capital structure distribution.",
+      "url":"https://arthcalculator.in/debt-to-equity/",
+      "publisher":{
+        "@type":"Organization",
+        "name":"ArthCalculator",
+        "url":"https://arthcalculator.in",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Debt to Equity Ratio Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Debt to Equity Ratio Calculator",
+        "item": "https://arthcalculator.in/debt-to-equity/"
+      }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Calculate Debt to Equity Ratio",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Determine Total Debt",
+          "text": "Identify the total liabilities or borrowed funds of the company."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Identify Shareholders' Equity",
+          "text": "Calculate the total equity belonging to the shareholders (Assets minus Liabilities)."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Apply the Formula",
+          "text": "Divide Total Debt by Shareholders' Equity to get the D/E ratio."
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is debt to equity ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The debt-to-equity (D/E) ratio is a financial ratio indicating the relative proportion of shareholders' equity and debt used to finance a company's assets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good D/E ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A good D/E ratio depends on the industry, but generally, a ratio below 1.0 is considered safe, while a ratio above 2.0 may indicate high financial risk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is high D/E bad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "High D/E isn't always bad (e.g., in capital-intensive industries like utilities), but it signifies higher risk because the company has more debt obligations to fulfill."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Industry differences in D/E?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tech companies usually have very low D/E ratios, whereas manufacturing, real estate, and financial services often maintain higher debt levels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can D/E be negative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, if a company has negative shareholders' equity (liabilities exceed assets), the D/E ratio becomes negative, indicating severe financial distress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to improve D/E ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A company can improve its D/E ratio by paying down existing debt, increasing retained earnings, or issuing new equity shares."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Difference between D/E and leverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "D/E ratio is a specific type of financial leverage ratio focusing on the capital structure. Leverage is a broader term for using borrowed capital for investments."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Debt to Equity Ratio</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Debt to Equity Ratio Calculator (2026) – D/E Ratio Analysis</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Assess the financial health of any company. Use our <strong>Debt to Equity (D/E) ratio calculator</strong> to measure financial leverage, solvency risk, and the balance between borrowed funds and shareholder capital in 2026.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Capital Inputs
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Total Debt (₹)</label>
+                            <input type="number" id="debtInput" value="1000000" min="0" step="10000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="debtRange" min="0" max="10000000" step="10000" value="1000000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Shareholders’ Equity (₹)</label>
+                            <input type="number" id="equityInput" value="500000" min="-1000000" step="10000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="equityRange" min="-1000000" max="10000000" step="10000" value="500000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div id="zeroWarning" class="hidden p-4 bg-rose-50 text-rose-600 text-xs rounded-xl border border-rose-100 font-medium">
+                        ⚠️ Total capital cannot be zero. Please enter debt or equity values.
+                    </div>
+                </div>
+
+                <div class="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200 text-pretty">
+                    <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">D/E Ratio</p>
+                    <h3 id="ratioResultDisplay" class="text-3xl font-bold leading-tight">2.00</h3>
+                    <p class="text-blue-200 text-xs mt-2" id="verdictSummary">High leverage structure detected.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Risk Analysis Metrics</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">Equity %</h4>
+                            <div class="text-3xl font-extrabold text-emerald-900" id="equityPctResult">33.3%</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium">Owned capital in business</p>
+                        </div>
+                        <div class="p-5 bg-rose-50 rounded-2xl border border-rose-100">
+                            <h4 class="text-rose-700 text-xs font-bold uppercase tracking-wider mb-2">Debt %</h4>
+                            <div class="text-3xl font-extrabold text-rose-900" id="debtPctResult">66.7%</div>
+                            <p class="text-[10px] text-rose-600 mt-1 font-medium">Borrowed capital in business</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Capital Structure Bar</span>
+                            <span class="text-slate-400 font-bold uppercase">Debt vs Equity</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressDebt" class="h-full bg-rose-400 transition-all duration-700 ease-out" style="width: 66.7%"></div>
+                            <div id="progressEquity" class="h-full bg-emerald-500 transition-all duration-700 ease-out" style="width: 33.3%"></div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-[10px] text-slate-400 font-medium">
+                            <span class="flex items-center gap-1"><div class="w-2 h-2 bg-rose-400 rounded-sm"></div> Debt</span>
+                            <span class="flex items-center gap-1"><div class="w-2 h-2 bg-emerald-500 rounded-sm"></div> Equity</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Capital Structure Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed text-pretty">
+                            Analyzing financial risk profile...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Detailed Metrics</h3>
+                    <div class="overflow-hidden text-pretty">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Category</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-600">
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Total Debt</td><td class="px-4 py-3 text-right" id="tableDebt">₹10,00,000</td></tr>
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Shareholders' Equity</td><td class="px-4 py-3 text-right" id="tableEquity">₹5,00,000</td></tr>
+                                    <tr><td class="px-4 py-3 font-bold text-slate-800">Total Capital Employed</td><td class="px-4 py-3 text-right font-bold text-blue-600" id="tableCapital">₹15,00,000</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">D/E Ratio Formula</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        D/E Ratio = Total Debt / Total Shareholders' Equity
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6">
+                        <p><strong>Total Debt:</strong> Includes all short-term and long-term interest-bearing liabilities.</p>
+                        <p><strong>Shareholders' Equity:</strong> The amount of capital generated by shareholders or retained earnings.</p>
+                        <p><strong>Significance:</strong> A lower ratio means the company is more "equity-funded" and generally safer.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Scenario Example</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty">
+                        A business with <strong>₹10,00,000</strong> in debt and <strong>₹5,00,000</strong> in equity:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>D/E Ratio = 10,00,000 / 5,00,000 = <strong>2.0</strong></li>
+                            <li>The company has ₹2 of debt for every ₹1 of equity.</li>
+                            <li>This indicates a highly leveraged capital structure.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is the Debt to Equity (D/E) Ratio?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>The Debt to Equity (D/E) ratio is a key leverage metric used in fundamental analysis to evaluate a company's financial leverage and risk. It compares a company's total liabilities to its shareholders' equity, reflecting the extent to which its operations are funded by lenders versus owners.</p>
+                    <p>Understanding this ratio is crucial for investors and business owners alike. A company with a high D/E ratio may struggle during economic downturns due to fixed interest obligations. Conversely, a very low ratio might suggest the company is not utilizing debt to grow efficiently. You can analyze the sensitivity of earnings to this debt using our <a href="/financial-leverage/" class="text-blue-600 underline">Financial Leverage Calculator</a> or see operational risk with the <a href="/operating-leverage/" class="text-blue-600 underline">Operating Leverage Calculator</a>.</p>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Personal Finance Tools</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-pretty text-pretty text-pretty">
+                    <a href="/financial-leverage/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Financial Leverage</h4>
+                    </a>
+                    <a href="/operating-leverage/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Operating Leverage</h4>
+                    </a>
+                    <a href="/contribution-margin/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Contribution Margin</h4>
+                    </a>
+                    <a href="/profit/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Profit Calc</h4>
+                    </a>
+                    <a href="/net-worth/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Net Worth</h4>
+                    </a>
+                    <a href="/calculators/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">All Tools</h4>
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-slate-100 text-center text-pretty">
+                    <p class="text-sm text-slate-500">Browse all tools on our <a href="/calculators/" class="text-blue-600 font-bold hover:underline">Financial Calculators</a> page.</p>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">What is debt to equity ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">It is a solvency ratio that compares a company’s total liabilities to its shareholders’ equity. It measures how much debt a company is using to finance its assets relative to the value of shareholders' equity.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">What is a good D/E ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Ideally, a ratio of 1.0 or lower is considered safe for most companies. However, capital-intensive industries like manufacturing or utilities often have higher ratios (up to 2.0 or more) which may be acceptable for them.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is high D/E bad?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">A high D/E indicates that a company has been aggressive in financing its growth with debt. This can lead to volatile earnings and increased bankruptcy risk if cash flows aren't stable enough to cover interest payments.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Industry differences in D/E?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes, banking and financial services have high D/E ratios because they use debt (deposits) as their core business material. Tech companies often have almost zero debt and low D/E ratios.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Can D/E be negative?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes, if the company’s shareholders' equity is negative (total liabilities exceed total assets). This usually indicates that a company is technically insolvent.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How to improve D/E ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Companies can improve their D/E ratio by repaying existing debt, increasing profits to boost retained earnings, or raising fresh capital by issuing new shares.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Difference between D/E and leverage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Debt to Equity is a specific leverage ratio. Leverage is the general concept of using borrowed funds to increase potential returns. D/E is one way to measure that concept.</div></details>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategic Summary</h2>
+                <div class="text-sm space-y-2 opacity-95 leading-relaxed text-pretty text-pretty">
+                    <p>• D/E Ratio is a standard measure of corporate solvency and financial risk.</p>
+                    <p>• Lower ratios (< 0.5) indicate a conservative and stable capital structure.</p>
+                    <p>• Higher ratios (> 1.5) suggest aggressive growth or high risk of insolvency.</p>
+                    <p>• Always compare ratios across companies within the same industry for meaningful conclusions.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/navbar.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn){
+        btn.addEventListener("click",()=>{
+            menu.classList.toggle("hidden");
+        });
+    }
+});
+
+fetch("/footer.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("footer").innerHTML=data;
+});
+</script>
+
+<script>
+    const elements = {
+        debtInput: document.getElementById('debtInput'),
+        debtRange: document.getElementById('debtRange'),
+        equityInput: document.getElementById('equityInput'),
+        equityRange: document.getElementById('equityRange'),
+        ratioResultDisplay: document.getElementById('ratioResultDisplay'),
+        equityPctResult: document.getElementById('equityPctResult'),
+        debtPctResult: document.getElementById('debtPctResult'),
+        progressDebt: document.getElementById('progressDebt'),
+        progressEquity: document.getElementById('progressEquity'),
+        verdictSummary: document.getElementById('verdictSummary'),
+        insightText: document.getElementById('insightText'),
+        tableDebt: document.getElementById('tableDebt'),
+        tableEquity: document.getElementById('tableEquity'),
+        tableCapital: document.getElementById('tableCapital'),
+        zeroWarning: document.getElementById('zeroWarning')
+    };
+
+    function formatINR(val) {
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculateRatio() {
+        const debt = parseFloat(elements.debtInput.value) || 0;
+        const equity = parseFloat(elements.equityInput.value) || 0;
+        const totalCapital = debt + equity;
+
+        let verdict = "";
+        let insight = "";
+
+        // Handle Negative Equity Fix
+        if (equity < 0) {
+            elements.verdictSummary.textContent = "Negative equity (high risk)";
+            elements.insightText.innerHTML = "<strong>Severe financial distress.</strong> Negative equity means liabilities exceed assets. This is a critical risk situation.";
+            
+            elements.ratioResultDisplay.textContent = (debt / equity).toFixed(2);
+            elements.debtPctResult.textContent = "100%+";
+            elements.equityPctResult.textContent = "Negative";
+            elements.progressDebt.style.width = "100%";
+            elements.progressEquity.style.width = "0%";
+            
+            elements.tableDebt.textContent = formatINR(debt);
+            elements.tableEquity.textContent = `- ${formatINR(Math.abs(equity))}`;
+            elements.tableCapital.textContent = formatINR(totalCapital);
+            return;
+        }
+
+        let deRatio = 0;
+        if (equity === 0 && debt > 0) {
+            deRatio = "Infinity";
+        } else if (equity === 0 && debt === 0) {
+            deRatio = "0.00";
+        } else {
+            deRatio = (debt / equity).toFixed(2);
+        }
+
+        // Logic for Percentages
+        let debtPct = 0;
+        let equityPct = 0;
+        if (totalCapital > 0) {
+            debtPct = (debt / totalCapital) * 100;
+            equityPct = (equity / totalCapital) * 100;
+            elements.zeroWarning.classList.add('hidden');
+        } else {
+            elements.zeroWarning.classList.remove('hidden');
+        }
+
+        // Update UI
+        elements.ratioResultDisplay.textContent = deRatio;
+        elements.debtPctResult.textContent = debtPct.toFixed(1) + "%";
+        elements.equityPctResult.textContent = equityPct.toFixed(1) + "%";
+
+        // Visual Bars with overflow risk fix
+        const safeDebtPct = Math.min(debtPct, 100);
+        const safeEquityPct = Math.min(equityPct, 100);
+        elements.progressDebt.style.width = safeDebtPct + "%";
+        elements.progressEquity.style.width = safeEquityPct + "%";
+
+        // Table
+        elements.tableDebt.textContent = formatINR(debt);
+        elements.tableEquity.textContent = formatINR(equity);
+        elements.tableCapital.textContent = formatINR(totalCapital);
+
+        // Insight Logic
+        const numericDE = parseFloat(deRatio);
+
+        if (totalCapital === 0) {
+            verdict = "No capital data.";
+            insight = "Please enter debt and equity values to see the analysis.";
+        } else if (deRatio === "Infinity" || numericDE > 1.5) {
+            verdict = "High financial risk.";
+            insight = "<strong>High leverage.</strong> Your capital structure is dominated by debt. This increases financial risk and interest burden, but can magnify returns if assets perform well.";
+        } else if (numericDE >= 0.5 && numericDE <= 1.5) {
+            verdict = "Balanced capital structure.";
+            insight = "<strong>Moderate leverage.</strong> Your company maintains a healthy balance between borrowed funds and own capital. This is generally preferred by lenders and investors.";
+        } else {
+            verdict = "Conservative structure.";
+            insight = "<strong>Low leverage.</strong> Your business has a strong equity base. While this is very safe, you might be missing out on growth opportunities that modest debt could provide.";
+        }
+
+        elements.verdictSummary.textContent = verdict;
+        elements.insightText.innerHTML = insight;
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculateRatio(); });
+        range.addEventListener('input', () => { input.value = range.value; calculateRatio(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.debtInput, elements.debtRange);
+        setupSync(elements.equityInput, elements.equityRange);
+        calculateRatio();
+    });
+</script>
+</body>
+</html>
