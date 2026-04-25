@@ -618,7 +618,7 @@ fetch("/footer.html")
         elements.netLabel.textContent = `Take Home: ${formatINR(monthlyNet)}`;
         elements.deductionLabel.textContent = `Ded: ${formatINR(totalDeductionsAnnual / 12)}`;
 
-        const netRatio = (annualNet / ctc) * 100;
+        const netRatio = Math.max(0, Math.min(100, (annualNet / ctc) * 100));
         const dedRatio = 100 - netRatio;
         elements.netBar.style.width = `${netRatio}%`;
         elements.deductionBar.style.width = `${dedRatio}%`;
