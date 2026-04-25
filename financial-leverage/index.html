@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Leverage Calculator (2026) – Degree of Financial Leverage (DFL)</title>
+    <meta name="description" content="Calculate degree of financial leverage (DFL) to measure how debt impacts your earnings per share (EPS). Analyze financial risk and capital structure.">
+    <meta name="keywords" content="financial leverage calculator, DFL formula, degree of financial leverage, leverage ratio calculator, EPS sensitivity">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-25">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/financial-leverage/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Financial Leverage Calculator (2026) – Degree of Financial Leverage (DFL)">
+    <meta property="og:description" content="Calculate degree of financial leverage (DFL) to measure how debt impacts your earnings per share (EPS). Analyze financial risk and capital structure.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/financial-leverage/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Financial Leverage Calculator",
+      "description":"Calculate how debt impacts Earnings Per Share using the Degree of Financial Leverage (DFL).",
+      "url":"https://arthcalculator.in/financial-leverage/",
+      "publisher":{
+        "@type":"Organization",
+        "name":"ArthCalculator",
+        "url":"https://arthcalculator.in",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Financial Leverage Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Financial Leverage Calculator",
+        "item": "https://arthcalculator.in/financial-leverage/"
+      }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is financial leverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Financial leverage is the use of borrowed funds (debt) to purchase assets with the expectation that the income or capital gain from the new asset will exceed the cost of borrowing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is DFL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DFL stands for Degree of Financial Leverage. it is a ratio that measures the sensitivity of a company's Earnings Per Share (EPS) to fluctuations in its operating income (EBIT)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Difference between operating vs financial leverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Operating leverage relates to fixed costs in production, whereas financial leverage relates to fixed interest costs in the capital structure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the risk of high financial leverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "High financial leverage increases the risk of insolvency if the company cannot generate enough EBIT to cover its fixed interest obligations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does leverage impact EPS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Financial leverage amplifies changes in EPS. When EBIT rises, EPS rises faster; however, when EBIT falls, EPS declines more sharply."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is debt good or bad for a company?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Debt is a double-edged sword. It can magnify returns for shareholders during profitable periods but can lead to financial distress during downturns."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an optimal leverage level?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An optimal level balances the tax benefits of debt with the costs of potential financial distress, differing significantly across industries."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Financial Leverage Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Financial Leverage Calculator (2026) – Degree of Financial Leverage (DFL)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Analyze how debt impacts your company's profitability. Use our <strong>Degree of Financial Leverage (DFL) calculator</strong> to measure EPS sensitivity to changes in operating profit and assess financial risk.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-leverage" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Financial Parameters
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">EBIT (Operating Profit ₹)</label>
+                            <input type="number" id="ebitInput" value="500000" min="0" step="10000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="ebitRange" min="0" max="10000000" step="10000" value="500000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Interest Expense (₹)</label>
+                            <input type="number" id="interestInput" value="100000" min="0" step="5000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="interestRange" min="0" max="5000000" step="5000" value="100000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase mb-2 block">Tax Rate (%)</label>
+                            <input type="number" id="taxInput" value="25" min="0" max="100" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase mb-2 block text-pretty">Number of Shares</label>
+                            <input type="number" id="sharesInput" value="10000" min="0" step="100" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div id="riskNotice" class="hidden p-4 bg-rose-50 text-rose-600 text-xs rounded-xl border border-rose-100 font-medium">
+                        ⚠️ Warning: High financial risk. Operating profit (EBIT) is insufficient or barely covering interest obligations.
+                    </div>
+                </div>
+
+                <div class="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200 text-pretty">
+                    <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">Degree of Financial Leverage (DFL)</p>
+                    <h3 id="dflResultDisplay" class="text-3xl font-bold leading-tight">1.25</h3>
+                    <p class="text-blue-200 text-xs mt-2" id="summaryNotice">Your earnings sensitivity multiplier.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Financial Impact Analysis</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty text-pretty">
+                        <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">Net Income</h4>
+                            <div class="text-2xl font-extrabold text-emerald-900" id="netIncomeDisplay">₹3,00,000</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium">Total profit for shareholders</p>
+                        </div>
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">Earnings Per Share (EPS)</h4>
+                            <div class="text-2xl font-extrabold text-blue-900" id="epsDisplay">₹30.00</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">Profit allocated to each share</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Financial Sensitivity</span>
+                            <span class="text-slate-400 font-bold uppercase">Risk Level</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressRisk" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 25%"></div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-[10px] text-slate-400 font-medium">
+                            <span>Stable (DFL < 1.5)</span>
+                            <span>Highly Leveraged (DFL > 3.0)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Strategic Leverage Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed text-pretty">
+                            Analyzing your capital structure trajectory...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Detailed Financial Metrics</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Category</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-600">
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Operating Profit (EBIT)</td><td class="px-4 py-3 text-right" id="tableEbit">₹5,00,000</td></tr>
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Interest Payment</td><td class="px-4 py-3 text-right" id="tableInterest">₹1,00,000</td></tr>
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3 font-bold text-slate-800">Earnings Before Tax (EBT)</td><td class="px-4 py-3 text-right font-bold text-blue-600" id="tableEbt">₹4,00,000</td></tr>
+                                    <tr><td class="px-4 py-3 font-bold text-slate-800 text-pretty">Earnings Per Share (EPS)</td><td class="px-4 py-3 text-right font-bold text-emerald-600" id="tableEps">₹30.00</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">DFL Formula</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        DFL = EBIT / (EBIT - Interest)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6">
+                        <p><strong>EBIT:</strong> Earnings Before Interest and Taxes.</p>
+                        <p><strong>EBT:</strong> Earnings Before Tax (EBIT - Interest).</p>
+                        <p><strong>EPS:</strong> Earnings Per Share (Net Income / Total Shares).</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Scenario Example</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty">
+                        For a company with <strong>₹2,00,000</strong> EBIT and <strong>₹50,000</strong> Interest:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>EBT: 2,00,000 - 50,000 = <strong>₹1,50,000</strong></li>
+                            <li>DFL: 2,00,000 / 1,50,000 = <strong>1.33</strong></li>
+                            <li>A 10% increase in EBIT would lead to a 13.3% increase in EPS.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about-leverage">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Financial Leverage?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Financial leverage refers to the use of debt to finance the acquisition of assets, with the goal of increasing the potential return on equity. When a business uses debt, it incurs a fixed interest expense. The degree to which this fixed expense exists determines the degree of financial leverage (DFL).</p>
+                    <p>Unlike <strong>Operating Leverage</strong>, which is tied to the production process and fixed operational costs, financial leverage is tied to the capital structure. High financial leverage means a company has a significant amount of debt. While this can supercharge returns for shareholders in good times, it increases the risk of bankruptcy if the company cannot cover its interest payments. You can analyze your operational sensitivity with our <a href="/operating-leverage/" class="text-blue-600 underline">Operating Leverage Calculator</a> or evaluate product profitability with the <a href="/contribution-margin/" class="text-blue-600 underline">Contribution Margin Calculator</a>.</p>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Financial Tools</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-pretty">
+                    <a href="/operating-leverage/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Operating Leverage</h4>
+                    </a>
+                    <a href="/contribution-margin/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Contribution Margin</h4>
+                    </a>
+                    <a href="/break-even-calculator/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Break-Even</h4>
+                    </a>
+                    <a href="/profit-margin/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Profit Margin</h4>
+                    </a>
+                    <a href="/net-worth/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Net Worth</h4>
+                    </a>
+                    <a href="/calculators/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center text-pretty">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">All Tools</h4>
+                    </a>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is financial leverage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Financial leverage is the use of debt (borrowed capital) to increase the potential return on investment for equity holders.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is DFL?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The Degree of Financial Leverage (DFL) is a financial ratio that measures how much a company's earnings per share (EPS) changes in response to its operating profit (EBIT).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Difference between operating vs financial leverage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Operating leverage arises from fixed operating costs, while financial leverage arises from fixed interest costs related to debt financing.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the risk of high leverage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">High leverage creates financial risk. If a company's EBIT drops below its interest obligations, it may face bankruptcy or severe financial distress.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How does leverage impact EPS?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Leverage acts as a multiplier. For every 1% change in EBIT, the EPS will change by the DFL factor.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Is debt good or bad for a company?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Debt can be good as it provides tax shields and allows for expansion without diluting equity, but too much debt leads to unmanageable risk.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty text-pretty">What is an optimal leverage level?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">An optimal level is one that minimizes the weighted average cost of capital (WACC) while keeping financial risk at an acceptable level.</div></details>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategic Summary</h2>
+                <div class="text-sm space-y-2 opacity-95 leading-relaxed text-pretty">
+                    <p>• DFL identifies how much your earnings per share are vulnerable to changes in operating income.</p>
+                    <p>• High interest payments relative to EBIT result in a high DFL, magnifying financial volatility.</p>
+                    <p>• Businesses in stable industries can often handle higher financial leverage than those in cyclical sectors.</p>
+                    <p>• Use DFL alongside <a href="/income-tax/" class="underline font-bold">Income Tax</a> planning to optimize the total net profit available for shareholders.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/navbar.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn){
+        btn.addEventListener("click",()=>{
+            menu.classList.toggle("hidden");
+        });
+    }
+});
+
+fetch("/footer.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("footer").innerHTML=data;
+});
+</script>
+
+<script>
+    const elements = {
+        ebitInput: document.getElementById('ebitInput'),
+        ebitRange: document.getElementById('ebitRange'),
+        interestInput: document.getElementById('interestInput'),
+        interestRange: document.getElementById('interestRange'),
+        taxInput: document.getElementById('taxInput'),
+        sharesInput: document.getElementById('sharesInput'),
+        dflResultDisplay: document.getElementById('dflResultDisplay'),
+        netIncomeDisplay: document.getElementById('netIncomeDisplay'),
+        epsDisplay: document.getElementById('epsDisplay'),
+        summaryNotice: document.getElementById('summaryNotice'),
+        progressRisk: document.getElementById('progressRisk'),
+        insightText: document.getElementById('insightText'),
+        riskNotice: document.getElementById('riskNotice'),
+        tableEbit: document.getElementById('tableEbit'),
+        tableInterest: document.getElementById('tableInterest'),
+        tableEbt: document.getElementById('tableEbt'),
+        tableEps: document.getElementById('tableEps')
+    };
+
+    function formatINR(val) {
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculateLeverage() {
+        const ebit = parseFloat(elements.ebitInput.value) || 0;
+        const interest = parseFloat(elements.interestInput.value) || 0;
+        const taxRate = (parseFloat(elements.taxInput.value) || 0) / 100;
+        const shares = parseFloat(elements.sharesInput.value) || 0;
+
+        const ebt = ebit - interest;
+        const netIncome = ebt > 0 ? ebt * (1 - taxRate) : ebt;
+        const eps = shares > 0 ? netIncome / shares : 0;
+        
+        let dfl = 0;
+        if (ebt === 0) {
+            dfl = "Infinity";
+        } else {
+            dfl = (ebit / ebt).toFixed(2);
+        }
+
+        // Warning Logic
+        if (ebit <= interest) {
+            elements.riskNotice.classList.remove('hidden');
+        } else {
+            elements.riskNotice.classList.add('hidden');
+        }
+
+        // UI Display Updates
+        elements.dflResultDisplay.textContent = dfl;
+        elements.netIncomeDisplay.textContent = netIncome < 0 ? `- ${formatINR(Math.abs(netIncome))}` : formatINR(netIncome);
+        elements.epsDisplay.textContent = eps < 0 ? `- ₹${Math.abs(eps).toFixed(2)}` : `₹${eps.toFixed(2)}`;
+
+        elements.tableEbit.textContent = ebit < 0 ? `- ${formatINR(Math.abs(ebit))}` : formatINR(ebit);
+        elements.tableInterest.textContent = formatINR(interest);
+        elements.tableEbt.textContent = ebt < 0 ? `- ${formatINR(Math.abs(ebt))}` : formatINR(ebt);
+        elements.tableEps.textContent = eps < 0 ? `- ₹${Math.abs(eps).toFixed(2)}` : `₹${eps.toFixed(2)}`;
+
+        // Progress Bar Calculation
+        let riskPct = 0;
+        const numericDfl = parseFloat(dfl);
+
+        if (dfl === "Infinity") {
+            riskPct = 100;
+        } else {
+            const absDfl = Math.abs(numericDfl);
+            // Range 1.0 (Low) to 5.0 (Extreme)
+            riskPct = Math.min(100, Math.max(10, ((absDfl - 1) / 4) * 100));
+        }
+        elements.progressRisk.style.width = riskPct + "%";
+        
+        // Color coding
+        if (dfl === "Infinity" || numericDfl > 3 || numericDfl < 0) {
+            elements.progressRisk.className = "h-full bg-rose-500 transition-all duration-700 ease-out";
+        } else if (numericDfl < 1.5) {
+            elements.progressRisk.className = "h-full bg-emerald-500 transition-all duration-700 ease-out";
+        } else {
+            elements.progressRisk.className = "h-full bg-blue-500 transition-all duration-700 ease-out";
+        }
+
+        // Insight Logic
+        let insight = "";
+
+        if (ebit < 0) {
+            insight = `Operating profit is negative. You are losing money even before paying interest. High risk of insolvency.`;
+            elements.summaryNotice.textContent = "Net operating loss.";
+        } else if (ebt < 0) {
+            insight = `Earnings do not cover interest payments. For every share, you are incurring a loss of <strong>₹${Math.abs(eps).toFixed(2)}</strong>.`;
+            elements.summaryNotice.textContent = "Interest coverage failure.";
+        } else if (dfl === "Infinity" || numericDfl > 4) {
+            insight = `<strong>Extreme financial leverage.</strong> Your earnings are dangerously sensitive to EBIT changes. A slight drop in EBIT could wipe out shareholder value.`;
+            elements.summaryNotice.textContent = "Critical financial risk.";
+        } else if (numericDfl >= 2) {
+            insight = `<strong>High financial leverage.</strong> Debt is significantly amplifying your earnings volatility. A 10% change in EBIT will result in a ${ (numericDfl * 10).toFixed(0) }% change in EPS.`;
+            elements.summaryNotice.textContent = "Aggressive capital structure.";
+        } else {
+            insight = `<strong>Healthy financial leverage.</strong> Your capital structure is stable. Interest costs are well-covered, leaving plenty of profit for shareholders.`;
+            elements.summaryNotice.textContent = "Stable capital structure.";
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculateLeverage(); });
+        range.addEventListener('input', () => { input.value = range.value; calculateLeverage(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.ebitInput, elements.ebitRange);
+        setupSync(elements.interestInput, elements.interestRange);
+        
+        [elements.taxInput, elements.sharesInput].forEach(el => {
+            el.addEventListener('input', calculateLeverage);
+        });
+
+        calculateLeverage();
+    });
+</script>
+</body>
+</html>
