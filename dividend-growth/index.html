@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividend Growth Calculator (2026) – Estimate Future Dividend Income</title>
+    <meta name="description" content="Calculate how your dividend income can grow over time with reinvestment and growth rates. Plan passive income in India (2026).">
+    <meta name="keywords" content="dividend growth calculator india, dividend reinvestment calculator, passive income calculator india, dividend income calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-25">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/dividend-growth/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Dividend Growth Calculator (2026) – Estimate Future Dividend Income">
+    <meta property="og:description" content="Calculate how your dividend income can grow over time with reinvestment and growth rates. Plan passive income in India (2026).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/dividend-growth/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Dividend Growth Calculator",
+      "description":"Calculate future dividend income and portfolio growth with reinvestment and dividend growth rates.",
+      "url":"https://arthcalculator.in/dividend-growth/",
+      "publisher":{
+        "@type":"Organization",
+        "name":"ArthCalculator",
+        "url":"https://arthcalculator.in",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Dividend Growth Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Financial Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Dividend Growth Calculator",
+        "item": "https://arthcalculator.in/dividend-growth/"
+      }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is dividend yield?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dividend yield is a financial ratio that shows how much a company pays out in dividends each year relative to its stock price, expressed as a percentage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does dividend growth work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dividend growth refers to the annual percentage increase in the dividend payout per share. It rewards long-term shareholders by increasing their passive income regardless of stock price movements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is reinvestment important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, reinvesting dividends allows you to buy more shares, which in turn generate more dividends, creating a compounding effect that significantly accelerates wealth creation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is DRIP?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DRIP stands for Dividend Reinvestment Plan. It is a strategy where cash dividends are automatically used to purchase additional shares of the underlying company."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Best dividend strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A common strategy is focusing on 'Dividend Aristocrats' or 'Dividend Kings'—companies with a long track record of consistently increasing their dividend payouts year after year."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can dividends replace salary?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, with a sufficiently large portfolio and a disciplined reinvestment strategy over 15-20 years, dividend income can cover your annual living expenses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are dividends taxable in India?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In India, dividends are taxable in the hands of the investors at their applicable income tax slab rates. TDS is also deducted at 10% if dividends exceed ₹5,000 in a financial year."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Dividend Growth Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Dividend Growth Calculator (2026) – Estimate Future Passive Income</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Plan your path to financial freedom with dividend investing. Use our <strong>dividend growth calculator</strong> to see how reinvesting payouts and annual growth rates compound your wealth over time in India.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-dividend" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Portfolio Setup
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Initial Investment (₹)</label>
+                            <input type="number" id="investmentInput" value="500000" min="0" step="5000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="investmentRange" min="0" max="5000000" step="10000" value="500000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase mb-2 block">Dividend Yield (%)</label>
+                            <input type="number" id="yieldInput" value="4" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase mb-2 block">Annual Growth Rate (%)</label>
+                            <input type="number" id="growthInput" value="8" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Period (Years)</label>
+                            <div class="relative w-full sm:w-28">
+                                <input type="number" id="yearsInput" value="10" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                                <span class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none">Yr</span>
+                            </div>
+                        </div>
+                        <input type="range" id="yearsRange" min="1" max="40" step="1" value="10" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="text-xs font-medium text-slate-500 uppercase mb-3 block">Reinvest Dividends?</label>
+                        <div class="flex gap-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="reinvest" value="yes" checked class="w-4 h-4 text-blue-600 border-slate-300 focus:ring-blue-500">
+                                <span class="ml-2 text-sm text-slate-700">Yes (DRIP)</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input type="radio" name="reinvest" value="no" class="w-4 h-4 text-blue-600 border-slate-300 focus:ring-blue-500">
+                                <span class="ml-2 text-sm text-slate-700">No (Cash Out)</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Estimate Growth
+                    </button>
+                </div>
+
+                <div class="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200 text-pretty">
+                    <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">Total Dividends Earned</p>
+                    <h3 id="totalDividendsDisplay" class="text-3xl font-bold leading-tight">₹0</h3>
+                    <p class="text-blue-200 text-xs mt-2" id="summaryNotice">Compound your passive income trajectory...</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Future Portfolio Value</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">Final Portfolio Value</h4>
+                            <div class="text-2xl font-extrabold text-emerald-900" id="finalValueDisplay">₹0</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium">Total value including reinvestments</p>
+                        </div>
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">Annual Dividend (Yr End)</h4>
+                            <div class="text-2xl font-extrabold text-blue-900" id="lastYearIncomeDisplay">₹0</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">Projected annual payout in last year</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Original Principal</span>
+                            <span class="text-emerald-600 font-bold uppercase">Dividend Growth</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressPrincipal" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                            <div id="progressGrowth" class="h-full bg-emerald-400 transition-all duration-700 ease-out" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Compounding Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed text-pretty">
+                            Analyzing your dividend yield trajectory...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Detailed Year-by-Year Growth</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl max-h-[400px]">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Year</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Annual Dividend</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Portfolio Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Dividend Growth Formula</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Div(n) = Div(n-1) × (1 + Dividend Growth Rate)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6">
+                        <p><strong>Year 1 Dividend:</strong> Principal × Initial Yield.</p>
+                        <p><strong>Reinvestment:</strong> Increases the Principal for the following year's calculation.</p>
+                        <p><strong>Total Dividends:</strong> Cumulative sum of all annual payouts received.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Scenario Example (₹5L Investment)</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty">
+                        For a <strong>₹5,00,000</strong> investment with a 4% yield and 8% dividend growth:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Year 1 Payout: <strong>₹20,000</strong></li>
+                            <li>Year 10 Payout (with reinvestment): <strong>~₹59,000</strong></li>
+                            <li>Effective Yield on Cost: <strong>~11.8%</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about-dividend">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Dividend Growth Investing?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Dividend growth investing is a long-term strategy focused on purchasing shares of companies that not only pay regular dividends but also increase their dividend payouts over time. This approach prioritizes <strong>growing passive income</strong> over pure capital appreciation, although high-quality dividend growers often see their stock prices rise as well.</p>
+                    <p>In the Indian market, companies like TCS, Infosys, and HDFC Bank have historical track records of dividend payouts. By using a "DRIP" (Dividend Reinvestment Plan) strategy, investors can accelerate their compounding. You can also evaluate regular wealth building with our <a href="/sip/" class="text-blue-600 underline">SIP Calculator</a> or calculate the impact of a one-time investment with the <a href="/lumpsum/" class="text-blue-600 underline">Lumpsum Calculator</a>.</p>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Investment Tools</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 text-pretty">
+                    <a href="/sip/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">SIP Calc</h4>
+                    </a>
+                    <a href="/lumpsum/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Lumpsum</h4>
+                    </a>
+                    <a href="/net-worth/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Net Worth</h4>
+                    </a>
+                    <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Income Tax</h4>
+                    </a>
+                    <a href="/inflation/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Inflation</h4>
+                    </a>
+                    <a href="/calculators/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">All Tools</h4>
+                    </a>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is dividend yield?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It's the ratio of a company's annual dividend compared to its share price. A ₹10 dividend on a ₹100 stock is a 10% yield.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How does dividend growth work?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Companies that increase their earnings often raise their dividend payouts. For example, if a dividend grows 10% annually, your income doubles every ~7 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is reinvestment important?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Reinvesting allows you to buy more shares without adding new capital, which creates a 'snowball effect' on your total income.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is DRIP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">DRIP stands for Dividend Reinvestment Plan. It automates the process of buying additional shares with the cash dividends you receive.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Best dividend strategy?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Focus on companies with strong free cash flow and a payout ratio below 60% to ensure the dividend is sustainable and can grow.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Can dividends replace salary?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Yes, but it requires a high savings rate and long-term consistency. At a 4% yield, you'd need 25x your annual expenses in your portfolio.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Are dividends taxable in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Yes, they are added to your total income and taxed according to your slab. Keep this in mind when calculating "Net" passive income.</div></details>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategic Summary</h2>
+                <div class="text-sm space-y-2 opacity-95 leading-relaxed text-pretty">
+                    <p>• Dividend growth provides a hedge against inflation by increasing your purchasing power annually.</p>
+                    <p>• Reinvesting dividends (DRIP) can more than triple your final portfolio value over 20 years.</p>
+                    <p>• Focus on 'Yield on Cost'—the return relative to your initial investment—to see true compounding success.</p>
+                    <p>• Monitor your total wealth progress using our <a href="/net-worth/" class="underline font-bold">Net Worth Tracker</a> quarterly.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/navbar.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn){
+        btn.addEventListener("click",()=>{
+            menu.classList.toggle("hidden");
+        });
+    }
+});
+
+fetch("/footer.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("footer").innerHTML=data;
+});
+</script>
+
+<script>
+    const elements = {
+        investmentInput: document.getElementById('investmentInput'),
+        investmentRange: document.getElementById('investmentRange'),
+        yieldInput: document.getElementById('yieldInput'),
+        growthInput: document.getElementById('growthInput'),
+        yearsInput: document.getElementById('yearsInput'),
+        yearsRange: document.getElementById('yearsRange'),
+        reinvestRadios: document.querySelectorAll('input[name="reinvest"]'),
+        totalDividendsDisplay: document.getElementById('totalDividendsDisplay'),
+        finalValueDisplay: document.getElementById('finalValueDisplay'),
+        lastYearIncomeDisplay: document.getElementById('lastYearIncomeDisplay'),
+        progressPrincipal: document.getElementById('progressPrincipal'),
+        progressGrowth: document.getElementById('progressGrowth'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText'),
+        summaryNotice: document.getElementById('summaryNotice')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculateDividend() {
+        const principal = parseFloat(elements.investmentInput.value) || 0;
+        const initialYield = (parseFloat(elements.yieldInput.value) || 0) / 100;
+        const growthRate = (parseFloat(elements.growthInput.value) || 0) / 100;
+        const years = parseInt(elements.yearsInput.value) || 0;
+        const shouldReinvest = document.querySelector('input[name="reinvest"]:checked').value === 'yes';
+
+        let totalDividends = 0;
+        let currentInvestmentValue = principal;
+        let currentDividendRate = initialYield; // yield relative to cost
+        let rowsHtml = "";
+        let lastYearDividend = 0;
+
+        for (let i = 1; i <= years; i++) {
+            const annualDividend = currentInvestmentValue * currentDividendRate;
+            lastYearDividend = annualDividend;
+            totalDividends += annualDividend;
+
+            if (shouldReinvest) {
+                currentInvestmentValue += annualDividend;
+            }
+
+            rowsHtml += `
+                <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                    <td class="px-4 py-3">Year ${i}</td>
+                    <td class="px-4 py-3 text-right">${formatINR(annualDividend)}</td>
+                    <td class="px-4 py-3 text-right font-medium text-slate-800">${formatINR(currentInvestmentValue)}</td>
+                </tr>
+            `;
+
+            // Dividend payout per share (or yield per cost unit) grows
+            currentDividendRate *= (1 + growthRate);
+        }
+
+        // UI Updates
+        elements.totalDividendsDisplay.textContent = formatINR(totalDividends);
+        elements.finalValueDisplay.textContent = formatINR(currentInvestmentValue);
+        elements.lastYearIncomeDisplay.textContent = formatINR(lastYearDividend);
+        elements.breakdownTable.innerHTML = rowsHtml;
+
+        // Progress Bar (Fix 1: Division by zero safety)
+        const principalPct = currentInvestmentValue > 0 
+            ? (principal / currentInvestmentValue) * 100 
+            : 0;
+        elements.progressPrincipal.style.width = principalPct + "%";
+        elements.progressGrowth.style.width = (100 - principalPct) + "%";
+
+        // Summary
+        elements.summaryNotice.textContent = `You will earn ${formatINR(totalDividends)} in passive income over ${years} years.`;
+
+        // Insight logic (Fix 2: Yield on cost safety)
+        let yieldOnCost = principal > 0 
+            ? (lastYearDividend / principal * 100).toFixed(2)
+            : 0;
+
+        let insight = `Your 'Yield on Cost' after ${years} years will be <strong>${yieldOnCost}%</strong>. `;
+        if (shouldReinvest) {
+            // Fix 3: Corrected logic for reinvestment contribution
+            const reinvestGain = currentInvestmentValue - principal;
+            insight += `Reinvesting dividends added <strong>${formatINR(reinvestGain)}</strong> to your portfolio growth.`;
+        } else {
+            insight += `By not reinvesting, you receive cash flow but lose out on the exponential growth of the 'DRIP' snowball effect.`;
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculateDividend(); });
+        range.addEventListener('input', () => { input.value = range.value; calculateDividend(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.investmentInput, elements.investmentRange);
+        setupSync(elements.yearsInput, elements.yearsRange);
+        
+        [elements.yieldInput, elements.growthInput].forEach(el => {
+            el.addEventListener('input', calculateDividend);
+        });
+
+        elements.reinvestRadios.forEach(radio => {
+            radio.addEventListener('change', calculateDividend);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculateDividend);
+
+        calculateDividend();
+    });
+</script>
+</body>
+</html>
