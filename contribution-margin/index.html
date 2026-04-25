@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribution Margin Calculator (2026) – Formula, Ratio & Break-Even</title>
+    <meta name="description" content="Calculate contribution margin, contribution margin ratio, and profit per unit. Useful for pricing and break-even analysis (2026).">
+    <meta name="keywords" content="contribution margin calculator, contribution margin formula, contribution margin ratio, break even calculator india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-25">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/contribution-margin/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Contribution Margin Calculator (2026) – Formula, Ratio & Break-Even">
+    <meta property="og:description" content="Calculate contribution margin, contribution margin ratio, and profit per unit. Useful for pricing and break-even analysis (2026).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/contribution-margin/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Contribution Margin Calculator",
+      "description":"Professional business tool to calculate contribution per unit, margin ratios, and total profit impact.",
+      "url":"https://arthcalculator.in/contribution-margin/",
+      "publisher":{
+        "@type":"Organization",
+        "name":"ArthCalculator",
+        "url":"https://arthcalculator.in",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Contribution Margin Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Business Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Contribution Margin Calculator",
+        "item": "https://arthcalculator.in/contribution-margin/"
+      }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is contribution margin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contribution margin is the remaining revenue after subtracting variable costs from sales. it represents the portion of sales that covers fixed costs and generates profit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Difference between margin and profit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contribution margin accounts only for variable costs, while net profit accounts for both variable and fixed costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is CM ratio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Contribution Margin (CM) ratio is the percentage of each sales rupee that is available to cover fixed costs and profit, calculated as (Contribution Margin / Sales)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is it important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It helps business owners determine the break-even point and decide if a product price is sufficient to cover production costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How to increase margin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can increase the margin by raising the selling price per unit or reducing the variable costs per unit (materials, direct labor, etc.)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Break-even relation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The break-even point in units is calculated by dividing total fixed costs by the contribution margin per unit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is higher CM always better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally yes, as a higher contribution margin means more money is available to cover fixed costs and increase profit margins."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Contribution Margin Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Contribution Margin Calculator (2026) – Formula, Ratio & Break-Even</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Optimize your product pricing and profitability. Use our <strong>contribution margin calculator</strong> to determine profit per unit, margin ratios, and how your variable costs impact your bottom line in 2026.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-margin" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Product Inputs
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Selling Price per Unit (₹)</label>
+                            <input type="number" id="priceInput" value="1000" min="0" step="50" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="priceRange" min="0" max="50000" step="50" value="1000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Variable Cost per Unit (₹)</label>
+                            <input type="number" id="vCostInput" value="600" min="0" step="50" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="vCostRange" min="0" max="50000" step="50" value="600" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase mb-2 block">Total Fixed Costs (₹)</label>
+                            <input type="number" id="fixedCostInput" value="50000" min="0" step="1000" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase mb-2 block">Units Sold</label>
+                            <input type="number" id="unitsInput" value="200" min="0" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div id="lossNotice" class="hidden p-4 bg-rose-50 text-rose-600 text-xs rounded-xl border border-rose-100 font-medium">
+                        ⚠️ Warning: Your variable costs exceed your selling price. You are losing money on every unit sold.
+                    </div>
+                </div>
+
+                <div class="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200 text-pretty">
+                    <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">Total Operating Profit/Loss</p>
+                    <h3 id="profitResultDisplay" class="text-2xl font-bold leading-tight">₹30,000</h3>
+                    <p class="text-blue-200 text-xs mt-2" id="summaryNotice">Optimizing your business results...</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Efficiency Projections</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty text-pretty">
+                        <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">Contribution per Unit</h4>
+                            <div class="text-2xl font-extrabold text-emerald-900" id="unitContribution">₹400</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium">Profit before fixed costs</p>
+                        </div>
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">Margin Ratio</h4>
+                            <div class="text-2xl font-extrabold text-blue-900" id="marginRatioResult">40%</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">Percent of price available for costs</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-emerald-600 font-bold uppercase" id="barLabelLeft">Total Contribution</span>
+                            <span class="text-slate-400 font-bold uppercase" id="barLabelRight">Fixed Costs</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressContribution" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 60%"></div>
+                            <div id="progressFixed" class="h-full bg-slate-300 transition-all duration-700 ease-out" style="width: 40%"></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Business Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed text-pretty">
+                            Analyzing your margin trajectory...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Detailed Financial Breakup</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Category</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Value (Total)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-600">
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Total Sales Revenue</td><td class="px-4 py-3 text-right" id="tableRevenue">₹2,00,000</td></tr>
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Total Variable Costs</td><td class="px-4 py-3 text-right" id="tableVCosts">₹1,20,000</td></tr>
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3 font-bold text-slate-800">Total Contribution</td><td class="px-4 py-3 text-right font-bold text-emerald-600" id="tableContribution">₹80,000</td></tr>
+                                    <tr><td class="px-4 py-3 font-bold text-slate-800">Total Fixed Costs</td><td class="px-4 py-3 text-right font-bold text-rose-600" id="tableFixed">₹50,000</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Margin Formulas</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Contribution per Unit = Selling Price - Variable Cost
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-pretty">
+                        <p><strong>Ratio:</strong> (Contribution Margin / Selling Price) × 100.</p>
+                        <p><strong>Break-Even:</strong> Total Fixed Costs ÷ Contribution per Unit.</p>
+                        <p><strong>Net Profit:</strong> Total Contribution - Total Fixed Costs.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Scenario Example</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty">
+                        For a product priced at <strong>₹500</strong> with variable costs of <strong>₹300</strong>:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Contribution Margin: <strong>₹200</strong></li>
+                            <li>Margin Ratio: <strong>40%</strong></li>
+                            <li>Fixed Cost coverage starts after the first <strong>₹200</strong> of every sale.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about-margin">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Contribution Margin?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Contribution margin is a critical business metric that represents the amount of revenue left over after all variable costs have been paid. This remainder is "contributed" toward covering fixed expenses and, eventually, generating profit. Unlike gross margin, which accounts for manufacturing costs, contribution margin focuses solely on the direct relationship between volume and variable costs.</p>
+                    <p>Understanding this margin is vital for pricing strategies and <strong>break-even analysis</strong>. If your contribution margin is too low, you may need to increase your selling price or find ways to lower your raw material and labor costs. You can further analyze your business financial health with our <a href="/break-even/" class="text-blue-600 underline">Break-Even Calculator</a> or track personal growth with our <a href="/net-worth/" class="text-blue-600 underline">Net Worth Calculator</a>.</p>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Business Tools</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-pretty">
+                    <a href="/break-even/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Break-Even Tool</h4>
+                    </a>
+                    <a href="/profit/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Profit Calc</h4>
+                    </a>
+                    <a href="/net-worth/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Net Worth</h4>
+                    </a>
+                    <a href="/income-tax/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Income Tax</h4>
+                    </a>
+                    <a href="/calculators/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">All Tools</h4>
+                    </a>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is contribution margin?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It's revenue minus variable costs. It shows how much profit is generated per unit to pay for things like rent and salaries.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Difference between margin and profit?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Contribution margin only subtracts costs that vary with volume. Net profit subtracts every single cost associated with the business.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is CM ratio?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">The ratio tells you what percentage of your price is "available" profit. A 40% ratio means ₹40 out of every ₹100 earned is contribution.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Why is it important?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">It allows managers to perform sensitivity analysis—how much profit will I lose if I cut the price or if material costs rise?</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How to increase margin?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Focus on manufacturing efficiency, better supplier negotiations, or premium branding to justify a higher price.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Break-even relation?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Contribution Margin is the denominator in the break-even formula. A higher margin per unit lowers the number of units you need to sell to be profitable.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Is higher CM always better?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes, provided it doesn't come from a price so high that it severely impacts sales volume.</div></details>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategic Summary</h2>
+                <div class="text-sm space-y-2 opacity-95 leading-relaxed text-pretty">
+                    <p>• Contribution Margin helps you evaluate the profitability of individual products or services.</p>
+                    <p>• High fixed costs require high volume or a very high contribution margin ratio to reach profitability.</p>
+                    <p>• Use margin data to prioritize sales efforts toward high-margin items.</p>
+                    <p>• Review your margins quarterly as supplier costs and shipping rates fluctuate in the Indian market.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/navbar.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn){
+        btn.addEventListener("click",()=>{
+            menu.classList.toggle("hidden");
+        });
+    }
+});
+
+fetch("/footer.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("footer").innerHTML=data;
+});
+</script>
+
+<script>
+    const elements = {
+        priceInput: document.getElementById('priceInput'),
+        priceRange: document.getElementById('priceRange'),
+        vCostInput: document.getElementById('vCostInput'),
+        vCostRange: document.getElementById('vCostRange'),
+        fixedCostInput: document.getElementById('fixedCostInput'),
+        unitsInput: document.getElementById('unitsInput'),
+        unitContribution: document.getElementById('unitContribution'),
+        marginRatioResult: document.getElementById('marginRatioResult'),
+        profitResultDisplay: document.getElementById('profitResultDisplay'),
+        summaryNotice: document.getElementById('summaryNotice'),
+        progressContribution: document.getElementById('progressContribution'),
+        progressFixed: document.getElementById('progressFixed'),
+        insightText: document.getElementById('insightText'),
+        lossNotice: document.getElementById('lossNotice'),
+        tableRevenue: document.getElementById('tableRevenue'),
+        tableVCosts: document.getElementById('tableVCosts'),
+        tableContribution: document.getElementById('tableContribution'),
+        tableFixed: document.getElementById('tableFixed'),
+        barLabelLeft: document.getElementById('barLabelLeft'),
+        barLabelRight: document.getElementById('barLabelRight')
+    };
+
+    function formatINR(val) {
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculateMargin() {
+        const price = parseFloat(elements.priceInput.value) || 0;
+        const vCost = parseFloat(elements.vCostInput.value) || 0;
+        const fCost = parseFloat(elements.fixedCostInput.value) || 0;
+        const units = parseFloat(elements.unitsInput.value) || 0;
+
+        const contributionPerUnit = price - vCost;
+        const totalContribution = contributionPerUnit * units;
+        const marginRatio = price > 0 ? (contributionPerUnit / price) * 100 : 0;
+        const profit = totalContribution - fCost;
+
+        // UI Updates
+        elements.unitContribution.textContent = formatINR(contributionPerUnit);
+        elements.marginRatioResult.textContent = Math.round(marginRatio) + "%";
+        elements.profitResultDisplay.textContent = formatINR(profit);
+
+        elements.tableRevenue.textContent = formatINR(price * units);
+        elements.tableVCosts.textContent = formatINR(vCost * units);
+        elements.tableContribution.textContent = formatINR(totalContribution);
+        elements.tableFixed.textContent = formatINR(fCost);
+
+        // Warning Logic
+        if (contributionPerUnit < 0) {
+            elements.lossNotice.classList.remove('hidden');
+        } else {
+            elements.lossNotice.classList.add('hidden');
+        }
+
+        // Progress Bar
+        const maxVal = Math.max(Math.abs(totalContribution), Math.abs(fCost));
+        if (totalContribution > 0) {
+            const contribWidth = (totalContribution / (totalContribution + fCost || 1)) * 100;
+            elements.progressContribution.style.width = contribWidth + "%";
+            elements.progressFixed.style.width = (100 - contribWidth) + "%";
+            elements.progressContribution.className = "h-full bg-emerald-500 transition-all duration-700 ease-out";
+        } else {
+            elements.progressContribution.style.width = "0%";
+            elements.progressFixed.style.width = "100%";
+            elements.progressFixed.className = "h-full bg-rose-400 transition-all duration-700 ease-out";
+        }
+
+        // Insights
+        let insight = "";
+        if (profit < 0) {
+            insight = `You are currently operating at a loss of <strong>${formatINR(Math.abs(profit))}</strong>. To break even, you need to sell <strong>${Math.ceil(fCost / (contributionPerUnit || 1))}</strong> more units or increase price.`;
+            elements.summaryNotice.textContent = "Operating at a loss.";
+        } else if (marginRatio < 20) {
+            insight = `Your margin ratio is thin (<strong>${Math.round(marginRatio)}%</strong>). Even small increases in material costs could push you into a loss.`;
+            elements.summaryNotice.textContent = "Healthy but thin margins.";
+        } else {
+            insight = `Excellent! Your product generates <strong>${formatINR(contributionPerUnit)}</strong> contribution per unit. Your profit of <strong>${formatINR(profit)}</strong> covers all fixed costs comfortably.`;
+            elements.summaryNotice.textContent = "Business is profitable.";
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculateMargin(); });
+        range.addEventListener('input', () => { input.value = range.value; calculateMargin(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.priceInput, elements.priceRange);
+        setupSync(elements.vCostInput, elements.vCostRange);
+        
+        [elements.fixedCostInput, elements.unitsInput].forEach(el => {
+            el.addEventListener('input', calculateMargin);
+        });
+
+        calculateMargin();
+    });
+</script>
+</body>
+</html>
