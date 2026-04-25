@@ -515,7 +515,7 @@
         const hraAnnual = (basicAnnual * hraPct) / 100;
         const employerPFAnnual = basicAnnual * epfRate;
         
-        const annualGross = ctc - employerPFAnnual;
+        const annualGross = ctc - employerPFAnnual + annualBonus;
         const employeePFAnnual = basicAnnual * epfRate;
         const ptAnnual = ptMonthly * 12;
         
