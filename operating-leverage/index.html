@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operating Leverage Calculator (2026) – Degree of Operating Leverage (DOL)</title>
+    <meta name="description" content="Calculate degree of operating leverage (DOL) to measure how sensitive your profits are to sales changes. Useful for business and financial analysis (2026).">
+    <meta name="keywords" content="operating leverage calculator, DOL formula, degree of operating leverage, financial leverage vs operating leverage, business risk calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-25">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/operating-leverage/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Operating Leverage Calculator (2026) – Degree of Operating Leverage (DOL)">
+    <meta property="og:description" content="Calculate degree of operating leverage (DOL) to measure how sensitive your profits are to sales changes. Useful for business and financial analysis (2026).">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/operating-leverage/">
+    <meta property="og:site_name" content="ArthCalculator">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"WebPage",
+      "name":"Operating Leverage Calculator",
+      "description":"Advanced business tool to calculate the degree of operating leverage and EBIT sensitivity.",
+      "url":"https://arthcalculator.in/operating-leverage/",
+      "publisher":{
+        "@type":"Organization",
+        "name":"ArthCalculator",
+        "url":"https://arthcalculator.in",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://arthcalculator.in/logo.png"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Operating Leverage Calculator",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arthcalculator.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Business Calculators",
+        "item": "https://arthcalculator.in/calculators/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Operating Leverage Calculator",
+        "item": "https://arthcalculator.in/operating-leverage/"
+      }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is operating leverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Operating leverage is a measure of how a change in sales volume affects a company's operating income (EBIT), primarily driven by the ratio of fixed costs to variable costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is DOL?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DOL stands for Degree of Operating Leverage. It is a leverage ratio that quantifies the sensitivity of EBIT to changes in sales, calculated as Total Contribution divided by EBIT."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "High vs low leverage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "High operating leverage means a company has high fixed costs; a small sales increase leads to a large profit jump. Low operating leverage means variable costs dominate, leading to more stable but less explosive profit growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is operating leverage important?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It helps managers understand the business risk and the 'magnifying effect' their cost structure has on profitability when sales fluctuate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Risk implications?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "High operating leverage increases business risk because the company must maintain a certain sales volume to cover high fixed costs or face significant losses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Relation with break-even?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Companies with high operating leverage have higher break-even points because they need more revenue to cover substantial fixed costs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is high leverage good?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is good when sales are rising, as it exponentially increases profits. It is dangerous when sales are falling, as it exponentially increases losses."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Business Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Operating Leverage Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Operating Leverage Calculator (2026) – Degree of Operating Leverage (DOL)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Measure your profit sensitivity to sales fluctuations. Use our <strong>degree of operating leverage (DOL) calculator</strong> to understand how your fixed and variable cost structure impacts business risk and EBIT in 2026.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+                        <a href="#about-leverage" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">About</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#formula" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Formula</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#example" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">Example</a>
+                        <span class="text-slate-300">|</span>
+                        <a href="#faqs" class="text-blue-600 text-xs sm:text-sm font-semibold hover:underline">FAQs</a>
+                    </div>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">Updated for 2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Business Parameters
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Selling Price per Unit (₹)</label>
+                            <input type="number" id="priceInput" value="1000" min="0" step="50" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="priceRange" min="0" max="50000" step="50" value="1000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Variable Cost per Unit (₹)</label>
+                            <input type="number" id="vCostInput" value="600" min="0" step="50" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="vCostRange" min="0" max="50000" step="50" value="600" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase mb-2 block">Fixed Costs (₹)</label>
+                            <input type="number" id="fixedCostInput" value="50000" min="0" step="1000" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase mb-2 block text-pretty">Annual Units Sold</label>
+                            <input type="number" id="unitsInput" value="250" min="0" step="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div id="lossNotice" class="hidden p-4 bg-rose-50 text-rose-600 text-xs rounded-xl border border-rose-100 font-medium">
+                        ⚠️ Warning: Selling price is less than or equal to variable cost. DOL calculation is not meaningful with negative contribution.
+                    </div>
+                </div>
+
+                <div class="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200 text-pretty">
+                    <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">Degree of Operating Leverage (DOL)</p>
+                    <h3 id="dolResultDisplay" class="text-3xl font-bold leading-tight">2.00</h3>
+                    <p class="text-blue-200 text-xs mt-2" id="summaryNotice">Your profit sensitivity multiplier.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Financial Metrics Analysis</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2 text-pretty">EBIT (Operating Profit)</h4>
+                            <div class="text-2xl font-extrabold text-emerald-900" id="ebitDisplay">₹50,000</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium">Earnings before interest and taxes</p>
+                        </div>
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">Contribution Margin</h4>
+                            <div class="text-2xl font-extrabold text-blue-900" id="totalContribution">₹1,00,000</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">Total revenue minus variable costs</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Leverage Sensitivity</span>
+                            <span class="text-slate-400 font-bold uppercase">Business Risk</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressLeverage" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                        </div>
+                        <div class="flex justify-between mt-2 text-[10px] text-slate-400 font-medium">
+                            <span>Low Risk (DOL < 1.5)</span>
+                            <span>High Risk (DOL > 3.0)</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Strategic Leverage Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed text-pretty">
+                            Analyzing your cost structure trajectory...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Metric Breakup Table</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Metric</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-slate-600">
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Contribution per Unit</td><td class="px-4 py-3 text-right" id="unitContribTable">₹400</td></tr>
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Total Contribution</td><td class="px-4 py-3 text-right" id="totalContribTable">₹1,00,000</td></tr>
+                                    <tr class="border-b border-slate-100"><td class="px-4 py-3">Fixed Cost Component</td><td class="px-4 py-3 text-right" id="fixedCostTable">₹50,000</td></tr>
+                                    <tr><td class="px-4 py-3 font-bold text-slate-800">EBIT (Profit)</td><td class="px-4 py-3 text-right font-bold text-emerald-600" id="ebitTable">₹50,000</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">DOL Formula</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        DOL = Total Contribution / EBIT
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-2 mb-6 text-pretty">
+                        <p><strong>Contribution:</strong> Sales Revenue - Variable Costs.</p>
+                        <p><strong>EBIT:</strong> Earnings Before Interest and Taxes (Operating Profit).</p>
+                        <p><strong>Interpretation:</strong> A DOL of 2.0 means a 10% increase in sales will lead to a 20% increase in EBIT.</p>
+                    </div>
+
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="example">Scenario Example</h3>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-sm text-slate-700 leading-relaxed text-pretty">
+                        For a business with <strong>₹50,000</strong> fixed costs and <strong>₹400</strong> margin per unit, selling <strong>200 units</strong>:
+                        <ul class="list-disc ml-5 mt-2 space-y-1 text-xs sm:text-sm font-medium">
+                            <li>Total Contribution: <strong>₹80,000</strong></li>
+                            <li>EBIT: <strong>₹30,000</strong></li>
+                            <li>DOL: 80,000 / 30,000 = <strong>2.67</strong></li>
+                            <li>Small sales volume growth results in large profit expansion.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Sections -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="about-leverage">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Operating Leverage?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>Operating leverage is a financial concept that measures how much a company’s operating income changes in response to a change in sales. It is determined by the proportion of fixed costs compared to variable costs in a company’s total cost structure. A business with high fixed costs and low variable costs has high operating leverage, whereas a business with low fixed costs and high variable costs has low operating leverage.</p>
+                    <p>Understanding your <strong>Degree of Operating Leverage (DOL)</strong> is essential for risk management. Companies with high leverage are more sensitive to sales fluctuations—they profit significantly during booms but face steep losses during downturns. You can analyze your unit profitability with our <a href="/contribution-margin/" class="text-blue-600 underline">Contribution Margin Calculator</a> or determine the sales volume needed for survival using the <a href="/break-even/" class="text-blue-600 underline">Break-Even Calculator</a>.</p>
+                </div>
+            </section>
+
+            <!-- Related Tools Section -->
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Related Business Tools</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-pretty">
+                    <a href="/contribution-margin/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Margin Calc</h4>
+                    </a>
+                    <a href="/break-even/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Break-Even</h4>
+                    </a>
+                    <a href="/profit/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Profit Calc</h4>
+                    </a>
+                    <a href="/net-worth/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center text-pretty">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">Net Worth</h4>
+                    </a>
+                    <a href="/calculators/" class="p-4 border border-slate-100 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all group text-center">
+                        <h4 class="font-bold text-slate-800 text-[10px] group-hover:text-blue-600 uppercase">All Tools</h4>
+                    </a>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is operating leverage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Operating leverage is a measure of how fixed costs affect the sensitivity of a company's operating profit to changes in sales volume.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is DOL?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Degree of Operating Leverage (DOL) is a ratio used to quantify the business risk by calculating Total Contribution divided by Operating Income (EBIT).</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">High vs low leverage?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">High leverage means profits jump significantly with sales increases. Low leverage means profits grow steadily but at a lower rate relative to sales.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Why is it important?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It helps businesses decide if their cost structure is too risky or if they can handle a temporary drop in sales volume.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Risk implications?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">High operating leverage increases financial risk because even a minor drop in sales can result in a significant drop in net income or a loss.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Relation with break-even?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Businesses with high fixed costs (high leverage) need to sell more units to reach the break-even point compared to low-leverage companies.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is high leverage good?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">High leverage is beneficial in a growing market because it accelerates earnings per share (EPS) and operating income.</div></details>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategic Summary</h2>
+                <div class="text-sm space-y-2 opacity-95 leading-relaxed text-pretty">
+                    <p>• A high Degree of Operating Leverage (DOL) identifies businesses with a significant fixed cost base.</p>
+                    <p>• Operating leverage amplifies the impact of sales changes on the bottom line.</p>
+                    <p>• Balance your cost structure by analyzing seasonal sales trends in your specific Indian industry sector.</p>
+                    <p>• Monitor DOL alongside your <a href="/income-tax/" class="underline font-bold">Income Tax</a> obligations to manage total post-tax profitability.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+fetch("/navbar.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("navbar").innerHTML=data;
+    const btn=document.getElementById("menuBtn");
+    const menu=document.getElementById("mobileMenu");
+    if(btn){
+        btn.addEventListener("click",()=>{
+            menu.classList.toggle("hidden");
+        });
+    }
+});
+
+fetch("/footer.html")
+.then(res=>res.text())
+.then(data=>{
+    document.getElementById("footer").innerHTML=data;
+});
+</script>
+
+<script>
+    const elements = {
+        priceInput: document.getElementById('priceInput'),
+        priceRange: document.getElementById('priceRange'),
+        vCostInput: document.getElementById('vCostInput'),
+        vCostRange: document.getElementById('vCostRange'),
+        fixedCostInput: document.getElementById('fixedCostInput'),
+        unitsInput: document.getElementById('unitsInput'),
+        dolResultDisplay: document.getElementById('dolResultDisplay'),
+        ebitDisplay: document.getElementById('ebitDisplay'),
+        totalContribution: document.getElementById('totalContribution'),
+        summaryNotice: document.getElementById('summaryNotice'),
+        progressLeverage: document.getElementById('progressLeverage'),
+        insightText: document.getElementById('insightText'),
+        lossNotice: document.getElementById('lossNotice'),
+        unitContribTable: document.getElementById('unitContribTable'),
+        totalContribTable: document.getElementById('totalContribTable'),
+        fixedCostTable: document.getElementById('fixedCostTable'),
+        ebitTable: document.getElementById('ebitTable')
+    };
+
+    function formatINR(val) {
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculateLeverage() {
+        const sp = parseFloat(elements.priceInput.value) || 0;
+        const vc = parseFloat(elements.vCostInput.value) || 0;
+        const fc = parseFloat(elements.fixedCostInput.value) || 0;
+        const q = parseFloat(elements.unitsInput.value) || 0;
+
+        const contribUnit = sp - vc;
+        const totalContrib = contribUnit * q;
+        const ebit = totalContrib - fc;
+        
+        let dol = 0;
+        if (ebit === 0) {
+            dol = "Infinity";
+        } else {
+            dol = (totalContrib / ebit).toFixed(2);
+        }
+
+        // Warning Logic
+        if (sp <= vc) {
+            elements.lossNotice.classList.remove('hidden');
+        } else {
+            elements.lossNotice.classList.add('hidden');
+        }
+
+        // UI Display Updates
+        elements.dolResultDisplay.textContent = dol;
+        elements.ebitDisplay.textContent = formatINR(ebit);
+        elements.totalContribution.textContent = formatINR(totalContrib);
+
+        elements.unitContribTable.textContent = formatINR(contribUnit);
+        elements.totalContribTable.textContent = formatINR(totalContrib);
+        elements.fixedCostTable.textContent = formatINR(fc);
+        elements.ebitTable.textContent = formatINR(ebit);
+
+        // Progress Bar Calculation
+        let leveragePct = 0;
+        if (typeof dol === 'string' && dol === "Infinity") {
+            leveragePct = 100;
+        } else {
+            const numericDol = Math.abs(parseFloat(dol));
+            // Clamp visualization: 1.0 (Low) to 5.0 (Extreme) maps to 0-100%
+            leveragePct = Math.min(100, Math.max(10, ((numericDol - 1) / 4) * 100));
+        }
+        elements.progressLeverage.style.width = leveragePct + "%";
+        
+        // Color coding for progress bar
+        if (parseFloat(dol) > 3) {
+            elements.progressLeverage.className = "h-full bg-rose-500 transition-all duration-700 ease-out";
+        } else if (parseFloat(dol) < 1.5) {
+            elements.progressLeverage.className = "h-full bg-emerald-500 transition-all duration-700 ease-out";
+        } else {
+            elements.progressLeverage.className = "h-full bg-blue-500 transition-all duration-700 ease-out";
+        }
+
+        // Insight Logic
+        let insight = "";
+        const numDol = parseFloat(dol);
+
+        if (ebit < 0) {
+            insight = `You are currently operating at a loss. Your DOL is negative, which indicates high operational risk. A decrease in units sold will exacerbate losses quickly.`;
+            elements.summaryNotice.textContent = "Operating at a loss.";
+        } else if (ebit === 0 || numDol > 5) {
+            insight = `<strong>Extreme operating leverage detected.</strong> Your fixed costs are nearly equal to your contribution. A tiny dip in sales will wipe out your profits completely.`;
+            elements.summaryNotice.textContent = "High business risk structure.";
+        } else if (numDol >= 2.5) {
+            insight = `<strong>High operating leverage.</strong> Small sales changes will significantly impact profit. For every 1% sales growth, your profit will grow by ${numDol}%. High risk, high reward.`;
+            elements.summaryNotice.textContent = "Aggressive leverage structure.";
+        } else if (numDol > 1.5) {
+            insight = `<strong>Moderate operating leverage.</strong> Your business has a balanced cost structure. Profitability is responsive to volume changes but manageable.`;
+            elements.summaryNotice.textContent = "Balanced risk structure.";
+        } else {
+            insight = `<strong>Low operating leverage.</strong> Most of your costs are variable. Your business is stable and well-protected against sales dips, but profits won't explode quickly either.`;
+            elements.summaryNotice.textContent = "Low-risk cost structure.";
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculateLeverage(); });
+        range.addEventListener('input', () => { input.value = range.value; calculateLeverage(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.priceInput, elements.priceRange);
+        setupSync(elements.vCostInput, elements.vCostRange);
+        
+        [elements.fixedCostInput, elements.unitsInput].forEach(el => {
+            el.addEventListener('input', calculateLeverage);
+        });
+
+        calculateLeverage();
+    });
+</script>
+</body>
+</html>
