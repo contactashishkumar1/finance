@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer vs. Salaried Tax Calculator (2026) – Section 44ADA Optimizer</title>
+    <meta name="description" content="Compare in-hand income for Freelancers (Section 44ADA) vs Salaried employees in India. Calculate tax savings, GST impact, and net take-home for 2026.">
+    <meta name="keywords" content="freelancer vs salaried tax calculator india, section 44ADA calculator 2026, presumptive taxation calculator, tax savings for freelancers india, developers tax saving 44ada">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-26">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/freelancer-vs-salaried/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Freelancer vs. Salaried Tax Calculator (2026) – Section 44ADA Edition">
+    <meta property="og:description" content="Earning ₹30L CTC? See why you might take home ₹5L more as a Freelancer using Section 44ADA. Compare tax savings instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/freelancer-vs-salaried/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://arthcalculator.in/#organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Freelancer vs Salaried Tax Comparison Calculator",
+          "description": "Financial tool comparing net in-hand income for salaried individuals vs professionals under Section 44ADA presumptive tax.",
+          "url": "https://arthcalculator.in/freelancer-vs-salaried/",
+          "isPartOf": { "@id": "https://arthcalculator.in/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Section 44ADA Tax Optimizer",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "Freelancer vs Salaried" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to compare Freelance vs Salaried Tax",
+          "step": [
+            { "@type": "HowToStep", "name": "Enter Gross Income", "text": "Input your annual CTC or total client billing amount." },
+            { "@type": "HowToStep", "name": "Add Salaried Deductions", "text": "Input professional tax and standard deductions (₹75,000 for 2026)." },
+            { "@type": "HowToStep", "name": "Calculate Freelance Profit", "text": "The tool assumes 50% profit for professionals under Section 44ADA." },
+            { "@type": "HowToStep", "name": "Compare Results", "text": "Review the Net In-Hand difference and tax saved as a freelancer." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the limit for Section 44ADA in 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The limit for Section 44ADA is ₹75 Lakhs annual turnover, provided cash receipts do not exceed 5% of total turnover."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I lose the ₹75,000 Standard Deduction as a freelancer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, the standard deduction of ₹75,000 is only for salaried individuals. Freelancers get a 50% flat expense deduction instead."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center text-pretty">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Freelancer vs Salaried</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl text-pretty text-pretty">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Freelancer vs. Salaried Comparison Calculator (Sec 44ADA 2026)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Are you paying too much tax in your 9-to-5 job? Professionals like developers, designers, and consultants can use <strong>Section 44ADA</strong> to pay tax on only 50% of their income. Compare your real in-hand pay for 2026.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 text-pretty">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm whitespace-nowrap">FY 2025-26 Edition</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                        Income Configuration
+                    </h2>
+
+                    <div class="mb-8 text-pretty">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Annual Gross Income / CTC (₹)</label>
+                            <input type="number" id="grossIncome" value="3000000" min="0" step="50000" class="w-full sm:w-36 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all">
+                        </div>
+                        <input type="range" id="grossRange" min="500000" max="7500000" step="50000" value="3000000" class="w-full py-2 cursor-pointer text-pretty">
+                        <p class="text-[10px] text-slate-400 italic mt-1 text-pretty">Max 44ADA limit is ₹75 Lakhs turnover.</p>
+                    </div>
+
+                    <div class="space-y-4 mb-6 text-pretty">
+                        <h3 class="text-xs font-bold text-blue-600 uppercase tracking-wider">Salaried Components</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Standard Deduction (₹)</label>
+                                <input type="number" id="stdDed" value="75000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold bg-slate-50" readonly>
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Prof. Tax (Annual ₹)</label>
+                                <input type="number" id="profTax" value="2500" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold text-pretty">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-blue-50 rounded-xl border border-blue-100 mb-6 text-pretty">
+                        <h3 class="text-xs font-bold text-blue-600 uppercase mb-2">Freelance Profit Mode (44ADA)</h3>
+                        <p class="text-[11px] text-blue-800 leading-relaxed text-pretty">
+                            <strong>Presumptive Profit: 50%</strong>. This calculator assumes you declare half of your gross receipts as profit to the I-T department. No business expense proofs required.
+                        </p>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Analyze Tax Savings
+                    </button>
+                </div>
+
+                <!-- High Impact Result -->
+                <div class="bg-emerald-600 p-6 rounded-2xl text-white shadow-lg shadow-emerald-200">
+                    <p class="text-emerald-100 text-[10px] font-medium uppercase mb-1">Net Annual Benefit as Freelancer</p>
+                    <h3 id="benefitDisplay" class="text-3xl font-bold leading-tight">₹0</h3>
+                    <p class="text-emerald-100 text-xs mt-2" id="verdictText">Switching could save you lakhs in taxes.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Comparative Wealth Dashboard</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty text-pretty">
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">Salaried In-Hand</h4>
+                            <div class="text-2xl font-extrabold text-blue-900" id="salariedNet">₹0</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">After Slab Tax & PT</p>
+                        </div>
+                        <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100 text-pretty">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">Freelancer In-Hand</h4>
+                            <div class="text-2xl font-extrabold text-emerald-900" id="freelanceNet">₹0</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium text-pretty">After Presumptive Tax (50%)</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-emerald-600 font-bold uppercase">Tax Saved via 44ADA</span>
+                            <span class="text-slate-400 font-bold uppercase text-pretty text-pretty">Total Tax Liability</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressSaved" class="h-full bg-emerald-500 transition-all duration-700 ease-out" style="width: 40%"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 text-center text-pretty">Visualizing the drop in effective tax rate.</p>
+                    </div>
+
+                    <!-- GST Tiered Alert -->
+                    <div id="gstWarning" class="hidden rounded-xl p-5 mb-8 flex items-start gap-3 transition-all duration-300">
+                        <div class="mt-1">
+                            <svg class="w-5 h-5" id="gstIcon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div class="text-xs md:text-sm font-medium leading-relaxed text-pretty" id="gstText"></div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4 text-pretty">Detailed Tax Breakup</h3>
+                    <div class="overflow-hidden text-pretty text-pretty">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar text-pretty">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 text-pretty">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Category</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Salaried</th>
+                                        <th class="px-4 py-3 font-semibold text-blue-600 border-b text-right whitespace-nowrap">Freelancer</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Strategic Internal Linking -->
+                    <div class="mt-12 text-pretty text-pretty">
+                        <h3 class="text-slate-800 font-bold text-base mb-6 text-center text-pretty">Grow Your Remote Career</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-pretty text-pretty">
+                            <a href="/foreign-tax-optimizer/" class="block p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 transition-all group">
+                                <h4 class="text-blue-600 font-bold text-[11px] mb-1 text-pretty uppercase">Global Payments</h4>
+                                <p class="text-slate-500 text-[10px] mb-3 text-pretty">Calculate 20% TCS on foreign client receipts.</p>
+                                <span class="text-blue-600 font-semibold text-[10px] group-hover:underline text-pretty">Go to Global Optimizer →</span>
+                            </a>
+                            <a href="/net-worth/" class="block p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-500 transition-all group">
+                                <h4 class="text-emerald-600 font-bold text-[11px] mb-1 text-pretty uppercase">Net Worth</h4>
+                                <p class="text-slate-500 text-[10px] mb-3 text-pretty">Track how extra cash accelerates your total wealth.</p>
+                                <span class="text-emerald-600 font-semibold text-[10px] group-hover:underline text-pretty">Use Net Worth Tool →</span>
+                            </a>
+                            <a href="/nps/" class="block p-4 bg-slate-50 rounded-2xl border border-slate-100 hover:border-amber-500 transition-all group">
+                                <h4 class="text-amber-600 font-bold text-[11px] mb-1 text-pretty uppercase">Retirement</h4>
+                                <p class="text-slate-500 text-[10px] mb-3 text-pretty">Freelancers don't have EPF. Start your pension fund.</p>
+                                <span class="text-amber-600 font-semibold text-[10px] group-hover:underline text-pretty">Check NPS Tool →</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4 text-pretty" id="formula">Tax Optimization Formula</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm text-pretty text-pretty">
+                        Tax Benefit = IncomeTax(Salaried) - IncomeTax(Freelance Profit 50%)
+                    </div>
+                    
+                    <!-- Marginal Relief Info Box -->
+                    <div class="p-4 bg-emerald-50 border border-emerald-100 rounded-xl mb-6 text-pretty">
+                        <p class="text-[11px] text-emerald-800 leading-relaxed text-pretty">
+                            <strong>FY 2025-26 Note:</strong> Tax is zero for income up to <strong>₹12 Lakhs</strong> under the New Regime due to Section 87A rebate. Our logic accounts for this 'Zero-Tax' threshold automatically.
+                        </p>
+                    </div>
+
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Section 44ADA:</strong> Allows Professionals (IT, Design, Engineering, Legal) to assume 50% of turnover is expense. No audit required if below ₹75L.</p>
+                        <p><strong>Salaried Side:</strong> We assume New Tax Regime (FY 2025-26) with a fixed ₹75,000 Standard Deduction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty" id="about">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-pretty">Section 44ADA Explained</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6 text-pretty">
+                    <p>Section 44ADA is a presumptive taxation scheme for professionals residing in India. It aims to reduce the compliance burden for small professionals by allowing them to pay tax on a "presumed" profit. In 2026, if you are a Software Developer, Architect, or Consultant earning up to ₹75 Lakhs, the government assumes you spent 50% of that money on business-related expenses.</p>
+                    <p>Consequently, you are only taxed on the remaining 50%. This is often <strong>4-5 times more efficient</strong> than a standard salaried structure where you pay tax on nearly 100% of your CTC.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6 text-pretty">Benefits Comparison: Salary vs. Freelance</h2>
+                <div class="overflow-x-auto text-pretty">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Benefit Head</th>
+                                <th class="p-4 border-b">Salaried Employee</th>
+                                <th class="p-4 border-b">Freelance Professional</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600">
+                            <tr><td class="p-4 border-b font-medium">Income Tax Base</td><td class="p-4 border-b">~95% of CTC (Low deductions)</td><td class="p-4 border-b text-emerald-600 font-bold">50% of Turnover (High savings)</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Retirals</td><td class="p-4 border-b">EPF, Gratuity, Bonus</td><td class="p-4 border-b text-rose-500">None (Self-managed)</td></tr>
+                            <tr><td class="p-4 border-b font-medium text-pretty">Job Security</td><td class="p-4 border-b">Fixed monthly credit</td><td class="p-4 border-b text-pretty">Variable (Multiple clients)</td></tr>
+                            <tr><td class="p-4 border-b font-medium text-pretty">Standard Deduction</td><td class="p-4 border-b text-blue-600 font-bold">Available (₹75k)</td><td class="p-4 border-b text-pretty">Not Available</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4 text-pretty">GST Insight: Exporting Services</h2>
+                <p class="text-sm leading-relaxed opacity-90 mb-4 text-pretty">
+                    If your freelance clients are outside India (US, UK, Europe), your work is classified as <strong>Export of Services</strong>. Under the 2026 GST guidelines, exports are "Zero-rated supplies." This means you don't need to charge 18% GST to your clients. 
+                </p>
+                <p class="text-sm leading-relaxed opacity-90 text-pretty">
+                    However, you must file a <strong>Letter of Undertaking (LUT)</strong> on the GST portal at the start of every financial year to claim this 0% benefit legally. If your annual billing crosses ₹20 Lakhs, GST registration is mandatory even if you pay zero tax.
+                </p>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10 text-pretty text-pretty" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Freelance Taxation FAQs</h2>
+                <div class="space-y-4 text-pretty text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Can I use Sec 44ADA for any business?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">
+                            No. Section 44ADA is strictly for "Specified Professionals" such as Software Engineers, Doctors, Lawyers, Accountants, Architects, and Interior Designers. General shopkeepers or trading businesses must use Section 44AD (8% profit scheme).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Do I lose Standard Deduction as a freelancer?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">
+                            Yes. The ₹75,000 standard deduction is a perk for the 'Salaried' income head. Freelancers compute income under 'Profits and Gains of Business or Profession' (PGBP) and receive the 50% expense allowance instead.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Is 44ADA applicable if I have both salary and freelance income?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty text-pretty">
+                            Yes. You will be taxed on (Salary - deductions) + (50% of Freelance Income). However, the tax will be calculated on the combined total, often pushing you into the 30% slab quickly.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">How to manage health insurance and PF when quitting?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty text-pretty text-pretty">
+                            As a freelancer, you must buy individual health insurance and can continue contributing to your PF via Voluntary PF or shift focus to NPS and PPF for long-term retirement savings.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty text-pretty text-pretty">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How to file ITR-4 for presumptive income?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty text-pretty">
+                            ITR-4 (Sugam) is the specific form for Section 44ADA. You simply need to enter your gross turnover, and the system automatically calculates the 50% profit. You don't need to maintain a balance sheet or profit & loss statement.
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        grossIncome: document.getElementById('grossIncome'),
+        grossRange: document.getElementById('grossRange'),
+        profTax: document.getElementById('profTax'),
+        salariedNet: document.getElementById('salariedNet'),
+        freelanceNet: document.getElementById('freelanceNet'),
+        benefitDisplay: document.getElementById('benefitDisplay'),
+        progressSaved: document.getElementById('progressSaved'),
+        gstWarning: document.getElementById('gstWarning'),
+        gstText: document.getElementById('gstText'),
+        gstIcon: document.getElementById('gstIcon'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        verdictText: document.getElementById('verdictText')
+    };
+
+    function formatINR(val) {
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    // FY 2025-26 New Regime Slabs
+    function calculateNewRegimeTax(taxable) {
+        if (taxable <= 1200000) return 0; // Rebate Section 87A
+
+        let tax = 0;
+        const slabs = [
+            { l: 400000, r: 0 },
+            { l: 800000, r: 0.05 },
+            { l: 1200000, r: 0.10 },
+            { l: 1600000, r: 0.15 },
+            { l: 2000000, r: 0.20 },
+            { l: 2400000, r: 0.25 },
+            { l: Infinity, r: 0.30 }
+        ];
+
+        let rem = taxable;
+        let prev = 0;
+        for (let slab of slabs) {
+            if (rem > 0) {
+                let range = slab.l - prev;
+                let inSlab = Math.min(rem, range);
+                tax += inSlab * slab.r;
+                rem -= inSlab;
+                prev = slab.l;
+            }
+        }
+        return tax * 1.04; // 4% Cess
+    }
+
+    function calculate() {
+        const gross = parseFloat(elements.grossIncome.value) || 0;
+        const pt = parseFloat(elements.profTax.value) || 0;
+
+        // 1. Salaried Calculation
+        const salTaxable = Math.max(0, gross - 75000 - pt); // Std Ded + PT
+        const salTax = calculateNewRegimeTax(salTaxable);
+        const salNet = gross - salTax - pt;
+
+        // 2. Freelance Calculation (44ADA)
+        // No Std Deduction for professional income
+        const freeTaxable = gross * 0.5;
+        const freeTax = calculateNewRegimeTax(freeTaxable);
+        const freeNet = gross - freeTax;
+
+        // UI Updates
+        elements.salariedNet.textContent = formatINR(salNet);
+        elements.freelanceNet.textContent = formatINR(freeNet);
+        
+        const benefit = freeNet - salNet;
+        elements.benefitDisplay.textContent = formatINR(benefit);
+
+        // Visuals
+        const taxSalPct = (salTax / gross) * 100 || 0;
+        const taxFreePct = (freeTax / gross) * 100 || 0;
+        const savedPct = Math.max(0, taxSalPct - taxFreePct);
+        elements.progressSaved.style.width = Math.min(100, savedPct * 5) + "%"; // Scale for impact
+
+        // GST Tiered Warning Logic
+        if (gross > 3000000) {
+            elements.gstWarning.classList.remove('hidden');
+            elements.gstWarning.className = "p-5 bg-rose-50 border border-rose-200 rounded-xl mb-8 flex items-start gap-3 text-rose-800";
+            elements.gstText.innerHTML = "<strong>Critical Alert:</strong> GST Registration + Monthly/Quarterly Filing Required (>₹30L). For exports, file an LUT annually to stay at 0% tax.";
+        } else if (gross > 2000000) {
+            elements.gstWarning.classList.remove('hidden');
+            elements.gstWarning.className = "p-5 bg-amber-50 border border-amber-200 rounded-xl mb-8 flex items-start gap-3 text-amber-800";
+            elements.gstText.innerHTML = "<strong>GST Alert:</strong> Registration Required (>₹20L). For foreign clients, file an LUT immediately to claim zero-rated export status.";
+        } else {
+            elements.gstWarning.classList.add('hidden');
+        }
+
+        // Table Breakup
+        const rows = [
+            ["Annual Turnover / CTC", formatINR(gross), formatINR(gross)],
+            ["Standard Deduction", formatINR(75000), "₹0"],
+            ["Professional Tax (PT)", formatINR(pt), "₹0"],
+            ["Presumptive Expense (50%)", "₹0", formatINR(gross * 0.5)],
+            ["Net Taxable Income", formatINR(salTaxable), formatINR(freeTaxable)],
+            ["Income Tax (Cess Incl.)", formatINR(salTax), formatINR(freeTax)],
+            ["Effective Tax Rate", ((salTax / gross) * 100 || 0).toFixed(1) + "%", ((freeTax / gross) * 100 || 0).toFixed(1) + "%"],
+            ["Total Net In-Hand", "<strong>" + formatINR(salNet) + "</strong>", "<strong>" + formatINR(freeNet) + "</strong>"]
+        ];
+
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 border-b border-slate-100 transition-colors">
+                <td class="px-4 py-3 whitespace-nowrap">${r[0]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap">${r[1]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap font-medium text-blue-600 bg-blue-50/50">${r[2]}</td>
+            </tr>
+        `).join('');
+
+        // Expert Verdict update
+        if (benefit > 0) {
+            elements.verdictText.textContent = `As a freelancer, you save ${formatINR(benefit)} in Income Tax, but remember to factor in the cost of self-funded health insurance and loss of employer EPF contributions.`;
+        } else {
+            elements.verdictText.textContent = `At this income level, the tax benefit is marginal. Consider staying salaried for perks like EPF and Group Insurance.`;
+        }
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.grossIncome, elements.grossRange);
+        elements.profTax.addEventListener('input', calculate);
+        
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{
+            document.getElementById("navbar").innerHTML=data;
+            const btn=document.getElementById("menuBtn");
+            const menu=document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click",()=>{ menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html> review this 
