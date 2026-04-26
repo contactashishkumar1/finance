@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Fund Portfolio Overlap Estimator (2026) – Diversification Score</title>
+    <meta name="description" content="Check mutual fund portfolio overlap instantly. Calculate diversification score and identify redundant funds in your SIP portfolio for 2026.">
+    <meta name="keywords" content="mutual fund overlap calculator india, portfolio overlap estimator, mf diversification score, redundant mutual funds, index fund vs large cap overlap">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-26">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/portfolio-overlap/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Mutual Fund Portfolio Overlap Estimator (2026) – Strategy Edition">
+    <meta property="og:description" content="Earning high returns requires smart diversification. Check if your Mutual Funds are just cloning each other with our overlap estimator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/portfolio-overlap/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://arthcalculator.in/#organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Mutual Fund Portfolio Overlap Analysis",
+          "description": "Professional tool to estimate stock overlap between different mutual fund categories in India.",
+          "url": "https://arthcalculator.in/portfolio-overlap/",
+          "isPartOf": { "@id": "https://arthcalculator.in/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Portfolio Overlap Estimator",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "Portfolio Overlap" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to check Mutual Fund Overlap",
+          "step": [
+            { "@type": "HowToStep", "name": "Select Categories", "text": "Choose the fund categories (Large, Mid, Small, etc.) in your portfolio." },
+            { "@type": "HowToStep", "name": "Enter SIP Amounts", "text": "Input your monthly SIP value for each fund to weight the overlap impact." },
+            { "@type": "HowToStep", "name": "Analyze Overlap", "text": "View the calculated overlap percentage based on 2026 category averages." },
+            { "@type": "HowToStep", "name": "Review Score", "text": "Check your Diversification Score (1-100) to ensure your risk is spread." },
+            { "@type": "HowToStep", "name": "Optimize", "text": "Identify redundant funds and rebalance your asset allocation." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is 50% overlap in mutual funds bad?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An overlap of 50% is considered moderate. While not critical, it means half of your money in those two funds is chasing the same set of stocks, reducing the benefit of diversification."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why do most Large Cap funds have high overlap with Nifty 50?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "SEBI mandates Large Cap funds to invest at least 80% in the top 100 companies. Since the Nifty 50 represents the biggest of these, active managers often have 80-95% overlap with the index."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .formula-box { background: #f1f5f9; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .venn-circle { transition: all 0.5s ease; mix-blend-mode: multiply; }
+        button:disabled { cursor: not-allowed; opacity: 0.6; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0 text-pretty">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors text-pretty">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center text-pretty">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors text-pretty">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Portfolio Overlap Estimator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight text-pretty">Mutual Fund Portfolio Overlap Estimator (2026 Strategy Edition)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed text-pretty">
+                        Are your mutual funds just cloning each other? Use our <strong>portfolio overlap tool</strong> to identify redundancy across categories. Stop buying the same stocks under different names and improve your diversification for 2026.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm whitespace-nowrap text-pretty">2026 Edition</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        Portfolio Funds
+                    </h2>
+
+                    <div id="fundsContainer" class="space-y-4 mb-6">
+                        <!-- Fund 1 -->
+                        <div class="fund-row p-4 border border-slate-100 rounded-xl bg-slate-50 relative group">
+                            <div class="grid grid-cols-1 gap-4">
+                                <div>
+                                    <label class="text-[10px] font-bold text-slate-400 uppercase block mb-1 text-pretty">Fund 1 Type</label>
+                                    <select class="fund-type w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold bg-white outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option value="LC">Large Cap Fund</option>
+                                        <option value="IDX" selected>Index Fund (Nifty 50)</option>
+                                        <option value="MC">Mid Cap Fund</option>
+                                        <option value="SC">Small Cap Fund</option>
+                                        <option value="FC">Flexi Cap Fund</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="text-[10px] font-bold text-slate-400 uppercase block mb-1">Monthly SIP (₹)</label>
+                                    <input type="number" class="fund-sip w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold" value="10000" min="500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fund 2 -->
+                        <div class="fund-row p-4 border border-slate-100 rounded-xl bg-slate-50 relative group">
+                            <div class="grid grid-cols-1 gap-4">
+                                <div>
+                                    <label class="text-[10px] font-bold text-slate-400 uppercase block mb-1 text-pretty">Fund 2 Type</label>
+                                    <select class="fund-type w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold bg-white outline-none focus:ring-2 focus:ring-blue-500">
+                                        <option value="LC" selected>Large Cap Fund</option>
+                                        <option value="IDX">Index Fund (Nifty 50)</option>
+                                        <option value="MC">Mid Cap Fund</option>
+                                        <option value="SC">Small Cap Fund</option>
+                                        <option value="FC">Flexi Cap Fund</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="text-[10px] font-bold text-slate-400 uppercase block mb-1">Monthly SIP (₹)</label>
+                                    <input type="number" class="fund-sip w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold" value="5000" min="500">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="addFundBtn" class="w-full py-2 border-2 border-dashed border-slate-200 text-slate-400 text-xs font-bold rounded-xl hover:border-blue-300 hover:text-blue-500 transition-all mb-6">
+                        + Add Another Fund (Max 4)
+                    </button>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Analyze Diversification
+                    </button>
+                </div>
+
+                <!-- Snapshot Info -->
+                <div id="scoreCard" class="bg-emerald-600 p-6 rounded-2xl text-white shadow-lg shadow-emerald-200 text-pretty text-pretty">
+                    <p class="text-emerald-100 text-[10px] font-medium uppercase mb-1">Portfolio Health Score</p>
+                    <h3 id="diversificationScore" class="text-3xl font-bold leading-tight">--/100</h3>
+                    <p class="text-emerald-100 text-xs mt-2" id="verdictText">Select categories to start the analysis.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Overlap & Redundancy Dashboard</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2 text-pretty">Estimated Overlap</h4>
+                            <div class="text-3xl font-extrabold text-blue-900" id="overlapPercentage">0%</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">Common holdings in your portfolio</p>
+                        </div>
+                        <div id="redundancyBox" class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2 text-pretty text-pretty">Unique Exposure</h4>
+                            <div class="text-3xl font-extrabold text-emerald-900" id="uniquePercentage">100%</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium text-pretty text-pretty">Non-redundant stock picking</p>
+                        </div>
+                    </div>
+
+                    <!-- Visual Venn Diagram -->
+                    <div class="flex justify-center items-center py-10 bg-slate-50 rounded-2xl border border-slate-100 mb-10 relative overflow-hidden h-[300px]">
+                        <div id="circle1" class="venn-circle w-40 h-40 rounded-full bg-blue-500 absolute" style="left: 30%; transform: translateX(-50%); opacity: 0.7;"></div>
+                        <div id="circle2" class="venn-circle w-40 h-40 rounded-full bg-emerald-400 absolute" style="left: 70%; transform: translateX(-50%); opacity: 0.7;"></div>
+                        <p class="absolute bottom-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-pretty">Rupee-at-Risk Visualization</p>
+                    </div>
+
+                    <!-- Redundancy Alert Card -->
+                    <div id="riskAlert" class="hidden bg-rose-50 border border-rose-100 rounded-xl p-5 mb-8 flex items-start gap-4">
+                        <div class="mt-1">
+                            <svg class="w-6 h-6 text-rose-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-rose-900 font-bold text-sm uppercase tracking-tight text-pretty">High Redundancy Detected</h4>
+                            <p class="text-xs text-rose-800 mt-1 leading-relaxed text-pretty" id="riskMsg">
+                                You are essentially buying the same stocks twice. Your portfolio is highly concentrated in a few top names.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4 text-pretty">Portfolio Component Table</h3>
+                    <div class="overflow-hidden text-pretty text-pretty">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar text-pretty text-pretty">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 text-pretty">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Code</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Category</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Monthly SIP</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Weight</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex gap-4 text-pretty text-pretty text-pretty">
+                        <button onclick="exportResult()" class="flex-1 py-3 border border-slate-200 hover:bg-slate-50 rounded-xl text-xs font-bold text-slate-600 transition-all text-pretty">
+                            📋 Export Portfolio Summary
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">How Overlap is Estimated</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Score = 100 - [(Σ Overlap Prob × Weighted SIP) / Total SIP] - Penalty
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Diversity Penalty:</strong> A 10% penalty is applied for each category that has more than 2 funds to discourage "scheme hoarding."</p>
+                        <p><strong>Category Probability:</strong> In 2026, Large Cap funds share ~80% of stocks with the Nifty 50 Index. Mid & Small caps have lower overlap (~10%).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty" id="about">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is Mutual Fund Overlap?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>Mutual Fund overlap occurs when you invest in multiple funds that hold the same underlying stocks in their portfolios. For instance, if you own both an <strong>HDFC Index Fund</strong> and an <strong>SBI Bluechip Fund</strong>, you might have an overlap of nearly 90% because both are forced by mandate to buy the same top 100 Indian companies like Reliance, HDFC Bank, and TCS.</p>
+                    <p>While some overlap is inevitable, high redundancy (above 60%) defeats the purpose of diversification. It makes your portfolio "top-heavy," meaning your returns are dependent on just a few stock names rather than the broader market.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6 text-pretty">Category Overlap Matrix: 2026 Benchmarks</h2>
+                <div class="overflow-x-auto text-pretty">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Fund Pair</th>
+                                <th class="p-4 border-b">Estimated Overlap</th>
+                                <th class="p-4 border-b">Verdict</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600">
+                            <tr><td class="p-4 border-b font-medium">Index vs Large Cap</td><td class="p-4 border-b">85% - 95%</td><td class="p-4 border-b text-rose-500 font-bold">Highly Redundant</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Flexi Cap vs Large Cap</td><td class="p-4 border-b">55% - 70%</td><td class="p-4 border-b">Moderate Overlap</td></tr>
+                            <tr><td class="p-4 border-b font-medium text-pretty">Large Cap vs Small Cap</td><td class="p-4 border-b">5% - 12%</td><td class="p-4 border-b text-emerald-600 font-bold">Excellent Diversification</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Mid Cap vs Small Cap</td><td class="p-4 border-b">20% - 35%</td><td class="p-4 border-b">Healthy Blend</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Checklist: How to Prune a Redundant Portfolio</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-pretty">
+                    <ul class="list-disc ml-5 space-y-3 text-sm text-slate-600">
+                        <li><strong>Consolidate Large Caps:</strong> If you have an Index fund, you probably don't need an active Large Cap fund.</li>
+                        <li><strong>Verify Flexi-Caps:</strong> Many Indian Flexi-cap funds are currently biased towards Large Caps (70%+). Check their mid-cap exposure.</li>
+                        <li><strong>Limit Fund Count:</strong> An ideal portfolio doesn't need more than 4-5 well-picked mutual funds.</li>
+                    </ul>
+                    <ul class="list-disc ml-5 space-y-3 text-sm text-slate-600 text-pretty">
+                        <li><strong>Avoid NFO Clones:</strong> Don't buy New Fund Offers that track the same theme as your existing funds.</li>
+                        <li><strong>Rebalance Annually:</strong> Fund managers change stock picks; your overlap should be checked every 12 months.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Technical Insight: Portfolio Concentration Risk</h2>
+                <p class="text-sm leading-relaxed opacity-90 mb-4 text-pretty text-pretty">
+                    In finance, <strong>Tracking Error</strong> and <strong>Concentration</strong> are the two silent profit killers. When your funds have high overlap, your tracking error relative to the index might stay low, but your risk concentration peaks. If the top 5 stocks in the Nifty 50 face a sector-wide correction, a redundant portfolio can lose 20-30% of its value even if you hold "different" mutual fund schemes.
+                </p>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10 text-pretty text-pretty" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Mutual Fund Overlap FAQs</h2>
+                <div class="space-y-4 text-pretty text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is 50% overlap in mutual funds bad?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It's a warning sign. 50% overlap means half your investment is buying identical stocks. You are paying expense ratios to two different AMCs for the same result.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How to check overlap for free in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">You can use our estimator for a quick category-based check. For stock-by-stock accuracy, platforms like Advisorkhoj or Fundoo provide detailed sheet-based comparisons.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does high overlap increase my risk?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes. It increases "Idiosyncratic Risk." By holding the same stocks in multiple funds, you lose the safety net of having other stocks perform well when one sector or company fails.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">How many funds should I have?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">An ideal portfolio for most retail investors should have 3-4 categories: 1 Index/Large Cap, 1 Mid Cap, 1 Small Cap, and possibly 1 International or Flexi Cap fund.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty text-pretty">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Can I have 0% overlap?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Nearly impossible. Most diversified funds will eventually pick the same market leaders. The goal is to keep the aggregate overlap below 30% for a healthy portfolio.</div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Is overlap bad for tax purposes?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Indirectly, yes. If you decide to consolidate redundant funds, you may trigger LTCG tax (12.5% on gains > 1.25L) upon redemption. Plan your rebalancing carefully.</div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- Wealth Management CTAs -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="/asset-allocation/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-blue-500 transition-all group text-pretty">
+                    <h4 class="text-blue-600 font-bold text-sm mb-1 text-pretty">Rebalance your Assets</h4>
+                    <p class="text-slate-500 text-xs mb-4 text-pretty">Go beyond Mutual Funds. Optimize your Gold, Real Estate, and Debt allocation.</p>
+                    <span class="text-blue-600 font-semibold text-xs group-hover:underline">Start Rebalancing →</span>
+                </a>
+                <a href="/net-worth/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-emerald-500 transition-all group text-pretty">
+                    <h4 class="text-emerald-600 font-bold text-sm mb-1 text-pretty">Check your Net Worth</h4>
+                    <p class="text-slate-500 text-xs mb-4 text-pretty">See how a consolidated portfolio accelerates your overall wealth journey.</p>
+                    <span class="text-emerald-600 font-semibold text-xs group-hover:underline text-pretty">Use Net Worth Tool →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    // Overlap Probability Matrix (2026 Category Averages)
+    const overlapMatrix = {
+        'LC': {'LC': 75, 'IDX': 92, 'MC': 18, 'SC': 5,  'FC': 65},
+        'IDX':{'LC': 92, 'IDX': 95, 'MC': 12, 'SC': 3,  'FC': 55},
+        'MC': {'LC': 18, 'IDX': 12, 'MC': 50, 'SC': 35, 'FC': 45},
+        'SC': {'LC': 5,  'IDX': 3,  'MC': 35, 'SC': 45, 'FC': 25},
+        'FC': {'LC': 65, 'IDX': 55, 'MC': 45, 'SC': 25, 'FC': 65}
+    };
+
+    const container = document.getElementById('fundsContainer');
+    const addBtn = document.getElementById('addFundBtn');
+
+    addBtn.addEventListener('click', () => {
+        const rows = document.querySelectorAll('.fund-row');
+        if (rows.length >= 4) return;
+        
+        const newRow = rows[0].cloneNode(true);
+        newRow.querySelector('.fund-type').id = `type_${rows.length + 1}`;
+        newRow.querySelector('.fund-sip').id = `sip_${rows.length + 1}`;
+        newRow.querySelector('.fund-sip').value = 5000;
+        
+        const delBtn = document.createElement('button');
+        delBtn.innerHTML = '×';
+        delBtn.className = 'absolute top-2 right-2 text-slate-300 hover:text-rose-500 text-xl font-bold px-2';
+        delBtn.onclick = function() { 
+            this.parentElement.remove(); 
+            const currentRows = document.querySelectorAll('.fund-row');
+            if (currentRows.length < 4) {
+                addBtn.disabled = false;
+                addBtn.innerText = "+ Add Another Fund (Max 4)";
+            }
+            update(); 
+        };
+        newRow.appendChild(delBtn);
+        container.appendChild(newRow);
+
+        if (document.querySelectorAll('.fund-row').length >= 4) {
+            addBtn.disabled = true;
+            addBtn.innerText = "Max Funds Reached";
+        }
+        update();
+    });
+
+    function formatINR(val) {
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const rows = document.querySelectorAll('.fund-row');
+        const funds = [];
+        let totalSIP = 0;
+        const counts = {};
+
+        rows.forEach(row => {
+            const type = row.querySelector('.fund-type').value;
+            const sip = parseFloat(row.querySelector('.fund-sip').value) || 0;
+            funds.push({ type, sip });
+            totalSIP += sip;
+            counts[type] = (counts[type] || 0) + 1;
+        });
+
+        if (totalSIP === 0) return;
+
+        // Base Weighted Overlap Calculation
+        let weightedOverlapSum = 0;
+        let pairWeightSum = 0;
+
+        for (let i = 0; i < funds.length; i++) {
+            for (let j = i + 1; j < funds.length; j++) {
+                const f1 = funds[i];
+                const f2 = funds[j];
+                const prob = overlapMatrix[f1.type][f2.type];
+                const weight = (f1.sip + f2.sip);
+                weightedOverlapSum += (prob * weight);
+                pairWeightSum += weight;
+            }
+        }
+
+        let avgOverlap = pairWeightSum > 0 ? (weightedOverlapSum / pairWeightSum) : 0;
+        if (funds.length === 1) avgOverlap = 0;
+
+        // Refinement 1: Multi-Fund Logic Penalty
+        let penalty = 0;
+        Object.values(counts).forEach(count => {
+            if (count > 2) penalty += 10;
+        });
+
+        const finalOverlap = Math.min(100, Math.max(0, avgOverlap + penalty));
+        const uniqueExp = 100 - finalOverlap;
+        const score = Math.round(uniqueExp);
+
+        // Update UI
+        document.getElementById('overlapPercentage').textContent = `${finalOverlap.toFixed(1)}%`;
+        document.getElementById('uniquePercentage').textContent = `${uniqueExp.toFixed(1)}%`;
+        document.getElementById('diversificationScore').textContent = `${score}/100`;
+
+        // Venn Diagram Logic
+        const overlapShift = (finalOverlap / 100) * 40; 
+        document.getElementById('circle1').style.left = (30 + (overlapShift / 2)) + "%";
+        document.getElementById('circle2').style.left = (70 - (overlapShift / 2)) + "%";
+
+        // Table with "Code" column
+        document.getElementById('breakdownTable').innerHTML = funds.map(f => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100 text-pretty">
+                <td class="px-4 py-3 whitespace-nowrap font-bold text-blue-600">${f.type}</td>
+                <td class="px-4 py-3 whitespace-nowrap font-medium">${getCategoryName(f.type)}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap">${formatINR(f.sip)}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap">${((f.sip/totalSIP)*100).toFixed(1)}%</td>
+            </tr>
+        `).join('');
+
+        // Verdicts
+        const scoreCard = document.getElementById('scoreCard');
+        const riskAlert = document.getElementById('riskAlert');
+        const verdictText = document.getElementById('verdictText');
+
+        if (finalOverlap > 60) {
+            scoreCard.className = "bg-rose-600 p-6 rounded-2xl text-white shadow-lg shadow-rose-200";
+            riskAlert.classList.remove('hidden');
+            verdictText.textContent = "High Concentration Risk Detected.";
+            document.getElementById('overlapPercentage').className = "text-3xl font-extrabold text-rose-600";
+        } else if (finalOverlap > 30) {
+            scoreCard.className = "bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200";
+            riskAlert.classList.add('hidden');
+            verdictText.textContent = "Balanced but slightly redundant.";
+            document.getElementById('overlapPercentage').className = "text-3xl font-extrabold text-blue-900";
+        } else {
+            scoreCard.className = "bg-emerald-600 p-6 rounded-2xl text-white shadow-lg shadow-emerald-200";
+            riskAlert.classList.add('hidden');
+            verdictText.textContent = "Great! Your portfolio is well-diversified.";
+            document.getElementById('overlapPercentage').className = "text-3xl font-extrabold text-blue-900";
+        }
+
+        // Insight Box
+        let insight = `Your diversification score of <strong>${score}</strong> is calculated across ${funds.length} funds. `;
+        if (penalty > 0) {
+            insight += `<br><span class="text-rose-600 font-bold">⚠️ Diversity Penalty:</span> You have ${Object.keys(counts).find(k => counts[k]>2)} funds in the same category, causing massive redundancy.`;
+        } else if (finalOverlap > 50) {
+            insight += `Since your overlap is high, you are paying <strong>extra commissions</strong> for similar stock picks.`;
+        } else {
+            insight += `Your fund categories have low correlation, which will protect your capital better during market dips.`;
+        }
+        document.getElementById('insightText').innerHTML = insight;
+    }
+
+    function getCategoryName(code) {
+        const names = {'LC': 'Large Cap', 'IDX': 'Index Fund', 'MC': 'Mid Cap', 'SC': 'Small Cap', 'FC': 'Flexi Cap'};
+        return names[code];
+    }
+
+    function exportResult() {
+        const score = document.getElementById('diversificationScore').textContent;
+        const overlap = document.getElementById('overlapPercentage').textContent;
+        const diagnosis = document.getElementById('verdictText').textContent;
+        const text = `Mutual Fund Portfolio Audit (ArthCalculator)\n------------------------------\nDiversification Score: ${score}\nEstimated Overlap: ${overlap}\nStatus: ${diagnosis}\nDiagnosis: ${diagnosis}\n------------------------------\nCheck yours at arthcalculator.in/portfolio-overlap/`;
+        
+        const dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        
+        const btn = document.querySelector('button[onclick="exportResult()"]');
+        const originalText = btn.textContent;
+        btn.textContent = "✅ Copied to Clipboard";
+        setTimeout(() => { btn.textContent = originalText; }, 2000);
+    }
+
+    function update() {
+        document.querySelectorAll('.fund-type, .fund-sip').forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+        calculate();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        update();
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{
+            document.getElementById("navbar").innerHTML=data;
+            const btn=document.getElementById("menuBtn");
+            const menu=document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click",()=>{ menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+    });
+</script>
+</body>
+</html>
