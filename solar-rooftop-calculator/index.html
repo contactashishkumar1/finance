@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Rooftop ROI & Subsidy Calculator (2026) – PM Surya Ghar Edition</title>
+    <meta name="description" content="Calculate solar rooftop subsidy under PM Surya Ghar Yojana 2026. Estimate system cost, monthly savings, payback period, and 25-year ROI for solar in India.">
+    <meta name="keywords" content="solar calculator india, pm surya ghar subsidy calculator, solar rooftop roi india, solar payback period, residential solar subsidy 2026, sbi surya shakti loan">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-26">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/solar-rooftop-calculator/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Solar Rooftop ROI & Subsidy Calculator (2026) – PM Surya Ghar Edition">
+    <meta property="og:description" content="Earning from the sun? Calculate your 2026 PM Surya Ghar subsidy and find out your solar payback period instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/solar-rooftop-calculator/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialProduct",
+      "name": "Solar ROI & Subsidy Calculator",
+      "description": "Calculates financial returns and government subsidies for residential solar rooftop systems in India.",
+      "url": "https://arthcalculator.in/solar-rooftop-calculator/",
+      "brand": {
+        "@type": "Brand",
+        "name": "ArthCalculator"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Install Solar Rooftop in India 2026",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Feasibility Check",
+          "text": "Assess your roof area and monthly electricity unit consumption."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "National Portal Application",
+          "text": "Register on the PM Surya Ghar National Portal and select a local Discom."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Vendor Selection",
+          "text": "Choose an empanelled vendor to install the MNRE-approved solar modules."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Net Metering",
+          "text": "Apply for a solar net-meter with your Discom to export surplus power."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Subsidy Claim",
+          "text": "Submit the installation certificate to receive a direct bank transfer of the subsidy."
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .formula-box { background: #f1f5f9; padding: 1.5rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12 text-pretty">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start" aria-label="Breadcrumb">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Financial Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Solar ROI Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Solar Rooftop ROI & Subsidy Calculator (2026) – PM Surya Ghar Edition</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Transition to clean energy and wipe out your electricity bills. Calculate your <strong>PM Surya Ghar subsidy</strong>, estimated installation costs, and long-term financial savings for residential solar in India.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm whitespace-nowrap">2026 Edition</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        Project Details
+                    </h2>
+
+                    <!-- Inputs -->
+                    <div class="mb-8 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 gap-2">
+                            <label class="text-sm font-medium text-slate-600">Monthly Bill (₹)</label>
+                            <input type="number" id="monthlyBill" value="4500" min="1" class="w-full sm:w-28 px-3 py-2 border border-slate-200 rounded-lg text-left sm:text-right font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <input type="range" id="monthlyBillRange" min="500" max="25000" step="100" value="4500" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8 text-pretty">
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-2">System Size (kW)</label>
+                            <input type="number" id="systemSize" value="3" min="1" max="10" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-600 block mb-2">State Factor</label>
+                            <select id="stateFactor" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold bg-white text-sm">
+                                <option value="1.15">Rajasthan/Gujarat (High)</option>
+                                <option value="1.0" selected>Delhi/Maharashtra (Avg)</option>
+                                <option value="0.9">Kerala/NE (Low)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="sanctionedLoadWarning" class="hidden p-4 bg-amber-50 text-amber-700 text-[11px] rounded-xl border border-amber-100 font-medium mb-8">
+                        ⚠️ Warning: Your solar system size might exceed your home's Sanctioned Load. Check your bill or contact your Discom to avoid net-metering rejection.
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between mb-2">
+                            <label class="text-sm font-medium text-slate-600">Available Roof Area (Sq Ft)</label>
+                            <span class="text-sm font-bold text-blue-600" id="areaLabel">300 Sq Ft</span>
+                        </div>
+                        <input type="range" id="roofArea" min="100" max="2000" step="50" value="300" class="w-full py-2 cursor-pointer">
+                        <p class="text-[10px] text-slate-400 italic">Approx 100 sq ft is needed for every 1kW.</p>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Calculate ROI
+                    </button>
+                </div>
+
+                <!-- Green Snapshot -->
+                <div class="bg-emerald-600 p-6 rounded-2xl text-white shadow-lg shadow-emerald-200">
+                    <p class="text-emerald-100 text-[10px] font-medium uppercase mb-1">Carbon Footprint Saved</p>
+                    <h3 id="carbonDisplay" class="text-3xl font-bold leading-tight">60 Trees</h3>
+                    <p class="text-emerald-100 text-xs mt-2" id="carbonSubtext">Equivalent CO2 absorption per year.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Maturity & Savings Dashboard</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">Net Payback Period</h4>
+                            <div class="text-3xl font-extrabold text-emerald-600" id="paybackDisplay">0.0 Years</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">Until your system pays for itself</p>
+                        </div>
+                        <div class="p-5 bg-emerald-50 rounded-2xl border border-emerald-100">
+                            <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2 text-pretty text-pretty text-pretty">25-Year Net Profit</h4>
+                            <div class="text-3xl font-extrabold text-emerald-900" id="totalProfitDisplay">₹0</div>
+                            <p class="text-[10px] text-emerald-600 mt-1 font-medium text-pretty">After system cost & maint.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Estimated Generation</span>
+                            <span class="text-slate-400 font-bold uppercase">Monthly Usage</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="genBar" class="h-full bg-blue-500 transition-all duration-700 ease-out" style="width: 50%"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 text-center" id="generationText">Generating 0 units against 0 units needed.</p>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Subsidy Breakdown
+                        </h4>
+                        <div id="subsidyInsight" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing PM Surya Ghar incentives...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Investment Breakup</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b">Category</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right">Estimated Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Wealth Management CTAs -->
+                    <div class="mt-12 text-pretty">
+                        <h3 class="text-slate-800 font-bold text-base mb-6 text-center">Solar Financing & Reinvestment</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <a href="/emi/" class="block p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-blue-500 transition-all group">
+                                <h4 class="text-blue-600 font-bold text-sm mb-1 text-pretty">Financing Solar?</h4>
+                                <p class="text-slate-500 text-xs mb-4 text-pretty">Calculate the EMI for a specialized "Green Home Loan" (SBI Surya Shakti).</p>
+                                <span class="text-blue-600 font-semibold text-xs group-hover:underline">Check Loan EMI →</span>
+                            </a>
+                            <a href="/sip/" class="block p-5 bg-slate-50 rounded-2xl border border-slate-100 hover:border-emerald-500 transition-all group text-pretty text-pretty text-pretty">
+                                <h4 class="text-emerald-600 font-bold text-sm mb-1">Invest your Savings</h4>
+                                <p class="text-slate-500 text-xs mb-4">Put your monthly electricity savings into a SIP to grow wealth.</p>
+                                <span class="text-emerald-600 font-semibold text-xs group-hover:underline">Start Savings SIP →</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">PM Surya Ghar Subsidy (2026)</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Max Subsidy = ₹30k (1st kW) + ₹30k (2nd kW) + ₹18k (3rd kW) = ₹78,000
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>First 2 kW:</strong> ₹30,000 per kW Fixed.</p>
+                        <p><strong>Additional kW:</strong> ₹18,000 for the 3rd kW. Total capped at ₹78,000 for residential homes.</p>
+                        <p><strong>Maintenance:</strong> We factor in a 15% TCO overhead for cleaning and inverter replacement (~Year 12).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="pm-surya-ghar">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">How PM Surya Ghar Scheme Works 2026</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>The <strong>PM Surya Ghar Muft Bijli Yojana</strong> is the primary vehicle for India's energy transition. In 2026, the scheme continues to provide a direct bank transfer of up to ₹78,000 for residential households. The subsidy is strictly linked to <strong>DCR (Domestic Content Requirement)</strong>, meaning your solar panels must be manufactured in India to qualify for the grant.</p>
+                    <p>The process is fully digitized via the National Portal. Once your vendor uploads the commissioning report and the net-meter is installed, the MNRE verifies the data and pushes the subsidy into your Aadhaar-linked bank account within 15 to 20 days.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">5 Steps to PM Surya Ghar Subsidy 2026</h2>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-6 text-pretty">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-center text-pretty">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">1</div>
+                        <p class="text-xs font-bold text-slate-800">Registration</p>
+                        <p class="text-[10px] text-slate-500 mt-1">Apply on the National Portal with consumer ID.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-center">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">2</div>
+                        <p class="text-xs font-bold text-slate-800">Feasibility</p>
+                        <p class="text-[10px] text-slate-500 mt-1">Discom grants technical approval.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-center text-pretty text-pretty">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">3</div>
+                        <p class="text-xs font-bold text-slate-800">Installation</p>
+                        <p class="text-[10px] text-slate-500 mt-1">Work done by empanelled vendors.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-center text-pretty">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">4</div>
+                        <p class="text-xs font-bold text-slate-800">Net Metering</p>
+                        <p class="text-[10px] text-slate-500 mt-1">Bi-directional meter installation.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 text-center">
+                        <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-3 font-bold">5</div>
+                        <p class="text-xs font-bold text-slate-800">DBT Pay</p>
+                        <p class="text-[10px] text-slate-500 mt-1">Cashback hits your bank account.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Investment Comparison: Solar vs Fixed Deposit (FD)</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Feature</th>
+                                <th class="p-4 border-b">Residential Solar (3kW)</th>
+                                <th class="p-4 border-b">Fixed Deposit (FD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm">
+                            <tr><td class="p-4 border-b font-medium">Initial Cost</td><td class="p-4 border-b">₹1.5 Lakhs (Post-Subsidy)</td><td class="p-4 border-b">₹1.5 Lakhs</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Annual Yield</td><td class="p-4 border-b text-emerald-600 font-bold">25% - 35% (Bill Savings)</td><td class="p-4 border-b">6.5% - 7.5% (Interest)</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Taxation</td><td class="p-4 border-b">100% Tax-Free Alpha</td><td class="p-4 border-b">Taxed at Income Slab</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Real Return</td><td class="p-4 border-b font-bold">Strongly Beats Inflation</td><td class="p-4 border-b text-rose-500">Below Inflation (Net)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Technical Insight -->
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4 text-pretty text-pretty">Deep-Dive: Net Metering vs Gross Metering</h2>
+                <p class="text-sm leading-relaxed opacity-90 mb-4">
+                    <strong>Net Metering</strong> is the gold standard for residential solar in 2026. It allows you to offset your electricity bill unit-for-unit. If your house consumes 300 units but your solar generates 300 units, your 'Energy Charge' becomes zero. You only pay fixed meter rent.
+                </p>
+                <p class="text-sm leading-relaxed opacity-90 text-pretty">
+                    <strong>Gross Metering</strong> is often used for commercial setups where all solar power produced is sold to the Discom at a fixed low tariff, while you buy back power at a high consumer rate. For homeowners, always prioritize Net Metering to maximize ROI.
+                </p>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Solar Rooftop FAQ (2026 Edition)</h2>
+                <div class="space-y-4 text-pretty text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Can I take a collateral-free loan for solar in 2026?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Yes. Under the PM Surya Ghar scheme, banks like SBI offer the "Surya Shakti" loan. For systems up to 3kW, you can get collateral-free financing at interest rates around 7% (tied to the repo rate).
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">How long does it take for the subsidy to hit the bank account?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            Once the Discom finishes net-metering and the commissioning certificate is uploaded to the National Portal, the subsidy typically arrives via DBT within 15 to 20 business days.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Are there additional state-level subsidies?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">
+                            While the PM Surya Ghar is a Central scheme, states like Gujarat (Surya Gujarat) and Uttar Pradesh occasionally offer extra top-up subsidies or lower registration fees. However, most homeowners find the ₹78,000 Central grant sufficient.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base">Is DCR mandatory for the subsidy?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">
+                            Yes. Domestic Content Requirement (DCR) is mandatory for residential subsidies. This means the solar cells and modules used in your installation must be manufactured within India.
+                        </div>
+                    </details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty">
+                        <summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+                            <span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What documents are required for application?</span>
+                            <svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">
+                            You primarily need: 1. Latest Electricity Bill, 2. Aadhaar Card, 3. Bank Account details (with cancelled cheque), and 4. A photograph of the rooftop space.
+                        </div>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        monthlyBill: document.getElementById('monthlyBill'),
+        monthlyBillRange: document.getElementById('monthlyBillRange'),
+        systemSize: document.getElementById('systemSize'),
+        stateFactor: document.getElementById('stateFactor'),
+        roofArea: document.getElementById('roofArea'),
+        areaLabel: document.getElementById('areaLabel'),
+        paybackDisplay: document.getElementById('paybackDisplay'),
+        totalProfitDisplay: document.getElementById('totalProfitDisplay'),
+        carbonDisplay: document.getElementById('carbonDisplay'),
+        genBar: document.getElementById('genBar'),
+        generationText: document.getElementById('generationText'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        subsidyInsight: document.getElementById('subsidyInsight'),
+        sanctionedLoadWarning: document.getElementById('sanctionedLoadWarning')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const bill = parseFloat(elements.monthlyBill.value) || 0;
+        const kw = parseFloat(elements.systemSize.value) || 1;
+        const factor = parseFloat(elements.stateFactor.value) || 1;
+        const area = parseFloat(elements.roofArea.value) || 100;
+
+        const avgUnitRate = 8.5; // Blended 2026 rate
+
+        // 1. Generation Logic
+        const unitsPerKwPerMo = 135 * factor; // Refined multiplier
+        const totalGenMo = unitsPerKwPerMo * kw;
+        const monthlySavings = totalGenMo * avgUnitRate;
+
+        // Usage Context (for warning)
+        const monthlyUsageUnits = bill / avgUnitRate;
+
+        // Technical Accuracy: Sanctioned Load Check
+        if (totalGenMo > monthlyUsageUnits * 1.3) {
+            elements.sanctionedLoadWarning.classList.remove('hidden');
+        } else {
+            elements.sanctionedLoadWarning.classList.add('hidden');
+        }
+
+        // 2. Cost & Subsidy Logic (PMSG 2026 Tiers)
+        const costPerKw = 68000; // 2026 benchmark for high-efficiency DCR
+        const grossCost = kw * costPerKw;
+        
+        let subsidy = 0;
+        if (kw === 1) subsidy = 30000;
+        else if (kw === 2) subsidy = 60000;
+        else if (kw >= 3) subsidy = 78000; // Capped at 3kW
+
+        const netCost = grossCost - subsidy;
+
+        // 3. Financial Metrics
+        const annualSavings = monthlySavings * 12;
+        const paybackYrs = netCost / annualSavings;
+
+        const lifeSpan = 25;
+        const maintCost = grossCost * 0.15; // 15% life-cycle maintenance Fix
+        const totalProfit = (annualSavings * lifeSpan) - netCost - maintCost;
+
+        const carbonSaved = kw * 82; // Updated tree equivalent for 2026 modules
+
+        // UI Updates
+        elements.areaLabel.textContent = `${area} Sq Ft`;
+        elements.paybackDisplay.textContent = `${paybackYrs.toFixed(1)} Years`;
+        elements.totalProfitDisplay.textContent = formatINR(totalProfit);
+        elements.carbonDisplay.textContent = `${Math.round(carbonSaved)} Trees`;
+
+        // Gen Bar
+        const genPct = Math.min(100, (totalGenMo / (monthlyUsageUnits || 1)) * 100);
+        elements.genBar.style.width = `${genPct}%`;
+        elements.generationText.textContent = `Producing ${Math.round(totalGenMo)} units against ${Math.round(monthlyUsageUnits)} units consumed.`;
+
+        // Table with whitespace-nowrap
+        const rows = [
+            ["Project Cost (Gross)", formatINR(grossCost)],
+            ["PM Surya Ghar Subsidy", "- " + formatINR(subsidy)],
+            ["Net Investment (Actual Cost)", "<strong>" + formatINR(netCost) + "</strong>"],
+            ["Est. Monthly Savings", formatINR(monthlySavings)],
+            ["25-Year Lifecycle Maint. (15%)", "- " + formatINR(maintCost)],
+            ["Projected 25-Year Savings", formatINR(annualSavings * 25)],
+            ["Solar ROI (Annualized)", ((annualSavings / netCost) * 100).toFixed(1) + "%"]
+        ];
+        
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                <td class="px-4 py-3 whitespace-nowrap">${r[0]}</td>
+                <td class="px-4 py-3 text-right font-medium ${r[0] === 'Net Investment (Actual Cost)' ? 'text-blue-600' : 'text-slate-800'} whitespace-nowrap">${r[1]}</td>
+            </tr>
+        `).join('');
+
+        // Insight Logic
+        let insight = "";
+        if (kw >= 3) {
+            insight = `Maximize your benefits! You've reached the <strong>₹78,000 cap</strong>. `;
+        } else {
+            insight = `High efficiency choice! You qualify for a <strong>${formatINR(subsidy)}</strong> direct subsidy. `;
+        }
+        
+        if (paybackYrs < 4.5) {
+            insight += `This investment pays for itself faster than a premium car loan!`;
+        } else {
+            insight += `At ${((annualSavings/netCost)*100).toFixed(0)}% ROI, this is significantly safer and higher-yielding than most equities.`;
+        }
+        elements.subsidyInsight.innerHTML = insight;
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.monthlyBill, elements.monthlyBillRange);
+        
+        [elements.systemSize, elements.stateFactor, elements.roofArea].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{
+            document.getElementById("navbar").innerHTML=data;
+            const btn=document.getElementById("menuBtn");
+            const menu=document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click",()=>{ menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html> review this and give go ahead 
