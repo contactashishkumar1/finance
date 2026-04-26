@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Life Value (HLV) Calculator India (2026) – Term Insurance Optimizer</title>
+    <meta name="description" content="Calculate your Human Life Value (HLV) using the needs-based approach. Estimate the ideal term insurance cover for 2026, factoring in inflation, debts, and goals.">
+    <meta name="keywords" content="hlv calculator india, human life value formula, how much term insurance do I need, life insurance calculator 2026, term plan shortfall calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-26">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/hlv-calculator/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Human Life Value (HLV) Calculator (2026) – Term Insurance Optimizer">
+    <meta property="og:description" content="Protect your family's future. Calculate your HLV and find the ideal term insurance cover based on 2026 inflation and goals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/hlv-calculator/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- Combined SEO Schemas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://arthcalculator.in/#organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Human Life Value (HLV) and Term Insurance Planning",
+          "description": "Financial tool to calculate the insurance coverage required to protect a family's lifestyle and goals.",
+          "url": "https://arthcalculator.in/hlv-calculator/",
+          "isPartOf": { "@id": "https://arthcalculator.in/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "HLV Calculator 2026",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "HLV Calculator" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to calculate your HLV for Insurance",
+          "step": [
+            { "@type": "HowToStep", "name": "Basic Details", "text": "Input your current age and planned retirement age." },
+            { "@type": "HowToStep", "name": "Expenses", "text": "Add your monthly family living expenses." },
+            { "@type": "HowToStep", "name": "Liabilities", "text": "List all outstanding debts like Home or Car loans." },
+            { "@type": "HowToStep", "name": "Existing Cover", "text": "Input your current insurance sum assured and liquid savings." },
+            { "@type": "HowToStep", "name": "View Results", "text": "Review the HLV result and the insurance shortfall." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the Human Life Value (HLV) method?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "HLV is a financial metric that estimates the total amount of money your family would need to maintain their standard of living and pay off debts if you were no longer around."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is 10x income rule enough for insurance?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In 2026, the 10x rule is often insufficient due to high medical inflation and debt. Experts now recommend 20x to 25x annual income or a needs-based HLV calculation."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .formula-box { background: #f1f5f9; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">HLV Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight">Human Life Value (HLV) Calculator (2026 Insurance Optimizer)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Don't leave your family's future to chance or outdated rules. Use our <strong>HLV Optimizer</strong> to determine the exact life insurance cover needed to replace your income, clear debts, and fund future goals.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 whitespace-nowrap">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">2026 Protection Logic</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        Protection Profile
+                    </h2>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase block mb-1">Current Age</label>
+                            <input type="number" id="currentAge" value="30" min="18" max="65" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase block mb-1">Retire Age</label>
+                            <input type="number" id="retireAge" value="60" min="45" max="75" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-2 focus:ring-blue-500 outline-none">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="text-sm font-medium text-slate-600 block mb-2">Monthly Family Expenses (₹)</label>
+                        <input type="number" id="monthlyExpenses" value="60000" step="5000" class="w-full px-3 py-2 border border-slate-200 rounded-lg font-semibold focus:ring-2 focus:ring-blue-500 outline-none">
+                        <p class="text-[10px] text-slate-400 mt-1">Include rent, groceries, bills, and school fees.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase block mb-1">Total Debts (₹)</label>
+                            <input type="number" id="totalDebts" value="4500000" step="50000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase block mb-1">Big Goals (₹)</label>
+                            <input type="number" id="bigGoals" value="2500000" step="50000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-2 focus:ring-blue-500">
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100 mb-6 text-pretty">
+                        <h3 class="text-xs font-bold text-slate-500 uppercase mb-4 tracking-wider">Existing Protection</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Current Life Cover (₹)</label>
+                                <input type="number" id="currentCover" value="1000000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Liquid Savings (₹)</label>
+                                <input type="number" id="savings" value="500000" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Calculate HLV
+                    </button>
+                </div>
+
+                <!-- Daily Cost Card -->
+                <div class="bg-blue-600 p-6 rounded-2xl text-white shadow-lg shadow-blue-200 text-pretty">
+                    <p class="text-blue-100 text-[10px] font-medium uppercase mb-1">Daily Cost of Protection</p>
+                    <h3 id="dailyCostDisplay" class="text-3xl font-bold leading-tight">₹0</h3>
+                    <p class="text-blue-100 text-xs mt-2" id="verdictText">Less than a cup of coffee to secure your legacy.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Maturity & Protection Dashboard</h2>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 bg-blue-50 rounded-2xl border border-blue-100">
+                            <h4 class="text-blue-700 text-xs font-bold uppercase tracking-wider mb-2">Total HLV Value</h4>
+                            <div class="text-2xl font-extrabold text-blue-900" id="totalHlv">₹0</div>
+                            <p class="text-[10px] text-blue-600 mt-1 font-medium">Economic value of your life</p>
+                        </div>
+                        <div class="p-5 bg-rose-50 rounded-2xl border border-rose-100">
+                            <h4 class="text-rose-700 text-xs font-bold uppercase tracking-wider mb-2">Insurance Shortfall</h4>
+                            <div class="text-2xl font-extrabold text-rose-900" id="shortfall">₹0</div>
+                            <p class="text-[10px] text-rose-600 mt-1 font-medium">Gap to be bridged today</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-emerald-600 font-bold uppercase">Estimated Monthly Premium</span>
+                            <span class="text-slate-400 font-bold uppercase">2026 Avg Rates</span>
+                        </div>
+                        <div class="flex items-baseline gap-2 mb-4">
+                            <span class="text-3xl font-extrabold text-emerald-600" id="premiumDisplay">₹0</span>
+                            <span class="text-sm text-slate-400 font-medium">/ month</span>
+                        </div>
+                        
+                        <h4 class="text-[10px] font-bold text-slate-500 uppercase mb-3">Protection Breakdown</h4>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="barExpenses" class="h-full bg-blue-500 transition-all duration-700" style="width: 40%"></div>
+                            <div id="barDebts" class="h-full bg-rose-400 transition-all duration-700" style="width: 30%"></div>
+                            <div id="barGoals" class="h-full bg-amber-400 transition-all duration-700" style="width: 30%"></div>
+                        </div>
+                        <div class="flex flex-wrap gap-4 mt-4 text-[10px] font-bold uppercase">
+                            <span class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-blue-500"></div> Expenses</span>
+                            <span class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-rose-400"></div> Debts</span>
+                            <span class="flex items-center gap-1.5"><div class="w-2 h-2 rounded-full bg-amber-400"></div> Goals</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Strategic Recommendation
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing your coverage gap...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Detailed Protection Table</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Category</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Amount Needed (₹)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex gap-4 no-print">
+                        <button onclick="window.print()" class="flex-1 py-3 border border-slate-200 hover:bg-slate-50 rounded-xl text-xs font-bold text-slate-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                            Print Summary
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">HLV Calculation Logic</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        HLV = (Expense Corpus) + Debts + Goals - Current Assets
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Expense Corpus:</strong> Calculated using the discounted cash flow of your annual expenses over working years, adjusted for 6% inflation and 8% risk-free returns.</p>
+                        <p><strong>Deductions:</strong> We subtract existing life cover and liquid savings to find the true shortfall you need to insure today.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="why-10x-obsolete">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Why the 10x Income Rule is Obsolete in 2026</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>For decades, insurance agents suggested a cover of "10 times your annual income." In 2026, this rule is dangerously low. With <strong>6-7% average inflation</strong> and <strong>12-15% medical inflation</strong> in India, ₹1 Crore (which seemed massive in 2015) can barely support a family of four for 7-8 years.</p>
+                    <p>Furthermore, lifestyle creep and high-value home loans mean your family needs a shield that clears liabilities *and* generates a sustainable monthly income. A more realistic baseline is now <strong>20x or 25x of your annual expenses</strong> plus all outstanding liabilities.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Term Insurance vs. Endowment/ULIPs</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-pretty">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Feature</th>
+                                <th class="p-4 border-b">Term Insurance (Pure)</th>
+                                <th class="p-4 border-b">Endowment / ULIP</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600">
+                            <tr><td class="p-4 border-b font-medium whitespace-nowrap">Sum Assured</td><td class="p-4 border-b text-emerald-600 font-bold">Very High (₹2 Cr+)</td><td class="p-4 border-b">Low (₹10 - ₹20 L)</td></tr>
+                            <tr><td class="p-4 border-b font-medium whitespace-nowrap">Monthly Premium</td><td class="p-4 border-b text-blue-600 font-bold">Low (~₹1,500)</td><td class="p-4 border-b">High (~₹10,000)</td></tr>
+                            <tr><td class="p-4 border-b font-medium whitespace-nowrap">Maturity Benefit</td><td class="p-4 border-b">Zero (Pure Cover)</td><td class="p-4 border-b">Invested Amount + Bonus</td></tr>
+                            <tr><td class="p-4 border-b font-medium whitespace-nowrap">Primary Goal</td><td class="p-4 border-b font-bold">Family Protection</td><td class="p-4 border-b">Forced Saving</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">4 Essential Riders for Your Term Plan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-pretty">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <p class="text-xs font-bold text-blue-600 uppercase mb-1">1. Critical Illness</p>
+                        <p class="text-[11px] text-slate-500">Pays a lump sum on diagnosis of major illnesses like Cancer or Heart Attack.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <p class="text-xs font-bold text-blue-600 uppercase mb-1">2. Waiver of Premium</p>
+                        <p class="text-[11px] text-slate-500">Policy continues without further premiums if you face permanent disability.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <p class="text-xs font-bold text-blue-600 uppercase mb-1">3. Accidental Death</p>
+                        <p class="text-[11px] text-slate-500">Provides additional sum assured if death occurs due to an accident.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <p class="text-xs font-bold text-blue-600 uppercase mb-1">4. Terminal Illness</p>
+                        <p class="text-[11px] text-slate-500">Early payout if diagnosed with a life-ending disease with <6 months prognosis.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Deep-Dive: Impact of 2026 Medical Inflation</h2>
+                <p class="text-sm leading-relaxed opacity-90 mb-4">
+                    In 2026, the average cost of a 5-day hospitalization for a critical event in a Tier-1 Indian city is now <strong>₹8 Lakhs - ₹12 Lakhs</strong>. This is why HLV calculations must include a "Buffer" for medical costs. If you lack comprehensive health insurance, your Life Insurance cover should be increased by at least 15% to cover potential end-of-life medical bills that could otherwise deplete your family's inheritance.
+                </p>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">HLV & Insurance FAQs</h2>
+                <div class="space-y-4 text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the Human Life Value (HLV) method?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">HLV measures the economic loss the family would suffer on the breadwinner's death. It aims to replace the breadwinner's income capacity.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is ₹1 Crore enough for a family of four?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Unlikely. At a safe 7% return, ₹1 Cr generates ₹58k per month. If your family expenses + inflation exceed this, you are underinsured.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Does HLV change with age?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes. HLV typically decreases as you get closer to retirement because you have fewer years of income to replace and more accumulated assets.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Should I include my spouse's income?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">No. HLV should be calculated individually. Your cover should replace *your* income, and your spouse should have their own cover to replace *their* income.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">What is the 'MWP Act'?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">The Married Women's Property Act ensures the insurance money goes only to your wife and children, protecting it from creditors or other family members.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Is premium taxable in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Under the New Regime, there is no tax deduction. Under the Old Regime, it is deductible under Section 80C up to ₹1.5 Lakhs.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can NRIs use this calculator?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes. NRIs can buy term insurance in India, often at a lower premium than their country of residence. The HLV math remains identical.</div></details>
+                </div>
+            </section>
+
+            <!-- Strategic Linking CTAs -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="/emi/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-blue-500 transition-all group">
+                    <h4 class="text-blue-600 font-bold text-sm mb-1">Protect a Home Loan?</h4>
+                    <p class="text-slate-500 text-xs mb-4">Calculate the EMI of your loan to see how much cover you need for it.</p>
+                    <span class="text-blue-600 font-semibold text-xs group-hover:underline">Check EMI →</span>
+                </a>
+                <a href="/net-worth/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-emerald-500 transition-all group text-pretty">
+                    <h4 class="text-emerald-600 font-bold text-sm mb-1">Build your Legacy</h4>
+                    <p class="text-slate-500 text-xs mb-4">Track your non-insurance assets to reduce your HLV over time.</p>
+                    <span class="text-emerald-600 font-semibold text-xs group-hover:underline">Track Net Worth →</span>
+                </a>
+                <a href="/sip/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-amber-500 transition-all group">
+                    <h4 class="text-amber-600 font-bold text-sm mb-1">Invest for Goals</h4>
+                    <p class="text-slate-500 text-xs mb-4">Ensure your goals happen regardless of market or life events.</p>
+                    <span class="text-amber-600 font-semibold text-xs group-hover:underline">Start SIP →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        currentAge: document.getElementById('currentAge'),
+        retireAge: document.getElementById('retireAge'),
+        monthlyExpenses: document.getElementById('monthlyExpenses'),
+        totalDebts: document.getElementById('totalDebts'),
+        bigGoals: document.getElementById('bigGoals'),
+        currentCover: document.getElementById('currentCover'),
+        savings: document.getElementById('savings'),
+        totalHlv: document.getElementById('totalHlv'),
+        shortfall: document.getElementById('shortfall'),
+        premiumDisplay: document.getElementById('premiumDisplay'),
+        dailyCostDisplay: document.getElementById('dailyCostDisplay'),
+        barExpenses: document.getElementById('barExpenses'),
+        barDebts: document.getElementById('barDebts'),
+        barGoals: document.getElementById('barGoals'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const age = parseInt(elements.currentAge.value) || 30;
+        const retire = parseInt(elements.retireAge.value) || 60;
+        const monthly = parseFloat(elements.monthlyExpenses.value) || 0;
+        const debts = parseFloat(elements.totalDebts.value) || 0;
+        const goals = parseFloat(elements.bigGoals.value) || 0;
+        const existingCover = parseFloat(elements.currentCover.value) || 0;
+        const liquidSavings = parseFloat(elements.savings.value) || 0;
+
+        const yearsToProtect = Math.max(0, retire - age);
+        
+        /**
+         * Income Replacement Formula:
+         * Uses a real rate of return (Inflation-Adjusted).
+         * Nominal Safe Return: 8%, Inflation: 6% -> Real Rate: ~2%.
+         * Formula for PV of Growing Annuity: P * [1 - (1+g/1+r)^n] / (r-g)
+         */
+        const annualExp = monthly * 12;
+        const r = 0.08;
+        const g = 0.06;
+        const realRate = (r - g) / (1 + g);
+        
+        let expenseCorpus = 0;
+        if (yearsToProtect > 0) {
+            expenseCorpus = annualExp * ((1 - Math.pow(1 + realRate, -yearsToProtect)) / realRate);
+        }
+
+        const totalNeed = expenseCorpus + debts + goals;
+        const hlvValue = totalNeed - liquidSavings;
+        const shortfallValue = Math.max(0, hlvValue - existingCover);
+
+        // UI Results
+        elements.totalHlv.textContent = formatINR(hlvValue);
+        elements.shortfall.textContent = formatINR(shortfallValue);
+
+        // Premium Estimation (2026 Market Rates)
+        // Age 30: ₹10k/Cr | Age 40: ₹25k/Cr | Age 50: ₹60k/Cr
+        let ratePerCr = 10000;
+        if (age > 45) ratePerCr = 65000;
+        else if (age > 35) ratePerCr = 28000;
+        else if (age > 25) ratePerCr = 12000;
+
+        const estAnnualPremium = (shortfallValue / 10000000) * ratePerCr;
+        const estMonthlyPremium = estAnnualPremium / 12;
+        const dailyCost = estAnnualPremium / 365;
+
+        elements.premiumDisplay.textContent = "₹" + Math.round(estMonthlyPremium).toLocaleString('en-IN');
+        elements.dailyCostDisplay.textContent = "₹" + Math.round(dailyCost).toLocaleString('en-IN');
+
+        // Visual Bars
+        const maxBarTotal = expenseCorpus + debts + goals;
+        elements.barExpenses.style.width = (expenseCorpus / maxBarTotal * 100) + "%";
+        elements.barDebts.style.width = (debts / maxBarTotal * 100) + "%";
+        elements.barGoals.style.width = (goals / maxBarTotal * 100) + "%";
+
+        // Table
+        const rows = [
+            ["Lifestyle Replacement (" + yearsToProtect + " yrs)", formatINR(expenseCorpus)],
+            ["Outstanding Debt Settlement", formatINR(debts)],
+            ["Future Milestone Goals", formatINR(goals)],
+            ["Current Liquid Assets (Deduct)", "-" + formatINR(liquidSavings)],
+            ["Existing Insurance (Deduct)", "-" + formatINR(existingCover)],
+            ["Net Recommended Cover", "<strong>" + formatINR(shortfallValue) + "</strong>"]
+        ];
+
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                <td class="px-4 py-3 whitespace-nowrap">${r[0]}</td>
+                <td class="px-4 py-3 text-right font-medium text-slate-800 whitespace-nowrap">${r[1]}</td>
+            </tr>
+        `).join('');
+
+        // Insight Logic
+        let insight = "";
+        if (shortfallValue > 0) {
+            insight = `You have a protection gap of <strong>${formatINR(shortfallValue)}</strong>. `;
+            if (shortfallValue > hlvValue * 0.5) {
+                insight += `Your family is critically underinsured. Securing a term plan today is recommended to cover ${formatINR(debts)} in debts.`;
+            } else {
+                insight += `Consider increasing your sum assured to ensure your children's ${formatINR(goals)} goals remain funded.`;
+            }
+        } else {
+            insight = `Congratulations! Your current assets and cover of <strong>${formatINR(existingCover)}</strong> satisfy your Human Life Value requirements.`;
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const inputs = [
+            elements.currentAge, elements.retireAge, elements.monthlyExpenses,
+            elements.totalDebts, elements.bigGoals, elements.currentCover, elements.savings
+        ];
+        
+        inputs.forEach(el => el.addEventListener('input', calculate));
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{document.getElementById("navbar").innerHTML=data;});
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
