@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar + EV Home Ecosystem ROI Calculator (2026) – Net Zero ROI India</title>
+    <meta name="description" content="Calculate the 10-year ROI of combining Solar Rooftop with an Electric Vehicle in India. Estimate total savings, break-even period, and grid independence score for 2026.">
+    <meta name="keywords" content="solar plus ev calculator india, net zero home roi india, solar ev synergy calculator, solar charging ev cost per km, pm surya ghar ev charging">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-27">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/solar-ev-ecosystem/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Solar + EV Home Ecosystem ROI Calculator (2026) – Net Zero Edition">
+    <meta property="og:description" content="Sun power + Electric mobility = Financial Freedom. Calculate your 10-year ecosystem profit and grid independence score instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/solar-ev-ecosystem/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schema Stack -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Net Zero Home & EV Planning Guide 2026",
+          "description": "Complete financial guide to building a Solar + EV ecosystem in India to achieve zero energy and fuel costs.",
+          "url": "https://arthcalculator.in/solar-ev-ecosystem/"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Solar + EV ROI Tool",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "Solar + EV Ecosystem" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to calculate Solar + EV Ecosystem ROI",
+          "step": [
+            { "@type": "HowToStep", "name": "Input Power Bill", "text": "Enter your current monthly household electricity bill." },
+            { "@type": "HowToStep", "name": "Driving Distance", "text": "Enter your average monthly driving distance in KM." },
+            { "@type": "HowToStep", "name": "Select Solar Capacity", "text": "Choose your solar plant size (kW). 5kW is standard for EV homes." },
+            { "@type": "HowToStep", "name": "Investment Total", "text": "Enter the combined cost of the EV and the Solar installation." },
+            { "@type": "HowToStep", "name": "Analyze ROI", "text": "Review the 10-year profit and payback timeline." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can I charge my EV at night using solar?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes, through 'Grid Banking' (Net Metering). Surplus solar power sent to the grid during the day is credited to your bill, offsetting the power you pull at night to charge your EV." }
+            },
+            {
+              "@type": "Question",
+              "name": "How does PM Surya Ghar help?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The scheme provides a subsidy of up to ₹78,000 for a 3kW+ solar plant, significantly reducing the ecosystem's break-even period." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #4f46e5 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        input[type="range"] { accent-color: #4f46e5; height: 6px; }
+        .formula-box { background: #f5f3ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #4338ca; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-indigo-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-indigo-600 transition-colors text-pretty">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-indigo-600 font-bold">Solar + EV Ecosystem</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Solar + EV Home Ecosystem ROI Calculator</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Achieve absolute energy freedom. Combine <strong>Rooftop Solar</strong> with an <strong>Electric Vehicle</strong> to wipe out both electricity and fuel bills. Calculate your 10-year net-zero profit in the 2026 Indian market.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 whitespace-nowrap">
+                    <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-indigo-100 shadow-sm">2026 Net Zero Edition</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        Ecosystem Inputs
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Current Monthly Bill (₹)</label>
+                            <input type="number" id="billInput" value="4500" min="500" class="w-20 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-emerald-600">
+                        </div>
+                        <input type="range" id="billRange" min="500" max="25000" step="100" value="4500" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Monthly Driving (KM)</label>
+                            <input type="number" id="distanceInput" value="1500" min="100" class="w-20 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-blue-600">
+                        </div>
+                        <input type="range" id="distanceRange" min="500" max="5000" step="100" value="1500" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Petrol Mileage (KM/L)</label>
+                            <input type="number" id="mileageInput" value="15" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Solar Plant Size (kW)</label>
+                            <input type="number" id="solarInput" value="5" min="1" max="10" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <label class="text-sm font-medium text-slate-600 block mb-2">Total Ecosystem Investment (₹)</label>
+                        <input type="number" id="investInput" value="1650000" step="10000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-extrabold text-indigo-600 focus:ring-2 focus:ring-indigo-500 outline-none bg-indigo-50/30">
+                        <p class="text-[10px] text-slate-400 mt-2">Example: ₹15L (EV) + ₹1.5L (5kW Solar Post-Subsidy).</p>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-indigo-100 flex items-center justify-center gap-2">
+                        Calculate Synergy ROI
+                    </button>
+                </div>
+
+                <!-- Independence Score -->
+                <div class="bg-slate-900 p-6 rounded-2xl text-white shadow-lg shadow-indigo-200/20 text-pretty">
+                    <p class="text-indigo-400 text-[10px] font-medium uppercase mb-1">Grid Independence Score</p>
+                    <h3 id="independenceScore" class="text-3xl font-bold leading-tight">0/100</h3>
+                    <p class="text-slate-400 text-xs mt-2" id="scoreVerdict">Analyzing your energy balance...</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6 text-pretty">10-Year Synergy Projections</h2>
+                    
+                    <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-200 mb-10 text-center">
+                        <h4 class="text-indigo-700 text-xs font-bold uppercase tracking-wider mb-2">10-Year Ecosystem Profit</h4>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-indigo-900" id="totalProfitDisplay">₹0</div>
+                        <p class="text-sm text-indigo-600 mt-2 font-medium" id="paybackText">Payback Period: 0.0 Years</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                        <div class="p-5 border border-emerald-100 rounded-2xl bg-emerald-50/50">
+                            <h4 class="text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-1">Total Monthly Savings</h4>
+                            <div class="text-2xl font-bold text-emerald-800" id="monthlySavingsDisplay">₹0</div>
+                            <p class="text-[10px] text-emerald-600">Bill Saved + Petrol Saved</p>
+                        </div>
+                        <div class="p-5 border border-blue-100 rounded-2xl bg-blue-50/50">
+                            <h4 class="text-blue-700 text-[10px] font-bold uppercase tracking-wider mb-1">Charging Cost per KM</h4>
+                            <div class="text-2xl font-bold text-blue-800">₹0.00</div>
+                            <p class="text-[10px] text-blue-600">Sun-powered driving</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-indigo-600 font-bold uppercase">Break-even Timeline</span>
+                            <span class="text-slate-400 font-bold uppercase">10-Year Horizon</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressPayback" class="h-full bg-indigo-500 transition-all duration-700" style="width: 40%"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 text-center" id="timelineText">Reaching profit zone in year 0.</p>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Strategic Ecosystem Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing your power generation surplus...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Financial Value Breakup</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 text-pretty">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Component</th>
+                                        <th class="px-4 py-3 font-semibold text-indigo-600 border-b text-right whitespace-nowrap">10-Year Savings</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 no-print text-pretty">
+                        <button onclick="downloadRoadmap()" class="flex-1 py-3 border border-indigo-200 hover:bg-indigo-50 rounded-xl text-xs font-bold text-indigo-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Download My Green Roadmap
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">The Synergy Logic</h3>
+                    <div class="formula-box text-indigo-800 text-center mb-6 text-sm text-pretty">
+                        Annual Alpha = (Annual Bill × 1.05ⁿ) + (KM/Mileage × Fuel Price × 1.07ⁿ)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Power Banking:</strong> We assume you use Net Metering to 'bank' daytime solar surplus and withdraw it at night for EV charging at ₹0 cost.</p>
+                        <p><strong>Inflation Hedge:</strong> We factor in a 5% annual increase in electricity rates and 7% in fuel prices to show true long-term value.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="wealth-hack">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-pretty">Why Solar + EV is the 2026 Wealth Hack</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>In 2026, the cost of living for the Indian middle class is dominated by two non-negotiable expenses: <strong>Energy and Mobility</strong>. While the prices of petrol and utility grid power are set by global markets and inflation, the cost of sunlight is zero. By combining a 5kW Solar plant with an Electric Vehicle, you essentially "pre-pay" for 25 years of electricity and fuel at today's fixed equipment cost.</p>
+                    <p>This ecosystem isn't just about being eco-friendly; it's about <strong>Financial Arbitrage</strong>. You are replacing variable, inflating monthly costs with a fixed asset that pays for itself. If you're planning for the battery replacement later, check our <a href="/ev-battery-fund-planner/" class="text-indigo-600 underline font-bold">EV Battery fund tool</a> to maintain your ecosystem indefinitely.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6 text-pretty">Status Quo vs. The Ecosystem (10-Year View)</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Expense Item</th>
+                                <th class="p-4 border-b">Status Quo (Grid + Petrol)</th>
+                                <th class="p-4 border-b">The Ecosystem (Solar + EV)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600">
+                            <tr><td class="p-4 border-b font-medium">Fuel Cost</td><td class="p-4 border-b text-rose-600">₹12 - ₹15 Lakhs (Inflated)</td><td class="p-4 border-b text-emerald-600 font-bold">₹0 (Sun-powered)</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Electricity Bill</td><td class="p-4 border-b text-rose-600">₹6 - ₹8 Lakhs (Inflated)</td><td class="p-4 border-b text-emerald-600 font-bold">₹0 (Surplus banked)</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Maintenance</td><td class="p-4 border-b">High (Engine/Gears)</td><td class="p-4 border-b">Low (Motor/Panels)</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Net 10-Yr Cash Saved</td><td class="p-4 border-b">₹0</td><td class="p-4 border-b text-indigo-600 font-extrabold">₹18 Lakhs+ Potential</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-indigo-600 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Deep-Dive: Vehicle-to-Home (V2H) Technology</h2>
+                <p class="text-sm leading-relaxed opacity-95 mb-4 text-pretty text-pretty">
+                    In 2026, premium EVs and high-end solar inverters now support <strong>Bidirectional Charging</strong> or V2H. Your EV isn't just a car; it's a 40kWh - 80kWh massive home battery. During peak load hours (7 PM - 10 PM) when the grid is most expensive and the sun is down, you can pull power from your car to run your AC and lights, then recharge the car next morning for free using your solar panels. This 'Time of Use' optimization adds another 10% to your annual ROI.
+                </p>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Technical Insight: The 'Energy Balance'</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-4">
+                    <p>To achieve a "Zero Bill," your solar capacity must match your combined load. Here is the 2026 benchmark for India:</p>
+                    <ul class="list-disc ml-5 space-y-2 text-sm">
+                        <li><strong>Standard Home Load:</strong> 3kW Solar typically covers a 3-BHK house without an EV.</li>
+                        <li><strong>The EV Adder:</strong> For every 25 KM of daily driving, your EV consumes ~4-5 units. You need roughly <strong>1kW of extra solar capacity</strong> to generate these units.</li>
+                        <li><strong>Safe Multiplier:</strong> For an average Indian home driving 1,500 KM/month, a <strong>5kW - 6kW Solar Plant</strong> is the sweet spot for a complete net-zero lifecycle.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Ecosystem FAQs</h2>
+                <div class="space-y-4 text-pretty text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Does a 3kW Solar plant provide enough power for an EV?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It's borderline. A 3kW plant generates ~12 units/day. If your house consumes 8 units, you only have 4 units left for the EV, which is about 20-25 KM of range. For heavy drivers, 5kW is the recommended minimum.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How does Net Metering help EV owners?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It acts as a 'Virtual Battery'. You produce solar power while the car is at the office, and the grid 'stores' that energy for you. You use those credits to charge the car at night when you're home.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the total investment for 5kW Solar + Budget EV?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">In 2026, a budget EV costs ~₹10L-₹12L and a high-efficiency 5kW DCR solar plant costs ~₹2.5L after subsidy. Expect a total ecosystem cost of ₹13L to ₹15L.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">What is the ROI of an EV if I don't have Solar?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Without solar, an EV still has a strong ROI due to lower fuel costs (₹1.5 vs ₹8 per KM), but the payback period extends by 1-2 years because you're still paying the Discom.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How does the 'PM Surya Ghar' subsidy impact ROI?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">It's a game-changer. The ₹78,000 subsidy reduces the solar component cost by nearly 30%, which pulls the combined ecosystem break-even point earlier by at least 6-8 months.</div></details>
+                </div>
+            </section>
+
+            <!-- Strategic Linking -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="/ev-vs-petrol-cost/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-blue-500 transition-all group">
+                    <h4 class="text-blue-600 font-bold text-sm mb-1 text-pretty">EV vs Petrol</h4>
+                    <p class="text-slate-500 text-xs mb-4 text-pretty text-pretty">Compare fuel costs if you don't use solar power. See the raw operational gap.</p>
+                    <span class="text-blue-600 font-semibold text-xs group-hover:underline">Check Savings →</span>
+                </a>
+                <a href="/ev-battery-fund-planner/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-indigo-500 transition-all group">
+                    <h4 class="text-indigo-600 font-bold text-sm mb-1">Battery Fund</h4>
+                    <p class="text-slate-500 text-xs mb-4 text-pretty text-pretty">Plan for your EV battery replacement. Don't let future costs break your budget.</p>
+                    <span class="text-indigo-600 font-semibold text-xs group-hover:underline">Plan Replacement SIP →</span>
+                </a>
+                <a href="/solar-rooftop-calculator/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-emerald-500 transition-all group">
+                    <h4 class="text-emerald-600 font-bold text-sm mb-1">Solar ROI</h4>
+                    <p class="text-slate-500 text-xs mb-4 text-pretty text-pretty">Deep-dive into rooftop solar economics, subsidies, and payback for your home.</p>
+                    <span class="text-emerald-600 font-semibold text-xs group-hover:underline">Solar Subsidy Calc →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        billInput: document.getElementById('billInput'),
+        billRange: document.getElementById('billRange'),
+        distanceInput: document.getElementById('distanceInput'),
+        distanceRange: document.getElementById('distanceRange'),
+        mileageInput: document.getElementById('mileageInput'),
+        solarInput: document.getElementById('solarInput'),
+        investInput: document.getElementById('investInput'),
+        totalProfitDisplay: document.getElementById('totalProfitDisplay'),
+        monthlySavingsDisplay: document.getElementById('monthlySavingsDisplay'),
+        paybackText: document.getElementById('paybackText'),
+        independenceScore: document.getElementById('independenceScore'),
+        scoreVerdict: document.getElementById('scoreVerdict'),
+        progressPayback: document.getElementById('progressPayback'),
+        timelineText: document.getElementById('timelineText'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const bill = parseFloat(elements.billInput.value) || 0;
+        const km = parseFloat(elements.distanceInput.value) || 0;
+        const mileage = parseFloat(elements.mileageInput.value) || 1;
+        const solarKw = parseFloat(elements.solarInput.value) || 1;
+        const totalInvest = parseFloat(elements.investInput.value) || 1;
+
+        // 1. Operational Savings
+        // Petrol cost saved (Avg 2026 petrol price: ₹105)
+        const petrolCostSavedMo = (km / mileage) * 105;
+        // Elec bill saved (assumes solar covers house bill if sized correctly)
+        const billSavedMo = bill;
+        const totalSavingsMo = petrolCostSavedMo + billSavedMo;
+        
+        // 2. Profit & Payback (10-Year Horizon)
+        // Factors in 5% bill inflation and 7% petrol inflation
+        let totalSavings10Yr = 0;
+        let currentBill = bill * 12;
+        let currentFuel = petrolCostSavedMo * 12;
+        
+        for (let i = 1; i <= 10; i++) {
+            totalSavings10Yr += (currentBill + currentFuel);
+            currentBill *= 1.05;
+            currentFuel *= 1.07;
+        }
+
+        const netProfit = totalSavings10Yr - totalInvest;
+        const paybackYrs = totalInvest / (totalSavingsMo * 12);
+
+        // 3. Grid Independence Score
+        // Avg daily home load: 1kW solar yields 4 units.
+        // Monthly generation = solarKw * 4 * 30.
+        // Needs = (Bill / 8.5) + (KM / 6) [Avg units for EV]
+        const monthlyGen = solarKw * 4 * 30;
+        const monthlyUsage = (bill / 8.5) + (km / 6);
+        const independence = Math.min(100, Math.round((monthlyGen / (monthlyUsage || 1)) * 100));
+
+        // UI Updates
+        elements.totalProfitDisplay.textContent = formatINR(netProfit);
+        elements.monthlySavingsDisplay.textContent = formatINR(totalSavingsMo);
+        elements.paybackText.textContent = `Payback Period: ${paybackYrs.toFixed(1)} Years`;
+        elements.independenceScore.textContent = `${independence}/100`;
+
+        if (independence >= 100) {
+            elements.scoreVerdict.textContent = "Full Net Zero. You produce more than you consume.";
+        } else {
+            elements.scoreVerdict.textContent = `Reliance: You need ${100-independence}% more solar capacity.`;
+        }
+
+        const progress = Math.min(100, (paybackYrs / 10) * 100);
+        elements.progressPayback.style.width = progress + "%";
+        elements.timelineText.textContent = `Reaching profit zone in Year ${Math.ceil(paybackYrs)}.`;
+
+        // Table
+        const rows = [
+            ["House Electricity Savings", formatINR(billSavedMo * 120)],
+            ["Petrol Displacement Savings", formatINR(petrolCostSavedMo * 120)],
+            ["Tax/Maintenance Offset (Est)", "- " + formatINR(totalInvest * 0.15)],
+            ["Total Ecosystem Income", "<strong>" + formatINR(totalSavings10Yr) + "</strong>"],
+            ["Net Profit (ROI After Cost)", "<strong>" + formatINR(netProfit) + "</strong>"]
+        ];
+
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100 text-pretty">
+                <td class="px-4 py-3 whitespace-nowrap font-medium text-slate-700">${r[0]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-indigo-600 font-bold">${r[1]}</td>
+            </tr>
+        `).join('');
+
+        // Insight Logic
+        let insight = "";
+        const surplus = monthlyGen - monthlyUsage;
+        if (surplus > 0) {
+            insight = `Great! Your <strong>${solarKw}kW</strong> plant generates a surplus of <strong>${Math.round(surplus)} units</strong>/month. This will cover cloudy days and future AC upgrades comfortably.`;
+        } else {
+            const extraNeeded = Math.ceil(Math.abs(surplus) / (4 * 30));
+            insight = `Warning: Your current solar capacity is under-sized. Add <strong>${extraNeeded}kW</strong> more to achieve 100% free EV charging and zero bills.`;
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function downloadRoadmap() {
+        const text = `Net Zero Home Roadmap 2026 (ArthCalculator)\n------------------------------\nSolar Capacity: ${elements.solarInput.value} kW\nEV Daily Target: ${Math.round(elements.distanceInput.value/30)} KM\nIndependence Score: ${elements.independenceScore.innerText}\n10-Yr Profit Potential: ${elements.totalProfitDisplay.innerText}\nPayback: ${elements.paybackText.innerText}\n------------------------------\nGenerate yours at arthcalculator.in/solar-ev-ecosystem/`;
+        const dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand("copy");
+        document.body.removeChild(dummy);
+        
+        const btn = document.querySelector('button[onclick="downloadRoadmap()"]');
+        const orig = btn.innerHTML;
+        btn.innerHTML = "✅ Roadmap Data Copied";
+        setTimeout(() => { btn.innerHTML = orig; }, 2500);
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.billInput, elements.billRange);
+        setupSync(elements.distanceInput, elements.distanceRange);
+        
+        [elements.mileageInput, elements.solarInput, elements.investInput].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{
+            document.getElementById("navbar").innerHTML=data;
+            const btn=document.getElementById("menuBtn");
+            const menu=document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click",()=>{ menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
