@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Loan Balance Transfer (HLBT) Calculator (2026) – Calculate Net Savings</title>
+    <meta name="description" content="Calculate your total savings with a Home Loan Balance Transfer. Compare EMI reduction, interest saved, and find the break-even month for your loan switch in India.">
+    <meta name="keywords" content="home loan balance transfer calculator india, hlbt savings tool, switch home loan bank, loan refinance savings calculator, rllr home loan switch 2026">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-27">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/home-loan-balance-transfer/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Home Loan Balance Transfer (HLBT) Savings Tool (2026 Edition)">
+    <meta property="og:description" content="Should you switch your home loan? Calculate net savings after processing fees and see your break-even month instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/home-loan-balance-transfer/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schema Stack -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Home Loan Refinancing Strategy & HLBT Tool",
+          "description": "Comprehensive tool to evaluate the financial feasibility of transferring a home loan to another bank in India.",
+          "url": "https://arthcalculator.in/home-loan-balance-transfer/"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Loan Refinance Calculator",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "Home Loan Balance Transfer" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to calculate Home Loan Balance Transfer savings",
+          "step": [
+            { "@type": "HowToStep", "name": "Enter Outstanding", "text": "Input the current principal amount remaining with your existing bank." },
+            { "@type": "HowToStep", "name": "Current Rate", "text": "Enter your current annual interest rate and remaining tenure." },
+            { "@type": "HowToStep", "name": "New Quote", "text": "Enter the lower interest rate offered by the new bank." },
+            { "@type": "HowToStep", "name": "Factor in Fees", "text": "Add processing fees, legal charges, and MODT costs." },
+            { "@type": "HowToStep", "name": "Analyze Benefit", "text": "Review the Net Savings and the month you break even on transfer costs." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is there a foreclosure penalty on home loans in 2026?",
+              "acceptedAnswer": { "@type": "Answer", "text": "As per RBI guidelines, banks cannot charge foreclosure penalties on floating-rate home loans for individual borrowers." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the ideal time to do a balance transfer?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A transfer is most effective in the first 5-7 years of a 20-year tenure, as interest payments are highest during the early phase." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .formula-box { background: #f1f5f9; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #1e40af; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors text-pretty">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Home Loan Balance Transfer</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Home Loan Balance Transfer (HLBT) Savings Tool</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Don't pay more for your home. Compare your current interest burden against the new bank's offer. Calculate <strong>Net Savings</strong> after processing fees and determine your exact <strong>break-even month</strong> for 2026.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 whitespace-nowrap">
+                    <span class="bg-blue-50 text-blue-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-blue-100 shadow-sm">2026 Optimized</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                        Current Loan Specs
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Outstanding Principal (₹)</label>
+                            <input type="number" id="principalInput" value="5000000" min="100000" step="50000" class="w-24 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-blue-600">
+                        </div>
+                        <input type="range" id="principalRange" min="500000" max="25000000" step="100000" value="5000000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Current Rate (%)</label>
+                            <input type="number" id="currentRate" value="9.25" step="0.05" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Remaining (Yrs)</label>
+                            <input type="number" id="tenureInput" value="15" min="1" max="30" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide pt-4 border-t border-slate-100">
+                        <svg class="w-5 h-5 mr-2 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        New Transfer Offer
+                    </h2>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">New Rate (%)</label>
+                            <input type="number" id="newRate" value="8.50" step="0.05" class="w-full px-3 py-2 border border-emerald-200 bg-emerald-50/30 rounded-lg text-sm font-bold text-emerald-700">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Other Fees (₹)</label>
+                            <input type="number" id="feesInput" value="15000" step="1000" class="w-full px-3 py-2 border border-rose-200 bg-rose-50/30 rounded-lg text-sm font-bold text-rose-700">
+                        </div>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Analyze Transfer Benefit
+                    </button>
+                </div>
+
+                <!-- Strategic CTA Cards -->
+                <div class="space-y-4">
+                    <a href="/home-loan-emi/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-blue-500 transition-all group">
+                        <h4 class="text-blue-600 font-bold text-sm mb-1">Home Loan EMI</h4>
+                        <p class="text-slate-500 text-xs mb-3">Calculate your base EMI for a new property loan.</p>
+                        <span class="text-blue-600 font-semibold text-xs group-hover:underline">Check EMI →</span>
+                    </a>
+                    <a href="/home-loan-prepayment/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-emerald-500 transition-all group">
+                        <h4 class="text-emerald-600 font-bold text-sm mb-1">Prepayment Tool</h4>
+                        <p class="text-slate-500 text-xs mb-3">Compare loan switch vs. lumpsum repayment savings.</p>
+                        <span class="text-emerald-600 font-semibold text-xs group-hover:underline">Compare Prepayment →</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Savings Dashboard</h2>
+                    
+                    <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-200 mb-10 text-center">
+                        <h4 class="text-emerald-700 text-xs font-bold uppercase tracking-wider mb-2">Total Net Life Savings</h4>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-emerald-900" id="netSavings">₹0</div>
+                        <p class="text-sm text-emerald-600 mt-2 font-medium" id="breakevenNotice">Recover transfer costs in 0 months</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                        <div class="p-5 border border-blue-100 rounded-2xl bg-blue-50/50">
+                            <h4 class="text-blue-700 text-[10px] font-bold uppercase tracking-wider mb-1">Monthly EMI Drop</h4>
+                            <div class="text-2xl font-bold text-blue-800" id="emiReduction">₹0</div>
+                            <p class="text-[10px] text-blue-600">Immediate cash flow benefit</p>
+                        </div>
+                        <div class="p-5 border border-rose-100 rounded-2xl bg-rose-50/50">
+                            <h4 class="text-rose-700 text-[10px] font-bold uppercase tracking-wider mb-1">Transfer Cost (Fees)</h4>
+                            <div class="text-2xl font-bold text-rose-800" id="totalFees">₹0</div>
+                            <p class="text-[10px] text-rose-600">Processing + Technical + Legal</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-blue-600 font-bold uppercase">Total Interest Cost (New)</span>
+                            <span class="text-slate-400 font-bold uppercase">Current Interest Burden</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="barNew" class="h-full bg-emerald-500 transition-all duration-700" style="width: 40%"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 text-center" id="interestText">Interest component reduction: 0%</p>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Decision Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing your interest rate gap...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Transfer Economics Breakup</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Feature</th>
+                                        <th class="px-4 py-3 font-semibold text-blue-600 border-b text-right whitespace-nowrap">Existing Loan</th>
+                                        <th class="px-4 py-3 font-semibold text-emerald-600 border-b text-right whitespace-nowrap">Proposed Switch</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 no-print text-pretty">
+                        <button onclick="window.print()" class="flex-1 py-3 border border-slate-200 hover:bg-slate-50 rounded-xl text-xs font-bold text-slate-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                            Print Savings Report
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Refinancing Logic</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        Net Savings = (Int_Curr - Int_New) - Transfer_Fees
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Total Interest:</strong> Calculated based on the outstanding principal amortized over the remaining years.</p>
+                        <p><strong>Break-even Month:</strong> The point in time where the cumulative EMI reduction equals the upfront cost of the transfer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="market-2026">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-pretty">When to Opt for a Balance Transfer in 2026?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>Home Loan Balance Transfer (HLBT) is a powerful tool to reduce your debt burden, but it isn't always beneficial. In the 2026 Indian banking context, the <strong>0.5% Rule</strong> is the gold standard: only consider a switch if the new interest rate is at least 50 basis points (0.5%) lower than your current rate.</p>
+                    <p>Additionally, look at your remaining tenure. A switch is mathematically most effective during the first 40% of your tenure (e.g., within the first 8 years of a 20-year loan) because home loan interest is "front-loaded." In the latter half of the tenure, you are mostly paying back the principal, and a transfer may not save enough to cover the processing fees. If your home loan is underinsured, use our <a href="/hlv-calculator/" class="text-blue-600 underline font-bold">HLV Calculator</a> to protect your mortgage liabilities.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Hidden Costs of HLBT in 2026</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-pretty">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Cost Item</th>
+                                <th class="p-4 border-b">Estimated Value</th>
+                                <th class="p-4 border-b">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600">
+                            <tr><td class="p-4 border-b font-medium">Processing Fees</td><td class="p-4 border-b">₹5,000 - 0.5% of Loan</td><td class="p-4 border-b">One-time</td></tr>
+                            <tr><td class="p-4 border-b font-medium">MODT / Stamp Duty</td><td class="p-4 border-b">0.2% - 0.5% of Loan</td><td class="p-4 border-b text-rose-500">State Dependent</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Technical & Legal</td><td class="p-4 border-b">₹5,000 - ₹10,000</td><td class="p-4 border-b">Mandatory</td></tr>
+                            <tr><td class="p-4 border-b font-medium">Property Insurance</td><td class="p-4 border-b">Premium varies</td><td class="p-4 border-b">Annual</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty">
+                <h2 class="text-xl font-bold mb-4">Technical Insight: RLLR & Reset Periods</h2>
+                <p class="text-sm leading-relaxed opacity-95 mb-4">
+                    Most home loans in 2026 are linked to the <strong>Repo-Linked Lending Rate (RLLR)</strong>. While RLLR loans offer the fastest transmission of RBI rate cuts, they also increase your EMI immediately when rates rise. When switching, ask the new bank about their 'Reset Period'—how often they update the interest rate. A 3-month reset period is standard, providing a balance between market sensitivity and stability.
+                </p>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Documents Required for HLBT in 2026</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-blue-600">From Existing Bank</h4>
+                        <ul class="list-disc ml-5 text-sm text-slate-600 space-y-1">
+                            <li>List of Documents (LOD) held by bank.</li>
+                            <li>Foreclosure Letter with break-up.</li>
+                            <li>Loan Account Statement (Last 12 months).</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="font-bold text-emerald-600">For New Bank</h4>
+                        <ul class="list-disc ml-5 text-sm text-slate-600 space-y-1">
+                            <li>Last 3 months Salary Slips & Form 16.</li>
+                            <li>Last 6 months Bank Statement.</li>
+                            <li>KYC (PAN, Aadhaar, Proof of Address).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">HLBT Frequently Asked Questions</h2>
+                <div class="space-y-4 text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Can I get a Top-up loan during a Balance Transfer?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes. Most banks offer a top-up loan at a slightly higher rate than the home loan during a transfer. This is the cheapest way to get liquidity for home renovation or large expenses.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Do I need to redo property technical valuation?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Yes. The new bank must conduct its own independent technical and legal valuation to ensure the property collateral is secure and legally clear before taking over the loan.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How long does the HLBT process take in India?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The entire process, from application to the new bank paying off your old bank and receiving the title deeds, typically takes 15 to 21 business days.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Can I transfer with an existing EMI bounce?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">It is difficult. Most banks require a clean repayment track record for the last 12-24 months. An EMI bounce severely impacts your creditworthiness for a balance transfer.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What are MODT charges in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Memorandum of Deposit of Title Deeds (MODT) is a legal document where you agree to pledge your property documents to the bank. Stamp duty on MODT varies by state (e.g., 0.2% in MH) and is a mandatory cost during transfer.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Does a balance transfer affect my Credit Score?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Opening a new loan account and closing the old one may cause a minor temporary dip in your credit score, but a lower EMI usually helps improve your credit profile in the long run.</div></details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        principalInput: document.getElementById('principalInput'),
+        principalRange: document.getElementById('principalRange'),
+        currentRate: document.getElementById('currentRate'),
+        tenureInput: document.getElementById('tenureInput'),
+        newRate: document.getElementById('newRate'),
+        feesInput: document.getElementById('feesInput'),
+        netSavings: document.getElementById('netSavings'),
+        emiReduction: document.getElementById('emiReduction'),
+        totalFees: document.getElementById('totalFees'),
+        breakevenNotice: document.getElementById('breakevenNotice'),
+        barNew: document.getElementById('barNew'),
+        interestText: document.getElementById('interestText'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculateEMI(p, r_annual, n_years) {
+        if (r_annual === 0) return p / (n_years * 12);
+        const r = (r_annual / 100) / 12;
+        const n = n_years * 12;
+        return (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    }
+
+    function calculate() {
+        const p = parseFloat(elements.principalInput.value) || 0;
+        const cRate = parseFloat(elements.currentRate.value) || 0;
+        const nYears = parseFloat(elements.tenureInput.value) || 1;
+        const nRate = parseFloat(elements.newRate.value) || 0;
+        const fees = parseFloat(elements.feesInput.value) || 0;
+
+        // Current Loan
+        const currentEmi = calculateEMI(p, cRate, nYears);
+        const currentTotalInterest = (currentEmi * nYears * 12) - p;
+
+        // New Loan
+        const newEmi = calculateEMI(p, nRate, nYears);
+        const newTotalInterest = (newEmi * nYears * 12) - p;
+
+        // Savings
+        const monthlySavings = currentEmi - newEmi;
+        const grossSavings = currentTotalInterest - newTotalInterest;
+        const netSavingsVal = grossSavings - fees;
+
+        // Break-even
+        const breakEvenMonths = monthlySavings > 0 ? Math.ceil(fees / monthlySavings) : 0;
+
+        // UI Updates
+        elements.netSavings.textContent = formatINR(netSavingsVal);
+        elements.emiReduction.textContent = formatINR(monthlySavings);
+        elements.totalFees.textContent = formatINR(fees);
+        
+        if (netSavingsVal > 0 && monthlySavings > 0) {
+            elements.breakevenNotice.textContent = `Recover transfer costs in ${breakEvenMonths} months`;
+            elements.netSavings.parentElement.className = "p-6 bg-emerald-50 rounded-2xl border border-emerald-200 mb-10 text-center";
+        } else {
+            elements.breakevenNotice.textContent = "Switch is not financially viable";
+            elements.netSavings.parentElement.className = "p-6 bg-rose-50 rounded-2xl border border-rose-200 mb-10 text-center";
+        }
+
+        // Bar and visual
+        const intReductionPct = ((grossSavings / currentTotalInterest) * 100) || 0;
+        elements.barNew.style.width = Math.max(10, 100 - intReductionPct) + "%";
+        elements.interestText.textContent = `Interest component reduction: ${intReductionPct.toFixed(1)}%`;
+
+        // Breakdown Table
+        const rows = [
+            ["Monthly EMI", formatINR(currentEmi), formatINR(newEmi)],
+            ["Total Interest Payable", formatINR(currentTotalInterest), formatINR(newTotalInterest)],
+            ["Upfront Fees (Costs)", "₹0", formatINR(fees)],
+            ["Total Lifecycle Cost", "<strong>" + formatINR(currentTotalInterest + p) + "</strong>", "<strong>" + formatINR(newTotalInterest + p + fees) + "</strong>"],
+            ["Net Monthly Benefit", "-", "<strong>" + formatINR(monthlySavings) + "</strong>"]
+        ];
+
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                <td class="px-4 py-3 whitespace-nowrap font-medium text-slate-700">${r[0]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-blue-600 font-semibold">${r[1]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-emerald-600 font-bold">${r[2]}</td>
+            </tr>
+        `).join('');
+
+        // Insights
+        const rateDiff = cRate - nRate;
+        let insight = "";
+        if (netSavingsVal <= 0) {
+            insight = `Wait! The transfer costs (<strong>${formatINR(fees)}</strong>) are higher than your long-term interest savings. It's better to stick with your current bank or negotiate a 'Retention Rate'.`;
+        } else if (rateDiff < 0.5) {
+            insight = `A spread of <strong>${rateDiff.toFixed(2)}%</strong> is thin. Considering the time and paperwork required for MODT and Legal, verify if a <strong>${formatINR(monthlySavings)}</strong> monthly saving is worth the effort.`;
+        } else {
+            insight = `Excellent switch! You are saving <strong>${formatINR(netSavingsVal)}</strong>. With a break-even of just <strong>${breakEvenMonths} months</strong>, this transfer will significantly accelerate your wealth building.`;
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.principalInput, elements.principalRange);
+        
+        [elements.currentRate, elements.tenureInput, elements.newRate, elements.feesInput].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{
+            document.getElementById("navbar").innerHTML=data;
+            const btn=document.getElementById("menuBtn");
+            const menu=document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click",()=>{ menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
