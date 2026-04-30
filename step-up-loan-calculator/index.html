@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step-Up Loan EMI & Repayment Optimizer (2026) – Compare Interest Costs</title>
+    <meta name="description" content="Calculate Step-Up loan EMIs and compare interest costs against standard flat EMIs. Plan your progressive repayment schedule based on future salary hikes in India (2026).">
+    <meta name="keywords" content="step up loan calculator india, progressive emi calculator, sbi flexipay calculator 2026, negative amortization warning, step up vs flat emi, home loan repayment optimizer">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-04-30">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/step-up-loan-calculator/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Step-Up Loan EMI & Repayment Optimizer (2026) – ArthCalculator">
+    <meta property="og:description" content="Buy a bigger home today with lower initial EMIs. Calculate the long-term interest impact of Step-Up repayment plans instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/step-up-loan-calculator/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schema Stack -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://arthcalculator.in/#organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Guide to Step-up Repayment Schemes in India",
+          "description": "Comprehensive tool and guide to analyzing step-up loan structures, interest capitalization, and affordability.",
+          "url": "https://arthcalculator.in/step-up-loan-calculator/",
+          "isPartOf": { "@id": "https://arthcalculator.in/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Step-Up EMI Calculator",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "Step-Up Loan Planner" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to calculate Step-Up Loan Savings",
+          "step": [
+            { "@type": "HowToStep", "name": "Input Loan", "text": "Enter your total loan amount and interest rate." },
+            { "@type": "HowToStep", "name": "Configure Step-Up", "text": "Set the annual EMI increase percentage and the initial starting multiplier." },
+            { "@type": "HowToStep", "name": "Analyze Interest", "text": "Compare the total interest paid in the Step-Up vs Standard mode." },
+            { "@type": "HowToStep", "name": "Check Amortization", "text": "Verify if the initial EMI covers the monthly interest to avoid principal growth." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does the Step-Up plan increase the total interest paid?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Because you pay less principal in the early years, the outstanding balance stays higher for longer, leading to a higher total interest outflow." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is negative amortization in step-up loans?",
+              "acceptedAnswer": { "@type": "Answer", "text": "It happens if your starting EMI is lower than the monthly interest due. The unpaid interest is added to the principal, making your loan amount grow instead of shrink." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #4f46e5 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        input[type="range"] { accent-color: #4f46e5; height: 6px; }
+        .formula-box { background: #f5f3ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #4338ca; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-indigo-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-indigo-600 transition-colors text-pretty">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-indigo-600 font-bold">Step-Up Loan Planner</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Step-Up Loan EMI & Repayment Optimizer</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Don't let today's salary limit your dream home. Calculate your <strong>progressive EMI schedule</strong>, find the "Interest Penalty" for lower starting payments, and verify your 2026 affordability score.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 whitespace-nowrap">
+                    <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-indigo-100 shadow-sm">2026 Fintech Model</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        Loan Configuration
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Loan Amount (₹)</label>
+                            <input type="number" id="loanInput" value="5000000" min="100000" step="100000" class="w-24 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-blue-600">
+                        </div>
+                        <input type="range" id="loanRange" min="500000" max="25000000" step="100000" value="5000000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Interest Rate (%)</label>
+                            <input type="number" id="rateInput" value="9.0" step="0.1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Tenure (Years)</label>
+                            <input type="number" id="tenureInput" value="20" min="5" max="30" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-indigo-50 rounded-xl border border-indigo-100 mb-6">
+                        <h3 class="text-xs font-bold text-indigo-700 uppercase mb-4 tracking-wider">Step-Up Strategy</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <label class="text-xs font-medium text-slate-600 uppercase">Initial EMI Multiplier (%)</label>
+                                    <span class="text-xs font-bold text-indigo-600" id="multiplierLabel">80%</span>
+                                </div>
+                                <input type="range" id="multiplierRange" min="60" max="100" step="5" value="80" class="w-full py-2 cursor-pointer">
+                                <p class="text-[9px] text-slate-400 mt-1">Starting EMI as percentage of standard flat EMI.</p>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <label class="text-xs font-medium text-slate-600 uppercase">Annual Step-Up (%)</label>
+                                    <span class="text-xs font-bold text-indigo-600" id="stepLabel">5%</span>
+                                </div>
+                                <input type="range" id="stepRange" min="0" max="15" step="1" value="5" class="w-full py-2 cursor-pointer">
+                                <p class="text-[9px] text-slate-400 mt-1">EMI increase every 12 months.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-indigo-100 flex items-center justify-center gap-2">
+                        Optimize Repayment
+                    </button>
+                </div>
+
+                <!-- Affordability Card -->
+                <div id="scoreCard" class="bg-slate-900 p-6 rounded-2xl text-white shadow-lg shadow-indigo-200/20 text-pretty">
+                    <p class="text-indigo-400 text-[10px] font-medium uppercase mb-1">Affordability Score</p>
+                    <h3 id="scoreDisplay" class="text-3xl font-bold leading-tight">0/100</h3>
+                    <p class="text-slate-400 text-xs mt-2" id="scoreVerdict">Analyzing your repayment sustainability...</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6 text-pretty">Simulation Results</h2>
+                    
+                    <div class="p-6 bg-slate-900 rounded-2xl border border-slate-800 mb-10 text-center">
+                        <h4 class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Total Interest Difference</h4>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-white" id="interestPenaltyDisplay">₹0</div>
+                        <p class="text-sm text-rose-400 mt-2 font-medium" id="penaltySubtext">Extra interest paid over standard loan</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                        <div class="p-5 border border-indigo-100 rounded-2xl bg-indigo-50/50">
+                            <h4 class="text-indigo-700 text-[10px] font-bold uppercase tracking-wider mb-1">Starting EMI</h4>
+                            <div class="text-2xl font-bold text-indigo-800" id="startEmiDisplay">₹0</div>
+                            <p class="text-[10px] text-indigo-600">Year 1 monthly payout</p>
+                        </div>
+                        <div class="p-5 border border-slate-100 rounded-2xl bg-slate-50">
+                            <h4 class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">Final Year EMI</h4>
+                            <div class="text-2xl font-bold text-slate-800" id="endEmiDisplay">₹0</div>
+                            <p class="text-[10px] text-slate-400">Year End monthly payout</p>
+                        </div>
+                    </div>
+
+                    <!-- Negative Amortization Alert -->
+                    <div id="negAmAlert" class="hidden bg-rose-50 border-l-4 border-rose-500 rounded-r-xl p-5 mb-8 flex items-start gap-4">
+                        <div class="mt-1">
+                            <svg class="w-6 h-6 text-rose-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-rose-900 font-bold text-sm uppercase tracking-tight">Negative Amortization Alert</h4>
+                            <p class="text-xs text-rose-800 mt-1 leading-relaxed">
+                                Your Year 1 EMI does not even cover the monthly interest. Your loan balance will actually <strong>grow</strong> in the first few years.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Strategic Recommendation
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing your progressive curve...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Repayment Schedule Summary</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Year Range</th>
+                                        <th class="px-4 py-3 font-semibold text-blue-700 border-b text-right whitespace-nowrap">Monthly EMI</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Annual Payout</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 no-print text-pretty">
+                        <button onclick="copySchedule()" class="flex-1 py-3 border border-indigo-200 hover:bg-indigo-50 rounded-xl text-xs font-bold text-indigo-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                            Copy Year-wise Schedule
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">The Step-Up Math</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        EMI(y+1) = EMI(y) × (1 + Step_Up_Rate)
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Compound Interest:</strong> Because you defer principal repayment to later years, the unpaid principal attracts more interest over time, creating an "Interest Penalty."</p>
+                        <p><strong>Standard Baseline:</strong> We compare the total outflow of the Step-Up plan against a standard amortized loan to show the true cost of flexibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="what-is-step-up">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">What is a Step-Up Home Loan?</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>A <strong>Step-Up Loan</strong> is a progressive repayment scheme offered by major Indian banks like SBI (FlexiPay) and ICICI (Extraa Home Loan). It is specifically designed for young salaried professionals (IT, Doctors, MBAs) who have a high future earning potential but limited cash flow today.</p>
+                    <p>In this structure, you start with a lower EMI for the first few years (usually 2-5 years). As your salary increases through annual increments, the EMI "steps up" periodically. This allows you to qualify for a 20-30% higher loan amount today than you would with a standard flat EMI. Match your loan step-up with your projected increments using our <a href="/salary-increment-calculator/" class="text-indigo-600 underline font-bold">Salary Hike Optimizer</a>.</p>
+                </div>
+            </section>
+
+            <section class="bg-blue-600 p-8 rounded-2xl text-white text-pretty">
+                <h2 class="text-xl font-bold mb-4">Deep-Dive: The Danger of Negative Amortization</h2>
+                <p class="text-sm leading-relaxed opacity-95 mb-4">
+                    The most significant risk in a Step-Up plan is <strong>Negative Amortization</strong>. This occurs when the monthly interest due on your loan is actually higher than the lower EMI you are paying in the initial years. 
+                </p>
+                <ul class="list-disc ml-5 space-y-2 text-sm opacity-95">
+                    <li><strong>Principal Growth:</strong> Instead of your loan decreasing, the unpaid interest is "capitalized" and added to your principal.</li>
+                    <li><strong>Interest on Interest:</strong> You begin paying interest on that capitalized amount, leading to a much higher total outflow.</li>
+                    <li><strong>2026 Strategy:</strong> Experts recommend ensuring your starting EMI is at least 75-80% of the standard EMI to avoid this trap.</li>
+                </ul>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Repayment Mode Comparison</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-pretty">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Feature</th>
+                                <th class="p-4 border-b">Standard EMI</th>
+                                <th class="p-4 border-b">Step-Up EMI</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600">
+                            <tr><td class="p-4 border-b font-medium whitespace-nowrap">Monthly Payout</td><td class="p-4 border-b">Fixed throughout</td><td class="p-4 border-b text-indigo-600 font-bold">Increasing Annually</td></tr>
+                            <tr><td class="p-4 border-b font-medium whitespace-nowrap">Total Interest</td><td class="p-4 border-b text-emerald-600 font-bold">Lowest</td><td class="p-4 border-b text-rose-600">Higher</td></tr>
+                            <tr><td class="p-4 border-b font-medium whitespace-nowrap">Loan Eligibility</td><td class="p-4 border-b">Based on current pay</td><td class="p-4 border-b text-indigo-600 font-bold">20-30% Higher</td></tr>
+                            <tr><td class="p-4 border-b font-medium whitespace-nowrap">Flexibility</td><td class="p-4 border-b">Low</td><td class="p-4 border-b font-bold">High (for early life)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Step-Up Loan FAQs</h2>
+                <div class="space-y-4 text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Who is eligible for a Step-Up home loan?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">Most banks offer this to salaried individuals aged 21-45 years with a stable income and high career growth potential. It is very popular among IT professionals and Government employees.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the 'FlexiPay' scheme?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">FlexiPay is SBI's version of a step-up loan. It allows borrowers to pay only the interest for the first few years (moratorium), followed by stepped-up EMIs, helping them buy a more expensive house earlier in life.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can I prepay a Step-Up loan without penalty?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes. As per RBI rules, there are no foreclosure or part-payment penalties on floating-rate home loans for individual borrowers, even if it is a Step-Up scheme.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What happens if my salary doesn't increase?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">This is the biggest risk. Since the EMI increases annually regardless of your actual hike, you must ensure you have a financial buffer. If it becomes unmanageable, consider a <a href="/home-loan-balance-transfer/" class="underline">Balance Transfer</a> to a standard loan.</div></details>
+                </div>
+            </section>
+
+            <!-- Strategic Linking -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="/salary-increment-calculator/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-indigo-500 transition-all group">
+                    <h4 class="text-indigo-600 font-bold text-sm mb-1 text-pretty">Salary Hike Optimizer</h4>
+                    <p class="text-slate-500 text-xs mb-4 text-pretty">Match your loan step-up percentage with your projected annual increments.</p>
+                    <span class="text-indigo-600 font-semibold text-xs group-hover:underline">Project Salary Growth →</span>
+                </a>
+                <a href="/home-loan-balance-transfer/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-blue-500 transition-all group">
+                    <h4 class="text-blue-600 font-bold text-sm mb-1">Balance Transfer</h4>
+                    <p class="text-slate-500 text-xs mb-4">Switch to a lower interest rate if your Step-Up plan gets too expensive over time.</p>
+                    <span class="text-blue-600 font-semibold text-xs group-hover:underline text-pretty text-pretty">Check Transfer Savings →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        loanInput: document.getElementById('loanInput'),
+        loanRange: document.getElementById('loanRange'),
+        rateInput: document.getElementById('rateInput'),
+        tenureInput: document.getElementById('tenureInput'),
+        multiplierRange: document.getElementById('multiplierRange'),
+        multiplierLabel: document.getElementById('multiplierLabel'),
+        stepRange: document.getElementById('stepRange'),
+        stepLabel: document.getElementById('stepLabel'),
+        interestPenaltyDisplay: document.getElementById('interestPenaltyDisplay'),
+        startEmiDisplay: document.getElementById('startEmiDisplay'),
+        endEmiDisplay: document.getElementById('endEmiDisplay'),
+        scoreDisplay: document.getElementById('scoreDisplay'),
+        scoreVerdict: document.getElementById('scoreVerdict'),
+        scoreCard: document.getElementById('scoreCard'),
+        negAmAlert: document.getElementById('negAmAlert'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculateEMI(p, r_annual, n_years) {
+        const r = (r_annual / 100) / 12;
+        const n = n_years * 12;
+        if (r === 0) return p / n;
+        return (p * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    }
+
+    function calculate() {
+        const principal = parseFloat(elements.loanInput.value) || 0;
+        const rate = parseFloat(elements.rateInput.value) || 0;
+        const tenureYrs = parseFloat(elements.tenureInput.value) || 1;
+        const multiplier = parseFloat(elements.multiplierRange.value) / 100;
+        const stepPct = parseFloat(elements.stepRange.value) / 100;
+
+        elements.multiplierLabel.textContent = elements.multiplierRange.value + "%";
+        elements.stepLabel.textContent = elements.stepRange.value + "%";
+
+        const standardEMI = calculateEMI(principal, rate, tenureYrs);
+        const totalInterestStandard = (standardEMI * tenureYrs * 12) - principal;
+
+        // Step-Up Simulation
+        let runningPrincipal = principal;
+        let totalInterestStepUp = 0;
+        let currentEMI = standardEMI * multiplier;
+        const startEMI = currentEMI;
+        let finalEMI = 0;
+        let negAmDetected = false;
+        let yearWiseRows = [];
+
+        const r_monthly = (rate / 100) / 12;
+        const totalMonths = tenureYrs * 12;
+
+        for (let m = 1; m <= totalMonths; m++) {
+            // Check for negative amortization (only once for UI)
+            const interestThisMonth = runningPrincipal * r_monthly;
+            if (interestThisMonth > currentEMI) negAmDetected = true;
+
+            totalInterestStepUp += interestThisMonth;
+            const principalRepaid = currentEMI - interestThisMonth;
+            runningPrincipal -= principalRepaid;
+
+            // At the end of every year, increase EMI
+            if (m % 12 === 0 && m < totalMonths) {
+                const yearNum = m / 12;
+                yearWiseRows.push({
+                    year: yearNum,
+                    emi: currentEMI,
+                    annual: currentEMI * 12
+                });
+                currentEMI *= (1 + stepPct);
+            }
+            finalEMI = currentEMI;
+            
+            // If loan is settled early due to aggressive step-up
+            if (runningPrincipal <= 0) break;
+        }
+
+        // UI Results
+        const penalty = Math.max(0, totalInterestStepUp - totalInterestStandard);
+        elements.interestPenaltyDisplay.textContent = formatINR(penalty);
+        elements.startEmiDisplay.textContent = formatINR(startEMI);
+        elements.endEmiDisplay.textContent = formatINR(finalEMI);
+
+        // Score logic (Sustainability)
+        // typical salary increment is 8-10% in India. If step-up matches this, score is high.
+        let sustainabilityScore = 100 - (Math.abs(8 - (stepPct*100)) * 5) - ((1 - multiplier) * 40);
+        sustainabilityScore = Math.round(Math.max(10, Math.min(100, sustainabilityScore)));
+        elements.scoreDisplay.textContent = sustainabilityScore + "/100";
+
+        if (sustainabilityScore > 75) {
+            elements.scoreCard.className = "bg-emerald-600 p-6 rounded-2xl text-white shadow-lg shadow-emerald-200 text-pretty";
+            elements.scoreVerdict.textContent = "Sustainable. Step-up matches typical salary growth.";
+        } else if (sustainabilityScore > 45) {
+            elements.scoreCard.className = "bg-indigo-600 p-6 rounded-2xl text-white shadow-lg shadow-indigo-200 text-pretty";
+            elements.scoreVerdict.textContent = "Fair. Ensure you have secondary savings for later years.";
+        } else {
+            elements.scoreCard.className = "bg-rose-600 p-6 rounded-2xl text-white shadow-lg shadow-rose-200 text-pretty";
+            elements.scoreVerdict.textContent = "High Risk. Late-year EMIs might strain your budget.";
+        }
+
+        elements.negAmAlert.classList.toggle('hidden', !negAmDetected);
+
+        // Table (Summary showing every 4th year to save space)
+        const displayRows = yearWiseRows.filter((r, i) => i % 4 === 0 || i === yearWiseRows.length - 1);
+        elements.breakdownTable.innerHTML = displayRows.map(r => `
+            <tr class="hover:bg-slate-50 border-b border-slate-100 transition-colors">
+                <td class="px-4 py-3 whitespace-nowrap font-medium text-slate-700">Year ${r.year}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-blue-600 font-bold">${formatINR(r.emi)}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-slate-800">${formatINR(r.annual)}</td>
+            </tr>
+        `).join('');
+
+        // Insight Box
+        let insight = `By choosing a <strong>${Math.round(multiplier*100)}%</strong> start multiplier, you save <strong>${formatINR(standardEMI - startEMI)}</strong> per month in Year 1. `;
+        insight += `However, this flexibility costs you <strong>${formatINR(penalty)}</strong> in additional interest over the full tenure.`;
+        if (negAmDetected) {
+            insight += ` <span class="text-rose-600 font-bold">Caution:</span> Your initial EMI is too low, causing your debt to grow. Consider increasing the multiplier to 75%+.`;
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function copySchedule() {
+        const text = `Step-Up Loan Repayment Plan (ArthCalculator)\n------------------------------\nLoan: ${elements.loanInput.value}\nStart EMI: ${elements.startEmiDisplay.innerText}\nEnd EMI: ${elements.endEmiDisplay.innerText}\nInterest Penalty: ${elements.interestPenaltyDisplay.innerText}\nSustainability: ${elements.scoreDisplay.innerText}\n------------------------------\nPlan at arthcalculator.in/step-up-loan-calculator/`;
+        const dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        const btn = document.querySelector('button[onclick="copySchedule()"]');
+        const orig = btn.innerHTML;
+        btn.innerHTML = "✅ Schedule Copied";
+        setTimeout(() => { btn.innerHTML = orig; }, 2500);
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.loanInput, elements.loanRange);
+        [elements.rateInput, elements.tenureInput, elements.multiplierRange, elements.stepRange].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{document.getElementById("navbar").innerHTML=data;});
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
