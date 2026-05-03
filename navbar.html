@@ -1,84 +1,144 @@
 <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="flex justify-between items-center h-16 gap-4">
-      <a href="/" class="text-blue-600 font-bold text-lg shrink-0">ArthCalculator</a>
 
-      <!-- Desktop Search -->
-      <div class="relative max-w-md w-full hidden md:block">
-        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <svg class="h-4 w-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-width="2"/></svg>
-        </div>
-        <input type="text" id="calcSearch" autocomplete="off" placeholder="Search 169+ tools..." 
-               class="block w-full pl-10 pr-3 py-2 border border-slate-200 rounded-xl bg-slate-50 focus:outline-none focus:ring-2 focus:ring-blue-500 sm:text-sm">
-        <div id="searchResults" class="absolute z-[999] mt-2 w-full bg-white rounded-xl shadow-2xl border border-slate-200 hidden max-h-80 overflow-y-auto">
-          <div id="resultsList" class="py-2"></div>
-        </div>
+    <div class="flex justify-between items-center h-16">
+
+      <!-- Logo -->
+      <a href="/" class="text-blue-600 font-bold text-lg hover:opacity-80 transition">
+        ArthCalculator
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+
+        <a href="/calculators/" class="nav-link">All Calculators</a>
+
+        <a href="/financial-goal-planner/" 
+        class="nav-link font-semibold text-blue-600">
+        Goal Planner
+        </a>
+
+        <a href="/sip/" class="nav-link">SIP</a>
+
+        <a href="/emi/" class="nav-link">EMI</a>
+
+        <a href="/income-tax/" class="nav-link">Income Tax</a>
+
+        <a href="/ppf/" class="nav-link">PPF</a>
+
+        <a href="/about/" class="nav-link">About</a>
+
       </div>
 
-      <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-600 shrink-0">
-        <a href="/calculators/" class="hover:text-blue-600">All Tools</a>
-        <a href="/sip/" class="hover:text-blue-600">SIP</a>
-        <a href="/emi/" class="hover:text-blue-600">EMI</a>
-      </div>
+      <!-- Mobile Button -->
+      <button id="menuBtn" 
+      class="md:hidden text-slate-700 hover:text-blue-600 transition">
+      
+        <svg xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor">
 
-      <button id="menuBtn" class="md:hidden text-slate-700"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16" stroke-width="2"/></svg></button>
+          <path stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"/>
+
+        </svg>
+
+      </button>
+
     </div>
+
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 bg-white p-4">
-      <input type="text" id="calcSearchMobile" placeholder="Search tools..." class="w-full px-4 py-2 border border-slate-200 rounded-lg bg-slate-50">
-      <div id="searchResultsMobile" class="absolute z-[999] mt-1 left-4 right-4 bg-white rounded-lg shadow-xl border border-slate-200 hidden max-h-60 overflow-y-auto">
-         <div id="resultsListMobile" class="py-1"></div>
-      </div>
+  <div id="mobileMenu"
+  class="hidden md:hidden border-t border-slate-200 bg-white">
+
+    <div class="flex flex-col p-4 space-y-4 text-sm font-medium text-slate-700">
+
+      <a href="/calculators/" class="hover:text-blue-600">
+      All Calculators
+      </a>
+
+      <a href="/financial-goal-planner/" 
+      class="text-blue-600 font-semibold">
+      Financial Goal Planner ⭐
+      </a>
+
+      <a href="/sip/" class="hover:text-blue-600">
+      SIP Calculator
+      </a>
+
+      <a href="/emi/" class="hover:text-blue-600">
+      EMI Calculator
+      </a>
+
+      <a href="/income-tax/" class="hover:text-blue-600">
+      Income Tax
+      </a>
+
+      <a href="/ppf/" class="hover:text-blue-600">
+      PPF Calculator
+      </a>
+
+      <a href="/about/" class="hover:text-blue-600">
+      About
+      </a>
+
+    </div>
+
   </div>
 </nav>
 
+<style>
+
+.nav-link{
+  position:relative;
+  padding-bottom:4px;
+  transition:all 0.2s ease;
+}
+
+.nav-link:hover{
+  color:#2563eb;
+}
+
+.nav-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:2px;
+  background:#2563eb;
+  transition:width 0.25s ease;
+}
+
+.nav-link:hover::after{
+  width:100%;
+}
+
+/* Active page support */
+.nav-link.active{
+color:#2563eb;
+font-weight:600;
+}
+
+.nav-link.active::after{
+width:100%;
+}
+
+</style>
+
 <script>
-// IMPORTANT: We attach everything to the 'window' so it persists across the fetch
-(function() {
-    const data = [{"Name": "50 30 20 Rule", "URL": "/50-30-20-rule/"}, {"Name": "Advance Tax", "URL": "/advance-tax/"}, {"Name": "Alpha", "URL": "/alpha/"}, {"Name": "Asset Allocation", "URL": "/asset-allocation/"}, {"Name": "Beta", "URL": "/beta/"}, {"Name": "Bonus Calculator", "URL": "/bonus-calculator/"}, {"Name": "Bonus calc", "URL": "/bonus-calc/"}, {"Name": "Break Even Calculator", "URL": "/break-even-calculator/"}, {"Name": "Brokerage Calculator", "URL": "/brokerage-calculator/"}, {"Name": "Budget Planner", "URL": "/budget-planner/"}, {"Name": "CTC to Inhand", "URL": "/ctc-to-inhand/"}, {"Name": "Cagr", "URL": "/cagr/"}, {"Name": "Calculators", "URL": "/calculators/"}, {"Name": "Capital Gains Tax", "URL": "/capital-gains-tax/"}, {"Name": "Car Loan", "URL": "/car-loan/"}, {"Name": "Car Purchase", "URL": "/car-purchase/"}, {"Name": "Carbon Credit Valuation Tool", "URL": "/carbon-credit-valuation-tool/"}, {"Name": "Child Education Cost 2040 Projector", "URL": "/child-education-cost-2040-projector/"}, {"Name": "Commission Calculator", "URL": "/commission-calculator/"}, {"Name": "Compound Interest", "URL": "/compound-interest/"}, {"Name": "Contribution Margin", "URL": "/contribution-margin/"}, {"Name": "Corporate Car Lease vs Buy Calculator", "URL": "/corporate-car-lease-vs-buy-calculator/"}, {"Name": "Cost Of Debt", "URL": "/cost-of-debt/"}, {"Name": "Cost Of Equity", "URL": "/cost-of-equity/"}, {"Name": "Credit Card Interest", "URL": "/credit-card-interest/"}, {"Name": "Credit Card Rewards", "URL": "/credit-card-rewards/"}, {"Name": "Crorepati Calculator", "URL": "/crorepati-calculator/"}, {"Name": "Current ratio", "URL": "/current-ratio/"}, {"Name": "DSCR", "URL": "/dscr/"}, {"Name": "Dcf", "URL": "/dcf/"}, {"Name": "Debt Payoff", "URL": "/debt-payoff/"}, {"Name": "Debt To Income", "URL": "/debt-to-income/"}, {"Name": "Debt to equity", "URL": "/debt-to-equity/"}, {"Name": "Discount Calculator", "URL": "/discount-calculator/"}, {"Name": "Dividend Growth", "URL": "/dividend-growth/"}, {"Name": "Dividend Growth calc", "URL": "/dividend-growth-calc/"}, {"Name": "Dividend Yield", "URL": "/dividend-yield/"}, {"Name": "ESOP & RSU Wealth Simulator", "URL": "/esop-rsu-wealth-simulator/"}, {"Name": "EV Battery Replacement Fund Planner", "URL": "/ev-battery-replacement-fund-planner/"}, {"Name": "EV Charging vs Petrol Cost Per KM", "URL": "/ev-charging-vs-petrol-cost-per-km/"}, {"Name": "EV vs ICE Calculator", "URL": "/ev-vs-ice-calculator/"}, {"Name": "Early Retirement", "URL": "/early-retirement/"}, {"Name": "Ebitda", "URL": "/ebitda/"}, {"Name": "Education Cost", "URL": "/education-cost/"}, {"Name": "Education Loan Moratorium Interest Calculator", "URL": "/education-loan-moratorium-interest-calculator/"}, {"Name": "Education Planning", "URL": "/education-planning/"}, {"Name": "Emergency Fund", "URL": "/emergency-fund/"}, {"Name": "Emi", "URL": "/emi/"}, {"Name": "Enterprise Value", "URL": "/enterprise-value/"}, {"Name": "Epf", "URL": "/epf/"}, {"Name": "Expense Ratio", "URL": "/expense-ratio/"}, {"Name": "Expense Tracker", "URL": "/expense-tracker/"}, {"Name": "Financial Goal Planner", "URL": "/financial-goal-planner/"}, {"Name": "Financial Independence", "URL": "/financial-independence/"}, {"Name": "Financial Leverage", "URL": "/financial-leverage/"}, {"Name": "Fire Calculator", "URL": "/fire-calculator/"}, {"Name": "Fixed Vs Floating Rate", "URL": "/fixed-vs-floating-rate/"}, {"Name": "Flat Vs Reducing Rate", "URL": "/flat-vs-reducing-rate/"}, {"Name": "Foreign Tax Optimiser", "URL": "/foreign-tax-optimiser/"}, {"Name": "Freelancer vs Salaried Comparison Calculator", "URL": "/freelancer-vs-salaried-comparison-calculator/"}, {"Name": "Future Value", "URL": "/future-value/"}, {"Name": "Futures Profit", "URL": "/futures-profit/"}, {"Name": "Get Profit Calculator", "URL": "/get-profit-calculator/"}, {"Name": "Goal Portfolio", "URL": "/goal-portfolio/"}, {"Name": "Goal Priority", "URL": "/goal-priority/"}, {"Name": "Goal Sip Calculator", "URL": "/goal-sip-calculator/"}, {"Name": "Goal Step Up", "URL": "/goal-step-up/"}, {"Name": "Gold Loan vs Personal Loan Optimizer", "URL": "/gold-loan-vs-personal-loan-optimizer/"}, {"Name": "Gratuity", "URL": "/gratuity/"}, {"Name": "Gst", "URL": "/gst/"}, {"Name": "Health Insurance Top-Up vs Base Plan Evaluator", "URL": "/health-insurance-top-up-vs-base-plan-evaluator/"}, {"Name": "Home Affordability", "URL": "/home-affordability/"}, {"Name": "Home Loan", "URL": "/home-loan/"}, {"Name": "Home Loan Balance Transfer Savings Tool", "URL": "/home-loan-balance-transfer-savings-tool/"}, {"Name": "Hra", "URL": "/hra/"}, {"Name": "Human Life Value Calculator", "URL": "/human-life-value-calculator/"}, {"Name": "In Hand Salary", "URL": "/in-hand-salary/"}, {"Name": "Income Tax", "URL": "/income-tax/"}, {"Name": "Inflation", "URL": "/inflation/"}, {"Name": "Inflation Adjusted Salary Calculator", "URL": "/inflation-adjusted-salary-calculator/"}, {"Name": "Inflation Adjusted Sip Calculator", "URL": "/inflation-adjusted-sip-calculator/"}, {"Name": "Information Ratio", "URL": "/information-ratio/"}, {"Name": "Interest Coverage", "URL": "/interest-coverage/"}, {"Name": "Intrady Profit Calculator", "URL": "/intrady-profit-calculator/"}, {"Name": "Inventory Turnover", "URL": "/inventory-turnover/"}, {"Name": "Ir Calculator", "URL": "/ir-calculator/"}, {"Name": "LRS & TCS Refund Calculator", "URL": "/lrs-tcs-refund-calculator/"}, {"Name": "Loan Affordability", "URL": "/loan-affordability/"}, {"Name": "Loan Balance Calculator", "URL": "/loan-balance-calculator/"}, {"Name": "Loan Eligibility", "URL": "/loan-eligibility/"}, {"Name": "Loan Prepayment", "URL": "/loan-prepayment/"}, {"Name": "Loan Vs Investment Calculator", "URL": "/loan-vs-investment-calculator/"}, {"Name": "Lumpsum", "URL": "/lumpsum/"}, {"Name": "Margin Calculator", "URL": "/margin-calculator/"}, {"Name": "Markup Calculator", "URL": "/markup-calculator/"}, {"Name": "Marriage Planner", "URL": "/marriage-planner/"}, {"Name": "Mortgage Balance", "URL": "/mortgage-balance/"}, {"Name": "Multiple Goals", "URL": "/multiple-goals/"}, {"Name": "Mutual Fund Portfolio Overlap Estimator", "URL": "/mutual-fund-portfolio-overlap-estimator/"}, {"Name": "Mutual Fund Returns", "URL": "/mutual-fund-returns/"}, {"Name": "NPS Tier I vs Tier II Optimizer", "URL": "/nps-tier-i-vs-tier-ii-optimizer/"}, {"Name": "Net Worth", "URL": "/net-worth/"}, {"Name": "No Cost Emi", "URL": "/no-cost-emi/"}, {"Name": "Nps", "URL": "/nps/"}, {"Name": "Npv Calculator", "URL": "/npv-calculator/"}, {"Name": "Operating leverage", "URL": "/operating-leverage/"}, {"Name": "Opportunity Cost Calculator", "URL": "/opportunity-cost-calculator/"}, {"Name": "Options Profit", "URL": "/options-profit/"}, {"Name": "Passive Income", "URL": "/passive-income/"}, {"Name": "Payback Period Calculator", "URL": "/payback-period-calculator/"}, {"Name": "Percentage", "URL": "/percentage/"}, {"Name": "Personal Loan Emi", "URL": "/personal-loan-emi/"}, {"Name": "Portfolio Rebalancing", "URL": "/portfolio-rebalancing/"}, {"Name": "Portfolio Return Calculator", "URL": "/portfolio-return-calculator/"}, {"Name": "Position Size Calculator", "URL": "/position-size-calculator/"}, {"Name": "Ppf", "URL": "/ppf/"}, {"Name": "Present Value", "URL": "/present-value/"}, {"Name": "Profit Margin", "URL": "/profit-margin/"}, {"Name": "Property Appreciation", "URL": "/property-appreciation/"}, {"Name": "Property Roi", "URL": "/property-roi/"}, {"Name": "Quick Ratio", "URL": "/quick-ratio/"}, {"Name": "Rd", "URL": "/rd/"}, {"Name": "Real Return", "URL": "/real-return/"}, {"Name": "Remote Work Savings Calculator", "URL": "/remote-work-savings-calculator/"}, {"Name": "Rent Vs Buy Calculator", "URL": "/rent-vs-buy-calculator/"}, {"Name": "Rental Yield", "URL": "/rental-yield/"}, {"Name": "Required Cagr Calculator", "URL": "/required-cagr-calculator/"}, {"Name": "Retirement", "("/retirement/")}, {"Name": "Retirement Withdrawal", "URL": "/retirement-withdrawal/"}, {"Name": "Risk Reward Calculator", "URL": "/risk-reward-calculator/"}, {"Name": "Roi Calculator", "URL": "/roi-calculator/"}, {"Name": "Rolling Returns", "URL": "/rolling-returns/"}, {"Name": "Rule Of 72", "URL": "/rule-of-72/"}, {"Name": "SIP Vs FD", "URL": "/sip-vs-fd/"}, {"Name": "SaaS Subscription Leak Audit Tool", "URL": "/saas-subscription-leak-audit-tool/"}, {"Name": "Salary Breakup", "URL": "/salary-breakup/"}, {"Name": "Salary Hike", "URL": "/salary-hike/"}, {"Name": "Savings Goal", "URL": "/savings-goal/"}, {"Name": "Savings Rate", "URL": "/savings-rate/"}, {"Name": "Sequence of Returns Risk (SRR) Simulator", "URL": "/sequence-of-returns-risk-srr-simulator/"}, {"Name": "Sharpe Ratio", "URL": "/sharpe-ratio/"}, {"Name": "Simple Interest", "URL": "/simple-interest/"}, {"Name": "Sip", "URL": "/sip/"}, {"Name": "Sip Vs Rd", "URL": "/sip-vs-rd/"}, {"Name": "Social Media Influencer Expense Tracker", "URL": "/social-media-influencer-expense-tracker/"}, {"Name": "Solar + EV Home Ecosystem ROI Calculator.", "URL": "/solar-ev-home-ecosystem-roi-calculator/"}, {"Name": "Solar Rooftop ROI & Subsidy Calculator", "URL": "/solar-rooftop-roi-subsidy-calculator/"}, {"Name": "Sortino Ratio", "URL": "/sortino-ratio/"}, {"Name": "Ssy", "URL": "/ssy/"}, {"Name": "Stamp Duty", "URL": "/stamp-duty/"}, {"Name": "Startup Equity (ESOP) Value Calculator", "URL": "/startup-equity-esop-value-calculator/"}, {"Name": "Step Up Sip", "URL": "/step-up-sip/"}, {"Name": "Step-Up Loan EMI Planner", "URL": "/step-up-loan-emi-planner/"}, {"Name": "Stock Average", "URL": "/stock-average/"}, {"Name": "Stop Loss", "URL": "/stop-loss/"}, {"Name": "Swp", "URL": "/swp/"}, {"Name": "Take Home Salary", "URL": "/take-home-salary/"}, {"Name": "Tax Loss Harvesting", "URL": "/tax-loss-harvesting/"}, {"Name": "Tcs Calculator", "URL": "/tcs-calculator/"}, {"Name": "Tds Calculator", "URL": "/tds-calculator/"}, {"Name": "Time To Financial Freedom", "URL": "/time-to-financial-freedom/"}, {"Name": "Time Value Of Money", "URL": "/time-value-of-money/"}, {"Name": "Treynor Ratio", "URL": "/treynor-ratio/"}, {"Name": "Vacation Goal", "URL": "/vacation-goal/"}, {"Name": "Vat", "URL": "/vat/"}, {"Name": "Wealth Projection", "URL": "/wealth-projection/"}, {"Name": "Wedding Expense & Inflation Planner", "URL": "/wedding-expense-inflation-planner/"}, {"Name": "Working Capital", "URL": "/working-capital/"}, {"Name": "Xirr", "URL": "/xirr/"}];
 
-    // Function that runs the actual search
-    function handleSearch(e, resId, listId) {
-        const val = e.target.value.toLowerCase().trim();
-        const container = document.getElementById(resId);
-        const list = document.getElementById(listId);
-        if (!container || !list) return;
+const btn = document.getElementById("menuBtn");
+const menu = document.getElementById("mobileMenu");
 
-        list.innerHTML = '';
-        if (val.length < 2) { container.classList.add('hidden'); return; }
+btn.addEventListener("click", () => {
+menu.classList.toggle("hidden");
+});
 
-        const matches = data.filter(c => c.Name.toLowerCase().includes(val)).slice(0, 7);
-        if (matches.length > 0) {
-            matches.forEach(m => {
-                const a = document.createElement('a');
-                a.href = m.URL;
-                a.className = "block px-4 py-2 hover:bg-blue-50 text-sm text-slate-700 border-b border-slate-50 last:border-0";
-                a.textContent = m.Name;
-                list.appendChild(a);
-            });
-            container.classList.remove('hidden');
-        } else {
-            container.classList.add('hidden');
-        }
-    }
-
-    // Global Event Delegation: This works even after fetch!
-    document.addEventListener('input', function(e) {
-        if (e.target.id === 'calcSearch') handleSearch(e, 'searchResults', 'resultsList');
-        if (e.target.id === 'calcSearchMobile') handleSearch(e, 'searchResultsMobile', 'resultsListMobile');
-    });
-
-    document.addEventListener('click', function(e) {
-        // Toggle Menu
-        if (e.target.closest('#menuBtn')) {
-            document.getElementById('mobileMenu')?.classList.toggle('hidden');
-        }
-        // Close search results if clicking outside
-        if (!e.target.closest('#calcSearch') && !e.target.closest('#searchResults')) {
-            document.getElementById('searchResults')?.classList.add('hidden');
-        }
-    });
-})();
 </script>
