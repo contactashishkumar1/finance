@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LRS & TCS Refund Calculator (2026-27) – Foreign Remittance Optimizer</title>
+    <meta name="description" content="Calculate TCS on foreign remittance for FY 2026-27. Estimate refundable TCS for education, medical, and overseas tours under LRS rules in India.">
+    <meta name="keywords" content="tcs on foreign remittance calculator, lrs tcs calculator 2026, 20% tcs india refund, overseas tour tcs calculator, education loan tcs rate, liberalised remittance scheme tax">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-05-03">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/lrs-tcs-calculator/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="LRS & TCS Refund Calculator (2026-27) – ArthCalculator">
+    <meta property="og:description" content="Earning or spending abroad? Calculate the TCS impact on your foreign transfers and plan your tax refunds efficiently for 2026-27.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/lrs-tcs-calculator/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schema Stack -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://arthcalculator.in/#organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Guide to TCS on Foreign Remittance 2026-27",
+          "description": "Comprehensive tool to calculate Tax Collected at Source (TCS) on LRS remittances and plan for tax refunds.",
+          "url": "https://arthcalculator.in/lrs-tcs-calculator/",
+          "isPartOf": { "@id": "https://arthcalculator.in/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "TCS Refund Calculator",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "LRS & TCS Calculator" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to calculate TCS and claim refund",
+          "step": [
+            { "@type": "HowToStep", "name": "Select Purpose", "text": "Choose the reason for remittance (Education, Tour, Medical, etc.)." },
+            { "@type": "HowToStep", "name": "Enter Amount", "text": "Input the current amount you wish to send abroad." },
+            { "@type": "HowToStep", "name": "Input Previous Usage", "text": "Enter amount remitted in the current financial year to track the 7 Lakh threshold." },
+            { "@type": "HowToStep", "name": "Review Deduction", "text": "Analyze the TCS to be paid and the recovery timeline." },
+            { "@type": "HowToStep", "name": "Claim Credit", "text": "Adjust this TCS against your final tax liability or claim it back in your ITR." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the threshold for TCS on LRS in 2026?",
+              "acceptedAnswer": { "@type": "Answer", "text": "The standard threshold is ₹7 Lakhs per financial year. Beyond this, TCS ranges from 0.5% to 20% depending on the category. However, Overseas Tour Packages attract 5% TCS from the first rupee." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is TCS a final tax?",
+              "acceptedAnswer": { "@type": "Answer", "text": "No, TCS is an advance tax. It is 100% refundable or adjustable against your total income tax liability when you file your return." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .formula-box { background: #eff6ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #1e40af; }
+        .floating-badge { position: fixed; top: 1rem; right: 1rem; z-index: 50; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <div class="floating-badge no-print">
+        <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-blue-400 uppercase tracking-widest">FY 2026-27 Ready</span>
+    </div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center text-pretty">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors text-pretty text-pretty">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">LRS & TCS Calculator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">LRS & TCS Refund Calculator (2026-27 Edition)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Calculate the <strong>TCS (Tax Collected at Source)</strong> impact on your foreign transfers and plan your tax refunds. Factors in the ₹7 Lakh threshold and tiered rates for Education, Medical, and Tours.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 text-pretty">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6 text-pretty">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9h18"></path></svg>
+                        Remittance Profile
+                    </h2>
+
+                    <div class="mb-6">
+                        <label class="text-sm font-medium text-slate-600 block mb-2">Purpose of Remittance</label>
+                        <select id="purposeSelect" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-semibold focus:ring-2 focus:ring-blue-500 outline-none bg-white">
+                            <option value="eduLoan">Education (via Bank Loan u/s 80E)</option>
+                            <option value="eduSelf" selected>Education (Self-funded)</option>
+                            <option value="medical">Medical Treatment</option>
+                            <option value="tour">Overseas Tour Package</option>
+                            <option value="other">Other (Investments / Gifts / LRS)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Amount to Remit (₹)</label>
+                            <input type="number" id="amountInput" value="1000000" min="1000" step="10000" class="w-32 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-blue-600">
+                        </div>
+                        <input type="range" id="amountRange" min="10000" max="5000000" step="10000" value="1000000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8 p-4 bg-blue-50 rounded-xl border border-blue-100 text-pretty">
+                        <label class="text-[10px] font-bold text-blue-700 uppercase block mb-2 tracking-wider">Already Remitted in this FY (₹)</label>
+                        <input type="number" id="previousInput" value="0" min="0" step="10000" class="w-full px-3 py-2 border border-blue-200 rounded-lg text-sm font-bold text-slate-800">
+                        <p class="text-[9px] text-blue-500 mt-2">Required to determine the remaining ₹7 Lakh exemption limit.</p>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-blue-100 flex items-center justify-center gap-2">
+                        Calculate TCS & Refund
+                    </button>
+                </div>
+
+                <!-- Hook: Opportunity Cost -->
+                <div class="bg-slate-900 p-6 rounded-2xl text-white shadow-lg shadow-blue-200/20 text-pretty">
+                    <p class="text-blue-400 text-[10px] font-medium uppercase mb-1">Opportunity Cost of Locked Funds</p>
+                    <h3 id="costDisplay" class="text-xl font-bold leading-tight">₹0</h3>
+                    <p class="text-slate-400 text-xs mt-2" id="costSubtext">Interest lost until next tax filing season.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results Dashboard -->
+            <div class="lg:col-span-7 space-y-6 text-pretty">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6 text-pretty">Tax Recovery Dashboard</h2>
+                    
+                    <div class="p-6 bg-amber-50 rounded-2xl border border-amber-200 mb-10 text-center text-pretty">
+                        <h4 class="text-amber-700 text-xs font-bold uppercase tracking-wider mb-2 text-pretty">TCS to be Paid (Locked Outflow)</h4>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-amber-900" id="tcsDisplay">₹0</div>
+                        <p class="text-sm text-amber-600 mt-2 font-medium" id="thresholdNotice">Deducted on amount above ₹7 Lakhs</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 border border-emerald-100 rounded-2xl bg-emerald-50/50">
+                            <h4 class="text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-1">100% Refundable</h4>
+                            <div class="text-2xl font-bold text-emerald-800" id="refundDisplay">₹0</div>
+                            <p class="text-[10px] text-emerald-600">Claim back in ITR Season 2027</p>
+                        </div>
+                        <div class="p-5 border border-slate-100 rounded-2xl bg-slate-50 text-pretty">
+                            <h4 class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">Total Remittance Outflow</h4>
+                            <div class="text-2xl font-bold text-slate-800" id="totalOutflowDisplay">₹0</div>
+                            <p class="text-[10px] text-slate-400">Actual Transfer + TCS Amount</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <h4 class="text-[10px] font-bold text-slate-500 uppercase mb-3">Recovery Timeline (Cash Flow Calendar)</h4>
+                        <div class="w-full h-12 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200 relative">
+                            <div id="barRemit" class="h-full bg-blue-500 transition-all duration-700 flex items-center justify-center text-[10px] font-bold text-white px-2" style="width: 80%">Remittance</div>
+                            <div id="barTcs" class="h-full bg-amber-500 transition-all duration-700 flex items-center justify-center text-[10px] font-bold text-white px-2" style="width: 20%">TCS Locked</div>
+                        </div>
+                        <div class="flex justify-between mt-4 text-[10px] font-bold uppercase text-slate-400">
+                            <span>Payment Date</span>
+                            <span class="text-emerald-600">ITR Refund Period</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Strategic Refund Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing your LRS limit utilization...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Detailed Financial Breakdown</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 text-pretty">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Metric Head</th>
+                                        <th class="px-4 py-3 font-semibold text-blue-600 border-b text-right whitespace-nowrap">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 no-print text-pretty">
+                        <button onclick="simulateCertificate()" class="flex-1 py-3 border border-indigo-200 hover:bg-indigo-50 rounded-xl text-xs font-bold text-indigo-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Generate TCS Certificate Simulation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">LRS TCS Math (2026 Rules)</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm">
+                        TCS = max(0, Current + Prev - 7,00,000) × Applicable Rate
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Exemption:</strong> The ₹7 Lakh threshold is aggregated across all LRS remittances in a single PAN per financial year (except tour packages).</p>
+                        <p><strong>Refundable:</strong> TCS is not a separate expense; it is a prepayment of tax. If you have no tax liability, the IT department refunds the full amount with interest after filing ITR.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO POV KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="rates-table">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">TCS on Remittance 2026: The Comprehensive Table</h2>
+                <div class="overflow-x-auto text-pretty">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Category</th>
+                                <th class="p-4 border-b">Rate (Up to ₹7L)</th>
+                                <th class="p-4 border-b">Rate (Above ₹7L)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600 divide-y divide-slate-50">
+                            <tr><td class="p-4 font-medium">Education (via Bank Loan)</td><td class="p-4">Nil</td><td class="p-4 text-emerald-600 font-bold">0.5%</td></tr>
+                            <tr><td class="p-4 font-medium">Education (Self) / Medical</td><td class="p-4">Nil</td><td class="p-4 text-blue-600 font-bold">5%</td></tr>
+                            <tr><td class="p-4 font-medium">Overseas Tour Package</td><td class="p-4 text-amber-600 font-bold">5%</td><td class="p-4 text-rose-600 font-bold">20%</td></tr>
+                            <tr><td class="p-4 font-medium">Others (Investments/Gifts)</td><td class="p-4">Nil</td><td class="p-4 text-rose-600 font-bold">20%</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-indigo-600 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategy: How to avoid the 20% TCS Trap</h2>
+                <div class="prose prose-indigo max-w-none text-white/90 text-sm sm:text-base leading-relaxed space-y-4 text-pretty">
+                    <p>The 20% TCS on foreign investments and gifts can significantly impact your investable capital. To avoid this, consider <strong>Family Pooling</strong>: Since the ₹7 Lakh threshold is <em>per individual</em>, a family of four can remit up to ₹28 Lakhs in a year without attracting a single rupee in TCS. Ensure the bank accounts are KYC-verified and the source of funds is clearly documented for each member.</p>
+                    <p>Another 2026-ready tip: For overseas education, using a bank loan (Sec 80E) not only gives you a tax deduction but also drops your TCS rate from 5% to a negligible 0.5%.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Checklist: How to claim TCS Refund in ITR</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-pretty text-pretty text-pretty text-pretty">
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <p class="text-xs font-bold text-blue-600 uppercase mb-2">Verification Stage</p>
+                        <p class="text-[11px] text-slate-500">Check your <strong>Form 26AS</strong> and <strong>AIS (Annual Information Statement)</strong> on the IT Portal. The bank must report the TCS against your PAN for you to claim credit.</p>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <p class="text-xs font-bold text-blue-600 uppercase mb-2">Filing Stage</p>
+                        <p class="text-[11px] text-slate-500">File <strong>ITR-2 or ITR-3</strong>. Enter the TCS details in the 'Taxes Paid' schedule. The amount will automatically adjust against your final tax liability.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">TCS & LRS Frequently Asked Questions</h2>
+                <div class="space-y-4 text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the threshold for TCS on LRS in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">The aggregate threshold for all remittances under LRS is ₹7 Lakhs per year. This limit is shared across categories like education, medical, and investments.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is TCS applicable on international credit card spends?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Currently, credit card spends for individual transactions are not reported under LRS. However, debit cards and forex cards fall strictly under the ₹7L threshold.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Can I adjust TCS against my Salary TDS?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Yes! Following the 2024 regulatory update, you can declare your TCS details to your employer, and they can reduce your monthly salary TDS accordingly to improve your cash flow.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is the 7 Lakh limit per bank account?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">No, it is <strong>per PAN</strong>. Remitting from different banks will not help as the IT department aggregates all transactions in your AIS (Annual Information Statement).</div></details>
+                </div>
+            </section>
+
+            <!-- Strategic Linking -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="/child-education-planner/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-indigo-500 transition-all group">
+                    <h4 class="text-indigo-600 font-bold text-sm mb-1 text-pretty">Education Planning</h4>
+                    <p class="text-slate-500 text-xs mb-4">Plan the base amount for your child's MS abroad. Factor in inflation and currency dips.</p>
+                    <span class="text-indigo-600 font-semibold text-xs group-hover:underline">Start Goal Plan →</span>
+                </a>
+                <a href="/income-tax/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-blue-500 transition-all group">
+                    <h4 class="text-blue-600 font-bold text-sm mb-1">Income Tax Optimizer</h4>
+                    <p class="text-slate-500 text-xs mb-4">Adjust your LRS TCS against your total tax liability for the year.</p>
+                    <span class="text-blue-600 font-semibold text-xs group-hover:underline text-pretty">Check Tax Savings →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        purposeSelect: document.getElementById('purposeSelect'),
+        amountInput: document.getElementById('amountInput'),
+        amountRange: document.getElementById('amountRange'),
+        previousInput: document.getElementById('previousInput'),
+        tcsDisplay: document.getElementById('tcsDisplay'),
+        refundDisplay: document.getElementById('refundDisplay'),
+        totalOutflowDisplay: document.getElementById('totalOutflowDisplay'),
+        costDisplay: document.getElementById('costDisplay'),
+        barRemit: document.getElementById('barRemit'),
+        barTcs: document.getElementById('barTcs'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText'),
+        thresholdNotice: document.getElementById('thresholdNotice')
+    };
+
+    function formatINR(val) {
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const purpose = elements.purposeSelect.value;
+        const currentAmount = parseFloat(elements.amountInput.value) || 0;
+        const prevAmount = parseFloat(elements.previousInput.value) || 0;
+        const totalAmount = currentAmount + prevAmount;
+        
+        let tcs = 0;
+        const threshold = 700000;
+
+        // TCS Logic for FY 2026-27
+        if (purpose === 'tour') {
+            // Tour packages: 5% up to 7L (aggregated), 20% above 7L
+            if (totalAmount <= threshold) {
+                tcs = currentAmount * 0.05;
+            } else if (prevAmount >= threshold) {
+                tcs = currentAmount * 0.20;
+            } else {
+                const lowerPart = threshold - prevAmount;
+                const upperPart = totalAmount - threshold;
+                tcs = (lowerPart * 0.05) + (upperPart * 0.20);
+            }
+        } else {
+            // Education, Medical, Investments, Gifts
+            let rate = 0.20; // Default (Investments/Gifts)
+            if (purpose === 'eduLoan') rate = 0.005;
+            else if (purpose === 'eduSelf' || purpose === 'medical') rate = 0.05;
+
+            if (totalAmount > threshold) {
+                const taxablePart = Math.min(currentAmount, totalAmount - threshold);
+                tcs = taxablePart * rate;
+            }
+        }
+
+        // Hook: Opportunity Cost (assumed 7% liquid return locked for avg 10 months)
+        const lockedCapitalCost = tcs * 0.07 * (10 / 12);
+
+        // UI Updates
+        elements.tcsDisplay.textContent = formatINR(tcs);
+        elements.refundDisplay.textContent = formatINR(tcs);
+        elements.totalOutflowDisplay.textContent = formatINR(currentAmount + tcs);
+        elements.costDisplay.textContent = formatINR(lockedCapitalCost);
+
+        const totalCash = currentAmount + tcs;
+        const remitPct = totalCash > 0 ? (currentAmount / totalCash) * 100 : 80;
+        elements.barRemit.style.width = remitPct + "%";
+        elements.barTcs.style.width = (100 - remitPct) + "%";
+
+        // Table Breakup
+        const rows = [
+            ["Remittance Amount (Principal)", formatINR(currentAmount)],
+            ["TCS Amount (Deducted)", "<strong>" + formatINR(tcs) + "</strong>"],
+            ["Combined Cash Outflow", formatINR(currentAmount + tcs)],
+            ["Opportunity Cost (7% yield)", formatINR(lockedCapitalCost)],
+            ["Remaining Exemption Limit", formatINR(Math.max(0, threshold - totalAmount))]
+        ];
+
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                <td class="px-4 py-3 whitespace-nowrap">${r[0]}</td>
+                <td class="px-4 py-3 text-right font-medium text-blue-600 whitespace-nowrap">${r[1]}</td>
+            </tr>
+        `).join('');
+
+        // Insight Logic
+        let insight = "";
+        if (tcs > 0) {
+            insight = `A total of <strong>${formatINR(tcs)}</strong> is being blocked until you file your ITR. You can claim 100% of this back. `;
+            if (purpose === 'other' && currentAmount > 500000) {
+                insight += "Strategy: Split this transfer with family members to save the 20% TCS hit.";
+            }
+        } else {
+            insight = "Great! You are within the ₹7 Lakh annual threshold. No TCS is applicable for this transfer.";
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function simulateCertificate() {
+        const amt = elements.tcsDisplay.innerText;
+        alert(`Generating Simulated TCS Certificate...\n------------------------------\nPAN: ABCXXXXX1D\nFY: 2026-27\nSection: 206C(1G)\nAmount: ${amt}\n------------------------------\nNote: Real certificates take 15 days to generate.`);
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.amountInput, elements.amountRange);
+        
+        [elements.purposeSelect, elements.previousInput].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{
+            document.getElementById("navbar").innerHTML=data;
+            const btn=document.getElementById("menuBtn");
+            const menu=document.getElementById("mobileMenu");
+            if(btn){ btn.addEventListener("click",()=>{ menu.classList.toggle("hidden"); }); }
+        });
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
