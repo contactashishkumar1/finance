@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence of Returns Risk (SRR) Simulator (2026) – Retirement Stress Test</title>
+    <meta name="description" content="Stress-test your retirement portfolio against Sequence of Returns Risk (SRR). Compare a bull-start vs a bear-start market to see if your corpus survives 25 years.">
+    <meta name="keywords" content="sequence of returns risk calculator india, srr simulator, retirement stress test, 4 percent rule india 2026, fire calculator srr, portfolio longevity calculator">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-05-03">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/srr-simulator/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sequence of Returns Risk (SRR) Simulator – Retirement Survival Edition">
+    <meta property="og:description" content="Is your retirement plan market-proof? Simulate how the order of market returns impacts your wealth more than the average return itself.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/srr-simulator/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schema Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://arthcalculator.in/#organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Comprehensive Guide to Sequence of Returns Risk in India",
+          "description": "Professional simulator to evaluate the impact of market timing and return sequences on retirement portfolio longevity.",
+          "url": "https://arthcalculator.in/srr-simulator/",
+          "isPartOf": { "@id": "https://arthcalculator.in/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "SRR Stress Test Simulator",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "SRR Simulator" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to Stress Test your Retirement Portfolio",
+          "step": [
+            { "@type": "HowToStep", "name": "Enter Corpus", "text": "Input your total retirement savings or initial retirement corpus." },
+            { "@type": "HowToStep", "name": "Set Expenses", "text": "Input your desired monthly pension or withdrawal amount." },
+            { "@type": "HowToStep", "name": "Set Return & Inflation", "text": "Enter your expected average return and projected inflation rate." },
+            { "@type": "HowToStep", "name": "Compare Sequences", "text": "Review the visual difference between a Bull-start and a Bear-start scenario." },
+            { "@type": "HowToStep", "name": "Analyze Longevity", "text": "Check the year the portfolio hits zero in the negative sequence." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is Sequence of Returns Risk?",
+              "acceptedAnswer": { "@type": "Answer", "text": "SRR is the risk that the order of investment returns is unfavorable, particularly a market crash early in retirement when withdrawals are being made." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is the 4% rule valid for India in 2026?",
+              "acceptedAnswer": { "@type": "Answer", "text": "In 2026, with Indian inflation at ~6%, a more conservative 3% or 3.5% withdrawal rate is often recommended to protect against high volatility." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #0f172a 0%, #334155 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        input[type="range"] { accent-color: #0f172a; height: 6px; }
+        .formula-box { background: #f1f5f9; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #1e293b; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0 text-pretty">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center text-pretty">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-slate-900 font-bold">SRR Stress Test Simulator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Sequence of Returns Risk (SRR) Simulator</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        The "Danger Zone" of retirement isn't the market crash itself—it's when it happens. Simulate how a <strong>Bear Market start</strong> destroys your portfolio longevity compared to a Bull Market start, even with the same average returns.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 whitespace-nowrap">
+                    <span class="bg-slate-900 text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider shadow-sm">Retirement Survival Mode</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        Portfolio Baseline
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Initial Corpus (₹)</label>
+                            <input type="number" id="corpusInput" value="50000000" min="1000000" step="500000" class="w-28 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-slate-900">
+                        </div>
+                        <input type="range" id="corpusRange" min="5000000" max="250000000" step="1000000" value="50000000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Initial Monthly Pension (₹)</label>
+                            <input type="number" id="pensionInput" value="150000" min="10000" step="5000" class="w-24 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-slate-900">
+                        </div>
+                        <input type="range" id="pensionRange" min="25000" max="1000000" step="5000" value="150000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Avg. Return (%)</label>
+                            <input type="number" id="returnInput" value="10" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Inflation (%)</label>
+                            <input type="number" id="inflationInput" value="6" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="text-sm font-medium text-slate-600 block mb-2">Simulation Period (Years)</label>
+                        <select id="simYears" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-semibold focus:ring-2 focus:ring-slate-900 outline-none bg-white">
+                            <option value="20">20 Years</option>
+                            <option value="25" selected>25 Years (Standard)</option>
+                            <option value="30">30 Years (Safe)</option>
+                            <option value="40">40 Years (FIRE)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-slate-900 hover:bg-black text-white font-bold rounded-xl transition-all shadow-lg shadow-slate-200 flex items-center justify-center gap-2">
+                        Run Stress Test
+                    </button>
+                </div>
+
+                <!-- Risk Score Card -->
+                <div id="riskCard" class="p-6 rounded-2xl text-white shadow-lg text-pretty">
+                    <p class="text-white/70 text-[10px] font-medium uppercase mb-1">Retirement Safety Score</p>
+                    <h3 id="safetyScore" class="text-3xl font-bold leading-tight">0/100</h3>
+                    <p class="text-white/80 text-xs mt-2" id="safetyVerdict">Analyzing withdrawal sustainability...</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results Dashboard -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Survival Comparison Projections</h2>
+                    
+                    <div class="p-6 bg-slate-900 rounded-2xl text-center mb-10 shadow-xl shadow-slate-200">
+                        <h4 class="text-slate-400 text-xs font-bold uppercase tracking-wider mb-2">Portfolio Longevity (Bear Start)</h4>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-white" id="longevityDisplay">0 Years</div>
+                        <p class="text-sm text-rose-400 mt-2 font-medium" id="failureAlert">Portfolio runs out early due to sequence risk.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 border border-slate-100 rounded-2xl bg-slate-50">
+                            <h4 class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">Sequence Penalty</h4>
+                            <div class="text-2xl font-bold text-rose-600" id="penaltyDisplay">₹0</div>
+                            <p class="text-[10px] text-slate-400">Wealth lost to bad market timing</p>
+                        </div>
+                        <div class="p-5 border border-emerald-100 rounded-2xl bg-emerald-50/50">
+                            <h4 class="text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-1">Bull Start Balance</h4>
+                            <div class="text-2xl font-bold text-emerald-800" id="bullFinal">₹0</div>
+                            <p class="text-[10px] text-emerald-600">Final wealth in Scenario A</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-emerald-600 font-bold uppercase">Scenario A (Bull Start)</span>
+                            <span class="text-rose-600 font-bold uppercase">Scenario B (Bear Start)</span>
+                        </div>
+                        <div class="w-full h-10 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200 relative">
+                            <div id="barBull" class="h-full bg-emerald-500 transition-all duration-1000 ease-out flex items-center justify-center text-[10px] font-bold text-white" style="width: 100%">Safe</div>
+                            <div id="barBear" class="h-full bg-rose-400 transition-all duration-1000 ease-out flex items-center justify-center text-[10px] font-bold text-white border-l border-white/20" style="width: 40%">Failed</div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-3 text-center">Visualizing the 'Years Survived' gap between two different market orders.</p>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2 text-pretty">
+                            💡 Retirement Resilience Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing your withdrawal rate corridor...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4 text-pretty">Year-wise Portfolio Health</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar text-pretty">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Year</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Annual Pension</th>
+                                        <th class="px-4 py-3 font-semibold text-emerald-600 border-b text-right whitespace-nowrap">Bull Case Bal</th>
+                                        <th class="px-4 py-3 font-semibold text-rose-600 border-b text-right whitespace-nowrap">Bear Case Bal</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 no-print text-pretty">
+                        <button onclick="window.print()" class="flex-1 py-3 border border-slate-200 hover:bg-slate-50 rounded-xl text-xs font-bold text-slate-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                            Print Stress Test Report
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">The Simulation Math</h3>
+                    <div class="formula-box text-slate-800 text-center mb-6 text-sm text-pretty">
+                        $Bal_{t} = (Bal_{t-1} - Withdrawal_{t}) \times (1 + r_{t})$
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Withdrawal:</strong> Your starting monthly pension, adjusted by the inflation rate every 12 months.</p>
+                        <p><strong>Sequence B (Bear):</strong> Assumes a <strong>-15%</strong> and <strong>-10%</strong> crash in the first two years of retirement. This forces you to sell assets at low prices to fund your pension, permanently damaging the principal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO POV KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty" id="avg-vs-sequence">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Sequence Risk vs. Average Return: The Great Deception</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>In your working years (accumulation phase), the order of returns doesn't matter much as long as the average is high. However, once you enter the <strong>decumulation phase</strong> (retirement), the sequence is everything. If the market crashes while you are withdrawing money, you are selling more units of your mutual funds or stocks to meet the same rupee requirements.</p>
+                    <p>This creates a downward spiral where the remaining principal doesn't have enough "mass" left to benefit from the eventual market recovery. This is why a 10% average return doesn't guarantee a 25-year survival. Before finalizing your goal, check our <a href="/child-education-planner/" class="text-slate-900 underline font-bold">Child Education Projector</a> to ensure your kids' goals don't jeopardize your retirement corpus.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6 text-pretty">The 4% Rule in India 2026: Is it Valid?</h2>
+                <div class="overflow-x-auto text-pretty">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-pretty">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Withdrawal Rate</th>
+                                <th class="p-4 border-b">Risk Level</th>
+                                <th class="p-4 border-b">India 2026 Verdict</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600 divide-y divide-slate-50">
+                            <tr><td class="p-4 font-medium">Below 3.5%</td><td class="p-4 text-emerald-600 font-bold">Safe</td><td class="p-4">Standard for 30-year survival.</td></tr>
+                            <tr><td class="p-4 font-medium">4.0% - 5.5%</td><td class="p-4 text-amber-600 font-bold">Moderate</td><td class="p-4">Needs 'Bucket Strategy' to survive.</td></tr>
+                            <tr><td class="p-4 font-medium">Above 6.5%</td><td class="p-4 text-rose-600 font-bold">Critical</td><td class="p-4">High failure probability in Bear years.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-slate-900 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategy: The Bucket Strategy for SRR Mitigation</h2>
+                <p class="text-sm leading-relaxed opacity-95 mb-4 text-pretty">
+                    To beat Sequence of Returns Risk, don't keep all your money in equity. Use the <strong>Three-Bucket Strategy</strong>:
+                </p>
+                <ul class="list-disc ml-5 space-y-2 text-sm opacity-95 text-pretty text-pretty">
+                    <li><strong>Bucket 1 (Cash/FD):</strong> Keep 2-3 years of annual expenses here. If the market crashes in Year 1, withdraw from this bucket, NOT your equity.</li>
+                    <li><strong>Bucket 2 (Debt/Hybrid):</strong> Keep 5-7 years of expenses in stable debt funds to replenish Bucket 1.</li>
+                    <li><strong>Bucket 3 (Equity):</strong> Keep the remainder in growth assets. This bucket has 10+ years to grow and recover without being "forced" to sell during crashes.</li>
+                </ul>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10 text-pretty text-pretty" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">SRR & Retirement FAQs</h2>
+                <div class="space-y-4 text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What exactly is Sequence of Returns Risk?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It's the risk of experiencing poor investment returns in the earliest years of your retirement. Because you are withdrawing capital, these early losses have a compounding negative effect that is impossible to recover from later.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Why is the start of retirement the "Danger Zone"?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">In the first 3-5 years, your portfolio is at its peak value. A 20% crash on ₹5 Cr is a loss of ₹1 Cr. If you also withdraw ₹20L for expenses, your base is permanently shrunk.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Is a 6% withdrawal rate safe in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Likely not. In an environment with 6% inflation, a 6% withdrawal rate requires your portfolio to consistently generate 12%+ returns just to stay flat. Any bad sequence will trigger a zero balance within 15 years.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the 'Guardrail' withdrawal strategy?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50">It's a dynamic approach where you reduce your withdrawal amount by 10-20% during market crash years to preserve capital, and increase it when the market is at an all-time high.</div></details>
+                </div>
+            </section>
+
+            <!-- Strategic Linking -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="/child-education-planner/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-slate-900 transition-all group">
+                    <h4 class="text-slate-900 font-bold text-sm mb-1 text-pretty">Child Education Goal</h4>
+                    <p class="text-slate-500 text-xs mb-4 text-pretty">Ensure your child's goal doesn't eat into your retirement corpus. Plan the inflation gap.</p>
+                    <span class="text-slate-900 font-semibold text-xs group-hover:underline">Plan Education Fund →</span>
+                </a>
+                <a href="/sip-calculator/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-emerald-500 transition-all group">
+                    <h4 class="text-emerald-600 font-bold text-sm mb-1">SWP Calculator</h4>
+                    <p class="text-slate-500 text-xs mb-4">Calculate systematic withdrawals for your existing portfolio and check survival years.</p>
+                    <span class="text-emerald-600 font-semibold text-xs group-hover:underline text-pretty text-pretty">Use SWP Optimizer →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        corpusInput: document.getElementById('corpusInput'),
+        corpusRange: document.getElementById('corpusRange'),
+        pensionInput: document.getElementById('pensionInput'),
+        pensionRange: document.getElementById('pensionRange'),
+        returnInput: document.getElementById('returnInput'),
+        inflationInput: document.getElementById('inflationInput'),
+        simYears: document.getElementById('simYears'),
+        longevityDisplay: document.getElementById('longevityDisplay'),
+        penaltyDisplay: document.getElementById('penaltyDisplay'),
+        bullFinal: document.getElementById('bullFinal'),
+        barBull: document.getElementById('barBull'),
+        barBear: document.getElementById('barBear'),
+        riskCard: document.getElementById('riskCard'),
+        safetyScore: document.getElementById('safetyScore'),
+        safetyVerdict: document.getElementById('safetyVerdict'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText'),
+        failureAlert: document.getElementById('failureAlert')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        if (val < 0) return "₹0";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const initialCorpus = parseFloat(elements.corpusInput.value) || 0;
+        const monthlyPension = parseFloat(elements.pensionInput.value) || 0;
+        const avgReturnRate = (parseFloat(elements.returnInput.value) || 0) / 100;
+        const inflationRate = (parseFloat(elements.inflationInput.value) || 0) / 100;
+        const simTotalYears = parseInt(elements.simYears.value) || 25;
+
+        // Sequence Generation
+        // Scenario A: Bull Start (High early, lower later)
+        // Scenario B: Bear Start (Crashes in Year 1-2, recovery later)
+        const returnsA = [];
+        const returnsB = [];
+        
+        for(let i=0; i < simTotalYears; i++) {
+            // Logic to keep overall average roughly same but sequence different
+            if(i < 3) {
+                returnsA.push(avgReturnRate + 0.05); // High start
+                returnsB.push(i === 0 ? -0.15 : -0.10); // Massive early crash
+            } else if (i > simTotalYears - 5) {
+                returnsA.push(avgReturnRate - 0.04); // Low end
+                returnsB.push(avgReturnRate + 0.12); // Late recovery
+            } else {
+                returnsA.push(avgReturnRate);
+                returnsB.push(avgReturnRate);
+            }
+        }
+
+        let balA = initialCorpus;
+        let balB = initialCorpus;
+        let annualWithdrawal = monthlyPension * 12;
+        
+        let yearSurvivedB = simTotalYears;
+        let bFailed = false;
+        let rowsHtml = "";
+
+        for (let y = 1; y <= simTotalYears; y++) {
+            const rA = returnsA[y-1];
+            const rB = returnsB[y-1];
+
+            // Scenario A Math
+            if (balA > 0) {
+                balA = (balA - annualWithdrawal) * (1 + rA);
+            }
+
+            // Scenario B Math
+            if (!bFailed) {
+                balB = (balB - annualWithdrawal) * (1 + rB);
+                if (balB <= 0) {
+                    yearSurvivedB = y;
+                    bFailed = true;
+                    balB = 0;
+                }
+            }
+
+            // Report every 5th year or last year
+            if (y % 5 === 0 || y === 1 || y === simTotalYears) {
+                rowsHtml += `
+                    <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                        <td class="px-4 py-3 whitespace-nowrap font-medium">Year ${y}</td>
+                        <td class="px-4 py-3 text-right whitespace-nowrap">${formatINR(annualWithdrawal)}</td>
+                        <td class="px-4 py-3 text-right whitespace-nowrap text-emerald-600 font-bold">${formatINR(balA)}</td>
+                        <td class="px-4 py-3 text-right whitespace-nowrap text-rose-600 font-bold">${formatINR(balB)}</td>
+                    </tr>
+                `;
+            }
+
+            annualWithdrawal *= (1 + inflationRate);
+        }
+
+        // Final UI updates
+        elements.longevityDisplay.textContent = `${yearSurvivedB} Years`;
+        elements.bullFinal.textContent = formatINR(balA);
+        const penalty = Math.max(0, balA - balB);
+        elements.penaltyDisplay.textContent = formatINR(penalty);
+        elements.breakdownTable.innerHTML = rowsHtml;
+
+        // Visual Bars
+        elements.barBull.style.width = "100%";
+        elements.barBear.style.width = ((yearSurvivedB / simTotalYears) * 100) + "%";
+        elements.barBear.textContent = bFailed ? "Failed" : "Safe";
+
+        if (bFailed) {
+            elements.failureAlert.classList.replace('text-emerald-400', 'text-rose-400');
+            elements.failureAlert.textContent = `Portfolio runs out in Year ${yearSurvivedB} due to sequence risk.`;
+        } else {
+            elements.failureAlert.classList.replace('text-rose-400', 'text-emerald-400');
+            elements.failureAlert.textContent = "Portfolio survives the Bear start simulation.";
+        }
+
+        // Safety Score
+        const withdrawalRate = (monthlyPension * 12 / initialCorpus) * 100;
+        let score = 100 - (withdrawalRate * 10) - (y => (bFailed ? (simTotalYears - yearSurvivedB) * 5 : 0))(0);
+        score = Math.round(Math.max(0, Math.min(100, score)));
+        elements.safetyScore.textContent = `${score}/100`;
+        
+        if (score > 75) {
+            elements.riskCard.className = "p-6 rounded-2xl bg-emerald-600 text-white shadow-lg";
+            elements.safetyVerdict.textContent = "Sustainable. Low withdrawal rate protection.";
+        } else if (score > 40) {
+            elements.riskCard.className = "p-6 rounded-2xl bg-amber-600 text-white shadow-lg";
+            elements.safetyVerdict.textContent = "Caution. Vulnerable to bad sequences.";
+        } else {
+            elements.riskCard.className = "p-6 rounded-2xl bg-rose-600 text-white shadow-lg";
+            elements.safetyVerdict.textContent = "High Risk. Immediate re-balancing required.";
+        }
+
+        // Insight Logic
+        elements.insightText.innerHTML = `Your withdrawal rate is <strong>${withdrawalRate.toFixed(2)}%</strong>. Even though both scenarios average ${elements.returnInput.value}%, the Bear start forces a penalty of <strong>${formatINR(penalty)}</strong>. ` + 
+        (bFailed ? `To prevent Year ${yearSurvivedB} failure, reduce monthly withdrawal to <strong>${formatINR(initialCorpus * 0.035 / 12)}</strong>.` : `Your low withdrawal rate acts as a buffer against market shocks.`);
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.corpusInput, elements.corpusRange);
+        setupSync(elements.pensionInput, elements.pensionRange);
+        
+        [elements.returnInput, elements.inflationInput, elements.simYears].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{document.getElementById("navbar").innerHTML=data;});
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
