@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Education Cost 2040 Projector – SIP Goal Planner India</title>
+    <meta name="description" content="Calculate the future cost of your child's higher education in 2040. Factor in 10% education inflation and find the monthly SIP required to reach your goal debt-free.">
+    <meta name="keywords" content="child education calculator india, education inflation calculator 2040, sip for child education, cost of mba in 2040 india, sukanya samriddhi vs sip, higher education cost projector">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-05-03">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/child-education-planner/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Child Education Cost 2040 Projector – SIP Goal Planner">
+    <meta property="og:description" content="Is ₹20 Lakhs enough for your child's degree in 2040? Probably not. Calculate the real future cost and the SIP needed to fund it.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/child-education-planner/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schema Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Child Education Inflation & SIP Planning Guide",
+          "description": "A comprehensive guide for Indian parents to plan for higher education costs using SIPs and inflation-adjusted targets.",
+          "url": "https://arthcalculator.in/child-education-planner/"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Education Goal SIP Calculator",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "Child Education Projector" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to calculate future education costs",
+          "step": [
+            { "@type": "HowToStep", "name": "Input Age", "text": "Enter your child's current age and the target age for graduation (usually 18)." },
+            { "@type": "HowToStep", "name": "Today's Cost", "text": "Input the current cost of the desired degree (e.g., ₹25 Lakhs for an MBA)." },
+            { "@type": "HowToStep", "name": "Adjust Inflation", "text": "Set education inflation (10% is standard for India) to see the future cost." },
+            { "@type": "HowToStep", "name": "Calculate Gap", "text": "Input any existing savings to find the remaining funding gap." },
+            { "@type": "HowToStep", "name": "Start SIP", "text": "Determine the monthly SIP needed to hit the target by the graduation year." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Why is education inflation 10% in India?",
+              "acceptedAnswer": { "@type": "Answer", "text": "College fees increase faster than standard CPI because of rising infrastructure costs, global faculty salaries, and massive demand-supply gaps in premier institutions." }
+            },
+            {
+              "@type": "Question",
+              "name": "Is Sukanya Samriddhi (SSY) better than Equity SIP for education?",
+              "acceptedAnswer": { "@type": "Answer", "text": "SSY offers safety and tax-free returns, but Equity SIPs historically provide higher CAGR (12-15%) which is necessary to beat 10% education inflation over 15+ years." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #4f46e5 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        input[type="range"] { accent-color: #4f46e5; height: 6px; }
+        .formula-box { background: #f5f3ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #4338ca; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-indigo-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-indigo-600 transition-colors text-pretty">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-indigo-600 font-bold">Child Education Projector</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1 text-pretty">Child Education Cost 2040 Projector (SIP Goal Planner)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed text-pretty">
+                        College fees in India double every 7 years. Don't let your child's dreams be grounded by <strong>10% education inflation</strong>. Project future degree costs and automate your monthly SIP to build a solid education fund.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 whitespace-nowrap">
+                    <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-indigo-100 shadow-sm">2026-27 Strategic Tool</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5S19.832 5.477 21 6.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        Goal Configuration
+                    </h2>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase block mb-1">Current Child Age</label>
+                            <input type="number" id="currentAge" value="3" min="0" max="15" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-2 focus:ring-indigo-500 outline-none">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase block mb-1">Graduation Age</label>
+                            <input type="number" id="targetAge" value="18" min="16" max="25" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold focus:ring-2 focus:ring-indigo-500 outline-none">
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Today's Cost of Degree (₹)</label>
+                            <input type="number" id="baseCost" value="2500000" step="50000" class="w-28 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-indigo-600">
+                        </div>
+                        <input type="range" id="baseCostRange" min="500000" max="15000000" step="100000" value="2500000" class="w-full py-2 cursor-pointer">
+                        <p class="text-[10px] text-slate-400 mt-1 italic">Average MBA/Medical cost in 2026.</p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase block mb-1">Education Inflation (%)</label>
+                            <input type="number" id="inflationRate" value="10" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                        <div>
+                            <label class="text-xs font-medium text-slate-500 uppercase block mb-1">Expected SIP Return (%)</label>
+                            <input type="number" id="sipReturn" value="12" step="0.5" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <div class="mb-6 p-4 bg-indigo-50 rounded-xl border border-indigo-100">
+                        <label class="text-[10px] font-bold text-indigo-700 uppercase block mb-2 tracking-wider">Existing Savings for Goal (₹)</label>
+                        <input type="number" id="savingsInput" value="500000" step="10000" class="w-full px-3 py-2 border border-indigo-200 rounded-lg text-sm font-bold text-slate-800">
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-indigo-100 flex items-center justify-center gap-2">
+                        Plan Education Wealth
+                    </button>
+                </div>
+
+                <!-- Sticker Shock Card -->
+                <div class="bg-rose-600 p-6 rounded-2xl text-white shadow-lg shadow-rose-200 text-pretty">
+                    <p class="text-rose-100 text-[10px] font-medium uppercase mb-1">Projected Future Cost</p>
+                    <h3 id="futureCostDisplay" class="text-3xl font-bold leading-tight">₹0</h3>
+                    <p class="text-rose-100 text-xs mt-2" id="inflationVerdict">Impact of compounding inflation over time.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6 text-pretty">SIP Contribution Dashboard</h2>
+                    
+                    <div class="p-6 bg-indigo-50 rounded-2xl border border-indigo-200 mb-10 text-center">
+                        <h4 class="text-indigo-700 text-xs font-bold uppercase tracking-wider mb-2">Monthly SIP Required</h4>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-indigo-900" id="sipResultDisplay">₹0</div>
+                        <p class="text-sm text-indigo-600 mt-2 font-medium" id="goalNotice">To reach the target fund comfortably</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10 text-pretty">
+                        <div class="p-5 border border-slate-100 rounded-2xl bg-slate-50/50">
+                            <h4 class="text-slate-500 text-[10px] font-bold uppercase tracking-wider mb-1">Total Invested</h4>
+                            <div class="text-2xl font-bold text-slate-800" id="totalInvested">₹0</div>
+                        </div>
+                        <div class="p-5 border border-emerald-100 rounded-2xl bg-emerald-50/50">
+                            <h4 class="text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-1">Wealth Gained (Returns)</h4>
+                            <div class="text-2xl font-bold text-emerald-800" id="wealthGained">₹0</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-indigo-600 font-bold uppercase">Funding Readiness</span>
+                            <span class="text-slate-400 font-bold uppercase" id="readinessLabel">0% Funded</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="progressSavings" class="h-full bg-emerald-500 transition-all duration-700" style="width: 20%"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 text-center">Existing savings (invested) vs. Target future cost.</p>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Parental Strategy Insight
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing your child's education timeline...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Financial Roadmap Summary</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Milestone Category</th>
+                                        <th class="px-4 py-3 font-semibold text-indigo-600 border-b text-right whitespace-nowrap">Value (₹)</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 no-print text-pretty">
+                        <button onclick="copyRoadmap()" class="flex-1 py-3 border border-indigo-200 hover:bg-indigo-50 rounded-xl text-xs font-bold text-indigo-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Download Goal Roadmap
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Education Wealth Math</h3>
+                    <div class="formula-box text-indigo-800 text-center mb-6 text-sm">
+                        Future Cost = Today's Cost × (1 + Inflation)^n
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Compound Inflation:</strong> We use 10% inflation because premier institutions in India (IITs, IIMs, AIIMS) increase fees far above the general CPI.</p>
+                        <p><strong>Opportunity Value:</strong> We grow your existing savings at the expected return rate before calculating the final funding gap.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO POV KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="inflation-rule">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">The 10% Rule: Why Education Inflation is Higher</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>While the Consumer Price Index (CPI) in India often hovers around 5-6%, <strong>Education Inflation</strong> is consistently higher at 10-12%. This is due to the rising costs of technology integration, international faculty exchange programs, and the increasing demand for high-quality tertiary education.</p>
+                    <p>For example, an Engineering degree that costs ₹15 Lakhs in 2026 will likely cost nearly ₹63 Lakhs by 2040. If you don't start saving early, you may be forced to rely on heavy debt. Check our <a href="/education-loan-moratorium/" class="text-indigo-600 underline font-bold">Education Loan Moratorium Tool</a> to see how much a student loan will cost if you don't build a fund today.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Degree Costs: 2026 vs. 2040 (Projected)</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Degree Type</th>
+                                <th class="p-4 border-b">Cost 2026 (Avg)</th>
+                                <th class="p-4 border-b">Cost 2040 (Projected)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600 divide-y divide-slate-50">
+                            <tr><td class="p-4">Engineering (Top Tier)</td><td class="p-4">₹15 - ₹20 Lakhs</td><td class="p-4 text-rose-600 font-bold">₹57 - ₹76 Lakhs</td></tr>
+                            <tr><td class="p-4">Medical (Private MBBS)</td><td class="p-4">₹60 - ₹80 Lakhs</td><td class="p-4 text-rose-600 font-bold">₹2.2 - ₹3.0 Crore</td></tr>
+                            <tr><td class="p-4">MBA (IIM Level)</td><td class="p-4">₹25 - ₹35 Lakhs</td><td class="p-4 text-rose-600 font-bold">₹95L - ₹1.3 Crore</td></tr>
+                            <tr><td class="p-4">MS (USA/EU/UK)</td><td class="p-4">₹50 - ₹70 Lakhs</td><td class="p-4 text-rose-600 font-bold">₹1.9 - ₹2.6 Crore</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-[10px] text-slate-400 mt-4 italic">*Projections assume 10% annual inflation. International costs also factor in 3-4% annual currency depreciation.</p>
+            </section>
+
+            <section class="bg-indigo-600 p-8 rounded-2xl text-white text-pretty">
+                <h2 class="text-xl font-bold mb-4">Strategy: SSY vs. Mutual Fund SIP</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm opacity-95">
+                    <div>
+                        <h4 class="font-bold border-b border-indigo-400 pb-2 mb-3">Sukanya Samriddhi Yojana (SSY)</h4>
+                        <ul class="list-disc ml-5 space-y-2">
+                            <li><strong>Returns:</strong> ~8.2% (Government Fixed)</li>
+                            <li><strong>Tax:</strong> EEE (Exempt-Exempt-Exempt)</li>
+                            <li><strong>Limit:</strong> ₹1.5 Lakhs annually.</li>
+                            <li><strong>Verdict:</strong> Safe, but usually fails to beat 10% education inflation.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold border-b border-indigo-400 pb-2 mb-3">Equity Mutual Fund SIP</h4>
+                        <ul class="list-disc ml-5 space-y-2">
+                            <li><strong>Returns:</strong> 12-15% (Market Linked)</li>
+                            <li><strong>Tax:</strong> 12.5% LTCG on gains > ₹1.25L.</li>
+                            <li><strong>Limit:</strong> No upper limit.</li>
+                            <li><strong>Verdict:</strong> Volatile but essential to reach ₹1 Cr+ targets over 15 years.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Parental Planning FAQs</h2>
+                <div class="space-y-4 text-pretty text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Why is education inflation 10%?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Education in India operates on a specialized cost index. Premium institutes often adjust fees annually to cover growing administrative, faculty, and technology costs.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Is ₹50 Lakhs enough for higher education in 2040?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">For a Tier-1 Indian MBA, it might barely suffice. For Medical or Overseas education, ₹50L will likely be insufficient as costs are projected to cross ₹1.5 Cr to ₹2.5 Cr.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Should I use Gold for education?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Gold acts as a currency hedge and inflation buffer. While it shouldn't be your only asset, holding 10-15% in SGBs or Gold ETFs can protect your child's overseas education from rupee depreciation.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is a Step-up SIP?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">A Step-up SIP increases your monthly contribution by a fixed % (e.g., 10%) every year as your salary increases. This is the most efficient way to hit high education targets. Use our <a href="/sip-calculator/" class="underline">Step-Up SIP tool</a> to plan this.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Can I withdraw from my EPF?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Yes, you can withdraw up to 50% of your EPF contribution for a child's higher education after 7 years of service. However, this impacts your retirement corpus. It's better to build a dedicated education SIP.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">Average cost of MBA in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">A premier 2-year MBA in India currently costs between ₹25 Lakhs to ₹32 Lakhs. This includes tuition, hostel, and study materials.</div></details>
+                </div>
+            </section>
+
+            <!-- Strategic Linking -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="/education-loan-moratorium/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-indigo-500 transition-all group">
+                    <h4 class="text-indigo-600 font-bold text-sm mb-1 text-pretty">Education Loan Cost</h4>
+                    <p class="text-slate-500 text-xs mb-4 text-pretty">See how much a loan will cost if you don't save enough. Don't fall for the capitalization trap.</p>
+                    <span class="text-indigo-600 font-semibold text-xs group-hover:underline">Check Loan Impact →</span>
+                </a>
+                <a href="/sip-calculator/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-emerald-500 transition-all group">
+                    <h4 class="text-emerald-600 font-bold text-sm mb-1">Step-Up SIP</h4>
+                    <p class="text-slate-500 text-xs mb-4">Reach your child's goal faster by increasing your investment along with your annual salary hikes.</p>
+                    <span class="text-emerald-600 font-semibold text-xs group-hover:underline text-pretty text-pretty">Maximize Goal Growth →</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        currentAge: document.getElementById('currentAge'),
+        targetAge: document.getElementById('targetAge'),
+        baseCost: document.getElementById('baseCost'),
+        baseCostRange: document.getElementById('baseCostRange'),
+        inflationRate: document.getElementById('inflationRate'),
+        sipReturn: document.getElementById('sipReturn'),
+        savingsInput: document.getElementById('savingsInput'),
+        sipResultDisplay: document.getElementById('sipResultDisplay'),
+        futureCostDisplay: document.getElementById('futureCostDisplay'),
+        totalInvested: document.getElementById('totalInvested'),
+        wealthGained: document.getElementById('wealthGained'),
+        progressSavings: document.getElementById('progressSavings'),
+        readinessLabel: document.getElementById('readinessLabel'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText'),
+        inflationVerdict: document.getElementById('inflationVerdict')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const cAge = parseInt(elements.currentAge.value) || 0;
+        const tAge = parseInt(elements.targetAge.value) || 18;
+        const yearsToGoal = Math.max(1, tAge - cAge);
+        
+        const todayCost = parseFloat(elements.baseCost.value) || 0;
+        const inflation = (parseFloat(elements.inflationRate.value) || 10) / 100;
+        const expectedReturn = (parseFloat(elements.sipReturn.value) || 12) / 100;
+        const currentSavings = parseFloat(elements.savingsInput.value) || 0;
+
+        // 1. Future Cost of Degree
+        const futureCost = todayCost * Math.pow(1 + inflation, yearsToGoal);
+
+        // 2. Growth of Existing Savings
+        const grownSavings = currentSavings * Math.pow(1 + expectedReturn, yearsToGoal);
+
+        // 3. Gap to Fund
+        const gap = Math.max(0, futureCost - grownSavings);
+
+        // 4. SIP Calculation (Annuity Formula)
+        // PMT = Gap / [ ((1 + r/12)^(n*12) - 1) / (r/12) * (1 + r/12) ]
+        const r_monthly = expectedReturn / 12;
+        const n_months = yearsToGoal * 12;
+        
+        let monthlySip = 0;
+        if (r_monthly > 0) {
+            monthlySip = gap / (((Math.pow(1 + r_monthly, n_months) - 1) / r_monthly) * (1 + r_monthly));
+        } else {
+            monthlySip = gap / n_months;
+        }
+
+        const totalSipInvested = monthlySip * n_months;
+        const wealthFromReturns = gap - totalSipInvested;
+
+        // UI Updates
+        elements.sipResultDisplay.textContent = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(Math.round(monthlySip));
+        elements.futureCostDisplay.textContent = formatINR(futureCost);
+        elements.totalInvested.textContent = formatINR(totalSipInvested + currentSavings);
+        elements.wealthGained.textContent = formatINR(wealthFromReturns + (grownSavings - currentSavings));
+
+        // Progress Readiness
+        const readiness = Math.min(100, (grownSavings / futureCost) * 100);
+        elements.progressSavings.style.width = readiness + "%";
+        elements.readinessLabel.textContent = `${readiness.toFixed(1)}% Funded`;
+
+        // Table
+        const rows = [
+            ["Years Until Degree", yearsToGoal + " Years"],
+            ["Inflated Cost of Degree", formatINR(futureCost)],
+            ["Growth of Existing Savings", formatINR(grownSavings)],
+            ["Remaining Funding Gap", "<strong>" + formatINR(gap) + "</strong>"],
+            ["Monthly SIP Needed", "<strong>" + formatINR(monthlySip) + "</strong>"]
+        ];
+
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                <td class="px-4 py-3 whitespace-nowrap font-medium text-slate-700">${r[0]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-indigo-600 font-bold">${r[1]}</td>
+            </tr>
+        `).join('');
+
+        // Insights
+        let insight = `In <strong>${yearsToGoal} years</strong>, you need <strong>${formatINR(futureCost)}</strong>. `;
+        if (readiness > 50) {
+            insight += `Great start! Your existing corpus covers more than half of the target. A small SIP of <strong>₹${Math.round(monthlySip).toLocaleString('en-IN')}</strong> will finish the race.`;
+        } else if (monthlySip > 25000) {
+            insight += `The required SIP is high. Consider using a <strong>Step-up SIP</strong> or planning for an education loan for the final 20% of the cost.`;
+        } else {
+            insight += `A disciplined SIP of <strong>${formatINR(monthlySip)}</strong> today ensures your child graduates debt-free in ${tAge + cAge > 40 ? 'the future' : '2040'}.`;
+        }
+        elements.insightText.innerHTML = insight;
+        elements.inflationVerdict.textContent = `Inflation adds ${formatINR(futureCost - todayCost)} to the base cost by graduation.`;
+    }
+
+    function copyRoadmap() {
+        const text = `Child Education Goal 2040 (ArthCalculator)\n------------------------------\nChild Age: ${elements.currentAge.value}\nTarget Degree Cost (Future): ${elements.futureCostDisplay.innerText}\nMonthly SIP Required: ${elements.sipResultDisplay.innerText}\nReadiness: ${elements.readinessLabel.innerText}\n------------------------------\nPlan at arthcalculator.in/child-education-planner/`;
+        const dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert("Education Goal Roadmap copied to clipboard!");
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.baseCost, elements.baseCostRange);
+        [elements.currentAge, elements.targetAge, elements.inflationRate, elements.sipReturn, elements.savingsInput].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{document.getElementById("navbar").innerHTML=data;});
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
