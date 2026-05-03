@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Work vs. Office Work Savings Calculator (2026) – WFH ROI India</title>
+    <meta name="description" content="Compare the total cost of working from an office vs. remote work in India (2026). Calculate commute costs, food expenses, and hidden time taxes instantly.">
+    <meta name="keywords" content="remote work savings calculator india, wfh vs office cost calculator, commute cost calculator petrol vs ev, remote work tax benefits india, cost of working from home 2026">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-05-03">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/remote-vs-office-calculator/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Remote Work vs. Office Work Savings Calculator (2026) – ArthCalculator">
+    <meta property="og:description" content="Calculate your true cost of work. Compare commute, food, and wardrobe expenses against WFH utilities and reclaim your time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/remote-vs-office-calculator/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schema Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://arthcalculator.in/#organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Guide to the Economics of Remote Work in India 2026",
+          "description": "Comprehensive analysis tool to compare financial and time costs of office-based work vs. remote work.",
+          "url": "https://arthcalculator.in/remote-vs-office-calculator/",
+          "isPartOf": { "@id": "https://arthcalculator.in/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "Remote Work Savings Calculator",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "WFH Savings" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to calculate remote work savings",
+          "step": [
+            { "@type": "HowToStep", "name": "Commute Details", "text": "Enter your daily round-trip distance and mode of transport." },
+            { "@type": "HowToStep", "name": "Office Expenses", "text": "List daily food, parking, tolls, and annual wardrobe costs." },
+            { "@type": "HowToStep", "name": "Remote Overheads", "text": "Input expected increases in electricity, internet, and home office setup." },
+            { "@type": "HowToStep", "name": "Compare & SIP", "text": "View net savings and see how much wealth they create when invested in an SIP." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is it cheaper to own an EV or work from home?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Working from home is significantly cheaper as it eliminates insurance, maintenance, and the 'Time Tax' associated with driving, even if fuel is zero." }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I claim WFH expenses in Income Tax?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Salaried employees generally cannot claim specific WFH deductions in 2026, but consultants under Sec 44ADA can deduct 100% of these as business costs." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #2563eb 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        input[type="range"] { accent-color: #2563eb; height: 6px; }
+        .formula-box { background: #f0f9ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #1e40af; }
+        .floating-badge { position: fixed; top: 1rem; right: 1rem; z-index: 50; }
+        @media print { .no-print { display: none; } }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <div class="floating-badge no-print">
+        <span class="bg-indigo-600 text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-lg border border-indigo-400 uppercase tracking-widest">2026 Work Audit</span>
+    </div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-blue-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center text-pretty">
+                        <a href="/calculators/" class="hover:text-blue-600 transition-colors">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">Remote vs Office Savings</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-pretty">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">Remote vs. Office Work Savings Calculator</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Is your 9-to-5 commute eating your bank balance? Use our <strong>2026 Audit Tool</strong> to calculate commute costs, lifestyle overheads, and the hidden time-value of working from home.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        Office-Related Costs
+                    </h2>
+
+                    <div class="mb-8">
+                        <label class="text-sm font-medium text-slate-600 block mb-2">Monthly In-Hand Salary (₹)</label>
+                        <input type="number" id="salaryInput" value="150000" min="0" step="5000" class="w-full px-4 py-3 border border-slate-200 rounded-xl font-bold text-blue-600 focus:ring-2 focus:ring-blue-500 outline-none">
+                        <p class="text-[10px] text-slate-400 mt-2 italic">Used to calculate the value of your commute time.</p>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Round Trip Distance (km)</label>
+                                <input type="number" id="commuteDist" value="30" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Transport Mode</label>
+                                <select id="transportMode" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold bg-white outline-none">
+                                    <option value="petrol">Petrol Car (₹105/L)</option>
+                                    <option value="ev">Electric Vehicle (₹1.5/km)</option>
+                                    <option value="public">Public (Bus/Metro)</option>
+                                    <option value="cab">Cab / Uber (₹20/km)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Parking & Tolls (Mo ₹)</label>
+                                <input type="number" id="parkingTolls" value="2500" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Daily Food/Coffee (₹)</label>
+                                <input type="number" id="dailyFood" value="300" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Annual Wardrobe & Laundry (₹)</label>
+                            <input type="number" id="annualWardrobe" value="25000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide pt-6 border-t border-slate-100">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        Remote Overheads
+                    </h2>
+
+                    <div class="space-y-4 mb-6">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Extra Electricity/AC (Mo ₹)</label>
+                                <input type="number" id="remoteElec" value="1500" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Internet Upgrade (Mo ₹)</label>
+                                <input type="number" id="remoteInternet" value="500" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1 text-pretty">Home Office Setup (One-time ₹)</label>
+                            <input type="number" id="officeSetup" value="12000" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                            <p class="text-[9px] text-slate-400 mt-1 italic">Amortized over 12 months for calculation.</p>
+                        </div>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-indigo-100 flex items-center justify-center gap-2">
+                        Calculate Savings
+                    </button>
+                </div>
+
+                <!-- Strategic Links -->
+                <div class="space-y-4">
+                    <a href="/salary-increment-calculator/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-emerald-500 transition-all group">
+                        <h4 class="text-emerald-600 font-bold text-sm mb-1">Salary Appraisal Optimizer</h4>
+                        <p class="text-slate-500 text-xs mb-3">See how much of your next hike is eaten by office costs.</p>
+                        <span class="text-emerald-600 font-semibold text-xs group-hover:underline">Check Hike Worth →</span>
+                    </a>
+                    <a href="/carbon-footprint-calculator/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-blue-500 transition-all group">
+                        <h4 class="text-blue-600 font-bold text-sm mb-1">Green Finance Tool</h4>
+                        <p class="text-slate-500 text-xs mb-3">Calculate the Carbon Footprint of your daily commute.</p>
+                        <span class="text-blue-600 font-semibold text-xs group-hover:underline">Check Eco Impact →</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Results Dashboard -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Lifestyle ROI Dashboard</h2>
+                    
+                    <div class="p-6 bg-emerald-600 rounded-2xl text-center mb-10 shadow-xl shadow-emerald-100">
+                        <h4 class="text-emerald-100 text-xs font-bold uppercase tracking-wider mb-2">Annual Remote Savings</h4>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-white" id="annualSavings">₹0</div>
+                        <p class="text-sm text-emerald-200 mt-2 font-medium" id="savingsVerdict">Including Time Value and Utilities.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                        <div class="p-5 border border-indigo-100 rounded-2xl bg-indigo-50/50">
+                            <h4 class="text-indigo-700 text-[10px] font-bold uppercase tracking-wider mb-1">Time Reclaimed</h4>
+                            <div class="text-2xl font-bold text-indigo-900" id="timeReclaimed">0 Hours/Yr</div>
+                            <p class="text-[10px] text-indigo-600">Hours not spent in traffic</p>
+                        </div>
+                        <div class="p-5 border border-blue-100 rounded-2xl bg-blue-50/50">
+                            <h4 class="text-blue-700 text-[10px] font-bold uppercase tracking-wider mb-1">Commute 'Hidden Tax'</h4>
+                            <div class="text-2xl font-bold text-blue-900" id="timeValueDisplay">₹0 / Mo</div>
+                            <p class="text-[10px] text-blue-600 text-pretty">Monetary value of lost time</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-indigo-600 font-bold uppercase">Remote Expenses</span>
+                            <span class="text-blue-600 font-bold uppercase">Office Expenses</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="remoteBar" class="h-full bg-indigo-500 transition-all duration-700 ease-out flex items-center justify-center text-[10px] font-bold text-white" style="width: 30%">30%</div>
+                            <div id="officeBar" class="h-full bg-blue-400 transition-all duration-700 ease-out flex items-center justify-center text-[10px] font-bold text-white" style="width: 70%">70%</div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 text-center text-pretty">Total Outflow Ratio (Utilities vs Commute + Food)</p>
+                    </div>
+
+                    <!-- Wealth Multiplier -->
+                    <div class="p-6 bg-slate-900 rounded-2xl border border-slate-800 mb-8 text-pretty">
+                        <h4 class="text-emerald-400 text-xs font-bold uppercase tracking-widest mb-4">The Wealth Multiplier</h4>
+                        <div class="flex flex-col md:flex-row items-center gap-6">
+                            <div class="flex-1">
+                                <p class="text-slate-400 text-xs leading-relaxed">
+                                    If you invest your monthly remote savings into an equity SIP at <strong>12% returns</strong> for 10 years, you could accumulate:
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl sm:text-3xl font-extrabold text-white" id="sipPotential">₹0</div>
+                                <p class="text-[10px] text-emerald-400 font-bold uppercase">Corpus in 10 Years</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2 text-pretty">
+                            💡 Workforce Strategy
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed text-pretty">
+                            Analyzing your time-efficiency score...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Side-by-Side Cost Summary</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar text-pretty">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0 text-pretty">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Monthly Head</th>
+                                        <th class="px-4 py-3 font-semibold text-blue-600 border-b text-right whitespace-nowrap">Office Work</th>
+                                        <th class="px-4 py-3 font-semibold text-indigo-600 border-b text-right whitespace-nowrap">Remote Work</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 no-print text-pretty">
+                        <button onclick="copyWfhCase()" class="flex-1 py-3 border border-indigo-200 hover:bg-indigo-50 rounded-xl text-xs font-bold text-indigo-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                            Copy My WFH Case (for HR)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">Hidden Cost Accounting</h3>
+                    <div class="formula-box text-blue-800 text-center mb-6 text-sm text-pretty">
+                        Work Alpha = Saved(Commute + Food + Time) - Utilities
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Time Value:</strong> We calculate your hourly pay based on 160 working hours a month. If you commute 2 hours a day, you lose 44 hours a month—a massive opportunity cost.</p>
+                        <p><strong>Maintenance Fix:</strong> Office work requires 40% more spend on specialized clothing and laundry compared to a clean home-work environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO POV KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty" id="hidden-tax">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6 text-pretty">The Hidden Tax of the Office</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6 text-pretty">
+                    <p>Working from an office in 2026 carries costs that don't appear on a bank statement. Beyond the obvious fuel bills, there is the <strong>Convenience Tax</strong>: the tendency to order food or outsource chores because the commute has left you too exhausted. In urban India, this "fatigue spending" accounts for nearly 5-7% of an individual's net income.</p>
+                    <p>Additionally, the <strong>Pink Tax</strong> on professional wardrobe and grooming for office-bound professionals adds a recurring annual burden. By reclaiming these funds, you aren't just saving cash; you're gaining the ability to invest aggressively. Use our <a href="/salary-increment-calculator/" class="text-blue-600 underline font-bold">Salary Optimizer</a> to see how much more you'd need to earn to offset these costs.</p>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6 text-pretty">Petrol vs. EV vs. Remote: Cost Per KM (2026)</h2>
+                <div class="overflow-x-auto text-pretty">
+                    <table class="w-full text-left border-collapse border border-slate-100 text-pretty">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Mode</th>
+                                <th class="p-4 border-b">Cost per KM</th>
+                                <th class="p-4 border-b">Time Lost (Daily 30km)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600 divide-y divide-slate-50 text-pretty">
+                            <tr><td class="p-4 font-medium">Petrol Car</td><td class="p-4">₹8.75</td><td class="p-4">~90 Mins (Traffic)</td></tr>
+                            <tr><td class="p-4 font-medium text-emerald-600">Electric (EV)</td><td class="p-4 text-emerald-600 font-bold">₹1.50</td><td class="p-4">~90 Mins (Traffic)</td></tr>
+                            <tr><td class="p-4 font-medium text-indigo-600">Remote Work</td><td class="p-4 text-indigo-600 font-bold">₹0.00</td><td class="p-4 text-emerald-600 font-bold">0 Mins (Saved)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="bg-indigo-600 p-8 rounded-2xl text-white text-pretty text-pretty">
+                <h2 class="text-xl font-bold mb-4 text-pretty">WFH Tax Deductions in India (2026)</h2>
+                <p class="text-sm leading-relaxed opacity-95 mb-4 text-pretty">
+                    Taxation laws for remote workers depend heavily on your employment status. If you are a <strong>Salaried Employee</strong>, the ₹75,000 standard deduction is meant to cover broad work-related expenses, and you cannot claim internet or furniture separately.
+                </p>
+                <p class="text-sm leading-relaxed opacity-95 text-pretty">
+                    However, if you work as a <strong>Contractor/Consultant</strong>, you can use <strong>Section 44ADA</strong>. This allows you to deduct 50% of your total income as "Business Expenses" without providing a single bill. This makes WFH almost 30% more tax-efficient for independent professionals.
+                </p>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10 text-pretty text-pretty" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center text-pretty">Workplace Economics FAQs</h2>
+                <div class="space-y-4 text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">How much can a software engineer save by working remotely?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">On average, a professional in a Tier-1 city (Bangalore/Mumbai) saves between ₹15,000 to ₹35,000 monthly by eliminating fuel, outside meals, and overpriced city rent.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What is the 'Opportunity Cost' of commuting?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">It is the value of your time if you had spent it working or upskilling. If your hourly rate is ₹1,000 and you commute 2 hours, your daily opportunity cost is ₹2,000.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can I claim HRA if I work from home?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Yes, provided you pay rent to a landlord (or parents) and have a valid rental agreement. Working from your hometown doesn't disqualify you from HRA claims.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors text-pretty"><span class="font-semibold text-slate-800 text-sm sm:text-base">Does WFH increase the electricity bill significantly?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">Yes, mostly due to AC usage. In 2026, home electricity costs can rise by ₹1,500 to ₹3,000 monthly for WFH setups, but this is still 80% cheaper than fuel and maintenance costs.</div></details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        salary: document.getElementById('salaryInput'),
+        commuteDist: document.getElementById('commuteDist'),
+        transportMode: document.getElementById('transportMode'),
+        parkingTolls: document.getElementById('parkingTolls'),
+        dailyFood: document.getElementById('dailyFood'),
+        annualWardrobe: document.getElementById('annualWardrobe'),
+        remoteElec: document.getElementById('remoteElec'),
+        remoteInternet: document.getElementById('remoteInternet'),
+        officeSetup: document.getElementById('officeSetup'),
+        annualSavings: document.getElementById('annualSavings'),
+        timeReclaimed: document.getElementById('timeReclaimed'),
+        timeValueDisplay: document.getElementById('timeValueDisplay'),
+        remoteBar: document.getElementById('remoteBar'),
+        officeBar: document.getElementById('officeBar'),
+        sipPotential: document.getElementById('sipPotential'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText'),
+        savingsVerdict: document.getElementById('savingsVerdict')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const salary = parseFloat(elements.salary.value) || 0;
+        const dist = parseFloat(elements.commuteDist.value) || 0;
+        const mode = elements.transportMode.value;
+        const parking = parseFloat(elements.parkingTolls.value) || 0;
+        const food = parseFloat(elements.dailyFood.value) || 0;
+        const wardrobe = parseFloat(elements.annualWardrobe.value) || 0;
+        
+        const elec = parseFloat(elements.remoteElec.value) || 0;
+        const net = parseFloat(elements.remoteInternet.value) || 0;
+        const setup = parseFloat(elements.officeSetup.value) || 0;
+
+        // 2026 Benchmarks
+        const workDays = 22;
+        let fuelCostPerKm = 0;
+        if (mode === 'petrol') fuelCostPerKm = 105 / 12;
+        else if (mode === 'ev') fuelCostPerKm = 1.5;
+        else if (mode === 'cab') fuelCostPerKm = 22;
+        else fuelCostPerKm = 3; // Public transport blended
+
+        // 1. Office Monthly Outflow
+        const monthlyCommute = (dist * fuelCostPerKm * workDays) + parking;
+        const monthlyFood = food * workDays;
+        const monthlyWardrobe = wardrobe / 12;
+        const totalOfficeOutflow = monthlyCommute + monthlyFood + monthlyWardrobe;
+
+        // 2. Remote Monthly Outflow
+        const totalRemoteOutflow = elec + net + (setup / 12);
+
+        // 3. Time Value Calculation
+        // Assuming avg commute speed 20kmph in Indian metros
+        const dailyCommuteHours = dist / 20; 
+        const monthlyCommuteHours = dailyCommuteHours * workDays;
+        const hourlySalary = salary / 160; // 4 weeks * 40 hours
+        const monthlyTimeTax = monthlyCommuteHours * hourlySalary;
+
+        // Financial Results
+        const cashSavingsMonthly = totalOfficeOutflow - totalRemoteOutflow;
+        const totalSavingsMonthly = cashSavingsMonthly + monthlyTimeTax;
+        const annualNetBenefit = totalSavingsMonthly * 12;
+
+        // SIP Calculation (10yr, 12%)
+        const r = 0.12 / 12;
+        const n = 120;
+        const sipFV = cashSavingsMonthly * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
+
+        // UI Update
+        elements.annualSavings.textContent = formatINR(annualNetBenefit);
+        elements.timeReclaimed.textContent = Math.round(monthlyCommuteHours * 12) + " Hours/Yr";
+        elements.timeValueDisplay.textContent = formatINR(monthlyTimeTax) + " / Mo";
+        elements.sipPotential.textContent = formatINR(sipFV);
+
+        // Bars
+        const pool = totalOfficeOutflow + totalRemoteOutflow;
+        const remoteWeight = Math.round((totalRemoteOutflow / pool) * 100);
+        elements.remoteBar.style.width = remoteWeight + "%";
+        elements.remoteBar.textContent = remoteWeight + "%";
+        elements.officeBar.style.width = (100 - remoteWeight) + "%";
+        elements.officeBar.textContent = (100 - remoteWeight) + "%";
+
+        // Table
+        const rows = [
+            ["Transport & Fuel", formatINR(monthlyCommute), "₹0"],
+            ["Outside Meals & Coffee", formatINR(monthlyFood), "₹0"],
+            ["Wardrobe & Maintenance", formatINR(monthlyWardrobe), "₹0"],
+            ["Utilities (Power/Net)", "₹0", formatINR(elec + net)],
+            ["Hidden Time Tax", formatINR(monthlyTimeTax), "₹0"],
+            ["Monthly Net Outflow", "<strong>" + formatINR(totalOfficeOutflow + monthlyTimeTax) + "</strong>", "<strong>" + formatINR(totalRemoteOutflow) + "</strong>"]
+        ];
+
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                <td class="px-4 py-3 whitespace-nowrap">${r[0]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-blue-600 font-medium">${r[1]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-indigo-600 font-bold">${r[2]}</td>
+            </tr>
+        `).join('');
+
+        // Insight Logic
+        let insight = "";
+        const timeRatio = (monthlyTimeTax / (salary || 1)) * 100;
+        if (timeRatio > 25) {
+            insight = `<strong>Time Debt Critical:</strong> Your commute consumes <strong>${timeRatio.toFixed(1)}%</strong> of your income value. You are effectively working ${Math.round(monthlyCommuteHours)} hours monthly for free.`;
+        } else if (cashSavingsMonthly > 15000) {
+            insight = `<strong>Wealth Creation Zone:</strong> Your WFH savings of <strong>${formatINR(cashSavingsMonthly)}/mo</strong> can build a corpus of ${formatINR(sipFV)} over a decade. This is your 'Remote Premium'.`;
+        } else {
+            insight = `Your current structure is balanced. The WFH benefit is mostly in <strong>Quality of Life</strong> and reclaimed family time rather than massive cash savings.`;
+        }
+        elements.insightText.innerHTML = insight;
+        elements.savingsVerdict.textContent = `Switching to remote creates ${formatINR(annualNetBenefit)} in annual lifestyle value.`;
+    }
+
+    function copyWfhCase() {
+        const salary = elements.salary.value;
+        const savings = elements.annualSavings.innerText;
+        const time = elements.timeReclaimed.innerText;
+        const text = `Remote Work Case Study (Prepared via ArthCalculator)\n------------------------------\nAnnual Financial Impact: ${savings}\nReclaimed Productivity Time: ${time}\nCommute Cost Component: ${elements.timeValueDisplay.innerText}/mo\nEcosystem ROI: 10yr SIP potential of ${elements.sipPotential.innerText}\n------------------------------\nBuild your case at arthcalculator.in/remote-vs-office-calculator/`;
+        
+        const dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert("Your WFH Case Summary has been copied to clipboard for your HR/Manager discussion.");
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const inputs = [
+            elements.salary, elements.commuteDist, elements.transportMode,
+            elements.parkingTolls, elements.dailyFood, elements.annualWardrobe,
+            elements.remoteElec, elements.remoteInternet, elements.officeSetup
+        ];
+        
+        inputs.forEach(el => el.addEventListener('input', calculate));
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{document.getElementById("navbar").innerHTML=data;});
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
