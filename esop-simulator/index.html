@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESOP & RSU Wealth Simulator (2026) – Startup Equity Tax Calculator India</title>
+    <meta name="description" content="Calculate your net wealth from startup ESOPs and RSUs. Factor in Perquisite Tax, LTCG (12.5%), and tech growth simulations for FY 2026-27 in India.">
+    <meta name="keywords" content="esop calculator india, rsu tax calculator india, perquisite tax on options, startup equity wealth planner, esop vs rsu taxation, ltcg tax 2026 india">
+    <meta name="author" content="Ashish Kumar">
+    <meta name="last-modified" content="2026-05-03">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://arthcalculator.in/esop-simulator/">
+    <link rel="icon" href="/favicon.png">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="ESOP & RSU Wealth Simulator (2026) – ArthCalculator">
+    <meta property="og:description" content="Earning equity in a startup or MNC? Calculate your real net-of-tax wealth using our 2026 Indian equity simulator.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arthcalculator.in/esop-simulator/">
+    <meta property="og:image" content="https://arthcalculator.in/logo.png">
+
+    <!-- SEO Schema Stack -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://arthcalculator.in/#organization",
+          "name": "ArthCalculator",
+          "url": "https://arthcalculator.in",
+          "logo": "https://arthcalculator.in/logo.png"
+        },
+        {
+          "@type": "WebPage",
+          "name": "Guide to Startup ESOP Taxation in India 2026",
+          "description": "Comprehensive tool to analyze equity vesting, exercise costs, and total tax impact for Indian employees.",
+          "url": "https://arthcalculator.in/esop-simulator/",
+          "isPartOf": { "@id": "https://arthcalculator.in/#organization" }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "ESOP Wealth Simulator",
+          "operatingSystem": "All",
+          "applicationCategory": "FinanceApplication",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://arthcalculator.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Calculators", "item": "https://arthcalculator.in/calculators/" },
+            { "@type": "ListItem", "position": 3, "name": "ESOP Simulator" }
+          ]
+        },
+        {
+          "@type": "HowTo",
+          "name": "How to calculate net ESOP wealth",
+          "step": [
+            { "@type": "HowToStep", "name": "Enter Shares", "text": "Input the total number of shares or options granted to you." },
+            { "@type": "HowToStep", "name": "Set Prices", "text": "Input your exercise (grant) price and the current market FMV." },
+            { "@type": "HowToStep", "name": "Input Growth", "text": "Estimate the annual growth of the stock until your exit year." },
+            { "@type": "HowToStep", "name": "Tax Slab", "text": "Choose your income tax slab to calculate the Perquisite Tax due at exercise." },
+            { "@type": "HowToStep", "name": "View Results", "text": "Analyze your final in-hand wealth after both exercise and sale taxes." }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How is Perquisite tax calculated on ESOPs?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Perquisite tax is calculated at your slab rate on the difference between the FMV on the date of exercise and the Exercise Price." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the holding period for LTCG on unlisted shares?",
+              "acceptedAnswer": { "@type": "Answer", "text": "For unlisted startup shares, the holding period for Long Term Capital Gains (12.5%) is 24 months after the date of exercise." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+        .gradient-text { background: linear-gradient(135deg, #4f46e5 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: inline-block; }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        input[type="range"] { accent-color: #4f46e5; height: 6px; }
+        .formula-box { background: #f5f3ff; padding: 1.25rem; border-radius: 1rem; font-family: 'Courier New', Courier, monospace; overflow-x: auto; color: #4338ca; }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen pb-12">
+<div id="navbar"></div>
+
+    <header class="bg-white border-b border-slate-200 py-6 sm:py-10 mb-6 sm:mb-8 text-center md:text-left text-pretty">
+        <div class="max-w-6xl mx-auto px-4">
+            <nav class="flex mb-4 text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider justify-center md:justify-start">
+                <ol class="flex list-none p-0">
+                    <li class="flex items-center">
+                        <a href="/" class="hover:text-indigo-600 transition-colors">Home</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="flex items-center">
+                        <a href="/calculators/" class="hover:text-indigo-600 transition-colors text-pretty">Calculators</a>
+                        <svg class="w-3 h-3 mx-2" fill="currentColor" viewBox="0 0 20 20"><path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg>
+                    </li>
+                    <li class="text-blue-600 font-bold">ESOP & RSU Simulator</li>
+                </ol>
+            </nav>
+
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="max-w-3xl">
+                    <h1 class="text-xl sm:text-3xl md:text-4xl font-bold gradient-text leading-tight pb-1">ESOP & RSU Wealth Simulator (2026 Edition)</h1>
+                    <p class="text-slate-500 text-xs sm:text-base mt-3 leading-relaxed">
+                        Equity is your most valuable career asset. Calculate your <strong>net realization</strong> after the dual-stage taxation of Indian ESOPs. Simulator factors in perquisite tax, 2026 capital gains rules, and startup growth projections.
+                    </p>
+                </div>
+                <div class="hidden md:block mt-4 md:mt-0 whitespace-nowrap">
+                    <span class="bg-indigo-50 text-indigo-700 text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider border border-indigo-100 shadow-sm">Pre-IPO & Public Ready</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-16 text-pretty">
+            
+            <!-- Left Side: Inputs -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 card-shadow">
+                    <h2 class="text-md sm:text-lg font-semibold mb-6 flex items-center text-slate-700 uppercase tracking-wide">
+                        <svg class="w-5 h-5 mr-2 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                        Equity Grant Details
+                    </h2>
+
+                    <div class="mb-8">
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-sm font-medium text-slate-600">Total Options / Shares</label>
+                            <input type="number" id="sharesInput" value="1000" min="1" class="w-24 px-2 py-1 border border-slate-200 rounded-lg text-right font-bold text-indigo-600">
+                        </div>
+                        <input type="range" id="sharesRange" min="100" max="50000" step="100" value="1000" class="w-full py-2 cursor-pointer">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Exercise Price (₹)</label>
+                            <input type="number" id="strikeInput" value="10" min="0" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Current FMV (₹)</label>
+                            <input type="number" id="fmvInput" value="150" min="1" class="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-semibold">
+                        </div>
+                    </div>
+
+                    <div class="p-4 bg-indigo-50 rounded-xl border border-indigo-100 mb-6">
+                        <h3 class="text-xs font-bold text-indigo-700 uppercase mb-4 tracking-wider">Simulation Strategy</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Tax Slab (%)</label>
+                                <select id="taxSlab" class="w-full px-3 py-2 border border-indigo-200 rounded-lg text-sm font-semibold bg-white">
+                                    <option value="0.20">20% Slab</option>
+                                    <option value="0.312" selected>30% + Cess</option>
+                                    <option value="0.358">High Income (35.8%)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-[10px] font-bold text-slate-500 uppercase block mb-1">Exit Year</label>
+                                <select id="holdYears" class="w-full px-3 py-2 border border-indigo-200 rounded-lg text-sm font-semibold bg-white text-pretty">
+                                    <option value="1">1 Yr (Short Term)</option>
+                                    <option value="3" selected>3 Yrs (Long Term)</option>
+                                    <option value="5">5 Yrs (Growth)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="text-[10px] font-bold text-slate-500 uppercase">Annual Stock Growth (%)</label>
+                                <span class="text-xs font-bold text-indigo-600" id="growthLabel">15%</span>
+                            </div>
+                            <input type="range" id="growthRange" min="0" max="100" step="5" value="15" class="w-full py-2 cursor-pointer">
+                        </div>
+                    </div>
+
+                    <button type="button" id="calcBtn" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-xl transition-all shadow-lg shadow-indigo-100 flex items-center justify-center gap-2">
+                        Simulate Real Wealth
+                    </button>
+                </div>
+
+                <!-- Related Strategic Links -->
+                <div class="space-y-4">
+                    <a href="/income-tax/" class="block p-5 bg-white border border-slate-200 rounded-2xl card-shadow hover:border-emerald-500 transition-all group">
+                        <h4 class="text-emerald-600 font-bold text-sm mb-1">Income Tax Optimizer</h4>
+                        <p class="text-slate-500 text-xs mb-3">Calculate your effective slab after ESOP perquisite addition.</p>
+                        <span class="text-emerald-600 font-semibold text-xs group-hover:underline">Check Tax Slabs →</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side: Results -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty">
+                    <h2 class="text-slate-800 font-bold text-lg mb-6">Equity Maturity Dashboard</h2>
+                    
+                    <div class="p-6 bg-indigo-600 rounded-2xl text-center mb-10 shadow-xl shadow-indigo-100">
+                        <h4 class="text-indigo-100 text-xs font-bold uppercase tracking-wider mb-2">Net Realizable Wealth</h4>
+                        <div class="text-4xl sm:text-5xl font-extrabold text-white" id="netWealthDisplay">₹0</div>
+                        <p class="text-sm text-indigo-200 mt-2 font-medium">After full taxation and growth</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                        <div class="p-5 border border-amber-100 rounded-2xl bg-amber-50/50">
+                            <h4 class="text-amber-700 text-[10px] font-bold uppercase tracking-wider mb-1">Total Tax Burden</h4>
+                            <div class="text-2xl font-bold text-amber-800" id="totalTaxDisplay">₹0</div>
+                            <p class="text-[10px] text-amber-600">Perquisite + Sale Tax</p>
+                        </div>
+                        <div class="p-5 border border-emerald-100 rounded-2xl bg-emerald-50/50">
+                            <h4 class="text-emerald-700 text-[10px] font-bold uppercase tracking-wider mb-1">Pre-Tax Exit Value</h4>
+                            <div class="text-2xl font-bold text-emerald-800" id="exitValueDisplay">₹0</div>
+                            <p class="text-[10px] text-emerald-600">Future paper wealth</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-10 text-pretty">
+                        <div class="flex justify-between text-[11px] mb-3">
+                            <span class="text-indigo-600 font-bold uppercase">Exercisable Timeline</span>
+                            <span class="text-slate-400 font-bold uppercase" id="vestingStatus">Vesting Progress</span>
+                        </div>
+                        <div class="w-full h-8 bg-slate-100 rounded-xl overflow-hidden flex shadow-inner border border-slate-200">
+                            <div id="vestBar" class="h-full bg-indigo-500 transition-all duration-700" style="width: 25%"></div>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-2 text-center">Simulated 4-year vesting schedule with 1-year cliff.</p>
+                    </div>
+
+                    <div id="decisionCard" class="bg-blue-50 border border-blue-100 rounded-xl p-5 mb-8">
+                        <h4 class="text-blue-900 font-bold text-sm uppercase mb-3 flex items-center gap-2">
+                            💡 Hold vs. Sell Matrix
+                        </h4>
+                        <div id="insightText" class="text-xs md:text-sm text-blue-800 font-medium leading-relaxed">
+                            Analyzing your growth vs tax-leakage...
+                        </div>
+                    </div>
+
+                    <h3 class="font-bold text-slate-800 text-sm sm:text-base mb-4">Financial Lifecycle Table</h3>
+                    <div class="overflow-hidden">
+                        <div class="table-container overflow-x-auto border border-slate-100 rounded-xl no-scrollbar">
+                            <table class="w-full text-left text-[11px] sm:text-sm">
+                                <thead class="bg-slate-50 sticky top-0">
+                                    <tr>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b whitespace-nowrap">Stage</th>
+                                        <th class="px-4 py-3 font-semibold text-slate-500 border-b text-right whitespace-nowrap">Component</th>
+                                        <th class="px-4 py-3 font-semibold text-indigo-600 border-b text-right whitespace-nowrap">Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="breakdownTable" class="text-slate-600 divide-y divide-slate-50">
+                                    <!-- Dynamic rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 flex flex-col sm:flex-row gap-4 no-print text-pretty">
+                        <button onclick="downloadRoadmap()" class="flex-1 py-3 border border-indigo-200 hover:bg-indigo-50 rounded-xl text-xs font-bold text-indigo-600 transition-all flex items-center justify-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            Download Equity Roadmap
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                    <h3 class="text-lg font-bold text-slate-900 mb-4" id="formula">ESOP Taxation Rule (2026)</h3>
+                    <div class="formula-box text-indigo-800 text-center mb-6 text-sm">
+                        Net Wealth = [Future Value - Cost - Perk Tax - LTCG Tax]
+                    </div>
+                    <div class="text-sm text-slate-600 space-y-3">
+                        <p><strong>Stage 1 (Exercise):</strong> Difference between FMV and Strike Price is taxed as Perquisite at your slab rate.</p>
+                        <p><strong>Stage 2 (Sale):</strong> Difference between Exit Price and FMV at exercise is taxed at 12.5% (LTCG) if held for 1+ year (listed) or 2+ years (unlisted).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEO POV KNOWLEDGE SECTIONS -->
+        <div class="space-y-12 mb-12 text-pretty">
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow" id="taxation">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">ESOP Taxation in 2026: Two-Stage Impact</h2>
+                <div class="prose prose-slate max-w-none text-slate-600 text-sm sm:text-base leading-relaxed space-y-6">
+                    <p>In India, employee stock options face a "double taxation" hurdle. The first trigger is the <strong>Exercise Point</strong>, where the Income Tax department treats the difference between the strike price and the current Fair Market Value (FMV) as "Salary Income." This perquisite is added to your income and taxed at your marginal slab (up to 35.8%).</p>
+                    <p>The second trigger is the <strong>Sale Point</strong>. Once you sell the shares, any appreciation from the exercise-FMV is taxed under Capital Gains. Under the 2026 budget, the first ₹1.25 Lakh of annual Long-Term Capital Gains (LTCG) is exempt, while the remainder is taxed at a flat 12.5%.</p>
+                </div>
+            </section>
+
+            <section class="bg-indigo-600 p-8 rounded-2xl text-white">
+                <h2 class="text-xl font-bold mb-4">Deep-Dive: RSUs vs. ESOPs</h2>
+                <p class="text-sm leading-relaxed opacity-95 mb-4">
+                    While often used interchangeably, the taxation and cash flow requirements differ significantly:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm opacity-95">
+                    <div class="p-4 bg-white/10 rounded-xl border border-white/20">
+                        <h4 class="font-bold border-b border-white/20 pb-2 mb-3">ESOPs (Stock Options)</h4>
+                        <ul class="list-disc ml-5 space-y-2">
+                            <li>You must pay the Strike Price to own.</li>
+                            <li>Significant upfront cash required.</li>
+                            <li>Common in early-stage startups.</li>
+                            <li>High risk, high potential upside.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 bg-white/10 rounded-xl border border-white/20">
+                        <h4 class="font-bold border-b border-white/20 pb-2 mb-3">RSUs (Restricted Units)</h4>
+                        <ul class="list-disc ml-5 space-y-2">
+                            <li>Gifted shares (Strike price is zero).</li>
+                            <li>No purchase cost, but perk tax applies.</li>
+                            <li>Common in listed MNCs (Amazon, Google).</li>
+                            <li>Lower risk, behaves like a bonus.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 card-shadow text-pretty text-pretty">
+                <h2 class="text-xl font-bold text-slate-900 mb-6">Taxation: Unlisted Startups vs. Listed MNCs</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse border border-slate-100">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 font-bold uppercase text-[10px]">
+                                <th class="p-4 border-b">Feature</th>
+                                <th class="p-4 border-b">Unlisted (Pre-IPO)</th>
+                                <th class="p-4 border-b">Listed (NSE/BSE/US)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-sm text-slate-600 divide-y divide-slate-50">
+                            <tr><td class="p-4 font-medium">LTCG Period</td><td class="p-4">24 Months</td><td class="p-4">12 Months</td></tr>
+                            <tr><td class="p-4 font-medium">LTCG Rate (2026)</td><td class="p-4 text-emerald-600 font-bold">12.5%</td><td class="p-4 text-emerald-600 font-bold">12.5% (> ₹1.25L)</td></tr>
+                            <tr><td class="p-4 font-medium">STCG Rate</td><td class="p-4">Slab Rate</td><td class="p-4">20%</td></tr>
+                            <tr><td class="p-4 font-medium">Tax Deferral</td><td class="p-4 text-blue-600 font-bold">Available (80-IAC)</td><td class="p-4">No</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto py-10" id="faqs">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 text-center">Equity & ESOP FAQs</h2>
+                <div class="space-y-4 text-pretty text-pretty text-pretty">
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">How is Perquisite tax calculated on ESOPs?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">It is calculated as: (FMV on Exercise Date - Exercise Price) × Your Income Tax Slab. Your employer is responsible for deducting this TDS from your regular salary.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">What is the FMV for unlisted shares?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">For unlisted companies, FMV must be determined by a Category-I Merchant Banker on the date of exercise. Startups usually provide this annually after their 409A or equivalent valuation.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base">Can I defer ESOP tax in 2026?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty">Only if your company is an IMB-recognized startup. Under Section 192(1C), tax can be deferred for 5 years, or until the shares are sold, or until you leave the company—whichever is earliest.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty">What happens if I resign before vesting?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty text-pretty">Any unvested options are permanently lost and return to the company pool. Vested options usually have a small window (e.g., 90 days) during which you must exercise them, or they too will expire.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">How long to hold for LTCG?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty">For unlisted shares, 24 months. For listed shares (after IPO), 12 months. Holding past this period drops your tax rate from your income slab to 12.5%.</div></details>
+                    <details class="group border border-slate-100 rounded-xl overflow-hidden card-shadow bg-white text-pretty text-pretty text-pretty"><summary class="flex justify-between items-center p-5 cursor-pointer hover:bg-slate-50 transition-colors"><span class="font-semibold text-slate-800 text-sm sm:text-base text-pretty text-pretty">Are US-based RSUs taxed differently?</span><svg class="w-5 h-5 text-slate-400 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg></summary><div class="p-5 pt-0 text-slate-600 text-xs sm:text-sm leading-relaxed border-t border-slate-50 text-pretty text-pretty text-pretty">In India, they are taxed the same as RSUs from Indian companies (Perquisite + Capital Gains). However, US tax law may require 24% backup withholding, which you can claim back under the Double Taxation Avoidance Agreement (DTAA).</div></details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+<div id="footer"></div>
+
+<script>
+    const elements = {
+        sharesInput: document.getElementById('sharesInput'),
+        sharesRange: document.getElementById('sharesRange'),
+        strikeInput: document.getElementById('strikeInput'),
+        fmvInput: document.getElementById('fmvInput'),
+        taxSlab: document.getElementById('taxSlab'),
+        holdYears: document.getElementById('holdYears'),
+        growthRange: document.getElementById('growthRange'),
+        growthLabel: document.getElementById('growthLabel'),
+        netWealthDisplay: document.getElementById('netWealthDisplay'),
+        totalTaxDisplay: document.getElementById('totalTaxDisplay'),
+        exitValueDisplay: document.getElementById('exitValueDisplay'),
+        vestBar: document.getElementById('vestBar'),
+        breakdownTable: document.getElementById('breakdownTable'),
+        insightText: document.getElementById('insightText')
+    };
+
+    function formatINR(val) {
+        if (val >= 10000000) return "₹" + (val / 10000000).toFixed(2) + " Cr";
+        if (val >= 100000) return "₹" + (val / 100000).toFixed(2) + " L";
+        return "₹" + new Intl.NumberFormat('en-IN').format(Math.round(val));
+    }
+
+    function calculate() {
+        const shares = parseFloat(elements.sharesInput.value) || 0;
+        const strike = parseFloat(elements.strikeInput.value) || 0;
+        const currentFmv = parseFloat(elements.fmvInput.value) || 0;
+        const taxSlab = parseFloat(elements.taxSlab.value) || 0.312;
+        const holdYrs = parseInt(elements.holdYears.value) || 1;
+        const growth = parseFloat(elements.growthRange.value) / 100;
+
+        elements.growthLabel.textContent = (growth * 100).toFixed(0) + "%";
+
+        // 1. Stage 1: Exercise Math (Perquisite Tax)
+        const exerciseCost = shares * strike;
+        const perquisiteValue = Math.max(0, (currentFmv - strike) * shares);
+        const perkTax = perquisiteValue * taxSlab;
+
+        // 2. Stage 2: Future Exit Simulation
+        const exitPrice = currentFmv * Math.pow(1 + growth, holdYrs);
+        const exitValueGross = shares * exitPrice;
+        
+        // 3. Capital Gains Math
+        const capitalGainValue = Math.max(0, exitValueGross - (shares * currentFmv));
+        
+        // LTCG Rules 2026: 12.5% rate with 1.25L exemption
+        let gainTax = 0;
+        if (holdYrs >= 2) { // Long Term for unlisted
+            gainTax = Math.max(0, (capitalGainValue - 125000) * 0.125);
+        } else { // Short Term for unlisted
+            gainTax = capitalGainValue * taxSlab;
+        }
+
+        const totalTax = perkTax + gainTax;
+        const netWealth = exitValueGross - exerciseCost - totalTax;
+
+        // UI Updates
+        elements.netWealthDisplay.textContent = formatINR(netWealth);
+        elements.totalTaxDisplay.textContent = formatINR(totalTax);
+        elements.exitValueDisplay.textContent = formatINR(exitValueGross);
+
+        // Progress bar simulation (Assume 1/4th vested for Year 1)
+        elements.vestBar.style.width = "25%";
+
+        // Table
+        const rows = [
+            ["Grant Stage", "Cost to Exercise", formatINR(exerciseCost)],
+            ["Exercise Stage", "Perquisite Tax (Slab)", formatINR(perkTax)],
+            ["Growth Phase", "Exit FMV (" + holdYrs + "yr)", "₹" + Math.round(exitPrice).toLocaleString('en-IN')],
+            ["Sale Stage", "Capital Gains Tax", formatINR(gainTax)],
+            ["Net Liquidity", "<strong>Final Cash In-Hand</strong>", "<strong>" + formatINR(netWealth) + "</strong>"]
+        ];
+
+        elements.breakdownTable.innerHTML = rows.map(r => `
+            <tr class="hover:bg-slate-50 transition-colors border-b border-slate-100">
+                <td class="px-4 py-3 whitespace-nowrap font-medium text-slate-700">${r[0]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-slate-500">${r[1]}</td>
+                <td class="px-4 py-3 text-right whitespace-nowrap text-indigo-600 font-bold">${r[2]}</td>
+            </tr>
+        `).join('');
+
+        // Insights
+        let insight = "";
+        const totalRetention = (netWealth / exitValueGross) * 100;
+        if (totalRetention < 60) {
+            insight = `<strong>Tax Trap Alert:</strong> You are losing over 40% of your gains to taxation. Consider exercising early at a lower FMV to shift tax from "Salary Slab" to "LTCG."`;
+        } else if (holdYrs < 2) {
+            insight = `<strong>Holding Period Tip:</strong> By holding for another ${2 - holdYrs} years, you can move from STCG to LTCG, reducing your sale tax rate to 12.5%.`;
+        } else {
+            insight = `<strong>Efficient Structure:</strong> Your 3-year horizon qualifies for 12.5% LTCG. With a ${ (growth*100).toFixed(0) }% growth, your equity generates significant alpha over base salary.`;
+        }
+        elements.insightText.innerHTML = insight;
+    }
+
+    function downloadRoadmap() {
+        const text = `Equity Wealth Roadmap 2026 (ArthCalculator)\n------------------------------\nShares: ${elements.sharesInput.value}\nExit Price (Simulated): ₹${Math.round(elements.fmvInput.value * Math.pow(1 + elements.growthRange.value/100, elements.holdYears.value))}\nTotal Tax Burden: ${elements.totalTaxDisplay.innerText}\nNet In-Hand Wealth: ${elements.netWealthDisplay.innerText}\n------------------------------\nCalculate yours at arthcalculator.in/esop-simulator/`;
+        const dummy = document.createElement("textarea");
+        document.body.appendChild(dummy);
+        dummy.value = text;
+        dummy.select();
+        document.execCommand('copy');
+        document.body.removeChild(dummy);
+        alert("Roadmap summary copied to clipboard!");
+    }
+
+    function setupSync(input, range) {
+        input.addEventListener('input', () => { range.value = input.value; calculate(); });
+        range.addEventListener('input', () => { input.value = range.value; calculate(); });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        setupSync(elements.sharesInput, elements.sharesRange);
+        
+        [elements.strikeInput, elements.fmvInput, elements.taxSlab, elements.holdYears, elements.growthRange].forEach(el => {
+            el.addEventListener('input', calculate);
+        });
+
+        document.getElementById('calcBtn').addEventListener('click', calculate);
+
+        fetch("/navbar.html").then(res=>res.text()).then(data=>{document.getElementById("navbar").innerHTML=data;});
+        fetch("/footer.html").then(res=>res.text()).then(data=>{document.getElementById("footer").innerHTML=data;});
+
+        calculate();
+    });
+</script>
+</body>
+</html>
