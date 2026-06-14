@@ -108,11 +108,9 @@ window.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById("dynamicRelatedLinks");
     if (!container) return;
 
-    // Convert active browser string destination parameters entirely to lowercase
     const currentURL = window.location.href.toLowerCase();
     let relatedHTML = '';
 
-    // Master Silo Matrix Database Mapping all 171 Project URLs Completely
     const silos = {
         investment: [
             { name: "SIP Calculator", url: "/sip/", icon: "💰" },
@@ -178,9 +176,7 @@ window.addEventListener("DOMContentLoaded", function() {
             { name: "Solar + EV Home ROI", url: "/solar-ev-ecosystem/", icon: "🏠" },
             { name: "EV Battery Fund Plan", url: "/ev-battery-fund-planner/", icon: "🔋" },
             { name: "EV vs ICE Lifecycle", url: "/ev-vs-petrol/", icon: "🚗" },
-            { name: "Carbon Credit Valuation", url: "/carbon-credit-valuation/", icon: "🌿" },
-            { name: "Car Loan EMI", url: "/car-loan/", icon: "🚘" },
-            { name: "EMI Calculator", url: "/emi/", icon: "💳" }
+            { name: "Carbon Credit Valuation", url: "/carbon-credit-valuation/", icon: "🌿" }
         ],
         careerAndIncome: [
             { name: "In-Hand Salary Calculator", url: "/in-hand-salary/", icon: "💰" },
@@ -277,40 +273,62 @@ window.addEventListener("DOMContentLoaded", function() {
         ]
     };
 
+    // Default Fallback Silo Assignment Settings
     let activeSilo = silos.investment; 
     let siloName = "Investment Options";
+    let foundMatch = false;
     
     const mappings = [
-        { silo: silos.loans, name: "Loan Analytics", paths: ["emi", "home-loan", "car-loan", "personal-loan-emi", "loan-eligibility", "loan-prepayment", "home-loan-balance-transfer", "education-loan-moratorium", "gold-loan-vs-personal-loan", "flat-vs-reducing-rate", "fixed-vs-floating-rate", "no-cost-emi", "debt-to-income", "loan-balance-calculator", "mortgage-balance", "debt-payoff", "loan-affordability", "loan-vs-investment-calculator", "step-up-loan-calculator", "home-affordability"] },
-        { silo: silos.taxAndSalary, name: "Tax & Payroll", paths: ["income-tax", "advance-tax", "tds-calculator", "gst", "hra", "epf", "gratuity", "capital-gains-tax", "tax-loss-harvesting", "foreign-tax-optimizer", "tcs-calculator", "gst-profit-calculator"] },
-        { silo: silos.evAndEnergy, name: "Green Energy TCO", paths: ["solar-rooftop-calculator", "ev-vs-petrol-cost", "solar-ev-ecosystem", "ev-battery-fund-planner", "ev-vs-petrol", "carbon-credit-valuation"] },
-        { silo: silos.careerAndIncome, name: "Corporate Perks", paths: ["in-hand-salary", "salary-breakup", "salary-hike", "ctc-to-in-hand", "bonus-calculator", "freelancer-vs-salaried", "esop-simulator", "remote-vs-office-calculator", "car-lease-vs-buy", "esop-calculator"] },
-        { silo: silos.tradingMetrics, name: "Quant & Derivatives", paths: ["brokerage-calculator", "futures-profit", "options-profit", "intraday-profit-calculator", "position-size-calculator", "risk-reward-calculator", "sharpe-ratio", "stock-average", "treynor-ratio", "alpha", "beta", "stop-loss", "information-ratio", "sortino-ratio"] },
-        { silo: silos.businessAnalytics, name: "Corporate FP&A", paths: ["break-even-calculator", "dcf", "ebitda", "margin-calculator", "markup-calculator", "dscr", "financial-leverage", "operating-leverage", "cost-of-debt", "cost-of-equity", "enterprise-value", "payback-period-calculator", "interest-coverage", "inventory-turnover", "working-capital", "commission-calculator"] },
-        { silo: silos.personalFinance, name: "Wealth Architecture", paths: ["budget-planner", "net-worth", "crorepati-calculator", "emergency-fund", "expense-tracker", "savings-rate", "50-30-20-rule", "financial-goal-planner", "fire-calculator", "passive-income", "subscription-leak-audit", "percentage", "side-income"] },
-        { silo: silos.lifeMilestones, name: "Life Milestones", paths: ["retirement", "marriage-planner", "child-education-planner", "health-insurance-evaluator", "hlv-calculator", "nps-optimizer-2026", "srr-simulator", "wedding-inflation-planner", "retirement-withdrawal", "vacation-goal", "inflation-adjusted-salary-calculator", "inflation-adjusted-sip-calculator", "car-purchase", "early-retirement", "education-cost", "education-planning", "financial-independence", "goal-portfolio", "goal-priority", "goal-sip-calculator", "goal-step-up", "inflation", "multiple-goals", "nps", "ssy", "property-appreciation", "rental-yield", "rent-vs-buy-calculator", "property-roi", "stamp-duty"] }
+        { silo: silos.loans, name: "Loan Analytics", paths: ["/emi/", "/home-loan/", "/car-loan/", "/personal-loan-emi/", "/loan-eligibility/", "/loan-prepayment/", "/home-loan-balance-transfer/", "/education-loan-moratorium/", "/gold-loan-vs-personal-loan/", "/flat-vs-reducing-rate/", "/fixed-vs-floating-rate/", "/no-cost-emi/", "/debt-to-income/", "/loan-balance-calculator/", "/mortgage-balance/", "/debt-payoff/", "/loan-affordability/", "/loan-vs-investment-calculator/", "/step-up-loan-calculator/", "/home-affordability/"] },
+        { silo: silos.taxAndSalary, name: "Tax & Payroll", paths: ["/income-tax/", "/advance-tax/", "/tds-calculator/", "/gst/", "/hra/", "/epf/", "/gratuity/", "/capital-gains-tax/", "/tax-loss-harvesting/", "/foreign-tax-optimizer/", "/tcs-calculator/", "/gst-profit-calculator/"] },
+        { silo: silos.evAndEnergy, name: "Green Energy TCO", paths: ["/solar-rooftop-calculator/", "/ev-vs-petrol-cost/", "/solar-ev-ecosystem/", "/ev-battery-fund-planner/", "/ev-vs-petrol/", "/carbon-credit-valuation/"] },
+        { silo: silos.careerAndIncome, name: "Corporate Perks", paths: ["/in-hand-salary/", "/salary-breakup/", "/salary-hike/", "/ctc-to-in-hand/", "/bonus-calculator/", "/freelancer-vs-salaried/", "/esop-simulator/", "/remote-vs-office-calculator/", "/car-lease-vs-buy/", "/esop-calculator/"] },
+        { silo: silos.tradingMetrics, name: "Quant & Derivatives", paths: ["/brokerage-calculator/", "/futures-profit/", "/options-profit/", "/intraday-profit-calculator/", "/position-size-calculator/", "/risk-reward-calculator/", "/sharpe-ratio/", "/stock-average/", "/treynor-ratio/", "/alpha/", "/beta/", "/stop-loss/", "/information-ratio/", "/sortino-ratio/"] },
+        { silo: silos.businessAnalytics, name: "Corporate FP&A", paths: ["/break-even-calculator/", "/dcf/", "/ebitda/", "/margin-calculator/", "/markup-calculator/", "/dscr/", "/financial-leverage/", "/operating-leverage/", "/cost-of-debt/", "/cost-of-equity/", "/enterprise-value/", "/payback-period-calculator/", "/interest-coverage/", "/inventory-turnover/", "/working-capital/", "/commission-calculator/"] },
+        { silo: silos.personalFinance, name: "Wealth Architecture", paths: ["/budget-planner/", "/net-worth/", "/crorepati-calculator/", "/emergency-fund/", "/expense-tracker/", "/savings-rate/", "/50-30-20-rule/", "/financial-goal-planner/", "/fire-calculator/", "/passive-income/", "/subscription-leak-audit/", "/percentage/", "/side-income/"] },
+        { silo: silos.lifeMilestones, name: "Life Milestones", paths: ["/retirement/", "/marriage-planner/", "/child-education-planner/", "/health-insurance-evaluator/", "/hlv-calculator/", "/nps-optimizer-2026/", "/srr-simulator/", "/wedding-inflation-planner/", "/retirement-withdrawal/", "/vacation-goal/", "/inflation-adjusted-salary-calculator/", "/inflation-adjusted-sip-calculator/", "/car-purchase/", "/early-retirement/", "/education-cost/", "/education-planning/", "/financial-independence/", "/goal-portfolio/", "/goal-priority/", "/goal-sip-calculator/", "/goal-step-up/", "/inflation/", "/multiple-goals/", "/nps/", "/ssy/", "/property-appreciation/", "/rental-yield/", "/rent-vs-buy-calculator/", "/property-roi/", "/stamp-duty/"] }
     ];
 
+    // Execution Matching Loop (Strictly checks directory boundaries)
     for (let target of mappings) {
-        let matchFound = false;
         for (let path of target.paths) {
-            if (currentURL.includes('/' + path + '/') || currentURL.includes('/' + path)) {
+            if (currentURL.includes(path) || currentURL.includes(path.replace(/^\/|\/$/g, ''))) {
                 activeSilo = target.silo;
                 siloName = target.name;
-                matchFound = true;
+                foundMatch = true;
                 break;
             }
         }
-        if (matchFound) break;
+        if (foundMatch) break;
+    }
+
+    // fallback mapping strategy logic for loose URLs
+    if (!foundMatch) {
+        if (currentURL.includes('sip') || currentURL.includes('fd') || currentURL.includes('cagr') || currentURL.includes('interest')) {
+            activeSilo = silos.investment;
+            siloName = "Investment Options";
+        } else if (currentURL.includes('loan') || currentURL.includes('emi')) {
+            activeSilo = silos.loans;
+            siloName = "Loan Analytics";
+        } else if (currentURL.includes('tax') || currentURL.includes('salary') || currentURL.includes('hike')) {
+            activeSilo = silos.taxAndSalary;
+            siloName = "Tax & Payroll";
+        } else if (currentURL.includes('ev') || currentURL.includes('petrol') || currentURL.includes('solar')) {
+            activeSilo = silos.evAndEnergy;
+            siloName = "Green Energy TCO";
+        }
     }
 
     const badge = document.getElementById("siloBadgeCount");
     if (badge) badge.textContent = `${siloName} Module`;
 
+    // Filter out the active page and force output to limit to EXACTLY 6 elements
     let renderedCount = 0;
     activeSilo.forEach(link => {
         const cleanLinkSlug = link.url.replace(/^\/|\/$/g, '');
-        if (!currentURL.includes('/' + cleanLinkSlug + '/') && !currentURL.includes('/' + cleanLinkSlug) && renderedCount < 6) {
+        const isCurrentPage = currentURL.includes('/' + cleanLinkSlug + '/') || currentURL.includes('/' + cleanLinkSlug + '.html') || currentURL.endsWith('/' + cleanLinkSlug);
+        
+        if (!isCurrentPage && renderedCount < 6) {
             relatedHTML += `
                 <a href="${link.url}" class="group p-5 bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-2xl hover:border-blue-500 hover:from-blue-50/40 hover:to-blue-100/20 hover:scale-[1.03] transition-all duration-300 shadow-sm flex flex-col justify-between min-h-[96px] items-start text-left">
                     <div class="flex items-start gap-3">
@@ -327,6 +345,30 @@ window.addEventListener("DOMContentLoaded", function() {
             renderedCount++;
         }
     });
+
+    // If an edge case brings back fewer than 6 links, borrow from investment fallback silo
+    if (renderedCount < 6) {
+        silos.investment.forEach(link => {
+            const cleanLinkSlug = link.url.replace(/^\/|\/$/g, '');
+            const isCurrentPage = currentURL.includes('/' + cleanLinkSlug + '/') || currentURL.includes('/' + cleanLinkSlug + '.html');
+            if (!isCurrentPage && renderedCount < 6) {
+                relatedHTML += `
+                    <a href="${link.url}" class="group p-5 bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-2xl hover:border-blue-500 hover:from-blue-50/40 hover:to-blue-100/20 hover:scale-[1.03] transition-all duration-300 shadow-sm flex flex-col justify-between min-h-[96px] items-start text-left">
+                        <div class="flex items-start gap-3">
+                            <span class="text-xl inline-block mt-0.5 group-hover:scale-110 transition-transform duration-300">${link.icon || '📈'}</span>
+                            <h4 class="font-bold text-slate-700 text-xs group-hover:text-blue-600 transition-colors duration-200 leading-snug text-left">${link.name}</h4>
+                        </div>
+                        <span class="text-[10px] font-bold text-slate-400 group-hover:text-blue-500 mt-3 flex items-center gap-0.5 transition-colors uppercase tracking-wider text-left">
+                            Open Tool
+                            <svg class="w-2.5 h-2.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </span>
+                    </a>`;
+                renderedCount++;
+            }
+        });
+    }
     container.innerHTML = relatedHTML;
 });
 </script>
