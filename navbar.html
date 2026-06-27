@@ -59,7 +59,7 @@
       <div class="text-blue-600 shrink-0">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
       </div>
-      <input type="text" id="globalSearchInputField" placeholder="Type keywords (e.g., sip, emi, tax, cagr)..." class="w-full bg-transparent text-slate-800 placeholder-slate-400 font-semibold text-sm focus:outline-none border-none p-0 focus:ring-0">
+      <input type="text" id="globalSearchInputField" placeholder="Type keywords (e.g., sip, emi, tax, cagr)..." class="w-full bg-transparent text-slate-800 placeholder-slate-400 font-semibold text-sm focus:outline-none" style="border: none !important; outline: none !important; box-shadow: none !important; padding: 4px 0 !important; width: 100% !important; display: block !important;">
       <button onclick="closeGlobalSearchModal()" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-500 font-bold px-2.5 py-1.5 rounded-lg uppercase tracking-wider transition-colors shrink-0">Esc</button>
     </div>
 
@@ -80,41 +80,15 @@
 </div>
 
 <style>
-/* Preserved All Original Nav Link Style Classes Perfectly */
-.nav-link{
-  position:relative;
-  padding-bottom:4px;
-  transition:all 0.2s ease;
-}
-.nav-link:hover{
-  color:#2563eb;
-}
-.nav-link::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:0;
-  height:2px;
-  background:#2563eb;
-  transition:width 0.25s ease;
-}
-.nav-link:hover::after{
-  width:100%;
-}
-
-/* Active page support */
-.nav-link.active{
-  color:#2563eb;
-  font-weight:600;
-}
-.nav-link.active::after{
-  width:100%;
-}
+.nav-link{ position:relative; padding-bottom:4px; transition:all 0.2s ease; }
+.nav-link:hover{ color:#2563eb; }
+.nav-link::after{ content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background:#2563eb; transition:width 0.25s ease; }
+.nav-link:hover::after{ width:100%; }
+.nav-link.active{ color:#2563eb; font-weight:600; }
+.nav-link.active::after{ width:100%; }
 </style>
 
 <script>
-// Preserved Mobile Hamburger Slider Toggle Script Exactly
 const btn = document.getElementById("menuBtn");
 const menu = document.getElementById("mobileMenu");
 if (btn && menu) {
@@ -123,9 +97,7 @@ if (btn && menu) {
   });
 }
 
-// ----------------====================================-----------------
-// CENTRALIZED LIVE AUTOCOMPLETE MODAL ENGINE CORE OBJECT SCRIPT MAPPINGS
-// ----------------====================================-----------------
+// Search Database Index Setup
 const masterCatalog = [
     { name: "SIP Calculator (Systematic Investment Plan)", url: "/sip/", icon: "💰", keys: "sip mutual fund investment returns compounding points step up systematic return planning mf allocation" },
     { name: "Step-Up SIP Calculator", url: "/step-up-sip/", icon: "📈", keys: "step up incremental sip salary hike increase top up compounding mutual fund investment allocation" },
