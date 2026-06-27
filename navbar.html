@@ -52,6 +52,33 @@
   </div>
 </nav>
 
+<div id="globalSearchOverlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] hidden items-start justify-center p-4 sm:p-10 opacity-0 transition-opacity duration-200" style="box-sizing: border-box; clear: both;">
+  <div class="bg-white w-full max-w-2xl rounded-2xl border border-slate-200 shadow-2xl overflow-hidden mt-4 sm:mt-12 flex flex-col max-h-[80vh] transform scale-95 transition-transform duration-200" id="globalSearchCard" style="box-sizing: border-box;">
+    
+    <div class="p-4 border-b border-slate-200 flex items-center gap-3 bg-slate-50/50">
+      <div class="text-blue-600 shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </div>
+      <input type="text" id="globalSearchInputField" placeholder="Type keywords (e.g., sip, emi, tax, cagr)..." class="w-full bg-transparent text-slate-800 placeholder-slate-400 font-semibold text-sm focus:outline-none" style="border: none !important; outline: none !important; box-shadow: none !important; padding: 6px 0 !important; width: 100% !important; background: transparent !important; display: block !important;">
+      <button id="closeSearchBtn" class="text-xs bg-slate-200 hover:bg-slate-300 text-slate-500 font-bold px-2.5 py-1.5 rounded-lg uppercase tracking-wider transition-colors shrink-0">Esc</button>
+    </div>
+
+    <div class="flex-1 overflow-y-auto p-4 space-y-1 bg-white flex flex-col items-stretch" id="globalSearchResultsContainer">
+      <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 py-2 text-left">Suggested Quick Launches</div>
+      <a href="/sip/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">💰</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Systematic Investment Plan (SIP) Calculator</span></a>
+      <a href="/emi/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">💳</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Loan EMI Amortization Calculator</span></a>
+      <a href="/income-tax/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">📑</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Income Tax Regime Tax Planner</span></a>
+      <a href="/cagr/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">📊</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Compound Annual Growth Rate (CAGR) Tool</span></a>
+    </div>
+
+    <div class="px-4 py-2.5 bg-slate-50 border-t border-slate-100 flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase tracking-wider shrink-0">
+      <div>Platform Search Architecture</div>
+      <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>All Core Tools Indexed</div>
+    </div>
+
+  </div>
+</div>
+
 <style>
 .nav-link{ position:relative; padding-bottom:4px; transition:all 0.2s ease; }
 .nav-link:hover{ color:#2563eb; }
@@ -60,3 +87,13 @@
 .nav-link.active{ color:#2563eb; font-weight:600; }
 .nav-link.active::after{ width:100%; }
 </style>
+
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" 
+     onload="if(!window.globalSearchScriptLoaded){
+       window.globalSearchScriptLoaded=true;
+       var scriptElement=document.createElement('script');
+       scriptElement.src='/js/search.js';
+       scriptElement.defer=true;
+       document.head.appendChild(scriptElement);
+     }" 
+     style="display:none; pointer-events:none; visibility:hidden;">
