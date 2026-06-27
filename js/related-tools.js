@@ -67,18 +67,18 @@
         let fallbackPool = db.filter(item => item.category !== targetCategory && !currentURL.includes(item.url.replace(/\//g, '')));
         let finalRelatedPool = [...primaryPool, ...fallbackPool].slice(0, 6);
 
-        // Render Cards markup for Section 1 (White Container)
+        // Render Cards markup for Section 1 (UPDATED FOR ORIGINAL TIGHT COMPACT FONT INTERFACE)
         let dynamicRelatedCardsHTML = '';
         finalRelatedPool.forEach(link => {
             dynamicRelatedCardsHTML += `
-                <a href="${link.url}" class="group p-5 bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-2xl hover:border-blue-500 hover:from-blue-50/40 hover:to-blue-100/20 hover:scale-[1.03] transition-all duration-300 shadow-sm flex flex-col justify-between min-h-[96px] items-start text-left">
-                    <div class="flex items-start gap-3">
-                        <span class="text-xl inline-block mt-0.5 group-hover:scale-110 transition-transform duration-300">${link.icon}</span>
-                        <h4 class="font-bold text-slate-700 text-xs group-hover:text-blue-600 transition-colors duration-200 leading-snug text-left">${link.name}</h4>
+                <a href="${link.url}" class="group p-3 sm:p-4 bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-xl hover:border-blue-500 hover:from-blue-50/40 hover:to-blue-100/20 hover:scale-[1.02] transition-all duration-300 shadow-sm flex flex-col justify-between min-h-[84px] items-start text-left">
+                    <div class="flex items-start gap-2.5">
+                        <span class="text-base inline-block mt-0.5 group-hover:scale-110 transition-transform duration-300">${link.icon}</span>
+                        <h4 class="font-bold text-slate-700 text-[11px] sm:text-xs group-hover:text-blue-600 transition-colors duration-200 leading-snug text-left">${link.name}</h4>
                     </div>
-                    <span class="text-[10px] font-bold text-slate-400 group-hover:text-blue-500 mt-3 flex items-center gap-0.5 transition-colors uppercase tracking-wider text-left">
+                    <span class="text-[9px] font-bold text-slate-400 group-hover:text-blue-500 mt-2 flex items-center gap-0.5 transition-colors uppercase tracking-wider text-left">
                         Open Tool
-                        <svg class="w-2.5 h-2.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-2 h-2 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
                         </svg>
                     </span>
