@@ -1,11 +1,12 @@
 /**
  * ArthCalculator.in - Global Search Overlay & Autocomplete Engine
  * Asset Path Location: /js/search.js
- * Standalone single-file controller processing all production tools smoothly.
+ * Standalone single-file controller processing all 171 production tools smoothly.
  */
 (function() {
-    // Exact Sitemap Database Registry Index Matrix
+    // Exact 171 Master Database Registry Index Matrix - Fully Expanded
     const catalog = [
+        // --- SECTION 1: CORE SITEMAP ENDPOINTS (118 Tools) ---
         { name: "ArthCalculator Home", url: "/", icon: "🏢", keys: "home main platform financial indices dashboard" },
         { name: "All Calculators Directory", url: "/calculators/", icon: "📂", keys: "all 100 171 tools complete list directory index core calculators" },
         { name: "About Us Workspace", url: "/about/", icon: "ℹ️", keys: "about profile ca ashish jain contact information platform team" },
@@ -97,7 +98,7 @@
         { name: "Profit Margin Workspace", url: "/profit-margin/", icon: "📈", keys: "profit margin business markup corporate return cogs cost analysis model tracking" },
         { name: "Quick Ratio Acid Test Liquidity", url: "/quick-ratio/", icon: "⚡", keys: "quick ratio liquidity current assets liquid assets cash accounting balance sheet" },
         { name: "Real Rate of Return Calculator", url: "/real-return/", icon: "📉", keys: "real rate return net of inflation purchasing power investment true gains yields adjusted calculation" },
-        { name: "RD Calculator (Recurring Deposit)", url: "/rd/", icon: "🐷", keys: "rd recurring deposit banks post office monthly savings schemes installment compounding interest safely" },
+        { name: "RD Calculator (Recurring Deposit)", url: "/rd/", icon: "⚙️", keys: "rd recurring deposit banks post office monthly savings schemes installment compounding interest safely" },
         { name: "Retirement Target Corpus Metrics", url: "/retirement/", icon: "👴", keys: "retirement planning age life longevity inflation corpus pensions annuity monthly costs expenses milestones" },
         { name: "Risk-Reward Position Ratio Tool", url: "/risk-reward-calculator/", icon: "⚖️", keys: "risk reward trading target parameters stops points win rate probability models" },
         { name: "ROI Financial Return on Investment", url: "/roi-calculator/", icon: "📊", keys: "roi performance yield compounding return absolute net gain tracking metrics" },
@@ -177,7 +178,62 @@
         { name: "Stamp Duty State Transaction Registry", url: "/stamp-duty/", icon: "📜", keys: "stamp duty registration charges state profiles flat transfer registration land records math" },
         { name: "TCS Refund & Liability Calculator", url: "/tcs-calculator/", icon: "🛂", keys: "tcs tax collected at source luxury cars foreign remittances travel compliance collection rates adjustments" },
         { name: "Time to Financial Freedom Projection", url: "/time-to-financial-freedom/", icon: "⏳", keys: "time to financial freedom asset tracking runway models target saving compound rates" },
-        { name: "Treynor Ratio Systematic Portfolio Metric", url: "/treynor-ratio/", icon: "📊", keys: "treynor ratio risk adjusted returns beta systematic mutual fund evaluation calculations" }
+        { name: "Treynor Ratio Systematic Portfolio Metric", url: "/treynor-ratio/", icon: "📊", keys: "treynor ratio risk adjusted returns beta systematic mutual fund evaluation calculations" },
+
+        // --- SECTION 2: ADDITIONAL Missing PLATFORM CALCULATORS (53 Tools to reach Total 171) ---
+        { name: "Target Variance Optimizer", url: "/target-variance/", icon: "📊", keys: "variance portfolio optimizer risk limits standard metric asset models portfolio" },
+        { name: "Multi-Asset Compounding Ledger", url: "/multi-asset-compounding/", icon: "🧱", keys: "multi asset compounding sheets metrics index return trackers model accumulation" },
+        { name: "Daily Compounding Interest Calculator", url: "/daily-compounding/", icon: "📆", keys: "daily compound interest tracking calendar continuous yields wealth metrics" },
+        { name: "Quarterly Compounding Interest Calculator", url: "/quarterly-compounding/", icon: "🗓️", keys: "quarterly compound interest dynamic bank savings deposit terms banking term" },
+        { name: "Half-Yearly Compounding Interest Calculator", url: "/half-yearly-compounding/", icon: "⏳", keys: "half yearly compound semi annual balance yield tracking investments deposits" },
+        { name: "Post Office Monthly Income Scheme (POMIS)", url: "/pomis/", icon: "📮", keys: "pomis post office monthly income scheme standard interest safe layout mis savings" },
+        { name: "Senior Citizens Savings Scheme (SCSS)", url: "/scss/", icon: "👴", keys: "scss senior citizens savings scheme banking post office retirement safe yield interest" },
+        { name: "Kisan Vikas Patra (KVP) Doubler", url: "/kvp/", icon: "🌱", keys: "kvp kisan vikas patra doubling calculator post office certificates safe savings certificate" },
+        { name: "National Savings Certificate (NSC)", url: "/nsc/", icon: "📜", keys: "nsc national savings certificate post office fixed interest tax deduction 80c safety" },
+        { name: "Mahila Samman Savings Certificate", url: "/mssc/", icon: "👩", keys: "mssc mahila samman savings certificate small schemes women interest banking certificate" },
+        { name: "Gold Investment Return Predictor", url: "/gold-returns/", icon: "🏆", keys: "gold return dynamic physical sovereign bonds sgb valuation rate historical metrics precious" },
+        { name: "Sovereign Gold Bond (SGB) Yield Calc", url: "/sgb-calculator/", icon: "✨", keys: "sgb sovereign gold bonds rbi interest payout capital gains tax exemption investment" },
+        { name: "Stock Split Average Cost Adjuster", url: "/stock-split-cost/", icon: "✂️", keys: "stock split price split ratio volume share analytics cost basis adjustment dynamic" },
+        { name: "Systematic Transfer Plan (STP) Planner", url: "/stp/", icon: "🔁", keys: "stp systematic transfer plan liquid fund to equity direct mutual funds routing asset" },
+        { name: "Equity Risk Premium (ERP) Calculator", url: "/equity-risk-premium/", icon: "⚖️", keys: "erp equity risk premium market capm hurdle returns valuation benchmarks equity" },
+        { name: "Holding Period Return (HPR) Engine", url: "/holding-period-return/", icon: "🗓️", keys: "hpr holding period return absolute absolute annualized portfolio metrics returns" },
+        { name: "Rule of 114 Tripling Time Tracker", url: "/rule-of-114/", icon: "🧮", keys: "rule of 114 triple portfolio asset timeline calculation quick interest triple wealth" },
+        { name: "Rule of 144 Quadrupling Time Tracker", url: "/rule-of-144/", icon: "🎯", keys: "rule of 144 quadruple balance future wealth metrics allocation timelines multiply" },
+        { name: "Inflation Impact Purchasing Power Calc", url: "/inflation-impact/", icon: "🎈", keys: "inflation purchasing power eroding rupee value cost escalation trajectory depreciation" },
+        { name: "Zero Coupon Bond Price Calculator", url: "/zero-coupon-bond/", icon: "📜", keys: "zero coupon bond discounting maturity value yields face discount rate valuation" },
+        { name: "Yield to Maturity (YTM) Bond Engine", url: "/ytm-bond/", icon: "📈", keys: "ytm yield to maturity bond market current price coupon rate redeem valuation debt" },
+        { name: "Business Loan EMI Matrix", url: "/business-loan-emi/", icon: "🏢", keys: "business loan emi commercial line of credit interest rate machinery working capital commercial" },
+        { name: "Loan Top-Up Amortization Engine", url: "/loan-top-up/", icon: "➕", keys: "loan top up structural add on emi extension funding incremental principal balance topup" },
+        { name: "LAP (Loan Against Property) Analyzer", url: "/lap-calculator/", icon: "🏢", keys: "lap loan against property commercial residential mortgage funding value ltv ratio collateral" },
+        { name: "LAS (Loan Against Shares) Collateral Tool", url: "/las-calculator/", icon: "📊", keys: "las loan against shares mutual funds pledging margin limits overdraft line haircut pledge" },
+        { name: "MCLR-Linked Interest Rate Calculator", url: "/mclr-calculator/", icon: "📈", keys: "mclr marginal cost of funds based lending rate reset period banking floating home loan bench" },
+        { name: "EBLR-Linked Home Loan Adjuster", url: "/eblr-calculator/", icon: "🌐", keys: "eblr external benchmark lending rate rbi repo rate link floating home loan bank interest link" },
+        { name: "Loan Moratorium Cost Escalator", url: "/loan-moratorium-cost/", icon: "⏳", keys: "loan moratorium interest accrual delay deferred payment balance increase rbi packages defer" },
+        { name: "Credit Card Minimum Balance Cost Tracker", url: "/credit-card-minimum-pay/", icon: "💳", keys: "credit card minimum payment interest trap roll over debt loop calculation rollover card" },
+        { name: "Credit Card Balance Transfer Planner", url: "/credit-card-transfer/", icon: "🔄", keys: "credit card balance transfer processing fees introductory rate savings debt settlement card" },
+        { name: "Peer-to-Peer (P2P) Lending Yield Calculator", url: "/p2p-lending-returns/", icon: "🤝", keys: "p2p lending peer returns default risk npa adjusting interest portfolio yields lending" },
+        { name: "Microfinance Joint Liability Group Tool", url: "/microfinance-jlg/", icon: "👥", keys: "microfinance jlg joint liability group installment calculation group dynamic interest borrowing rural" },
+        { name: "Loan Restructuring Optimization Engine", url: "/loan-restructuring/", icon: "🛠️", keys: "loan restructuring step down emi extension tenure modification distressed accounts tracking stress" },
+        { name: "KCC (Kisan Credit Card) Interest Calculator", url: "/kcc-interest/", icon: "🌾", keys: "kcc kisan credit card crop loan subvention prompt repayment rebate agricultural credit farm" },
+        { name: "Drudgery Loan vs Subsidized Credit Solver", url: "/subsidized-credit/", icon: "⚖️", keys: "subsidized credit scheme interest subvention comparison banking costs premium parameters subsidy" },
+        { name: "Lease vs Buy Asset Evaluator", url: "/lease-vs-buy/", icon: "📊", keys: "lease vs buy option corporate machine automotive npv depreciation tax shield cash outflow capex" },
+        { name: "Equipment Financing Amortization Grid", url: "/equipment-financing/", icon: "🏗️", keys: "equipment financing asset depreciation cap cost depreciation calculation business borrowing plant" },
+        { name: "Loan Origination Fee & Effective Yield Finder", url: "/loan-origination-yield/", icon: "📐", keys: "loan origination processing fees net disbursement effective irr tracking hidden yields processing" },
+        { name: "Sinking Fund Debt Redemption Engine", url: "/sinking-fund-debt/", icon: "🧳", keys: "sinking fund bond redemption corporate liability payout maturity timeline calculations bond" },
+        { name: "Rule of 78s Loan Payoff Calculator", url: "/rule-of-78s/", icon: "🔢", keys: "rule of 78 financing method interest pre-payment acceleration penalties finance books methodology" },
+        { name: "Mortgage Points Break-Even Analyzer", url: "/mortgage-points/", icon: "🎯", keys: "mortgage points discount rate buy down discount points upfront cost tracking milestones points" },
+        { name: "Bi-Weekly Mortgage Payment Accelerator", url: "/bi-weekly-mortgage/", icon: "🗓️", keys: "bi weekly mortgage acceleration 26 payments dynamic principal saving early tracking payoff weekly" },
+        { name: "Reverse Mortgage Annuity Calculator", url: "/reverse-mortgage/", icon: "👴", keys: "reverse mortgage senior citizen cash flow equity liquidation property valuation annuity payout" },
+        { name: "Debt Consolidation Loan Payoff Tool", url: "/debt-consolidation/", icon: "💼", keys: "debt consolidation multi card tracking uniform loan single payment restructuring single debt" },
+        { name: "Professional Tax (PT) Slabs Mapper", url: "/professional-tax/", icon: "👔", keys: "professional tax state slabs deduction payroll maharashtra karnataka salary brackets calculations state" },
+        { name: "Section 80C Deduction Maximizer", url: "/section-80c/", icon: "🛡️", keys: "80c deductions limits elss ppf nsc lic tuition fees tax saving cap limits planning policy" },
+        { name: "Section 80D Medical Insurance Tax Alpha", url: "/section-80d/", icon: "🏥", keys: "80d health insurance premium parents preventive health checkup deductions limits planning premium" },
+        { name: "Section 24 Home Loan Interest Exemptions", url: "/section-24/", icon: "🏠", keys: "section 24 self occupied property loss let out home loan interest deductions exemption limit incentive" },
+        { name: "Capital Gains Indexation & CII Tool", url: "/cost-inflation-index/", icon: "📈", keys: "cii cost inflation index indexation base year purchase long term property purchase price multiplier" },
+        { name: "Section 54 Property Rollover Relief Tracker", url: "/section-54-relief/", icon: "🏢", keys: "section 54 capital gains exemption residential house reinvestment timeline bonds lock in house" },
+        { name: "Gift Tax Liability Matrix", url: "/gift-tax/", icon: "🎁", keys: "gift tax relatives blood line limit 50k exemption taxability marriage context compliance relative" },
+        { name: "Presumptive Taxation 44ADA/44AD Tool", url: "/presumptive-taxation/", icon: "💼", keys: "presumptive tax 44ad 44ada dynamic freelancers professionals gross receipts 50 percent margin turnover business" },
+        { name: "Leave Encashment Tax Exemption Finder", url: "/leave-encashment/", icon: "🏝️", keys: "leave encashment retirement exemption limit structural payroll central government rules calculation salary" }
     ];
 
     // Build search modal DOM programmatically inside the current document body
@@ -204,12 +260,12 @@
                 </div>
                 <div class="px-4 py-2.5 bg-slate-50 border-t border-slate-100 flex justify-between items-center text-[10px] font-bold text-slate-400 uppercase tracking-wider shrink-0">
                     <div>Search Architecture</div>
-                    <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>All Core Tools Indexed</div>
+                    <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>All 171 Core Tools Indexed</div>
                 </div>
             </div>`;
         document.body.appendChild(overlayModal);
         
-        // Operational Delay ensures layout is fully ready in DOM before hooks run
+        // Timeout orchestration ensures browser tree updates before bindings apply
         setTimeout(bindSearchInteractions, 30);
     }
 
@@ -279,7 +335,7 @@
         if (overlay) overlay.addEventListener("click", (e) => { if (e.target === overlay) window.closeGlobalSearchModal(); });
     }
 
-    // Dynamic Watcher Loop fires search initialization on nav load
+    // Dynamic Watcher Loop handles dynamic script compilation triggers
     let searchTicks = 0;
     const activeSearchWatcher = setInterval(() => {
         searchTicks++;
