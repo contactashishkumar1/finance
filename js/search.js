@@ -1,12 +1,12 @@
 /**
  * ArthCalculator.in - Global Search Overlay & Autocomplete Engine
  * Asset Path Location: /js/search.js
- * Standalone single-file controller processing all 171 production tools smoothly.
+ * Consolidated standalone engine holding all 171 tools with global event delegation patterns.
  */
 (function() {
-    // Exact 171 Master Database Registry Index Matrix - Fully Expanded
+    // 171 Calculators Master Database Index Matrix - Unclipped
     const catalog = [
-        // --- SECTION 1: CORE SITEMAP ENDPOINTS (118 Tools) ---
+        // --- CORE SITEMAP ENDPOINTS (118 Tools) ---
         { name: "ArthCalculator Home", url: "/", icon: "🏢", keys: "home main platform financial indices dashboard" },
         { name: "All Calculators Directory", url: "/calculators/", icon: "📂", keys: "all 100 171 tools complete list directory index core calculators" },
         { name: "About Us Workspace", url: "/about/", icon: "ℹ️", keys: "about profile ca ashish jain contact information platform team" },
@@ -98,7 +98,7 @@
         { name: "Profit Margin Workspace", url: "/profit-margin/", icon: "📈", keys: "profit margin business markup corporate return cogs cost analysis model tracking" },
         { name: "Quick Ratio Acid Test Liquidity", url: "/quick-ratio/", icon: "⚡", keys: "quick ratio liquidity current assets liquid assets cash accounting balance sheet" },
         { name: "Real Rate of Return Calculator", url: "/real-return/", icon: "📉", keys: "real rate return net of inflation purchasing power investment true gains yields adjusted calculation" },
-        { name: "RD Calculator (Recurring Deposit)", url: "/rd/", icon: "⚙️", keys: "rd recurring deposit banks post office monthly savings schemes installment compounding interest safely" },
+        { name: "RD Calculator (Recurring Deposit)", url: "/rd/", icon: "🐷", keys: "rd recurring deposit banks post office monthly savings schemes installment compounding interest safely" },
         { name: "Retirement Target Corpus Metrics", url: "/retirement/", icon: "👴", keys: "retirement planning age life longevity inflation corpus pensions annuity monthly costs expenses milestones" },
         { name: "Risk-Reward Position Ratio Tool", url: "/risk-reward-calculator/", icon: "⚖️", keys: "risk reward trading target parameters stops points win rate probability models" },
         { name: "ROI Financial Return on Investment", url: "/roi-calculator/", icon: "📊", keys: "roi performance yield compounding return absolute net gain tracking metrics" },
@@ -180,7 +180,7 @@
         { name: "Time to Financial Freedom Projection", url: "/time-to-financial-freedom/", icon: "⏳", keys: "time to financial freedom asset tracking runway models target saving compound rates" },
         { name: "Treynor Ratio Systematic Portfolio Metric", url: "/treynor-ratio/", icon: "📊", keys: "treynor ratio risk adjusted returns beta systematic mutual fund evaluation calculations" },
 
-        // --- SECTION 2: ADDITIONAL Missing PLATFORM CALCULATORS (53 Tools to reach Total 171) ---
+        // --- ADDITIONAL ARCHITECTURAL SUITES (53 Tools to reach Total 171) ---
         { name: "Target Variance Optimizer", url: "/target-variance/", icon: "📊", keys: "variance portfolio optimizer risk limits standard metric asset models portfolio" },
         { name: "Multi-Asset Compounding Ledger", url: "/multi-asset-compounding/", icon: "🧱", keys: "multi asset compounding sheets metrics index return trackers model accumulation" },
         { name: "Daily Compounding Interest Calculator", url: "/daily-compounding/", icon: "📆", keys: "daily compound interest tracking calendar continuous yields wealth metrics" },
@@ -236,15 +236,16 @@
         { name: "Leave Encashment Tax Exemption Finder", url: "/leave-encashment/", icon: "🏝️", keys: "leave encashment retirement exemption limit structural payroll central government rules calculation salary" }
     ];
 
-    // Build search modal DOM programmatically inside the current document body
-    function buildOverlaySearchModalDOM() {
+    let overlay, card, inputField, resultsBox;
+
+    function createOverlayDOMFramework() {
         if (document.getElementById("globalSearchOverlay")) return;
 
-        const overlayModal = document.createElement("div");
-        overlayModal.id = "globalSearchOverlay";
-        overlayModal.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] hidden items-start justify-center p-4 sm:p-10 opacity-0 transition-opacity duration-200";
-        overlayModal.style.boxSizing = "border-box";
-        overlayModal.innerHTML = `
+        const container = document.createElement("div");
+        container.id = "globalSearchOverlay";
+        container.className = "fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-[100] hidden items-start justify-center p-4 sm:p-10 opacity-0 transition-opacity duration-200";
+        container.style.boxSizing = "border-box";
+        container.innerHTML = `
             <div class="bg-white w-full max-w-2xl rounded-2xl border border-slate-200 shadow-2xl overflow-hidden mt-4 sm:mt-12 flex flex-col max-h-[80vh] transform scale-95 transition-transform duration-200" id="globalSearchCard" style="box-sizing: border-box;">
                 <div class="p-4 border-b border-slate-200 flex items-center gap-3 bg-slate-50/50">
                     <div class="text-blue-600 shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></div>
@@ -263,107 +264,91 @@
                     <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-pulse"></span>All 171 Core Tools Indexed</div>
                 </div>
             </div>`;
-        document.body.appendChild(overlayModal);
+        document.body.appendChild(container);
         
-        // Timeout orchestration ensures browser tree updates before bindings apply
-        setTimeout(bindSearchInteractions, 30);
+        overlay = document.getElementById("globalSearchOverlay");
+        card = document.getElementById("globalSearchCard");
+        inputField = document.getElementById("globalSearchInputField");
+        resultsBox = document.getElementById("globalSearchResultsContainer");
+
+        inputField.addEventListener("input", executeFilterQuery);
+        document.getElementById("closeSearchBtn").addEventListener("click", hideModalContext);
+        overlay.addEventListener("click", (e) => { if (e.target === overlay) hideModalContext(); });
     }
 
-    function bindSearchInteractions() {
-        const overlay = document.getElementById("globalSearchOverlay");
-        const card = document.getElementById("globalSearchCard");
-        const inputField = document.getElementById("globalSearchInputField");
-        const resultsBox = document.getElementById("globalSearchResultsContainer");
-        const closeBtn = document.getElementById("closeSearchBtn");
+    window.showModalContext = function() {
+        if (!overlay) createOverlayDOMFramework();
+        overlay.classList.remove("hidden");
+        overlay.classList.add("flex");
+        setTimeout(() => {
+            overlay.classList.remove("opacity-0");
+            card.classList.remove("scale-95");
+            if (inputField) { inputField.focus(); inputField.select(); }
+        }, 30);
+        document.body.style.overflow = "hidden";
+    };
 
-        window.openGlobalSearchModal = function() {
-            if (!overlay) return;
-            overlay.classList.remove("hidden");
-            overlay.classList.add("flex");
-            setTimeout(() => { 
-                overlay.classList.remove("opacity-0"); 
-                card.classList.remove("scale-95"); 
-                if (inputField) { inputField.focus(); inputField.select(); }
-            }, 30);
-            document.body.style.overflow = "hidden";
-        };
+    window.hideModalContext = function() {
+        if (!overlay) return;
+        overlay.classList.add("opacity-0");
+        card.classList.add("scale-95");
+        setTimeout(() => {
+            overlay.classList.remove("flex");
+            overlay.classList.add("hidden");
+        }, 200);
+        document.body.style.overflow = "";
+        if (inputField) inputField.value = "";
+    };
 
-        window.closeGlobalSearchModal = function() {
-            if (!overlay) return;
-            overlay.classList.add("opacity-0"); 
-            card.classList.add("scale-95");
-            setTimeout(() => { overlay.classList.remove("flex"); overlay.classList.add("hidden"); }, 200);
-            document.body.style.overflow = ""; 
-            if (inputField) inputField.value = "";
-        };
-
-        if (inputField && resultsBox) {
-            inputField.addEventListener("input", (e) => {
-                const term = e.target.value.toLowerCase().trim();
-                if (term.length === 0) {
-                    resultsBox.innerHTML = `
-                        <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 py-2 text-left">Suggested Quick Launches</div>
-                        <a href="/sip/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">📈</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Systematic Investment Plan (SIP) Calculator</span></a>
-                        <a href="/emi/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">💳</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Loan EMI Amortization Calculator</span></a>
-                        <a href="/income-tax/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">📑</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Income Tax Regime Tax Planner</span></a>
-                        <a href="/cagr/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">📊</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Compound Annual Growth Rate (CAGR) Tool</span></a>`;
-                    return;
-                }
-
-                const matches = catalog.filter(item => item.name.toLowerCase().includes(term) || (item.keys && item.keys.toLowerCase().includes(term)));
-                if (matches.length === 0) {
-                    resultsBox.innerHTML = `<div class="py-12 text-center text-sm font-bold text-slate-500">No calculators matched "${e.target.value}"</div>`;
-                    return;
-                }
-
-                let matchHTML = `<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 py-2 text-left">Found ${matches.length} Calculator Matches</div>`;
-                matches.forEach(item => {
-                    matchHTML += `
-                        <a href="${item.url}" class="flex items-center justify-between p-3 rounded-xl hover:bg-blue-50/80 group transition-colors border border-transparent hover:border-blue-100 text-left">
-                            <div class="flex items-center gap-3 min-w-0">
-                                <span class="text-lg bg-slate-100 p-1.5 rounded-lg group-hover:bg-blue-100/50 transition-colors">${item.icon}</span>
-                                <span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors truncate">${item.name}</span>
-                            </div>
-                            <span class="text-[10px] font-bold text-blue-500 bg-blue-50 px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-wider whitespace-nowrap hidden sm:inline-block">Launch Tool →</span>
-                        </a>`;
-                });
-                resultsBox.innerHTML = matchHTML;
-            });
+    function executeFilterQuery(e) {
+        const query = e.target.value.toLowerCase().trim();
+        if (query.length === 0) {
+            resultsBox.innerHTML = `
+                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 py-2 text-left">Suggested Quick Launches</div>
+                <a href="/sip/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">📈</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Systematic Investment Plan (SIP) Calculator</span></a>
+                <a href="/emi/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">💳</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Loan EMI Amortization Calculator</span></a>
+                <a href="/income-tax/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">📑</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Income Tax Regime Tax Planner</span></a>
+                <a href="/cagr/" class="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50/60 group transition-colors text-left"><span class="text-lg">📊</span><span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors">Compound Annual Growth Rate (CAGR) Tool</span></a>`;
+            return;
         }
 
-        if (closeBtn) closeBtn.addEventListener("click", window.closeGlobalSearchModal);
-        if (overlay) overlay.addEventListener("click", (e) => { if (e.target === overlay) window.closeGlobalSearchModal(); });
+        const hits = catalog.filter(item => item.name.toLowerCase().includes(query) || (item.keys && item.keys.toLowerCase().includes(query)));
+        if (hits.length === 0) {
+            resultsBox.innerHTML = `<div class="py-12 text-center text-sm font-bold text-slate-500">No calculators matched "${e.target.value}"</div>`;
+            return;
+        }
+
+        let html = `<div class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-3 py-2 text-left">Found ${hits.length} Calculator Matches</div>`;
+        hits.forEach(item => {
+            html += `
+                <a href="${item.url}" class="flex items-center justify-between p-3 rounded-xl hover:bg-blue-50/80 group transition-colors border border-transparent hover:border-blue-100 text-left">
+                    <div class="flex items-center gap-3 min-w-0">
+                        <span class="text-lg bg-slate-100 p-1.5 rounded-lg group-hover:bg-blue-100/50 transition-colors">${item.icon}</span>
+                        <span class="text-xs font-bold text-slate-700 group-hover:text-blue-600 transition-colors truncate">${item.name}</span>
+                    </div>
+                    <span class="text-[10px] font-bold text-blue-500 bg-blue-50 px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-wider whitespace-nowrap hidden sm:inline-block">Launch Tool →</span>
+                </a>`;
+        });
+        resultsBox.innerHTML = html;
     }
 
-    // Dynamic Watcher Loop handles dynamic script compilation triggers
-    let searchTicks = 0;
-    const activeSearchWatcher = setInterval(() => {
-        searchTicks++;
-        const desktopTrigger = document.getElementById("desktopSearchTrigger");
-        const mobileTrigger = document.getElementById("mobileSearchTrigger");
-        const mobileHamburger = document.getElementById("menuBtn");
-        const mobileDropdown = document.getElementById("mobileMenu");
-
-        if (desktopTrigger || mobileTrigger) {
-            clearInterval(activeSearchWatcher);
-            buildOverlaySearchModalDOM();
-
-            if (desktopTrigger) desktopTrigger.addEventListener("click", () => window.openGlobalSearchModal());
-            if (mobileTrigger) mobileTrigger.addEventListener("click", () => window.openGlobalSearchModal());
-            
-            if (mobileHamburger && mobileDropdown) {
-                mobileHamburger.addEventListener("click", () => { mobileDropdown.classList.toggle("hidden"); });
-            }
+    // GLOBAL ROOT DELEGATION EVENT LISTENER (Immune to template asynchronous fetch speeds)
+    document.addEventListener("click", function(event) {
+        if (!event.target) return;
+        
+        // Match clicks hitting input triggers or mobile triggers
+        if (event.target.id === "desktopSearchTrigger" || event.target.closest("#mobileSearchTrigger")) {
+            event.preventDefault();
+            window.showModalContext();
         }
-        if (searchTicks > 150) clearInterval(activeSearchWatcher);
-    }, 50);
+    });
 
-    // Keyboard Shortcuts (Esc + Ctrl K)
+    // Keyboard Hotkey Interceptions (Esc / Ctrl K)
     window.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && window.closeGlobalSearchModal) window.closeGlobalSearchModal();
+        if (e.key === "Escape") window.hideModalContext();
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
             e.preventDefault();
-            if (window.openGlobalSearchModal) window.openGlobalSearchModal();
+            window.showModalContext();
         }
     });
 })();
